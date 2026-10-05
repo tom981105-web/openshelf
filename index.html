@@ -144,7 +144,17 @@
       </section>
       <div id="activeFilters" class="active-filters" hidden></div>
 
-      <section id="toolGrid" class="grid" aria-live="polite"></section>
+      <section id="loadingState" class="loading-state" aria-live="polite">
+        <span class="loading-mark" aria-hidden="true"></span>
+        <p>도구 선반을 불러오는 중...</p>
+      </section>
+      <section id="errorState" class="error-state" hidden>
+        <span>LOAD ERROR</span>
+        <h2>도구 데이터를 불러오지 못했어요.</h2>
+        <p>잠시 후 다시 시도하거나 페이지를 새로고침해 주세요.</p>
+        <button id="retryLoad" type="button">다시 시도</button>
+      </section>
+      <section id="toolGrid" class="grid" aria-live="polite" hidden></section>
       <section id="emptyState" class="empty" hidden>
         <span>NO RESULTS</span>
         <h2>검색 결과가 없어요.</h2>
@@ -189,7 +199,7 @@
         <a href="#about">About</a>
         <a href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub</a>
       </div>
-      <span>v0.6 · 2026</span>
+      <span>v0.7 · 2026</span>
     </footer>
   </div>
 
