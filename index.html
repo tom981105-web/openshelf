@@ -3,156 +3,188 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#f3efe7" />
   <title>OpenShelf — Useful tools, neatly organized</title>
   <meta name="description" content="오픈소스와 유용한 웹 도구를 한곳에서 검색하고 발견하세요." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="topbar">
-    <a class="brand" href="#top" aria-label="OpenShelf 홈">OpenShelf</a>
-    <nav>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="brand" href="#top" aria-label="OpenShelf 홈">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>OpenShelf</span>
+      </a>
+
+      <nav class="desktop-nav" aria-label="주요 메뉴">
+        <a href="#categories" data-nav="categories">Categories</a>
+        <a href="#collections" data-nav="collections">Collections</a>
+        <a href="#tools" data-nav="tools">Explore</a>
+        <a href="#about" data-nav="about">About</a>
+        <button id="favoritesNav" class="nav-button" type="button">Favorites <span id="favoriteCount">0</span></button>
+      </nav>
+
+      <button id="mobileMenuButton" class="mobile-menu-button" type="button" aria-label="메뉴 열기" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </header>
+
+    <aside id="mobileMenu" class="mobile-menu" aria-hidden="true">
       <a href="#categories">Categories</a>
       <a href="#collections">Collections</a>
       <a href="#tools">Explore</a>
       <a href="#about">About</a>
-      <button id="favoritesNav" class="nav-button" type="button">Favorites <span id="favoriteCount">0</span></button>
-    </nav>
-  </header>
+      <button id="mobileFavorites" type="button">Favorites <span id="mobileFavoriteCount">0</span></button>
+      <a href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub ↗</a>
+    </aside>
 
-  <main id="top">
-    <section class="hero">
-      <div class="hero-copy">
-        <span class="eyebrow">CURATED OPEN TOOLS</span>
-        <h1>좋은 도구를<br><span>꺼내 쓰는 곳.</span></h1>
-        <p>오픈소스, 무료 웹 도구, 데스크톱 앱을 용도별로 정리해 둔 개인형 도구 아카이브. 복잡하게 찾아다니지 말고 필요한 순간 바로 꺼내 쓰세요.</p>
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <div class="hero-kicker">
+            <span class="eyebrow">CURATED OPEN TOOLS</span>
+            <span class="hero-edition">ISSUE 001 · 2026</span>
+          </div>
+          <h1>좋은 도구를<br><span>꺼내 쓰는 곳.</span></h1>
+          <p>오픈소스, 무료 웹 도구, 데스크톱 앱을 용도별로 정리해 둔 개인형 도구 아카이브. 복잡하게 찾아다니지 말고 필요한 순간 바로 꺼내 쓰세요.</p>
 
-        <div class="search-wrap">
-          <span aria-hidden="true">⌕</span>
-          <input id="search" type="search" placeholder="무엇이 필요하세요? 예: PDF, 캡처, AI, 디자인..." autocomplete="off" />
-          <kbd>/</kbd>
+          <div class="search-wrap" id="searchWrap">
+            <span class="search-icon" aria-hidden="true">⌕</span>
+            <input id="search" type="search" placeholder="무엇이 필요하세요? 예: PDF, 캡처, AI, 디자인..." autocomplete="off" />
+            <span id="searchHint" class="search-hint">검색</span>
+            <kbd>/</kbd>
+          </div>
+          <div id="categoryChips" class="chips" aria-label="카테고리"></div>
         </div>
-        <div id="categoryChips" class="chips" aria-label="카테고리"></div>
-      </div>
 
-      <aside class="hero-note">
-        <span>OPEN SHELF / INDEX</span>
-        <strong id="heroToolCount">0</strong>
-        <p>curated tools</p>
-        <small>직접 추가하고, 분류하고, 다시 꺼내 쓰는 도구 서랍.</small>
-      </aside>
-    </section>
+        <aside class="hero-note reveal">
+          <span>OPEN SHELF / INDEX</span>
+          <strong id="heroToolCount">0</strong>
+          <p>curated tools</p>
+          <small>직접 추가하고, 분류하고, 다시 꺼내 쓰는 도구 서랍.</small>
+          <div class="hero-rule"></div>
+          <span>NO ADS · NO NOISE</span>
+        </aside>
+      </section>
 
-    <section class="section-block" id="categories">
-      <div class="section-heading">
+      <section class="section-block reveal" id="categories">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">BROWSE BY CATEGORY</span>
+            <h2>카테고리로 찾기</h2>
+          </div>
+          <span class="section-note">용도부터 고르면 더 빨라요.</span>
+        </div>
+        <div id="categoryGrid" class="category-grid"></div>
+      </section>
+
+      <section class="section-block reveal" id="collections">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">CURATED COLLECTIONS</span>
+            <h2>상황별로 묶어보기</h2>
+          </div>
+          <span class="section-note">자주 쓰는 조합을 한 번에.</span>
+        </div>
+        <div id="collectionGrid" class="collection-grid"></div>
+      </section>
+
+      <section class="section-block reveal" id="latest">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">JUST ADDED</span>
+            <h2>최근 추가된 도구</h2>
+          </div>
+          <button id="scrollToAll" class="text-button" type="button">전체 보기 ↓</button>
+        </div>
+        <div id="latestGrid" class="latest-grid"></div>
+      </section>
+
+      <section class="explore-head reveal">
         <div>
-          <span class="eyebrow">BROWSE BY CATEGORY</span>
-          <h2>카테고리로 찾기</h2>
+          <span class="eyebrow">THE SHELF</span>
+          <h2>전체 도구</h2>
         </div>
-        <span class="section-note">용도부터 고르면 더 빨라요.</span>
-      </div>
-      <div id="categoryGrid" class="category-grid"></div>
-    </section>
-
-    <section class="section-block" id="collections">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">CURATED COLLECTIONS</span>
-          <h2>상황별로 묶어보기</h2>
+        <div class="explore-stats">
+          <span><b id="statCategories">0</b> categories</span>
+          <span><b id="statPlatforms">0</b> platforms</span>
+          <span><b id="statOpenSource">0</b> open source</span>
         </div>
-        <span class="section-note">자주 쓰는 조합을 한 번에.</span>
-      </div>
-      <div id="collectionGrid" class="collection-grid"></div>
-    </section>
+      </section>
 
-    <section class="section-block" id="latest">
-      <div class="section-heading">
-        <div>
-          <span class="eyebrow">JUST ADDED</span>
-          <h2>최근 추가된 도구</h2>
+      <section class="controls reveal" id="tools">
+        <div class="result-summary">
+          <strong id="resultCount">0 tools</strong>
+          <span class="muted"> · 현재 조건에 맞는 도구</span>
         </div>
-        <button id="scrollToAll" class="text-button" type="button">전체 보기 ↓</button>
-      </div>
-      <div id="latestGrid" class="latest-grid"></div>
-    </section>
+        <div class="filters">
+          <label><input id="openSourceOnly" type="checkbox" /> 오픈소스</label>
+          <label><input id="freeOnly" type="checkbox" /> 무료</label>
+          <label><input id="favoritesOnly" type="checkbox" /> 즐겨찾기</label>
+          <select id="platformFilter" aria-label="플랫폼 필터">
+            <option value="all">모든 플랫폼</option>
+            <option value="Web">Web</option>
+            <option value="Windows">Windows</option>
+            <option value="macOS">macOS</option>
+            <option value="Linux">Linux</option>
+          </select>
+          <select id="sortSelect" aria-label="정렬">
+            <option value="featured">추천순</option>
+            <option value="newest">최근 추가순</option>
+            <option value="name">이름순</option>
+          </select>
+        </div>
+      </section>
 
-    <section class="explore-head">
+      <section id="toolGrid" class="grid" aria-live="polite"></section>
+      <section id="emptyState" class="empty" hidden>
+        <span>NO RESULTS</span>
+        <h2>검색 결과가 없어요.</h2>
+        <p>다른 검색어나 필터를 사용해보세요.</p>
+        <button id="resetFilters" type="button">필터 초기화</button>
+      </section>
+
+      <section class="about-section reveal" id="about">
+        <div class="about-copy">
+          <span class="eyebrow">ABOUT OPENSHELF</span>
+          <h2>도구는 많고,<br>좋은 도구는 흩어져 있으니까.</h2>
+        </div>
+        <div class="about-body">
+          <p>OpenShelf는 “나중에 써봐야지” 하고 흩어져 있던 오픈소스, 웹 앱, 유틸리티를 한곳에 모으기 위한 프로젝트입니다.</p>
+          <p>당분간은 직접 확인한 도구만 추가하고, 카테고리·태그·플랫폼 기준을 일관되게 유지합니다. 규모보다 찾기 쉬운 구조를 우선합니다.</p>
+          <div class="about-principles">
+            <span>01 · CURATED</span>
+            <span>02 · SEARCHABLE</span>
+            <span>03 · REUSABLE</span>
+          </div>
+          <div class="about-actions">
+            <a class="primary-link" href="https://github.com/tom981105-web/openshelf/issues/new" target="_blank" rel="noreferrer">도구 제보하기 ↗</a>
+            <a class="secondary-link" href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub 보기 ↗</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="toolDialog" class="tool-dialog">
+      <button id="dialogClose" class="dialog-close" type="button" aria-label="닫기">×</button>
+      <div id="dialogContent"></div>
+    </dialog>
+
+    <footer>
       <div>
-        <span class="eyebrow">THE SHELF</span>
-        <h2>전체 도구</h2>
+        <strong>OpenShelf</strong>
+        <span>Useful tools, neatly organized.</span>
       </div>
-      <div class="explore-stats">
-        <span><b id="statCategories">0</b> categories</span>
-        <span><b id="statPlatforms">0</b> platforms</span>
-        <span><b id="statOpenSource">0</b> open source</span>
+      <div class="footer-links">
+        <a href="#categories">Categories</a>
+        <a href="#collections">Collections</a>
+        <a href="#about">About</a>
+        <a href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub</a>
       </div>
-    </section>
-
-    <section class="controls" id="tools">
-      <div>
-        <strong id="resultCount">0 tools</strong>
-        <span class="muted"> · 현재 조건에 맞는 도구</span>
-      </div>
-      <div class="filters">
-        <label><input id="openSourceOnly" type="checkbox" /> 오픈소스</label>
-        <label><input id="freeOnly" type="checkbox" /> 무료</label>
-        <label><input id="favoritesOnly" type="checkbox" /> 즐겨찾기</label>
-        <select id="platformFilter" aria-label="플랫폼 필터">
-          <option value="all">모든 플랫폼</option>
-          <option value="Web">Web</option>
-          <option value="Windows">Windows</option>
-          <option value="macOS">macOS</option>
-          <option value="Linux">Linux</option>
-        </select>
-        <select id="sortSelect" aria-label="정렬">
-          <option value="featured">추천순</option>
-          <option value="newest">최근 추가순</option>
-          <option value="name">이름순</option>
-        </select>
-      </div>
-    </section>
-
-    <section id="toolGrid" class="grid" aria-live="polite"></section>
-    <section id="emptyState" class="empty" hidden>
-      <span>NO RESULTS</span>
-      <h2>검색 결과가 없어요.</h2>
-      <p>다른 검색어나 필터를 사용해보세요.</p>
-      <button id="resetFilters" type="button">필터 초기화</button>
-    </section>
-
-    <section class="about-section" id="about">
-      <div class="about-copy">
-        <span class="eyebrow">ABOUT OPENSHELF</span>
-        <h2>도구는 많고,<br>좋은 도구는 흩어져 있으니까.</h2>
-      </div>
-      <div class="about-body">
-        <p>OpenShelf는 “나중에 써봐야지” 하고 흩어져 있던 오픈소스, 웹 앱, 유틸리티를 한곳에 모으기 위한 프로젝트입니다.</p>
-        <p>당분간은 직접 확인한 도구만 추가하고, 카테고리·태그·플랫폼 기준을 일관되게 유지합니다. 규모보다 찾기 쉬운 구조를 우선합니다.</p>
-        <div class="about-actions">
-          <a class="primary-link" href="https://github.com/tom981105-web/openshelf/issues/new" target="_blank" rel="noreferrer">도구 제보하기 ↗</a>
-          <a class="secondary-link" href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub 보기 ↗</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <dialog id="toolDialog" class="tool-dialog">
-    <button id="dialogClose" class="dialog-close" type="button" aria-label="닫기">×</button>
-    <div id="dialogContent"></div>
-  </dialog>
-
-  <footer>
-    <div>
-      <strong>OpenShelf</strong>
-      <span>Useful tools, neatly organized.</span>
-    </div>
-    <div class="footer-links">
-      <a href="#categories">Categories</a>
-      <a href="#collections">Collections</a>
-      <a href="#about">About</a>
-      <a href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub</a>
-    </div>
-    <span>v0.3 · 2026</span>
-  </footer>
+      <span>v0.4 · 2026</span>
+    </footer>
+  </div>
 
   <script src="app.js" defer></script>
 </body>
