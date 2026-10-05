@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>OpenShelf — Useful tools, neatly organized</title>
+  <meta name="description" content="오픈소스와 유용한 웹 도구를 한곳에서 검색하고 발견하세요." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">OpenShelf</a>
+    <nav>
+      <a href="#tools">Explore</a>
+      <a href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow">CURATED OPEN TOOLS</span>
+      <h1>필요한 도구를<br><span>한곳에서.</span></h1>
+      <p>오픈소스, 무료 웹 도구, 데스크톱 앱을 카테고리별로 모아 빠르게 찾아보세요.</p>
+
+      <div class="search-wrap">
+        <span aria-hidden="true">⌕</span>
+        <input id="search" type="search" placeholder="예: PDF, 이미지 업스케일, AI 코딩..." autocomplete="off" />
+        <kbd>/</kbd>
+      </div>
+
+      <div id="categoryChips" class="chips" aria-label="카테고리"></div>
+    </section>
+
+    <section class="controls" id="tools">
+      <div>
+        <strong id="resultCount">0 tools</strong>
+        <span class="muted"> · 직접 골라 담은 유용한 도구</span>
+      </div>
+      <div class="filters">
+        <label><input id="openSourceOnly" type="checkbox" /> 오픈소스</label>
+        <label><input id="freeOnly" type="checkbox" /> 무료</label>
+        <select id="platformFilter" aria-label="플랫폼 필터">
+          <option value="all">모든 플랫폼</option>
+          <option value="Web">Web</option>
+          <option value="Windows">Windows</option>
+          <option value="macOS">macOS</option>
+          <option value="Linux">Linux</option>
+        </select>
+        <select id="sortSelect" aria-label="정렬">
+          <option value="featured">추천순</option>
+          <option value="name">이름순</option>
+        </select>
+      </div>
+    </section>
+
+    <section id="toolGrid" class="grid" aria-live="polite"></section>
+    <section id="emptyState" class="empty" hidden>
+      <h2>검색 결과가 없어요.</h2>
+      <p>다른 검색어나 필터를 사용해보세요.</p>
+    </section>
+  </main>
+
+  <footer>
+    <span>OpenShelf</span>
+    <span>Open source tool directory · 2026</span>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
