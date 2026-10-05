@@ -1,5 +1,62 @@
 [
   {
+    "id": "claude-animation-base",
+    "name": "Claude Animation Base",
+    "description": "Claude 같은 코딩 에이전트로 손그림 스타일 캐릭터 애니메이션을 만들기 위한 p5.js 스타터 킷.",
+    "longDescription": "p5.js와 p5.brush를 기반으로 손그림 느낌의 2D 캐릭터 애니메이션을 제작할 수 있도록 코드, 캐릭터 에셋, 31가지 감정 표현, 렌더러와 모델용 가이드를 묶어 둔 스타터 킷입니다. Claude Code 같은 코딩 에이전트에게 원하는 장면을 설명하면 스토리보드를 만들고 장면별 코드를 작성한 뒤 MP4 영상까지 렌더링하는 작업 흐름을 제공합니다.",
+    "category": "AI · 애니메이션",
+    "tags": [
+      "Claude Code",
+      "애니메이션",
+      "p5.js",
+      "p5.brush",
+      "영상 생성"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/JohnHeibel/ClaudeAnimationBase",
+    "github": "https://github.com/JohnHeibel/ClaudeAnimationBase",
+    "featured": 10,
+    "added": "2026-10-05",
+    "requirements": [
+      "Node.js",
+      "Google Chrome",
+      "ffmpeg",
+      "Claude Code 또는 코딩 에이전트"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "기타 코딩 에이전트"
+    ],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/JohnHeibel/ClaudeAnimationBase.git",
+        "note": "복제한 폴더를 Claude Code 또는 사용하는 코딩 에이전트에서 엽니다."
+      },
+      {
+        "title": "의존성 설치",
+        "command": "cd ClaudeAnimationBase && npm install",
+        "note": "직접 렌더링하려면 Node.js, Chrome, ffmpeg가 필요합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 npm install로 필요한 패키지를 설치합니다.",
+      "ClaudeAnimationBase 폴더를 Claude Code 또는 다른 코딩 에이전트에서 엽니다.",
+      "에이전트에게 ANIMATION_GUIDE.md를 먼저 읽도록 요청한 뒤 원하는 영상 장면과 길이를 설명합니다.",
+      "에이전트가 스토리보드와 장면 코드를 만든 뒤 렌더링 결과를 확인합니다.",
+      "완성된 영상은 기본적으로 out/video.mp4에서 확인할 수 있습니다."
+    ],
+    "examplePrompt": "Read ANIMATION_GUIDE.md, then make a 15-second video of Clawd trying to catch a butterfly.",
+    "usageNote": "전용 GPU가 없어도 사용할 수 있지만 p5.brush의 수채화 표현은 프레임당 렌더링 시간이 길어질 수 있습니다. 내장 그래픽 환경에서는 수채화 채우기를 피하도록 에이전트에게 요청하는 것이 권장됩니다."
+  },
+  {
     "id": "geo-sleuth",
     "name": "Geo Sleuth",
     "description": "사진 한 장을 분석해 촬영 위치와 카메라 방향을 추정하는 AI Agent Skill.",
