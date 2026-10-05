@@ -1,0 +1,58 @@
+name: Update popularity
+
+on:
+  schedule:
+    - cron: "20 0 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-popularity:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Refresh GitHub stars and forks
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'data/tools.json';
+            const tools = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const today = new Date().toISOString().slice(0, 10);
+
+            for (const tool of tools) {
+              if (!tool.github) continue;
+              const match = tool.github.match(/github\.com\/([^/]+)\/([^/#?]+)/i);
+              if (!match) continue;
+
+              const owner = match[1];
+              const repo = match[2].replace(/\.git$/, '');
+
+              try {
+                const { data } = await github.rest.repos.get({ owner, repo });
+                tool.stars = data.stargazers_count;
+                tool.forks = data.forks_count;
+                tool.starsUpdatedAt = today;
+                core.info(`${tool.name}: ★ ${tool.stars}, forks ${tool.forks}`);
+              } catch (error) {
+                core.warning(`Could not refresh ${tool.name}: ${error.message}`);
+              }
+            }
+
+            fs.writeFileSync(path, JSON.stringify(tools, null, 2) + '\n');
+
+      - name: Commit updated metrics
+        run: |
+          if git diff --quiet -- data/tools.json; then
+            echo "No popularity changes."
+            exit 0
+          fi
+          git config user.name "openshelf-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/tools.json
+          git commit -m "chore: refresh tool popularity"
+          git push
