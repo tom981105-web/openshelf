@@ -1,5 +1,234 @@
 [
   {
+    "id": "text-to-cad",
+    "name": "text-to-cad",
+    "github": "https://github.com/earthtojake/text-to-cad",
+    "description": "AI 에이전트에게 STEP·STL·GLB·3MF 등 실제 CAD 모델 생성 능력을 추가하는 로컬 CAD 플러그인.",
+    "longDescription": "자연어 지시로 3D CAD 모델을 만들고 STEP, GLB, STL, 3MF 파일로 내보낼 수 있게 해주는 에이전트용 CAD 플러그인입니다. 제조 가능성 검사, 엔지니어링 도면 생성, 3D 프린팅·판금·CNC 서비스 연결까지 지원하며 Claude Code, Codex, Cursor, Gemini, Grok 등 다양한 에이전트에서 사용할 수 있습니다.",
+    "category": "AI · CAD",
+    "tags": [
+      "CAD",
+      "3D 모델링",
+      "STEP",
+      "STL",
+      "Agent Skill"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.texttocad.dev",
+    "featured": 10,
+    "added": "2026-10-05",
+    "requirements": [
+      "uv",
+      "Python 3.11+",
+      "Node.js 20+",
+      "지원되는 AI 에이전트"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Claude Desktop",
+      "Codex",
+      "Cursor",
+      "Gemini",
+      "Grok",
+      "기타 Skills 지원 에이전트"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 설치",
+        "command": "claude plugin marketplace add earthtojake/text-to-cad\nclaude plugin install text-to-cad@earthtojake",
+        "note": "설치 후 Claude Code를 재시작합니다."
+      },
+      {
+        "title": "Codex 설치",
+        "command": "codex plugin marketplace add earthtojake/text-to-cad\ncodex plugin add text-to-cad@earthtojake",
+        "note": "Codex 0.142.0 이상이 필요합니다."
+      },
+      {
+        "title": "Skills 방식 설치",
+        "command": "npx skills add earthtojake/text-to-cad",
+        "note": "플러그인을 지원하지 않는 에이전트에서도 핵심 CAD 워크플로를 사용할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "사용하는 에이전트에 text-to-cad를 설치하고 앱을 재시작합니다.",
+      "만들고 싶은 부품이나 형상을 자연어로 설명합니다.",
+      "에이전트가 CAD 모델을 생성한 뒤 뷰어나 링크로 결과를 확인합니다.",
+      "필요하면 치수·재질·가공 방식 등을 수정해 반복 설계합니다.",
+      "완성된 모델을 STEP, STL, GLB, 3MF 등의 형식으로 내보냅니다."
+    ],
+    "examplePrompt": "Create a simple wall-mount bracket with two screw holes and export it as STEP and STL.",
+    "usageNote": "CAD 런타임은 로컬에서 실행됩니다. 첫 실행 시 필요한 런타임을 다운로드하므로 네트워크 연결이 필요할 수 있습니다."
+  },
+  {
+    "id": "strands-decider",
+    "name": "Strands Decider",
+    "github": "https://github.com/strands-labs/strands-decider",
+    "description": "에이전트 워크플로에서 선택·분류·점수를 빠르게 처리하는 소형 결정 모델.",
+    "longDescription": "일반 LLM처럼 문장을 생성하는 대신 여러 선택지 중 하나를 고르거나 Yes/No, 점수화 같은 결정을 빠르게 수행하는 2B급 System One 모델입니다. 각 결과에 보정된 신뢰도를 제공하며 모델 라우팅, 도구 선택, 요청 분류, 가드레일, 평가 같은 반복적인 에이전트 의사결정을 낮은 지연으로 처리하는 데 초점을 둡니다.",
+    "category": "AI · 모델",
+    "tags": [
+      "Decision Model",
+      "분류",
+      "에이전트",
+      "System One",
+      "로컬 AI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://strandsagents.com/docs/labs/",
+    "featured": 9,
+    "added": "2026-10-05",
+    "requirements": [
+      "Python",
+      "모델 실행 가능한 로컬 환경"
+    ],
+    "supportedAgents": [
+      "Strands Agents SDK",
+      "Python 워크플로"
+    ],
+    "install": [
+      {
+        "title": "Python 패키지 설치",
+        "command": "pip install strands-decider",
+        "note": "CLI와 기본 추론 기능을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "strands-decider 패키지를 설치합니다.",
+      "상태(state)와 결정 질문을 정합니다.",
+      "choice, noul(Yes/No), score 중 필요한 질문 유형으로 CLI를 실행합니다.",
+      "결과 선택값과 confidence를 확인해 에이전트 라우팅이나 분류 로직에 사용합니다.",
+      "필요하면 serve 명령으로 로컬 HTTP 서버를 실행해 다른 앱에서 호출합니다."
+    ],
+    "examplePrompt": "strands-decider ask StrandsAgents/strands-decider-2B-hobson-v19 --state \"Help! My payouts have been failing for 3 days!\" --choice \"Which team should handle this?=billing,sales,retail\"",
+    "usageNote": "텍스트 생성용 LLM을 대체하는 모델이 아니라, 선택·분류·점수화처럼 반복적이고 빠른 판단이 필요한 작업을 보조하는 용도에 적합합니다."
+  },
+  {
+    "id": "vibe-wise",
+    "name": "VibeWise",
+    "github": "https://github.com/nykooi1/vibe-wise",
+    "description": "AI가 코드를 쓰는 동안 사용자가 설계와 판단 과정을 직접 익히도록 돕는 Claude Code 학습 플러그인.",
+    "longDescription": "Claude Code가 바로 코드를 작성하기보다 먼저 사용자의 접근 방식을 묻고, 설계 선택지와 트레이드오프를 함께 검토하도록 만드는 학습 중심 플러그인입니다. 구현 전에는 Build·Design·Implementation 체크포인트를 거치고, 구현 후에는 변경 내용과 테스트 결과를 설명해 사용자가 의사결정 과정을 놓치지 않게 합니다.",
+    "category": "AI · 에이전트",
+    "tags": [
+      "Claude Code",
+      "학습",
+      "코딩 교육",
+      "설계",
+      "플러그인"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/nykooi1/vibe-wise",
+    "featured": 9,
+    "added": "2026-10-05",
+    "requirements": [
+      "Claude Code",
+      "Python 3"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "Marketplace 추가",
+        "command": "/plugin marketplace add nykooi1/vibe-wise",
+        "note": "Claude Code에서 먼저 실행합니다."
+      },
+      {
+        "title": "플러그인 설치",
+        "command": "/plugin install vibe-wise@vibe-wise",
+        "note": "Marketplace 추가가 끝난 뒤 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Claude Code에서 VibeWise를 설치하고 프로젝트를 다시 엽니다.",
+      "/vibe-wise:learn 명령을 실행합니다.",
+      "경험 수준과 체크포인트 빈도 같은 학습 설정을 선택합니다.",
+      "만들고 싶은 기능을 요청하고 Build·Design 체크포인트에서 직접 판단합니다.",
+      "Implementation 단계에서 구현을 승인한 뒤 변경 내용과 테스트 결과를 확인합니다."
+    ],
+    "examplePrompt": "/vibe-wise:learn",
+    "usageNote": "학습 메모와 프로젝트 맵은 프로젝트의 .vibe-wise/ 폴더에 저장됩니다. 필요하면 .gitignore에 추가해 개인 학습 기록이 저장소에 들어가지 않게 할 수 있습니다."
+  },
+  {
+    "id": "pstack-claude",
+    "name": "pstack",
+    "github": "https://github.com/michael-denyer/pstack-claude",
+    "description": "Claude Code·Codex 등에서 더 엄격한 계획·검증·리뷰 워크플로를 적용하는 코딩 에이전트 스킬 스택.",
+    "longDescription": "Cursor용 pstack을 Claude Code, Codex, Pi 등 여러 에이전트 환경으로 옮긴 포트입니다. 목표를 주면 poteto-mode가 작업 유형에 맞는 플레이북을 선택하고, 조사·설계·구현·테스트·리뷰를 단계적으로 수행해 코드 변경을 더 작고 검증 가능하게 유지하도록 돕습니다.",
+    "category": "AI · 에이전트",
+    "tags": [
+      "코딩 에이전트",
+      "Claude Code",
+      "Codex",
+      "워크플로",
+      "코드 리뷰"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/michael-denyer/pstack-claude",
+    "featured": 10,
+    "added": "2026-10-05",
+    "requirements": [
+      "지원되는 코딩 에이전트",
+      "Git"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "Pi",
+      "OpenCode",
+      "Gemini CLI",
+      "Prime Agent"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 설치",
+        "command": "/plugin marketplace add michael-denyer/pstack-claude\n/plugin install pstack@pstack-claude",
+        "note": "Claude Code 안에서 두 명령을 순서대로 실행합니다."
+      },
+      {
+        "title": "Codex 설치",
+        "command": "codex plugin marketplace add michael-denyer/pstack-claude\ncodex plugin add pstack@pstack-claude",
+        "note": "터미널에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "pstack을 설치한 코딩 에이전트를 엽니다.",
+      "원하는 작업을 poteto-mode로 요청합니다.",
+      "pstack이 버그 수정·기능 개발·리팩터링 등 작업 유형에 맞는 플레이북을 선택합니다.",
+      "조사·설계·구현·검증 결과를 확인하고 필요한 경우 추가 지시를 줍니다."
+    ],
+    "examplePrompt": "Use poteto-mode to fix the search filter resetting when I change pages.",
+    "usageNote": "pstack은 별도 서버나 텔레메트리를 사용하지 않으며, 스크립트는 로컬에서 실행됩니다."
+  },
+  {
     "id": "claude-animation-base",
     "name": "Claude Animation Base",
     "description": "Claude 같은 코딩 에이전트로 손그림 스타일 캐릭터 애니메이션을 만들기 위한 p5.js 스타터 킷.",
