@@ -1,5 +1,139 @@
 [
   {
+    "id": "ifixai",
+    "name": "iFixAi",
+    "github": "https://github.com/ifixai-ai/iFixAi",
+    "description": "AI 에이전트가 실제로 의도한 업무를 제대로 수행하는지 독립적으로 감사·평가하는 진단 도구.",
+    "longDescription": "AI 에이전트의 응답 품질뿐 아니라 비즈니스 KPI, 조직 구조, 운영 목적에 맞게 행동하는지 점검하는 독립 감사 도구입니다. CLI·플러그인·Agent Skill 방식으로 실행할 수 있고, 여러 검사 항목을 기반으로 A–F 등급과 점수카드를 생성해 에이전트의 오류·맹점·정렬 문제를 빠르게 확인할 수 있습니다.",
+    "category": "AI · 평가",
+    "tags": [
+      "AI 감사",
+      "에이전트 평가",
+      "Red Team",
+      "AI Safety",
+      "진단"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.ifixai.ai",
+    "featured": 10,
+    "added": "2026-10-05",
+    "requirements": [
+      "Python 3.10+",
+      "평가 대상/심사 모델용 API 키 또는 로컬 설정"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "VS Code / Copilot",
+      "Windsurf",
+      "Cline",
+      "Continue",
+      "Gemini",
+      "Zed"
+    ],
+    "install": [
+      {
+        "title": "CLI 설치 예시",
+        "command": "pip install \"ifixai[openai]\"",
+        "note": "평가할 provider에 맞춰 openai 대신 anthropic, gemini 등의 extra를 선택합니다."
+      },
+      {
+        "title": "Claude Code 플러그인",
+        "command": "/plugin marketplace add ifixai-ai/iFixAi\n/plugin install ifixai@ifixai-community",
+        "note": "설치 후 run iFixAi on my setup이라고 요청하거나 /ifixai:ifixai를 실행합니다."
+      },
+      {
+        "title": "Agent Skill 설치",
+        "command": "uvx ifixai install --agents all",
+        "note": "여러 에이전트에 /ifixai-skill 명령을 설치할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "사용할 방식에 맞춰 CLI, 플러그인 또는 Agent Skill을 설치합니다.",
+      "평가 대상 에이전트와 사용할 provider·judge·검사 suite를 설정합니다.",
+      "guided wizard에서는 ifixai setup으로 설정 파일을 만든 뒤 ifixai run을 실행합니다.",
+      "플러그인에서는 에이전트에게 iFixAi 실행을 요청해 설정 탐색과 테스트를 진행합니다.",
+      "완료 후 A–F 등급, 점수카드, JSON·Markdown 보고서에서 실패 항목과 리스크를 확인합니다."
+    ],
+    "examplePrompt": "run iFixAi on my setup",
+    "usageNote": "독립적인 외부 judge를 사용해야 더 신뢰할 수 있는 결과를 얻을 수 있으며, 실제 평가에는 사용하는 모델 공급자에 따라 API 비용이 발생할 수 있습니다.",
+    "stars": 20575,
+    "forks": 1404,
+    "starsUpdatedAt": "2026-10-05"
+  },
+  {
+    "id": "impeccable",
+    "name": "Impeccable",
+    "github": "https://github.com/pbakaus/impeccable",
+    "description": "AI 코딩 에이전트의 프론트엔드 디자인 품질을 끌어올리는 디자인 스킬·명령어 패키지.",
+    "longDescription": "AI 코딩 에이전트가 흔히 만드는 반복적인 SaaS 스타일과 디자인 안티패턴을 줄이기 위한 디자인 언어와 워크플로를 제공합니다. 1개의 통합 스킬, 24개 명령어, 라이브 브라우저 반복 작업, 61개의 결정론적 검사 규칙을 통해 레이아웃·타이포그래피·접근성·애니메이션·반응형·완성도 등을 체계적으로 개선할 수 있습니다.",
+    "category": "AI · 디자인",
+    "tags": [
+      "프론트엔드",
+      "디자인",
+      "Claude Code",
+      "Codex",
+      "UI 개선"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://impeccable.style",
+    "featured": 10,
+    "added": "2026-10-05",
+    "requirements": [
+      "지원되는 AI 코딩 에이전트",
+      "Node.js / npx(권장 설치 방식)"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "Cursor",
+      "Gemini CLI",
+      "GitHub Copilot",
+      "Grok Build",
+      "OpenCode",
+      "기타 지원 에이전트"
+    ],
+    "install": [
+      {
+        "title": "권장 설치",
+        "command": "npx impeccable install",
+        "note": "프로젝트 루트에서 실행하면 감지된 에이전트에 맞춰 설치 범위와 공급자를 선택할 수 있습니다."
+      },
+      {
+        "title": "Claude Code Marketplace",
+        "command": "/plugin marketplace add pbakaus/impeccable",
+        "note": "Marketplace를 추가한 뒤 /plugin에서 Impeccable을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Impeccable을 설치한 뒤 사용하는 AI 코딩 에이전트를 다시 엽니다.",
+      "/impeccable init을 실행해 프로젝트의 제품 맥락과 디자인 기준을 PRODUCT.md에 정리합니다.",
+      "audit, critique, polish, layout, typeset, animate 등 필요한 명령을 선택합니다.",
+      "특정 화면이나 영역을 대상으로 명령을 실행해 문제점을 진단하거나 디자인을 개선합니다.",
+      "필요하면 live 명령으로 브라우저에서 시각적 변형을 반복하며 결과를 비교합니다."
+    ],
+    "examplePrompt": "/impeccable polish the checkout form",
+    "usageNote": "Impeccable은 별도의 LLM API 키 없이도 일부 결정론적 검사 규칙을 실행할 수 있으며, AI 에이전트와 함께 사용할 때 디자인 의사결정과 개선 작업을 체계화하는 데 초점을 둡니다.",
+    "stars": 76501,
+    "forks": 4564,
+    "starsUpdatedAt": "2026-10-05"
+  },
+  {
     "id": "text-to-cad",
     "name": "text-to-cad",
     "github": "https://github.com/earthtojake/text-to-cad",
