@@ -11,24 +11,45 @@
   <header class="topbar">
     <a class="brand" href="#">OpenShelf</a>
     <nav>
+      <a href="#latest">Latest</a>
       <a href="#tools">Explore</a>
+      <button id="favoritesNav" class="nav-button" type="button">Favorites <span id="favoriteCount">0</span></button>
       <a href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub</a>
     </nav>
   </header>
 
   <main>
     <section class="hero">
-      <span class="eyebrow">CURATED OPEN TOOLS</span>
-      <h1>필요한 도구를<br><span>한곳에서.</span></h1>
-      <p>오픈소스, 무료 웹 도구, 데스크톱 앱을 카테고리별로 모아 빠르게 찾아보세요.</p>
+      <div class="hero-copy">
+        <span class="eyebrow">CURATED OPEN TOOLS</span>
+        <h1>필요한 도구를<br><span>한곳에서.</span></h1>
+        <p>오픈소스, 무료 웹 도구, 데스크톱 앱을 카테고리별로 모아 빠르게 찾아보세요. 광고성 나열보다 실제로 다시 찾게 되는 도구를 중심으로 정리합니다.</p>
 
-      <div class="search-wrap">
-        <span aria-hidden="true">⌕</span>
-        <input id="search" type="search" placeholder="예: PDF, 이미지 업스케일, AI 코딩..." autocomplete="off" />
-        <kbd>/</kbd>
+        <div class="search-wrap">
+          <span aria-hidden="true">⌕</span>
+          <input id="search" type="search" placeholder="예: PDF, 이미지 업스케일, AI 코딩..." autocomplete="off" />
+          <kbd>/</kbd>
+        </div>
+        <div id="categoryChips" class="chips" aria-label="카테고리"></div>
       </div>
 
-      <div id="categoryChips" class="chips" aria-label="카테고리"></div>
+      <aside class="hero-note">
+        <span>OPEN SHELF / 2026</span>
+        <strong id="heroToolCount">0</strong>
+        <p>curated tools</p>
+        <small>필요할 때 다시 찾기 쉬운 도구 서랍.</small>
+      </aside>
+    </section>
+
+    <section class="section-block" id="latest">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">JUST ADDED</span>
+          <h2>최근 추가된 도구</h2>
+        </div>
+        <button id="scrollToAll" class="text-button" type="button">전체 보기 ↓</button>
+      </div>
+      <div id="latestGrid" class="latest-grid"></div>
     </section>
 
     <section class="controls" id="tools">
@@ -39,6 +60,7 @@
       <div class="filters">
         <label><input id="openSourceOnly" type="checkbox" /> 오픈소스</label>
         <label><input id="freeOnly" type="checkbox" /> 무료</label>
+        <label><input id="favoritesOnly" type="checkbox" /> 즐겨찾기</label>
         <select id="platformFilter" aria-label="플랫폼 필터">
           <option value="all">모든 플랫폼</option>
           <option value="Web">Web</option>
@@ -48,6 +70,7 @@
         </select>
         <select id="sortSelect" aria-label="정렬">
           <option value="featured">추천순</option>
+          <option value="newest">최근 추가순</option>
           <option value="name">이름순</option>
         </select>
       </div>
@@ -55,14 +78,21 @@
 
     <section id="toolGrid" class="grid" aria-live="polite"></section>
     <section id="emptyState" class="empty" hidden>
+      <span>NO RESULTS</span>
       <h2>검색 결과가 없어요.</h2>
       <p>다른 검색어나 필터를 사용해보세요.</p>
+      <button id="resetFilters" type="button">필터 초기화</button>
     </section>
   </main>
 
+  <dialog id="toolDialog" class="tool-dialog">
+    <button id="dialogClose" class="dialog-close" type="button" aria-label="닫기">×</button>
+    <div id="dialogContent"></div>
+  </dialog>
+
   <footer>
     <span>OpenShelf</span>
-    <span>Open source tool directory · 2026</span>
+    <span>Open source tool directory · v0.2 · 2026</span>
   </footer>
 
   <script src="app.js" defer></script>
