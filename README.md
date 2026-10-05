@@ -2,19 +2,26 @@
 
 Useful open-source apps, free web tools, and self-hosted software — organized in one place.
 
-## v0.1
+## v0.2
+
+OpenShelf is evolving from a simple link directory into a browsable tool library.
+
+### Features
 
 - Full-text search
-- Category filters
-- Open-source / free filters
+- Category chips
+- Open-source / free / favorites filters
 - Platform filter
+- Featured / newest / name sorting
+- Recent additions section
+- Tool detail modal
+- Similar-tool recommendations
+- Local favorites saved in the browser
 - Data-driven cards via `data/tools.json`
-- Responsive layout
+- Responsive desktop/mobile layout
 - GitHub Pages friendly: no build step required
 
 ## Run locally
-
-Because tool data is loaded with `fetch`, run a tiny local HTTP server instead of opening `index.html` directly.
 
 ```bash
 python -m http.server 8080
@@ -24,32 +31,20 @@ Then open `http://localhost:8080`.
 
 ## Add a tool
 
-Add an item to `data/tools.json`:
+Add an item to `data/tools.json`.
 
-```json
-{
-  "name": "Tool name",
-  "description": "Short description",
-  "category": "Category",
-  "tags": ["tag1", "tag2"],
-  "platforms": ["Web", "Windows"],
-  "free": true,
-  "openSource": true,
-  "website": "https://example.com",
-  "github": "https://github.com/example/project",
-  "featured": 5
-}
-```
+Required fields: `id`, `name`, `description`, `category`, `tags`, `platforms`, `free`, `openSource`, `added`.
+
+Optional but recommended: `longDescription`, `license`, `website`, `github`, `featured`.
 
 ## Roadmap
 
-- Tool detail pages
-- Favorites / local bookmarks
-- Alternative-tool relationships
 - GitHub metadata sync
-- User submissions via GitHub Issues
+- User submissions through GitHub Issues
 - Korean/English localization
-- Recently added / trending sections
+- Dedicated category pages
+- Trending / popular collections
+- Better logo and preview image handling
 
 ## License
 
