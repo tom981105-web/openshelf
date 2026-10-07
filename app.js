@@ -164,7 +164,42 @@ function saveRecentSearch(query){const q=String(query||'').trim();if(q.length<2)
 function searchSuggestionItems(){if(!state.query)return[];return tools.map(tool=>({tool,score:searchScore(tool,state.query)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||(b.tool.stars||0)-(a.tool.stars||0)).slice(0,7)}
 function popularSearchTerms(){const categories=orderedCategories().slice(0,4);const tagCounts=new Map();for(const tool of tools){for(const tag of tool.tags||[]){const t=String(tag).trim();if(t.length<2)continue;tagCounts.set(t,(tagCounts.get(t)||0)+1)}}const tags=[...tagCounts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,4).map(x=>x[0]);return [...new Set([...categories,...tags])].slice(0,7)}
 function applySearchQuery(query,commit=false){state.query=String(query||'').trim();els.search.value=state.query;if(state.query&&state.category!=='전체'){state.category='전체';renderChips()}if(commit)saveRecentSearch(state.query);renderTools();renderSearchSuggestions()}
-function renderSearchSuggestions(){if(!els.searchSuggestions)return;searchSuggestionIndex=-1;const query=state.query.trim();if(!query){const recent=recentSearches.map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">최근 · '+q+'</button>').join('');const popular=popularSearchTerms().map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');const syntax='<div class="search-syntax"><span>고급 검색</span><code>무료 windows pdf</code><code>category:문서</code><code>stars:>10000</code><code>-교육 agent</code><code>pdf OR hwp</code><code>웹사이트 자료 긁어서 AI에 넣고 싶어</code></div>';if(!recent&&!popular){els.searchSuggestions.hidden=true;return}els.searchSuggestions.innerHTML='<div class="search-suggestion-section">'+(recent?'<b>최근 검색</b><div class="search-chip-row">'+recent+'</div>':'')+'<b>추천 검색</b><div class="search-chip-row">'+popular+'</div>'+syntax+'</div>';els.searchSuggestions.hidden=false}else{const suggestions=searchSuggestionItems();if(!suggestions.length){const alternates=popularSearchTerms().slice(0,5).map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');els.searchSuggestions.innerHTML='<div class="search-suggestion-empty"><strong>일치하는 도구가 없어요.</strong><span>이 검색어는 어때요?</span><div class="search-chip-row">'+alternates+'</div></div>';els.searchSuggestions.hidden=false}else{els.searchSuggestions.innerHTML=suggestions.map(x=>'<button type="button" class="search-suggestion" data-search-tool="'+x.tool.id+'"><span><strong>'+x.tool.name+'</strong><small>'+x.tool.category+'</small></span><em>관련도 '+Math.round(x.score)+' · ★ '+compactNumber(x.tool.stars||0)+'</em></button>').join('');els.searchSuggestions.hidden=false}}els.searchSuggestions.querySelectorAll('button').forEach(btn=>btn.addEventListener('mousedown',e=>e.preventDefault()));els.searchSuggestions.querySelectorAll('[data-search-tool]').forEach(btn=>btn.addEventListener('click',()=>{saveRecentSearch(state.query);els.searchSuggestions.hidden=true;openDetail(btn.dataset.searchTool)}));els.searchSuggestions.querySelectorAll('[data-search-query]').forEach(btn=>btn.addEventListener('click',()=>applySearchQuery(btn.dataset.searchQuery,true)))}
+function nearestSearchTerms(query){
+  const q=normalizeSearch(parseSmartQuery(query).text).split(' ').filter(Boolean).pop()||'';
+  if(q.length<3)return[];
+  const vocab=new Set();
+  for(const tool of tools){vocab.add(normalizeSearch(tool.name));for(const tag of tool.tags||[])vocab.add(normalizeSearch(tag));vocab.add(normalizeSearch(tool.category))}
+  return [...vocab].filter(x=>x&&x.length>=3&&Math.abs(x.length-q.length)<=3).map(x=>({x,d:editDistance(q,x)})).filter(v=>v.d<=Math.max(2,Math.floor(q.length*.35))).sort((a,b)=>a.d-b.d||a.x.length-b.x.length).slice(0,5).map(v=>v.x);
+}
+function renderSearchSuggestions(){
+  if(!els.searchSuggestions)return;
+  searchSuggestionIndex=-1;
+  const query=state.query.trim();
+  if(!query){
+    const recent=recentSearches.map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">최근 · '+q+'</button>').join('');
+    const popular=popularSearchTerms().map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');
+    const syntax='<div class="search-syntax"><span>고급 검색</span><code>무료 windows pdf</code><code>category:문서</code><code>stars:>10000</code><code>-교육 agent</code><code>pdf OR hwp</code><code>웹사이트 자료 긁어서 AI에 넣고 싶어</code></div>';
+    if(!recent&&!popular){els.searchSuggestions.hidden=true;return}
+    els.searchSuggestions.innerHTML='<div class="search-suggestion-section">'+(recent?'<b>최근 검색</b><div class="search-chip-row">'+recent+'</div>':'')+'<b>추천 검색</b><div class="search-chip-row">'+popular+'</div>'+syntax+'</div>';
+    els.searchSuggestions.hidden=false;
+  }else{
+    const suggestions=searchSuggestionItems();
+    const intent=queryIntentLabel(query);
+    const intentBanner=intent?'<div class="search-intent"><span>검색 의도</span><strong>'+escapeHtml(intent)+'</strong><small>자연어에서 핵심 용도를 추려 관련도에 반영했어요.</small></div>':'';
+    if(!suggestions.length){
+      const near=nearestSearchTerms(query);
+      const nearHtml=near.length?'<span>혹시 이걸 찾았나요?</span><div class="search-chip-row">'+near.map(q=>'<button type="button" class="search-history-chip" data-search-query="'+escapeHtml(q)+'">'+escapeHtml(q)+'</button>').join('')+'</div>':'';
+      const alternates=popularSearchTerms().slice(0,5).map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');
+      els.searchSuggestions.innerHTML=intentBanner+'<div class="search-suggestion-empty"><strong>일치하는 도구가 없어요.</strong>'+nearHtml+'<span>추천 검색어</span><div class="search-chip-row">'+alternates+'</div></div>';
+    }else{
+      els.searchSuggestions.innerHTML=intentBanner+suggestions.map(x=>'<button type="button" class="search-suggestion" data-search-tool="'+x.tool.id+'"><span><strong>'+escapeHtml(x.tool.name)+'</strong><small>'+escapeHtml(x.tool.category)+'</small></span><em>'+escapeHtml(searchMatchReason(x.tool))+' · ★ '+compactNumber(x.tool.stars||0)+'</em></button>').join('');
+    }
+    els.searchSuggestions.hidden=false;
+  }
+  els.searchSuggestions.querySelectorAll('button').forEach(btn=>btn.addEventListener('mousedown',e=>e.preventDefault()));
+  els.searchSuggestions.querySelectorAll('[data-search-tool]').forEach(btn=>btn.addEventListener('click',()=>{saveRecentSearch(state.query);els.searchSuggestions.hidden=true;openDetail(btn.dataset.searchTool)}));
+  els.searchSuggestions.querySelectorAll('[data-search-query]').forEach(btn=>btn.addEventListener('click',()=>applySearchQuery(btn.dataset.searchQuery,true)));
+}
 function moveSearchSuggestion(direction){if(!els.searchSuggestions||els.searchSuggestions.hidden)return false;const buttons=[...els.searchSuggestions.querySelectorAll('.search-suggestion')];if(!buttons.length)return false;searchSuggestionIndex=(searchSuggestionIndex+direction+buttons.length)%buttons.length;buttons.forEach((b,i)=>b.classList.toggle('keyboard-active',i===searchSuggestionIndex));buttons[searchSuggestionIndex].scrollIntoView({block:'nearest'});return true}
 function escapeHtml(value){return String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
 function highlightText(value,query=state.query){const text=String(value??'');const terms=normalizeSearch(parseSmartQuery(query).text).split(' ').filter(x=>x.length>1);if(!terms.length)return escapeHtml(text);const escaped=escapeHtml(text);const unique=[...new Set(terms)].sort((a,b)=>b.length-a.length);try{const parts=unique.map(x=>x.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&'));const re=new RegExp('('+parts.join('|')+')','gi');return escaped.replace(re,'<mark>$1</mark>')}catch{return escaped}}
