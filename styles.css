@@ -224,3 +224,24 @@ body.compare-active{padding-bottom:88px}
   .compare-bar>div:last-child button{flex:1}
   body.compare-active{padding-bottom:130px}
 }
+
+/* v1.7 project health */
+.card-meta{flex-wrap:wrap;justify-content:flex-end}
+.health-meta{display:flex;gap:5px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.activity-badge,.score-badge{display:inline-flex;align-items:center;border:1px solid var(--line);padding:4px 6px;font-size:8px;line-height:1;font-weight:850;white-space:nowrap;background:var(--paper)}
+.activity-badge.active{border-color:#6f8c68}.activity-badge.fresh{border-color:#8a9169}.activity-badge.maintained{border-color:#9b8c70}.activity-badge.quiet{border-color:#ad8b69}.activity-badge.stale,.activity-badge.dead{border-color:#a96f65}.activity-badge.unknown{border-color:var(--line)}
+.score-badge{border-color:var(--ink);color:var(--ink)}
+.quality-panel{margin-top:24px;border:1px solid var(--ink);padding:18px;background:var(--soft)}
+.quality-head{display:grid;grid-template-columns:180px 1fr;gap:24px;align-items:center}
+.quality-head>div:first-child>span{display:block;font-size:8px;letter-spacing:.15em;color:var(--accent);font-weight:900}
+.quality-head strong{display:block;font:700 48px/1 Georgia,serif;margin-top:6px}
+.quality-head strong small{font:700 14px/1 system-ui,sans-serif;color:var(--muted)}
+.quality-head em{font-style:normal;font-size:10px;color:var(--muted)}
+.quality-head>div:last-child p{margin:6px 0 0;color:var(--muted);font-size:11px}
+.score-breakdown{display:grid;grid-template-columns:repeat(6,1fr);gap:6px;margin-top:16px}
+.score-breakdown div{border:1px solid var(--line);background:var(--paper);padding:9px}
+.score-breakdown span{display:block;color:var(--muted);font-size:8px;margin-bottom:5px}
+.score-breakdown b{font-size:13px}
+.score-note{margin:12px 0 0!important;color:var(--muted);font-size:10px!important;line-height:1.5!important}
+@media(max-width:760px){.quality-head{grid-template-columns:1fr}.score-breakdown{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:620px){.health-meta{width:100%;justify-content:flex-end}.score-breakdown{grid-template-columns:repeat(2,1fr)}}
