@@ -2,7 +2,9 @@ name: Discover OpenShelf tools
 
 on:
   schedule:
-    - cron: "17 * * * *"
+    - cron: "17 * * * *" # primary
+    - cron: "37 * * * *" # backup
+    - cron: "57 * * * *" # backup
   workflow_dispatch:
 
 permissions:
@@ -27,6 +29,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-3.5-flash-lite
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: node scripts/discover-tools.mjs
 
       - name: Commit new tools
