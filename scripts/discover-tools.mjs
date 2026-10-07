@@ -4,7 +4,7 @@ const TOOLS_PATH = 'data/tools.json';
 const STATE_PATH = 'data/discovery-state.json';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
+const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 const TARGET_COUNT = 5;
 const CANDIDATE_COUNT = 9;
 
@@ -189,6 +189,7 @@ const geminiRes = await fetch(geminiUrl, {
     generationConfig: {
       temperature: 0.15,
       maxOutputTokens: 4500,
+      thinkingConfig: { thinkingLevel: 'minimal' },
       responseMimeType: 'application/json'
     }
   })
