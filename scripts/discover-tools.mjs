@@ -6,7 +6,7 @@ const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-2.5-flash-lite';
 const TARGET_COUNT = 5;
-const CANDIDATE_COUNT = 12;
+const CANDIDATE_COUNT = 9;
 
 if (!GITHUB_TOKEN) throw new Error('GITHUB_TOKEN is required.');
 if (!GEMINI_API_KEY) throw new Error('GEMINI_API_KEY is required. Add it as a GitHub Actions repository secret.');
@@ -94,9 +94,9 @@ function compactReadme(raw) {
   for (const anchor of anchors) {
     const i = lower.indexOf(anchor);
     if (i >= 0) chunks.push(cleaned.slice(Math.max(0, i - 120), i + 700));
-    if (chunks.join(' ').length >= 1700) break;
+    if (chunks.join(' ').length >= 1100) break;
   }
-  return [...new Set(chunks)].join(' ').slice(0, 1800);
+  return [...new Set(chunks)].join(' ').slice(0, 1200);
 }
 
 async function getReadme(repo) {
@@ -188,7 +188,7 @@ const geminiRes = await fetch(geminiUrl, {
     contents: [{ role: 'user', parts: [{ text: prompt }] }],
     generationConfig: {
       temperature: 0.15,
-      maxOutputTokens: 6500,
+      maxOutputTokens: 4500,
       responseMimeType: 'application/json'
     }
   })
