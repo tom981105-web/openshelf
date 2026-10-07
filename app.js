@@ -2,7 +2,21 @@ const state={category:'전체',query:'',openSource:false,free:false,favoritesOnl
 let tools=[];
 const FAVORITES_KEY='openshelf-favorites-v1';
 const favorites=new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY)||'[]'));
-const categoryDescriptions={'AI · 이미지':'이미지 생성·보정·업스케일','AI · LLM':'로컬 AI와 대화형 도구','AI · 에이전트':'에이전트 확장·전문 작업 스킬','AI · 애니메이션':'AI 코딩 기반 캐릭터·영상 제작','AI · 모델':'분류·판단·로컬 모델 도구','AI · CAD':'AI 기반 3D 설계·CAD 제작','AI · 디자인':'AI 코딩 기반 UI·프론트엔드 디자인','AI · 평가':'AI 에이전트 감사·평가·품질 진단','AI · 개발':'AI 코딩·디버깅·개발 지원','AI · 지식관리':'AI 기반 지식베이스·검색·연결','AI · 브라우저':'브라우저 조작·웹 자동화 에이전트','문서 · 변환':'HWP·PDF·Office 문서 변환·처리','AI · 메모리':'에이전트 장기기억·학습 시스템','학습 · AI':'AI 엔지니어링 학습·튜토리얼','AI · 지리정보':'실시간 공간정보·GEOINT·지도 시각화','디자인':'UI, 드로잉, 다이어그램','개발':'API, 데이터베이스, 개발 도구','생산성':'파일, 캡처, 업무 자동화','문서 · PDF':'PDF와 문서 처리','영상 · 미디어':'녹화, 방송, 변환'};
+const categoryDescriptions={
+  'AI 에이전트':'AI 에이전트·스킬·오케스트레이션',
+  '개발 도구':'코딩·디버깅·SDK·개발 워크플로',
+  '업무 자동화':'반복 업무·워크플로 자동화',
+  '지식·검색':'검색·크롤링·지식베이스·RAG',
+  '디자인·시각화':'UI·다이어그램·그래픽 제작',
+  '문서':'PDF·HWP·Office 문서 처리',
+  '브라우저 자동화':'브라우저 조작·웹 작업 자동화',
+  'AI 모델':'모델 실행·최적화·분류',
+  'AI 평가':'AI 에이전트 평가·감사·품질 진단',
+  '교육·학습':'AI 기반 학습·교육·튜토리얼',
+  '공간정보':'지도·GEOINT·위치 분석',
+  '3D·CAD':'3D 모델링·CAD 설계',
+  '영상·애니메이션':'영상·애니메이션 제작'
+};
 const collections=[
   {id:'quick-web',kicker:'NO INSTALL',title:'설치 없이 바로',description:'브라우저만 열면 바로 사용할 수 있는 웹 기반 도구.',filter:t=>t.platforms.includes('Web')},
   {id:'windows',kicker:'WINDOWS KIT',title:'윈도우 필수 도구',description:'Windows에서 바로 설치해 쓸 만한 생산성·미디어 도구.',filter:t=>t.platforms.includes('Windows')},
@@ -23,13 +37,19 @@ const els={
 };
 
 function saveFavorites(){localStorage.setItem(FAVORITES_KEY,JSON.stringify([...favorites]));els.favoriteCount.textContent=favorites.size;els.mobileFavoriteCount.textContent=favorites.size}
-function toolMatches(tool){const haystack=[tool.name,tool.description,tool.longDescription||'',tool.category,...(tool.tags||[]),...(tool.platforms||[])].join(' ').toLowerCase();return(!state.query||haystack.includes(state.query))&&(state.category==='전체'||tool.category===state.category)&&(!state.openSource||tool.openSource)&&(!state.free||tool.free)&&(!state.favoritesOnly||favorites.has(tool.id))&&(state.platform==='all'||tool.platforms.includes(state.platform))}
+function normalizeSearch(value){return String(value||'').normalize('NFKC').toLowerCase().replace(/[·/_,.-]+/g,' ').replace(/\s+/g,' ').trim()}
+function searchText(tool){return normalizeSearch([
+  tool.name,tool.description,tool.longDescription,tool.category,tool.license,tool.github,tool.website,
+  ...(tool.tags||[]),...(tool.platforms||[]),...(tool.requirements||[]),...(tool.supportedAgents||[]),
+  ...(tool.usageSteps||[]),...(tool.install||[]).flatMap(x=>[x.title,x.command,x.note]),tool.examplePrompt,tool.usageNote
+].filter(Boolean).join(' '))}
+function toolMatches(tool){const haystack=searchText(tool);const terms=normalizeSearch(state.query).split(' ').filter(Boolean);const queryMatch=!terms.length||terms.every(term=>haystack.includes(term));return queryMatch&&(state.category==='전체'||tool.category===state.category)&&(!state.openSource||tool.openSource)&&(!state.free||tool.free)&&(!state.favoritesOnly||favorites.has(tool.id))&&(state.platform==='all'||tool.platforms.includes(state.platform))}
 function renderChips(){const categories=['전체',...new Set(tools.map(t=>t.category))];els.categoryChips.innerHTML=categories.map(c=>`<button class="chip ${state.category===c?'active':''}" data-category="${c}">${c}</button>`).join('');els.categoryChips.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click',()=>applyCategory(btn.dataset.category)))}
 function applyCategory(category){state.category=category;renderChips();renderTools();document.querySelector('#tools').scrollIntoView({behavior:'smooth'})}
 function renderCategories(){const categories=[...new Set(tools.map(t=>t.category))];const remainder=categories.length%4;els.categoryGrid.dataset.remainder=String(remainder);els.categoryGrid.innerHTML=categories.map((c,i)=>{const count=tools.filter(t=>t.category===c).length;return `<article class="category-card" data-tone="${categoryTone(c)}" data-category-card="${c}" tabindex="0"><span class="index">${String(i+1).padStart(2,'0')}</span><div><h3>${c}</h3><p>${categoryDescriptions[c]||'분류된 도구 모음'}</p></div><footer><span>${count} tools</span><span>Explore</span></footer></article>`}).join('');els.categoryGrid.querySelectorAll('[data-category-card]').forEach(el=>{const go=()=>applyCategory(el.dataset.categoryCard);el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter')go()})})}
 function renderCollections(){els.collectionGrid.innerHTML=collections.map(c=>{const count=tools.filter(c.filter).length;return `<article class="collection-card" data-collection="${c.id}" tabindex="0"><span>${c.kicker}</span><h3>${c.title}</h3><p>${c.description}</p><button type="button">${count}개 보기 →</button></article>`}).join('');els.collectionGrid.querySelectorAll('[data-collection]').forEach(el=>{const go=()=>{const c=collections.find(x=>x.id===el.dataset.collection);resetFilters(false);if(c.id==='quick-web'){state.platform='Web';els.platformFilter.value='Web'}else if(c.id==='windows'){state.platform='Windows';els.platformFilter.value='Windows'}else if(c.id==='selfhost'){state.query='셀프호스트';els.search.value='셀프호스트'}renderTools();document.querySelector('#tools').scrollIntoView({behavior:'smooth'})};el.addEventListener('click',go);el.addEventListener('keydown',e=>{if(e.key==='Enter')go()})})}
 function tagsFor(tool){return[...(tool.tags||[]),...(tool.free?['무료']:[]),...(tool.openSource?['오픈소스']:[])]}
-function categoryTone(category){if(category.startsWith('AI'))return'ai';if(category==='디자인')return'design';if(category==='개발')return'dev';if(category==='생산성')return'productivity';if(category.includes('문서'))return'document';if(category.includes('영상'))return'media';return'default'}
+function categoryTone(category){if(category==='AI 에이전트'||category==='AI 모델'||category==='AI 평가')return'ai';if(category==='디자인·시각화'||category==='3D·CAD')return'design';if(category==='개발 도구')return'dev';if(category==='업무 자동화')return'productivity';if(category==='문서'||category==='지식·검색')return'document';if(category==='영상·애니메이션')return'media';return'default'}
 function iconUrl(tool){if(tool.icon)return tool.icon;if(!tool.website)return'';try{const host=new URL(tool.website).hostname;return `https://www.google.com/s2/favicons?domain=${host}&sz=128`}catch{return''}}
 function visualMarkup(tool,large=false){const url=iconUrl(tool);const cls=large?'dialog-logo tool-visual':'logo tool-visual';const letter=tool.name.slice(0,1).toUpperCase();return `<div class="${cls}">${url?`<img src="${url}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.hidden=true">`:''}<span class="fallback-letter">${letter}</span></div>`}
 function compactNumber(n){if(!Number.isFinite(Number(n)))return'—';const v=Number(n);if(v>=1000000)return (v/1000000).toFixed(v>=10000000?0:1).replace(/\.0$/,'')+'m';if(v>=1000)return (v/1000).toFixed(v>=10000?0:1).replace(/\.0$/,'')+'k';return String(v)}
@@ -57,7 +77,7 @@ function toggleMobileMenu(){const open=!els.mobileMenu.classList.contains('open'
 function closeMobileMenu(){els.mobileMenu.classList.remove('open');els.mobileMenuButton.classList.remove('active');els.mobileMenuButton.setAttribute('aria-expanded','false');els.mobileMenu.setAttribute('aria-hidden','true');document.body.classList.remove('menu-open')}
 function setupReveal(){const items=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){items.forEach(x=>x.classList.add('visible'));return}const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});items.forEach(x=>io.observe(x))}
 function setupActiveNav(){const navLinks=[...document.querySelectorAll('[data-nav]')];const sections=navLinks.map(a=>document.querySelector('#'+a.dataset.nav)).filter(Boolean);const update=()=>{const probe=window.scrollY+120;let active='';for(const section of sections){if(probe>=section.offsetTop)active=section.id}navLinks.forEach(a=>a.classList.toggle('active',!!active&&a.dataset.nav===active));document.querySelector('.topbar')?.classList.toggle('compact',window.scrollY>120)};window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);update()}
-els.search.addEventListener('input',e=>{state.query=e.target.value.trim().toLowerCase();renderTools()});els.search.addEventListener('focus',()=>els.searchWrap.classList.add('focused'));els.search.addEventListener('blur',()=>els.searchWrap.classList.remove('focused'));
+els.search.addEventListener('input',e=>{state.query=e.target.value.trim();if(state.query&&state.category!=='전체'){state.category='전체';renderChips()}renderTools()});els.search.addEventListener('focus',()=>els.searchWrap.classList.add('focused'));els.search.addEventListener('blur',()=>els.searchWrap.classList.remove('focused'));
 els.openSourceOnly.addEventListener('change',e=>{state.openSource=e.target.checked;renderTools()});els.freeOnly.addEventListener('change',e=>{state.free=e.target.checked;renderTools()});els.favoritesOnly.addEventListener('change',e=>{state.favoritesOnly=e.target.checked;renderTools()});els.platformFilter.addEventListener('change',e=>{state.platform=e.target.value;renderTools()});els.sortSelect.addEventListener('change',e=>{state.sort=e.target.value;renderTools()});
 els.favoritesNav.addEventListener('click',openFavorites);els.mobileFavorites.addEventListener('click',openFavorites);els.scrollToAll.addEventListener('click',()=>document.querySelector('#tools').scrollIntoView({behavior:'smooth'}));els.resetFilters.addEventListener('click',()=>resetFilters());els.dialogClose.addEventListener('click',closeDialog);els.toolDialog.addEventListener('click',e=>{if(e.target===els.toolDialog)closeDialog()});els.mobileMenuButton.addEventListener('click',toggleMobileMenu);els.mobileMenu.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeMobileMenu));
 document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==els.search){e.preventDefault();els.search.focus()}if(e.key==='Escape'&&els.toolDialog.open)closeDialog();else if(e.key==='Escape')closeMobileMenu()});
