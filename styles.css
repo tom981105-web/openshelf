@@ -139,3 +139,17 @@ h1{font-size:clamp(56px,6.8vw,98px);line-height:.88;margin:16px 0 20px}
 .popularity-meta{display:flex;gap:9px;align-items:center;white-space:nowrap;font-size:10px;color:var(--muted);font-weight:700}
 .popularity-meta span:first-child{color:var(--ink)}
 @media(max-width:620px){.card-bottom-meta{align-items:flex-start;flex-direction:column;gap:7px}}
+
+/* v1.1 smarter search */
+.hero-copy{position:relative}
+.search-suggestions{position:absolute;z-index:22;left:0;right:0;max-width:900px;margin-top:6px;background:var(--paper);border:1px solid var(--ink);box-shadow:7px 7px 0 rgba(20,20,20,.18);padding:6px}
+.search-suggestions[hidden]{display:none}
+.search-suggestion{width:100%;border:0;border-bottom:1px solid var(--line);background:transparent;padding:11px 12px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;cursor:pointer}
+.search-suggestion:last-child{border-bottom:0}
+.search-suggestion:hover,.search-suggestion:focus{background:var(--soft);outline:none}
+.search-suggestion span{display:flex;align-items:baseline;gap:10px;min-width:0}
+.search-suggestion strong{font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.search-suggestion small{font-size:9px;color:var(--muted);white-space:nowrap}
+.search-suggestion em{font-style:normal;font-size:10px;color:var(--muted);white-space:nowrap}
+.search-suggestion-empty{padding:14px 12px;color:var(--muted);font-size:12px}
+@media(max-width:620px){.search-suggestions{left:0;right:0}.search-suggestion span{align-items:flex-start;flex-direction:column;gap:3px}}
