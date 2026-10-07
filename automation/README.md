@@ -12,6 +12,6 @@ GitHub Actions scheduled events can be delayed or skipped. OpenShelf therefore u
 4. Run `setupOpenShelfTrigger()` once and approve permissions.
 5. Optionally run `testOpenShelfDispatch()` once to verify the GitHub workflow starts.
 
-The Apps Script checks every 5 minutes. From minute 17 onward it dispatches at most once per Seoul hour. The last successful dispatch hour is stored in Script Properties, preventing duplicate hourly runs.
+The Apps Script checks every 5 minutes. From minute 0 onward it dispatches at most once per Seoul hour. The last successful dispatch hour is stored in Script Properties, preventing duplicate hourly runs.
 
 GitHub's workflow keeps `workflow_dispatch`, so it can still be run manually from the Actions tab.
