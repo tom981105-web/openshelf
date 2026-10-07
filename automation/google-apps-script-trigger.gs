@@ -4,7 +4,7 @@ const CONFIG = {
   workflow: 'discover-tools.yml',
   branch: 'main',
   timeZone: 'Asia/Seoul',
-  targetMinute: 17
+  targetMinute: 0
 };
 
 function setupOpenShelfTrigger() {
@@ -14,7 +14,7 @@ function setupOpenShelfTrigger() {
     .everyMinutes(5)
     .create();
 
-  console.log('OpenShelf trigger installed. It checks every 5 minutes and dispatches once per Seoul hour after minute 17.');
+  console.log('OpenShelf trigger installed. It checks every 5 minutes and dispatches once per Seoul hour after minute 0.');
 }
 
 function dispatchOpenShelfIfDue() {
