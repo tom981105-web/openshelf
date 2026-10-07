@@ -1,5 +1,493 @@
 [
   {
+    "id": "ponytail",
+    "name": "ponytail",
+    "github": "https://github.com/DietrichGebert/ponytail",
+    "description": "AI 에이전트가 최소한의 간결한 코드로 작업을 수행하도록 유도하는 프롬프트 및 스킬 도구입니다.",
+    "longDescription": "불필요한 코드 생성을 줄이고 시니어 개발자처럼 효율적인 한 줄 코드를 작성하도록 AI 에이전트를 유도합니다. Claude Code 등의 에이전트 환경에 스킬 형태로 간편하게 추가하여 사용할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai-agents",
+      "claude-code",
+      "developer-tools",
+      "yagni"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ponytail.dev",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Claude Code 또는 호환되는 AI 에이전트"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 추가",
+        "command": "/plugin marketplace add DietrichGebert/ponytail",
+        "note": "마켓플레이스에서 ponytail 플러그인 추가"
+      },
+      {
+        "title": "Claude Code 플러그인 설치",
+        "command": "/plugin install ponytail@ponytail",
+        "note": "에이전트에 ponytail 스킬 활성화"
+      }
+    ],
+    "usageSteps": [
+      "지원되는 AI 에이전트(Claude Code 등)를 실행합니다.",
+      "설치 명령어를 통해 ponytail 플러그인을 추가하고 설치합니다.",
+      "새로운 코딩 작업을 시작하면 에이전트가 불필요한 코드 없이 간결하게 코드를 작성합니다."
+    ],
+    "examplePrompt": "포니테일 규칙을 적용하여 이 컴포넌트를 가장 간결한 코드로 리팩토링해줘.",
+    "usageNote": "",
+    "stars": 157239,
+    "forks": 8454,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "langchain",
+    "name": "langchain",
+    "github": "https://github.com/langchain-ai/langchain",
+    "description": "LLM 기반 애플리케이션과 AI 에이전트를 구축하기 위한 오픈소스 에이전트 엔지니어링 프레임워크입니다.",
+    "longDescription": "상호 운용 가능한 컴포넌트와 다양한 서드파티 통합을 체인 형태로 연결하여 복잡한 AI 애플리케이션 개발을 단순화합니다. 초보자를 위한 고수준 패키지부터 세부적인 제어가 가능한 저수준 컴포넌트까지 유연한 추상화 레이어를 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai-agents",
+      "framework",
+      "llm",
+      "python",
+      "rag"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.langchain.com/langchain/",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Python",
+      "uv 또는 pip"
+    ],
+    "supportedAgents": [
+      "Custom LLM Agents"
+    ],
+    "install": [
+      {
+        "title": "uv를 이용한 패키지 추가",
+        "command": "uv add langchain",
+        "note": "프로젝트에 LangChain 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 패키지 관리자를 통해 langchain을 설치합니다.",
+      "파이썬 코드에서 init_chat_model 등을 임포트하여 LLM 모델을 초기화합니다.",
+      "체인 및 에이전트 컴포넌트를 조합하여 AI 워크플로우를 구성합니다."
+    ],
+    "examplePrompt": "LangChain을 사용하여 사용자의 질문에 답변하고 문서 검색을 수행하는 간단한 RAG 체인을 만들어줘.",
+    "usageNote": "",
+    "stars": 147524,
+    "forks": 24722,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "claude-mem",
+    "name": "claude-mem",
+    "github": "https://github.com/thedotmack/claude-mem",
+    "description": "AI 에이전트의 세션 간 대화와 작업 내역을 압축 및 기억하여 영구적인 컨텍스트를 제공하는 메모리 시스템입니다.",
+    "longDescription": "에이전트가 세션 동안 수행한 모든 작업을 캡처하고 AI로 압축한 뒤 향후 세션에 관련 컨텍스트를 다시 주입합니다. Claude Code를 비롯한 다양한 AI 에이전트와 연동되어 장기 기억 기능을 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai-agents",
+      "ai-memory",
+      "claude-code",
+      "long-term-memory",
+      "rag"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://claude-mem.ai",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Claude Code 또는 지원되는 AI 에이전트"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Gemini",
+      "Copilot"
+    ],
+    "install": [],
+    "usageSteps": [
+      "공식 문서의 설치 가이드에 따라 프로젝트에 claude-mem을 설정합니다.",
+      "평소처럼 AI 에이전트와 코딩 세션을 진행합니다.",
+      "에이전트가 이전 세션의 컨텍스트를 자동으로 기억하고 활용하는지 확인합니다."
+    ],
+    "examplePrompt": "이전에 논의했던 아키텍처 결정 사항을 바탕으로 현재 코드를 수정해줘.",
+    "usageNote": "",
+    "stars": 97431,
+    "forks": 8583,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "stirling-pdf",
+    "name": "Stirling-PDF",
+    "github": "https://github.com/Stirling-Tools/Stirling-PDF",
+    "description": "PDF 파일 편집, 변환, 서명, OCR 등 50가지 이상의 기능을 제공하는 오픈소스 PDF 플랫폼입니다.",
+    "longDescription": "데스크톱 앱, 웹 브라우저 UI, 자체 호스팅 서버 등 다양한 방식으로 실행할 수 있는 강력한 PDF 도구입니다. 외부 서비스로 문서를 유출하지 않고 안전하게 PDF를 병합, 분할, 변환 및 자동화할 수 있습니다.",
+    "category": "문서",
+    "tags": [
+      "docker",
+      "pdf",
+      "pdf-editor",
+      "pdf-tools",
+      "self-hosted"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://stirling.com",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Docker 및 Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker를 이용한 실행",
+        "command": "docker run -p 8080:8080 docker.stirlingpdf.com/stirlingtools/stirling-pdf",
+        "note": "로컬 서버에서 Stirling-PDF 웹 인터페이스 실행"
+      }
+    ],
+    "usageSteps": [
+      "도커 명령어를 실행하여 컨테이너를 구동합니다.",
+      "웹 브라우저에서 http://localhost:8080 에 접속합니다.",
+      "제공되는 50여 가지 PDF 도구 중 원하는 기능을 선택하여 문서를 편집하거나 변환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 93711,
+    "forks": 10568,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "sherlock",
+    "name": "sherlock",
+    "github": "https://github.com/sherlock-project/sherlock",
+    "description": "사용자 이름으로 400개 이상의 소셜 네트워크에서 계정 존재 여부를 추적하고 탐색하는 OSINT 도구입니다.",
+    "longDescription": "주어진 사용자 이름을 여러 플랫폼에 대조하여 계정 가입 여부를 빠르게 확인해주는 정보 수집 및 보안 진단 도구입니다. 명령줄 인터페이스를 통해 효율적으로 소셜 미디어 프로필을 조사할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "information-gathering",
+      "osint",
+      "pentesting",
+      "python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://sherlockproject.xyz",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Python 또는 pipx / Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pipx를 이용한 설치",
+        "command": "pipx install sherlock-project",
+        "note": "pipx를 사용하여 격리된 환경에 sherlock 설치"
+      }
+    ],
+    "usageSteps": [
+      "pipx 또는 도커를 통해 sherlock을 설치합니다.",
+      "터미널에서 검색하고자 하는 사용자 이름을 인자로 전달하여 실행합니다.",
+      "결과로 출력되는 각 소셜 네트워크별 프로필 URL을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 93378,
+    "forks": 11033,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "uptime-kuma",
+    "name": "uptime-kuma",
+    "github": "https://github.com/louislam/uptime-kuma",
+    "description": "웹사이트와 서비스의 가동 시간을 직관적이고 반응형 UI로 모니터링해주는 자체 호스팅 도구입니다.",
+    "longDescription": "HTTP(s), TCP, Ping, DNS 등 다양한 프로토콜을 지원하며 서버 상태를 실시간으로 추적합니다. 텔레그램, 디스코드 등 다양한 메신저 알림 기능을 제공하며 가벼운 자바스크립트로 구현되어 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "docker",
+      "monitor",
+      "monitoring",
+      "self-hosted",
+      "uptime"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://uptime.kuma.pet",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Node.js 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PM2를 이용한 설치 및 실행",
+        "command": "pm2 monit",
+        "note": "PM2 프로세스 관리자를 통해 모니터링 실행"
+      }
+    ],
+    "usageSteps": [
+      "Node.js 또는 도커 환경에 Uptime Kuma를 설치합니다.",
+      "웹 대시보드에 접속하여 모니터링할 웹사이트 주소나 포트를 등록합니다.",
+      "서비스 장애 발생 시 수신할 알림 채널(텔레그램, 디스코드 등)을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 92182,
+    "forks": 8522,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "ragflow",
+    "name": "ragflow",
+    "github": "https://github.com/infiniflow/ragflow",
+    "description": "최첨단 RAG 기술과 AI 에이전트 역량을 결합하여 LLM에 우수한 컨텍스트 계층을 제공하는 오픈소스 RAG 엔진입니다.",
+    "longDescription": "방대한 문서를 심층적으로 분석하고 검색하여 대형 언어 모델의 답변 품질을 높여줍니다. 직관적인 파이프라인과 에이전트 협업 기능을 통해 기업 및 개인의 지식 기반 검색 시스템 구축을 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "ai-agents",
+      "knowledge-compilation",
+      "rag",
+      "retrieval-augmented-generation",
+      "search-harness"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://ragflow.io",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Docker = 24.0.0",
+      "Docker Compose = v2.26.1"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose를 이용한 로컬 배포",
+        "command": "docker compose up -d",
+        "note": "RAGFlow 및 관련 서비스 컨테이너 백그라운드 실행"
+      }
+    ],
+    "usageSteps": [
+      "도커 컴포즈를 사용하여 RAGFlow 환경을 로컬 서버나 PC에 배포합니다.",
+      "웹 관리자 패널에 접속하여 지식 문서 파일을 업로드하고 파싱을 진행합니다.",
+      "채팅 인터페이스를 통해 업로드된 문서를 기반으로 정확한 답변을 얻습니다."
+    ],
+    "examplePrompt": "업로드한 PDF 매뉴얼을 기반으로 오류 코드 E404의 해결 방법을 찾아줘.",
+    "usageNote": "",
+    "stars": 91758,
+    "forks": 10904,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "openhands",
+    "name": "OpenHands",
+    "github": "https://github.com/OpenHands/OpenHands",
+    "description": "AI 기반 코딩 에이전트와 자동화 작업을 제어하고 실행할 수 있는 자체 호스팅 개발자 제어 센터입니다.",
+    "longDescription": "로컬, 원격, 클라우드 백엔드에서 Claude Code, Codex 등 다양한 ACP 호환 에이전트를 실행할 수 있습니다. 깃허브 이슈를 태스크로 자동 분해하거나 슬랙에 리포트를 발행하는 등 일상적인 개발 업무를 자동화합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "agent",
+      "artificial-intelligence",
+      "developer-tools",
+      "llm"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://openhands.dev",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Docker",
+      "Node.js 또는 Python"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "Gemini"
+    ],
+    "install": [],
+    "usageSteps": [
+      "클라우드 서버나 로컬 기기에 OpenHands를 설치합니다.",
+      "웹 대시보드(Agent Canvas)에 접속하여 원하는 코딩 에이전트를 연결합니다.",
+      "깃허브 이슈나 채팅을 통해 에이전트에게 코딩 및 자동화 작업을 지시합니다."
+    ],
+    "examplePrompt": "최근에 등록된 GitHub 이슈 #12를 분석하고 해결 위한 브랜치와 PR 초안을 작성해줘.",
+    "usageNote": "",
+    "stars": 90161,
+    "forks": 11926,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "orca",
+    "name": "orca",
+    "github": "https://github.com/stablyai/orca",
+    "description": "여러 코딩 에이전트를 병렬로 실행하고 Git 작업 트리별로 관리할 수 있는 AI 오케스트레이터 및 ADE입니다.",
+    "longDescription": "Codex, ClaudeCode, OpenCode 등의 다양한 에이전트를 동시에 실행하여 결과를 비교할 수 있습니다. 모바일 컴패니언 앱을 지원하여 외부에서도 에이전트의 상태를 모니터링하고 피드백을 전달할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "agent-ide",
+      "ai-agents",
+      "claude-code",
+      "parallel-agents",
+      "terminal"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://onOrca.dev",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "지원되는 코딩 에이전트 CLI"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "OpenCode"
+    ],
+    "install": [
+      {
+        "title": "데스크톱 앱 다운로드",
+        "command": "https://onorca.dev/download",
+        "note": "공식 웹사이트에서 운영체제에 맞는 설치 파일 다운로드"
+      }
+    ],
+    "usageSteps": [
+      "Orca 데스크톱 애플리케이션을 다운로드하여 설치합니다.",
+      "사용 중인 코딩 에이전트(Claude Code 등)와 연동합니다.",
+      "하나의 프롬프트를 여러 병렬 워이트리에서 동시에 실행하고 결과를 비교합니다."
+    ],
+    "examplePrompt": "이 기능 구현을 위한 3가지 서로 다른 접근 방식을 각각 다른 에이전트 워이트리에서 병렬로 구현해줘.",
+    "usageNote": "",
+    "stars": 86829,
+    "forks": 5577,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
+    "id": "crawl4ai",
+    "name": "crawl4ai",
+    "github": "https://github.com/unclecode/crawl4ai",
+    "description": "웹사이트를 LLM과 AI 에이전트에 즉시 활용할 수 있는 깔끔한 마크다운 형식으로 변환해주는 오픈소스 웹 크롤러입니다.",
+    "longDescription": "비동기 기반으로 빠르고 효율적인 웹 스크래핑을 수행하며, Playwright를 활용해 동적 웹페이지까지 완벽하게 처리합니다. RAG 파이프라인이나 AI 에이전트가 웹 데이터를 수집하는 용도로 최적화되어 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "ai-agents",
+      "crawler",
+      "llm",
+      "markdown",
+      "python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://crawl4ai.com",
+    "featured": 9,
+    "added": "2026-10-07",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [
+      "Crawl4AI MCP / AI Agents"
+    ],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install crawl4ai",
+        "note": "파이프 및 필수 의존성 설치"
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 crawl4ai를 설치합니다.",
+      "파이썬 스크립트에서 Crawl4AI 비동기 클라이언트를 임포트합니다.",
+      "타겟 웹사이트 URL을 전달하여 LLM 호환 마크다운 결과물을 추출합니다."
+    ],
+    "examplePrompt": "https://news.ycombinator.com 사이트를 크롤링해서 주요 뉴스 제목과 링크를 마크다운으로 정리해줘.",
+    "usageNote": "",
+    "stars": 84881,
+    "forks": 8796,
+    "starsUpdatedAt": "2026-10-07"
+  },
+  {
     "id": "yt-dlp",
     "name": "yt-dlp",
     "github": "https://github.com/yt-dlp/yt-dlp",
