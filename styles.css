@@ -171,3 +171,11 @@ h1{font-size:clamp(56px,6.8vw,98px);line-height:.88;margin:16px 0 20px}
 .search-syntax{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .search-syntax>span{font-size:9px;color:var(--muted);font-weight:800;margin-right:3px}
 .search-syntax code{border:1px solid var(--line);background:var(--bg);padding:5px 7px;font-size:9px}
+
+/* v1.4 natural language search */
+.search-intent{padding:10px 12px;border-bottom:1px solid var(--line);display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:baseline;background:var(--soft)}
+.search-intent span{font-size:8px;letter-spacing:.12em;color:var(--accent);font-weight:900;text-transform:uppercase}
+.search-intent strong{font-size:12px}
+.search-intent small{grid-column:1 / -1;color:var(--muted);font-size:10px;line-height:1.45}
+.match-reason{max-width:150px;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:620px){.search-intent{grid-template-columns:1fr}.search-intent small{grid-column:auto}.match-reason{display:none}}
