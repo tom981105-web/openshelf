@@ -56,7 +56,7 @@ async function ghJson(url) {
 }
 
 async function searchCandidates() {
-  const ceiling = Number.isFinite(Number(state.starCeiling)) ? Number(state.starCeiling) : null;
+  const ceiling = state.starCeiling !== null && state.starCeiling !== undefined && Number.isFinite(Number(state.starCeiling)) ? Number(state.starCeiling) : null;
   const floor = Number(state.minimumStars || 200);
   const merged = new Map();
 
