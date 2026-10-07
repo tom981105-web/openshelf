@@ -39,8 +39,30 @@ jobs:
                 tool.stars = data.stargazers_count;
                 tool.starDelta1d = Math.max(0, tool.stars - previousStars);
                 tool.forks = data.forks_count;
+                tool.githubPushedAt = data.pushed_at || null;
+                tool.githubUpdatedAt = data.updated_at || null;
+                tool.githubArchived = Boolean(data.archived);
+                tool.openIssues = Number(data.open_issues_count || 0);
+                tool.defaultBranch = data.default_branch || null;
                 tool.starsUpdatedAt = today;
-                core.info(`${tool.name}: ★ ${tool.stars} (+${tool.starDelta1d}), forks ${tool.forks}`);
+
+                try {
+                  const { data: release } = await github.rest.repos.getLatestRelease({ owner, repo });
+                  tool.latestRelease = {
+                    tag: release.tag_name || null,
+                    name: release.name || null,
+                    publishedAt: release.published_at || release.created_at || null,
+                    url: release.html_url || null
+                  };
+                } catch (releaseError) {
+                  if (releaseError.status === 404) {
+                    tool.latestRelease = null;
+                  } else {
+                    core.warning(`Could not refresh latest release for ${tool.name}: ${releaseError.message}`);
+                  }
+                }
+
+                core.info(`${tool.name}: ★ ${tool.stars} (+${tool.starDelta1d}), pushed ${tool.githubPushedAt || "unknown"}`);
               } catch (error) {
                 core.warning(`Could not refresh ${tool.name}: ${error.message}`);
               }
