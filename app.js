@@ -62,6 +62,23 @@ function searchText(tool){return normalizeSearch([tool.name,tool.description,too
 function editDistance(a,b){if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;const prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let last=prev[0];prev[0]=i;for(let j=1;j<=b.length;j++){const tmp=prev[j];prev[j]=Math.min(prev[j]+1,prev[j-1]+1,last+(a[i-1]===b[j-1]?0:1));last=tmp}}return prev[b.length]}
 function expandedTerms(query){const base=normalizeSearch(query).split(' ').filter(Boolean);return base.map(term=>({term,variants:[term,...(SEARCH_ALIASES[term]||[]).map(normalizeSearch)]}))}
 function fuzzyWordMatch(term,words){if(term.length<4)return false;const max=term.length>=8?2:1;return words.some(word=>Math.abs(word.length-term.length)<=max&&editDistance(term,word)<=max)}
+const SEARCH_STOPWORDS=new Set(['좀','조금','그냥','하는','할','할수있는','할수','있는','있어','있나','싶어','싶은데','원해','필요해','도구','툴','프로그램','앱','추천','찾아줘','찾고','쓰고','사용하고','이용하고','만들고','해주는','해줘','하고','해서','한테','에게','으로','로','에서','위한','같은','것','거','뭐','무엇','내가']);
+const SEARCH_INTENTS=[
+  {label:'웹 크롤링·AI 활용',test:/((웹|사이트|페이지).*(긁|수집|크롤|스크랩))|((긁|수집|크롤|스크랩).*(웹|사이트|페이지))/i,terms:['크롤링','ai']},
+  {label:'코딩 에이전트',test:/(코딩|개발|코드).*(에이전트|agent)|(에이전트|agent).*(코딩|개발|코드)/i,terms:['에이전트','개발']},
+  {label:'문서 변환',test:/(pdf|hwp|hwpx|문서|오피스).*(변환|변환해|마크다운)|(변환|마크다운).*(pdf|hwp|hwpx|문서|오피스)/i,terms:['문서','변환']},
+  {label:'업무 자동화',test:/(반복|업무|워크플로|workflow).*(자동|줄이|연동)|(자동화).*(업무|워크플로|연동)/i,terms:['자동화']},
+  {label:'브라우저 자동화',test:/(브라우저|chrome|크롬|웹).*(조작|자동|클릭|로그인)|(자동화).*(브라우저|chrome|크롬)/i,terms:['브라우저','자동화']},
+  {label:'AI 장기기억',test:/(기억|메모리|memory).*(ai|에이전트|대화)|(ai|에이전트).*(기억|메모리|memory)/i,terms:['메모리','에이전트']},
+  {label:'지도·실시간 공간정보',test:/(지도|위치|공간|geo|geoint).*(실시간|항공|선박|위성|추적)|(실시간).*(지도|위치|공간)/i,terms:['공간정보']},
+  {label:'디자인·UI 개선',test:/(ui|ux|디자인|프론트).*(개선|예쁘|퀄리티|품질)|(예쁘|개선).*(ui|디자인|화면)/i,terms:['디자인']},
+  {label:'학습·교육',test:/(배우|공부|학습|강의|교육|튜토리얼).*(ai|코딩|개발)?/i,terms:['학습']},
+  {label:'3D·CAD 제작',test:/(3d|cad|캐드|stl|step).*(만들|생성|설계|모델링)|(설계|모델링).*(3d|cad|캐드)/i,terms:['cad']},
+  {label:'영상·애니메이션',test:/(영상|애니메이션|animation).*(만들|제작|생성)|(만들|제작).*(영상|애니메이션)/i,terms:['애니메이션']}
+];
+function inferSearchIntent(raw){const labels=[],terms=[];for(const rule of SEARCH_INTENTS){if(rule.test.test(raw)){labels.push(rule.label);terms.push(...rule.terms)}}return {labels:[...new Set(labels)],terms:[...new Set(terms)]}}
+function meaningfulSearchTokens(tokens){return tokens.filter(token=>{const n=normalizeSearch(token);if(!n||SEARCH_STOPWORDS.has(n))return false;if(n.length===1&&!/[a-z0-9ㄱ-ㅎ]/i.test(n))return false;return true})}
+function splitOrQuery(query){return String(query||'').split(/\s+(?:OR|또는)\s+|\s*\|\s*/i).map(x=>x.trim()).filter(Boolean)}
 function parseSmartQuery(query){
   const raw=String(query||'').trim();
   const phrases=[...raw.matchAll(/"([^"]+)"/g)].map(m=>m[1]);
@@ -91,7 +108,11 @@ function parseSmartQuery(query){
     if(/^(웹|web)$/i.test(token)){filters.platforms.push('Web');continue}
     positive.push(token);
   }
-  return {text:[...phrases,...positive].join(' ').trim(),filters};
+  const intent=inferSearchIntent(raw);
+  const cleaned=meaningfulSearchTokens(positive);
+  const naturalLanguage=intent.terms.length>0||cleaned.length>=4;
+  const textParts=intent.terms.length?[...phrases,...intent.terms,...cleaned.filter(x=>!SEARCH_STOPWORDS.has(normalizeSearch(x)))]:[...phrases,...cleaned];
+  return {text:[...new Set(textParts)].join(' ').trim(),filters,intent,naturalLanguage};
 }
 function smartFilterMatch(tool,filters){
   const hay=searchText(tool);
@@ -106,13 +127,44 @@ function smartFilterMatch(tool,filters){
   if(filters.maxStars!==null&&Number(tool.stars||0)>filters.maxStars)return false;
   return true;
 }
-function searchScore(tool,query=state.query){const parsed=parseSmartQuery(query);const normalized=normalizeSearch(parsed.text);if(!smartFilterMatch(tool,parsed.filters))return 0;if(!normalized)return 1;const groups=expandedTerms(normalized);const name=normalizeSearch(tool.name),nameCompact=compactSearch(tool.name),nameCho=choseong(tool.name);const category=normalizeSearch(tool.category),tags=normalizeSearch((tool.tags||[]).join(' '));const desc=normalizeSearch([tool.description,tool.longDescription].filter(Boolean).join(' '));const rest=searchText(tool),restCompact=compactSearch(rest),words=rest.split(' ').filter(Boolean);const queryCompact=compactSearch(normalized),queryCho=choseong(normalized);let score=0;if(queryCompact&&nameCompact===queryCompact)score+=170;else if(queryCompact&&nameCompact.startsWith(queryCompact))score+=125;else if(queryCompact&&nameCompact.includes(queryCompact))score+=95;if(queryCho&&queryCho.length>=2&&nameCho.includes(queryCho))score+=85;for(const g of groups){let best=0;for(const v of g.variants){const vc=compactSearch(v);if(name===v)best=Math.max(best,130);else if(name.startsWith(v))best=Math.max(best,100);else if(name.includes(v)||nameCompact.includes(vc))best=Math.max(best,82);if(category.includes(v))best=Math.max(best,62);if(tags.includes(v))best=Math.max(best,58);if(desc.includes(v))best=Math.max(best,34);if(rest.includes(v)||restCompact.includes(vc))best=Math.max(best,18);else if(fuzzyWordMatch(v,words))best=Math.max(best,11)}if(!best&&g.term&&/^[ㄱ-ㅎ]+$/.test(g.term)&&nameCho.includes(g.term))best=70;if(!best)return 0;score+=best}const popularity=Math.min(12,Number(tool.stars||0)>0?Math.log10(Number(tool.stars)+1)*1.8:0);return score+popularity}
+function searchScore(tool,query=state.query){
+  const alternatives=splitOrQuery(query);
+  if(alternatives.length>1)return Math.max(...alternatives.map(q=>searchScore(tool,q)));
+  const parsed=parseSmartQuery(query);const normalized=normalizeSearch(parsed.text);
+  if(!smartFilterMatch(tool,parsed.filters))return 0;
+  if(!normalized)return 1;
+  const groups=expandedTerms(normalized);
+  const name=normalizeSearch(tool.name),nameCompact=compactSearch(tool.name),nameCho=choseong(tool.name);
+  const category=normalizeSearch(tool.category),tags=normalizeSearch((tool.tags||[]).join(' '));
+  const desc=normalizeSearch([tool.description,tool.longDescription].filter(Boolean).join(' '));
+  const rest=searchText(tool),restCompact=compactSearch(rest),words=rest.split(' ').filter(Boolean);
+  const queryCompact=compactSearch(normalized),queryCho=choseong(normalized);
+  let score=0,matched=0;
+  if(queryCompact&&nameCompact===queryCompact)score+=170;else if(queryCompact&&nameCompact.startsWith(queryCompact))score+=125;else if(queryCompact&&nameCompact.includes(queryCompact))score+=95;
+  if(queryCho&&queryCho.length>=2&&nameCho.includes(queryCho))score+=85;
+  for(const g of groups){
+    let best=0;
+    for(const v of g.variants){
+      const vc=compactSearch(v);
+      if(name===v)best=Math.max(best,130);else if(name.startsWith(v))best=Math.max(best,100);else if(name.includes(v)||nameCompact.includes(vc))best=Math.max(best,82);
+      if(category.includes(v))best=Math.max(best,62);
+      if(tags.includes(v))best=Math.max(best,58);
+      if(desc.includes(v))best=Math.max(best,34);
+      if(rest.includes(v)||restCompact.includes(vc))best=Math.max(best,18);else if(fuzzyWordMatch(v,words))best=Math.max(best,11);
+    }
+    if(!best&&g.term&&/^[ㄱ-ㅎ]+$/.test(g.term)&&nameCho.includes(g.term))best=70;
+    if(best){matched++;score+=best}else if(!parsed.naturalLanguage)return 0;
+  }
+  if(parsed.naturalLanguage){const required=Math.max(1,Math.ceil(groups.length*.45));if(matched<required)return 0;score+=matched/groups.length*35;}
+  const popularity=Math.min(12,Number(tool.stars||0)>0?Math.log10(Number(tool.stars)+1)*1.8:0);
+  return score+popularity;
+}
 function toolMatches(tool){const queryMatch=!state.query||searchScore(tool,state.query)>0;return queryMatch&&(state.category==='전체'||tool.category===state.category)&&(!state.openSource||tool.openSource)&&(!state.free||tool.free)&&(!state.favoritesOnly||favorites.has(tool.id))&&(state.platform==='all'||tool.platforms.includes(state.platform))}
 function saveRecentSearch(query){const q=String(query||'').trim();if(q.length<2)return;recentSearches=[q,...recentSearches.filter(x=>normalizeSearch(x)!==normalizeSearch(q))].slice(0,6);localStorage.setItem(RECENT_SEARCHES_KEY,JSON.stringify(recentSearches))}
 function searchSuggestionItems(){if(!state.query)return[];return tools.map(tool=>({tool,score:searchScore(tool,state.query)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||(b.tool.stars||0)-(a.tool.stars||0)).slice(0,7)}
 function popularSearchTerms(){const categories=orderedCategories().slice(0,4);const tagCounts=new Map();for(const tool of tools){for(const tag of tool.tags||[]){const t=String(tag).trim();if(t.length<2)continue;tagCounts.set(t,(tagCounts.get(t)||0)+1)}}const tags=[...tagCounts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,4).map(x=>x[0]);return [...new Set([...categories,...tags])].slice(0,7)}
 function applySearchQuery(query,commit=false){state.query=String(query||'').trim();els.search.value=state.query;if(state.query&&state.category!=='전체'){state.category='전체';renderChips()}if(commit)saveRecentSearch(state.query);renderTools();renderSearchSuggestions()}
-function renderSearchSuggestions(){if(!els.searchSuggestions)return;searchSuggestionIndex=-1;const query=state.query.trim();if(!query){const recent=recentSearches.map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">최근 · '+q+'</button>').join('');const popular=popularSearchTerms().map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');const syntax='<div class="search-syntax"><span>고급 검색</span><code>무료 windows pdf</code><code>category:문서</code><code>stars:>10000</code><code>-교육 agent</code></div>';if(!recent&&!popular){els.searchSuggestions.hidden=true;return}els.searchSuggestions.innerHTML='<div class="search-suggestion-section">'+(recent?'<b>최근 검색</b><div class="search-chip-row">'+recent+'</div>':'')+'<b>추천 검색</b><div class="search-chip-row">'+popular+'</div>'+syntax+'</div>';els.searchSuggestions.hidden=false}else{const suggestions=searchSuggestionItems();if(!suggestions.length){const alternates=popularSearchTerms().slice(0,5).map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');els.searchSuggestions.innerHTML='<div class="search-suggestion-empty"><strong>일치하는 도구가 없어요.</strong><span>이 검색어는 어때요?</span><div class="search-chip-row">'+alternates+'</div></div>';els.searchSuggestions.hidden=false}else{els.searchSuggestions.innerHTML=suggestions.map(x=>'<button type="button" class="search-suggestion" data-search-tool="'+x.tool.id+'"><span><strong>'+x.tool.name+'</strong><small>'+x.tool.category+'</small></span><em>관련도 '+Math.round(x.score)+' · ★ '+compactNumber(x.tool.stars||0)+'</em></button>').join('');els.searchSuggestions.hidden=false}}els.searchSuggestions.querySelectorAll('button').forEach(btn=>btn.addEventListener('mousedown',e=>e.preventDefault()));els.searchSuggestions.querySelectorAll('[data-search-tool]').forEach(btn=>btn.addEventListener('click',()=>{saveRecentSearch(state.query);els.searchSuggestions.hidden=true;openDetail(btn.dataset.searchTool)}));els.searchSuggestions.querySelectorAll('[data-search-query]').forEach(btn=>btn.addEventListener('click',()=>applySearchQuery(btn.dataset.searchQuery,true)))}
+function renderSearchSuggestions(){if(!els.searchSuggestions)return;searchSuggestionIndex=-1;const query=state.query.trim();if(!query){const recent=recentSearches.map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">최근 · '+q+'</button>').join('');const popular=popularSearchTerms().map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');const syntax='<div class="search-syntax"><span>고급 검색</span><code>무료 windows pdf</code><code>category:문서</code><code>stars:>10000</code><code>-교육 agent</code><code>pdf OR hwp</code><code>웹사이트 자료 긁어서 AI에 넣고 싶어</code></div>';if(!recent&&!popular){els.searchSuggestions.hidden=true;return}els.searchSuggestions.innerHTML='<div class="search-suggestion-section">'+(recent?'<b>최근 검색</b><div class="search-chip-row">'+recent+'</div>':'')+'<b>추천 검색</b><div class="search-chip-row">'+popular+'</div>'+syntax+'</div>';els.searchSuggestions.hidden=false}else{const suggestions=searchSuggestionItems();if(!suggestions.length){const alternates=popularSearchTerms().slice(0,5).map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');els.searchSuggestions.innerHTML='<div class="search-suggestion-empty"><strong>일치하는 도구가 없어요.</strong><span>이 검색어는 어때요?</span><div class="search-chip-row">'+alternates+'</div></div>';els.searchSuggestions.hidden=false}else{els.searchSuggestions.innerHTML=suggestions.map(x=>'<button type="button" class="search-suggestion" data-search-tool="'+x.tool.id+'"><span><strong>'+x.tool.name+'</strong><small>'+x.tool.category+'</small></span><em>관련도 '+Math.round(x.score)+' · ★ '+compactNumber(x.tool.stars||0)+'</em></button>').join('');els.searchSuggestions.hidden=false}}els.searchSuggestions.querySelectorAll('button').forEach(btn=>btn.addEventListener('mousedown',e=>e.preventDefault()));els.searchSuggestions.querySelectorAll('[data-search-tool]').forEach(btn=>btn.addEventListener('click',()=>{saveRecentSearch(state.query);els.searchSuggestions.hidden=true;openDetail(btn.dataset.searchTool)}));els.searchSuggestions.querySelectorAll('[data-search-query]').forEach(btn=>btn.addEventListener('click',()=>applySearchQuery(btn.dataset.searchQuery,true)))}
 function moveSearchSuggestion(direction){if(!els.searchSuggestions||els.searchSuggestions.hidden)return false;const buttons=[...els.searchSuggestions.querySelectorAll('.search-suggestion')];if(!buttons.length)return false;searchSuggestionIndex=(searchSuggestionIndex+direction+buttons.length)%buttons.length;buttons.forEach((b,i)=>b.classList.toggle('keyboard-active',i===searchSuggestionIndex));buttons[searchSuggestionIndex].scrollIntoView({block:'nearest'});return true}
 function escapeHtml(value){return String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
 function highlightText(value,query=state.query){const text=String(value??'');const terms=normalizeSearch(parseSmartQuery(query).text).split(' ').filter(x=>x.length>1);if(!terms.length)return escapeHtml(text);const escaped=escapeHtml(text);const unique=[...new Set(terms)].sort((a,b)=>b.length-a.length);try{const parts=unique.map(x=>x.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&'));const re=new RegExp('('+parts.join('|')+')','gi');return escaped.replace(re,'<mark>$1</mark>')}catch{return escaped}}
@@ -127,6 +179,7 @@ function iconUrl(tool){if(tool.icon)return tool.icon;if(!tool.website)return'';t
 function visualMarkup(tool,large=false){const url=iconUrl(tool);const cls=large?'dialog-logo tool-visual':'logo tool-visual';const letter=tool.name.slice(0,1).toUpperCase();return `<div class="${cls}">${url?`<img src="${url}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.hidden=true">`:''}<span class="fallback-letter">${letter}</span></div>`}
 function compactNumber(n){if(!Number.isFinite(Number(n)))return'—';const v=Number(n);if(v>=1000000)return (v/1000000).toFixed(v>=10000000?0:1).replace(/\.0$/,'')+'m';if(v>=1000)return (v/1000).toFixed(v>=10000?0:1).replace(/\.0$/,'')+'k';return String(v)}
 function popularityMeta(tool){return tool.github&&Number.isFinite(Number(tool.stars))?`<div class="popularity-meta" title="GitHub Stars / Forks"><span>★ ${compactNumber(tool.stars)}</span><span>⑂ ${compactNumber(tool.forks||0)}</span></div>`:''}
+function queryIntentLabel(query=state.query){const parts=splitOrQuery(query);const labels=[...new Set(parts.flatMap(q=>parseSmartQuery(q).intent?.labels||[]))];return labels.slice(0,2).join(' · ')}
 function searchMatchReason(tool,query=state.query){
   if(!query)return'';
   const parsed=parseSmartQuery(query);const q=normalizeSearch(parsed.text);
@@ -137,7 +190,7 @@ function searchMatchReason(tool,query=state.query){
   if(terms.some(t=>cat.includes(t)))return '카테고리 일치';
   if(terms.some(t=>tags.includes(t)))return '태그 일치';
   if(terms.some(t=>desc.includes(t)))return '설명 일치';
-  return '유사 검색';
+  const intent=queryIntentLabel(query);return intent?`의도 · ${intent}`:'유사 검색';
 }
 function card(tool){return `<article class="card" data-tone="${categoryTone(tool.category)}" data-id="${tool.id}"><div class="card-head">${visualMarkup(tool)}<div class="card-meta"><span class="category">${tool.category}</span>${state.query?`<span class="match-reason">${searchMatchReason(tool)}</span>`:''}<button class="favorite-btn ${favorites.has(tool.id)?'active':''}" data-favorite="${tool.id}" type="button" aria-label="즐겨찾기">${favorites.has(tool.id)?'♥':'♡'}</button></div></div><h2>${highlightText(tool.name)}</h2><p>${highlightText(tool.description)}</p><div class="tags">${tagsFor(tool).slice(0,5).map(t=>`<span class="tag">${t}</span>`).join('')}</div><div class="card-bottom-meta"><div class="platforms">${tool.platforms.join(' · ')}</div>${popularityMeta(tool)}</div><div class="card-actions">${tool.website?`<a class="primary" href="${tool.website}" target="_blank" rel="noreferrer">사용하기 ↗</a>`:''}<button type="button" data-detail="${tool.id}">자세히</button></div></article>`}
 function syncUrl(detailId=null){const p=new URLSearchParams();if(state.query)p.set('q',state.query);if(state.category!=='전체')p.set('category',state.category);if(state.platform!=='all')p.set('platform',state.platform);if(state.openSource)p.set('open','1');if(state.free)p.set('free','1');if(state.favoritesOnly)p.set('favorites','1');if(state.sort!=='popular')p.set('sort',state.sort);if(detailId)p.set('tool',detailId);const next=location.pathname+(p.toString()?'?'+p.toString():'')+location.hash;history.replaceState(null,'',next)}
@@ -153,7 +206,7 @@ function toggleFavorite(id){favorites.has(id)?favorites.delete(id):favorites.add
 function bindDynamicEvents(){els.toolGrid.querySelectorAll('[data-favorite]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();toggleFavorite(btn.dataset.favorite)}));els.toolGrid.querySelectorAll('[data-detail]').forEach(btn=>btn.addEventListener('click',()=>openDetail(btn.dataset.detail)))}
 function resetFilters(scroll=true){Object.assign(state,{category:'전체',query:'',openSource:false,free:false,favoritesOnly:false,platform:'all',sort:'popular'});els.search.value='';if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};els.openSourceOnly.checked=false;els.freeOnly.checked=false;els.favoritesOnly.checked=false;els.platformFilter.value='all';els.sortSelect.value='popular';renderChips();renderTools();if(scroll)document.querySelector('#tools').scrollIntoView({behavior:'smooth'})}
 function renderStats(){els.statCategories.textContent=new Set(tools.map(t=>t.category)).size;els.statPlatforms.textContent=new Set(tools.flatMap(t=>t.platforms)).size;els.statOpenSource.textContent=tools.filter(t=>t.openSource).length}
-function resultContextText(){const parts=[];if(state.query)parts.push(`“${state.query}” 관련도순`);if(state.category!=='전체')parts.push(state.category);if(state.platform!=='all')parts.push(state.platform);if(state.openSource)parts.push('오픈소스');if(state.free)parts.push('무료');if(state.favoritesOnly)parts.push('즐겨찾기');return parts.length?' · '+parts.join(' · '):' · 전체 도구'}
+function resultContextText(){const parts=[];if(state.query){const intent=queryIntentLabel(state.query);parts.push(`“${state.query}” 관련도순${intent?' · '+intent:''}`);}if(state.category!=='전체')parts.push(state.category);if(state.platform!=='all')parts.push(state.platform);if(state.openSource)parts.push('오픈소스');if(state.free)parts.push('무료');if(state.favoritesOnly)parts.push('즐겨찾기');return parts.length?' · '+parts.join(' · '):' · 전체 도구'}
 function activeFilterItems(){const items=[];if(state.query)items.push({key:'query',label:`검색: ${state.query}`});if(state.category!=='전체')items.push({key:'category',label:state.category});if(state.platform!=='all')items.push({key:'platform',label:state.platform});if(state.openSource)items.push({key:'openSource',label:'오픈소스'});if(state.free)items.push({key:'free',label:'무료'});if(state.favoritesOnly)items.push({key:'favoritesOnly',label:'즐겨찾기'});return items}
 function clearOneFilter(key){if(key==='query'){state.query='';els.search.value=''}else if(key==='category'){state.category='전체';renderChips()}else if(key==='platform'){state.platform='all';els.platformFilter.value='all'}else if(key==='openSource'){state.openSource=false;els.openSourceOnly.checked=false}else if(key==='free'){state.free=false;els.freeOnly.checked=false}else if(key==='favoritesOnly'){state.favoritesOnly=false;els.favoritesOnly.checked=false}renderTools()}
 function renderActiveFilters(){const items=activeFilterItems();els.activeFilters.hidden=items.length===0;if(!items.length){els.activeFilters.innerHTML='';return}els.activeFilters.innerHTML=items.map(x=>`<span class="active-filter">${x.label}<button type="button" data-clear-filter="${x.key}" aria-label="${x.label} 제거">×</button></span>`).join('')+`<button type="button" class="active-filter clear-all" data-clear-all>전체 해제</button>`;els.activeFilters.querySelectorAll('[data-clear-filter]').forEach(btn=>btn.addEventListener('click',()=>clearOneFilter(btn.dataset.clearFilter)));els.activeFilters.querySelector('[data-clear-all]').addEventListener('click',()=>resetFilters(false))}
