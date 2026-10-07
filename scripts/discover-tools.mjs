@@ -56,14 +56,12 @@ async function ghJson(url) {
 }
 
 async function searchCandidates() {
-  const ceiling = state.starCeiling !== null && state.starCeiling !== undefined && Number.isFinite(Number(state.starCeiling)) ? Number(state.starCeiling) : null;
   const floor = Number(state.minimumStars || 200);
   const merged = new Map();
 
   for (const topic of toolTopics) {
-    const starQuery = ceiling === null ? `stars:>=${floor}` : `stars:${floor}..${ceiling}`;
-    const q = encodeURIComponent(`topic:${topic} ${starQuery} archived:false fork:false`);
-    const url = `https://api.github.com/search/repositories?q=${q}&sort=stars&order=desc&per_page=20`;
+    const q = encodeURIComponent(`topic:${topic} stars:>=${floor} archived:false fork:false`);
+    const url = `https://api.github.com/search/repositories?q=${q}&sort=stars&order=desc&per_page=100`;
     const data = await ghJson(url);
     for (const repo of data.items || []) {
       const key = repo.full_name.toLowerCase();
@@ -148,6 +146,21 @@ Popularity matters strongly: prefer higher GitHub Stars unless a higher-star can
 
 Use ONLY one of these existing OpenShelf categories:
 ${categories.join(', ')}
+
+Category meanings:
+- AI 에이전트: agent frameworks, agent skills, orchestration, coding-agent workflows
+- 개발 도구: coding, debugging, SDKs, developer utilities
+- 업무 자동화: workflow automation and repetitive-work automation
+- 지식·검색: search, crawling, RAG, knowledge bases
+- 디자인·시각화: UI, diagrams, graphics, visual design
+- 문서: PDF, HWP, Office, document processing
+- 브라우저 자동화: browser control and web task automation
+- AI 모델: model runtime, optimization, classification/decision models
+- AI 평가: agent/model evaluation, auditing, quality diagnostics
+- 교육·학습: learning, courses, tutorials, teaching tools
+- 공간정보: maps, geolocation, GEOINT, spatial analysis
+- 3D·CAD: CAD and 3D modeling
+- 영상·애니메이션: video and animation creation
 
 For each selected repository return concise Korean metadata.
 Installation commands and requirements must be grounded in the provided README excerpt. If not clearly present, use an empty install array rather than guessing.
@@ -266,10 +279,6 @@ if (additions.length !== TARGET_COUNT) {
   throw new Error(`After duplicate/validation checks only ${additions.length} additions remained; refusing partial update.`);
 }
 
-// Popular-first progression: after evaluating this whole pool, next run starts below its lowest star count.
-const evaluatedFloor = Math.min(...candidates.map(r => r.stargazers_count));
-state.starCeiling = Math.max(Number(state.minimumStars || 200), evaluatedFloor - 1);
-state.lastEvaluatedFloor = evaluatedFloor;
 state.lastRun = new Date().toISOString();
 state.totalAutoAdded = Number(state.totalAutoAdded || 0) + additions.length;
 
@@ -278,4 +287,4 @@ await fs.writeFile(TOOLS_PATH, JSON.stringify(nextTools, null, 2) + '\n');
 await fs.writeFile(STATE_PATH, JSON.stringify(state, null, 2) + '\n');
 
 console.log('Added:', additions.map(x => `${x.name} (★ ${x.stars})`).join(', '));
-console.log('Next star ceiling:', state.starCeiling);
+console.log('Popularity strategy: always restart from the highest-star candidates and skip existing repositories.');
