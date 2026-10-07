@@ -179,3 +179,17 @@ h1{font-size:clamp(56px,6.8vw,98px);line-height:.88;margin:16px 0 20px}
 .search-intent small{grid-column:1 / -1;color:var(--muted);font-size:10px;line-height:1.45}
 .match-reason{max-width:150px;overflow:hidden;text-overflow:ellipsis}
 @media(max-width:620px){.search-intent{grid-template-columns:1fr}.search-intent small{grid-column:auto}.match-reason{display:none}}
+
+/* v1.5 search facets + snippets */
+.search-facets{display:flex;flex-wrap:wrap;align-items:center;gap:7px;padding:12px 0 0}
+.search-facets[hidden]{display:none}
+.search-facets>span{font-size:9px;letter-spacing:.1em;color:var(--muted);font-weight:900;margin-right:3px}
+.search-facets button{border:1px solid var(--line);background:var(--paper);padding:7px 9px;font-size:10px;cursor:pointer;transition:.15s ease}
+.search-facets button b{font-weight:800;color:var(--muted);margin-left:3px}
+.search-facets button:hover,.search-facets button.active{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.search-facets button.active b,.search-facets button:hover b{color:#d7d1c6}
+.search-snippet{margin:12px 0 0;border-left:2px solid var(--accent);padding:7px 9px;background:var(--soft)}
+.search-snippet>span{display:block;font-size:8px;letter-spacing:.08em;color:var(--accent);font-weight:900;margin-bottom:4px}
+.search-snippet p{margin:0!important;min-height:0!important;font-size:11px!important;line-height:1.48!important;color:var(--muted)!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.search-snippet mark{background:transparent;color:var(--ink);font-weight:900}
+@media(max-width:620px){.search-facets{overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}.search-facets>span,.search-facets button{white-space:nowrap;flex:0 0 auto}}
