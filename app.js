@@ -1,7 +1,10 @@
 const state={category:'전체',query:'',openSource:false,free:false,favoritesOnly:false,platform:'all',sort:'popular'};
 let tools=[];
 const FAVORITES_KEY='openshelf-favorites-v1';
+const RECENT_SEARCHES_KEY='openshelf-recent-searches-v1';
 const favorites=new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY)||'[]'));
+let recentSearches=JSON.parse(localStorage.getItem(RECENT_SEARCHES_KEY)||'[]').filter(Boolean).slice(0,6);
+let searchSuggestionIndex=-1;
 const categoryDescriptions={
   'AI 에이전트':'AI 에이전트·스킬·오케스트레이션',
   '개발 도구':'코딩·디버깅·SDK·개발 워크플로',
@@ -51,52 +54,24 @@ const SEARCH_ALIASES={
   'map':['지도','공간정보','geoint','geo'],'지도':['map','공간정보','geoint','geo'],'geo':['공간정보','지도','geoint'],'공간정보':['geo','지도','geoint'],
   'code':['코드','개발','coding'],'코드':['code','개발','coding'],'dev':['개발','developer'],'개발':['dev','developer','code']
 };
-function normalizeSearch(value){return String(value||'').normalize('NFKC').toLowerCase().replace(/[·/_,.()\[\]{}:;|+-]+/g,' ').replace(/\s+/g,' ').trim()}
-function searchText(tool){return normalizeSearch([
-  tool.name,tool.description,tool.longDescription,tool.category,tool.license,tool.github,tool.website,
-  ...(tool.tags||[]),...(tool.platforms||[]),...(tool.requirements||[]),...(tool.supportedAgents||[]),
-  ...(tool.usageSteps||[]),...(tool.install||[]).flatMap(x=>[x.title,x.command,x.note]),tool.examplePrompt,tool.usageNote
-].filter(Boolean).join(' '))}
+function normalizeSearch(value){return String(value||'').normalize('NFKC').toLowerCase().replace(/[·/_,.()\[\]{}:;|+\-]+/g,' ').replace(/\s+/g,' ').trim()}
+function compactSearch(value){return normalizeSearch(value).replace(/\s+/g,'')}
+const CHOSEONG=['ㄱ','ㄲ','ㄴ','ㄷ','ㄸ','ㄹ','ㅁ','ㅂ','ㅃ','ㅅ','ㅆ','ㅇ','ㅈ','ㅉ','ㅊ','ㅋ','ㅌ','ㅍ','ㅎ'];
+function choseong(value){return [...String(value||'')].map(ch=>{const code=ch.charCodeAt(0)-0xAC00;if(code>=0&&code<=11171)return CHOSEONG[Math.floor(code/588)];return /[ㄱ-ㅎ]/.test(ch)?ch:''}).join('')}
+function searchText(tool){return normalizeSearch([tool.name,tool.description,tool.longDescription,tool.category,tool.license,tool.github,tool.website,...(tool.tags||[]),...(tool.platforms||[]),...(tool.requirements||[]),...(tool.supportedAgents||[]),...(tool.usageSteps||[]),...(tool.install||[]).flatMap(x=>[x.title,x.command,x.note]),tool.examplePrompt,tool.usageNote].filter(Boolean).join(' '))}
 function editDistance(a,b){if(a===b)return 0;if(!a.length)return b.length;if(!b.length)return a.length;const prev=Array.from({length:b.length+1},(_,i)=>i);for(let i=1;i<=a.length;i++){let last=prev[0];prev[0]=i;for(let j=1;j<=b.length;j++){const tmp=prev[j];prev[j]=Math.min(prev[j]+1,prev[j-1]+1,last+(a[i-1]===b[j-1]?0:1));last=tmp}}return prev[b.length]}
 function expandedTerms(query){const base=normalizeSearch(query).split(' ').filter(Boolean);return base.map(term=>({term,variants:[term,...(SEARCH_ALIASES[term]||[]).map(normalizeSearch)]}))}
 function fuzzyWordMatch(term,words){if(term.length<4)return false;const max=term.length>=8?2:1;return words.some(word=>Math.abs(word.length-term.length)<=max&&editDistance(term,word)<=max)}
-function termMatches(group,haystack,words){return group.variants.some(v=>haystack.includes(v)||fuzzyWordMatch(v,words))}
-function searchScore(tool,query=state.query){
-  const groups=expandedTerms(query);if(!groups.length)return 0;
-  const name=normalizeSearch(tool.name),category=normalizeSearch(tool.category),tags=normalizeSearch((tool.tags||[]).join(' '));
-  const desc=normalizeSearch([tool.description,tool.longDescription].filter(Boolean).join(' '));
-  const rest=searchText(tool),words=rest.split(' ').filter(Boolean);
-  let score=0;
-  for(const g of groups){
-    let best=0;
-    for(const v of g.variants){
-      if(name===v)best=Math.max(best,120);
-      else if(name.startsWith(v))best=Math.max(best,90);
-      else if(name.includes(v))best=Math.max(best,75);
-      if(category.includes(v))best=Math.max(best,55);
-      if(tags.includes(v))best=Math.max(best,50);
-      if(desc.includes(v))best=Math.max(best,30);
-      if(rest.includes(v))best=Math.max(best,16);
-      else if(fuzzyWordMatch(v,words))best=Math.max(best,10);
-    }
-    if(!best)return 0;
-    score+=best;
-  }
-  return score+(Number(tool.stars||0)>0?Math.log10(Number(tool.stars)+1):0);
-}
+function searchScore(tool,query=state.query){const normalized=normalizeSearch(query);if(!normalized)return 0;const groups=expandedTerms(normalized);const name=normalizeSearch(tool.name),nameCompact=compactSearch(tool.name),nameCho=choseong(tool.name);const category=normalizeSearch(tool.category),tags=normalizeSearch((tool.tags||[]).join(' '));const desc=normalizeSearch([tool.description,tool.longDescription].filter(Boolean).join(' '));const rest=searchText(tool),restCompact=compactSearch(rest),words=rest.split(' ').filter(Boolean);const queryCompact=compactSearch(normalized),queryCho=choseong(normalized);let score=0;if(queryCompact&&nameCompact===queryCompact)score+=170;else if(queryCompact&&nameCompact.startsWith(queryCompact))score+=125;else if(queryCompact&&nameCompact.includes(queryCompact))score+=95;if(queryCho&&queryCho.length>=2&&nameCho.includes(queryCho))score+=85;for(const g of groups){let best=0;for(const v of g.variants){const vc=compactSearch(v);if(name===v)best=Math.max(best,130);else if(name.startsWith(v))best=Math.max(best,100);else if(name.includes(v)||nameCompact.includes(vc))best=Math.max(best,82);if(category.includes(v))best=Math.max(best,62);if(tags.includes(v))best=Math.max(best,58);if(desc.includes(v))best=Math.max(best,34);if(rest.includes(v)||restCompact.includes(vc))best=Math.max(best,18);else if(fuzzyWordMatch(v,words))best=Math.max(best,11)}if(!best&&g.term&&/^[ㄱ-ㅎ]+$/.test(g.term)&&nameCho.includes(g.term))best=70;if(!best)return 0;score+=best}const popularity=Math.min(12,Number(tool.stars||0)>0?Math.log10(Number(tool.stars)+1)*1.8:0);return score+popularity}
 function toolMatches(tool){const queryMatch=!state.query||searchScore(tool,state.query)>0;return queryMatch&&(state.category==='전체'||tool.category===state.category)&&(!state.openSource||tool.openSource)&&(!state.free||tool.free)&&(!state.favoritesOnly||favorites.has(tool.id))&&(state.platform==='all'||tool.platforms.includes(state.platform))}
-function searchSuggestionItems(){if(!state.query)return[];return tools.map(tool=>({tool,score:searchScore(tool,state.query)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||(b.tool.stars||0)-(a.tool.stars||0)).slice(0,6)}
-function renderSearchSuggestions(){
-  if(!els.searchSuggestions)return;
-  const query=state.query.trim();
-  if(!query){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML='';return}
-  const suggestions=searchSuggestionItems();
-  if(!suggestions.length){els.searchSuggestions.innerHTML='<div class="search-suggestion-empty">비슷한 도구를 찾지 못했어요.</div>';els.searchSuggestions.hidden=false;return}
-  els.searchSuggestions.innerHTML=suggestions.map(({tool})=>`<button type="button" class="search-suggestion" data-search-tool="${tool.id}"><span><strong>${tool.name}</strong><small>${tool.category}</small></span><em>★ ${compactNumber(tool.stars||0)}</em></button>`).join('');
-  els.searchSuggestions.hidden=false;
-  els.searchSuggestions.querySelectorAll('[data-search-tool]').forEach(btn=>btn.addEventListener('mousedown',e=>e.preventDefault()));
-  els.searchSuggestions.querySelectorAll('[data-search-tool]').forEach(btn=>btn.addEventListener('click',()=>{els.searchSuggestions.hidden=true;openDetail(btn.dataset.searchTool)}));
-}
+function saveRecentSearch(query){const q=String(query||'').trim();if(q.length<2)return;recentSearches=[q,...recentSearches.filter(x=>normalizeSearch(x)!==normalizeSearch(q))].slice(0,6);localStorage.setItem(RECENT_SEARCHES_KEY,JSON.stringify(recentSearches))}
+function searchSuggestionItems(){if(!state.query)return[];return tools.map(tool=>({tool,score:searchScore(tool,state.query)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||(b.tool.stars||0)-(a.tool.stars||0)).slice(0,7)}
+function popularSearchTerms(){const categories=orderedCategories().slice(0,4);const tagCounts=new Map();for(const tool of tools){for(const tag of tool.tags||[]){const t=String(tag).trim();if(t.length<2)continue;tagCounts.set(t,(tagCounts.get(t)||0)+1)}}const tags=[...tagCounts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,4).map(x=>x[0]);return [...new Set([...categories,...tags])].slice(0,7)}
+function applySearchQuery(query,commit=false){state.query=String(query||'').trim();els.search.value=state.query;if(state.query&&state.category!=='전체'){state.category='전체';renderChips()}if(commit)saveRecentSearch(state.query);renderTools();renderSearchSuggestions()}
+function renderSearchSuggestions(){if(!els.searchSuggestions)return;searchSuggestionIndex=-1;const query=state.query.trim();if(!query){const recent=recentSearches.map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">최근 · '+q+'</button>').join('');const popular=popularSearchTerms().map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');if(!recent&&!popular){els.searchSuggestions.hidden=true;return}els.searchSuggestions.innerHTML='<div class="search-suggestion-section">'+(recent?'<b>최근 검색</b><div class="search-chip-row">'+recent+'</div>':'')+'<b>추천 검색</b><div class="search-chip-row">'+popular+'</div></div>';els.searchSuggestions.hidden=false}else{const suggestions=searchSuggestionItems();if(!suggestions.length){const alternates=popularSearchTerms().slice(0,5).map(q=>'<button type="button" class="search-history-chip" data-search-query="'+q+'">'+q+'</button>').join('');els.searchSuggestions.innerHTML='<div class="search-suggestion-empty"><strong>일치하는 도구가 없어요.</strong><span>이 검색어는 어때요?</span><div class="search-chip-row">'+alternates+'</div></div>';els.searchSuggestions.hidden=false}else{els.searchSuggestions.innerHTML=suggestions.map(x=>'<button type="button" class="search-suggestion" data-search-tool="'+x.tool.id+'"><span><strong>'+x.tool.name+'</strong><small>'+x.tool.category+'</small></span><em>관련도 '+Math.round(x.score)+' · ★ '+compactNumber(x.tool.stars||0)+'</em></button>').join('');els.searchSuggestions.hidden=false}}els.searchSuggestions.querySelectorAll('button').forEach(btn=>btn.addEventListener('mousedown',e=>e.preventDefault()));els.searchSuggestions.querySelectorAll('[data-search-tool]').forEach(btn=>btn.addEventListener('click',()=>{saveRecentSearch(state.query);els.searchSuggestions.hidden=true;openDetail(btn.dataset.searchTool)}));els.searchSuggestions.querySelectorAll('[data-search-query]').forEach(btn=>btn.addEventListener('click',()=>applySearchQuery(btn.dataset.searchQuery,true)))}
+function moveSearchSuggestion(direction){if(!els.searchSuggestions||els.searchSuggestions.hidden)return false;const buttons=[...els.searchSuggestions.querySelectorAll('.search-suggestion')];if(!buttons.length)return false;searchSuggestionIndex=(searchSuggestionIndex+direction+buttons.length)%buttons.length;buttons.forEach((b,i)=>b.classList.toggle('keyboard-active',i===searchSuggestionIndex));buttons[searchSuggestionIndex].scrollIntoView({block:'nearest'});return true}
+function escapeHtml(value){return String(value??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]))}
+function highlightText(value,query=state.query){const text=String(value??'');const terms=normalizeSearch(query).split(' ').filter(x=>x.length>1);if(!terms.length)return escapeHtml(text);const escaped=escapeHtml(text);const unique=[...new Set(terms)].sort((a,b)=>b.length-a.length);try{const parts=unique.map(x=>x.replace(/[-/\\^$*+?.()|[\]{}]/g,'\\$&'));const re=new RegExp('('+parts.join('|')+')','gi');return escaped.replace(re,'<mark>$1</mark>')}catch{return escaped}}
 function orderedCategories(){const found=[...new Set(tools.map(t=>t.category))];return found.sort((a,b)=>{const ai=CATEGORY_ORDER.indexOf(a),bi=CATEGORY_ORDER.indexOf(b);if(ai===-1&&bi===-1)return a.localeCompare(b,'ko');if(ai===-1)return 1;if(bi===-1)return-1;return ai-bi})}
 function renderChips(){const categories=['전체',...orderedCategories()];els.categoryChips.innerHTML=categories.map(c=>`<button class="chip ${state.category===c?'active':''}" data-category="${c}">${c}</button>`).join('');els.categoryChips.querySelectorAll('.chip').forEach(btn=>btn.addEventListener('click',()=>applyCategory(btn.dataset.category)))}
 function applyCategory(category){state.category=category;renderChips();renderTools();document.querySelector('#tools').scrollIntoView({behavior:'smooth'})}
