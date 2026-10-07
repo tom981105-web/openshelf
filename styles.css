@@ -193,3 +193,34 @@ h1{font-size:clamp(56px,6.8vw,98px);line-height:.88;margin:16px 0 20px}
 .search-snippet p{margin:0!important;min-height:0!important;font-size:11px!important;line-height:1.48!important;color:var(--muted)!important;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .search-snippet mark{background:transparent;color:var(--ink);font-weight:900}
 @media(max-width:620px){.search-facets{overflow-x:auto;flex-wrap:nowrap;padding-bottom:3px}.search-facets>span,.search-facets button{white-space:nowrap;flex:0 0 auto}}
+
+/* v1.6 discovery experience */
+.tag-button{font-family:inherit;color:inherit;background:transparent;cursor:pointer}
+.tag-button:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.compare-pick{white-space:nowrap}
+.compare-pick.active{background:var(--accent)!important;color:white!important;text-decoration:none!important;padding:9px 8px!important}
+.compare-bar{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:45;width:min(720px,calc(100% - 32px));background:var(--ink);color:var(--paper);border:1px solid var(--ink);box-shadow:8px 8px 0 rgba(0,0,0,.2);padding:12px 14px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.compare-bar[hidden]{display:none}
+.compare-bar>div{display:flex;align-items:center;gap:9px}
+.compare-bar>div:first-child strong{font:700 24px/1 Georgia,serif}
+.compare-bar>div:first-child span{font-size:11px;color:#d7d1c6}
+.compare-bar button{border:1px solid #777;background:transparent;color:var(--paper);padding:8px 11px;font-size:10px;font-weight:800;cursor:pointer}
+.compare-bar button.primary{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.compare-bar button:disabled{opacity:.4;cursor:not-allowed}
+body.compare-active{padding-bottom:88px}
+.compare-dialog{width:min(1000px,calc(100% - 32px))}
+.compare-table-wrap{overflow:auto;margin-top:18px;border:1px solid var(--line)}
+.compare-table{width:100%;border-collapse:collapse;min-width:700px;font-size:12px}
+.compare-table th,.compare-table td{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px;vertical-align:top;text-align:left}
+.compare-table th:first-child{width:140px;background:var(--soft);font-size:10px;letter-spacing:.04em}
+.compare-table thead th{background:var(--paper);position:sticky;top:0;z-index:1}
+.compare-table thead button{border:0;background:transparent;padding:0;text-align:left;font-weight:900;cursor:pointer;text-decoration:underline;text-underline-offset:4px}
+.compare-table tr:last-child th,.compare-table tr:last-child td{border-bottom:0}
+.compare-table th:last-child,.compare-table td:last-child{border-right:0}
+#trending[hidden],#recentlyViewed[hidden]{display:none}
+@media(max-width:620px){
+  .compare-bar{bottom:10px;align-items:stretch;flex-direction:column;gap:9px}
+  .compare-bar>div{justify-content:space-between}
+  .compare-bar>div:last-child button{flex:1}
+  body.compare-active{padding-bottom:130px}
+}
