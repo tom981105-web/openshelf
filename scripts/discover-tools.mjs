@@ -5,6 +5,7 @@ const STATE_PATH = 'data/discovery-state.json';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
+const GITHUB_EVENT_NAME = process.env.GITHUB_EVENT_NAME || '';
 const TARGET_COUNT = 10;
 const CANDIDATE_COUNT = 15;
 
@@ -33,6 +34,25 @@ const sleep = ms => new Promise(r => setTimeout(r, ms));
 const today = new Date().toISOString().slice(0, 10);
 const tools = JSON.parse(await fs.readFile(TOOLS_PATH, 'utf8'));
 const state = JSON.parse(await fs.readFile(STATE_PATH, 'utf8'));
+
+function seoulHourKey(date = new Date()) {
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Asia/Seoul',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    hour12: false
+  }).formatToParts(date);
+  const value = Object.fromEntries(parts.map(p => [p.type, p.value]));
+  return `${value.year}-${value.month}-${value.day}T${value.hour}`;
+}
+
+const currentHourKey = seoulHourKey();
+if (GITHUB_EVENT_NAME === 'schedule' && state.lastRunHour === currentHourKey) {
+  console.log(`Discovery already succeeded in Seoul hour ${currentHourKey}. Backup trigger skipped before GitHub/Gemini API usage.`);
+  process.exit(0);
+}
 
 const normalizeRepoUrl = value => {
   try {
@@ -280,6 +300,7 @@ if (additions.length !== TARGET_COUNT) {
 }
 
 state.lastRun = new Date().toISOString();
+state.lastRunHour = currentHourKey;
 state.totalAutoAdded = Number(state.totalAutoAdded || 0) + additions.length;
 
 const nextTools = [...additions, ...tools];
