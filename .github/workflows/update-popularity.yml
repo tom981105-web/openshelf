@@ -34,10 +34,13 @@ jobs:
 
               try {
                 const { data } = await github.rest.repos.get({ owner, repo });
+                const previousStars = Number(tool.stars || data.stargazers_count);
+                tool.previousStars = previousStars;
                 tool.stars = data.stargazers_count;
+                tool.starDelta1d = Math.max(0, tool.stars - previousStars);
                 tool.forks = data.forks_count;
                 tool.starsUpdatedAt = today;
-                core.info(`${tool.name}: ★ ${tool.stars}, forks ${tool.forks}`);
+                core.info(`${tool.name}: ★ ${tool.stars} (+${tool.starDelta1d}), forks ${tool.forks}`);
               } catch (error) {
                 core.warning(`Could not refresh ${tool.name}: ${error.message}`);
               }
