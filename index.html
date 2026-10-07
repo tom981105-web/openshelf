@@ -108,6 +108,28 @@
         <div id="latestGrid" class="latest-grid"></div>
       </section>
 
+      <section class="section-block reveal" id="trending">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">TRENDING NOW</span>
+            <h2>급상승 도구</h2>
+          </div>
+          <span class="section-note">최근 GitHub Stars 증가량 기준.</span>
+        </div>
+        <div id="trendingGrid" class="latest-grid"></div>
+      </section>
+
+      <section class="section-block reveal" id="recentlyViewed" hidden>
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">RECENTLY VIEWED</span>
+            <h2>최근 본 도구</h2>
+          </div>
+          <button id="clearRecentlyViewed" class="text-button" type="button">기록 지우기</button>
+        </div>
+        <div id="recentlyViewedGrid" class="latest-grid"></div>
+      </section>
+
       <section class="explore-head reveal">
         <div>
           <span class="eyebrow">THE SHELF</span>
@@ -185,6 +207,19 @@
         </div>
       </section>
     </main>
+
+    <div id="compareBar" class="compare-bar" hidden>
+      <div><strong id="compareCount">0</strong><span>개 선택됨 · 최대 4개</span></div>
+      <div>
+        <button id="clearCompare" type="button">선택 해제</button>
+        <button id="openCompare" type="button" class="primary">비교하기</button>
+      </div>
+    </div>
+
+    <dialog id="compareDialog" class="tool-dialog compare-dialog">
+      <button id="compareDialogClose" class="dialog-close" type="button" aria-label="닫기">×</button>
+      <div id="compareDialogContent"></div>
+    </dialog>
 
     <dialog id="toolDialog" class="tool-dialog">
       <button id="dialogClose" class="dialog-close" type="button" aria-label="닫기">×</button>
