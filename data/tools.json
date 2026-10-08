@@ -1,5 +1,453 @@
 [
   {
+    "id": "swe-agent",
+    "name": "SWE-agent",
+    "github": "https://github.com/SWE-agent/SWE-agent",
+    "description": "언어 모델을 활용해 실제 GitHub 이슈를 자동으로 해결하는 오픈소스 AI 에이전트입니다.",
+    "longDescription": "GPT-4o나 Claude Sonnet 같은 언어 모델을 활용하여 GitHub 저장소의 버그와 이슈를 자율적으로 분석하고 코드를 수정합니다. 명령어 라인에서 손쉽게 실행할 수 있으며, 실제 개발 워크플로우에 통합하여 반복적인 디버깅 작업을 자동화할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai",
+      "agent",
+      "llm",
+      "developer-tools",
+      "python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://swe-agent.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Python",
+      "언어 모델 API 키"
+    ],
+    "supportedAgents": [
+      "GPT-4o",
+      "Claude Sonnet"
+    ],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "사용할 언어 모델의 API 키를 설정합니다.",
+      "명령어를 통해 해결할 GitHub 이슈 링크나 번호를 지정하여 실행합니다."
+    ],
+    "examplePrompt": "Fix the bug described in issue #123 in this repository.",
+    "usageNote": "대부분의 개발은 후속 프로젝트인 mini-swe-agent로 전환되어 진행되고 있습니다.",
+    "stars": 20508,
+    "forks": 2247,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "jcode",
+    "name": "jcode",
+    "github": "https://github.com/1jehuang/jcode",
+    "description": "Rust로 작성된 고성능 터미널 기반 코딩 에이전트 하네스입니다.",
+    "longDescription": "Rust 언어로 개발되어 빠른 속도와 가벼운 리소스 사용량을 자랑하는 터미널 코딩 에이전트입니다. 다양한 LLM과 MCP(Model Context Protocol)를 지원하여 개발자가 터미널 환경에서 효율적으로 AI 코딩 도구를 활용할 수 있도록 돕습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "rust",
+      "ai-agent",
+      "cli",
+      "terminal",
+      "tui"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://jcode.sh",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Rust 툴체인"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "OpenAI"
+    ],
+    "install": [
+      {
+        "title": "macOS & Linux 설치",
+        "command": "curl -fsSL https://jcode.sh/install | bash",
+        "note": "유닉스 계열 운영체제용 설치 스크립트"
+      },
+      {
+        "title": "Windows 설치",
+        "command": "irm https://jcode.sh/install.ps1 | iex",
+        "note": "PowerShell용 설치 스크립트"
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 jcode를 설치합니다.",
+      "프로젝트 디렉토리로 이동합니다.",
+      "jcode를 실행하여 에이전트와 상호작용하며 코딩을 시작합니다."
+    ],
+    "examplePrompt": "Refactor this module to improve error handling and performance.",
+    "usageNote": "",
+    "stars": 20358,
+    "forks": 2368,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "hypit",
+    "name": "hypit",
+    "github": "https://github.com/hypit-ai/hypit",
+    "description": "AI 에이전트를 활용해 바이럴 영상을 복제하고 대량으로 변환하는 영상 자동화 도구입니다.",
+    "longDescription": "Claude Code나 Codex 같은 AI 에이전트와 연동하여 원본 영상의 대사, 얼굴, B-roll, 효과 등을 단 하나의 명령어로 100가지 버전으로 클론하고 생성할 수 있는 DSL 및 컴파일러 기반 시스템입니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "ai-video",
+      "video-automation",
+      "ffmpeg",
+      "typescript",
+      "generative-ai"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://hypit.ai",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js",
+      "AI 코딩 에이전트"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "전역 스킬 설치",
+        "command": "npx skills add hypit-ai/hypit -g",
+        "note": "AI 에이전트 스킬로 hypit을 전역 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "npx 명령어로 hypit 스킬을 설치합니다.",
+      "에이전트에게 복제하고 싶은 대상 영상과 요구사항을 전달합니다.",
+      "생성된 워크플로우를 검토하고 렌더링을 실행합니다."
+    ],
+    "examplePrompt": "Clone this viral video, swap the intro clip, and generate 5 variants with different captions.",
+    "usageNote": "영상 생성 모델 및 코딩 에이전트 사용 비용은 별도로 발생할 수 있습니다.",
+    "stars": 20344,
+    "forks": 2235,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "obtainium",
+    "name": "Obtainium",
+    "github": "https://github.com/ImranR98/Obtainium",
+    "description": "소스에서 직접 안드로이드 앱을 설치하고 업데이트를 받아볼 수 있는 오픈소스 관리 도구입니다.",
+    "longDescription": "Google Play 스토어를 거치지 않고 GitHub, GitLab 등의 릴리스 페이지나 공식 소스에서 안드로이드 앱(APK)을 직접 다운로드하고 최신 버전 업데이트 알림을 받아볼 수 있도록 돕는 프라이버시 중심의 애플리케이션입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "android",
+      "apk",
+      "updater",
+      "automation",
+      "foss"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://obtainium.imranr.dev",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Android 기기"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "F-Droid나 GitHub 릴리스에서 Obtainium APK를 다운로드하여 안드로이드 기기에 설치합니다.",
+      "추적하고 싶은 앱의 소스(GitHub 릴리스 URL 등)를 추가합니다.",
+      "새로운 업데이트가 등록되면 알림을 받고 간편하게 업데이트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 20276,
+    "forks": 625,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "suna",
+    "name": "suna",
+    "github": "https://github.com/kortix-ai/suna",
+    "description": "조직과 프로젝트를 코드베이스처럼 구축하고 클라우드에서 실행하는 오픈소스 AI 운영체제입니다.",
+    "longDescription": "셀프 호스팅이 가능한 오픈소스 AI OS로, 기업 운영 및 복잡한 워크플로우를 에이전트와 YAML 설정 기반으로 구성하여 클라우드에 라이브로 배포할 수 있는 플랫폼입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai-operating-system",
+      "ai-agents",
+      "self-hosted",
+      "typescript",
+      "llm"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://www.kortix.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js",
+      "CLI 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI 설치",
+        "command": "curl -fsSL https://kortix.com/install | bash",
+        "note": "Kortix CLI를 시스템에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "CLI를 설치한 후 프로젝트 디렉토리에서 `kortix init`을 실행하여 설정 파일을 생성합니다.",
+      "에이전트와 스킬 설정을 정의합니다.",
+      "`kortix ship` 명령어로 클라우드에 배포하고 세션을 시작합니다."
+    ],
+    "examplePrompt": "Summarize this week's commits and open a change request",
+    "usageNote": "",
+    "stars": 20262,
+    "forks": 3439,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "paseo",
+    "name": "paseo",
+    "github": "https://github.com/getpaseo/paseo",
+    "description": "데스크톱, 모바일, CLI 환경에서 여러 코딩 에이전트를 동시에 오케스트레이션하는 개발 환경입니다.",
+    "longDescription": "Claude Code, Codex, Copilot 등 다양한 코딩 에이전트를 하나의 인터페이스에서 통합 관리할 수 있는 오픈소스 도구입니다. 각 에이전트를 독립된 작업 트리(worktree)에서 병렬로 실행하고 에이전트끼리 서로 소통할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "agents",
+      "claude-code",
+      "orchestration",
+      "developer-tools",
+      "typescript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://paseo.sh",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "데스크톱 또는 모바일 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Paseo 데스크톱 또는 모바일 애플리케이션을 설치합니다.",
+      "사용할 코딩 에이전트 플러그인을 레지스트리에서 추가합니다.",
+      "여러 에이전트를 병렬로 실행하여 코딩 작업 및 풀 리퀘스트를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "플러그인은 데몬 머신에 대한 접근 권한을 가지므로 신뢰할 수 있는 소스만 설치해야 합니다.",
+    "stars": 20149,
+    "forks": 2373,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "daily",
+    "name": "daily",
+    "github": "https://github.com/dailydotdev/daily",
+    "description": "개발자를 위한 맞춤형 기술 뉴스 피드 및 커뮤니티 브라우저 확장 프로그램입니다.",
+    "longDescription": "전 세계 웹상에서 가장 유용한 개발 관련 아티클, 뉴스, 블로그 포스트를 수집하여 새 탭이나 모바일 앱에서 개인 맞춤형으로 제공하는 오픈소스 플랫폼입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "browser-extension",
+      "tech-news",
+      "news-aggregator",
+      "developer-tools",
+      "community"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://daily.dev",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "크롬 또는 엣지 등 지원 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "브라우저 웹스토어에서 daily.dev 확장 프로그램을 설치합니다.",
+      "관심 있는 기술 스택이나 주제를 선택하여 피드를 맞춤 설정합니다.",
+      "새 탭을 열 때마다 최신 기술 뉴스와 커뮤니티 토론을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 20093,
+    "forks": 572,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "typer",
+    "name": "typer",
+    "github": "https://github.com/fastapi/typer",
+    "description": "파이썬 타입 힌트를 기반으로 직관적이고 강력한 CLI 애플리케이션을 구축하는 라이브러리입니다.",
+    "longDescription": "FastAPI의 철학을 계승하여 만든 파이썬 CLI 개발 라이브러리입니다. 표준 파이썬 타입 힌트만으로 에디터 자동완성과 문서화가 완벽히 지원되는 명령행 프로그램을 손쉽게 작성할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "python",
+      "typehints",
+      "terminal",
+      "click"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://typer.tiangolo.com/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Python 3.7+",
+      "uv 또는 pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uv를 이용한 설치",
+        "command": "uv add typer",
+        "note": "프로젝트 가상환경에 Typer를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 환경에 Typer를 설치합니다.",
+      "파이썬 파일에 타입 힌트를 활용하여 CLI 함수를 작성합니다.",
+      "스크립트를 실행하여 명령행 인터페이스로 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 20056,
+    "forks": 986,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "ava",
+    "name": "ava",
+    "github": "https://github.com/avajs/ava",
+    "description": "Node.js 환경에서 강력한 동시성 처리와 상세한 에러 출력을 제공하는 모던 테스트 러너입니다.",
+    "longDescription": "스레드 격리(thread isolation) 방식을 채택하여 Node.js 테스트를 안전하고 빠르게 병렬 실행할 수 있는 자바스크립트/타입스크립트 단위 테스트 프레임워크입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "test-runner",
+      "javascript",
+      "nodejs",
+      "unit-testing",
+      "tdd"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/avajs/ava",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm을 이용한 초기화",
+        "command": "npm init ava",
+        "note": "프로젝트에 AVA를 자동으로 설정합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 `npm init ava` 명령어를 실행합니다.",
+      "생성된 테스트 파일에 작성할 테스트 코드를 정의합니다.",
+      "`npm test`를 실행하여 테스트를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 20824,
+    "forks": 1464,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "awesome-ai-engineering",
+    "name": "awesome-ai-engineering",
+    "github": "https://github.com/dipakkr/awesome-ai-engineering",
+    "description": "LLM, RAG, AI 에이전트, MCP 및 프로덕션 AI 시스템 구축을 위한 AI 엔지니어링 리소스 모음입니다.",
+    "longDescription": "인공지능 엔지니어가 되기 위해 필요한 로드맵, 도구, 튜토리얼, 오픈소스 프로젝트 정보를 A부터 Z까지 체계적으로 정리해 둔 큐레이션 리스트입니다.",
+    "category": "교육·학습",
+    "tags": [
+      "ai-engineering",
+      "llm",
+      "rag",
+      "ai-agents",
+      "learning-resources"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/dipakkr/awesome-ai-engineering",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소의 목차에서 학습하고자 하는 주제(예: LLM, RAG, AI Agents)를 선택합니다.",
+      "추천하는 가이드와 리소스 링크를 통해 학습을 진행합니다.",
+      "오픈소스 AI 프로젝트를 탐색하고 실습에 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22342,
+    "forks": 4826,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
     "id": "gpt-pilot",
     "name": "gpt-pilot",
     "github": "https://github.com/Pythagora-io/gpt-pilot",
