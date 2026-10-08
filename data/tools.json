@@ -1,5 +1,485 @@
 [
   {
+    "id": "repomix",
+    "name": "Repomix",
+    "github": "https://github.com/yamadashy/repomix",
+    "description": "전체 소스 코드 저장소를 단일 AI 친화적 파일로 압축해 주는 도구입니다.",
+    "longDescription": "코스웨어와 프로젝트 코드를 단일 파일로 묶어 Claude, ChatGPT, DeepSeek 등 다양한 대형 언어 모델(LLM)에 쉽게 전달할 수 있도록 지원하는 명령줄 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "ai",
+      "cli",
+      "llm",
+      "developer-tools",
+      "typescript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://repomix.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 및 실행",
+        "command": "npx repomix@latest",
+        "note": "별도 설치 없이 프로젝트 디렉토리에서 바로 실행 가능합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리로 이동합니다.",
+      "터미널에서 npx repomix@latest 명령어를 실행합니다.",
+      "생성된 AI 친화적 파일을 LLM 프롬프트에 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 28743,
+    "forks": 1572,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "archivebox",
+    "name": "ArchiveBox",
+    "github": "https://github.com/ArchiveBox/ArchiveBox",
+    "description": "셀프 호스팅이 가능한 오픈소스 웹 아카이빙 및 북마크 보존 도구입니다.",
+    "longDescription": "URL, 북마크, 브라우저 기록 등을 수집하여 HTML, PDF, 미디어 파일 등으로 로컬에 영구 보존하며 CLI, 웹 UI, API를 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "self-hosted",
+      "web-archiving",
+      "backup",
+      "python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://archivebox.io",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Python",
+      "Docker (권장)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "APT 패키지 설치",
+        "command": "sudo apt install archivebox",
+        "note": "Ubuntu 및 Debian 계열에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "아카이브 디렉토리를 생성하고 이동합니다.",
+      "archivebox init 명령어로 초기화합니다.",
+      "archivebox add URL 명령어로 웹페이지를 보존합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 28701,
+    "forks": 1612,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "setup-ipsec-vpn",
+    "name": "IPsec VPN Server Auto Setup",
+    "github": "https://github.com/hwdsl2/setup-ipsec-vpn",
+    "description": "리눅스 서버에 IPsec/L2TP 및 IKEv2 VPN 서버를 몇 분 만에 구축하는 자동화 스크립트입니다.",
+    "longDescription": "Ubuntu, Debian, CentOS 등 다양한 리눅스 환경에서 안전한 자체 VPN 서버를 간편하게 설정할 수 있도록 돕는 오픈소스 스크립트 모음입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "vpn",
+      "security",
+      "self-hosted",
+      "linux",
+      "bash"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/hwdsl2/setup-ipsec-vpn",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Linux Server"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "자동 설치 스크립트 다운로드 및 실행",
+        "command": "wget https://get.vpnsetup.net -O vpn.sh && sudo sh vpn.sh",
+        "note": "랜덤 인증 정보를 생성하며 VPN 서버를 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "리눅스 서버에 접속하여 패키지를 최신 상태로 업데이트합니다.",
+      "제공된 설치 스크립트를 다운로드하여 실행합니다.",
+      "화면에 표시된 VPN 접속 정보를 확인하고 클라이언트를 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "개인 PC가 아닌 원격 리눅스 서버에서 실행해야 합니다.",
+    "stars": 28664,
+    "forks": 6522,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "claude-hud",
+    "name": "Claude HUD",
+    "github": "https://github.com/jarrodwatts/claude-hud",
+    "description": "Claude Code 실행 중 컨텍스트 사용량과 에이전트 상태를 실시간으로 보여주는 터미널 플러그인입니다.",
+    "longDescription": "입력창 아래에 항상 표시되어 현재 컨텍스트 용량, API 사용 한도, 활성 도구 및 작업 진행 상황을 모니터링할 수 있게 해줍니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "anthropic",
+      "claude",
+      "cli",
+      "plugin",
+      "typescript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/jarrodwatts/claude-hud",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Claude Code"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "플러그인 추가 및 설치",
+        "command": "/plugin marketplace add jarrodwatts/claude-hud\n/plugin install claude-hud",
+        "note": "Claude Code 내부 인터페이스에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Claude Code를 실행합니다.",
+      "마켓플레이스 플러그인 추가 명령어를 입력합니다.",
+      "/claude-hud:setup 명령어로 상태 라인을 구성합니다."
+    ],
+    "examplePrompt": "Claude Code에서 현재 컨텍스트 사용량과 실행 중인 에이전트 상태를 모니터링하고 싶어.",
+    "usageNote": "",
+    "stars": 28384,
+    "forks": 1312,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "qwen-code",
+    "name": "Qwen Code",
+    "github": "https://github.com/QwenLM/qwen-code",
+    "description": "터미널, 에디터, 브라우저 등에서 동작하는 오픈소스 AI 코딩 에이전트입니다.",
+    "longDescription": "이슈 생성, PR 제출, 코드 리뷰 및 테스트 실행을 지원하며 커뮤니티 기반의 다양한 모델과 연동되는 터미널 중심의 AI 코딩 보조 도구입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai-agent",
+      "ai-coding",
+      "cli",
+      "terminal",
+      "typescript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://qwenlm.github.io/qwen-code-docs/en/users/overview",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js = 22.0.0"
+    ],
+    "supportedAgents": [
+      "Qwen Code"
+    ],
+    "install": [
+      {
+        "title": "Linux / macOS 설치",
+        "command": "curl -fsSL https://qwen-code-assets.oss-cn-hangzhou.aliyuncs.com/installation/install-qwen-standalone.sh | bash",
+        "note": "독립형 스크립트를 통해 에이전트를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에 설치 명령어를 실행합니다.",
+      "터미널을 재시작하여 환경 변수를 적용합니다.",
+      "qwen-code 명령어로 에이전트 인터페이스를 시작합니다."
+    ],
+    "examplePrompt": "터미널에서 코드를 분석하고 테스트를 실행해줘.",
+    "usageNote": "",
+    "stars": 28349,
+    "forks": 3170,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "vibe-kanban",
+    "name": "Vibe Kanban",
+    "github": "https://github.com/BloopAI/vibe-kanban",
+    "description": "칸반 보드를 통해 여러 AI 코딩 에이전트의 작업을 계획하고 관리할 수 있는 도구입니다.",
+    "longDescription": "소프트웨어 엔지니어가 코딩 에이전트의 작업 계획 수립, 이슈 관리, 워크스페이스 실행 및 코드 변경 사항 검토를 빠르게 처리할 수 있도록 돕습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "ai-agents",
+      "kanban",
+      "task-manager",
+      "rust"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.vibekanban.com/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js",
+      "AI Coding Agent"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Gemini CLI",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Npx 실행",
+        "command": "npx vibe-kanban",
+        "note": "설치 없이 npx를 통해 즉시 실행 가능합니다."
+      }
+    ],
+    "usageSteps": [
+      "선호하는 AI 코딩 에이전트에 인증을 완료합니다.",
+      "터미널에서 npx vibe-kanban을 실행합니다.",
+      "칸반 보드에서 작업을 계획하고 에이전트 워크스페이스를 실행합니다."
+    ],
+    "examplePrompt": "칸반 보드 이슈를 기반으로 AI 코딩 에이전트에 작업을 할당해줘.",
+    "usageNote": "",
+    "stars": 28281,
+    "forks": 3033,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "python-fire",
+    "name": "Python Fire",
+    "github": "https://github.com/google/python-fire",
+    "description": "어떤 Python 객체든 자동으로 명령줄 인터페이스(CLI)로 변환해 주는 라이브러리입니다.",
+    "longDescription": "함수, 클래스, 모듈 등 Python 객체를 대상으로 간단하게 Fire 함수를 호출하는 것만으로 완성도 높은 CLI를 생성하여 디버깅과 코드 탐색을 용이하게 합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "python",
+      "developer-tools"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/google/python-fire",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install fire",
+        "note": "파이썬 패키지 관리자를 통해 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip install fire 명령어로 패키지를 설치합니다.",
+      "Python 파일에서 fire 모듈을 임포트합니다.",
+      "파이썬 객체에 Fire 함수를 연결하여 CLI 스크립트를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 28224,
+    "forks": 1494,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "cmux",
+    "name": "cmux",
+    "github": "https://github.com/manaflow-ai/cmux",
+    "description": "AI 코딩 에이전트 알림과 수직 탭을 지원하는 Ghostty 기반의 macOS 터미널 멀티플렉서입니다.",
+    "longDescription": "멀티태스킹과 작업 구성을 위해 특화된 오픈소스 터미널로, 에이전트가 주의를 요구할 때 시각적 알림을 제공하며 내장 브라우저와 분할 창 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "macos",
+      "terminal",
+      "multiplexer",
+      "coding-agents",
+      "swift"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://cmux.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "macOS"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Gemini",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Homebrew Cask 설치",
+        "command": "brew tap manaflow-ai/cmux && brew install --cask cmux",
+        "note": "Homebrew를 통해 macOS용 Cask 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Homebrew 명령어로 cmux를 설치합니다.",
+      "애플리케이션 폴더에서 cmux를 실행합니다.",
+      "터미널 창과 분할 탭을 활용해 AI 코딩 에이전트 작업을 병렬로 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 27918,
+    "forks": 2463,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "claude-skills",
+    "name": "Claude Skills & Plugins",
+    "github": "https://github.com/alirezarezvani/claude-skills",
+    "description": "다양한 AI 코딩 에이전트에서 활용할 수 있는 방대한 수의 전문 스킬 및 플러그인 모음입니다.",
+    "longDescription": "엔지니어링, DevOps, 마케팅, 컴플라이언스, 경영 자문 등 각 분야의 전문 페르소나와 스크립트를 제공하여 Claude Code, Codex, Cursor 등 여러 툴의 생산성을 높여줍니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "agent-skills",
+      "ai-coding-agent",
+      "claude-code",
+      "cursor",
+      "python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://alirezarezvani.medium.com/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "OpenAI Codex",
+      "Gemini CLI",
+      "Cursor"
+    ],
+    "install": [
+      {
+        "title": "저장소 복제 및 설치",
+        "command": "git clone https://github.com/alirezarezvani/claude-skills.git",
+        "note": "GitHub 저장소를 클론하여 로컬에 스킬 패키지를 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "지원하는 에이전트에 맞는 설치 스크립트를 실행합니다.",
+      "에이전트 환경에서 활성화된 스킬 명령어를 사용합니다."
+    ],
+    "examplePrompt": "시니어 아키텍트 페르소나와 스킬을 활성화해서 코드 구조를 검토해줘.",
+    "usageNote": "",
+    "stars": 27829,
+    "forks": 3907,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "glow",
+    "name": "Glow",
+    "github": "https://github.com/charmbracelet/glow",
+    "description": "터미널 환경에서 마크다운 문서와 README를 아름답게 렌더링해 주는 CLI 도구입니다.",
+    "longDescription": "로컬 디렉토리나 Git 저장소에 있는 마크다운 파일을 자동으로 탐색하여 터미널 안에서 깔끔하고 가독성 있게 문서를 읽을 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "markdown",
+      "terminal",
+      "go"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/charmbracelet/glow",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "패키지 관리자"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install glow",
+        "note": "macOS 또는 Linux 환경에서 Homebrew를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리자를 이용해 glow를 설치합니다.",
+      "문서를 읽고자 하는 디렉토리로 이동합니다.",
+      "glow 명령어를 실행하여 마크다운 파일을 탐색하고 읽습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 27619,
+    "forks": 784,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
     "id": "karakeep",
     "name": "Karakeep",
     "github": "https://github.com/karakeep-app/karakeep",
