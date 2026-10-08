@@ -1,5 +1,460 @@
 [
   {
+    "id": "neko",
+    "name": "neko",
+    "github": "https://github.com/m1k1o/neko",
+    "description": "Docker 기반의 가상 브라우저 및 WebRTC 스트리밍 도구입니다.",
+    "longDescription": "Docker 컨테이너 안에서 완전한 기능을 갖춘 가상 브라우저를 실행하고 WebRTC 기술을 통해 실시간으로 원격 제어할 수 있는 오픈소스 소프트웨어입니다. 보안이 격리된 환경에서 안전하게 웹을 탐색하고 애플리케이션을 테스트하는 데 적합합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "docker",
+      "webrtc",
+      "virtual-browser",
+      "remote-desktop",
+      "self-hosted"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://neko.m1k1o.net/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d --name neko -p 8080:8080 m1k1o/neko:firefox",
+        "note": "Firefox가 포함된 네코 컨테이너를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker가 설치된 환경에서 컨테이너 실행 명령어를 입력합니다.",
+      "웹 브라우저를 통해 http://localhost:8080에 접속합니다.",
+      "가상 브라우저 세션에 로그인하여 원격으로 웹 서핑 및 테스트를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22462,
+    "forks": 1636,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "waveterm",
+    "name": "Wave Terminal",
+    "github": "https://github.com/wavetermdev/waveterm",
+    "description": "AI 기능이 통합된 오픈소스 크로스플랫폼 터미널입니다.",
+    "longDescription": "macOS, Linux, Windows를 지원하며 다양한 AI 모델과 연동할 수 있는 차세대 터미널입니다. 세션이 끊어져도 연결이 유지되는 SSH 기능과 그래픽 기반 파일 편집기 및 미리보기 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "terminal",
+      "ai",
+      "developer-tools",
+      "productivity",
+      "command-line"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.waveterm.dev",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "macOS 11 or later"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 웹사이트 다운로드",
+        "command": "https://www.waveterm.dev/download",
+        "note": "플랫폼별 설치 파일을 다운로드하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "공식 다운로드 페이지에서 운영체제에 맞는 설치 파일을 내려받습니다.",
+      "터미널을 실행하고 OpenAI, Claude, 또는 로컬 LLM API 키를 설정합니다.",
+      "AI 명령어 통합 기능과 내장 그래픽 편집기를 활용해 개발 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22451,
+    "forks": 1153,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "rea",
+    "name": "REA (Reverse Engineer Anything)",
+    "github": "https://github.com/morluto/rea",
+    "description": "바이너리 및 애플리케이션 분석을 위한 역공학 MCP 에이전트 도구입니다.",
+    "longDescription": "에이전트를 활용해 애플리케이션 동작부터 네이티브 바이너리까지 역공학할 수 있는 도구입니다. MCP(Model Context Protocol)를 지원하여 AI 어시스턴트와 연동해 정적 분석 및 디컴파일 작업을 수행할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "reverse-engineering",
+      "ai-agents",
+      "mcp",
+      "binary-analysis",
+      "cli"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://morluto.github.io/rea/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "에이전트 설정",
+        "command": "npx rea-agents setup",
+        "note": "Node.js 환경에서 REA 에이전트 및 워크플로우를 설정합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js가 설치된 환경에서 설정 명령어를 실행합니다.",
+      "사용할 AI 에이전트를 선택하고 워크플로우 지침을 적용합니다.",
+      "역공학 대상 바이너리나 애플리케이션에 대한 분석을 에이전트에 요청합니다."
+    ],
+    "examplePrompt": "이 바이너리의 주요 함수 동작 방식을 분석해줘",
+    "usageNote": "",
+    "stars": 22384,
+    "forks": 2438,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "airbyte",
+    "name": "Airbyte",
+    "github": "https://github.com/airbytehq/airbyte",
+    "description": "API, 데이터베이스, 파일 등을 웨어하우스나 AI 에이전트로 연동하는 오픈소스 데이터 통합 플랫폼입니다.",
+    "longDescription": "600개 이상의 사전 구축된 커넥터를 제공하여 소스에서 목적지로 데이터를 이동시키는 ELT 파이프라인 구축 도구입니다. 데이터 엔지니어링뿐만 아니라 AI 에이전트의 실시간 데이터 컨텍스트 레이어로 활용할 수 있는 에이전트 SDK도 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "etl",
+      "data-pipeline",
+      "data-integration",
+      "self-hosted",
+      "python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://airbyte.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [
+      "LangChain",
+      "pydantic-ai",
+      "OpenAI Agents"
+    ],
+    "install": [
+      {
+        "title": "Agent SDK 설치",
+        "command": "uv pip install airbyte-agent-sdk",
+        "note": "파이썬 환경에서 에이전트 연동용 SDK를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 환경에서 에어바이트 오픈소스를 배포하거나 에이전트 SDK를 설치합니다.",
+      "원하는 소스(데이터베이스, API)와 목적지 커넥터를 구성합니다.",
+      "데이터 파이프라인을 실행하여 데이터를 동기화하거나 AI 도구로 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22191,
+    "forks": 5392,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "nnn",
+    "name": "nnn",
+    "github": "https://github.com/jarun/nnn",
+    "description": "키보드 중심의 초고속 터미널 파일 관리자입니다.",
+    "longDescription": "약 150 KiB 크기의 가볍고 빠른 터미널 파일 매니저로, 디스크 사용량 분석, 일괄 이름 변경, 앱 실행 등 다양한 생산성 기능을 플러그인 형태로 확장하여 사용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "file-manager",
+      "terminal",
+      "productivity",
+      "tui"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://github.com/jarun/nnn",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "퀵스타트 스크립트 실행",
+        "command": "sh -c \"$(curl -Ls https://raw.githubusercontent.com/jarun/nnn/master/misc/quickstart.sh)\"",
+        "note": "쉘 설정을 자동으로 생성하고 nnn을 빠르게 시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 매니저나 퀵스타트 스크립트를 통해 nnn을 설치합니다.",
+      "터미널에서 nnn 명령어를 입력하여 파일 관리자를 실행합니다.",
+      "키보드 단축키를 이용해 디렉토리를 탐색하고 파일을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22056,
+    "forks": 826,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "appium",
+    "name": "Appium",
+    "github": "https://github.com/appium/appium",
+    "description": "모바일 및 데스크톱 앱을 위한 크로스플랫폼 테스트 자동화 프레임워크입니다.",
+    "longDescription": "W3C WebDriver 표준을 기반으로 구축되어 네이티브, 하이브리드, 모바일 웹 및 데스크톱 애플리케이션의 테스트를 자동화할 수 있는 오픈소스 프레임워크입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "test-automation",
+      "appium",
+      "webdriver",
+      "android",
+      "ios"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://appium.io/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM을 통한 전역 설치",
+        "command": "npm install -g appium",
+        "note": "Node.js 환경에서 Appium을 시스템에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js와 npm이 설치된 환경에서 설치 명령어를 실행합니다.",
+      "필요한 드라이버(예: uiautomator2, XCUITest)를 설치합니다.",
+      "테스트 스크립트를 작성하고 Appium 서버와 연동하여 자동화 테스트를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22051,
+    "forks": 6291,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "docmost",
+    "name": "Docmost",
+    "github": "https://github.com/docmost/docmost",
+    "description": "실시간 협업을 지원하는 오픈소스 위키 및 문서화 플랫폼입니다.",
+    "longDescription": "Confluence나 Notion의 오픈소스 대안으로, 실시간 공동 편집, 다이어그램 삽입(Draw.io, Mermaid), 권한 관리, 페이지 히스토리 기능을 제공하는 지식 관리 소프트웨어입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "wiki",
+      "knowledge-base",
+      "document",
+      "collaboration",
+      "notion-alternative"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://docmost.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도큐멘테이션 참조",
+        "command": "https://docmost.com/docs",
+        "note": "공식 문서에서 Docker Compose 배포 구성을 확인합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 및 Docker Compose 환경을 준비합니다.",
+      "공식 문서의 구성 파일을 내려받아 컨테이너를 실행합니다.",
+      "웹 브라우저로 접속하여 팀 위키 공간을 생성하고 문서를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 21902,
+    "forks": 1606,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "adk-python",
+    "name": "Google Agent Development Kit (ADK)",
+    "github": "https://github.com/google/adk-python",
+    "description": "정교한 AI 에이전트를 구축, 평가, 배포하기 위한 파이썬 툴킷입니다.",
+    "longDescription": "유연성과 제어력을 바탕으로 멀티 에이전트 시스템과 AI 에이전트를 코드 중심으로 개발할 수 있는 오픈소스 파이프라인 툴킷입니다. 클라우드 런이나 버텍스 AI 에이전트 엔진에 쉽게 배포할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai-agents",
+      "agents-sdk",
+      "genai",
+      "multi-agent",
+      "python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://google.github.io/adk-docs/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Python 3.11+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "穩定 버전 설치",
+        "command": "pip install google-adk",
+        "note": "파이썬 환경에서 ADK 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 3.11 이상 환경에서 pip 명령어로 패키지를 설치합니다.",
+      "에이전트 로직과 멀티 에이전트 워크플로우 코드를 작성합니다.",
+      "구축된 에이전트를 로컬에서 테스트하거나 클라우드 환경에 배포합니다."
+    ],
+    "examplePrompt": "고객 지원을 위한 멀티 에이전트 워크플로우를 생성해줘",
+    "usageNote": "",
+    "stars": 21747,
+    "forks": 4118,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "awesome-selfhosted",
+    "name": "Awesome Selfhosted",
+    "github": "https://github.com/awesome-selfhosted/awesome-selfhosted",
+    "description": "자체 서버에 직접 호스팅할 수 있는 유용한 오픈소스 네트워크 서비스 및 웹 애플리케이션 목록입니다.",
+    "longDescription": "프라이버시를 보호하고 데이터를 스스로 제어할 수 있도록 돕는 셀프 호스팅 가능한 오픈소스 소프트웨어들을 모아놓은 방대한 디렉토리 큐레이션 프로젝트입니다.",
+    "category": "교육·학습",
+    "tags": [
+      "awesome-list",
+      "self-hosted",
+      "free-software",
+      "cloud",
+      "privacy"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://awesome-selfhosted.net/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹사이트나 저장소 README를 방문하여 원하는 카테고리를 탐색합니다.",
+      "목록에 정리된 다양한 셀프 호스팅 소프트웨어 중 필요한 도구를 선택합니다.",
+      "각 프로젝트의 공식 가이드를 참조하여 개인 서버나 홈랩에 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 324662,
+    "forks": 15192,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "self-hosting-guide",
+    "name": "Self-Hosting-Guide",
+    "github": "https://github.com/mikeroyal/Self-Hosting-Guide",
+    "description": "온프레미스 및 사내 웹 서버 구축을 위한 종합 셀프 호스팅 가이드입니다.",
+    "longDescription": "클라우드, 대규모 언어 모델(LLM), 홈 오토메이션, 네트워크, 인증 등 개인이 서버 환경을 구축하고 관리하는 데 필요한 도구와 지식을 정리한 가이드북입니다.",
+    "category": "교육·학습",
+    "tags": [
+      "self-hosting",
+      "docker-compose",
+      "home-assistant",
+      "linux",
+      "networking"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/mikeroyal/Self-Hosting-Guide",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소의 마크다운 문서를 열어 셀프 호스팅 관련 챕터를 확인합니다.",
+      "필요한 인프라 구성 요소 및 소프트웨어 가이드를 읽습니다.",
+      "제공된 설정 예시를 참고하여 홈 서버나 가상 사설 서버에 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 23005,
+    "forks": 1156,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
     "id": "go-micro",
     "name": "Go Micro",
     "github": "https://github.com/micro/go-micro",
