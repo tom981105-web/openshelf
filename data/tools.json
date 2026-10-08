@@ -1,5 +1,451 @@
 [
   {
+    "id": "tabby",
+    "name": "Tabby",
+    "github": "https://github.com/TabbyML/tabby",
+    "description": "자체 호스팅이 가능한 오픈소스 AI 코딩 어시스턴트 도구입니다.",
+    "longDescription": "로컬 환경이나 사내 서버에 직접 설치하여 코드 자동 완성 및 LLM 기반 개발 보조 기능을 제공하는 도구입니다. 퍼블릭 클라우드 의존 없이 데이터 주권과 보안을 유지하면서 IDE 내에서 AI 코딩 어시스턴트를 활용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "ai",
+      "codegen",
+      "coding-assistant",
+      "developer-tools",
+      "self-hosted"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://tabbyml.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Docker",
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker로 실행",
+        "command": "docker run -d --device nvidia.com/gpu=all -p 8080:8080 -v ~/.tabby:/data tabbyml/tabby serve",
+        "note": "Docker를 이용해 로컬 서버에 Tabby를 구동합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 명령어를 통해 Tabby 서버를 실행합니다.",
+      "사용 중인 IDE(VS Code 등)에 Tabby 확장 프로그램을 설치합니다.",
+      "설정에서 Tabby 서버 주소를 입력하고 연동합니다.",
+      "코드 작성 중 자동으로 제공되는 AI 완성 기능을 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "GPU가 없는 환경에서는 CPU 모드로 동작하여 속도가 다소 느릴 수 있습니다.",
+    "stars": 33906,
+    "forks": 1792,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "openclaude",
+    "name": "OpenClaude",
+    "github": "https://github.com/Twigpine/openclaude",
+    "description": "다양한 클라우드 및 로컬 모델 백엔드를 지원하는 오픈소스 코딩 에이전트 CLI 도구입니다.",
+    "longDescription": "OpenAI 호환 API, Gemini, Ollama 등 여러 AI 모델 백엔드를 터미널 환경에서 통합 사용할 수 있는 코딩 에이전트 CLI입니다. 프롬프트, 도구, 슬래시 명령어, 스트리밍 출력을 일관된 터미널 워크플로우로 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai",
+      "ai-agent",
+      "cli",
+      "coding"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://openclaude.gitlawb.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js =22.0.0"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Gemini",
+      "Ollama",
+      "OpenAI"
+    ],
+    "install": [
+      {
+        "title": "npm을 통한 설치",
+        "command": "npm install -g @gitlawb/openclaude@latest",
+        "note": "Node.js 환경에서 전역으로 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js 최신 환경에서 npm 명령어로 CLI 도구를 설치합니다.",
+      "사용하려는 AI 모델의 API 키나 로컬 백엔드를 설정합니다.",
+      "터미널에서 openclaude 명령어로 에이전트 인터페이스를 실행합니다.",
+      "자연어로 코딩 요구사항을 입력하고 에이전트의 작업을 확인합니다."
+    ],
+    "examplePrompt": "현재 디렉토리의 버그를 찾아서 수정해줘",
+    "usageNote": "Node.js 22 버전 이상의 런타임 환경이 필수적입니다.",
+    "stars": 33676,
+    "forks": 9106,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "surrealdb",
+    "name": "SurrealDB",
+    "github": "https://github.com/surrealdb/surrealdb",
+    "description": "실시간 웹 애플리케이션을 위한 멀티모델 분산 문서-그래프 데이터베이스입니다.",
+    "longDescription": "문서, 그래프, 관계형, 시계열 데이터 타입을 단일 엔진으로 통합하고, 풀텍스트 및 벡터 검색을 지원하는 고성능 데이터베이스입니다. 백엔드-as-a-service 기능과 LLM 통합을 위한 MCP 서버를 함께 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "database",
+      "nosql",
+      "graph-database",
+      "distributed",
+      "search"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://surrealdb.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl --proto '=https' --tlsv1.2 -sSf https://install.surrealdb.com | sh",
+        "note": "공식 쉘 스크립트를 통해 시스템에 SurrealDB를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트나 바이너리를 통해 SurrealDB를 시스템에 설치합니다.",
+      "surreal start 명령어를 실행하여 데이터베이스 서버를 구동합니다.",
+      "웹 콘솔이나 CLI 클라이언트를 통해 데이터베이스에 접속합니다.",
+      "SQL 쿼리 또는 API를 사용하여 문서 및 그래프 데이터를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경 운영 시 적절한 권한 및 인증 설정이 권장됩니다.",
+    "stars": 33112,
+    "forks": 1366,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "modern-unix",
+    "name": "Modern Unix",
+    "github": "https://github.com/ibraheemdev/modern-unix",
+    "description": "기존 유닉스 명령어들을 대체하는 빠르고 현대적인 CLI 도구 모음입니다.",
+    "longDescription": "cat, ls, find, grep 등 익숙한 유닉스 명령어들을 Rust나 Go 등으로 재작성하여 속도를 높이고 구문 강조, Git 연동 등의 유용한 기능을 추가한 현대적 터미널 도구들을 큐레이션한 목록입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "command-line",
+      "shell",
+      "terminal",
+      "utilities"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/ibraheemdev/modern-unix",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "목록에서 필요한 개별 도구(예: bat, eza, ripgrep)를 확인합니다.",
+      "Homebrew나 패키지 관리자를 통해 원하는 도구를 설치합니다.",
+      "기존 명령어 대신 새로운 도구를 터미널에서 실행하여 성능과 편의성을 경험합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "개별 도구마다 설치 방법이 다를 수 있으므로 각 프로젝트의 가이드를 참조하세요.",
+    "stars": 33018,
+    "forks": 828,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "homepage",
+    "name": "Homepage",
+    "github": "https://github.com/gethomepage/homepage",
+    "description": "다양한 서비스 API와 도커 연동을 지원하는 맞춤형 애플리케이션 대시보드입니다.",
+    "longDescription": "개인 서버나 홈랩 환경에서 수십 가지 서비스의 상태를 한눈에 모니터링할 수 있는 가볍고 정적인 애플리케이션 대시보드입니다. YAML 설정 파일이나 Docker 라벨 검색을 통해 간편하게 구성을 관리할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "docker",
+      "homepage",
+      "dashboard",
+      "self-hosted",
+      "react"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://gethomepage.dev",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker로 실행",
+        "command": "docker run --name homepage -p 3000:3000 -v /path/to/config:/app/config -v /var/run/docker.sock:/var/run/docker.sock:ro --restart unless-stopped ghcr.io/gethomepage/homepage:latest",
+        "note": "Docker를 사용하여 홈페이지 대시보드 컨테이너를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "설정 파일을 저장할 로컬 디렉토리를 생성합니다.",
+      "도커 명령어를 사용하여 Homepage 컨테이너를 실행합니다.",
+      "YAML 설정 파일을 편집하여 연동할 서비스와 위젯을 추가합니다.",
+      "웹 브라우저로 접속하여 대시보드 화면을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "도커 소켓 볼륨 마운트는 컨테이너 자동 감지 기능을 사용할 때만 필요합니다.",
+    "stars": 33002,
+    "forks": 2138,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "onyx",
+    "name": "Onyx",
+    "github": "https://github.com/onyx-dot-app/onyx",
+    "description": "50개 이상의 앱과 연동되어 기업 및 팀의 지식을 검색하고 LLM을 지원하는 오픈소스 AI 플랫폼입니다.",
+    "longDescription": "사내 다양한 애플리케이션의 데이터를 색인화하여 AI 모델이 사내 문맥을 정확히 이해하고 답변할 수 있도록 돕는 지식 레이어 플랫폼입니다. 웹 검색, 샌드박스, AI 채팅 등 고급 기능을 자체 호스팅 환경에서 안전하게 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "ai",
+      "ai-chat",
+      "enterprise-search",
+      "rag",
+      "self-hosted"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://onyx.app",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "원클릭 설치 스크립트",
+        "command": "curl -fsSL https://onyx.app/install_onyx.sh | bash",
+        "note": "제공되는 스크립트를 실행하여 Onyx 플랫폼을 로컬에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 다운로드하여 실행합니다.",
+      "필요한 환경 변수 및 LLM API 키를 설정합니다.",
+      "웹 인터페이스에 접속하여 팀에서 사용하는 앱과 데이터소스를 연동합니다.",
+      "채팅 인터페이스를 통해 사내 문맥 기반의 AI 답변을 활용합니다."
+    ],
+    "examplePrompt": "우리 팀의 최근 프로젝트 문서에서 API 명세 요약해줘",
+    "usageNote": "Docker 및 Docker Compose가 설치되어 있어야 합니다.",
+    "stars": 32352,
+    "forks": 4529,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "signoz",
+    "name": "SigNoz",
+    "github": "https://github.com/SigNoz/signoz",
+    "description": "로그, 메트릭, 트레이스를 하나의 도구로 통합 제공하는 오픈소스 관측 가능성 플랫폼입니다.",
+    "longDescription": "OpenTelemetry 표준을 기반으로 구축되어 분산 추적, 인프라 모니터링, 로그 관리 등을 통합 수행할 수 있는 APM 도구입니다. 복잡한 마이크로서비스 환경의 성능 병목 현상과 오류를 빠르게 디버깅할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "apm",
+      "distributed-tracing",
+      "observability",
+      "opentelemetry",
+      "monitoring"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://signoz.io",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose로 설치",
+        "command": "git clone https://github.com/SigNoz/signoz.git && cd signoz/deploy/docker/clickhouse-setup && docker compose up -d",
+        "note": "공식 리포지토리를 클론하여 Docker Compose로 SigNoz를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "리포지토리를 클론하고 도커 설정 폴더로 이동합니다.",
+      "Docker Compose 명령어로 서비스를 백그라운드에서 실행합니다.",
+      "애플리케이션에 OpenTelemetry SDK를 적용하여 SigNoz로 텔레메트리 데이터를 전송합니다.",
+      "웹 대시보드에 접속하여 수집된 로그와 트레이스 데이터를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "충분한 시스템 메모리(최소 4GB 이상 권장)가 확보된 환경에서 실행하는 것이 좋습니다.",
+    "stars": 32308,
+    "forks": 2529,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "finceptterminal",
+    "name": "FinceptTerminal",
+    "github": "https://github.com/Fincept-Corporation/FinceptTerminal",
+    "description": "고급 시장 분석과 경제 데이터 도구를 제공하는 현대적인 오픈소스 금융 플랫폼입니다.",
+    "longDescription": "실시간 시장 데이터, 투자 리서치, 정량적 금융 분석 및 알고리즘 트레이딩 워크플로우를 지원하는 사용자 친화적 금융 터미널 애플리케이션입니다. C++ 기반의 빠릿한 인터페이스와 AI 에이전트 연동 기능을 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "finance",
+      "fintech",
+      "algorithmic-trading",
+      "investment",
+      "cpp"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://fincept.in",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리즈 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+      "설치 마법사를 따라 애플리케이션을 시스템에 설치합니다.",
+      "프로그램을 실행하고 금융 시장 데이터 연동 설정을 진행합니다.",
+      "차트와 분석 도구를 통해 투자 리서치 및 시뮬레이션을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실시간 데이터 피드를 이용하려면 별도의 API 키나 브로커 계정이 필요할 수 있습니다.",
+    "stars": 32287,
+    "forks": 4563,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "anthropic-cybersecurity-skills",
+    "name": "Anthropic Cybersecurity Skills",
+    "github": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills",
+    "description": "AI 에이전트를 위한 구조화된 대규모 오픈소스 사이버보안 스킬 라이브러리입니다.",
+    "longDescription": "MITRE ATT&CK, NIST CSF, D3FEND 등 주요 보안 프레임워크에 매핑된 800여 개의 사이버보안 스킬 및 플레이북을 담은 라이브러리입니다. Claude Code, GitHub Copilot, Cursor 등 다양한 AI 플랫폼과 연동하여 보안 진단 및 위협 분석 에이전트의 역량을 강화합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai-agents",
+      "cybersecurity",
+      "infosec",
+      "penetration-testing",
+      "mcp"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://mahipal.engineer/Anthropic-Cybersecurity-Skills/",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "GitHub Copilot",
+      "Cursor",
+      "Gemini CLI"
+    ],
+    "install": [],
+    "usageSteps": [
+      "리포지토리의 보안 스킬 가이드와 프레임워크 문서를 확인합니다.",
+      "지원되는 AI 에이전트 도구(예: Claude Code, Cursor 등)에 스킬 프롬프트나 설정을 적용합니다.",
+      "보안 진단이나 취약점 분석 관련 프롬프트를 입력합니다.",
+      "AI 에이전트가 표준화된 프레임워크를 기반으로 수행한 보안 분석 결과를 검토합니다."
+    ],
+    "examplePrompt": "MITRE ATT&CK 프레임워크 기반으로 웹 서버의 취약점 분석 시나리오를 작성해줘",
+    "usageNote": "별도의 복잡한 설치 과정 없이 지식 파일 형태로 AI 에이전트에 주입하여 사용합니다.",
+    "stars": 33916,
+    "forks": 4117,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "awesome-design-tools",
+    "name": "Awesome Design Tools",
+    "github": "https://github.com/goabstract/Awesome-Design-Tools",
+    "description": "UI 디자인, 플러그인, UI 키트 등 유용한 디자인 도구들을 모아놓은 큐레이션 목록입니다.",
+    "longDescription": "디자이너와 프론트엔드 개발자를 위해 검증된 디자인 시스템, 웹 접근성 테스트 도구, UI 키트 및 각종 유용한 플러그인들을 체계적으로 분류하여 제공하는 종합 리소스 디렉토리입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "awesome",
+      "design",
+      "ui-design",
+      "design-systems",
+      "tools"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/goabstract/Awesome-Design-Tools",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "목록 페이지에서 원하는 디자인 카테고리(UI 키트, 접근성 도구 등)를 탐색합니다.",
+      "관심 있는 외부 도구 링크를 클릭하여 공식 사이트로 이동합니다.",
+      "해당 도구의 설치 및 사용 가이드에 따라 디자인 작업에 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "큐레이션 목록 자체는 웹 문서 형태이며, 링크된 개별 도구의 라이선스는 각각 다를 수 있습니다.",
+    "stars": 41419,
+    "forks": 2365,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
     "id": "continue",
     "name": "Continue",
     "github": "https://github.com/continuedev/continue",
