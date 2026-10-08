@@ -1,5 +1,482 @@
 [
   {
+    "id": "tasmota",
+    "name": "Tasmota",
+    "github": "https://github.com/arendst/Tasmota",
+    "description": "ESP8266 및 ESP32 기반 기기를 위한 웹 UI 설정 및 MQTT 제어를 지원하는 대체 펌웨어입니다.",
+    "longDescription": "웹 UI를 통한 쉬운 설정, OTA 업데이트, 타이머/규칙 기반 자동화를 지원하는 오픈소스 펌웨어입니다. MQTT, HTTP, Serial 등을 통해 기기를 완전히 로컬에서 제어할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "iot",
+      "smart-home",
+      "esp32",
+      "firmware",
+      "automation"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://tasmota.github.io/docs",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "PlatformIO",
+      "ESP8266 또는 ESP32 기기"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "웹 인스톨러 사용",
+        "command": "https://tasmota.github.io/install/",
+        "note": "Tasmota WebInstaller를 통해 브라우저에서 직접 설치할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 ESP 기기를 컴퓨터에 연결합니다.",
+      "Tasmota WebInstaller 웹페이지에 접속합니다.",
+      "펌웨어 버전을 선택하고 설치를 진행합니다.",
+      "생성된 웹 UI에 접속하여 기기를 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "PlatformIO 환경에서 소스 빌드가 가능합니다.",
+    "stars": 24807,
+    "forks": 5184,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "social-analyzer",
+    "name": "social-analyzer",
+    "github": "https://github.com/qeeqbox/social-analyzer",
+    "description": "1000개 이상의 소셜 미디어 웹사이트에서 특정 사용자의 프로필을 분석하고 탐색하는 도구입니다.",
+    "longDescription": "API, CLI, 웹 앱 형태로 제공되며 OSINT 조사를 위해 다양한 소셜 미디어 플랫폼에서 계정 존재 여부를 조사합니다. 0부터 100까지의 신뢰도 등급 메커니즘을 사용하여 오탐을 줄입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "osint",
+      "analyzer",
+      "cli",
+      "security-tools",
+      "python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/qeeqbox/social-analyzer",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js 또는 Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 방법 확인",
+        "command": "git clone https://github.com/qeeqbox/social-analyzer.git",
+        "note": "자세한 설치법은 프로젝트 위키를 참고하세요."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "CLI 또는 웹 앱을 실행합니다.",
+      "조사할 사용자 이름(--username)을 입력합니다.",
+      "분석 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "공공 조사 및 보안 분석 목적으로 제작되었습니다.",
+    "stars": 24258,
+    "forks": 2335,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "navidrome",
+    "name": "Navidrome",
+    "github": "https://github.com/navidrome/navidrome",
+    "description": "Subsonic 호환 API를 지원하는 가볍고 빠른 개인용 음악 스트리밍 서버입니다.",
+    "longDescription": "Go 언어로 작성되어 자원 소모가 적고, 웹 인터페이스를 통해 언제 어디서나 개인 음악 라이브러리를 스트리밍할 수 있습니다. 멀티유저 환경과 다양한 테마를 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "music-server",
+      "self-hosted",
+      "streaming",
+      "go",
+      "audio"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.navidrome.org",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "음악 파일 디렉토리"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 웹사이트 참조",
+        "command": "https://www.navidrome.org/docs/installation/",
+        "note": "Docker 및 바이너리 설치 방법을 제공합니다."
+      }
+    ],
+    "usageSteps": [
+      "Navidrome 바이너리를 다운로드하거나 Docker로 실행합니다.",
+      "음악 파일이 있는 경로를 설정합니다.",
+      "웹 브라우저로 서버에 접속하여 관리자 계정을 생성합니다.",
+      "Subsonic 클라이언트 앱을 통해 음악을 스트리밍합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대부분의 Subsonic 클라이언트와 호환됩니다.",
+    "stars": 24032,
+    "forks": 1746,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "prefect",
+    "name": "Prefect",
+    "github": "https://github.com/PrefectHQ/prefect",
+    "description": "Python으로 복잡한 데이터 파이프라인과 워크플로우를 안정적으로 오케스트레이션하는 프레임워크입니다.",
+    "longDescription": "데이터 엔지니어링 및 머신러닝 워크플로우를 코드로 정의하고, 스케줄링, 재시도, 캐싱 기능을 통해 탄력적인 파이프라인을 구축할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "workflow",
+      "data-engineering",
+      "python",
+      "orchestration",
+      "pipeline"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://prefect.io",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Python 3.x"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install prefect",
+        "note": "파이썬 환경에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Prefect 패키지를 설치합니다.",
+      "Python 스크립트에 @flow 및 @task 데코레이터를 적용합니다.",
+      "Prefect 서버를 실행하여 워크플로우 상태를 모니터링합니다.",
+      "파이프라인을 실행하고 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "자세한 설정 방법은 공식 문서를 참조하세요.",
+    "stars": 23991,
+    "forks": 2560,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "superfile",
+    "name": "superfile",
+    "github": "https://github.com/yorukot/superfile",
+    "description": "터미널 환경에서 사용할 수 있는 현대적이고 아름다운 TUI 파일 관리자입니다.",
+    "longDescription": "Bubbletea 기반으로 제작되어 직관적인 키보드 단축키와 멀티 패널 탐색, 화려한 UI를 제공합니다. Linux, macOS, Windows를 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "file-manager",
+      "tui",
+      "golang",
+      "terminal-app"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://superfile.dev",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "터미널 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install superfile",
+        "note": "macOS 및 Linux 환경에서 Homebrew를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 매니저나 바이너리를 통해 superfile을 설치합니다.",
+      "터미널에서 `superfile` 또는 `spf`를 입력하여 실행합니다.",
+      "단축키를 사용하여 파일을 탐색하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "커스텀 테마와 설정을 지원합니다.",
+    "stars": 23741,
+    "forks": 874,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "listmonk",
+    "name": "listmonk",
+    "github": "https://github.com/knadh/listmonk",
+    "description": "단일 바이너리로 동작하는 고성능 자체 호스팅 뉴스레터 및 메일링 리스트 관리 도구입니다.",
+    "longDescription": "PostgreSQL 데이터베이스를 기반으로 작동하며, 현대적인 대시보드와 캠페인 관리, 대량 이메일 발송 기능을 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "newsletter",
+      "email-marketing",
+      "self-hosted",
+      "go",
+      "mailing-list"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://listmonk.app",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "PostgreSQL 데이터베이스"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 다운로드",
+        "command": "curl -LO https://raw.githubusercontent.com/knadh/listmonk/master/docker-compose.yml",
+        "note": "도커 컴파일 파일을 다운로드하여 실행 준비를 합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker Compose 설정 파일을 다운로드합니다.",
+      "환경 변수 및 데이터베이스 설정을 조정합니다.",
+      "컴포즈 명령어로 컨테이너를 실행합니다.",
+      "웹 대시보드에 접속하여 뉴스레터를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "SMTP 서버 설정이 필요합니다.",
+    "stars": 23717,
+    "forks": 2655,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "archon",
+    "name": "Archon",
+    "github": "https://github.com/coleam00/Archon",
+    "description": "AI 코딩 프로세스를 결정론적이고 반복 가능하게 만들어주는 오픈소스 워크플로우 엔진입니다.",
+    "longDescription": "계획, 구현, 검증, 코드 리뷰 등의 개발 단계를 YAML 워크플로우로 정의하여 AI 코딩 에이전트의 동작을 안정적으로 제어합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ai",
+      "workflow-engine",
+      "developer-tools",
+      "typescript",
+      "cli"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://archon.diy",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Bun",
+      "Claude CLI"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "빠른 설치",
+        "command": "curl -fsSL https://archon.diy/install | bash",
+        "note": "macOS 및 Linux 환경에서 CLI 바이너리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 CLI를 설치합니다.",
+      "타겟 저장소에서 설정 마법사를 실행합니다.",
+      "YAML 형식으로 AI 워크플로우를 정의합니다.",
+      "에이전트를 통해 반복 가능한 코딩 작업을 수행합니다."
+    ],
+    "examplePrompt": "Set up Archon",
+    "usageNote": "x64 CPU의 경우 AVX2 지원이 필요합니다.",
+    "stars": 23643,
+    "forks": 3495,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "chalk",
+    "name": "chalk",
+    "github": "https://github.com/chalk/chalk",
+    "description": "터미널 문자열 스타일링을 쉽고 직관적으로 처리할 수 있는 JavaScript 라이브러리입니다.",
+    "longDescription": "풍부한 API와 높은 성능을 제공하며 터미널 출력에 다양한 색상과 스타일을 적용할 수 있습니다. 의존성이 없고 널리 사용됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "javascript",
+      "terminal",
+      "ansi",
+      "color"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/chalk/chalk",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM 설치",
+        "command": "npm install chalk",
+        "note": "프로젝트에 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 패키지를 설치합니다.",
+      "코드에서 chalk를 임포트합니다.",
+      "스타일을 적용할 문자열을 감싸서 콘솔에 출력합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Chalk v5 이후로는 ESM 환경을 지원합니다.",
+    "stars": 23322,
+    "forks": 2839,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "skyvern",
+    "name": "Skyvern",
+    "github": "https://github.com/Skyvern-AI/skyvern",
+    "description": "LLM과 컴퓨터 비전을 활용하여 브라우저 기반 워크플로우를 자동화하는 도구입니다.",
+    "longDescription": "전통적인 DOM 파싱 방식의 취약함을 극복하고, 자연어 프롬프트를 통해 웹사이트 요소를 조작하며 데이터를 추출하는 RPA 솔루션입니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "browser-automation",
+      "ai",
+      "llm",
+      "playwright",
+      "python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://www.skyvern.com",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Python 3.x"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Python SDK 설치",
+        "command": "pip install skyvern",
+        "note": "기본 파이썬 SDK를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 스카이번 패키지를 설치합니다.",
+      "로컬 서버 또는 클라우드 API를 구성합니다.",
+      "자연어 프롬프트와 함께 브라우저 자동화 스크립트를 작성합니다.",
+      "워크플로우를 실행하여 웹 작업을 자동화합니다."
+    ],
+    "examplePrompt": "Automate this web workflow using natural language instructions.",
+    "usageNote": "전체 UI 패키지는 `pip install \"skyvern[all]\"` 명령어로 설치할 수 있습니다.",
+    "stars": 23155,
+    "forks": 2190,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
+    "id": "cli-4",
+    "name": "urfave/cli",
+    "github": "https://github.com/urfave/cli",
+    "description": "Go 언어로 선언적이고 간편하게 명령 줄 도구(CLI)를 구축할 수 있는 패키지입니다.",
+    "longDescription": "서브커맨드, 플래그 처리, 동적 셸 자동 완성 기능을 지원하며 표준 라이브러리 외에 외부 의존성이 없어 빠르고 가볍게 CLI 앱을 만들 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cli",
+      "command-line",
+      "go",
+      "golang",
+      "library"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://cli.urfave.org",
+    "featured": 9,
+    "added": "2026-10-08",
+    "requirements": [
+      "Go 툴체인"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go Get 설치",
+        "command": "go get github.com/urfave/cli/v2",
+        "note": "Go 프로젝트에 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Go 프로젝트를 초기화합니다.",
+      "urfave/cli 패키지를 임포트합니다.",
+      "명령어와 플래그 구조를 정의합니다.",
+      "바이너리를 빌드하여 CLI 도구로 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Go 언어 기반 CLI 개발에 널리 사용됩니다.",
+    "stars": 24287,
+    "forks": 1840,
+    "starsUpdatedAt": "2026-10-08"
+  },
+  {
     "id": "pentagi",
     "name": "PentAGI",
     "github": "https://github.com/vxcontrol/pentagi",
