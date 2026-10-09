@@ -1,5 +1,751 @@
 [
   {
+    "id": "jc",
+    "name": "jc",
+    "github": "https://github.com/kellyjonbrazil/jc",
+    "description": "다양한 명령어 출력 결과와 파일 형식을 JSON, YAML 등의 구조화된 데이터로 변환해 주는 CLI 유틸리티입니다.",
+    "longDescription": "ping, netstat, ps 등 흔히 사용되는 터미널 명령어의 텍스트 출력을 구조화된 JSON 데이터로 즉시 변환해 줍니다. jq 등과 파이프라인으로 연결하여 셸 스크립트와 자동화 작업을 간편하게 작성할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "JSON",
+      "파서",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/kellyjonbrazil/jc",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install jc",
+        "note": "파이썬 패키지 관리자를 통해 jc를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 원하는 명령어를 실행합니다.",
+      "출력 결과를 jc 명령어로 파이핑합니다.",
+      "구조화된 JSON 출력을 확인하거나 jq로 가공합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8691,
+    "forks": 259,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "privatebin",
+    "name": "PrivateBin",
+    "github": "https://github.com/PrivateBin/PrivateBin",
+    "description": "서버가 내용을 알 수 없도록 브라우저에서 256비트 AES로 암호화하는 미니멀 오픈소스 온라인 메모 공유 서비스입니다.",
+    "longDescription": "제로노리지(Zero-knowledge) 원칙을 적용하여 사용자가 입력한 데이터를 서버가 전혀 해독할 수 없도록 만든 안전한 온라인 페이스트빈입니다. 민감한 텍스트나 코드 조각을 안전하게 공유하고 일회성 열람 후 자동 삭제 기능을 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "암호화",
+      "보안",
+      "셀프호스팅",
+      "PHP"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://privatebin.info/",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "PHP",
+      "웹서버"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "서버에 소스 코드를 배치하고 웹서버를 설정합니다.",
+      "브라우저를 통해 PrivateBin 페이지에 접속합니다.",
+      "내용을 작성하고 암호화 옵션을 설정하여 링크를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "보안을 위해 반드시 HTTPS 환경에서 운영해야 합니다.",
+    "stars": 8657,
+    "forks": 1039,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "wallos",
+    "name": "Wallos",
+    "github": "https://github.com/ellite/Wallos",
+    "description": "정기 구독 서비스와 반복 지출 내역을 시각화하고 예산을 관리할 수 있는 셀프호스팅 개인 재무 관리 도구입니다.",
+    "longDescription": "넷플릭스, 클라우드 서비스 등 매달 지출되는 구독 비용을 한눈에 파악하고 예산을 관리할 수 있는 웹 기반 오픈소스 애플리케이션입니다. Docker를 통해 간편하게 배포할 수 있으며 다양한 통화와 알림 기능을 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "예산관리",
+      "구독관리",
+      "셀프호스팅",
+      "Docker",
+      "PHP"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://wallosapp.com",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d -p 8282:80 -v wallos_data:/var/www/html/db --name wallos bellamy/wallos:latest",
+        "note": "Docker를 이용해 Wallos를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 명령어로 컨테이너를 실행합니다.",
+      "웹 브라우저로 접속하여 초기 계정을 생성합니다.",
+      "구독 중인 서비스와 결제 주기를 등록하여 지출 내역을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8655,
+    "forks": 440,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "microsandbox",
+    "name": "microsandbox",
+    "github": "https://github.com/superradcompany/microsandbox",
+    "description": "AI 에이전트, 사용자 코드 등 신뢰할 수 없는 워크로드를 안전하게 실행하기 위한 빠르고 가벼운 로컬 마이크로VM 런타임입니다.",
+    "longDescription": "하드웨어 수준의 격리를 제공하면서도 컨테이너처럼 빠르게 부팅되는 로컬 마이크로VM입니다. AI 에이전트가 생성한 코드를 안전하게 실행하거나 스크립트를 격리된 환경에서 테스트하는 데 적합하며 다양한 언어별 SDK를 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "샌드박스",
+      "가상화",
+      "보안",
+      "Rust"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.microsandbox.dev",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "시스템에 런타임을 설치하거나 SDK를 프로젝트에 추가합니다.",
+      "코드 내에서 샌드박스 인스턴스를 초기화합니다.",
+      "격리된 환경에서 안전하게 외부 코드를 실행하고 결과를 반환받습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "하드웨어 가상화 지원 여부를 확인해야 합니다.",
+    "stars": 8619,
+    "forks": 471,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "munder-difflin",
+    "name": "munder-difflin",
+    "github": "https://github.com/HarnessMD/munder-difflin",
+    "description": "노트북이나 로컬 환경에서 여러 대의 AI 코딩 에이전트를 동시에 조율하고 실행할 수 있는 멀티 에이전트 오케스트레이션 도구입니다.",
+    "longDescription": "Claude Code, Codex, Gemini 등 다양한 구독형 AI 코딩 CLI 도구들을 하나의 가상 사무실처럼 묶어서 관리해 주는 멀티 에이전트 하네스입니다. 사용자가 자리를 비운 사이에도 여러 에이전트가 협업하며 백그라운드에서 코딩 작업을 수행할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "오케스트레이션",
+      "개발 도구",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://munderdiffl.in",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Node.js",
+      "기존 AI 코딩 CLI 구독"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Gemini CLI",
+      "OpenAI Codex"
+    ],
+    "install": [],
+    "usageSteps": [
+      "저장소 안내에 따라 패키지를 설치하고 온보딩 마법사를 실행합니다.",
+      "사용 중인 AI 코딩 도구와 API 키 또는 구독 인증을 연결합니다.",
+      "여러 에이전트 워크스페이스를 생성하고 작업을 할당합니다."
+    ],
+    "examplePrompt": "두 명의 에이전트에게 각각 프론트엔드와 백엔드 API 연동 작업을 맡겨 줘.",
+    "usageNote": "외부 AI 코딩 CLI 도구의 API 사용량 제한에 유의해야 합니다.",
+    "stars": 8614,
+    "forks": 1273,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "claude-squad",
+    "name": "claude-squad",
+    "github": "https://github.com/smtg-ai/claude-squad",
+    "description": "Claude Code, Codex 등 여러 AI 터미널 에이전트를 독립된 작업 공간에서 효율적으로 관리하고 실행하는 터미널 애플리케이션입니다.",
+    "longDescription": "여러 개의 AI 에이전트를 개별 Git 워크스페이스에서 동시에 실행하여 충돌 없이 여러 개발 작업을 병렬로 처리할 수 있게 해줍니다. 직관적인 인터페이스를 통해 각 에이전트의 상태를 모니터링하고 제어할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "터미널",
+      "AI 에이전트",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://smtg-ai.github.io/claude-squad/",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install claude-squad",
+        "note": "macOS 환경에서 Homebrew를 통해 클로드 스쿼드를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Homebrew 또는 수동 명령어로 도구를 설치합니다.",
+      "터미널에서 cs 명령어를 실행하여 대시보드를 엽니다.",
+      "작업 공간별로 AI 에이전트를 배치하고 작업을 지시합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8583,
+    "forks": 625,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "mcp-agent",
+    "name": "mcp-agent",
+    "github": "https://github.com/lastmile-ai/mcp-agent",
+    "description": "Model Context Protocol(MCP)을 활용하여 간단하고 확장 가능한 AI 에이전트 워크플로우를 구축할 수 있는 파이썬 프레임워크입니다.",
+    "longDescription": "복잡한 아키텍처 대신 MCP를 활용해 신뢰성 높고 단순한 패턴으로 AI 에이전트를 구축할 수 있도록 돕습니다. MCP 서버 연결 수명 주기를 자동으로 관리하며 다양한 LLM 백엔드와 손쉽게 연동됩니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "MCP",
+      "AI 에이전트",
+      "프레임워크",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/lastmile-ai/mcp-agent",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Python",
+      "uv 또는 pip"
+    ],
+    "supportedAgents": [
+      "OpenAI",
+      "Anthropic"
+    ],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install mcp-agent",
+        "note": "파이썬 환경에 mcp-agent 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 mcp-agent 패키지를 설치합니다.",
+      "시크릿 설정 파일에 LLM API 키를 등록합니다.",
+      "MCP 서버 연결 패턴을 정의하고 에이전트 코드를 실행합니다."
+    ],
+    "examplePrompt": "MCP 서버와 연동하여 파일 시스템을 탐색하는 에이전트를 만들어 줘.",
+    "usageNote": "",
+    "stars": 8571,
+    "forks": 892,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "lamda",
+    "name": "lamda",
+    "github": "https://github.com/firerpa/lamda",
+    "description": "웹 기반 원격 제어, UI 자동화, 패킷 분석, AI 에이전트 연동을 지원하는 안드로이드 풀스택 기기 제어 플랫폼입니다.",
+    "longDescription": "루팅 여부와 관계없이 안드로이드 기기를 원격으로 제어하고 자동화할 수 있는 통합 프레임워크입니다. WebRTC 기반 실시간 화면 스트리밍, UI 자동화, Frida 기반 동적 분석 및 MCP 서버 기능을 제공하여 대규모 기기 클러스터 관리에 유용합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "안드로이드",
+      "자동화",
+      "원격제어",
+      "MCP",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://device-farm.com/",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Python",
+      "ADB"
+    ],
+    "supportedAgents": [
+      "MCP Server"
+    ],
+    "install": [],
+    "usageSteps": [
+      "안드로이드 기기에 서버 서비스를 설정하고 PC와 연결합니다.",
+      "Python 클라이언트 라이브러리를 설치합니다.",
+      "API 또는 AI 에이전트를 통해 기기 제어 및 자동화 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "연결된 안드로이드 기기에서 특정 앱을 열고 자동 로그인 절차를 수행해 줘.",
+    "usageNote": "기기 개발자 옵션 및 USB 디버깅 활성화가 필요합니다.",
+    "stars": 8557,
+    "forks": 1156,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "falkordb",
+    "name": "FalkorDB",
+    "github": "https://github.com/FalkorDB/FalkorDB",
+    "description": "희소 행렬 기반 GraphBLAS를 활용해 초고속 성능을 제공하는 AI 및 GraphRAG용 그래프 데이터베이스입니다.",
+    "longDescription": "대규모 언어 모델(LLM)의 에이전트 메모리와 지식 그래프 구축에 최적화된 고성능 다중 테넌트 그래프 데이터베이스입니다. 저지연 특성을 통해 대화형 AI 시스템의 정보 검색 효율을 극대화합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "데이터베이스",
+      "GraphRAG",
+      "지식그래프",
+      "AI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://www.falkordb.com/",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker로 실행",
+        "command": "docker run -p 6379:6379 -it --rm falkordb/falkordb",
+        "note": "도커 컨테이너를 이용한 즉시 실행"
+      }
+    ],
+    "usageSteps": [
+      "Docker를 통해 FalkorDB 서버 실행",
+      "openCypher 쿼리 언어를 사용하여 그래프 데이터 삽입 및 조회",
+      "LLM 애플리케이션 또는 GraphRAG 파이프라인과 연동하여 컨텍스트 검색 활용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8499,
+    "forks": 536,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "opengym",
+    "name": "OpenGym",
+    "github": "https://github.com/DuarteSantos8/openGym",
+    "description": "패스키 로그인을 지원하고 개인 서버에 직접 구축할 수 있는 오픈소스 자가 호스팅 운동 및 체중 기록 도구입니다.",
+    "longDescription": "웹 브라우저 및 모바일 환경에서 주간 운동 계획, 세트별 중량 기록, 유산소 운동 및 근육 피로도를 추적할 수 있는 서비스입니다. 외부 서버로 데이터를 보내지 않고 사용자가 직접 제어하는 환경에서 안전하게 동작합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Docker",
+      "건강",
+      "자가호스팅",
+      "PWA"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://opengym.ch",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose로 실행",
+        "command": "docker compose up -d",
+        "note": "컨테이너 백그라운드 실행"
+      }
+    ],
+    "usageSteps": [
+      "서버에 Docker Compose 설정 파일 작성 후 컨테이너 구동",
+      "웹 브라우저를 통해 접속하여 패스키로 안전하게 계정 생성 및 로그인",
+      "운동 종목을 등록하고 루틴 계획 및 수행 기록 입력"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8497,
+    "forks": 1064,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "flowgram-ai",
+    "name": "FlowGram.ai",
+    "github": "https://github.com/bytedance/flowgram.ai",
+    "description": "캔버스, 폼, 변수 관리 기능이 내장되어 있어 AI 워크플로우 플랫폼을 쉽게 구축할 수 있는 확장 가능한 워크플로우 개발 프레임워크입니다.",
+    "longDescription": "노코드 및 로코드 기반의 노드 편집기 인터페이스를 제공하여 개발자가 복잡한 데이터 흐름과 AI 에이전트 오케스트레이션 UI를 빠르게 구현할 수 있도록 돕는 React 기반 프레임워크입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "React",
+      "TypeScript",
+      "워크플로우",
+      "시각화"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://flowgram.ai",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치 및 실행",
+        "command": "npm install && npm start",
+        "note": "로컬 개발 서버 구동"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 레포지토리 클론 후 패키지 설치",
+      "예제 템플릿(Free Layout Demo) 선택하여 실행",
+      "웹 브라우저에서 워크플로우 캔버스 조작 및 컴포넌트 확장 개발"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8489,
+    "forks": 775,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "youtube-transcript-api",
+    "name": "YouTube Transcript API",
+    "github": "https://github.com/jdepoix/youtube-transcript-api",
+    "description": "API 키나 Selenium 같은 헤드리스 브라우저 없이 유튜브 영상의 자막과 대본을 간편하게 추출할 수 있는 파이썬 라이브러리입니다.",
+    "longDescription": "수동 자막뿐만 아니라 자동 생성된 자막까지 지원하며, 자막 번역 기능도 함께 제공합니다. 가벼운 코드로 웹 크롤링 오버헤드 없이 유튜브 대본 데이터를 수집할 수 있어 AI 데이터 전처리에 유용합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Python",
+      "API",
+      "CLI",
+      "자막추출"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/jdepoix/youtube-transcript-api",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip로 설치",
+        "command": "pip install youtube-transcript-api",
+        "note": "파이썬 패키지 관리자를 이용한 설치"
+      }
+    ],
+    "usageSteps": [
+      "파이썬 스크립트에서 YouTubeTranscriptApi 모듈 임포트",
+      "대상 유튜브 영상의 ID를 인자로 전달하여 대본 데이터 조회",
+      "추출된 텍스트 데이터를 활용하여 요약 또는 분석 파이프라인 구축"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8433,
+    "forks": 847,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "nb",
+    "name": "nb",
+    "github": "https://github.com/xwmx/nb",
+    "description": "단일 스크립트로 동작하며 노트 작성, 북마크, 아카이빙, 지식베이스 관리를 지원하는 강력한 터미널 및 웹 애플리케이션입니다.",
+    "longDescription": "일반 텍스트 기반 저장, 암호화, 태깅, 검색, Git 기반 버전 관리 및 동기화, Pandoc 변환 기능을 제공합니다. 터미널 환경과 로컬 웹 브라우저를 모두 지원하여 효율적인 지식 관리가 가능합니다.",
+    "category": "문서",
+    "tags": [
+      "CLI",
+      "Markdown",
+      "Git",
+      "노트필기"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://xwmx.github.io/nb",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Bash",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 스크립트로 설치",
+        "command": "curl -L https://raw.githubusercontent.com/xwmx/nb/master/bin/nb -o /usr/local/bin/nb && chmod +x /usr/local/bin/nb",
+        "note": "실행 권한 부여 후 경로에 추가"
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 nb 써보기 명령어로 새 노트 생성",
+      "태그와 검색 기능을 통해 저장된 문서 및 북마크 필터링",
+      "Git 동기화를 활성화하여 여러 기기 간 노트 내용 백업 및 공유"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8422,
+    "forks": 255,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "soup",
+    "name": "Soup",
+    "github": "https://github.com/MakazhanAlpamys/Soup",
+    "description": "단일 YAML 설정 파일과 명령어만으로 저사양 노트북 GPU에서도 LLM 파인튜닝을 수행할 수 있는 AI 도구입니다.",
+    "longDescription": "계층 스트리밍(Layer streaming) 기술을 활용해 동결된 베이스 모델을 VRAM 외부에 유지하고 디코더 레이어 단위로 공급함으로써, 4GB VRAM을 가진 환경에서도 대형 언어 모델 학습을 가능하게 합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "LLM",
+      "Python",
+      "파인튜닝",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://trysoup.dev",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip로 파인튜닝 패키지 설치",
+        "command": "pip install \"soup-cli[train]\"",
+        "note": "학습 기능이 포함된 CLI 도구 설치"
+      }
+    ],
+    "usageSteps": [
+      "soup init 명령어로 기본 템플릿 설정 파일 생성",
+      "YAML 파일 내에서 데이터셋 및 학습 파라미터 구성",
+      "soup train 명령어를 실행하여 로컬 GPU에서 모델 파인튜닝 시작"
+    ],
+    "examplePrompt": "soup init --template chat",
+    "usageNote": "컴퓨터의 GPU 사양에 맞춰 배치 크기 설정을 조정하는 것이 좋습니다.",
+    "stars": 8420,
+    "forks": 1354,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "ccpm",
+    "name": "CCPM",
+    "github": "https://github.com/automazeio/ccpm",
+    "description": "GitHub 이슈와 Git 워크트리를 활용하여 AI 코딩 에이전트의 병렬 작업을 관리하는 프로젝트 관리 에이전트 스킬 시스템입니다.",
+    "longDescription": "여러 AI 에이전트가 동시에 독립적인 작업 브랜치에서 코드를 수정하고 검증할 수 있도록 프로젝트 관리 흐름을 자동화합니다. 복잡한 멀티 에이전트 개발 환경에서 작업 충돌을 방지하고 생산성을 높입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "CLI",
+      "Git",
+      "GitHub",
+      "프로젝트관리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://automaze.io",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Git",
+      "GitHub CLI"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "레포지토리 클론 및 설정",
+        "command": "git clone https://github.com/automazeio/ccpm.git",
+        "note": "에이전트 스킬 디렉토리에 추가"
+      }
+    ],
+    "usageSteps": [
+      "GitHub 이슈 기반으로 작업 항목 정의",
+      "CCPM 명령어를 통해 에이전트가 처리할 Git 워크트리 환경 자동 구성",
+      "병렬로 실행된 AI 에이전트의 작업 결과물 검토 및 병합"
+    ],
+    "examplePrompt": "ccpm run --issue 123",
+    "usageNote": "",
+    "stars": 8406,
+    "forks": 842,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "ni",
+    "name": "ni",
+    "github": "https://github.com/antfu-collective/ni",
+    "description": "프로젝트의 패키지 매니저를 자동으로 감지하여 알맞은 명령어로 변환해 실행해 주는 유틸리티 도구입니다.",
+    "longDescription": "npm, yarn, pnpm, bun 등 프로젝트마다 다른 패키지 매니저를 고민할 필요 없이 단일 명령어로 통합하여 사용할 수 있습니다. 잘못된 매니저 사용으로 인한 오류와 번거로움을 줄여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "Node.js",
+      "npm",
+      "개발유틸리티"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/antfu-collective/ni",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T18:04:01.274Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm을 이용한 전역 설치",
+        "command": "npm i -g @antfu/ni",
+        "note": "시스템 전역에서 명령어 사용 가능"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리 내부에서 ni 명령어 실행",
+      "도구가 lockfile을 감지하여 적절한 패키지 매니저(npm, pnpm 등)로 패키지 설치 수행",
+      "ni vite와 같이 패키지 추가 명령어도 동일하게 활용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8311,
+    "forks": 279,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
     "id": "karate",
     "name": "Karate",
     "github": "https://github.com/karatelabs/karate",
