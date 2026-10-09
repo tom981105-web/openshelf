@@ -484,6 +484,90 @@ function adminGeminiReview(token, toolId) {
   }
 }
 
+function adminApplyGeminiSuggestion(token, toolId) {
+  if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
+
+  try {
+    const id = String(toolId || '').trim();
+    if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
+
+    const reviews = getGeminiReviews_();
+    const review = reviews[id];
+    if (!review) return { ok:false, error:'먼저 Gemini 재검수를 실행해주세요.' };
+
+    const verdict = String(review.verdict || '');
+    if (verdict !== '수정 필요') {
+      return { ok:false, error:'현재 Gemini 판정이 수정 필요가 아닙니다.' };
+    }
+
+    const reasons = Array.isArray(review.reasons) ? review.reasons.map(String) : [];
+    const hardBlock = reasons.some(function(reason){
+      const s = reason.toLowerCase();
+      return s.indexOf('중복') >= 0 ||
+             s.indexOf('라이선스') >= 0 ||
+             s.indexOf('library') >= 0 ||
+             s.indexOf('라이브러리') >= 0 ||
+             s.indexOf('dataset') >= 0 ||
+             s.indexOf('데이터셋') >= 0 ||
+             s.indexOf('archived') >= 0 ||
+             s.indexOf('보관') >= 0 ||
+             s.indexOf('malware') >= 0 ||
+             s.indexOf('악성') >= 0;
+    });
+
+    if (hardBlock) {
+      return {
+        ok:false,
+        error:'이 항목은 자동 수정으로 해결하기 어려운 사유가 포함되어 있습니다. Gemini 판단을 확인한 뒤 직접 승인하거나 삭제+차단해주세요.'
+      };
+    }
+
+    const toolsFile = githubJsonFileMeta_('data/tools.json');
+    const list = Array.isArray(toolsFile.data) ? toolsFile.data : [];
+    const index = list.findIndex(function(t){ return String(t.id) === id; });
+    if (index < 0) return { ok:false, error:'수정할 도구를 찾지 못했습니다.' };
+
+    const tool = Object.assign({}, list[index]);
+    const changed = [];
+
+    const category = String(review.categorySuggestion || '').trim();
+    const description = String(review.descriptionSuggestion || '').trim();
+    const tags = Array.isArray(review.tagsSuggestion) ? review.tagsSuggestion.map(String).map(function(x){ return x.trim(); }).filter(Boolean).slice(0,5) : [];
+
+    if (category && category !== String(tool.category || '')) {
+      tool.category = category;
+      changed.push('카테고리');
+    }
+    if (description && description !== String(tool.description || '')) {
+      tool.description = description;
+      changed.push('설명');
+    }
+    if (tags.length) {
+      const current = Array.isArray(tool.tags) ? tool.tags.map(String) : [];
+      if (JSON.stringify(current) !== JSON.stringify(tags)) {
+        tool.tags = tags;
+        changed.push('태그');
+      }
+    }
+
+    if (!changed.length) {
+      return { ok:false, error:'Gemini가 적용 가능한 수정안을 제시하지 않았습니다.' };
+    }
+
+    list[index] = tool;
+    githubWriteJsonFile_('data/tools.json', list, 'admin: apply Gemini review suggestions for ' + tool.name, toolsFile.sha);
+
+    return {
+      ok:true,
+      message:'Gemini 수정안을 적용했습니다: ' + changed.join(', '),
+      changedFields:changed,
+      tool:tool
+    };
+  } catch (err) {
+    return { ok:false, error:String(err && err.message ? err.message : err) };
+  }
+}
+
 function isAdminSession_(token) {
   if (!token) return false;
   return CacheService.getScriptCache().get('admin-session:' + token) === '1';
@@ -556,13 +640,13 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 .run-state{font-weight:800}
 .run-state.success{color:#2d7b43}
 .run-state.partial{color:#9b6b10}
-.run-state.failed,.run-state.error{color:#a33}.review-top{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}.review-actions .gemini{background:var(--ink);color:white}.gemini-review{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.gemini-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.gemini-verdict{font-weight:800}.gemini-summary{font-size:12px;line-height:1.55;margin:8px 0}.gemini-list{margin:6px 0 0 18px;padding:0}.gemini-meta{font-size:10px;color:var(--muted);margin-top:8px}.gemini-suggestions{font-size:11px;line-height:1.55;margin-top:8px;padding:9px;border:1px solid var(--line);background:#fff}
+.run-state.failed,.run-state.error{color:#a33}.review-top{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}.review-actions .gemini{background:var(--ink);color:white}.review-actions .apply{background:#d68000;border-color:#d68000;color:white}.gemini-review{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.gemini-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.gemini-verdict{font-weight:800}.gemini-summary{font-size:12px;line-height:1.55;margin:8px 0}.gemini-list{margin:6px 0 0 18px;padding:0}.gemini-meta{font-size:10px;color:var(--muted);margin-top:8px}.gemini-suggestions{font-size:11px;line-height:1.55;margin-top:8px;padding:9px;border:1px solid var(--line);background:#fff}
 @media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid,.analytics-grid{grid-template-columns:1fr}.analytics-summary{grid-template-columns:repeat(2,1fr)}.analytics-summary>div{border-bottom:1px solid var(--line)}.review-top{grid-template-columns:1fr}.review-top>div{border-right:0;border-bottom:1px solid var(--line)}}
 </style>
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.2 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.3 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -625,7 +709,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
     <section class="section review">
       <span class="kicker">REVIEW INBOX</span>
       <h2>자동 검수함</h2>
-      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. <strong>Gemini 재검수</strong>를 누르면 현재 GitHub 정보와 README를 다시 확인해 별도의 AI 판정과 수정 제안을 표시합니다.</p>
+      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. <strong>Gemini 재검수</strong>에서 '수정 필요'가 나오면 <strong>수정안 적용</strong>으로 카테고리·설명·태그를 실제 반영한 뒤 자동으로 다시 검수합니다.</p>
       <div class="review-top">
         <div><span>검수 필요</span><strong id="reviewCount">0</strong></div>
         <div><span>최근 추가 20개</span><strong id="recentCount">0</strong></div>
@@ -884,7 +968,10 @@ function renderReview(){
     const geminiBlock=gr
       ? '<div class="gemini-review"><div class="gemini-head"><span class="gemini-verdict">Gemini · '+esc(gr.verdict||'재검수')+'</span><strong>'+Number(gr.score||0)+'점</strong></div><div class="gemini-summary">'+esc(gr.summary||'')+'</div>'+(Array.isArray(gr.reasons)&&gr.reasons.length?'<ul class="gemini-list">'+gr.reasons.map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':'')+'<div class="gemini-suggestions"><b>카테고리 제안</b> '+esc(gr.categorySuggestion||'—')+'<br><b>설명 제안</b> '+esc(gr.descriptionSuggestion||'—')+'<br><b>태그 제안</b> '+esc(Array.isArray(gr.tagsSuggestion)?gr.tagsSuggestion.join(', '):'—')+'<br><b>중복 위험</b> '+esc(gr.duplicateRisk||'—')+' · <b>확신도</b> '+Number(gr.confidence||0)+'%</div><div class="gemini-meta">'+esc(gr.model||'Gemini')+' · '+fmt(gr.reviewedAt)+'</div></div>'
       : '';
-    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div>'+geminiBlock+'<div class="review-actions">'+approvalButton+'<button class="gemini" type="button" data-gemini-review="'+esc(t.id)+'">Gemini 재검수</button><button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
+    const applyButton=gr&&String(gr.verdict||'')==='수정 필요'
+      ? '<button class="apply" type="button" data-gemini-apply="'+esc(t.id)+'">수정안 적용</button>'
+      : '';
+    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div>'+geminiBlock+'<div class="review-actions">'+approvalButton+'<button class="gemini" type="button" data-gemini-review="'+esc(t.id)+'">Gemini 재검수</button>'+applyButton+'<button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
   }).join('');
   root.querySelectorAll('[data-review-approve]').forEach(btn=>btn.addEventListener('click',()=>{
     const id=btn.dataset.reviewApprove;
@@ -913,6 +1000,24 @@ function renderReview(){
       geminiReviews=r.geminiReviews&&typeof r.geminiReviews==='object'?r.geminiReviews:geminiReviews;
       renderReview();opMessage(r.message||'Gemini 재검수가 완료되었습니다.');
     }).adminGeminiReview(token,id);
+  }));
+  root.querySelectorAll('[data-gemini-apply]').forEach(btn=>btn.addEventListener('click',()=>{
+    const id=btn.dataset.geminiApply;
+    if(!confirm('Gemini가 제안한 카테고리·설명·태그 수정안을 tools.json에 적용하고 다시 재검수할까요?'))return;
+    const original=btn.textContent;
+    btn.disabled=true;btn.textContent='수정 적용 중...';
+    opMessage('Gemini 수정안을 적용하고 있습니다...');
+    google.script.run.withFailureHandler(err=>{btn.disabled=false;btn.textContent=original;opMessage('수정 적용 오류: '+String(err&&err.message?err.message:err),'error')}).withSuccessHandler(r=>{
+      if(!r||!r.ok){btn.disabled=false;btn.textContent=original;opMessage((r&&r.error)||'수정안 적용에 실패했습니다.','error');return}
+      opMessage((r.message||'수정안을 적용했습니다.')+' 이제 Gemini가 다시 검수합니다.');
+      google.script.run.withFailureHandler(err=>{btn.disabled=false;btn.textContent=original;opMessage('재검수 오류: '+String(err&&err.message?err.message:err),'error')}).withSuccessHandler(g=>{
+        btn.disabled=false;btn.textContent=original;
+        if(!g||!g.ok){opMessage((g&&g.error)||'재검수에 실패했습니다.','error');loadDashboard();return}
+        geminiReviews=g.geminiReviews&&typeof g.geminiReviews==='object'?g.geminiReviews:geminiReviews;
+        opMessage('수정 적용 후 Gemini 재검수가 완료되었습니다.');
+        loadDashboard();
+      }).adminGeminiReview(token,id);
+    }).adminApplyGeminiSuggestion(token,id);
   }));
   root.querySelectorAll('[data-review-deny]').forEach(btn=>btn.addEventListener('click',()=>{
     const repo=btn.dataset.reviewDeny;if(!repo)return;
