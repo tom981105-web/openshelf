@@ -497,7 +497,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
           <button id="runDiscovery" class="primary-action" type="button">지금 수집 실행</button>
         </article>
         <article class="op-card">
-          <span>DENYLIST</span>
+          <span>수집 제외 목록</span>
           <h3>수집 제외 추가</h3>
           <p>GitHub 저장소를 이후 자동수집 후보에서 제외합니다.</p>
           <div class="inline-action"><input id="denyInput" placeholder="owner/repo"><button id="addDeny" type="button">추가</button></div>
@@ -514,7 +514,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
     </section>
 
     <section class="section"><span class="kicker">RUN HISTORY</span><h2>최근 수집 로그</h2><div id="logs"></div></section>
-    <section class="section"><span class="kicker">DENYLIST</span><h2>자동수집 제외 목록</h2><p class="section-note">항목의 ×를 누르면 다시 자동수집 후보에 포함됩니다.</p><div id="deny" class="deny"></div></section>
+    <section class="section"><span class="kicker">수집 제외 목록</span><h2>자동수집 제외 목록</h2><p class="section-note">항목의 ×를 누르면 다시 자동수집 후보에 포함됩니다.</p><div id="deny" class="deny"></div></section>
   </main>
 </div>
 <script>
@@ -611,7 +611,7 @@ function renderReview(){
   root.innerHTML=rows.map(x=>{
     const t=x.tool,r=x.review;
     const scoreClass=r.score<55?'low':(r.score<70?'mid':'good');
-    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div><div class="review-actions"><button class="approve" type="button" data-review-approve="'+esc(t.id)+'">승인</button><button type="button" data-review-deny="'+esc(t.github||'')+'">Denylist</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
+    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div><div class="review-actions"><button class="approve" type="button" data-review-approve="'+esc(t.id)+'">승인</button><button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
   }).join('');
   root.querySelectorAll('[data-review-approve]').forEach(btn=>btn.addEventListener('click',()=>{
     const id=btn.dataset.reviewApprove;
@@ -623,10 +623,10 @@ function renderReview(){
   }));
   root.querySelectorAll('[data-review-deny]').forEach(btn=>btn.addEventListener('click',()=>{
     const repo=btn.dataset.reviewDeny;if(!repo)return;
-    if(!confirm('이 저장소를 Denylist에 추가할까요?'))return;
-    opMessage('Denylist 추가 중...');
+    if(!confirm('이 저장소를 수집 제외 목록에 추가할까요?'))return;
+    opMessage('수집 제외 목록에 추가 중...');
     google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
-      if(!r||!r.ok){opMessage((r&&r.error)||'Denylist 추가에 실패했습니다.','error');return}
+      if(!r||!r.ok){opMessage((r&&r.error)||'수집 제외 목록 추가에 실패했습니다.','error');return}
       adminDenylist=Array.isArray(r.denylist)?r.denylist:adminDenylist;renderDenylist();opMessage(r.message||'추가했습니다.');
     }).adminAddDenylist(token,repo);
   }));
