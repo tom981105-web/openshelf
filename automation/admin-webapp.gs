@@ -1352,7 +1352,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v6.3 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v6.4 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
