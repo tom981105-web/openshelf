@@ -347,7 +347,7 @@ function renderDailyDiscovery(){
   if(els.dailyDiscoveryDate)els.dailyDiscoveryDate.textContent=day.replaceAll('-','.')+' · 매일 새롭게 고르는 5개';
   els.dailyDiscoveryGrid.innerHTML=picked.map((t,i)=>{
     const status=activityStatus(t);
-    return '<article class="daily-card" data-daily-tool="'+esc(t.id)+'" tabindex="0"><div class="daily-index">0'+(i+1)+'</div><div class="daily-main"><div class="daily-top">'+visualMarkup(t)+'<div><span>'+esc(t.category)+'</span><b>'+esc(scoreLabel(openShelfScore(t).score))+' · OS '+openShelfScore(t).score+'</b></div></div><h3>'+esc(t.name)+'</h3><p>'+esc(t.description)+'</p><footer><span class="activity-dot '+status.tone+'"></span>'+esc(status.label)+'<strong>★ '+compactNumber(t.stars||0)+'</strong></footer></div></article>';
+    return '<article class="daily-card" data-daily-tool="'+escapeHtml(t.id)+'" tabindex="0"><div class="daily-index">0'+(i+1)+'</div><div class="daily-main"><div class="daily-top">'+visualMarkup(t)+'<div><span>'+escapeHtml(t.category)+'</span><b>'+escapeHtml(scoreLabel(openShelfScore(t).score))+' · OS '+openShelfScore(t).score+'</b></div></div><h3>'+escapeHtml(t.name)+'</h3><p>'+escapeHtml(t.description)+'</p><footer><span class="activity-dot '+status.tone+'"></span>'+escapeHtml(status.label)+'<strong>★ '+compactNumber(t.stars||0)+'</strong></footer></div></article>';
   }).join('');
   els.dailyDiscoveryGrid.querySelectorAll('[data-daily-tool]').forEach(el=>{
     const open=()=>openDetail(el.dataset.dailyTool);
@@ -413,7 +413,7 @@ function renderWorkflows(){
     const used=new Set();
     const selected=w.steps.map(step=>{const tool=workflowPick(step.match,used);if(tool)used.add(tool.id);return {step,tool}}).filter(x=>x.tool);
     if(selected.length<2)return '';
-    return '<article class="workflow-card"><div class="workflow-head"><span>'+esc(w.kicker)+'</span><h3>'+esc(w.title)+'</h3><p>'+esc(w.description)+'</p></div><div class="workflow-steps">'+selected.map((x,i)=>'<button type="button" data-workflow-tool="'+esc(x.tool.id)+'"><em>0'+(i+1)+'</em><span>'+esc(x.step.label)+'</span><strong>'+esc(x.tool.name)+'</strong><small>'+esc(x.tool.description)+'</small></button>').join('')+'</div></article>';
+    return '<article class="workflow-card"><div class="workflow-head"><span>'+escapeHtml(w.kicker)+'</span><h3>'+escapeHtml(w.title)+'</h3><p>'+escapeHtml(w.description)+'</p></div><div class="workflow-steps">'+selected.map((x,i)=>'<button type="button" data-workflow-tool="'+escapeHtml(x.tool.id)+'"><em>0'+(i+1)+'</em><span>'+escapeHtml(x.step.label)+'</span><strong>'+escapeHtml(x.tool.name)+'</strong><small>'+escapeHtml(x.tool.description)+'</small></button>').join('')+'</div></article>';
   }).join('');
   els.workflowGrid.querySelectorAll('[data-workflow-tool]').forEach(btn=>btn.addEventListener('click',()=>openDetail(btn.dataset.workflowTool)));
 }
