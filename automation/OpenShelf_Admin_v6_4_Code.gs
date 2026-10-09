@@ -1723,7 +1723,7 @@ function loadValidationRuns(){
       const failed=run.conclusion==='failure';
       const label=failed?'실패':run.conclusion==='success'?'성공':run.status==='in_progress'?'진행 중':'대기/기타';
       const steps=Array.isArray(run.failedSteps)?run.failedSteps:[];
-      const url=/^https:\/\/github\.com\//.test(String(run.url||''))?run.url:'#';
+      const url=String(run.url||'').startsWith('https://github.com/')?run.url:'#';
       return '<div class="log" style="margin-top:10px;padding:12px"><b>'+esc(label)+'</b> · '+esc(fmt(run.createdAt))+' · '+esc(run.branch||'')+
         (steps.length?'<ul>'+steps.map(function(step){return '<li>'+esc(step)+'</li>'}).join('')+'</ul>':'')+
         '<p><a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">GitHub 실행 로그 확인 ↗</a></p></div>';
