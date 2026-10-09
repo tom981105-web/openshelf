@@ -357,13 +357,42 @@ function githubAuth_() {
   };
 }
 
+function githubReadContentPayload_(payload, headers) {
+  if (!payload || !payload.sha) throw new Error('GitHub content payload is invalid.');
+
+  var content = String(payload.content || '').replace(/\n/g, '');
+  if (payload.encoding === 'base64' && content) {
+    return Utilities.newBlob(Utilities.base64Decode(content)).getDataAsString('UTF-8');
+  }
+
+  // GitHub Contents API omits inline content for larger files.
+  // Fall back to the Git Blobs API so growing catalog files still load safely.
+  const blobUrl = 'https://api.github.com/repos/' + CONFIG.owner + '/' + CONFIG.repo + '/git/blobs/' + payload.sha;
+  const blobResponse = UrlFetchApp.fetch(blobUrl, {
+    method:'get',
+    muteHttpExceptions:true,
+    headers:headers
+  });
+  if (blobResponse.getResponseCode() !== 200) {
+    throw new Error('GitHub blob load failed (' + blobResponse.getResponseCode() + ')');
+  }
+
+  const blob = JSON.parse(blobResponse.getContentText());
+  const blobContent = String(blob.content || '').replace(/\n/g, '');
+  if (blob.encoding !== 'base64' || !blobContent) {
+    throw new Error('GitHub blob content is empty or unsupported.');
+  }
+  return Utilities.newBlob(Utilities.base64Decode(blobContent)).getDataAsString('UTF-8');
+}
+
 function githubJsonFileMeta_(path) {
   const gh = githubAuth_();
   const url = 'https://api.github.com/repos/' + CONFIG.owner + '/' + CONFIG.repo + '/contents/' + path + '?ref=' + CONFIG.branch;
   const response = UrlFetchApp.fetch(url, { method:'get', muteHttpExceptions:true, headers:gh.headers });
   if (response.getResponseCode() !== 200) throw new Error('GitHub data load failed (' + response.getResponseCode() + ')');
   const payload = JSON.parse(response.getContentText());
-  const jsonText = Utilities.newBlob(Utilities.base64Decode(String(payload.content || '').replace(/\n/g,''))).getDataAsString('UTF-8');
+  const jsonText = githubReadContentPayload_(payload, gh.headers);
+  if (!jsonText.trim()) throw new Error('GitHub JSON file is empty: ' + path);
   return { sha:payload.sha, data:JSON.parse(jsonText) };
 }
 
@@ -1301,7 +1330,8 @@ function githubJsonFile_(path) {
   }
 
   const payload = JSON.parse(response.getContentText());
-  const jsonText = Utilities.newBlob(Utilities.base64Decode(String(payload.content || '').replace(/\n/g, ''))).getDataAsString('UTF-8');
+  const jsonText = githubReadContentPayload_(payload, headers);
+  if (!jsonText.trim()) throw new Error('GitHub JSON file is empty: ' + path);
   return JSON.parse(jsonText);
 }
 
@@ -1352,7 +1382,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v6.4 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v6.4.1 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
