@@ -189,6 +189,7 @@ Category meanings:
 - 영상·애니메이션: video and animation creation
 
 For each selected repository return concise Korean metadata.
+IMPORTANT: tags must be written in Korean wherever a natural Korean term exists. Keep only product names, protocol names, and standard acronyms such as Git, SSH, CLI, API, MCP, Docker, Kubernetes, PDF in their original form. Do not return generic English tags such as developer-tools, productivity, automation, self-hosted, machine-learning, privacy, music, desktop, launcher, containers, or document-signing; translate those to concise Korean tags.
 Installation commands and requirements must be grounded in the provided README excerpt. If not clearly present, use an empty install array rather than guessing.
 Do not invent supported agents. Keep descriptions factual, not promotional.
 
@@ -201,7 +202,7 @@ Return JSON only in this exact shape:
       "description": "one concise Korean sentence",
       "longDescription": "2-3 factual Korean sentences",
       "category": "one existing category exactly",
-      "tags": ["3-5 short tags"],
+      "tags": ["3-5 short Korean tags; proper nouns/protocols/acronyms may stay original"],
       "platforms": ["Web|Windows|macOS|Linux as appropriate"],
       "free": true,
       "openSource": true,
