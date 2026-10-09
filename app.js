@@ -440,10 +440,13 @@ function renderWorkflows(){
 }
 const AI_CLIENT_KEY='openshelf-ai-client-v1';
 function getAiClientId(){
-  let id=localStorage.getItem(AI_CLIENT_KEY)||'';
+  let id='';
+  try{id=localStorage.getItem(AI_CLIENT_KEY)||'';}
+  catch(error){console.warn('OpenShelf: AI client ID storage unavailable',error);}
   if(!id){
     id='c_'+Math.random().toString(36).slice(2)+Date.now().toString(36);
-    localStorage.setItem(AI_CLIENT_KEY,id);
+    try{localStorage.setItem(AI_CLIENT_KEY,id);}
+    catch(error){console.warn('OpenShelf: AI client ID not persisted',error);}
   }
   return id;
 }
