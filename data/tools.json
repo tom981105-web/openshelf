@@ -1,5 +1,796 @@
 [
   {
+    "id": "cachet",
+    "name": "Cachet",
+    "github": "https://github.com/cachethq/cachet",
+    "description": "오픈소스 기반으로 직접 구축하여 사용하는 자체 호스팅 상태 페이지 시스템입니다.",
+    "longDescription": "서비스의 가동 시간, 인시던트 발생 내역, 시스템 상태 등을 사용자에게 투명하게 공개할 수 있는 상태 페이지를 직접 구축할 수 있습니다. PHP와 다양한 데이터베이스를 지원하며 깔끔한 대시보드를 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "업무 자동화",
+      "모니터링",
+      "PHP",
+      "Laravel",
+      "웹"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://cachethq.io",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "PHP 8.3 이상",
+      "Composer",
+      "MariaDB 또는 MySQL, PostgreSQL, SQLite 중 택일"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 복제 및 설치",
+        "command": "git clone https://github.com/CachetHQ/Cachet.git && cd Cachet && make install",
+        "note": "저장소를 복제한 뒤 빌드 도구를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 환경에 요구사항(PHP, 데이터베이스 등)을 설정합니다.",
+      "소스코드를 클론하고 설치 명령어를 실행합니다.",
+      "웹 대시보드에 접속하여 시스템 구성 및 인시던트 알림을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15255,
+    "forks": 1630,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "tokei",
+    "name": "Tokei",
+    "github": "https://github.com/XAMPPRocky/tokei",
+    "description": "다양한 프로그래밍 언어로 작성된 소스 코드의 줄 수와 통계를 매우 빠르게 집계하는 CLI 도구입니다.",
+    "longDescription": "프로젝트 디렉토리 내의 코드를 분석하여 언어별 파일 수, 빈 줄, 주석, 실제 코드 라인 수를 정확하고 빠르게 계산합니다. Rust로 작성되어 성능이 뛰어나며 다양한 출력 형식을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "CLI",
+      "코드 분석",
+      "Rust",
+      "통계"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/XAMPPRocky/tokei",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo 설치",
+        "command": "cargo install tokei",
+        "note": "러스트 생태계를 통해 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "통계를 내고자 하는 프로젝트 루트 디렉토리로 이동합니다.",
+      "tokei 명령어를 실행합니다.",
+      "출력되는 언어별 코드 통계 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 14986,
+    "forks": 711,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "git-history",
+    "name": "Git History",
+    "github": "https://github.com/pomber/git-history",
+    "description": "웹 브라우저에서 Git 저장소 내 파일의 변경 이력과 커밋 히스토리를 시각적으로 빠르게 탐색하는 도구입니다.",
+    "longDescription": "GitHub, GitLab, Bitbucket 등의 파일 URL에서 도메인만 변경하여 파일의 시간에 따른 변경 과정을 애니메이션과 직관적인 인터페이스로 확인할 수 있습니다. 브라우저 확장 프로그램도 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "Git",
+      "GitHub",
+      "시각화",
+      "웹"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://githistory.xyz/",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "URL 변경 사용",
+        "command": "github.com을 github.githistory.xyz로 변경",
+        "note": "별도의 설치 없이 웹에서 주소 수정만으로 사용 가능합니다."
+      }
+    ],
+    "usageSteps": [
+      "GitHub 등에서 원하는 파일 페이지로 이동합니다.",
+      "주소창의 github.com을 github.githistory.xyz로 수정합니다.",
+      "타임라인과 커밋별 변경 내역을 시각적으로 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13681,
+    "forks": 541,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "insforge",
+    "name": "InsForge",
+    "github": "https://github.com/InsForge/InsForge",
+    "description": "코딩 에이전트가 데이터베이스, 인증, 스토리지 등을 활용해 풀스택 앱을 구축할 수 있도록 지원하는 백엔드 플랫폼입니다.",
+    "longDescription": "AI 코딩 에이전트와 연동되어 데이터베이스 관리, 사용자 인증, 파일 스토리지, 서버리스 컴퓨팅, AI 게이트웨이 등의 백엔드 인프라를 MCP 서버 및 CLI를 통해 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "백엔드",
+      "데이터베이스",
+      "MCP",
+      "TypeScript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://insforge.dev",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Node.js 또는 Deno"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "MCP 호환 AI 에이전트"
+    ],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl -fsSL https://raw.githubusercontent.com/InsForge/InsForge/main/deploy/setup.sh | sh",
+        "note": "설치 스크립트를 다운로드하여 로컬 환경에 설정합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 설치 및 초기화 스크립트를 실행합니다.",
+      "AI 에이전트 설정에 InsForge MCP 서버를 연결합니다.",
+      "에이전트에게 백엔드 리소스를 생성하거나 제어하도록 프롬프트를 입력합니다."
+    ],
+    "examplePrompt": "I'm using InsForge as my backend platform, call InsForge MCP's fetch-docs tool to learn about InsForge instructions.",
+    "usageNote": "",
+    "stars": 13071,
+    "forks": 1217,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "wallabag",
+    "name": "Wallabag",
+    "github": "https://github.com/wallabag/wallabag",
+    "description": "웹 페이지를 저장하고 분류하여 나중에 편리하게 읽을 수 있게 해주는 자체 호스팅 읽기 도구입니다.",
+    "longDescription": "마음에 드는 웹 기사나 콘텐츠를 저장해 두고 광고 없는 깔끔한 텍스트 형태로 나중에 읽을 수 있는 오픈소스 읽기 전용 애플리케이션입니다. 태그 관리와 다양한 기기 간 동기화를 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "업무 자동화",
+      "스크랩",
+      "PHP",
+      "Symfony",
+      "웹"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://wallabag.org",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "PHP",
+      "Composer"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 복제 및 설치",
+        "command": "git clone https://github.com/wallabag/wallabag.git && cd wallabag && make install",
+        "note": "저장소를 복제한 뒤 설치 명령어를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 환경에 wallabag을 설치하고 실행합니다.",
+      "브라우저 확장 프로그램이나 웹 인터페이스를 통해 읽고 싶은 기사를 저장합니다.",
+      "태그와 아카이브 기능을 이용해 저장된 문서를 분류하고 읽습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13003,
+    "forks": 898,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "txtai",
+    "name": "Txtai",
+    "github": "https://github.com/neuml/txtai",
+    "description": "시맨틱 검색, LLM 오케스트레이션, 언어 모델 워크플로우를 통합 제공하는 AI 프레임워크입니다.",
+    "longDescription": "벡터 데이터베이스(임베디드), 그래프 네트워크, 관계형 데이터베이스를 결합하여 의미 기반 검색 및 대형 언어 모델(LLM) 애플리케이션을 구축할 수 있도록 돕는 올인원 AI 프레임워크입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식·검색",
+      "AI",
+      "시맨틱 검색",
+      "LLM",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://neuml.github.io/txtai",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Python 3.11 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install txtai",
+        "note": "파이썬 가상환경에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경에서 txtai 라이브러리를 임포트합니다.",
+      "임베디드 데이터베이스 인덱스를 생성하고 텍스트 데이터를 추가합니다.",
+      "시맨틱 검색 쿼리를 실행하거나 LLM 워크플로우 파이프라인을 구성합니다."
+    ],
+    "examplePrompt": "txtai를 사용하여 주어진 문서 모음에서 시맨틱 검색을 수행하는 파이썬 코드를 작성해줘",
+    "usageNote": "",
+    "stars": 13002,
+    "forks": 924,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "pipx",
+    "name": "Pipx",
+    "github": "https://github.com/pypa/pipx",
+    "description": "파이썬 기반 애플리케이션을 격리된 가상 환경에 안전하게 설치하고 실행하는 CLI 도구입니다.",
+    "longDescription": "전역 시스템 패키지 충돌 없이 파이썬으로 작성된 콘솔 어플리케이션을 독립된 환경에서 설치 및 관리할 수 있게 해줍니다. JavaScript의 npx나 홈브루와 유사한 사용자 경험을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "파이썬",
+      "패키지 관리",
+      "CLI",
+      "가상환경"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pipx.pypa.io",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS 설치",
+        "command": "brew install pipx && pipx ensurepath",
+        "note": "Homebrew를 사용하여 pipx를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 pipx를 설치하고 패스 설정을 완료합니다.",
+      "pipx install [패키지명] 명령어로 파이썬 앱을 격리 설치합니다.",
+      "설치된 애플리케이션을 터미널 어디서나 직접 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12979,
+    "forks": 615,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "zeal",
+    "name": "Zeal",
+    "github": "https://github.com/zealdocs/zeal",
+    "description": "인터넷 연결 없이 오프라인에서 개발 문서와 API 레퍼런스를 즉시 검색할 수 있는 데스크톱 문서 뷰어입니다.",
+    "longDescription": "다양한 프로그래밍 언어와 프레임워크의 공식 문서(Docset)를 다운로드하여 로컬에 저장하고, 단축키 하나로 빠르게 검색하여 참고할 수 있는 오프라인 문서 브라우저입니다.",
+    "category": "교육·학습",
+    "tags": [
+      "교육·학습",
+      "개발 도구",
+      "문서",
+      "오프라인",
+      "데스크톱"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://zealdocs.org",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 다운로드 페이지 이용",
+        "command": "https://zealdocs.org/download",
+        "note": "운영체제에 맞는 설치 파일을 다운로드하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Zeal 프로그램을 실행하고 설정 메뉴의 Docset 라이브러리로 이동합니다.",
+      "필요한 프로그래밍 언어 및 프레임워크 문서를 선택하여 다운로드합니다.",
+      "검색창을 통해 필요한 API나 함수 설명을 오프라인에서 조회합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12822,
+    "forks": 846,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "note-gen",
+    "name": "NoteGen",
+    "github": "https://github.com/codexu/note-gen",
+    "description": "흩어진 기록을 수집하고 AI를 통해 깔끔한 노트로 정리해 주는 로컬 우선 마크다운 앱입니다.",
+    "longDescription": "로컬 우선 환경에서 마크다운을 기반으로 메모를 관리하며, AI 기능을 결합하여 아이디어를 체계적으로 정리할 수 있는 지식 관리 도구입니다. 캔버스 작업 공간을 제공하여 마인드맵, 순서도, 타임라인 등 시각적 자료를 함께 다룰 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "마크다운",
+      "AI",
+      "지식관리",
+      "로컬우선"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://notegen.top",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트 또는 GitHub에서 앱을 다운로드하여 설치합니다.",
+      "로컬 저장소를 설정하고 마크다운 문서를 작성하거나 가져옵니다.",
+      "AI 기능을 활용하여 흩어진 메모를 요약 및 구조화합니다."
+    ],
+    "examplePrompt": "이 회의록을 핵심 내용 위주로 요약하고 마인드맵 구조로 정리해 줘",
+    "usageNote": "",
+    "stars": 12882,
+    "forks": 976,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "posting",
+    "name": "Posting",
+    "github": "https://github.com/darrenburns/posting",
+    "description": "터미널 환경에서 키보드 중심으로 간편하게 사용할 수 있는 현대적인 API 및 HTTP 클라이언트입니다.",
+    "longDescription": "Postman이나 Insomnia의 대안으로 터미널에서 직접 실행할 수 있는 TUI 기반 HTTP 클라이언트입니다. YAML 파일로 요청을 로컬에 저장하여 버전 관리가 용이하며, SSH 환경에서도 편리하게 활용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API클라이언트",
+      "HTTP",
+      "TUI",
+      "터미널"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/darrenburns/posting",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Python 3.13+",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uv로 설치",
+        "command": "uv tool install --python 3.13 posting",
+        "note": "uv 도구를 사용하여 posting을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 uv 명령어를 통해 Posting을 설치합니다.",
+      "posting 명령을 입력하여 TUI 인터페이스를 실행합니다.",
+      "URL 입력창에 요청을 입력하거나 cURL 명령어를 붙여넣어 API를 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12497,
+    "forks": 283,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "inbox-zero",
+    "name": "Inbox Zero",
+    "github": "https://github.com/elie222/inbox-zero",
+    "description": "이메일함 정리, 답장 초안 작성, 캘린더 관리를 지원하는 오픈소스 AI 개인 이메일 비서입니다.",
+    "longDescription": "이메일 수신함을 빠르게 비우고 중요한 업무에 집중할 수 있도록 돕는 AI 기반 이메일 비서 서비스입니다. Slack이나 Telegram을 통해 이동 중에도 이메일을 관리할 수 있으며 직접 셀프 호스팅이 가능합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "이메일",
+      "AI비서",
+      "업무자동화",
+      "도커"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://getinboxzero.com",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Docker",
+      "Node.js v24+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI를 통한 설정",
+        "command": "npx @inbox-zero/cli setup",
+        "note": "초기 설정 마법사를 실행합니다."
+      },
+      {
+        "title": "컨테이너 실행",
+        "command": "npx @inbox-zero/cli start",
+        "note": "도커 컨테이너를 시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js와 Docker가 설치되어 있는지 확인합니다.",
+      "CLI 도구를 통해 셀프 호스팅 설정을 진행합니다.",
+      "웹 브라우저에서 로컬 주소에 접속하여 이메일 계정을 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12435,
+    "forks": 1562,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "illa-builder",
+    "name": "ILLA Builder",
+    "github": "https://github.com/illacloud/illa-builder",
+    "description": "개발자가 내부 도구, 대시보드, 관리자 패널 등을 빠르게 구축할 수 있도록 지원하는 오픈소스 로코드 플랫폼입니다.",
+    "longDescription": "다양한 컴포넌트와 데이터베이스 연동 기능을 제공하여 내부 관리용 웹 애플리케이션을 빠르게 만들 수 있는 로코드 플랫폼입니다. Retool의 오픈소스 대안으로 활용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "로코드",
+      "내부도구",
+      "대시보드",
+      "개발도구"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/illacloud/illa-builder",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "도커 환경을 준비하고 공식 가이드에 따라 ILLA Builder를 배포합니다.",
+      "웹 인터페이스에 접속하여 프로젝트를 생성합니다.",
+      "드래그 앤 드롭으로 컴포넌트를 배치하고 데이터베이스와 연결합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12328,
+    "forks": 1210,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "umbrel",
+    "name": "Umbrel",
+    "github": "https://github.com/getumbrel/umbrel",
+    "description": "홈 서버를 쉽게 구축하고 다양한 앱을 설치하여 개인 데이터와 클라우드를 직접 관리할 수 있는 홈 서버 운영체제입니다.",
+    "longDescription": "개인용 홈 서버를 위한 직관적인 운영체제로, 클라우드의 편리함을 누리면서도 데이터 주권과 소유권을 온전히 유지할 수 있게 해줍니다. 앱스토어를 통해 다양한 자가 호스팅 애플리케이션을 원클릭으로 설치할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "홈서버",
+      "자가호스팅",
+      "운영체제",
+      "도커"
+    ],
+    "platforms": [
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://umbrel.com",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Docker",
+      "지원되는 하드웨어 또는 가상머신"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "지원되는 기기 또는 가상머신에 umbrelOS 이미지를 다운로드하여 설치합니다.",
+      "초기 계정 및 설정을 완료합니다.",
+      "앱스토어에서 원하는 자가 호스팅 앱을 선택하여 설치합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12318,
+    "forks": 811,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "planka",
+    "name": "Planka",
+    "github": "https://github.com/plankanban/planka",
+    "description": "팀 협업을 위한 우아하고 직관적인 오픈소스 자가 호스팅 칸반 보드 프로젝트 관리 도구입니다.",
+    "longDescription": "Trello의 대안으로 활용할 수 있는 칸반 기반 프로젝트 관리 소프트웨어입니다. 실시간 협업과 태스크 관리를 지원하며 Docker를 통해 간편하게 서버에 구축할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "칸반",
+      "프로젝트관리",
+      "협업",
+      "자가호스팅"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://planka.app",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker Compose 설정 파일을 다운로드합니다.",
+      "환경 변수 및 데이터베이스 설정을 구성합니다.",
+      "도커 컨테이너를 실행하고 웹 브라우저로 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12611,
+    "forks": 1380,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "gh-dash",
+    "name": "gh-dash",
+    "github": "https://github.com/dlvhdr/gh-dash",
+    "description": "작업 흐름을 끊지 않고 터미널에서 GitHub의 이슈와 풀 리퀘스트를 효율적으로 관리할 수 있는 풍부한 터미널 UI 도구입니다.",
+    "longDescription": "GitHub CLI 확장 기능으로 동작하며, 터미널 환경에서 여러 저장소의 PR과 이슈를 대시보드 형태의 표와 목록으로 빠르게 확인하고 관리할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "깃허브",
+      "CLI",
+      "TUI",
+      "터미널"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://gh-dash.dev",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "GitHub CLI (gh)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "GH CLI 확장 설치",
+        "command": "gh extension install dlvhdr/gh-dash",
+        "note": "GitHub CLI를 통해 gh-dash 확장을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "GitHub CLI를 설치하고 로그인합니다.",
+      "확장 프로그램 설치 명령어를 실행합니다.",
+      "터미널에서 gh dash 명령을 입력하여 대시보드를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12610,
+    "forks": 455,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "gping",
+    "name": "gping",
+    "github": "https://github.com/orf/gping",
+    "description": "네트워크 핑(Ping) 결과를 시각적인 그래프로 실시간 표시해 주는 터미널 유틸리티입니다.",
+    "longDescription": "전통적인 ping 명령어의 결과에 그래프 시각화 기능을 더한 도구입니다. 여러 호스트의 응답 속도를 동시에 비교하거나 명령어 실행 시간을 그래프로 모니터링할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "네트워크",
+      "모니터링",
+      "CLI",
+      "터미널"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/orf/gping",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew로 설치",
+        "command": "brew install gping",
+        "note": "macOS 또는 Linux 환경에서 Homebrew를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리자를 통해 gping을 설치합니다.",
+      "터미널에서 대상 도메인이나 IP 주소와 함께 gping 명령을 실행합니다.",
+      "실시간으로 그려지는 응답 속도 그래프를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12705,
+    "forks": 369,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
+    "id": "undetected-chromedriver",
+    "name": "undetected-chromedriver",
+    "github": "https://github.com/ultrafunkamsterdam/undetected-chromedriver",
+    "description": "주요 안티봇 및 클라우드프레임워크 탐지를 우회하도록 최적화된 맞춤형 셀레늄 크롬드라이버 패치 도구입니다.",
+    "longDescription": "Cloudflare, Distil, Imperva 등 웹사이트의 강력한 봇 탐지 시스템에 걸리지 않도록 셀레늄 크롬드라이버를 자동으로 패치하고 다운로드해 주는 파이썬 라이브러리입니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "크롤링",
+      "셀레늄",
+      "자동화",
+      "파이썬"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/UltrafunkAmsterdam/undetected-chromedriver",
+    "featured": 9,
+    "added": "2026-10-09",
+    "addedAt": "2026-10-09T09:03:57.558Z",
+    "requirements": [
+      "Python 3.6+",
+      "Google Chrome"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip로 설치",
+        "command": "pip install undetected-chromedriver",
+        "note": "파이썬 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 사용하여 패키지를 설치합니다.",
+      "파이썬 스크립트에서 일반 webdriver 대신 모듈을 임포트합니다.",
+      "브라우저 자동화 스크립트를 실행하여 봇 탐지를 우회합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12863,
+    "forks": 1352,
+    "starsUpdatedAt": "2026-10-09"
+  },
+  {
     "id": "metube",
     "name": "MeTube",
     "github": "https://github.com/alexta69/metube",
