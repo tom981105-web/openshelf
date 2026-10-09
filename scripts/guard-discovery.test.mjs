@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import { validateDiscoveryChange } from './guard-discovery.mjs';
+const tool=(id)=>({id,name:id,description:'description',category:'개발 도구',tags:[],platforms:['Web'],free:true,openSource:true,github:'https://github.com/example/'+id});
+const before=[tool('a'),tool('b')];
+assert.deepEqual(validateDiscoveryChange(before,[...before,tool('c')]),[]);
+assert.deepEqual(validateDiscoveryChange(before,[before[1],before[0]]),[]);
+assert.ok(validateDiscoveryChange(before,[before[0]]).some(e=>e.includes('removed')));
+assert.ok(validateDiscoveryChange(before,[{...before[0],description:'tampered'},before[1]]).some(e=>e.includes('modified')));
+assert.ok(validateDiscoveryChange(before,[...before,...Array.from({length:31},(_,i)=>tool('new'+i))]).some(e=>e.includes('exceeds')));
+assert.ok(validateDiscoveryChange(before,[...before,tool('a')]).length);
+console.log('Discovery safety guard tests passed');
