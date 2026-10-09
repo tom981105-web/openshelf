@@ -71,7 +71,9 @@ function adminGetDashboard(token) {
     const denylist = githubJsonFile_('data/discovery-denylist.json') || [];
     const toolData = githubJsonFile_('data/tools.json') || [];
     const config = githubJsonFile_('data/discovery-config.json') || {};
-    const reviewApproved = githubJsonFile_('data/review-approved.json') || [];
+    const reviewApprovedRaw = PropertiesService.getScriptProperties().getProperty('OPENSHELF_REVIEW_APPROVED') || '[]';
+    var reviewApproved = [];
+    try { reviewApproved = JSON.parse(reviewApprovedRaw); } catch (e) { reviewApproved = []; }
     const automationEnabled = PropertiesService.getScriptProperties().getProperty('OPENSHELF_AUTOMATION_ENABLED') !== 'false';
 
     return {
@@ -224,6 +226,9 @@ function githubWriteJsonFile_(path, data, message, sha) {
     payload:JSON.stringify(body)
   });
   if (response.getResponseCode() !== 200 && response.getResponseCode() !== 201) {
+    if (response.getResponseCode() === 403) {
+      throw new Error('GitHub 쓰기 권한이 없습니다. Apps Script의 GITHUB_TOKEN에 openshelf 저장소 Contents: Read and write 권한을 추가해주세요.');
+    }
     throw new Error('GitHub write failed (' + response.getResponseCode() + '): ' + response.getContentText());
   }
   return JSON.parse(response.getContentText());
@@ -274,16 +279,46 @@ function adminSetAutomationEnabled(token, enabled) {
   };
 }
 
+function getReviewApproved_() {
+  const props = PropertiesService.getScriptProperties();
+  const raw = props.getProperty('OPENSHELF_REVIEW_APPROVED') || '[]';
+  try {
+    const list = JSON.parse(raw);
+    return Array.isArray(list) ? list.map(String) : [];
+  } catch (err) {
+    return [];
+  }
+}
+
+function setReviewApproved_(list) {
+  PropertiesService.getScriptProperties().setProperty(
+    'OPENSHELF_REVIEW_APPROVED',
+    JSON.stringify(Array.isArray(list) ? list.map(String) : [])
+  );
+}
+
 function adminApproveReview(token, toolId) {
   if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
   try {
-    const file = githubJsonFileMeta_('data/review-approved.json');
-    const list = Array.isArray(file.data) ? file.data : [];
     const id = String(toolId || '').trim();
     if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
+    const list = getReviewApproved_();
     if (list.indexOf(id) < 0) list.push(id);
-    githubWriteJsonFile_('data/review-approved.json', list, 'admin: approve review tool ' + id, file.sha);
+    setReviewApproved_(list);
     return { ok:true, message:'검수 승인했습니다.', reviewApproved:list };
+  } catch (err) {
+    return { ok:false, error:String(err && err.message ? err.message : err) };
+  }
+}
+
+function adminReReview(token, toolId) {
+  if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
+  try {
+    const id = String(toolId || '').trim();
+    if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
+    const list = getReviewApproved_().filter(function(x){ return String(x) !== id; });
+    setReviewApproved_(list);
+    return { ok:true, message:'재검수 대상으로 되돌렸습니다.', reviewApproved:list };
   } catch (err) {
     return { ok:false, error:String(err && err.message ? err.message : err) };
   }
@@ -361,13 +396,13 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 .run-state{font-weight:800}
 .run-state.success{color:#2d7b43}
 .run-state.partial{color:#9b6b10}
-.run-state.failed,.run-state.error{color:#a33}.review-top{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}
+.run-state.failed,.run-state.error{color:#a33}.review-top{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}
 @media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid,.analytics-grid{grid-template-columns:1fr}.analytics-summary{grid-template-columns:repeat(2,1fr)}.analytics-summary>div{border-bottom:1px solid var(--line)}.review-top{grid-template-columns:1fr}.review-top>div{border-right:0;border-bottom:1px solid var(--line)}}
 </style>
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.1 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -433,11 +468,13 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
       <div class="review-top">
         <div><span>검수 필요</span><strong id="reviewCount">0</strong></div>
         <div><span>최근 추가 20개</span><strong id="recentCount">0</strong></div>
+        <div><span>승인 완료</span><strong id="approvedCount">0</strong></div>
         <div><span>품질 기준</span><strong>70점</strong></div>
       </div>
       <div class="review-tabs">
         <button id="reviewProblems" class="review-tab active" type="button">검수 필요</button>
         <button id="reviewRecent" class="review-tab" type="button">최근 추가 20개</button>
+        <button id="reviewApproved" class="review-tab" type="button">승인 완료</button>
       </div>
       <div id="reviewList" class="review-list"></div>
     </section>
@@ -481,6 +518,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
         </article>
       </div>
       <div id="operationMessage" class="operation-message"></div>
+      <p class="section-note"><strong>GitHub 쓰기 기능 안내:</strong> 수집 제외, 도구 삭제, 수집 설정 저장은 Apps Script의 GITHUB_TOKEN에 해당 저장소 <strong>Contents: Read and write</strong> 권한이 필요합니다. 검수 승인/재검수는 Apps Script 내부에 저장되어 이 권한 없이도 작동합니다.</p>
     </section>
 
     <section class="section"><span class="kicker">RUN HISTORY</span><h2>최근 수집 로그</h2><div id="logs"></div></section>
@@ -662,25 +700,40 @@ function recentTools20(){
 function renderReview(){
   const problems=adminTools.map(t=>({tool:t,review:qualityReview(t)})).filter(x=>x.review.score<70&&!reviewApproved.includes(String(x.tool.id))).sort((a,b)=>a.review.score-b.review.score);
   const recent=recentTools20().map(t=>({tool:t,review:qualityReview(t)}));
+  const approved=adminTools.filter(t=>reviewApproved.includes(String(t.id))).map(t=>({tool:t,review:qualityReview(t)}));
   document.getElementById('reviewCount').textContent=String(problems.length);
   document.getElementById('recentCount').textContent=String(recent.length);
+  document.getElementById('approvedCount').textContent=String(approved.length);
   document.getElementById('reviewProblems').classList.toggle('active',reviewMode==='problems');
   document.getElementById('reviewRecent').classList.toggle('active',reviewMode==='recent');
-  const rows=reviewMode==='recent'?recent:problems;
+  document.getElementById('reviewApproved').classList.toggle('active',reviewMode==='approved');
+  const rows=reviewMode==='recent'?recent:(reviewMode==='approved'?approved:problems);
   const root=document.getElementById('reviewList');
   if(!rows.length){root.innerHTML='<p class="section-note">현재 검수할 도구가 없습니다.</p>';return}
   root.innerHTML=rows.map(x=>{
     const t=x.tool,r=x.review;
     const scoreClass=r.score<55?'low':(r.score<70?'mid':'good');
-    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div><div class="review-actions"><button class="approve" type="button" data-review-approve="'+esc(t.id)+'">승인</button><button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
+    const approvedNow=reviewApproved.includes(String(t.id));
+    const reviewButton=approvedNow
+      ? '<button type="button" data-review-rereview="'+esc(t.id)+'">재검수</button>'
+      : '<button class="approve" type="button" data-review-approve="'+esc(t.id)+'">승인</button>';
+    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div><div class="review-actions">'+reviewButton+'<button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
   }).join('');
   root.querySelectorAll('[data-review-approve]').forEach(btn=>btn.addEventListener('click',()=>{
     const id=btn.dataset.reviewApprove;
     opMessage('검수 승인 저장 중...');
     google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
       if(!r||!r.ok){opMessage((r&&r.error)||'승인에 실패했습니다.','error');return}
-      reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;renderReview();opMessage(r.message||'승인했습니다.');
+      reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;renderReview();renderAnalytics();opMessage(r.message||'승인했습니다.');
     }).adminApproveReview(token,id);
+  }));
+  root.querySelectorAll('[data-review-rereview]').forEach(btn=>btn.addEventListener('click',()=>{
+    const id=btn.dataset.reviewRereview;
+    opMessage('재검수 대상으로 변경 중...');
+    google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage((r&&r.error)||'재검수 변경에 실패했습니다.','error');return}
+      reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;renderReview();renderAnalytics();opMessage(r.message||'재검수 대상으로 변경했습니다.');
+    }).adminReReview(token,id);
   }));
   root.querySelectorAll('[data-review-deny]').forEach(btn=>btn.addEventListener('click',()=>{
     const repo=btn.dataset.reviewDeny;if(!repo)return;
@@ -703,6 +756,7 @@ function renderReview(){
 }
 document.getElementById('reviewProblems').addEventListener('click',()=>{reviewMode='problems';renderReview()});
 document.getElementById('reviewRecent').addEventListener('click',()=>{reviewMode='recent';renderReview()});
+document.getElementById('reviewApproved').addEventListener('click',()=>{reviewMode='approved';renderReview()});
 
 function renderConfig(){
   document.getElementById('cfgTarget').value=String(adminConfig.targetPerHour||20);
