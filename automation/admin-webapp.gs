@@ -393,6 +393,77 @@ function parseGeminiJson_(text) {
   return JSON.parse(raw);
 }
 
+function normalizeGeminiReviewVerdict_(review, tool, context) {
+  review = review && typeof review === 'object' ? review : {};
+  const metadata = context && context.metadata ? context.metadata : {};
+  const validCategories = [
+    'AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서',
+    '브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'
+  ];
+
+  const objective = [];
+  const manual = [];
+
+  const description = String(tool.description || '').trim();
+  const longDescription = String(tool.longDescription || '').trim();
+  const tags = Array.isArray(tool.tags) ? tool.tags.filter(Boolean) : [];
+  const category = String(tool.category || '').trim();
+  const toolLicense = String(tool.license || '').trim().toUpperCase();
+  const repoLicense = String(metadata.license || '').trim().toUpperCase();
+  const toolWebsite = String(tool.website || '').trim().replace(/\/+$/,'').toLowerCase();
+  const repoWebsite = String(metadata.homepage || '').trim().replace(/\/+$/,'').toLowerCase();
+
+  if (!validCategories.includes(category)) objective.push('유효한 카테고리 필요');
+  if (description.length < 30) objective.push('설명이 너무 짧음');
+  if (longDescription.length < 60) objective.push('상세 설명이 너무 짧음');
+  if (tags.length < 3) objective.push('태그가 부족함');
+
+  if (repoWebsite && toolWebsite !== repoWebsite) objective.push('GitHub 홈페이지 정보와 불일치');
+
+  const repoHasClearLicense = repoLicense && repoLicense !== 'UNKNOWN' && repoLicense !== 'NOASSERTION';
+  const toolLicenseUnclear = !toolLicense || toolLicense === '확인 필요' || toolLicense === 'UNKNOWN' || toolLicense === 'NOASSERTION';
+
+  if (repoHasClearLicense && toolLicense !== repoLicense) {
+    objective.push('GitHub 라이선스 정보와 불일치');
+  } else if (!repoHasClearLicense && toolLicenseUnclear) {
+    manual.push('저장소에서 라이선스를 명확히 확인할 수 없음');
+  }
+
+  if (metadata.archived === true) manual.push('보관(Archived)된 저장소');
+  if (metadata.fork === true) manual.push('Fork 저장소');
+
+  const duplicateRisk = String(review.duplicateRisk || '');
+  if (duplicateRisk === '높음') {
+    review.verdict = '중복 의심';
+    review.reasons = Array.isArray(review.reasons) ? review.reasons : [];
+    return review;
+  }
+
+  if (manual.length && objective.length === 0) {
+    review.verdict = '수동 확인 필요';
+    review.reasons = manual;
+    review.summary = '자동 수정으로 해결할 수 없는 확인 항목이 남아 있습니다.';
+    review.score = Math.min(Number(review.score || 70), 79);
+    return review;
+  }
+
+  if (objective.length > 0) {
+    review.verdict = '수정 필요';
+    review.reasons = objective;
+    review.summary = '현재 메타데이터에 실제로 수정 가능한 항목이 있습니다.';
+    return review;
+  }
+
+  if (String(review.verdict || '') === '수정 필요') {
+    review.verdict = '승인 권장';
+    review.reasons = ['객관적으로 수정이 필요한 필드가 더 이상 확인되지 않음'];
+    review.summary = '현재 메타데이터는 OpenShelf 등록 기준을 충족합니다.';
+    review.score = Math.max(85, Number(review.score || 0));
+  }
+
+  return review;
+}
+
 function adminGeminiReview(token, toolId) {
   if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
 
@@ -467,7 +538,8 @@ function adminGeminiReview(token, toolId) {
         const payload = JSON.parse(response.getContentText());
         const parts = payload && payload.candidates && payload.candidates[0] && payload.candidates[0].content && payload.candidates[0].content.parts;
         const text = Array.isArray(parts) ? parts.map(function(p){ return p.text || ''; }).join('') : '';
-        const review = parseGeminiJson_(text);
+        let review = parseGeminiJson_(text);
+        review = normalizeGeminiReviewVerdict_(review, tool, context);
 
         review.score = Math.max(0, Math.min(100, Number(review.score || 0)));
         review.confidence = Math.max(0, Math.min(100, Number(review.confidence || 0)));
@@ -843,7 +915,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.6 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.7 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -906,7 +978,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
     <section class="section review">
       <span class="kicker">REVIEW INBOX</span>
       <h2>자동 검수함</h2>
-      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. <strong>Gemini 자동 수정</strong>은 실제로 고칠 수 있는 오류만 수정합니다. 수정 후 같은 사유가 반복되거나 근거 부족 문제면 더 이상 '수정 필요'를 반복하지 않고 <strong>수동 확인 필요</strong>로 멈춥니다.</p>
+      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. Gemini 판정은 이제 <strong>객관적으로 실제 수정 가능한 필드가 있을 때만 '수정 필요'</strong>로 유지됩니다. 표현 취향 차이만 남으면 승인 권장, 자동으로 확인할 수 없는 문제는 수동 확인 필요로 정리됩니다.</p>
       <div class="review-top">
         <div><span>검수 필요</span><strong id="reviewCount">0</strong></div>
         <div><span>최근 추가 20개</span><strong id="recentCount">0</strong></div>
