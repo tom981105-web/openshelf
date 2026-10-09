@@ -4,10 +4,28 @@ let discoveryState=null;
 const FAVORITES_KEY='openshelf-favorites-v1';
 const RECENT_SEARCHES_KEY='openshelf-recent-searches-v1';
 const RECENTLY_VIEWED_KEY='openshelf-recently-viewed-v1';
-const favorites=new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY)||'[]'));
-let recentSearches=JSON.parse(localStorage.getItem(RECENT_SEARCHES_KEY)||'[]').filter(Boolean).slice(0,6);
+// Browser storage is optional: malformed values or blocked storage must not break the site.
+function readStoredList(key,limit=Infinity){
+  try{
+    const value=JSON.parse(localStorage.getItem(key)||'[]');
+    return Array.isArray(value)?value.filter(x=>typeof x==='string'&&x.length>0).slice(0,limit):[];
+  }catch(error){
+    console.warn('OpenShelf: local preference unavailable',key,error);
+    return [];
+  }
+}
+function writeStoredList(key,values){
+  try{localStorage.setItem(key,JSON.stringify(values));}
+  catch(error){console.warn('OpenShelf: could not persist local preference',key,error);}
+}
+function removeStoredList(key){
+  try{localStorage.removeItem(key);}
+  catch(error){console.warn('OpenShelf: could not remove local preference',key,error);}
+}
+const favorites=new Set(readStoredList(FAVORITES_KEY));
+let recentSearches=readStoredList(RECENT_SEARCHES_KEY,6);
 let searchSuggestionIndex=-1;
-let recentlyViewed=JSON.parse(localStorage.getItem(RECENTLY_VIEWED_KEY)||'[]').filter(Boolean).slice(0,8);
+let recentlyViewed=readStoredList(RECENTLY_VIEWED_KEY,8);
 const compareSelected=new Set();
 let currentPreviewId='';
 let previewToolIds=[];
@@ -47,7 +65,7 @@ const els={
   mobileMenu:document.querySelector('#mobileMenu'),activeFilters:document.querySelector('#activeFilters'),resultContext:document.querySelector('#resultContext'),loadingState:document.querySelector('#loadingState'),errorState:document.querySelector('#errorState'),retryLoad:document.querySelector('#retryLoad'),searchSuggestions:document.querySelector('#searchSuggestions'),searchFacets:document.querySelector('#searchFacets'),trendingSection:document.querySelector('#trending'),trendingGrid:document.querySelector('#trendingGrid'),recentlyViewedSection:document.querySelector('#recentlyViewed'),recentlyViewedGrid:document.querySelector('#recentlyViewedGrid'),clearRecentlyViewed:document.querySelector('#clearRecentlyViewed'),dailyDiscoveryGrid:document.querySelector('#dailyDiscoveryGrid'),dailyDiscoveryDate:document.querySelector('#dailyDiscoveryDate'),workflowGrid:document.querySelector('#workflowGrid'),aiFinderForm:document.querySelector('#aiFinderForm'),aiFinderInput:document.querySelector('#aiFinderInput'),aiFinderSubmit:document.querySelector('#aiFinderSubmit'),aiFinderStatus:document.querySelector('#aiFinderStatus'),aiFinderResult:document.querySelector('#aiFinderResult'),compareBar:document.querySelector('#compareBar'),compareCount:document.querySelector('#compareCount'),clearCompare:document.querySelector('#clearCompare'),openCompare:document.querySelector('#openCompare'),compareDialog:document.querySelector('#compareDialog'),compareDialogContent:document.querySelector('#compareDialogContent'),compareDialogClose:document.querySelector('#compareDialogClose'),quickPreview:document.querySelector('#quickPreview'),quickPreviewContent:document.querySelector('#quickPreviewContent'),quickPreviewClose:document.querySelector('#quickPreviewClose'),quickPreviewPrev:document.querySelector('#quickPreviewPrev'),quickPreviewNext:document.querySelector('#quickPreviewNext'),quickPreviewPosition:document.querySelector('#quickPreviewPosition'),heroCategoryCount:document.querySelector('#heroCategoryCount'),heroOpenSourceCount:document.querySelector('#heroOpenSourceCount'),discoveryStatusBadge:document.querySelector('#discoveryStatusBadge'),discoveryLastRun:document.querySelector('#discoveryLastRun'),discoveryLastAdded:document.querySelector('#discoveryLastAdded'),discoveryRejected:document.querySelector('#discoveryRejected'),discoveryTotal:document.querySelector('#discoveryTotal'),discoveryBatch:document.querySelector('#discoveryBatch'),discoveryNextRun:document.querySelector('#discoveryNextRun')
 };
 
-function saveFavorites(){localStorage.setItem(FAVORITES_KEY,JSON.stringify([...favorites]));els.favoriteCount.textContent=favorites.size;els.mobileFavoriteCount.textContent=favorites.size}
+function saveFavorites(){writeStoredList(FAVORITES_KEY,[...favorites]);els.favoriteCount.textContent=favorites.size;els.mobileFavoriteCount.textContent=favorites.size}
 const SEARCH_ALIASES={
   'ai':['인공지능','llm','모델','에이전트'],'인공지능':['ai','llm'],'agent':['에이전트','agent skill','에이전트 스킬'],'에이전트':['agent','agent skill','에이전트 스킬'],
   'automation':['자동화','workflow','워크플로'],'자동화':['automation','workflow','워크플로'],'workflow':['워크플로','자동화'],'워크플로':['workflow','자동화'],
@@ -169,7 +187,7 @@ function searchScore(tool,query=state.query){
   return score+popularity;
 }
 function toolMatches(tool){if(state.todayOnly&&!isAddedToday(tool))return false;const queryMatch=!state.query||searchScore(tool,state.query)>0;return queryMatch&&(state.category==='전체'||tool.category===state.category)&&(!state.openSource||tool.openSource)&&(!state.free||tool.free)&&(!state.favoritesOnly||favorites.has(tool.id))&&(state.platform==='all'||tool.platforms.includes(state.platform))}
-function saveRecentSearch(query){const q=String(query||'').trim();if(q.length<2)return;recentSearches=[q,...recentSearches.filter(x=>normalizeSearch(x)!==normalizeSearch(q))].slice(0,6);localStorage.setItem(RECENT_SEARCHES_KEY,JSON.stringify(recentSearches))}
+function saveRecentSearch(query){const q=String(query||'').trim();if(q.length<2)return;recentSearches=[q,...recentSearches.filter(x=>normalizeSearch(x)!==normalizeSearch(q))].slice(0,6);writeStoredList(RECENT_SEARCHES_KEY,recentSearches)}
 function searchSuggestionItems(){if(!state.query)return[];return tools.map(tool=>({tool,score:searchScore(tool,state.query)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||(b.tool.stars||0)-(a.tool.stars||0)).slice(0,7)}
 function popularSearchTerms(){const categories=orderedCategories().slice(0,4);const tagCounts=new Map();for(const tool of tools){for(const tag of tool.tags||[]){const t=String(tag).trim();if(t.length<2)continue;tagCounts.set(t,(tagCounts.get(t)||0)+1)}}const tags=[...tagCounts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,4).map(x=>x[0]);return [...new Set([...categories,...tags])].slice(0,7)}
 function applySearchQuery(query,commit=false){state.query=String(query||'').trim();els.search.value=state.query;if(state.query&&state.category!=='전체'){state.category='전체';renderChips()}if(commit)saveRecentSearch(state.query);renderTools();renderSearchSuggestions()}
@@ -499,7 +517,7 @@ function setupAiFinder(){
     }
   });
 }
-function rememberRecentlyViewed(id){recentlyViewed=[id,...recentlyViewed.filter(x=>x!==id)].slice(0,8);localStorage.setItem(RECENTLY_VIEWED_KEY,JSON.stringify(recentlyViewed));renderRecentlyViewed()}
+function rememberRecentlyViewed(id){recentlyViewed=[id,...recentlyViewed.filter(x=>x!==id)].slice(0,8);writeStoredList(RECENTLY_VIEWED_KEY,recentlyViewed);renderRecentlyViewed()}
 function renderRecentlyViewed(){if(!els.recentlyViewedGrid||!els.recentlyViewedSection)return;const items=recentlyViewed.map(id=>tools.find(t=>t.id===id)).filter(Boolean).slice(0,4);if(!items.length){els.recentlyViewedSection.hidden=true;return}els.recentlyViewedSection.hidden=false;els.recentlyViewedGrid.innerHTML=items.map(t=>miniToolCard(t,'RECENT')).join('');bindMiniCards(els.recentlyViewedGrid)}
 function renderCompareBar(){if(!els.compareBar)return;const n=compareSelected.size;els.compareBar.hidden=n===0;els.compareCount.textContent=n;els.openCompare.disabled=n<2;document.body.classList.toggle('compare-active',n>0)}
 function toggleCompare(id){if(compareSelected.has(id))compareSelected.delete(id);else if(compareSelected.size<4)compareSelected.add(id);renderCompareBar();renderTools()}
@@ -714,7 +732,7 @@ document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!=
 async function loadTools(){els.loadingState.hidden=false;els.errorState.hidden=true;els.toolGrid.hidden=true;try{const [r,sr]=await Promise.all([fetch('./data/tools.json',{cache:'no-store'}),fetch('./data/discovery-state.json',{cache:'no-store'})]);if(!r.ok)throw new Error('load failed');tools=await r.json();discoveryState=sr.ok?await sr.json():null;restoreStateFromUrl();els.heroToolCount.textContent=tools.length;saveFavorites();renderChips();renderCategories();renderCollections();renderLatest();renderTrending();renderDailyDiscovery();renderWorkflows();setupAiFinder();renderRecentlyViewed();renderStats();renderDiscoveryStatus();renderTools();els.loadingState.hidden=true;els.toolGrid.hidden=false;setupReveal();setupActiveNav();const detailId=new URLSearchParams(location.search).get('tool');if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId)}catch{els.loadingState.hidden=true;els.errorState.hidden=false;els.toolGrid.hidden=true}}
 els.retryLoad.addEventListener('click',loadTools);
 window.addEventListener('popstate',()=>{if(!tools.length)return;restoreStateFromUrl();renderChips();renderTools();const detailId=new URLSearchParams(location.search).get('tool');if(detailId)openDetail(detailId);else if(els.toolDialog.open)closeDialog()});
-els.clearRecentlyViewed?.addEventListener('click',()=>{recentlyViewed=[];localStorage.removeItem(RECENTLY_VIEWED_KEY);renderRecentlyViewed()});
+els.clearRecentlyViewed?.addEventListener('click',()=>{recentlyViewed=[];removeStoredList(RECENTLY_VIEWED_KEY);renderRecentlyViewed()});
 els.clearCompare?.addEventListener('click',()=>{compareSelected.clear();renderCompareBar();renderTools()});
 els.openCompare?.addEventListener('click',openCompareDialog);
 els.compareDialogClose?.addEventListener('click',()=>{els.compareDialog.close();document.body.classList.remove('dialog-open')});
