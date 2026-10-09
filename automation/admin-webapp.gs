@@ -59,6 +59,7 @@ function adminGetDashboard(token) {
     const denylist = githubJsonFile_('data/discovery-denylist.json') || [];
     const toolData = githubJsonFile_('data/tools.json') || [];
     const config = githubJsonFile_('data/discovery-config.json') || {};
+    const reviewApproved = githubJsonFile_('data/review-approved.json') || [];
     const automationEnabled = PropertiesService.getScriptProperties().getProperty('OPENSHELF_AUTOMATION_ENABLED') !== 'false';
 
     return {
@@ -66,7 +67,15 @@ function adminGetDashboard(token) {
       state: state,
       logs: Array.isArray(logs) ? logs.slice(0, 50) : [],
       denylist: Array.isArray(denylist) ? denylist : [],
-      tools: Array.isArray(toolData) ? toolData.map(function(t){ return { id:t.id, name:t.name, category:t.category, github:t.github }; }) : [],
+      tools: Array.isArray(toolData) ? toolData.map(function(t){
+        return {
+          id:t.id, name:t.name, category:t.category, github:t.github, website:t.website,
+          description:t.description, longDescription:t.longDescription, license:t.license,
+          stars:t.stars, added:t.added, addedAt:t.addedAt, openSource:t.openSource,
+          tags:Array.isArray(t.tags)?t.tags:[]
+        };
+      }) : [],
+      reviewApproved: Array.isArray(reviewApproved) ? reviewApproved : [],
       config: config,
       automationEnabled: automationEnabled
     };
@@ -253,6 +262,21 @@ function adminSetAutomationEnabled(token, enabled) {
   };
 }
 
+function adminApproveReview(token, toolId) {
+  if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
+  try {
+    const file = githubJsonFileMeta_('data/review-approved.json');
+    const list = Array.isArray(file.data) ? file.data : [];
+    const id = String(toolId || '').trim();
+    if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
+    if (list.indexOf(id) < 0) list.push(id);
+    githubWriteJsonFile_('data/review-approved.json', list, 'admin: approve review tool ' + id, file.sha);
+    return { ok:true, message:'검수 승인했습니다.', reviewApproved:list };
+  } catch (err) {
+    return { ok:false, error:String(err && err.message ? err.message : err) };
+  }
+}
+
 function isAdminSession_(token) {
   if (!token) return false;
   return CacheService.getScriptCache().get('admin-session:' + token) === '1';
@@ -299,8 +323,8 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 .login h1{font:700 42px/1 Georgia,serif;margin:8px 0 24px}.login label{display:block;font-size:11px;margin:14px 0 6px}.login input{width:100%;padding:12px;border:1px solid var(--line);background:white}.login button,.logout{border:1px solid var(--ink);background:var(--ink);color:white;padding:11px 14px;font-weight:800;cursor:pointer}.login button{width:100%;margin-top:18px}.msg{min-height:20px;margin-top:12px;font-size:12px;color:#a33}
 #dashboard[hidden],#login[hidden]{display:none}.hero{padding:46px 0 28px}.hero h1{font:700 58px/1 Georgia,serif;margin:9px 0}.hero p{color:var(--muted)}
 .status{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--ink);background:var(--paper)}.status>div{padding:16px;border-right:1px solid var(--line)}.status>div:last-child{border-right:0}.status span{display:block;font-size:9px;color:var(--muted);margin-bottom:7px}.status strong{font:700 19px Georgia,serif}
-.section{margin-top:42px}.section h2{font:700 30px Georgia,serif}.log{border:1px solid var(--line);background:var(--paper);margin:9px 0}.log summary{cursor:pointer;padding:15px;display:flex;justify-content:space-between}.log-body{border-top:1px solid var(--line);padding:14px}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.tool{border:1px solid var(--line);padding:9px}.tool b{display:block}.tool small{color:var(--muted)}ul{color:var(--muted);font-size:12px;line-height:1.7}.deny{display:flex;flex-wrap:wrap;gap:7px}.deny-item{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper)}.deny-item code{padding:7px;border:0}.deny-item button{border:0;border-left:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer}.section-note{color:var(--muted);font-size:12px}.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.op-card{border:1px solid var(--line);background:var(--paper);padding:18px;min-height:220px}.op-card>span{font-size:9px;letter-spacing:.12em;color:var(--accent);font-weight:800}.op-card h3{font:700 22px/1 Georgia,serif;margin:12px 0 8px}.op-card p{font-size:12px;color:var(--muted);line-height:1.55}.op-card input{width:100%;border:1px solid var(--line);padding:10px;background:white}.primary-action,.inline-action button,.danger-action{border:1px solid var(--ink);background:var(--ink);color:white;padding:10px 12px;font-weight:800;cursor:pointer}.primary-action{margin-top:12px}.inline-action{display:flex;gap:7px}.inline-action input{flex:1}.tool-results{margin-top:8px;display:grid;gap:6px;max-height:190px;overflow:auto}.tool-result{border:1px solid var(--line);padding:8px;display:flex;align-items:center;justify-content:space-between;gap:10px}.tool-result small{display:block;color:var(--muted);margin-top:3px}.danger-action{background:#9f2e22;border-color:#9f2e22;padding:7px 9px;font-size:10px}.operation-message{min-height:24px;margin-top:12px;font-size:12px;font-weight:700}.operation-message.ok{color:#2d7b43}.operation-message.error{color:#a33}.settings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.settings-grid label,.automation-control{border:1px solid var(--line);background:var(--paper);padding:14px}.settings-grid label>span,.automation-control>span{display:block;font-size:9px;color:var(--muted);margin-bottom:8px;letter-spacing:.08em}.settings-grid input,.settings-grid select{width:100%;border:1px solid var(--line);background:white;padding:9px}.automation-control strong{display:block;font:700 20px Georgia,serif;margin-bottom:10px}.automation-control button{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.settings-actions{display:flex;align-items:center;gap:12px;margin-top:12px}
-@media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid{grid-template-columns:1fr}}
+.section{margin-top:42px}.section h2{font:700 30px Georgia,serif}.log{border:1px solid var(--line);background:var(--paper);margin:9px 0}.log summary{cursor:pointer;padding:15px;display:flex;justify-content:space-between}.log-body{border-top:1px solid var(--line);padding:14px}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.tool{border:1px solid var(--line);padding:9px}.tool b{display:block}.tool small{color:var(--muted)}ul{color:var(--muted);font-size:12px;line-height:1.7}.deny{display:flex;flex-wrap:wrap;gap:7px}.deny-item{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper)}.deny-item code{padding:7px;border:0}.deny-item button{border:0;border-left:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer}.section-note{color:var(--muted);font-size:12px}.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.op-card{border:1px solid var(--line);background:var(--paper);padding:18px;min-height:220px}.op-card>span{font-size:9px;letter-spacing:.12em;color:var(--accent);font-weight:800}.op-card h3{font:700 22px/1 Georgia,serif;margin:12px 0 8px}.op-card p{font-size:12px;color:var(--muted);line-height:1.55}.op-card input{width:100%;border:1px solid var(--line);padding:10px;background:white}.primary-action,.inline-action button,.danger-action{border:1px solid var(--ink);background:var(--ink);color:white;padding:10px 12px;font-weight:800;cursor:pointer}.primary-action{margin-top:12px}.inline-action{display:flex;gap:7px}.inline-action input{flex:1}.tool-results{margin-top:8px;display:grid;gap:6px;max-height:190px;overflow:auto}.tool-result{border:1px solid var(--line);padding:8px;display:flex;align-items:center;justify-content:space-between;gap:10px}.tool-result small{display:block;color:var(--muted);margin-top:3px}.danger-action{background:#9f2e22;border-color:#9f2e22;padding:7px 9px;font-size:10px}.operation-message{min-height:24px;margin-top:12px;font-size:12px;font-weight:700}.operation-message.ok{color:#2d7b43}.operation-message.error{color:#a33}.settings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.settings-grid label,.automation-control{border:1px solid var(--line);background:var(--paper);padding:14px}.settings-grid label>span,.automation-control>span{display:block;font-size:9px;color:var(--muted);margin-bottom:8px;letter-spacing:.08em}.settings-grid input,.settings-grid select{width:100%;border:1px solid var(--line);background:white;padding:9px}.automation-control strong{display:block;font:700 20px Georgia,serif;margin-bottom:10px}.automation-control button{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.settings-actions{display:flex;align-items:center;gap:12px;margin-top:12px}.review-top{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}
+@media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid{grid-template-columns:1fr}.review-top{grid-template-columns:1fr}.review-top>div{border-right:0;border-bottom:1px solid var(--line)}}
 </style>
 </head>
 <body>
@@ -329,6 +353,21 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
       <div><span>누적 자동추가</span><strong id="total">—</strong></div>
       <div><span>배치 오류</span><strong id="batch">—</strong></div>
       <div><span>상태</span><strong id="status">—</strong></div>
+    </section>
+
+    <section class="section review">
+      <span class="kicker">REVIEW INBOX</span>
+      <h2>자동 검수함</h2>
+      <div class="review-top">
+        <div><span>검수 필요</span><strong id="reviewCount">0</strong></div>
+        <div><span>최근 추가 20개</span><strong id="recentCount">0</strong></div>
+        <div><span>품질 기준</span><strong>70점</strong></div>
+      </div>
+      <div class="review-tabs">
+        <button id="reviewProblems" class="review-tab active" type="button">검수 필요</button>
+        <button id="reviewRecent" class="review-tab" type="button">최근 추가 20개</button>
+      </div>
+      <div id="reviewList" class="review-list"></div>
     </section>
 
     <section class="section settings">
@@ -383,6 +422,8 @@ let adminTools=[];
 let adminDenylist=[];
 let adminConfig={};
 let automationEnabled=true;
+let reviewApproved=[];
+let reviewMode='problems';
 const login=document.getElementById('login'),dash=document.getElementById('dashboard'),logout=document.getElementById('logout'),msg=document.getElementById('msg');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=v=>{if(!v)return'—';const d=new Date(v);return Number.isNaN(d.getTime())?'—':new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)};
@@ -406,12 +447,82 @@ function loadDashboard(){
     adminDenylist=Array.isArray(r.denylist)?r.denylist:[];
     adminConfig=r.config||{};
     automationEnabled=r.automationEnabled!==false;
+    reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:[];
     renderConfig();
+    renderReview();
     renderDenylist();
     renderToolResults();
   }).adminGetDashboard(token);
 }
 
+
+function canon(v){return String(v||'').normalize('NFKC').toLowerCase().replace(/[^a-z0-9가-힣]+/g,'')}
+function qualityReview(tool){
+  let score=100,flags=[];
+  const desc=String(tool.description||''),longDesc=String(tool.longDescription||'');
+  if(desc.length<35){score-=15;flags.push('설명 짧음')}
+  if(longDesc.length<90){score-=15;flags.push('상세 설명 부족')}
+  if(!tool.website){score-=10;flags.push('홈페이지 없음')}
+  if(!tool.license||tool.license==='확인 필요'||tool.license==='NOASSERTION'){score-=20;flags.push('라이선스 불명확')}
+  if(tool.openSource===false){score-=8;flags.push('오픈소스 확인 필요')}
+  if(Number(tool.stars||0)<500){score-=10;flags.push('Stars 낮음')}
+  if(!tool.category){score-=15;flags.push('카테고리 없음')}
+  const dupName=adminTools.filter(x=>x.id!==tool.id&&canon(x.name)===canon(tool.name)).length>0;
+  const site=String(tool.website||'').replace(/\/$/,'').toLowerCase();
+  const dupSite=site&&adminTools.filter(x=>x.id!==tool.id&&String(x.website||'').replace(/\/$/,'').toLowerCase()===site).length>0;
+  if(dupName||dupSite){score-=25;flags.push('중복 의심')}
+  return {score:Math.max(0,score),flags:flags};
+}
+function recentTools20(){
+  return adminTools.slice().sort((a,b)=>{
+    const av=Date.parse(a.addedAt||a.added||0)||0,bv=Date.parse(b.addedAt||b.added||0)||0;
+    return bv-av;
+  }).slice(0,20);
+}
+function renderReview(){
+  const problems=adminTools.map(t=>({tool:t,review:qualityReview(t)})).filter(x=>x.review.score<70&&!reviewApproved.includes(String(x.tool.id))).sort((a,b)=>a.review.score-b.review.score);
+  const recent=recentTools20().map(t=>({tool:t,review:qualityReview(t)}));
+  document.getElementById('reviewCount').textContent=String(problems.length);
+  document.getElementById('recentCount').textContent=String(recent.length);
+  document.getElementById('reviewProblems').classList.toggle('active',reviewMode==='problems');
+  document.getElementById('reviewRecent').classList.toggle('active',reviewMode==='recent');
+  const rows=reviewMode==='recent'?recent:problems;
+  const root=document.getElementById('reviewList');
+  if(!rows.length){root.innerHTML='<p class="section-note">현재 검수할 도구가 없습니다.</p>';return}
+  root.innerHTML=rows.map(x=>{
+    const t=x.tool,r=x.review;
+    const scoreClass=r.score<55?'low':(r.score<70?'mid':'good');
+    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div><div class="review-actions"><button class="approve" type="button" data-review-approve="'+esc(t.id)+'">승인</button><button type="button" data-review-deny="'+esc(t.github||'')+'">Denylist</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
+  }).join('');
+  root.querySelectorAll('[data-review-approve]').forEach(btn=>btn.addEventListener('click',()=>{
+    const id=btn.dataset.reviewApprove;
+    opMessage('검수 승인 저장 중...');
+    google.script.run.withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage(r?.error||'승인에 실패했습니다.','error');return}
+      reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;renderReview();opMessage(r.message||'승인했습니다.');
+    }).adminApproveReview(token,id);
+  }));
+  root.querySelectorAll('[data-review-deny]').forEach(btn=>btn.addEventListener('click',()=>{
+    const repo=btn.dataset.reviewDeny;if(!repo)return;
+    if(!confirm('이 저장소를 Denylist에 추가할까요?'))return;
+    opMessage('Denylist 추가 중...');
+    google.script.run.withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage(r?.error||'Denylist 추가에 실패했습니다.','error');return}
+      adminDenylist=Array.isArray(r.denylist)?r.denylist:adminDenylist;renderDenylist();opMessage(r.message||'추가했습니다.');
+    }).adminAddDenylist(token,repo);
+  }));
+  root.querySelectorAll('[data-review-remove]').forEach(btn=>btn.addEventListener('click',()=>{
+    const id=btn.dataset.reviewRemove;const tool=adminTools.find(t=>String(t.id)===String(id));if(!tool)return;
+    if(!confirm(tool.name+' 을(를) 삭제하고 재수집도 차단할까요?'))return;
+    opMessage('삭제 처리 중...');
+    google.script.run.withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage(r?.error||'삭제에 실패했습니다.','error');return}
+      opMessage(r.message||'삭제했습니다.');loadDashboard();
+    }).adminRemoveTool(token,id);
+  }));
+}
+document.getElementById('reviewProblems')?.addEventListener('click',()=>{reviewMode='problems';renderReview()});
+document.getElementById('reviewRecent')?.addEventListener('click',()=>{reviewMode='recent';renderReview()});
 
 function renderConfig(){
   document.getElementById('cfgTarget').value=String(adminConfig.targetPerHour||20);
