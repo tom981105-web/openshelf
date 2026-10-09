@@ -1245,6 +1245,8 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
       <div class="review-tabs">
         <button id="reviewProblems" class="review-tab active" type="button">검수 필요</button>
         <button id="reviewIssues" class="review-tab" type="button">문제 도구 <span id="issueCount">0</span></button>
+        <button id="reviewRecheckSoon" class="review-tab" type="button">재검수 예정 <span id="recheckSoonCount">0</span></button>
+        <button id="reviewRecheckDue" class="review-tab" type="button">재검수 필요 <span id="recheckDueCount">0</span></button>
         <button id="reviewRecent" class="review-tab" type="button">최근 추가 20개</button>
         <button id="reviewApproved" class="review-tab" type="button">승인 완료</button>
       </div>
