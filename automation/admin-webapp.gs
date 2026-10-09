@@ -88,7 +88,11 @@ function adminGetDashboard(token) {
           id:t.id, name:t.name, category:t.category, github:t.github, website:t.website,
           description:t.description, longDescription:t.longDescription, license:t.license,
           stars:t.stars, added:t.added, addedAt:t.addedAt, openSource:t.openSource,
-          tags:Array.isArray(t.tags)?t.tags:[]
+          tags:Array.isArray(t.tags)?t.tags:[],
+          githubPushedAt:t.githubPushedAt, githubUpdatedAt:t.githubUpdatedAt,
+          githubArchived:t.githubArchived, githubDisabled:t.githubDisabled,
+          healthCheckedAt:t.healthCheckedAt, healthCheckStatus:t.healthCheckStatus,
+          healthCheckError:t.healthCheckError, githubLicense:t.githubLicense
         };
       }) : [],
       reviewApproved: Array.isArray(reviewApproved) ? reviewApproved : [],
@@ -911,13 +915,13 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 .run-state{font-weight:800}
 .run-state.success{color:#2d7b43}
 .run-state.partial{color:#9b6b10}
-.run-state.failed,.run-state.error{color:#a33}.review-top{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}.review-actions .gemini{background:var(--ink);color:white}.review-actions .apply{background:#d68000;border-color:#d68000;color:white}.gemini-review{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.gemini-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.gemini-verdict{font-weight:800}.gemini-summary{font-size:12px;line-height:1.55;margin:8px 0}.gemini-list{margin:6px 0 0 18px;padding:0}.gemini-meta{font-size:10px;color:var(--muted);margin-top:8px}.gemini-suggestions{font-size:11px;line-height:1.55;margin-top:8px;padding:9px;border:1px solid var(--line);background:#fff}
+.run-state.failed,.run-state.error{color:#a33}.review-top{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}.review-actions .gemini{background:var(--ink);color:white}.review-actions .apply{background:#d68000;border-color:#d68000;color:white}.issue-filters{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}.issue-filter{border:1px solid var(--line);background:var(--paper);padding:7px 9px;font-size:10px;font-weight:800;cursor:pointer}.issue-filter.active{background:var(--accent);border-color:var(--accent);color:white}.issue-badges{display:flex;flex-wrap:wrap;gap:5px;margin:8px 0}.issue-badge{font-size:10px;padding:4px 6px;border:1px solid #c79d96;background:#fff4ef;color:#7a2d20;font-weight:800}.review-tab span{font-size:9px;margin-left:3px}.gemini-review{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.gemini-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.gemini-verdict{font-weight:800}.gemini-summary{font-size:12px;line-height:1.55;margin:8px 0}.gemini-list{margin:6px 0 0 18px;padding:0}.gemini-meta{font-size:10px;color:var(--muted);margin-top:8px}.gemini-suggestions{font-size:11px;line-height:1.55;margin-top:8px;padding:9px;border:1px solid var(--line);background:#fff}
 @media(max-width:800px){.status,.health-admin{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid,.analytics-grid{grid-template-columns:1fr}.analytics-summary{grid-template-columns:repeat(2,1fr)}.analytics-summary>div{border-bottom:1px solid var(--line)}.review-top{grid-template-columns:1fr}.review-top>div{border-right:0;border-bottom:1px solid var(--line)}}
 </style>
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.8 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.9 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -989,7 +993,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
     <section class="section review">
       <span class="kicker">REVIEW INBOX</span>
       <h2>자동 검수함</h2>
-      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. Gemini 판정은 이제 <strong>객관적으로 실제 수정 가능한 필드가 있을 때만 '수정 필요'</strong>로 유지됩니다. 표현 취향 차이만 남으면 승인 권장, 자동으로 확인할 수 없는 문제는 수동 확인 필요로 정리됩니다.</p>
+      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. <strong>문제 도구</strong> 탭에서는 Gemini 판정, GitHub 점검 오류, Archived, 라이선스 불명확, 장기 미활동 등을 한곳에 모아 바로 조치할 수 있습니다.</p>
       <div class="review-top">
         <div><span>검수 필요</span><strong id="reviewCount">0</strong></div>
         <div><span>최근 추가 20개</span><strong id="recentCount">0</strong></div>
@@ -998,9 +1002,11 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
       </div>
       <div class="review-tabs">
         <button id="reviewProblems" class="review-tab active" type="button">검수 필요</button>
+        <button id="reviewIssues" class="review-tab" type="button">문제 도구 <span id="issueCount">0</span></button>
         <button id="reviewRecent" class="review-tab" type="button">최근 추가 20개</button>
         <button id="reviewApproved" class="review-tab" type="button">승인 완료</button>
       </div>
+      <div id="issueFilters" class="issue-filters" hidden></div>
       <div id="reviewList" class="review-list"></div>
     </section>
 
@@ -1063,6 +1069,7 @@ let adminConfig={};
 let automationEnabled=true;
 let reviewApproved=[];
 let reviewMode='problems';
+let issueFilter='전체';
 let adminLogs=[];
 let geminiReviews={};
 const login=document.getElementById('login'),dash=document.getElementById('dashboard'),logout=document.getElementById('logout'),msg=document.getElementById('msg');
@@ -1225,6 +1232,65 @@ function qualityReview(tool){
   if(dupName||dupSite){score-=25;flags.push('중복 의심')}
   return {score:Math.max(0,score),flags:flags};
 }
+function daysSinceAdmin(value){
+  if(!value)return Infinity;
+  const d=new Date(value);
+  if(Number.isNaN(d.getTime()))return Infinity;
+  return Math.max(0,(Date.now()-d.getTime())/86400000);
+}
+function toolIssueInfo(tool){
+  const issues=[];
+  const gr=geminiReviews[String(tool.id)]||null;
+  const verdict=String(gr&&gr.verdict||'');
+
+  if(verdict==='수정 필요')issues.push('수정 필요');
+  if(verdict==='수동 확인 필요')issues.push('수동 확인 필요');
+  if(verdict==='삭제 권장')issues.push('삭제 권장');
+  if(verdict==='중복 의심')issues.push('중복 의심');
+
+  if(tool.githubArchived===true)issues.push('Archived');
+  if(tool.githubDisabled===true)issues.push('Disabled');
+
+  const hs=String(tool.healthCheckStatus||'');
+  if(hs==='not_found')issues.push('저장소 없음');
+  else if(hs==='forbidden')issues.push('접근 불가');
+  else if(hs==='error')issues.push('점검 오류');
+
+  const license=String(tool.license||'').trim();
+  if(!license||/확인 필요|unknown|noassertion/i.test(license))issues.push('라이선스 불명확');
+
+  const days=daysSinceAdmin(tool.githubPushedAt||tool.githubUpdatedAt);
+  if(Number.isFinite(days)&&days>365)issues.push('1년 이상 미활동');
+
+  const q=qualityReview(tool);
+  if(q.score<70)issues.push('품질 점수 낮음');
+
+  return {issues:[...new Set(issues)],score:q.score};
+}
+function issueRows(){
+  return adminTools.map(t=>({tool:t,review:qualityReview(t),issue:toolIssueInfo(t)}))
+    .filter(x=>x.issue.issues.length)
+    .filter(x=>issueFilter==='전체'||x.issue.issues.includes(issueFilter))
+    .sort((a,b)=>{
+      const critical=['삭제 권장','중복 의심','저장소 없음','Archived','점검 오류'];
+      const ac=a.issue.issues.some(v=>critical.includes(v))?1:0;
+      const bc=b.issue.issues.some(v=>critical.includes(v))?1:0;
+      return bc-ac||a.review.score-b.review.score;
+    });
+}
+function renderIssueFilters(){
+  const root=document.getElementById('issueFilters');
+  if(!root)return;
+  if(reviewMode!=='issues'){root.hidden=true;root.innerHTML='';return}
+  const all=adminTools.flatMap(t=>toolIssueInfo(t).issues);
+  const counts={};
+  all.forEach(v=>counts[v]=(counts[v]||0)+1);
+  const order=['수정 필요','수동 확인 필요','삭제 권장','중복 의심','저장소 없음','접근 불가','점검 오류','Archived','Disabled','라이선스 불명확','1년 이상 미활동','품질 점수 낮음'];
+  const filters=['전체',...order.filter(v=>counts[v])];
+  root.hidden=false;
+  root.innerHTML=filters.map(v=>'<button type="button" class="issue-filter '+(issueFilter===v?'active':'')+'" data-issue-filter="'+esc(v)+'">'+esc(v)+(v==='전체'?'':' '+Number(counts[v]||0))+'</button>').join('');
+  root.querySelectorAll('[data-issue-filter]').forEach(btn=>btn.addEventListener('click',()=>{issueFilter=btn.dataset.issueFilter;renderReview()}));
+}
 function recentTools20(){
   return adminTools.slice().sort((a,b)=>{
     const av=Date.parse(a.addedAt||a.added||0)||0,bv=Date.parse(b.addedAt||b.added||0)||0;
@@ -1235,13 +1301,18 @@ function renderReview(){
   const problems=adminTools.map(t=>({tool:t,review:qualityReview(t)})).filter(x=>x.review.score<70&&!reviewApproved.includes(String(x.tool.id))).sort((a,b)=>a.review.score-b.review.score);
   const recent=recentTools20().map(t=>({tool:t,review:qualityReview(t)}));
   const approved=adminTools.filter(t=>reviewApproved.includes(String(t.id))).map(t=>({tool:t,review:qualityReview(t)}));
+  const issues=issueRows();
+  const allIssueCount=adminTools.filter(t=>toolIssueInfo(t).issues.length).length;
   document.getElementById('reviewCount').textContent=String(problems.length);
   document.getElementById('recentCount').textContent=String(recent.length);
   document.getElementById('approvedCount').textContent=String(approved.length);
+  document.getElementById('issueCount').textContent=String(allIssueCount);
   document.getElementById('reviewProblems').classList.toggle('active',reviewMode==='problems');
+  document.getElementById('reviewIssues').classList.toggle('active',reviewMode==='issues');
   document.getElementById('reviewRecent').classList.toggle('active',reviewMode==='recent');
   document.getElementById('reviewApproved').classList.toggle('active',reviewMode==='approved');
-  const rows=reviewMode==='recent'?recent:(reviewMode==='approved'?approved:problems);
+  renderIssueFilters();
+  const rows=reviewMode==='issues'?issues:(reviewMode==='recent'?recent:(reviewMode==='approved'?approved:problems));
   const root=document.getElementById('reviewList');
   if(!rows.length){root.innerHTML='<p class="section-note">현재 검수할 도구가 없습니다.</p>';return}
   root.innerHTML=rows.map(x=>{
@@ -1252,13 +1323,17 @@ function renderReview(){
       ? '<button type="button" data-review-unapprove="'+esc(t.id)+'">승인 취소</button>'
       : '<button class="approve" type="button" data-review-approve="'+esc(t.id)+'">승인</button>';
     const gr=geminiReviews[String(t.id)]||null;
+    const issueInfo=toolIssueInfo(t);
+    const issueBlock=reviewMode==='issues'&&issueInfo.issues.length
+      ? '<div class="issue-badges">'+issueInfo.issues.map(v=>'<span class="issue-badge">'+esc(v)+'</span>').join('')+'</div>'
+      : '';
     const geminiBlock=gr
       ? '<div class="gemini-review"><div class="gemini-head"><span class="gemini-verdict">Gemini · '+esc(gr.verdict||'재검수')+'</span><strong>'+Number(gr.score||0)+'점</strong></div><div class="gemini-summary">'+esc(gr.summary||'')+'</div>'+(Array.isArray(gr.reasons)&&gr.reasons.length?'<ul class="gemini-list">'+gr.reasons.map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':'')+'<div class="gemini-suggestions"><b>카테고리 제안</b> '+esc(gr.categorySuggestion||'—')+'<br><b>설명 제안</b> '+esc(gr.descriptionSuggestion||'—')+'<br><b>태그 제안</b> '+esc(Array.isArray(gr.tagsSuggestion)?gr.tagsSuggestion.join(', '):'—')+'<br><b>중복 위험</b> '+esc(gr.duplicateRisk||'—')+' · <b>확신도</b> '+Number(gr.confidence||0)+'%</div><div class="gemini-meta">'+esc(gr.model||'Gemini')+' · '+fmt(gr.reviewedAt)+'</div></div>'
       : '';
     const applyButton=gr&&String(gr.verdict||'')==='수정 필요'
       ? '<button class="apply" type="button" data-gemini-autofix="'+esc(t.id)+'">Gemini 자동 수정</button>'
       : '';
-    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div>'+geminiBlock+'<div class="review-actions">'+approvalButton+'<button class="gemini" type="button" data-gemini-review="'+esc(t.id)+'">Gemini 재검수</button>'+applyButton+'<button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
+    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div>'+issueBlock+geminiBlock+'<div class="review-actions">'+approvalButton+'<button class="gemini" type="button" data-gemini-review="'+esc(t.id)+'">Gemini 재검수</button>'+applyButton+'<button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
   }).join('');
   root.querySelectorAll('[data-review-approve]').forEach(btn=>btn.addEventListener('click',()=>{
     const id=btn.dataset.reviewApprove;
@@ -1326,6 +1401,7 @@ function renderReview(){
   }));
 }
 document.getElementById('reviewProblems').addEventListener('click',()=>{reviewMode='problems';renderReview()});
+document.getElementById('reviewIssues').addEventListener('click',()=>{reviewMode='issues';issueFilter='전체';renderReview()});
 document.getElementById('reviewRecent').addEventListener('click',()=>{reviewMode='recent';renderReview()});
 document.getElementById('reviewApproved').addEventListener('click',()=>{reviewMode='approved';renderReview()});
 
