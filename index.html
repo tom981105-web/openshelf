@@ -119,6 +119,33 @@
 
       </div>
 
+      <section class="section-block reveal ai-finder" id="aiFinder">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">AI TOOL FINDER</span>
+            <h2>뭘 하고 싶은지 말해보세요</h2>
+          </div>
+          <span class="section-note">Gemini가 OpenShelf 안의 도구만 골라 작업 조합을 만듭니다.</span>
+        </div>
+        <div class="ai-finder-shell">
+          <form id="aiFinderForm" class="ai-finder-form">
+            <label for="aiFinderInput">하고 싶은 일</label>
+            <div class="ai-finder-input-row">
+              <textarea id="aiFinderInput" maxlength="300" rows="3" placeholder="예: PDF 여러 개를 요약해서 지식으로 정리하고 싶어"></textarea>
+              <button id="aiFinderSubmit" type="submit">AI로 조합 찾기 →</button>
+            </div>
+            <div class="ai-finder-examples" aria-label="예시 요청">
+              <button type="button" data-ai-example="PDF 여러 개를 요약해서 지식으로 정리하고 싶어">PDF 요약·정리</button>
+              <button type="button" data-ai-example="웹 자료를 수집해서 비교 분석하고 싶어">웹 리서치</button>
+              <button type="button" data-ai-example="코딩 작업을 자동화하고 반복 업무를 줄이고 싶어">개발 자동화</button>
+            </div>
+            <p class="ai-finder-note">추천은 OpenShelf 등록 도구만 사용하며, 입력 내용은 추천 요청 처리에만 사용됩니다.</p>
+          </form>
+          <div id="aiFinderStatus" class="ai-finder-status" hidden></div>
+          <div id="aiFinderResult" class="ai-finder-result" hidden></div>
+        </div>
+      </section>
+
       <section class="section-block reveal daily-discovery" id="dailyDiscovery">
         <div class="section-heading">
           <div>
