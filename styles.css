@@ -817,3 +817,23 @@ h1{
     top:58px;
   }
 }
+
+
+/* v2.1 discovery status + new arrivals */
+.system-status{border:1px solid var(--ink);background:rgba(255,253,248,.72);margin:0 0 28px;padding:18px 20px;box-shadow:4px 4px 0 rgba(20,20,20,.12)}
+.system-status-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.system-status-head h2{margin:5px 0 0;font:700 24px/1.05 Georgia,serif;letter-spacing:-.02em}
+.status-badge{display:inline-flex;align-items:center;gap:7px;border:1px solid var(--ink);padding:6px 9px;font-size:9px;font-weight:900;letter-spacing:.12em;background:var(--paper)}
+.status-badge::before{content:"";width:7px;height:7px;border-radius:50%;background:#3c9b55;box-shadow:0 0 0 3px rgba(60,155,85,.12)}
+.status-badge[data-status="partial"]::before{background:#d18a24;box-shadow:0 0 0 3px rgba(209,138,36,.14)}
+.system-status-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0}
+.system-status-grid>div{padding:15px 14px 2px;border-right:1px solid var(--line);min-width:0}
+.system-status-grid>div:first-child{padding-left:0}
+.system-status-grid>div:last-child{border-right:0;padding-right:0}
+.system-status-grid span{display:block;font-size:9px;color:var(--muted);letter-spacing:.08em;margin-bottom:7px}
+.system-status-grid strong{display:block;font:700 18px/1.1 Georgia,serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card-new-badge{position:absolute;left:-1px;top:-1px;z-index:2;background:var(--accent);color:#fff;padding:5px 8px;font-size:8px;font-weight:900;letter-spacing:.12em}
+.today-filter{border-color:var(--accent)!important}
+.today-filter:has(input:checked){background:var(--accent)!important;border-color:var(--accent)!important;color:white}
+@media(max-width:1000px){.system-status-grid{grid-template-columns:repeat(3,1fr)}.system-status-grid>div:nth-child(3){border-right:0}.system-status-grid>div:nth-child(n+4){border-top:1px solid var(--line)}}
+@media(max-width:620px){.system-status{padding:16px}.system-status-head{align-items:flex-start}.system-status-grid{grid-template-columns:repeat(2,1fr)}.system-status-grid>div{padding:12px 10px}.system-status-grid>div:nth-child(2n){border-right:0}.system-status-grid>div:nth-child(n+3){border-top:1px solid var(--line)}.system-status-grid>div:first-child{padding-left:10px}.system-status-grid>div:last-child{padding-right:10px}.system-status-grid strong{font-size:16px}}
