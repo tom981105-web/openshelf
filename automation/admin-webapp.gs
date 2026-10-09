@@ -91,7 +91,7 @@ function adminGetDashboard(token) {
           githubPushedAt:t.githubPushedAt, githubUpdatedAt:t.githubUpdatedAt,
           githubArchived:t.githubArchived, githubDisabled:t.githubDisabled,
           healthCheckedAt:t.healthCheckedAt, healthCheckStatus:t.healthCheckStatus,
-          healthCheckError:t.healthCheckError, githubLicense:t.githubLicense
+          healthCheckError:t.healthCheckError, githubLicense:t.githubLicense, githubHomepage:t.githubHomepage
         };
       }) : [],
       reviewApproved: Array.isArray(reviewApproved) ? reviewApproved : [],
@@ -370,6 +370,20 @@ function saveReviewState_(state, message) {
   return next;
 }
 
+function reviewHealthSnapshot_(tool) {
+  tool = tool || {};
+  return {
+    license:String(tool.license || ''),
+    website:String(tool.website || ''),
+    githubLicense:String(tool.githubLicense || ''),
+    githubArchived:tool.githubArchived === true,
+    githubDisabled:tool.githubDisabled === true,
+    healthCheckStatus:String(tool.healthCheckStatus || ''),
+    githubPushedAt:String(tool.githubPushedAt || ''),
+    githubUpdatedAt:String(tool.githubUpdatedAt || '')
+  };
+}
+
 function adminApproveReview(token, toolId) {
   if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
   try {
@@ -377,6 +391,9 @@ function adminApproveReview(token, toolId) {
     if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
 
     const state = getReviewStateWithMigration_();
+    const tools = githubJsonFile_('data/tools.json') || [];
+    const currentTool = Array.isArray(tools) ? tools.find(function(t){ return String(t.id) === id; }) : null;
+    if (!currentTool) return { ok:false, error:'승인할 도구를 찾지 못했습니다.' };
     const previous = state.items[id] && typeof state.items[id] === 'object' ? state.items[id] : {};
     const now = new Date().toISOString();
     const gemini = getGeminiReviews_()[id] || {};
@@ -397,6 +414,7 @@ function adminApproveReview(token, toolId) {
       geminiVerdict:String(gemini.verdict || previous.geminiVerdict || ''),
       geminiScore:Number(gemini.score || previous.geminiScore || 0),
       source:'admin',
+      healthSnapshot:reviewHealthSnapshot_(currentTool),
       history:history
     };
 
