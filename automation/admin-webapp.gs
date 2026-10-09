@@ -1309,6 +1309,21 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
     <section class="section"><span class="kicker">RUN HISTORY</span><h2>최근 수집 로그</h2><div id="logs"></div></section>
     <section class="section"><span class="kicker">수집 제외 목록</span><h2>자동수집 제외 목록</h2><p class="section-note">항목의 ×를 누르면 다시 자동수집 후보에 포함됩니다.</p><div id="deny" class="deny"></div></section>
   </main>
+
+  <dialog id="toolEditor" class="tool-editor">
+    <form id="toolEditorForm">
+      <div class="editor-head"><div><span class="kicker">DIRECT EDIT</span><h2>도구 직접 편집</h2></div><button id="closeToolEditor" type="button">×</button></div>
+      <input id="editToolId" type="hidden">
+      <label><span>이름</span><input id="editName" required></label>
+      <label><span>카테고리</span><select id="editCategory"></select></label>
+      <label><span>한줄 설명</span><textarea id="editDescription" rows="2" required></textarea></label>
+      <label><span>상세 설명</span><textarea id="editLongDescription" rows="5" required></textarea></label>
+      <label><span>홈페이지</span><input id="editWebsite"></label>
+      <label><span>라이선스</span><input id="editLicense"></label>
+      <label><span>태그 · 쉼표로 구분</span><input id="editTags"></label>
+      <div class="editor-actions"><button id="cancelToolEditor" type="button">취소</button><button class="primary-action" type="submit">저장 후 재검수 대상으로</button></div>
+    </form>
+  </dialog>
 </div>
 <script>
 window.addEventListener('error',function(e){
