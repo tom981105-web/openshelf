@@ -3,6 +3,7 @@ import fs from 'node:fs/promises';
 const TOOLS_PATH = 'data/tools.json';
 const STATE_PATH = 'data/discovery-state.json';
 const DENYLIST_PATH = 'data/discovery-denylist.json';
+const LOG_PATH = 'data/discovery-log.json';
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
 const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
@@ -48,6 +49,13 @@ try {
   denylist = [];
 }
 if (!Array.isArray(denylist)) denylist = [];
+let discoveryLog = [];
+try {
+  discoveryLog = JSON.parse(await fs.readFile(LOG_PATH, 'utf8'));
+} catch {
+  discoveryLog = [];
+}
+if (!Array.isArray(discoveryLog)) discoveryLog = [];
 
 function seoulHourKey(date = new Date()) {
   return new Date(date.getTime() + 9 * 60 * 60 * 1000).toISOString().slice(0, 13);
@@ -390,7 +398,7 @@ if (!additions.length) {
   throw new Error(`No valid additions remained. Rejections: ${rejectionReasons.join(' | ')}`);
 }
 
-state.lastRun = new Date().toISOString();
+state.lastRun = runTimestamp;
 state.lastRunHour = currentHourKey;
 state.lastAddedCount = additions.length;
 state.lastRejectedCount = rejectionReasons.length;
@@ -398,9 +406,22 @@ state.lastBatchErrors = batchErrors;
 state.lastStatus = additions.length === TARGET_COUNT && batchErrors.length === 0 ? 'success' : 'partial';
 state.totalAutoAdded = Number(state.totalAutoAdded || 0) + additions.length;
 
+discoveryLog.unshift({
+  id: currentHourKey,
+  timestamp: runTimestamp,
+  status: state.lastStatus,
+  addedCount: additions.length,
+  rejectedCount: rejectionReasons.length,
+  batchErrors: batchErrors.slice(0, 10),
+  addedTools: additions.map(x => ({ id: x.id, name: x.name, category: x.category, github: x.github })),
+  rejected: rejectionReasons.slice(0, 30)
+});
+discoveryLog = discoveryLog.slice(0, 100);
+
 const nextTools = [...additions, ...tools];
 await fs.writeFile(TOOLS_PATH, JSON.stringify(nextTools, null, 2) + '\n');
 await fs.writeFile(STATE_PATH, JSON.stringify(state, null, 2) + '\n');
+await fs.writeFile(LOG_PATH, JSON.stringify(discoveryLog, null, 2) + '\n');
 
 console.log(`Added ${additions.length}/${TARGET_COUNT}:`, additions.map(x => `${x.name} (★ ${x.stars})`).join(', '));
 if (rejectionReasons.length) console.log('Rejected:', rejectionReasons.join(' | '));
