@@ -799,7 +799,46 @@ function adminGeminiReview(token, toolId) {
         all[String(tool.id)] = review;
         setGeminiReviews_(all);
 
-        return { ok:true, message:'Gemini 재검수가 완료되었습니다.', review:review, geminiReviews:all };
+        var reviewStateAfter = null;
+        try {
+          const state = getReviewStateWithMigration_();
+          const id = String(tool.id);
+          const previous = state.items[id] && typeof state.items[id] === 'object' ? state.items[id] : null;
+          if (previous && previous.status === 'approved') {
+            const now = new Date().toISOString();
+            const history = Array.isArray(previous.history) ? previous.history.slice(-19) : [];
+            if (String(review.verdict || '') === '승인 권장') {
+              history.push({action:'rechecked',at:now,by:'gemini',verdict:String(review.verdict||''),score:Number(review.score||0)});
+              state.items[id] = Object.assign({}, previous, {
+                status:'approved',
+                lastReviewedAt:now,
+                geminiVerdict:String(review.verdict||''),
+                geminiScore:Number(review.score||0),
+                healthSnapshot:reviewHealthSnapshot_(tool),
+                history:history
+              });
+            } else {
+              history.push({action:'recheck_requires_attention',at:now,by:'gemini',verdict:String(review.verdict||''),score:Number(review.score||0)});
+              state.items[id] = Object.assign({}, previous, {
+                status:'review_required',
+                lastReviewedAt:now,
+                geminiVerdict:String(review.verdict||''),
+                geminiScore:Number(review.score||0),
+                history:history
+              });
+            }
+            reviewStateAfter = saveReviewState_(state, 'admin: persist Gemini re-review result ' + id);
+          }
+        } catch (stateErr) {}
+
+        return {
+          ok:true,
+          message:'Gemini 재검수가 완료되었습니다.',
+          review:review,
+          geminiReviews:all,
+          reviewState:reviewStateAfter,
+          reviewApproved:reviewStateAfter ? reviewApprovedIds_(reviewStateAfter) : null
+        };
       }
 
       lastError = 'Gemini API ' + code + ': ' + response.getContentText();
@@ -1571,9 +1610,7 @@ function healthSignature(tool){
     githubLicense:String(tool.githubLicense||''),
     githubArchived:tool.githubArchived===true,
     githubDisabled:tool.githubDisabled===true,
-    healthCheckStatus:String(tool.healthCheckStatus||''),
-    githubPushedAt:String(tool.githubPushedAt||''),
-    githubUpdatedAt:String(tool.githubUpdatedAt||'')
+    healthCheckStatus:String(tool.healthCheckStatus||'')
   });
 }
 function snapshotSignature(snapshot){
@@ -1584,9 +1621,7 @@ function snapshotSignature(snapshot){
     githubLicense:String(snapshot.githubLicense||''),
     githubArchived:snapshot.githubArchived===true,
     githubDisabled:snapshot.githubDisabled===true,
-    healthCheckStatus:String(snapshot.healthCheckStatus||''),
-    githubPushedAt:String(snapshot.githubPushedAt||''),
-    githubUpdatedAt:String(snapshot.githubUpdatedAt||'')
+    healthCheckStatus:String(snapshot.healthCheckStatus||'')
   });
 }
 function recheckInfo(tool){
@@ -1597,6 +1632,11 @@ function recheckInfo(tool){
   const reasons=[];
   const snapshot=record.healthSnapshot||null;
   if(snapshot&&healthSignature(tool)!==snapshotSignature(snapshot))reasons.push('GitHub 상태 변경');
+  if(snapshot){
+    const thenDays=daysSinceAdmin(snapshot.githubPushedAt||snapshot.githubUpdatedAt);
+    const nowDays=daysSinceAdmin(tool.githubPushedAt||tool.githubUpdatedAt);
+    if(thenDays<=365&&nowDays>365)reasons.push('1년 이상 미활동 전환');
+  }
   if(tool.githubArchived===true)reasons.push('Archived');
   if(tool.githubDisabled===true)reasons.push('Disabled');
   if(['not_found','forbidden','error'].includes(String(tool.healthCheckStatus||'')))reasons.push('점검 상태 변경');
