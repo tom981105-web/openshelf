@@ -503,8 +503,86 @@ function toggleCompare(id){if(compareSelected.has(id))compareSelected.delete(id)
 function compareValue(tool,key){if(key==='score')return `${openShelfScore(tool).score}/100`;if(key==='status')return activityStatus(tool).label;if(key==='activity')return relativeActivityDate(tool.githubPushedAt||tool.githubUpdatedAt);if(key==='platforms')return (tool.platforms||[]).join(', ')||'—';if(key==='license')return tool.license||'확인 필요';if(key==='price')return tool.free?'무료':'유/무료 혼합';if(key==='open')return tool.openSource?'오픈소스':'아님/확인 필요';if(key==='stars')return Number(tool.stars||0).toLocaleString();if(key==='trend')return Number(tool.starDelta1d||0)>0?`+${Number(tool.starDelta1d).toLocaleString()}`:'—';if(key==='agents')return (tool.supportedAgents||[]).slice(0,5).join(', ')||'—';return'—'}
 function openCompareDialog(){const selected=[...compareSelected].map(id=>tools.find(t=>t.id===id)).filter(Boolean);if(selected.length<2)return;const rows=[['OpenShelf Score','score'],['프로젝트 상태','status'],['최근 GitHub 활동','activity'],['카테고리','category'],['플랫폼','platforms'],['라이선스','license'],['가격','price'],['오픈소스','open'],['GitHub Stars','stars'],['24시간 증가','trend'],['지원 에이전트','agents']];els.compareDialogContent.innerHTML=`<div class="dialog-body"><div class="usage-guide-title"><span>COMPARE TOOLS</span><h3>도구 비교</h3></div><div class="compare-table-wrap"><table class="compare-table"><thead><tr><th>항목</th>${selected.map(t=>`<th><button type="button" data-compare-detail="${t.id}">${escapeHtml(t.name)}</button></th>`).join('')}</tr></thead><tbody>${rows.map(([label,key])=>`<tr><th>${label}</th>${selected.map(t=>`<td>${key==='category'?escapeHtml(t.category):escapeHtml(compareValue(t,key))}</td>`).join('')}</tr>`).join('')}</tbody></table></div></div>`;els.compareDialogContent.querySelectorAll('[data-compare-detail]').forEach(btn=>btn.addEventListener('click',()=>{els.compareDialog.close();openDetail(btn.dataset.compareDetail)}));els.compareDialog.showModal();document.body.classList.add('dialog-open')}
 function renderLatest(){const latest=[...tools].sort((a,b)=>String(b.addedAt||b.added||'').localeCompare(String(a.addedAt||a.added||''))).slice(0,4);els.latestGrid.innerHTML=latest.map(tool=>`<article class="latest-card" data-tone="${categoryTone(tool.category)}" data-latest="${tool.id}" tabindex="0"><div class="latest-top">${visualMarkup(tool)}${isLatestDiscoveryRun(tool)?'<span class="latest-badge">NEW</span>':''}</div><span class="latest-category">${tool.category}</span><h3>${tool.name}</h3><p>${tool.description}</p><time datetime="${tool.added||''}">${tool.added||''}</time></article>`).join('');els.latestGrid.querySelectorAll('[data-latest]').forEach(el=>{const open=()=>openDetail(el.dataset.latest);el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()})})}
-function relatedTools(tool){return tools.filter(t=>t.id!==tool.id&&(t.category===tool.category||(t.tags||[]).some(tag=>(tool.tags||[]).includes(tag)))).sort((a,b)=>(b.featured||0)-(a.featured||0)).slice(0,4)}
-function usageGuideMarkup(tool){if(!tool.install?.length&&!tool.usageSteps?.length&&!tool.requirements?.length&&!tool.examplePrompt)return'';const requirements=tool.requirements?.length?`<div class="usage-subsection"><h4>필요한 환경</h4><div class="requirement-list">${tool.requirements.map(x=>`<span>${x}</span>`).join('')}</div></div>`:'';const installs=tool.install?.length?`<div class="usage-subsection"><h4>설치</h4>${tool.install.map((x,i)=>`<div class="install-block"><div class="install-head"><strong>${x.title||'설치 명령어'}</strong><button type="button" data-copy-command="${i}">복사</button></div><code>${x.command}</code>${x.note?`<p>${x.note}</p>`:''}</div>`).join('')}</div>`:'';const steps=tool.usageSteps?.length?`<div class="usage-subsection"><h4>사용 순서</h4><ol class="usage-steps">${tool.usageSteps.map(x=>`<li>${x}</li>`).join('')}</ol></div>`:'';const prompt=tool.examplePrompt?`<div class="usage-subsection"><h4>예시 요청</h4><div class="prompt-example"><code>${tool.examplePrompt}</code><button type="button" data-copy-prompt>복사</button></div></div>`:'';const agents=tool.supportedAgents?.length?`<div class="usage-subsection"><h4>지원 에이전트</h4><div class="requirement-list">${tool.supportedAgents.map(x=>`<span>${x}</span>`).join('')}</div></div>`:'';return `<div class="usage-guide"><div class="usage-guide-title"><span>HOW TO USE</span><h3>사용 방법</h3></div>${tool.usageNote?`<p class="usage-note">${tool.usageNote}</p>`:''}${requirements}${installs}${steps}${prompt}${agents}</div>`}
+function relatedTools(tool){
+  const sourceTags=new Set((tool.tags||[]).map(x=>normalizeSearch(x)));
+  return tools.filter(t=>t.id!==tool.id&&!t.githubArchived&&(t.category===tool.category||(t.tags||[]).some(tag=>sourceTags.has(normalizeSearch(tag))))).map(t=>{
+    const shared=(t.tags||[]).filter(tag=>sourceTags.has(normalizeSearch(tag))).length;
+    return {tool:t,rank:(t.category===tool.category?18:0)+shared*7+openShelfScore(t).score/10+Math.log10(Number(t.stars||0)+1)};
+  }).sort((a,b)=>b.rank-a.rank).slice(0,4).map(x=>x.tool);
+}
+const companionCategoryMap={
+  '문서':['지식·검색','업무 자동화','AI 에이전트'],
+  '지식·검색':['문서','AI 에이전트','브라우저 자동화'],
+  '브라우저 자동화':['업무 자동화','지식·검색','AI 에이전트'],
+  '개발 도구':['AI 에이전트','업무 자동화','AI 평가'],
+  'AI 에이전트':['개발 도구','지식·검색','업무 자동화'],
+  'AI 모델':['AI 평가','개발 도구','AI 에이전트'],
+  'AI 평가':['AI 모델','AI 에이전트','개발 도구'],
+  '디자인·시각화':['영상·애니메이션','AI 모델','3D·CAD'],
+  '영상·애니메이션':['디자인·시각화','AI 모델','업무 자동화'],
+  '3D·CAD':['디자인·시각화','업무 자동화','개발 도구'],
+  '교육·학습':['지식·검색','문서','AI 에이전트'],
+  '공간정보':['디자인·시각화','개발 도구','지식·검색'],
+  '업무 자동화':['AI 에이전트','브라우저 자동화','문서']
+};
+function companionTools(tool){
+  const preferred=companionCategoryMap[tool.category]||[];
+  const sourceTags=new Set((tool.tags||[]).map(x=>normalizeSearch(x)));
+  return tools.filter(t=>t.id!==tool.id&&!t.githubArchived&&t.category!==tool.category).map(t=>{
+    const categoryRank=preferred.indexOf(t.category);
+    const shared=(t.tags||[]).filter(tag=>sourceTags.has(normalizeSearch(tag))).length;
+    const rank=(categoryRank>=0?30-categoryRank*5:0)+shared*4+openShelfScore(t).score/12+Math.log10(Number(t.stars||0)+1);
+    return {tool:t,rank};
+  }).filter(x=>x.rank>7).sort((a,b)=>b.rank-a.rank).slice(0,3).map(x=>x.tool);
+}
+function categoryAudience(tool){
+  const map={
+    'AI 에이전트':'AI 작업을 여러 단계로 연결하거나 반복 업무를 에이전트에 맡기려는 사용자',
+    '개발 도구':'코딩·디버깅·개발 환경을 더 빠르게 다루려는 개발자',
+    '업무 자동화':'반복 작업을 줄이고 여러 서비스를 연결하려는 사용자',
+    '지식·검색':'자료를 찾고 모아 검색 가능한 지식으로 만들려는 사용자',
+    '디자인·시각화':'아이디어를 화면·다이어그램·그래픽으로 빠르게 표현하려는 사용자',
+    '문서':'PDF·Office 등 문서를 만들고 변환하거나 정리하려는 사용자',
+    '브라우저 자동화':'브라우저에서 반복되는 클릭·수집 작업을 자동화하려는 사용자',
+    'AI 모델':'AI 모델을 직접 실행·비교·활용하려는 사용자',
+    'AI 평가':'AI 모델이나 에이전트의 품질을 점검하려는 사용자',
+    '교육·학습':'학습 자료를 만들거나 학습 과정을 보조하려는 사용자',
+    '공간정보':'지도·위치·공간 데이터를 분석하거나 시각화하려는 사용자',
+    '3D·CAD':'3D 모델이나 CAD 작업을 만들고 편집하려는 사용자',
+    '영상·애니메이션':'영상·애니메이션 제작 과정을 보조하거나 자동화하려는 사용자'
+  };
+  return map[tool.category]||'이 분야의 작업을 더 효율적으로 처리하려는 사용자';
+}
+function detailQuickSummaryMarkup(tool){
+  const platforms=(tool.platforms||[]).join(', ')||'플랫폼 정보 확인 필요';
+  const firstStep=tool.usageSteps?.[0]||tool.usageNote||tool.description;
+  const fit=categoryAudience(tool);
+  return `<div class="detail-group quick-summary"><div class="detail-group-head"><span>3-MINUTE BRIEF</span><h3>3분 요약</h3></div><div class="quick-summary-grid"><article><span>무엇을 하는 도구?</span><p>${escapeHtml(tool.description)}</p></article><article><span>누구에게 맞나?</span><p>${escapeHtml(fit)}</p></article><article><span>언제 쓰면 좋나?</span><p>${escapeHtml(firstStep)}</p></article><article><span>바로 확인할 것</span><p>${escapeHtml(platforms)} · ${escapeHtml(tool.license||'라이선스 확인 필요')}</p></article></div></div>`;
+}
+function quickStartMarkup(tool){
+  const hasInstall=Array.isArray(tool.install)&&tool.install.length;
+  const hasSteps=Array.isArray(tool.usageSteps)&&tool.usageSteps.length;
+  if(!hasInstall&&!hasSteps&&!tool.examplePrompt)return'';
+  const install=hasInstall?`<div class="quick-start-command"><span>INSTALL</span><code>${escapeHtml(tool.install[0].command||'')}</code><button type="button" data-copy-command="0">복사</button></div>`:'';
+  const steps=hasSteps?`<ol class="quick-start-steps">${tool.usageSteps.slice(0,3).map(x=>`<li>${escapeHtml(x)}</li>`).join('')}</ol>`:'';
+  const prompt=tool.examplePrompt?`<div class="quick-start-prompt"><span>EXAMPLE</span><p>${escapeHtml(tool.examplePrompt)}</p><button type="button" data-copy-prompt>예시 복사</button></div>`:'';
+  return `<div class="detail-group quick-start"><div class="detail-group-head"><span>QUICK START</span><h3>빠른 시작</h3></div>${install}${steps}${prompt}</div>`;
+}
+function cautionMarkup(tool){
+  const cautions=[];
+  const status=activityStatus(tool);
+  if(status.tone==='stale'||status.tone==='quiet')cautions.push('최근 업데이트 주기가 긴 편입니다. 도입 전 현재 유지보수 상태를 확인하세요.');
+  if(!tool.license||/확인 필요|unknown|noassertion/i.test(String(tool.license)))cautions.push('라이선스가 명확히 확인되지 않았습니다.');
+  if(!(tool.platforms||[]).length)cautions.push('지원 플랫폼 정보가 충분하지 않습니다.');
+  if(!(tool.install||[]).length)cautions.push('OpenShelf에 검증된 설치 명령이 아직 등록되지 않았습니다.');
+  if(tool.requirements?.length)cautions.push('필요 환경: '+tool.requirements.slice(0,3).join(' · '));
+  if(!cautions.length)cautions.push('현재 등록 정보 기준으로 큰 주의사항은 확인되지 않았습니다. 실제 도입 전 공식 문서를 함께 확인하세요.');
+  return `<div class="detail-group detail-cautions"><div class="detail-group-head"><span>BEFORE YOU USE</span><h3>사용 전 체크</h3></div><ul>${cautions.slice(0,4).map(x=>`<li>${escapeHtml(x)}</li>`).join('')}</ul></div>`;
+}
+function toolRelationCard(tool,label){
+  return `<button type="button" class="relation-card" data-related="${escapeHtml(tool.id)}"><span>${escapeHtml(label)}</span><strong>${escapeHtml(tool.name)}</strong><small>${escapeHtml(tool.category)} · OS ${openShelfScore(tool).score}</small><p>${escapeHtml(tool.description)}</p></button>`;
+}
+function usageGuideMarkup(tool){if(!tool.install?.length&&!tool.usageSteps?.length&&!tool.requirements?.length&&!tool.examplePrompt)return'';const requirements=tool.requirements?.length?`<div class="usage-subsection"><h4>필요한 환경</h4><div class="requirement-list">${tool.requirements.map(x=>`<span>${escapeHtml(x)}</span>`).join('')}</div></div>`:'';const installs=tool.install?.length?`<div class="usage-subsection"><h4>설치</h4>${tool.install.map((x,i)=>`<div class="install-block"><div class="install-head"><strong>${escapeHtml(x.title||'설치 명령어')}</strong><button type="button" data-copy-command="${i}">복사</button></div><code>${escapeHtml(x.command)}</code>${x.note?`<p>${escapeHtml(x.note)}</p>`:''}</div>`).join('')}</div>`:'';const steps=tool.usageSteps?.length?`<div class="usage-subsection"><h4>사용 순서</h4><ol class="usage-steps">${tool.usageSteps.map(x=>`<li>${escapeHtml(x)}</li>`).join('')}</ol></div>`:'';const prompt=tool.examplePrompt?`<div class="usage-subsection"><h4>예시 요청</h4><div class="prompt-example"><code>${escapeHtml(tool.examplePrompt)}</code><button type="button" data-copy-prompt>복사</button></div></div>`:'';const agents=tool.supportedAgents?.length?`<div class="usage-subsection"><h4>지원 에이전트</h4><div class="requirement-list">${tool.supportedAgents.map(x=>`<span>${escapeHtml(x)}</span>`).join('')}</div></div>`:'';return `<div class="usage-guide"><div class="usage-guide-title"><span>FULL GUIDE</span><h3>전체 사용 정보</h3></div>${tool.usageNote?`<p class="usage-note">${escapeHtml(tool.usageNote)}</p>`:''}${requirements}${installs}${steps}${prompt}${agents}</div>`}
 function bindUsageCopy(tool){els.dialogContent.querySelectorAll('[data-copy-command]').forEach(btn=>btn.addEventListener('click',async()=>{const item=tool.install?.[Number(btn.dataset.copyCommand)];if(!item)return;try{await navigator.clipboard.writeText(item.command);const old=btn.textContent;btn.textContent='복사됨';setTimeout(()=>btn.textContent=old,1200)}catch{}}));const promptBtn=els.dialogContent.querySelector('[data-copy-prompt]');if(promptBtn&&tool.examplePrompt)promptBtn.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(tool.examplePrompt);const old=promptBtn.textContent;promptBtn.textContent='복사됨';setTimeout(()=>promptBtn.textContent=old,1200)}catch{}})}
 function detailSummaryMarkup(tool){
   const score=openShelfScore(tool).score,status=activityStatus(tool);
@@ -523,16 +601,20 @@ function qualityPanelMarkup(tool){
 function openDetail(id){
   const tool=tools.find(t=>t.id===id);if(!tool)return;
   rememberRecentlyViewed(id);
-  const related=relatedTools(tool),isFav=favorites.has(tool.id);
-  els.dialogContent.innerHTML=`<div class="dialog-body" style="--tool-tint:var(--soft)">
-    <div class="dialog-hero">${visualMarkup(tool,true)}<div><span class="dialog-kicker">${escapeHtml(tool.category)}</span><div class="dialog-title-row"><h2>${escapeHtml(tool.name)}</h2><button class="dialog-favorite ${isFav?'active':''}" type="button" data-dialog-favorite="${tool.id}">${isFav?'♥ 저장됨':'♡ 즐겨찾기'}</button></div><p>${escapeHtml(tool.longDescription||tool.description)}</p></div></div>
+  const related=relatedTools(tool),companions=companionTools(tool),isFav=favorites.has(tool.id);
+  els.dialogContent.innerHTML=`<div class="dialog-body detail-v2" style="--tool-tint:var(--soft)">
+    <div class="dialog-hero">${visualMarkup(tool,true)}<div><span class="dialog-kicker">${escapeHtml(tool.category)}</span><div class="dialog-title-row"><h2>${escapeHtml(tool.name)}</h2><button class="dialog-favorite ${isFav?'active':''}" type="button" data-dialog-favorite="${escapeHtml(tool.id)}">${isFav?'♥ 저장됨':'♡ 즐겨찾기'}</button></div><p>${escapeHtml(tool.longDescription||tool.description)}</p></div></div>
     ${detailSummaryMarkup(tool)}
-    <div class="detail-primary-actions">${tool.website?`<a class="primary" href="${tool.website}" target="_blank" rel="noreferrer">사용하기 ↗</a>`:''}${tool.github?`<a href="${tool.github}" target="_blank" rel="noreferrer">GitHub ↗</a>`:''}</div>
-    <div class="detail-group"><div class="detail-group-head"><span>OVERVIEW</span><h3>한눈에 보기</h3></div><div class="tags">${tagsFor(tool).map(tagMarkup).join('')}</div><p class="detail-usecase">${escapeHtml(tool.description)}</p></div>
+    <div class="detail-primary-actions">${tool.website?`<a class="primary" href="${escapeHtml(tool.website)}" target="_blank" rel="noreferrer">사용하기 ↗</a>`:''}${tool.github?`<a href="${escapeHtml(tool.github)}" target="_blank" rel="noreferrer">GitHub ↗</a>`:''}</div>
+    ${detailQuickSummaryMarkup(tool)}
+    ${quickStartMarkup(tool)}
+    <div class="detail-group"><div class="detail-group-head"><span>OVERVIEW</span><h3>기능과 특징</h3></div><div class="tags">${tagsFor(tool).map(tagMarkup).join('')}</div><p class="detail-usecase">${escapeHtml(tool.longDescription||tool.description)}</p></div>
+    ${cautionMarkup(tool)}
     ${usageGuideMarkup(tool)}
     ${projectInfoMarkup(tool)}
     ${qualityPanelMarkup(tool)}
-    ${related.length?`<div class="related"><h3>비슷한 도구</h3><div class="related-list">${related.map(r=>`<button type="button" data-related="${r.id}">${escapeHtml(r.name)}</button>`).join('')}</div></div>`:''}
+    ${related.length?`<div class="detail-group relation-section"><div class="detail-group-head"><span>SIMILAR TOOLS</span><h3>비슷한 도구</h3></div><div class="relation-grid">${related.map(r=>toolRelationCard(r,'대체재')).join('')}</div></div>`:''}
+    ${companions.length?`<div class="detail-group relation-section companion-section"><div class="detail-group-head"><span>WORKS WELL WITH</span><h3>함께 쓰면 좋은 도구</h3></div><p class="relation-intro">같은 기능을 대체하는 도구가 아니라, 이 도구의 앞·뒤 작업을 보완할 만한 도구입니다.</p><div class="relation-grid">${companions.map(r=>toolRelationCard(r,'보완 도구')).join('')}</div></div>`:''}
   </div>`;
   els.dialogContent.querySelectorAll('[data-related]').forEach(btn=>btn.addEventListener('click',()=>openDetail(btn.dataset.related)));
   const favBtn=els.dialogContent.querySelector('[data-dialog-favorite]');if(favBtn)favBtn.addEventListener('click',()=>{toggleFavorite(tool.id);openDetail(tool.id)});
