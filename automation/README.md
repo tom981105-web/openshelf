@@ -1,17 +1,29 @@
-# OpenShelf external scheduler
+# OpenShelf automation
 
-GitHub Actions scheduled events can be delayed or skipped. OpenShelf therefore uses Google Apps Script to dispatch the existing workflow.
+현재 사용하는 Google Apps Script 관련 파일만 유지합니다.
 
-## Setup
+## Files
 
-1. Create a new Google Apps Script project.
-2. Paste the contents of `google-apps-script-trigger.gs`.
-3. In **Project Settings → Script Properties**, add:
-   - Key: `GITHUB_TOKEN`
-   - Value: a GitHub token with Actions write access to `tom981105-web/openshelf`.
-4. Run `setupOpenShelfTrigger()` once and approve permissions.
-5. Optionally run `testOpenShelfDispatch()` once to verify the GitHub workflow starts.
+- `OpenShelf_Admin_v6_4_Code.gs`
+  - 현재 배포용 통합 번들
+  - 관리자 웹앱 + 시간별 자동수집 트리거 + 공개 Gemini 추천 엔드포인트 포함
+- `admin-webapp.gs`
+  - 관리자 웹앱 원본 소스
+- `google-apps-script-trigger.gs`
+  - GitHub Actions 자동수집 워크플로를 호출하는 스케줄러 원본 소스
+- `README.md`
+  - 이 문서
 
-The Apps Script checks every 5 minutes. From minute 0 onward it dispatches at most once per Seoul hour. The last successful dispatch hour is stored in Script Properties, preventing duplicate hourly runs.
+이전 Admin 배포 번들(v3, v4.x, v5.x, v6.0, v6.3)은 현재 사용하지 않으므로 저장소에서 제거했습니다. 필요 시 Git 히스토리에서 복구할 수 있습니다.
 
-GitHub's workflow keeps `workflow_dispatch`, so it can still be run manually from the Actions tab.
+## Apps Script 설정
+
+Script Properties에 다음 값을 사용합니다.
+
+- `GITHUB_TOKEN`
+- `ADMIN_USER`
+- `ADMIN_PASSWORD`
+- `GEMINI_API_KEY`
+- 선택: `GEMINI_MODEL`
+
+현재 배포를 갱신할 때는 `OpenShelf_Admin_v6_4_Code.gs` 전체 내용을 Apps Script의 `Code.gs`에 반영한 뒤 기존 웹앱 배포에 새 버전을 배포합니다.
