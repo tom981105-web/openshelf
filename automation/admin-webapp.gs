@@ -1202,7 +1202,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v6.0 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v6.3 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -1274,7 +1274,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
     <section class="section review">
       <span class="kicker">REVIEW INBOX</span>
       <h2>자동 검수함</h2>
-      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. <strong>문제 도구</strong> 탭에서는 Gemini 판정, GitHub 점검 오류, Archived, 라이선스 불명확, 장기 미활동 등을 한곳에 모아 바로 조치할 수 있습니다.</p>
+      <p class="section-note">문제 도구 관리와 함께 승인 후 30일은 재검수 예정, 60일은 재검수 필요로 자동 분류합니다. 승인 당시와 비교해 라이선스·홈페이지·Archived·접근 상태가 바뀌면 즉시 재검수 필요로 이동하며, 직접 편집과 선택 일괄 작업도 지원합니다.</p>
       <div class="review-top">
         <div><span>검수 필요</span><strong id="reviewCount">0</strong></div>
         <div><span>최근 추가 20개</span><strong id="recentCount">0</strong></div>
@@ -1341,7 +1341,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
         </article>
       </div>
       <div id="operationMessage" class="operation-message"></div>
-      <p class="section-note"><strong>승인 기록:</strong> 승인/승인 취소 상태와 이력은 <code>data/review-state.json</code>에 영구 저장됩니다.</p>
+      <p class="section-note"><strong>v6.1~v6.3:</strong> 자동 재검수 분류, 관리자 직접 편집, 선택 일괄 승인·Gemini 재검수를 통합했습니다. 승인/승인 취소/편집/재검수 이력은 <code>data/review-state.json</code>에 영구 저장됩니다.</p>
       <p class="section-note"><strong>GitHub 쓰기 기능 안내:</strong> 수집 제외, 도구 삭제, 수집 설정 저장은 Apps Script의 GITHUB_TOKEN에 해당 저장소 <strong>Contents: Read and write</strong> 권한이 필요합니다. 검수 승인은 GitHub review-state에 영구 저장되고 Gemini 재검수 결과는 Apps Script 내부에 저장됩니다. Gemini 재검수/자동 수정에는 GEMINI_API_KEY가 필요하며, 자동 수정은 tools.json을 실제 변경하므로 GITHUB_TOKEN의 Contents: Read and write 권한이 필요합니다.</p>
     </section>
 
@@ -1745,7 +1745,10 @@ function renderReview(){
       btn.disabled=false;btn.textContent=original;
       if(!r||!r.ok){opMessage((r&&r.error)||'Gemini 재검수에 실패했습니다.','error');return}
       geminiReviews=r.geminiReviews&&typeof r.geminiReviews==='object'?r.geminiReviews:geminiReviews;
-      renderReview();opMessage(r.message||'Gemini 재검수가 완료되었습니다.');
+      if(r.reviewState&&typeof r.reviewState==='object')reviewState=r.reviewState;
+      if(Array.isArray(r.reviewApproved))reviewApproved=r.reviewApproved;
+      opMessage(r.message||'Gemini 재검수가 완료되었습니다.');
+      loadDashboard();
     }).adminGeminiReview(token,id);
   }));
   root.querySelectorAll('[data-gemini-autofix]').forEach(btn=>btn.addEventListener('click',()=>{
@@ -1864,7 +1867,7 @@ document.getElementById('bulkGeminiReview').addEventListener('click',()=>{
     geminiReviews=r.geminiReviews&&typeof r.geminiReviews==='object'?r.geminiReviews:geminiReviews;
     selectedReviewIds.clear();
     opMessage(r.message||'일괄 재검수를 완료했습니다.');
-    renderReview();
+    loadDashboard();
   }).adminBulkGeminiReview(token,ids);
 });
 
