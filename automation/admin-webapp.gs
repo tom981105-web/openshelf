@@ -482,6 +482,111 @@ function adminUnapproveReview(token, toolId) {
   }
 }
 
+function adminUpdateTool(token, toolId, patch) {
+  if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
+  try {
+    const id = String(toolId || '').trim();
+    if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
+    patch = patch && typeof patch === 'object' ? patch : {};
+
+    const categories = [
+      'AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서',
+      '브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'
+    ];
+    const file = githubJsonFileMeta_('data/tools.json');
+    const list = Array.isArray(file.data) ? file.data : [];
+    const index = list.findIndex(function(t){ return String(t.id) === id; });
+    if (index < 0) return { ok:false, error:'도구를 찾지 못했습니다.' };
+
+    const tool = Object.assign({}, list[index]);
+    const changed = [];
+    const name = String(patch.name || '').trim();
+    const category = String(patch.category || '').trim();
+    const description = String(patch.description || '').trim();
+    const longDescription = String(patch.longDescription || '').trim();
+    const website = String(patch.website || '').trim();
+    const license = String(patch.license || '').trim();
+    const tags = Array.isArray(patch.tags) ? patch.tags.map(String).map(function(x){ return x.trim(); }).filter(Boolean).slice(0,8) : [];
+
+    if (name && name !== String(tool.name || '')) { tool.name=name; changed.push('이름'); }
+    if (category && categories.indexOf(category) >= 0 && category !== String(tool.category || '')) { tool.category=category; changed.push('카테고리'); }
+    if (description && description !== String(tool.description || '')) { tool.description=description; changed.push('설명'); }
+    if (longDescription && longDescription !== String(tool.longDescription || '')) { tool.longDescription=longDescription; changed.push('상세 설명'); }
+    if (website !== String(tool.website || '')) { tool.website=website; changed.push('홈페이지'); }
+    if (license !== String(tool.license || '')) { tool.license=license; changed.push('라이선스'); }
+    if (tags.length && JSON.stringify(tags)!==JSON.stringify(Array.isArray(tool.tags)?tool.tags:[])) { tool.tags=tags; changed.push('태그'); }
+
+    if (!changed.length) return { ok:false, error:'변경된 내용이 없습니다.' };
+
+    list[index]=tool;
+    githubWriteJsonFile_('data/tools.json', list, 'admin: edit OpenShelf tool ' + String(tool.name || id), file.sha);
+
+    const state=getReviewStateWithMigration_();
+    const previous=state.items[id]&&typeof state.items[id]==='object'?state.items[id]:{};
+    const now=new Date().toISOString();
+    const history=Array.isArray(previous.history)?previous.history.slice(-19):[];
+    history.push({action:'metadata_edited',at:now,by:'admin',fields:changed});
+    state.items[id]=Object.assign({},previous,{status:'pending',lastReviewedAt:now,source:'admin-edit',history:history});
+    const saved=saveReviewState_(state,'admin: mark edited tool for re-review ' + id);
+
+    return {ok:true,message:'도구 정보를 수정했습니다: '+changed.join(', ')+' · 재검수 대상으로 전환했습니다.',tool:tool,changedFields:changed,reviewApproved:reviewApprovedIds_(saved),reviewState:saved};
+  } catch (err) {
+    return { ok:false, error:String(err && err.message ? err.message : err) };
+  }
+}
+
+function adminBulkApprove(token, toolIds) {
+  if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
+  try {
+    const ids=Array.isArray(toolIds)?toolIds.map(String).filter(Boolean).slice(0,20):[];
+    if(!ids.length)return {ok:false,error:'선택된 도구가 없습니다.'};
+    const tools=githubJsonFile_('data/tools.json')||[];
+    const map={};
+    (Array.isArray(tools)?tools:[]).forEach(function(t){map[String(t.id)]=t});
+    const state=getReviewStateWithMigration_();
+    const reviews=getGeminiReviews_();
+    const now=new Date().toISOString();
+    var done=0;
+
+    ids.forEach(function(id){
+      const tool=map[id]; if(!tool)return;
+      const previous=state.items[id]&&typeof state.items[id]==='object'?state.items[id]:{};
+      const gemini=reviews[id]||{};
+      const history=Array.isArray(previous.history)?previous.history.slice(-19):[];
+      history.push({action:'approved',at:now,by:'admin-bulk',geminiVerdict:String(gemini.verdict||''),geminiScore:Number(gemini.score||0)});
+      state.items[id]={
+        status:'approved',
+        approvedAt:previous.approvedAt||now,
+        approvedBy:'admin-bulk',
+        lastReviewedAt:now,
+        geminiVerdict:String(gemini.verdict||previous.geminiVerdict||''),
+        geminiScore:Number(gemini.score||previous.geminiScore||0),
+        source:'admin-bulk',
+        healthSnapshot:reviewHealthSnapshot_(tool),
+        history:history
+      };
+      done++;
+    });
+    const saved=saveReviewState_(state,'admin: bulk approve '+done+' OpenShelf reviews');
+    return {ok:true,message:done+'개 도구를 일괄 승인했습니다.',reviewApproved:reviewApprovedIds_(saved),reviewState:saved};
+  } catch(err){
+    return {ok:false,error:String(err&&err.message?err.message:err)};
+  }
+}
+
+function adminBulkGeminiReview(token, toolIds) {
+  if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
+  const ids=Array.isArray(toolIds)?toolIds.map(String).filter(Boolean).slice(0,5):[];
+  if(!ids.length)return {ok:false,error:'선택된 도구가 없습니다.'};
+  const results=[];
+  ids.forEach(function(id){
+    const r=adminGeminiReview(token,id);
+    results.push({id:id,ok:!!(r&&r.ok),verdict:r&&r.review?r.review.verdict:'',error:r&&r.error?r.error:''});
+  });
+  const success=results.filter(function(x){return x.ok}).length;
+  return {ok:true,message:success+'/'+ids.length+'개 Gemini 일괄 재검수를 완료했습니다. 한 번에 최대 5개까지 처리합니다.',results:results,geminiReviews:getGeminiReviews_()};
+}
+
 
 function githubRepoContextForReview_(tool) {
   const repo = normalizeRepoInput_(tool && tool.github);
