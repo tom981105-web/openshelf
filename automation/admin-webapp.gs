@@ -335,13 +335,39 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 .login h1{font:700 42px/1 Georgia,serif;margin:8px 0 24px}.login label{display:block;font-size:11px;margin:14px 0 6px}.login input{width:100%;padding:12px;border:1px solid var(--line);background:white}.login button,.logout{border:1px solid var(--ink);background:var(--ink);color:white;padding:11px 14px;font-weight:800;cursor:pointer}.login button{width:100%;margin-top:18px}.msg{min-height:20px;margin-top:12px;font-size:12px;color:#a33}
 #dashboard[hidden],#login[hidden]{display:none}.hero{padding:46px 0 28px}.hero h1{font:700 58px/1 Georgia,serif;margin:9px 0}.hero p{color:var(--muted)}
 .status{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--ink);background:var(--paper)}.status>div{padding:16px;border-right:1px solid var(--line)}.status>div:last-child{border-right:0}.status span{display:block;font-size:9px;color:var(--muted);margin-bottom:7px}.status strong{font:700 19px Georgia,serif}
-.section{margin-top:42px}.section h2{font:700 30px Georgia,serif}.log{border:1px solid var(--line);background:var(--paper);margin:9px 0}.log summary{cursor:pointer;padding:15px;display:flex;justify-content:space-between}.log-body{border-top:1px solid var(--line);padding:14px}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.tool{border:1px solid var(--line);padding:9px}.tool b{display:block}.tool small{color:var(--muted)}ul{color:var(--muted);font-size:12px;line-height:1.7}.deny{display:flex;flex-wrap:wrap;gap:7px}.deny-item{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper)}.deny-item code{padding:7px;border:0}.deny-item button{border:0;border-left:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer}.section-note{color:var(--muted);font-size:12px}.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.op-card{border:1px solid var(--line);background:var(--paper);padding:18px;min-height:220px}.op-card>span{font-size:9px;letter-spacing:.12em;color:var(--accent);font-weight:800}.op-card h3{font:700 22px/1 Georgia,serif;margin:12px 0 8px}.op-card p{font-size:12px;color:var(--muted);line-height:1.55}.op-card input{width:100%;border:1px solid var(--line);padding:10px;background:white}.primary-action,.inline-action button,.danger-action{border:1px solid var(--ink);background:var(--ink);color:white;padding:10px 12px;font-weight:800;cursor:pointer}.primary-action{margin-top:12px}.inline-action{display:flex;gap:7px}.inline-action input{flex:1}.tool-results{margin-top:8px;display:grid;gap:6px;max-height:190px;overflow:auto}.tool-result{border:1px solid var(--line);padding:8px;display:flex;align-items:center;justify-content:space-between;gap:10px}.tool-result small{display:block;color:var(--muted);margin-top:3px}.danger-action{background:#9f2e22;border-color:#9f2e22;padding:7px 9px;font-size:10px}.operation-message{min-height:24px;margin-top:12px;font-size:12px;font-weight:700}.operation-message.ok{color:#2d7b43}.operation-message.error{color:#a33}.settings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.settings-grid label,.automation-control{border:1px solid var(--line);background:var(--paper);padding:14px}.settings-grid label>span,.automation-control>span{display:block;font-size:9px;color:var(--muted);margin-bottom:8px;letter-spacing:.08em}.settings-grid input,.settings-grid select{width:100%;border:1px solid var(--line);background:white;padding:9px}.automation-control strong{display:block;font:700 20px Georgia,serif;margin-bottom:10px}.automation-control button{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.settings-actions{display:flex;align-items:center;gap:12px;margin-top:12px}.review-top{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}
-@media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid{grid-template-columns:1fr}.review-top{grid-template-columns:1fr}.review-top>div{border-right:0;border-bottom:1px solid var(--line)}}
+.section{margin-top:42px}.section h2{font:700 30px Georgia,serif}.log{border:1px solid var(--line);background:var(--paper);margin:9px 0}.log summary{cursor:pointer;padding:15px;display:flex;justify-content:space-between}.log-body{border-top:1px solid var(--line);padding:14px}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.tool{border:1px solid var(--line);padding:9px}.tool b{display:block}.tool small{color:var(--muted)}ul{color:var(--muted);font-size:12px;line-height:1.7}.deny{display:flex;flex-wrap:wrap;gap:7px}.deny-item{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper)}.deny-item code{padding:7px;border:0}.deny-item button{border:0;border-left:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer}.section-note{color:var(--muted);font-size:12px}.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.op-card{border:1px solid var(--line);background:var(--paper);padding:18px;min-height:220px}.op-card>span{font-size:9px;letter-spacing:.12em;color:var(--accent);font-weight:800}.op-card h3{font:700 22px/1 Georgia,serif;margin:12px 0 8px}.op-card p{font-size:12px;color:var(--muted);line-height:1.55}.op-card input{width:100%;border:1px solid var(--line);padding:10px;background:white}.primary-action,.inline-action button,.danger-action{border:1px solid var(--ink);background:var(--ink);color:white;padding:10px 12px;font-weight:800;cursor:pointer}.primary-action{margin-top:12px}.inline-action{display:flex;gap:7px}.inline-action input{flex:1}.tool-results{margin-top:8px;display:grid;gap:6px;max-height:190px;overflow:auto}.tool-result{border:1px solid var(--line);padding:8px;display:flex;align-items:center;justify-content:space-between;gap:10px}.tool-result small{display:block;color:var(--muted);margin-top:3px}.danger-action{background:#9f2e22;border-color:#9f2e22;padding:7px 9px;font-size:10px}.operation-message{min-height:24px;margin-top:12px;font-size:12px;font-weight:700}.operation-message.ok{color:#2d7b43}.operation-message.error{color:#a33}.settings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.settings-grid label,.automation-control{border:1px solid var(--line);background:var(--paper);padding:14px}.settings-grid label>span,.automation-control>span{display:block;font-size:9px;color:var(--muted);margin-bottom:8px;letter-spacing:.08em}.settings-grid input,.settings-grid select{width:100%;border:1px solid var(--line);background:white;padding:9px}.automation-control strong{display:block;font:700 20px Georgia,serif;margin-bottom:10px}.automation-control button{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.settings-actions{display:flex;align-items:center;gap:12px;margin-top:12px}
+.analytics-summary{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}
+.analytics-summary>div{padding:15px;border-right:1px solid var(--line)}
+.analytics-summary>div:last-child{border-right:0}
+.analytics-summary span{display:block;font-size:9px;color:var(--muted);margin-bottom:7px;letter-spacing:.06em}
+.analytics-summary strong{font:700 24px Georgia,serif}
+.analytics-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.analytics-card{border:1px solid var(--line);background:var(--paper);padding:16px;min-height:250px}
+.analytics-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:14px}
+.analytics-head h3{font:700 20px Georgia,serif;margin:0}
+.analytics-head span{font-size:10px;color:var(--muted)}
+.bar-chart{display:grid;gap:8px}
+.bar-row{display:grid;grid-template-columns:92px 1fr 54px;gap:8px;align-items:center;font-size:11px}
+.bar-label{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar-track{height:10px;border:1px solid var(--line);background:#fff}
+.bar-fill{height:100%;background:var(--ink)}
+.bar-value{text-align:right;color:var(--muted)}
+.status-chart{display:grid;gap:9px}
+.status-row{display:grid;grid-template-columns:82px 1fr 50px;gap:8px;align-items:center;font-size:11px}
+.status-pill{font-weight:800}
+.recent-runs{display:grid;gap:7px}
+.run-row{display:grid;grid-template-columns:92px 70px 1fr;gap:8px;font-size:11px;padding:7px 0;border-bottom:1px solid var(--line)}
+.run-row:last-child{border-bottom:0}
+.run-state{font-weight:800}
+.run-state.success{color:#2d7b43}
+.run-state.partial{color:#9b6b10}
+.run-state.failed,.run-state.error{color:#a33}.review-top{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}
+@media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid,.analytics-grid{grid-template-columns:1fr}.analytics-summary{grid-template-columns:repeat(2,1fr)}.analytics-summary>div{border-bottom:1px solid var(--line)}.review-top{grid-template-columns:1fr}.review-top>div{border-right:0;border-bottom:1px solid var(--line)}}
 </style>
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v4.3 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -366,6 +392,39 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
       <div><span>누적 자동추가</span><strong id="total">—</strong></div>
       <div><span>배치 오류</span><strong id="batch">—</strong></div>
       <div><span>상태</span><strong id="status">—</strong></div>
+    </section>
+
+    <section class="section analytics">
+      <span class="kicker">ADMIN ANALYTICS</span>
+      <h2>통계 대시보드</h2>
+      <div class="analytics-summary">
+        <div><span>전체 도구</span><strong id="statTotalTools">0</strong></div>
+        <div><span>최근 7일 추가</span><strong id="statAdded7d">0</strong></div>
+        <div><span>평균 Stars</span><strong id="statAvgStars">0</strong></div>
+        <div><span>검수 필요</span><strong id="statReviewNeeded">0</strong></div>
+      </div>
+
+      <div class="analytics-grid">
+        <article class="analytics-card">
+          <div class="analytics-head"><h3>최근 7일 추가량</h3><span id="stat7dTotal">0개</span></div>
+          <div id="dailyAddsChart" class="bar-chart"></div>
+        </article>
+
+        <article class="analytics-card">
+          <div class="analytics-head"><h3>카테고리 분포</h3><span id="categoryCount">0개 카테고리</span></div>
+          <div id="categoryChart" class="bar-chart"></div>
+        </article>
+
+        <article class="analytics-card">
+          <div class="analytics-head"><h3>자동수집 성공률</h3><span id="successRate">—</span></div>
+          <div id="runStatusChart" class="status-chart"></div>
+        </article>
+
+        <article class="analytics-card">
+          <div class="analytics-head"><h3>최근 회차</h3><span>최대 10회</span></div>
+          <div id="recentRuns" class="recent-runs"></div>
+        </article>
+      </div>
     </section>
 
     <section class="section review">
@@ -441,6 +500,7 @@ let adminConfig={};
 let automationEnabled=true;
 let reviewApproved=[];
 let reviewMode='problems';
+let adminLogs=[];
 const login=document.getElementById('login'),dash=document.getElementById('dashboard'),logout=document.getElementById('logout'),msg=document.getElementById('msg');
 const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=v=>{if(!v)return'—';const d=new Date(v);return Number.isNaN(d.getTime())?'—':new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)};
@@ -471,6 +531,7 @@ function loadDashboard(){
     document.getElementById('batch').textContent=Array.isArray(s.lastBatchErrors)&&s.lastBatchErrors.length?s.lastBatchErrors.length+'건':'없음';
     document.getElementById('status').textContent=(s.lastStatus||'ready').toUpperCase();
     const logs=Array.isArray(r.logs)?r.logs:[];
+    adminLogs=logs;
     document.getElementById('logs').innerHTML=logs.length?logs.map((x,i)=>'<details class="log" '+(i===0?'open':'')+'><summary><strong>'+fmt(x.timestamp)+'</strong><span>+'+Number(x.addedCount||0)+' / 탈락 '+Number(x.rejectedCount||0)+'</span></summary><div class="log-body"><div class="tools">'+((x.addedTools||[]).map(t=>'<div class="tool"><b>'+esc(t.name)+'</b><small>'+esc(t.category||'')+'</small></div>').join('')||'<span>추가 도구 없음</span>')+'</div>'+((x.rejected||[]).length?'<h3>탈락 사유</h3><ul>'+(x.rejected||[]).map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':'')+((x.batchErrors||[]).length?'<h3>배치 오류</h3><ul>'+(x.batchErrors||[]).map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':'')+'</div></details>').join(''):'<p>다음 자동수집부터 로그가 기록됩니다.</p>';
     adminTools=Array.isArray(r.tools)?r.tools:[];
     adminDenylist=Array.isArray(r.denylist)?r.denylist:[];
@@ -478,12 +539,101 @@ function loadDashboard(){
     automationEnabled=r.automationEnabled!==false;
     reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:[];
     renderConfig();
+    renderAnalytics();
     renderReview();
     renderDenylist();
     renderToolResults();
   }).adminGetDashboard(token);
 }
 
+
+function dayKeySeoul(value){
+  const d=new Date(value);
+  if(Number.isNaN(d.getTime()))return '';
+  const parts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(d);
+  const map={};parts.forEach(p=>{map[p.type]=p.value});
+  return map.year+'-'+map.month+'-'+map.day;
+}
+function lastSevenDayKeys(){
+  const out=[];
+  const now=new Date();
+  for(let i=6;i>=0;i--){
+    const d=new Date(now.getTime()-i*86400000);
+    out.push(dayKeySeoul(d));
+  }
+  return out;
+}
+function shortDateLabel(key){
+  const p=String(key||'').split('-');
+  return p.length===3?p[1]+'/'+p[2]:key;
+}
+function renderBars(rootId,rows){
+  const root=document.getElementById(rootId);
+  if(!root)return;
+  if(!rows.length){root.innerHTML='<p class="section-note">표시할 데이터가 없습니다.</p>';return}
+  const max=Math.max.apply(null,rows.map(r=>Number(r.value||0)).concat([1]));
+  root.innerHTML=rows.map(r=>{
+    const width=Math.max(2,Math.round((Number(r.value||0)/max)*100));
+    return '<div class="bar-row"><div class="bar-label" title="'+esc(r.label)+'">'+esc(r.label)+'</div><div class="bar-track"><div class="bar-fill" style="width:'+width+'%"></div></div><div class="bar-value">'+Number(r.value||0).toLocaleString()+'</div></div>';
+  }).join('');
+}
+function renderAnalytics(){
+  const tools=Array.isArray(adminTools)?adminTools:[];
+  const logs=Array.isArray(adminLogs)?adminLogs:[];
+  const dayKeys=lastSevenDayKeys();
+  const daySet=new Set(dayKeys);
+
+  const addedCounts={};
+  dayKeys.forEach(k=>addedCounts[k]=0);
+  tools.forEach(t=>{
+    const k=dayKeySeoul(t.addedAt||t.added);
+    if(daySet.has(k))addedCounts[k]=(addedCounts[k]||0)+1;
+  });
+  const added7=dayKeys.reduce((sum,k)=>sum+(addedCounts[k]||0),0);
+  const avgStars=tools.length?Math.round(tools.reduce((sum,t)=>sum+Number(t.stars||0),0)/tools.length):0;
+  const reviewNeeded=tools.map(t=>qualityReview(t)).filter(r=>r.score<70).length;
+
+  document.getElementById('statTotalTools').textContent=tools.length.toLocaleString();
+  document.getElementById('statAdded7d').textContent=added7.toLocaleString();
+  document.getElementById('statAvgStars').textContent=avgStars.toLocaleString();
+  document.getElementById('statReviewNeeded').textContent=reviewNeeded.toLocaleString();
+  document.getElementById('stat7dTotal').textContent=added7.toLocaleString()+'개';
+
+  renderBars('dailyAddsChart',dayKeys.map(k=>({label:shortDateLabel(k),value:addedCounts[k]||0})));
+
+  const categoryMap={};
+  tools.forEach(t=>{const k=String(t.category||'미분류');categoryMap[k]=(categoryMap[k]||0)+1});
+  const categories=Object.keys(categoryMap).map(k=>({label:k,value:categoryMap[k]})).sort((a,b)=>b.value-a.value);
+  document.getElementById('categoryCount').textContent=categories.length+'개 카테고리';
+  renderBars('categoryChart',categories.slice(0,10));
+
+  const counts={success:0,partial:0,failed:0};
+  logs.forEach(x=>{
+    const s=String(x.status||'').toLowerCase();
+    if(s==='success')counts.success++;
+    else if(s==='partial')counts.partial++;
+    else counts.failed++;
+  });
+  const totalRuns=counts.success+counts.partial+counts.failed;
+  const successRate=totalRuns?Math.round((counts.success/totalRuns)*100):0;
+  document.getElementById('successRate').textContent=totalRuns?successRate+'%':'—';
+  const statusRows=[
+    {label:'성공',value:counts.success,key:'success'},
+    {label:'부분성공',value:counts.partial,key:'partial'},
+    {label:'실패/기타',value:counts.failed,key:'failed'}
+  ];
+  const maxStatus=Math.max(1,counts.success,counts.partial,counts.failed);
+  document.getElementById('runStatusChart').innerHTML=statusRows.map(r=>{
+    const width=Math.max(2,Math.round((r.value/maxStatus)*100));
+    return '<div class="status-row"><div class="status-pill">'+r.label+'</div><div class="bar-track"><div class="bar-fill" style="width:'+width+'%"></div></div><div class="bar-value">'+r.value+'</div></div>';
+  }).join('');
+
+  const recent=logs.slice(0,10);
+  document.getElementById('recentRuns').innerHTML=recent.length?recent.map(x=>{
+    const status=String(x.status||'unknown').toLowerCase();
+    return '<div class="run-row"><div>'+fmt(x.timestamp)+'</div><div class="run-state '+esc(status)+'">'+esc(status.toUpperCase())+'</div><div>+'+Number(x.addedCount||0)+' · 탈락 '+Number(x.rejectedCount||0)+'</div></div>';
+  }).join(''):'<p class="section-note">아직 실행 기록이 없습니다.</p>';
+}
 
 function canon(v){return String(v||'').normalize('NFKC').toLowerCase().replace(/[^a-z0-9가-힣]+/g,'')}
 function qualityReview(tool){
