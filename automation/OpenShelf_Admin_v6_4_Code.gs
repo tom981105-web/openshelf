@@ -348,6 +348,42 @@ function adminGetDashboard(token) {
 }
 
 
+
+/** Authenticated, sanitized GitHub Actions validation status. No raw job logs exposed. */
+function adminGetValidationRuns(token) {
+  if (!isAdminSession_(token)) return {ok:false,error:'세션이 만료되었습니다.'};
+  try {
+    const base='https://api.github.com/repos/'+CONFIG.owner+'/'+CONFIG.repo;
+    const headers=githubAuth_().headers;
+    function getJson(url) {
+      const response=UrlFetchApp.fetch(url,{method:'get',headers:headers,muteHttpExceptions:true});
+      if(response.getResponseCode()!==200) throw new Error('GitHub Actions 조회 실패 ('+response.getResponseCode()+')');
+      return JSON.parse(response.getContentText());
+    }
+    const data=getJson(base+'/actions/workflows/validate-tools.yml/runs?per_page=12');
+    const runs=(Array.isArray(data.workflow_runs)?data.workflow_runs:[]).map(function(run){
+      return {id:run.id,status:run.status,conclusion:run.conclusion,
+        createdAt:run.created_at,url:run.html_url,
+        branch:run.head_branch};
+    });
+    // Only retrieve failed step names; never include raw logs, request headers, or secrets.
+    runs.filter(function(r){return r.conclusion==='failure'}).slice(0,4).forEach(function(run){
+      try {
+        const jobs=getJson(base+'/actions/runs/'+run.id+'/jobs?per_page=20').jobs||[];
+        run.failedSteps=jobs.reduce(function(out,job){
+          (job.steps||[]).forEach(function(step){
+            if(step.conclusion==='failure' && out.length<6)out.push(String(job.name||'검증')+' / '+String(step.name||'실패'));
+          });
+          return out;
+        },[]);
+      } catch(err) {run.failedSteps=['세부 단계 조회 실패'];}
+    });
+    return {ok:true,runs:runs};
+  } catch(err) {
+    return {ok:false,error:String(err&&err.message?err.message:err)};
+  }
+}
+
 function adminRunDiscovery(token) {
   if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
   try {
@@ -1616,6 +1652,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
       <p class="section-note"><strong>GitHub 쓰기 기능 안내:</strong> 수집 제외, 도구 삭제, 수집 설정 저장은 Apps Script의 GITHUB_TOKEN에 해당 저장소 <strong>Contents: Read and write</strong> 권한이 필요합니다. 검수 승인은 GitHub review-state에 영구 저장되고 Gemini 재검수 결과는 Apps Script 내부에 저장됩니다. Gemini 재검수/자동 수정에는 GEMINI_API_KEY가 필요하며, 자동 수정은 tools.json을 실제 변경하므로 GITHUB_TOKEN의 Contents: Read and write 권한이 필요합니다.</p>
     </section>
 
+    <section class="section"><span class="kicker">DATA VALIDATION</span><h2>자동 데이터 검증 결과</h2><p class="section-note">GitHub Actions 검증 상태입니다. 실패 항목을 클릭하면 상세 오류를 GitHub에서 확인할 수 있습니다.</p><button type="button" id="refreshValidation">검증 상태 새로고침</button><div id="validationRuns" aria-live="polite">상태 조회 중...</div></section>
     <section class="section"><span class="kicker">RUN HISTORY</span><h2>최근 수집 로그</h2><div id="logs"></div></section>
     <section class="section"><span class="kicker">수집 제외 목록</span><h2>자동수집 제외 목록</h2><p class="section-note">항목의 ×를 누르면 다시 자동수집 후보에 포함됩니다.</p><div id="deny" class="deny"></div></section>
   </main>
@@ -1672,10 +1709,34 @@ function showDash(){
   login.hidden=true;dash.hidden=false;logout.hidden=false;
   var boot=document.getElementById('bootStatus');if(boot)boot.style.display='none';
 }
+
+function loadValidationRuns(){
+  const root=document.getElementById('validationRuns');
+  if(!root||!token)return;
+  root.textContent='검증 결과를 확인하는 중...';
+  google.script.run.withFailureHandler(function(err){
+    root.textContent='검증 결과 조회 실패: '+String(err&&err.message||err);
+  }).withSuccessHandler(function(data){
+    if(!data||!data.ok){root.textContent='조회 실패: '+String(data&&data.error||'알 수 없는 오류');return}
+    const runs=Array.isArray(data.runs)?data.runs:[];
+    root.innerHTML=runs.length?runs.map(function(run){
+      const failed=run.conclusion==='failure';
+      const label=failed?'실패':run.conclusion==='success'?'성공':run.status==='in_progress'?'진행 중':'대기/기타';
+      const steps=Array.isArray(run.failedSteps)?run.failedSteps:[];
+      const url=/^https:\/\/github\.com\//.test(String(run.url||''))?run.url:'#';
+      return '<div class="log" style="margin-top:10px;padding:12px"><b>'+esc(label)+'</b> · '+esc(fmt(run.createdAt))+' · '+esc(run.branch||'')+
+        (steps.length?'<ul>'+steps.map(function(step){return '<li>'+esc(step)+'</li>'}).join('')+'</ul>':'')+
+        '<p><a href="'+esc(url)+'" target="_blank" rel="noopener noreferrer">GitHub 실행 로그 확인 ↗</a></p></div>';
+    }).join(''):'<p>최근 데이터 검증 기록이 없습니다.</p>';
+  }).adminGetValidationRuns(token);
+}
+document.getElementById('refreshValidation').addEventListener('click',loadValidationRuns);
+
 function loadDashboard(){
   google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
     if(!r||!r.ok){sessionStorage.removeItem(key);token='';showLogin();msg.textContent=(r&&r.error)||'세션이 만료되었습니다.';return}
     showDash();
+    loadValidationRuns();
     const s=r.state||{};
     document.getElementById('lastRun').textContent=fmt(s.lastRun);
     document.getElementById('lastAdded').textContent=Number.isFinite(Number(s.lastAddedCount))?'+'+Number(s.lastAddedCount):'—';
