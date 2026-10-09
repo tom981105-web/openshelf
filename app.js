@@ -4,10 +4,28 @@ let discoveryState=null;
 const FAVORITES_KEY='openshelf-favorites-v1';
 const RECENT_SEARCHES_KEY='openshelf-recent-searches-v1';
 const RECENTLY_VIEWED_KEY='openshelf-recently-viewed-v1';
-const favorites=new Set(JSON.parse(localStorage.getItem(FAVORITES_KEY)||'[]'));
-let recentSearches=JSON.parse(localStorage.getItem(RECENT_SEARCHES_KEY)||'[]').filter(Boolean).slice(0,6);
+// Browser storage is optional: malformed values or blocked storage must not break the site.
+function readStoredList(key,limit=Infinity){
+  try{
+    const value=JSON.parse(localStorage.getItem(key)||'[]');
+    return Array.isArray(value)?value.filter(x=>typeof x==='string'&&x.length>0).slice(0,limit):[];
+  }catch(error){
+    console.warn('OpenShelf: local preference unavailable',key,error);
+    return [];
+  }
+}
+function writeStoredList(key,values){
+  try{localStorage.setItem(key,JSON.stringify(values));}
+  catch(error){console.warn('OpenShelf: could not persist local preference',key,error);}
+}
+function removeStoredList(key){
+  try{localStorage.removeItem(key);}
+  catch(error){console.warn('OpenShelf: could not remove local preference',key,error);}
+}
+const favorites=new Set(readStoredList(FAVORITES_KEY));
+let recentSearches=readStoredList(RECENT_SEARCHES_KEY,6);
 let searchSuggestionIndex=-1;
-let recentlyViewed=JSON.parse(localStorage.getItem(RECENTLY_VIEWED_KEY)||'[]').filter(Boolean).slice(0,8);
+let recentlyViewed=readStoredList(RECENTLY_VIEWED_KEY,8);
 const compareSelected=new Set();
 let currentPreviewId='';
 let previewToolIds=[];
@@ -38,7 +56,7 @@ const els={
   adminGate:document.querySelector('#adminGate'),search:document.querySelector('#search'),searchWrap:document.querySelector('#searchWrap'),categoryChips:document.querySelector('#categoryChips'),categoryGrid:document.querySelector('#categoryGrid'),
   collectionGrid:document.querySelector('#collectionGrid'),openSourceOnly:document.querySelector('#openSourceOnly'),freeOnly:document.querySelector('#freeOnly'),
   favoritesOnly:document.querySelector('#favoritesOnly'),todayOnly:document.querySelector('#todayOnly'),platformFilter:document.querySelector('#platformFilter'),sortSelect:document.querySelector('#sortSelect'),
-  toolGrid:document.querySelector('#toolGrid'),resultCount:document.querySelector('#resultCount'),emptyState:document.querySelector('#emptyState'),
+  toolGrid:document.querySelector('#toolGrid'),loadMoreTools:document.querySelector('#loadMoreTools'),resultCount:document.querySelector('#resultCount'),emptyState:document.querySelector('#emptyState'),
   favoriteCount:document.querySelector('#favoriteCount'),favoritesNav:document.querySelector('#favoritesNav'),mobileFavorites:document.querySelector('#mobileFavorites'),
   mobileFavoriteCount:document.querySelector('#mobileFavoriteCount'),latestGrid:document.querySelector('#latestGrid'),heroToolCount:document.querySelector('#heroToolCount'),
   toolDialog:document.querySelector('#toolDialog'),dialogContent:document.querySelector('#dialogContent'),dialogClose:document.querySelector('#dialogClose'),
@@ -47,7 +65,7 @@ const els={
   mobileMenu:document.querySelector('#mobileMenu'),activeFilters:document.querySelector('#activeFilters'),resultContext:document.querySelector('#resultContext'),loadingState:document.querySelector('#loadingState'),errorState:document.querySelector('#errorState'),retryLoad:document.querySelector('#retryLoad'),searchSuggestions:document.querySelector('#searchSuggestions'),searchFacets:document.querySelector('#searchFacets'),trendingSection:document.querySelector('#trending'),trendingGrid:document.querySelector('#trendingGrid'),recentlyViewedSection:document.querySelector('#recentlyViewed'),recentlyViewedGrid:document.querySelector('#recentlyViewedGrid'),clearRecentlyViewed:document.querySelector('#clearRecentlyViewed'),dailyDiscoveryGrid:document.querySelector('#dailyDiscoveryGrid'),dailyDiscoveryDate:document.querySelector('#dailyDiscoveryDate'),workflowGrid:document.querySelector('#workflowGrid'),aiFinderForm:document.querySelector('#aiFinderForm'),aiFinderInput:document.querySelector('#aiFinderInput'),aiFinderSubmit:document.querySelector('#aiFinderSubmit'),aiFinderStatus:document.querySelector('#aiFinderStatus'),aiFinderResult:document.querySelector('#aiFinderResult'),compareBar:document.querySelector('#compareBar'),compareCount:document.querySelector('#compareCount'),clearCompare:document.querySelector('#clearCompare'),openCompare:document.querySelector('#openCompare'),compareDialog:document.querySelector('#compareDialog'),compareDialogContent:document.querySelector('#compareDialogContent'),compareDialogClose:document.querySelector('#compareDialogClose'),quickPreview:document.querySelector('#quickPreview'),quickPreviewContent:document.querySelector('#quickPreviewContent'),quickPreviewClose:document.querySelector('#quickPreviewClose'),quickPreviewPrev:document.querySelector('#quickPreviewPrev'),quickPreviewNext:document.querySelector('#quickPreviewNext'),quickPreviewPosition:document.querySelector('#quickPreviewPosition'),heroCategoryCount:document.querySelector('#heroCategoryCount'),heroOpenSourceCount:document.querySelector('#heroOpenSourceCount'),discoveryStatusBadge:document.querySelector('#discoveryStatusBadge'),discoveryLastRun:document.querySelector('#discoveryLastRun'),discoveryLastAdded:document.querySelector('#discoveryLastAdded'),discoveryRejected:document.querySelector('#discoveryRejected'),discoveryTotal:document.querySelector('#discoveryTotal'),discoveryBatch:document.querySelector('#discoveryBatch'),discoveryNextRun:document.querySelector('#discoveryNextRun')
 };
 
-function saveFavorites(){localStorage.setItem(FAVORITES_KEY,JSON.stringify([...favorites]));els.favoriteCount.textContent=favorites.size;els.mobileFavoriteCount.textContent=favorites.size}
+function saveFavorites(){writeStoredList(FAVORITES_KEY,[...favorites]);els.favoriteCount.textContent=favorites.size;els.mobileFavoriteCount.textContent=favorites.size}
 const SEARCH_ALIASES={
   'ai':['인공지능','llm','모델','에이전트'],'인공지능':['ai','llm'],'agent':['에이전트','agent skill','에이전트 스킬'],'에이전트':['agent','agent skill','에이전트 스킬'],
   'automation':['자동화','workflow','워크플로'],'자동화':['automation','workflow','워크플로'],'workflow':['워크플로','자동화'],'워크플로':['workflow','자동화'],
@@ -169,7 +187,7 @@ function searchScore(tool,query=state.query){
   return score+popularity;
 }
 function toolMatches(tool){if(state.todayOnly&&!isAddedToday(tool))return false;const queryMatch=!state.query||searchScore(tool,state.query)>0;return queryMatch&&(state.category==='전체'||tool.category===state.category)&&(!state.openSource||tool.openSource)&&(!state.free||tool.free)&&(!state.favoritesOnly||favorites.has(tool.id))&&(state.platform==='all'||tool.platforms.includes(state.platform))}
-function saveRecentSearch(query){const q=String(query||'').trim();if(q.length<2)return;recentSearches=[q,...recentSearches.filter(x=>normalizeSearch(x)!==normalizeSearch(q))].slice(0,6);localStorage.setItem(RECENT_SEARCHES_KEY,JSON.stringify(recentSearches))}
+function saveRecentSearch(query){const q=String(query||'').trim();if(q.length<2)return;recentSearches=[q,...recentSearches.filter(x=>normalizeSearch(x)!==normalizeSearch(q))].slice(0,6);writeStoredList(RECENT_SEARCHES_KEY,recentSearches)}
 function searchSuggestionItems(){if(!state.query)return[];return tools.map(tool=>({tool,score:searchScore(tool,state.query)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||(b.tool.stars||0)-(a.tool.stars||0)).slice(0,7)}
 function popularSearchTerms(){const categories=orderedCategories().slice(0,4);const tagCounts=new Map();for(const tool of tools){for(const tag of tool.tags||[]){const t=String(tag).trim();if(t.length<2)continue;tagCounts.set(t,(tagCounts.get(t)||0)+1)}}const tags=[...tagCounts.entries()].sort((a,b)=>b[1]-a[1]).slice(0,4).map(x=>x[0]);return [...new Set([...categories,...tags])].slice(0,7)}
 function applySearchQuery(query,commit=false){state.query=String(query||'').trim();els.search.value=state.query;if(state.query&&state.category!=='전체'){state.category='전체';renderChips()}if(commit)saveRecentSearch(state.query);renderTools();renderSearchSuggestions()}
@@ -311,7 +329,17 @@ function card(tool){
 }
 function syncUrl(detailId=null){const p=new URLSearchParams();if(state.query)p.set('q',state.query);if(state.category!=='전체')p.set('category',state.category);if(state.platform!=='all')p.set('platform',state.platform);if(state.openSource)p.set('open','1');if(state.free)p.set('free','1');if(state.favoritesOnly)p.set('favorites','1');if(state.todayOnly)p.set('today','1');if(state.sort!=='popular')p.set('sort',state.sort);if(detailId)p.set('tool',detailId);const next=location.pathname+(p.toString()?'?'+p.toString():'')+location.hash;history.replaceState(null,'',next)}
 function restoreStateFromUrl(){const p=new URLSearchParams(location.search);state.query=(p.get('q')||'').toLowerCase();state.category=p.get('category')||'전체';state.platform=p.get('platform')||'all';state.openSource=p.get('open')==='1';state.free=p.get('free')==='1';state.favoritesOnly=p.get('favorites')==='1';state.todayOnly=p.get('today')==='1';state.sort=p.get('sort')||'popular';els.search.value=state.query;els.platformFilter.value=state.platform;els.openSourceOnly.checked=state.openSource;els.freeOnly.checked=state.free;els.favoritesOnly.checked=state.favoritesOnly;if(els.todayOnly)els.todayOnly.checked=state.todayOnly;els.sortSelect.value=state.sort}
-function renderTools(){let results=tools.filter(toolMatches);if(state.query)results.sort((a,b)=>searchScore(b,state.query)-searchScore(a,state.query)||(b.stars||0)-(a.stars||0));else if(state.sort==='name')results.sort((a,b)=>a.name.localeCompare(b.name));else if(state.sort==='newest')results.sort((a,b)=>String(b.addedAt||b.added||'').localeCompare(String(a.addedAt||a.added||'')));else if(state.sort==='featured')results.sort((a,b)=>(b.featured||0)-(a.featured||0)||(b.stars||0)-(a.stars||0));else if(state.sort==='trending')results.sort((a,b)=>Number(b.starDelta1d||0)-Number(a.starDelta1d||0)||(b.stars||0)-(a.stars||0));else if(state.sort==='score')results.sort((a,b)=>openShelfScore(b).score-openShelfScore(a).score||(b.stars||0)-(a.stars||0));else results.sort((a,b)=>(b.stars||0)-(a.stars||0)||(b.forks||0)-(a.forks||0)||(b.featured||0)-(a.featured||0));previewToolIds=results.map(t=>t.id);els.toolGrid.innerHTML=results.map(card).join('');els.resultCount.textContent=`${results.length} tools`;els.resultContext.textContent=resultContextText();els.emptyState.hidden=results.length!==0;renderActiveFilters();renderSearchFacets();bindDynamicEvents();syncUrl()}
+const TOOL_PAGE_SIZE=24;
+let visibleToolCount=TOOL_PAGE_SIZE;
+function renderTools(preserveVisible=false){if(!preserveVisible)visibleToolCount=TOOL_PAGE_SIZE;let results;
+if(state.query){
+  const scored=tools.filter(t=>state.category==='전체'||t.category===state.category)
+    .filter(t=>(!state.todayOnly||isAddedToday(t))&&(!state.openSource||t.openSource)&&(!state.free||t.free)&&(!state.favoritesOnly||favorites.has(t.id))&&(state.platform==='all'||t.platforms.includes(state.platform)))
+    .map(tool=>({tool,score:searchScore(tool,state.query)}))
+    .filter(item=>item.score>0)
+    .sort((a,b)=>b.score-a.score||(b.tool.stars||0)-(a.tool.stars||0));
+  results=scored.map(item=>item.tool);
+}else{results=tools.filter(toolMatches);if(state.sort==='name')results.sort((a,b)=>a.name.localeCompare(b.name));else if(state.sort==='newest')results.sort((a,b)=>String(b.addedAt||b.added||'').localeCompare(String(a.addedAt||a.added||'')));else if(state.sort==='featured')results.sort((a,b)=>(b.featured||0)-(a.featured||0)||(b.stars||0)-(a.stars||0));else if(state.sort==='trending')results.sort((a,b)=>Number(b.starDelta1d||0)-Number(a.starDelta1d||0)||(b.stars||0)-(a.stars||0));else if(state.sort==='score')results.sort((a,b)=>openShelfScore(b).score-openShelfScore(a).score||(b.stars||0)-(a.stars||0));else results.sort((a,b)=>(b.stars||0)-(a.stars||0)||(b.forks||0)-(a.forks||0)||(b.featured||0)-(a.featured||0));}previewToolIds=results.map(t=>t.id);els.toolGrid.innerHTML=results.slice(0,visibleToolCount).map(card).join('');if(els.loadMoreTools){els.loadMoreTools.hidden=results.length<=visibleToolCount;els.loadMoreTools.textContent=`더 보기 (${Math.min(visibleToolCount,results.length)} / ${results.length})`;}els.resultCount.textContent=`${results.length} tools`;els.resultContext.textContent=resultContextText();els.emptyState.hidden=results.length!==0;renderActiveFilters();renderSearchFacets();bindDynamicEvents();syncUrl()}
 function miniToolCard(tool,badge=''){return `<article class="latest-card" data-tone="${categoryTone(tool.category)}" data-mini-tool="${tool.id}" tabindex="0"><div class="latest-top">${visualMarkup(tool)}${badge?`<span class="latest-badge">${badge}</span>`:''}</div><span class="latest-category">${escapeHtml(tool.category)}</span><h3>${escapeHtml(tool.name)}</h3><p>${escapeHtml(tool.description)}</p><time>${tool.starDelta1d>0?`★ +${Number(tool.starDelta1d).toLocaleString()} / 24h`:(tool.added||'')}</time></article>`}
 function bindMiniCards(root){root?.querySelectorAll('[data-mini-tool]').forEach(el=>{const open=()=>openDetail(el.dataset.miniTool);el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()})})}
 function renderTrending(){if(!els.trendingGrid||!els.trendingSection)return;const rising=[...tools].filter(t=>Number(t.starDelta1d||0)>0).sort((a,b)=>Number(b.starDelta1d||0)-Number(a.starDelta1d||0)||(b.stars||0)-(a.stars||0)).slice(0,4);if(!rising.length){els.trendingSection.hidden=true;return}els.trendingSection.hidden=false;els.trendingGrid.innerHTML=rising.map(t=>miniToolCard(t,`+${compactNumber(t.starDelta1d)}`)).join('');bindMiniCards(els.trendingGrid)}
@@ -422,10 +450,13 @@ function renderWorkflows(){
 }
 const AI_CLIENT_KEY='openshelf-ai-client-v1';
 function getAiClientId(){
-  let id=localStorage.getItem(AI_CLIENT_KEY)||'';
+  let id='';
+  try{id=localStorage.getItem(AI_CLIENT_KEY)||'';}
+  catch(error){console.warn('OpenShelf: AI client ID storage unavailable',error);}
   if(!id){
     id='c_'+Math.random().toString(36).slice(2)+Date.now().toString(36);
-    localStorage.setItem(AI_CLIENT_KEY,id);
+    try{localStorage.setItem(AI_CLIENT_KEY,id);}
+    catch(error){console.warn('OpenShelf: AI client ID not persisted',error);}
   }
   return id;
 }
@@ -499,7 +530,7 @@ function setupAiFinder(){
     }
   });
 }
-function rememberRecentlyViewed(id){recentlyViewed=[id,...recentlyViewed.filter(x=>x!==id)].slice(0,8);localStorage.setItem(RECENTLY_VIEWED_KEY,JSON.stringify(recentlyViewed));renderRecentlyViewed()}
+function rememberRecentlyViewed(id){recentlyViewed=[id,...recentlyViewed.filter(x=>x!==id)].slice(0,8);writeStoredList(RECENTLY_VIEWED_KEY,recentlyViewed);renderRecentlyViewed()}
 function renderRecentlyViewed(){if(!els.recentlyViewedGrid||!els.recentlyViewedSection)return;const items=recentlyViewed.map(id=>tools.find(t=>t.id===id)).filter(Boolean).slice(0,4);if(!items.length){els.recentlyViewedSection.hidden=true;return}els.recentlyViewedSection.hidden=false;els.recentlyViewedGrid.innerHTML=items.map(t=>miniToolCard(t,'RECENT')).join('');bindMiniCards(els.recentlyViewedGrid)}
 function renderCompareBar(){if(!els.compareBar)return;const n=compareSelected.size;els.compareBar.hidden=n===0;els.compareCount.textContent=n;els.openCompare.disabled=n<2;document.body.classList.toggle('compare-active',n>0)}
 function toggleCompare(id){if(compareSelected.has(id))compareSelected.delete(id);else if(compareSelected.size<4)compareSelected.add(id);renderCompareBar();renderTools()}
@@ -676,8 +707,34 @@ function moveQuickPreview(direction){
 }
 function closeDialog(){els.toolDialog.close();document.body.classList.remove('dialog-open');syncUrl()}
 function toggleFavorite(id){favorites.has(id)?favorites.delete(id):favorites.add(id);saveFavorites();renderTools()}
-function bindDynamicEvents(){els.toolGrid.querySelectorAll('[data-favorite]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();toggleFavorite(btn.dataset.favorite)}));els.toolGrid.querySelectorAll('[data-preview]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();openQuickPreview(btn.dataset.preview)}));els.toolGrid.querySelectorAll('.card[data-id]').forEach(cardEl=>{cardEl.addEventListener('mouseenter',()=>{if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){clearTimeout(previewHoverTimer);previewHoverTimer=setTimeout(()=>openQuickPreview(cardEl.dataset.id),450)}});cardEl.addEventListener('mouseleave',()=>clearTimeout(previewHoverTimer))});els.toolGrid.querySelectorAll('[data-detail]').forEach(btn=>btn.addEventListener('click',()=>{closeQuickPreview();openDetail(btn.dataset.detail)}));els.toolGrid.querySelectorAll('[data-tag]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();applyTagFilter(decodeURIComponent(btn.dataset.tag))}));els.toolGrid.querySelectorAll('[data-compare]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();toggleCompare(btn.dataset.compare)}))}
-function resetFilters(scroll=true){Object.assign(state,{category:'전체',query:'',openSource:false,free:false,favoritesOnly:false,todayOnly:false,platform:'all',sort:'popular'});els.search.value='';if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};if(els.searchFacets){els.searchFacets.hidden=true;els.searchFacets.innerHTML=''};if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};els.openSourceOnly.checked=false;els.freeOnly.checked=false;els.favoritesOnly.checked=false;if(els.todayOnly)els.todayOnly.checked=false;els.platformFilter.value='all';els.sortSelect.value='popular';renderChips();renderTools();if(scroll)document.querySelector('#tools').scrollIntoView({behavior:'smooth'})}
+// Delegate card actions once: replacing visible cards no longer creates listeners per card.
+let toolGridEventsBound=false;
+function bindDynamicEvents(){
+  if(toolGridEventsBound)return;
+  toolGridEventsBound=true;
+  els.toolGrid.addEventListener('click',e=>{
+    const button=e.target.closest('[data-favorite],[data-preview],[data-detail],[data-tag],[data-compare]');
+    if(!button||!els.toolGrid.contains(button))return;
+    if(button.hasAttribute('data-favorite')){e.stopPropagation();toggleFavorite(button.dataset.favorite)}
+    else if(button.hasAttribute('data-preview')){e.stopPropagation();openQuickPreview(button.dataset.preview)}
+    else if(button.hasAttribute('data-detail')){closeQuickPreview();openDetail(button.dataset.detail)}
+    else if(button.hasAttribute('data-tag')){e.stopPropagation();applyTagFilter(decodeURIComponent(button.dataset.tag))}
+    else if(button.hasAttribute('data-compare')){e.stopPropagation();toggleCompare(button.dataset.compare)}
+  });
+  els.toolGrid.addEventListener('mouseover',e=>{
+    const card=e.target.closest('.card[data-id]');
+    if(!card||!els.toolGrid.contains(card)||card.contains(e.relatedTarget))return;
+    if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+      clearTimeout(previewHoverTimer);
+      previewHoverTimer=setTimeout(()=>openQuickPreview(card.dataset.id),450);
+    }
+  });
+  els.toolGrid.addEventListener('mouseout',e=>{
+    const card=e.target.closest('.card[data-id]');
+    if(card&&!card.contains(e.relatedTarget))clearTimeout(previewHoverTimer);
+  });
+}
+function resetFilters(scroll=true){clearTimeout(searchRenderTimer);searchRenderTimer=null;Object.assign(state,{category:'전체',query:'',openSource:false,free:false,favoritesOnly:false,todayOnly:false,platform:'all',sort:'popular'});els.search.value='';if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};if(els.searchFacets){els.searchFacets.hidden=true;els.searchFacets.innerHTML=''};if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};els.openSourceOnly.checked=false;els.freeOnly.checked=false;els.favoritesOnly.checked=false;if(els.todayOnly)els.todayOnly.checked=false;els.platformFilter.value='all';els.sortSelect.value='popular';renderChips();renderTools();if(scroll)document.querySelector('#tools').scrollIntoView({behavior:'smooth'})}
 function renderStats(){const categoryCount=new Set(tools.map(t=>t.category)).size;const platformCount=new Set(tools.flatMap(t=>t.platforms)).size;const openCount=tools.filter(t=>t.openSource).length;els.statCategories.textContent=categoryCount;els.statPlatforms.textContent=platformCount;els.statOpenSource.textContent=openCount;if(els.heroCategoryCount)els.heroCategoryCount.textContent=categoryCount;if(els.heroOpenSourceCount)els.heroOpenSourceCount.textContent=openCount}
 function resultContextText(){const parts=[];if(state.query){const intent=queryIntentLabel(state.query);parts.push(`“${state.query}” 관련도순${intent?' · '+intent:''}`);}if(state.category!=='전체')parts.push(state.category);if(state.platform!=='all')parts.push(state.platform);if(state.openSource)parts.push('오픈소스');if(state.free)parts.push('무료');if(state.favoritesOnly)parts.push('즐겨찾기');if(state.todayOnly)parts.push('오늘 추가');return parts.length?' · '+parts.join(' · '):' · 전체 도구'}
 function activeFilterItems(){const items=[];if(state.query)items.push({key:'query',label:`검색: ${state.query}`});if(state.category!=='전체')items.push({key:'category',label:state.category});if(state.platform!=='all')items.push({key:'platform',label:state.platform});if(state.openSource)items.push({key:'openSource',label:'오픈소스'});if(state.free)items.push({key:'free',label:'무료'});if(state.favoritesOnly)items.push({key:'favoritesOnly',label:'즐겨찾기'});if(state.todayOnly)items.push({key:'todayOnly',label:'오늘 추가'});return items}
@@ -687,9 +744,12 @@ function openFavorites(){state.favoritesOnly=true;els.favoritesOnly.checked=true
 function toggleMobileMenu(){const open=!els.mobileMenu.classList.contains('open');els.mobileMenu.classList.toggle('open',open);els.mobileMenuButton.classList.toggle('active',open);els.mobileMenuButton.setAttribute('aria-expanded',String(open));els.mobileMenu.setAttribute('aria-hidden',String(!open));document.body.classList.toggle('menu-open',open)}
 function closeMobileMenu(){els.mobileMenu.classList.remove('open');els.mobileMenuButton.classList.remove('active');els.mobileMenuButton.setAttribute('aria-expanded','false');els.mobileMenu.setAttribute('aria-hidden','true');document.body.classList.remove('menu-open')}
 function setupReveal(){const items=document.querySelectorAll('.reveal');if(!('IntersectionObserver'in window)){items.forEach(x=>x.classList.add('visible'));return}const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});items.forEach(x=>io.observe(x))}
-function setupActiveNav(){const navLinks=[...document.querySelectorAll('[data-nav]')];const sections=navLinks.map(a=>document.querySelector('#'+a.dataset.nav)).filter(Boolean);const update=()=>{const probe=window.scrollY+120;let active='';for(const section of sections){if(probe>=section.offsetTop)active=section.id}navLinks.forEach(a=>a.classList.toggle('active',!!active&&a.dataset.nav===active));document.querySelector('.topbar')?.classList.toggle('compact',window.scrollY>120)};window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);update()}
-els.search.addEventListener('input',e=>{state.query=e.target.value.trim();if(state.query&&state.category!=='전체'){state.category='전체';renderChips()}renderTools();renderSearchSuggestions()});
-els.search.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){if(moveSearchSuggestion(1))e.preventDefault();return}if(e.key==='ArrowUp'){if(moveSearchSuggestion(-1))e.preventDefault();return}if(e.key==='Enter'){e.preventDefault();const active=els.searchSuggestions?.querySelector('.search-suggestion.keyboard-active');if(active){saveRecentSearch(state.query);els.searchSuggestions.hidden=true;openDetail(active.dataset.searchTool);return}saveRecentSearch(state.query);els.searchSuggestions.hidden=true;renderTools();document.querySelector('#tools').scrollIntoView({behavior:'smooth',block:'start'})}else if(e.key==='Escape'){els.searchSuggestions.hidden=true}});
+function setupActiveNav(){const navLinks=[...document.querySelectorAll('[data-nav]')];const sections=navLinks.map(a=>document.querySelector('#'+a.dataset.nav)).filter(Boolean);const update=()=>{const probe=window.scrollY+120;let active='';for(const section of sections){if(probe>=section.offsetTop)active=section.id}navLinks.forEach(a=>a.classList.toggle('active',!!active&&a.dataset.nav===active));document.querySelector('.topbar')?.classList.toggle('compact',window.scrollY>120)};let scheduled=false;const scheduleUpdate=()=>{if(scheduled)return;scheduled=true;requestAnimationFrame(()=>{scheduled=false;update()})};window.addEventListener('scroll',scheduleUpdate,{passive:true});window.addEventListener('resize',scheduleUpdate);update()}
+let searchRenderTimer=null;
+function flushSearchRender(){clearTimeout(searchRenderTimer);searchRenderTimer=null;renderTools();renderSearchSuggestions()}
+els.loadMoreTools?.addEventListener('click',()=>{visibleToolCount+=TOOL_PAGE_SIZE;renderTools(true)});
+els.search.addEventListener('input',e=>{state.query=e.target.value.trim();if(state.query&&state.category!=='전체'){state.category='전체';renderChips()}clearTimeout(searchRenderTimer);searchRenderTimer=setTimeout(flushSearchRender,120)});
+els.search.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){if(moveSearchSuggestion(1))e.preventDefault();return}if(e.key==='ArrowUp'){if(moveSearchSuggestion(-1))e.preventDefault();return}if(e.key==='Enter'){e.preventDefault();clearTimeout(searchRenderTimer);searchRenderTimer=null;const active=els.searchSuggestions?.querySelector('.search-suggestion.keyboard-active');if(active){saveRecentSearch(state.query);els.searchSuggestions.hidden=true;openDetail(active.dataset.searchTool);return}saveRecentSearch(state.query);els.searchSuggestions.hidden=true;renderTools();document.querySelector('#tools').scrollIntoView({behavior:'smooth',block:'start'})}else if(e.key==='Escape'){els.searchSuggestions.hidden=true}});
 els.search.addEventListener('focus',()=>{els.searchWrap.classList.add('focused');renderSearchSuggestions()});
 els.search.addEventListener('blur',()=>{els.searchWrap.classList.remove('focused');setTimeout(()=>{if(els.searchSuggestions)els.searchSuggestions.hidden=true},120)});
 els.openSourceOnly.addEventListener('change',e=>{state.openSource=e.target.checked;renderTools()});els.freeOnly.addEventListener('change',e=>{state.free=e.target.checked;renderTools()});els.favoritesOnly.addEventListener('change',e=>{state.favoritesOnly=e.target.checked;renderTools()});els.todayOnly?.addEventListener('change',e=>{state.todayOnly=e.target.checked;renderTools()});els.platformFilter.addEventListener('change',e=>{state.platform=e.target.value;renderTools()});els.sortSelect.addEventListener('change',e=>{state.sort=e.target.value;renderTools()});
@@ -714,7 +774,7 @@ document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!=
 async function loadTools(){els.loadingState.hidden=false;els.errorState.hidden=true;els.toolGrid.hidden=true;try{const [r,sr]=await Promise.all([fetch('./data/tools.json',{cache:'no-store'}),fetch('./data/discovery-state.json',{cache:'no-store'})]);if(!r.ok)throw new Error('load failed');tools=await r.json();discoveryState=sr.ok?await sr.json():null;restoreStateFromUrl();els.heroToolCount.textContent=tools.length;saveFavorites();renderChips();renderCategories();renderCollections();renderLatest();renderTrending();renderDailyDiscovery();renderWorkflows();setupAiFinder();renderRecentlyViewed();renderStats();renderDiscoveryStatus();renderTools();els.loadingState.hidden=true;els.toolGrid.hidden=false;setupReveal();setupActiveNav();const detailId=new URLSearchParams(location.search).get('tool');if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId)}catch{els.loadingState.hidden=true;els.errorState.hidden=false;els.toolGrid.hidden=true}}
 els.retryLoad.addEventListener('click',loadTools);
 window.addEventListener('popstate',()=>{if(!tools.length)return;restoreStateFromUrl();renderChips();renderTools();const detailId=new URLSearchParams(location.search).get('tool');if(detailId)openDetail(detailId);else if(els.toolDialog.open)closeDialog()});
-els.clearRecentlyViewed?.addEventListener('click',()=>{recentlyViewed=[];localStorage.removeItem(RECENTLY_VIEWED_KEY);renderRecentlyViewed()});
+els.clearRecentlyViewed?.addEventListener('click',()=>{recentlyViewed=[];removeStoredList(RECENTLY_VIEWED_KEY);renderRecentlyViewed()});
 els.clearCompare?.addEventListener('click',()=>{compareSelected.clear();renderCompareBar();renderTools()});
 els.openCompare?.addEventListener('click',openCompareDialog);
 els.compareDialogClose?.addEventListener('click',()=>{els.compareDialog.close();document.body.classList.remove('dialog-open')});
