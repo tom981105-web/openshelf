@@ -58,13 +58,17 @@ function adminGetDashboard(token) {
     const logs = githubJsonFile_('data/discovery-log.json') || [];
     const denylist = githubJsonFile_('data/discovery-denylist.json') || [];
     const toolData = githubJsonFile_('data/tools.json') || [];
+    const config = githubJsonFile_('data/discovery-config.json') || {};
+    const automationEnabled = PropertiesService.getScriptProperties().getProperty('OPENSHELF_AUTOMATION_ENABLED') !== 'false';
 
     return {
       ok: true,
       state: state,
       logs: Array.isArray(logs) ? logs.slice(0, 50) : [],
       denylist: Array.isArray(denylist) ? denylist : [],
-      tools: Array.isArray(toolData) ? toolData.map(function(t){ return { id:t.id, name:t.name, category:t.category, github:t.github }; }) : []
+      tools: Array.isArray(toolData) ? toolData.map(function(t){ return { id:t.id, name:t.name, category:t.category, github:t.github }; }) : [],
+      config: config,
+      automationEnabled: automationEnabled
     };
   } catch (err) {
     return { ok: false, error: String(err && err.message ? err.message : err) };
@@ -204,6 +208,51 @@ function githubWriteJsonFile_(path, data, message, sha) {
   return JSON.parse(response.getContentText());
 }
 
+
+function adminSaveDiscoveryConfig(token, input) {
+  if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
+  try {
+    input = input || {};
+    var target = Number(input.targetPerHour);
+    var round = Number(input.roundSize);
+    var stars = Number(input.minimumStars);
+    var pages = Number(input.searchPagesPerTopic);
+    var retries = Number(input.geminiRetryAttempts);
+
+    if ([10,20,30].indexOf(target) < 0) return { ok:false, error:'시간당 수집 개수는 10, 20, 30 중 하나여야 합니다.' };
+    if (![5,10].includes(round) || target % round !== 0) return { ok:false, error:'라운드 크기는 5 또는 10이며 총 수집 개수와 나누어떨어져야 합니다.' };
+    if (!Number.isInteger(stars) || stars < 0 || stars > 10000000) return { ok:false, error:'최소 Stars 값이 올바르지 않습니다.' };
+    if (!Number.isInteger(pages) || pages < 1 || pages > 5) return { ok:false, error:'검색 페이지 수는 1~5입니다.' };
+    if (!Number.isInteger(retries) || retries < 1 || retries > 5) return { ok:false, error:'Gemini 재시도는 1~5회입니다.' };
+
+    const file = githubJsonFileMeta_('data/discovery-config.json');
+    const next = {
+      version: 1,
+      targetPerHour: target,
+      roundSize: round,
+      minimumStars: stars,
+      searchPagesPerTopic: pages,
+      geminiRetryAttempts: retries
+    };
+
+    githubWriteJsonFile_('data/discovery-config.json', next, 'admin: update discovery settings', file.sha);
+    return { ok:true, message:'자동수집 설정을 저장했습니다.', config:next };
+  } catch (err) {
+    return { ok:false, error:String(err && err.message ? err.message : err) };
+  }
+}
+
+function adminSetAutomationEnabled(token, enabled) {
+  if (!isAdminSession_(token)) return { ok:false, error:'세션이 만료되었습니다.' };
+  const value = enabled !== false;
+  PropertiesService.getScriptProperties().setProperty('OPENSHELF_AUTOMATION_ENABLED', value ? 'true' : 'false');
+  return {
+    ok:true,
+    enabled:value,
+    message:value ? '자동수집을 재개했습니다.' : '자동수집을 일시정지했습니다.'
+  };
+}
+
 function isAdminSession_(token) {
   if (!token) return false;
   return CacheService.getScriptCache().get('admin-session:' + token) === '1';
@@ -250,8 +299,8 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 .login h1{font:700 42px/1 Georgia,serif;margin:8px 0 24px}.login label{display:block;font-size:11px;margin:14px 0 6px}.login input{width:100%;padding:12px;border:1px solid var(--line);background:white}.login button,.logout{border:1px solid var(--ink);background:var(--ink);color:white;padding:11px 14px;font-weight:800;cursor:pointer}.login button{width:100%;margin-top:18px}.msg{min-height:20px;margin-top:12px;font-size:12px;color:#a33}
 #dashboard[hidden],#login[hidden]{display:none}.hero{padding:46px 0 28px}.hero h1{font:700 58px/1 Georgia,serif;margin:9px 0}.hero p{color:var(--muted)}
 .status{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--ink);background:var(--paper)}.status>div{padding:16px;border-right:1px solid var(--line)}.status>div:last-child{border-right:0}.status span{display:block;font-size:9px;color:var(--muted);margin-bottom:7px}.status strong{font:700 19px Georgia,serif}
-.section{margin-top:42px}.section h2{font:700 30px Georgia,serif}.log{border:1px solid var(--line);background:var(--paper);margin:9px 0}.log summary{cursor:pointer;padding:15px;display:flex;justify-content:space-between}.log-body{border-top:1px solid var(--line);padding:14px}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.tool{border:1px solid var(--line);padding:9px}.tool b{display:block}.tool small{color:var(--muted)}ul{color:var(--muted);font-size:12px;line-height:1.7}.deny{display:flex;flex-wrap:wrap;gap:7px}.deny-item{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper)}.deny-item code{padding:7px;border:0}.deny-item button{border:0;border-left:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer}.section-note{color:var(--muted);font-size:12px}.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.op-card{border:1px solid var(--line);background:var(--paper);padding:18px;min-height:220px}.op-card>span{font-size:9px;letter-spacing:.12em;color:var(--accent);font-weight:800}.op-card h3{font:700 22px/1 Georgia,serif;margin:12px 0 8px}.op-card p{font-size:12px;color:var(--muted);line-height:1.55}.op-card input{width:100%;border:1px solid var(--line);padding:10px;background:white}.primary-action,.inline-action button,.danger-action{border:1px solid var(--ink);background:var(--ink);color:white;padding:10px 12px;font-weight:800;cursor:pointer}.primary-action{margin-top:12px}.inline-action{display:flex;gap:7px}.inline-action input{flex:1}.tool-results{margin-top:8px;display:grid;gap:6px;max-height:190px;overflow:auto}.tool-result{border:1px solid var(--line);padding:8px;display:flex;align-items:center;justify-content:space-between;gap:10px}.tool-result small{display:block;color:var(--muted);margin-top:3px}.danger-action{background:#9f2e22;border-color:#9f2e22;padding:7px 9px;font-size:10px}.operation-message{min-height:24px;margin-top:12px;font-size:12px;font-weight:700}.operation-message.ok{color:#2d7b43}.operation-message.error{color:#a33}
-@media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid{grid-template-columns:1fr}}
+.section{margin-top:42px}.section h2{font:700 30px Georgia,serif}.log{border:1px solid var(--line);background:var(--paper);margin:9px 0}.log summary{cursor:pointer;padding:15px;display:flex;justify-content:space-between}.log-body{border-top:1px solid var(--line);padding:14px}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.tool{border:1px solid var(--line);padding:9px}.tool b{display:block}.tool small{color:var(--muted)}ul{color:var(--muted);font-size:12px;line-height:1.7}.deny{display:flex;flex-wrap:wrap;gap:7px}.deny-item{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper)}.deny-item code{padding:7px;border:0}.deny-item button{border:0;border-left:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer}.section-note{color:var(--muted);font-size:12px}.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.op-card{border:1px solid var(--line);background:var(--paper);padding:18px;min-height:220px}.op-card>span{font-size:9px;letter-spacing:.12em;color:var(--accent);font-weight:800}.op-card h3{font:700 22px/1 Georgia,serif;margin:12px 0 8px}.op-card p{font-size:12px;color:var(--muted);line-height:1.55}.op-card input{width:100%;border:1px solid var(--line);padding:10px;background:white}.primary-action,.inline-action button,.danger-action{border:1px solid var(--ink);background:var(--ink);color:white;padding:10px 12px;font-weight:800;cursor:pointer}.primary-action{margin-top:12px}.inline-action{display:flex;gap:7px}.inline-action input{flex:1}.tool-results{margin-top:8px;display:grid;gap:6px;max-height:190px;overflow:auto}.tool-result{border:1px solid var(--line);padding:8px;display:flex;align-items:center;justify-content:space-between;gap:10px}.tool-result small{display:block;color:var(--muted);margin-top:3px}.danger-action{background:#9f2e22;border-color:#9f2e22;padding:7px 9px;font-size:10px}.operation-message{min-height:24px;margin-top:12px;font-size:12px;font-weight:700}.operation-message.ok{color:#2d7b43}.operation-message.error{color:#a33}.settings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.settings-grid label,.automation-control{border:1px solid var(--line);background:var(--paper);padding:14px}.settings-grid label>span,.automation-control>span{display:block;font-size:9px;color:var(--muted);margin-bottom:8px;letter-spacing:.08em}.settings-grid input,.settings-grid select{width:100%;border:1px solid var(--line);background:white;padding:9px}.automation-control strong{display:block;font:700 20px Georgia,serif;margin-bottom:10px}.automation-control button{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.settings-actions{display:flex;align-items:center;gap:12px;margin-top:12px}
+@media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -280,6 +329,20 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
       <div><span>누적 자동추가</span><strong id="total">—</strong></div>
       <div><span>배치 오류</span><strong id="batch">—</strong></div>
       <div><span>상태</span><strong id="status">—</strong></div>
+    </section>
+
+    <section class="section settings">
+      <span class="kicker">DISCOVERY SETTINGS</span>
+      <h2>자동수집 설정</h2>
+      <div class="settings-grid">
+        <label><span>시간당 수집</span><select id="cfgTarget"><option value="10">10개</option><option value="20">20개</option><option value="30">30개</option></select></label>
+        <label><span>라운드당 수집</span><select id="cfgRound"><option value="5">5개</option><option value="10">10개</option></select></label>
+        <label><span>최소 Stars</span><input id="cfgStars" type="number" min="0" max="10000000" step="50"></label>
+        <label><span>검색 페이지</span><select id="cfgPages"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <label><span>Gemini 재시도</span><select id="cfgRetries"><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></label>
+        <div class="automation-control"><span>자동수집</span><strong id="automationState">—</strong><button id="toggleAutomation" type="button">—</button></div>
+      </div>
+      <div class="settings-actions"><button id="saveConfig" class="primary-action" type="button">설정 저장</button><span id="configSummary" class="section-note"></span></div>
     </section>
 
     <section class="section operations">
@@ -318,6 +381,8 @@ const key='openshelf-admin-session';
 let token=sessionStorage.getItem(key)||'';
 let adminTools=[];
 let adminDenylist=[];
+let adminConfig={};
+let automationEnabled=true;
 const login=document.getElementById('login'),dash=document.getElementById('dashboard'),logout=document.getElementById('logout'),msg=document.getElementById('msg');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=v=>{if(!v)return'—';const d=new Date(v);return Number.isNaN(d.getTime())?'—':new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)};
@@ -339,11 +404,49 @@ function loadDashboard(){
     document.getElementById('logs').innerHTML=logs.length?logs.map((x,i)=>`<details class="log" ${i===0?'open':''}><summary><strong>${fmt(x.timestamp)}</strong><span>+${Number(x.addedCount||0)} / 탈락 ${Number(x.rejectedCount||0)}</span></summary><div class="log-body"><div class="tools">${(x.addedTools||[]).map(t=>`<div class="tool"><b>${esc(t.name)}</b><small>${esc(t.category||'')}</small></div>`).join('')||'<span>추가 도구 없음</span>'}</div>${(x.rejected||[]).length?'<h3>탈락 사유</h3><ul>'+(x.rejected||[]).map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':''}${(x.batchErrors||[]).length?'<h3>배치 오류</h3><ul>'+(x.batchErrors||[]).map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':''}</div></details>`).join(''):'<p>다음 자동수집부터 로그가 기록됩니다.</p>';
     adminTools=Array.isArray(r.tools)?r.tools:[];
     adminDenylist=Array.isArray(r.denylist)?r.denylist:[];
+    adminConfig=r.config||{};
+    automationEnabled=r.automationEnabled!==false;
+    renderConfig();
     renderDenylist();
     renderToolResults();
   }).adminGetDashboard(token);
 }
 
+
+function renderConfig(){
+  document.getElementById('cfgTarget').value=String(adminConfig.targetPerHour||20);
+  document.getElementById('cfgRound').value=String(adminConfig.roundSize||10);
+  document.getElementById('cfgStars').value=String(adminConfig.minimumStars??200);
+  document.getElementById('cfgPages').value=String(adminConfig.searchPagesPerTopic||3);
+  document.getElementById('cfgRetries').value=String(adminConfig.geminiRetryAttempts||3);
+  document.getElementById('automationState').textContent=automationEnabled?'RUNNING':'PAUSED';
+  const toggle=document.getElementById('toggleAutomation');
+  toggle.textContent=automationEnabled?'일시정지':'재개';
+  document.getElementById('configSummary').textContent=(adminConfig.roundSize||10)+'개 × '+Math.ceil((adminConfig.targetPerHour||20)/(adminConfig.roundSize||10))+'라운드';
+}
+document.getElementById('saveConfig')?.addEventListener('click',()=>{
+  const input={
+    targetPerHour:Number(document.getElementById('cfgTarget').value),
+    roundSize:Number(document.getElementById('cfgRound').value),
+    minimumStars:Number(document.getElementById('cfgStars').value),
+    searchPagesPerTopic:Number(document.getElementById('cfgPages').value),
+    geminiRetryAttempts:Number(document.getElementById('cfgRetries').value)
+  };
+  opMessage('설정을 저장하는 중...');
+  google.script.run.withSuccessHandler(r=>{
+    if(!r||!r.ok){opMessage(r?.error||'설정 저장에 실패했습니다.','error');return}
+    adminConfig=r.config||input;renderConfig();opMessage(r.message||'설정을 저장했습니다.');
+  }).adminSaveDiscoveryConfig(token,input);
+});
+document.getElementById('toggleAutomation')?.addEventListener('click',()=>{
+  const next=!automationEnabled;
+  if(!confirm(next?'자동수집을 다시 시작할까요?':'매시간 자동수집을 일시정지할까요?'))return;
+  opMessage('상태를 변경하는 중...');
+  google.script.run.withSuccessHandler(r=>{
+    if(!r||!r.ok){opMessage(r?.error||'상태 변경에 실패했습니다.','error');return}
+    automationEnabled=r.enabled!==false;renderConfig();opMessage(r.message||'변경했습니다.');
+  }).adminSetAutomationEnabled(token,next);
+});
 
 function opMessage(text,type='ok'){
   const el=document.getElementById('operationMessage');
