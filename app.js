@@ -780,7 +780,78 @@ els.adminGate?.addEventListener('click',()=>{
 });
 els.favoritesNav.addEventListener('click',openFavorites);els.mobileFavorites.addEventListener('click',openFavorites);els.scrollToAll.addEventListener('click',()=>document.querySelector('#tools').scrollIntoView({behavior:'smooth'}));els.resetFilters.addEventListener('click',()=>resetFilters());els.dialogClose.addEventListener('click',closeDialog);els.toolDialog.addEventListener('click',e=>{if(e.target===els.toolDialog)closeDialog()});els.mobileMenuButton.addEventListener('click',toggleMobileMenu);els.mobileMenu.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeMobileMenu));
 document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==els.search){e.preventDefault();els.search.focus()}if(e.key==='Escape'&&els.toolDialog.open)closeDialog();else if(e.key==='Escape')closeMobileMenu()});
-async function loadTools(){els.loadingState.hidden=false;els.errorState.hidden=true;els.toolGrid.hidden=true;try{const [r,sr]=await Promise.all([fetch('./data/tools.json',{cache:'no-store'}),fetch('./data/discovery-state.json',{cache:'no-store'})]);if(!r.ok)throw new Error('load failed');tools=await r.json();discoveryState=sr.ok?await sr.json():null;restoreStateFromUrl();els.heroToolCount.textContent=tools.length;saveFavorites();renderChips();renderCategories();renderCollections();renderLatest();renderTrending();renderDailyDiscovery();renderWorkflows();setupAiFinder();renderRecentlyViewed();renderStats();renderDiscoveryStatus();renderTools();els.loadingState.hidden=true;els.toolGrid.hidden=false;setupReveal();setupActiveNav();const detailId=new URLSearchParams(location.search).get('tool');if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId)}catch{els.loadingState.hidden=true;els.errorState.hidden=false;els.toolGrid.hidden=true}}
+// Retry transient failures without hiding previously loaded results.
+let toolsLoadInProgress=false;
+let toolsUiInitialized=false;
+const DATA_FETCH_TIMEOUT_MS=12000;
+async function fetchJsonWithTimeout(url){
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),DATA_FETCH_TIMEOUT_MS);
+  try{
+    const response=await fetch(url,{cache:'no-store',signal:controller.signal});
+    if(!response.ok)throw new Error('HTTP '+response.status+' for '+url);
+    return await response.json();
+  }finally{clearTimeout(timeout)}
+}
+async function fetchRequiredTools(){
+  let lastError;
+  for(let attempt=0;attempt<3;attempt++){
+    try{
+      const data=await fetchJsonWithTimeout('./data/tools.json');
+      if(!Array.isArray(data))throw new Error('도구 데이터가 배열이 아닙니다.');
+      // Reject malformed responses before replacing valid in-memory data.
+      if(data.some(t=>!t||typeof t!=='object'||typeof t.id!=='string'||typeof t.name!=='string'||!Array.isArray(t.tags)||!Array.isArray(t.platforms)||typeof t.category!=='string'||typeof t.description!=='string'))throw new Error('도구 데이터 형식이 올바르지 않습니다.');
+      return data;
+    }catch(error){
+      lastError=error;
+      if(attempt<2)await new Promise(resolve=>setTimeout(resolve,450*(attempt+1)));
+    }
+  }
+  throw lastError;
+}
+async function loadTools(){
+  if(toolsLoadInProgress)return;
+  toolsLoadInProgress=true;
+  const hadTools=toolsUiInitialized;
+  els.retryLoad.disabled=true;
+  if(!hadTools){els.loadingState.hidden=false;els.toolGrid.hidden=true}
+  els.errorState.hidden=true;
+  try{
+    const freshTools=await fetchRequiredTools();
+    // Discovery metadata is optional: a failed state request must not hide tool cards.
+    let freshState=null;
+    try{
+      const value=await fetchJsonWithTimeout('./data/discovery-state.json');
+      if(value&&typeof value==='object'&&!Array.isArray(value))freshState=value;
+    }catch(error){console.warn('OpenShelf: optional discovery status unavailable',error)}
+    tools=freshTools;
+    discoveryState=freshState;
+    if(!hadTools)restoreStateFromUrl();
+    els.heroToolCount.textContent=tools.length;
+    saveFavorites();
+    renderChips();renderCategories();renderCollections();renderLatest();renderTrending();
+    renderDailyDiscovery();renderWorkflows();setupAiFinder();renderRecentlyViewed();
+    renderStats();renderDiscoveryStatus();renderTools();
+    if(!toolsUiInitialized){setupReveal();setupActiveNav();toolsUiInitialized=true}
+    els.loadingState.hidden=true;els.toolGrid.hidden=false;
+    if(!hadTools){
+      const detailId=new URLSearchParams(location.search).get('tool');
+      if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId);
+    }
+  }catch(error){
+    console.error('OpenShelf: tool data loading failed',error);
+    els.loadingState.hidden=true;
+    // Keep the last good directory visible if a refresh fails.
+    if(hadTools){els.toolGrid.hidden=false}
+    else{els.toolGrid.hidden=true}
+    els.errorState.hidden=false;
+    const message=els.errorState.querySelector('p');
+    if(message)message.textContent=hadTools?'새 데이터를 불러오지 못했어요. 기존 목록은 계속 사용할 수 있습니다. 다시 시도해 주세요.':'데이터 연결에 문제가 생겼어요. 잠시 후 다시 시도해 주세요.';
+  }finally{
+    toolsLoadInProgress=false;
+    els.retryLoad.disabled=false;
+  }
+}
 els.retryLoad.addEventListener('click',loadTools);
 window.addEventListener('popstate',()=>{if(!tools.length)return;restoreStateFromUrl();renderChips();renderTools();const detailId=new URLSearchParams(location.search).get('tool');if(detailId)openDetail(detailId);else if(els.toolDialog.open)closeDialog()});
 els.clearRecentlyViewed?.addEventListener('click',()=>{recentlyViewed=[];removeStoredList(RECENTLY_VIEWED_KEY);renderRecentlyViewed()});
