@@ -9,9 +9,9 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 const GITHUB_EVENT_NAME = process.env.GITHUB_EVENT_NAME || '';
 const BATCH_SIZE = 10;
-const BATCH_COUNT = 2;
-const TARGET_COUNT = BATCH_SIZE * BATCH_COUNT;
-const CANDIDATE_COUNT = 30;
+const BATCH_COUNT = 1;
+const TARGET_COUNT = BATCH_SIZE;
+const CANDIDATE_COUNT = 20;
 const SEARCH_PAGES_PER_TOPIC = 3;
 const MIN_DESCRIPTION_LENGTH = 20;
 const MIN_LONG_DESCRIPTION_LENGTH = 40;
@@ -183,6 +183,28 @@ for (const repo of candidates) {
 
 const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent?key=${encodeURIComponent(GEMINI_API_KEY)}`;
 
+async function generateWithRetry(url, options, batchNumber, maxAttempts = 3) {
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= maxAttempts; attempt++) {
+    const response = await fetch(url, options);
+
+    if (response.ok) return response;
+
+    const body = await response.text();
+    const retryable = response.status === 429 || response.status === 500 || response.status === 502 || response.status === 503 || response.status === 504;
+    lastError = new Error(`Gemini API batch ${batchNumber} ${response.status}: ${body}`);
+
+    if (!retryable || attempt === maxAttempts) throw lastError;
+
+    const waitMs = attempt === 1 ? 2500 : 6000;
+    console.warn(`Gemini batch ${batchNumber} attempt ${attempt}/${maxAttempts} failed with ${response.status}. Retrying in ${waitMs}ms...`);
+    await sleep(waitMs);
+  }
+
+  throw lastError || new Error(`Gemini batch ${batchNumber} failed.`);
+}
+
 async function selectBatch(batchCandidates, batchNumber) {
   const prompt = `
 You are curating OpenShelf, a Korean directory of useful open-source/free software and AI tools.
@@ -244,7 +266,7 @@ Candidates, already sorted from most popular to less popular:
 ${JSON.stringify(batchCandidates)}
 `;
 
-  const geminiRes = await fetch(geminiUrl, {
+  const geminiRes = await generateWithRetry(geminiUrl, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -256,9 +278,7 @@ ${JSON.stringify(batchCandidates)}
         responseMimeType: 'application/json'
       }
     })
-  });
-
-  if (!geminiRes.ok) throw new Error(`Gemini API batch ${batchNumber} ${geminiRes.status}: ${await geminiRes.text()}`);
+  }, batchNumber);
   const geminiData = await geminiRes.json();
   const modelText = geminiData?.candidates?.[0]?.content?.parts?.map(p => p.text || '').join('') || '';
   const parsed = JSON.parse(modelText);
@@ -272,8 +292,8 @@ ${JSON.stringify(batchCandidates)}
 const selectedItems = [];
 const batchErrors = [];
 for (let batchIndex = 0; batchIndex < BATCH_COUNT; batchIndex++) {
-  const start = batchIndex * 15;
-  const batchCandidates = enriched.slice(start, start + 15);
+  const start = batchIndex * CANDIDATE_COUNT;
+  const batchCandidates = enriched.slice(start, start + CANDIDATE_COUNT);
   if (batchCandidates.length < BATCH_SIZE) {
     batchErrors.push(`Batch ${batchIndex + 1}: only ${batchCandidates.length} candidates`);
     continue;
