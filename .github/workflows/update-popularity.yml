@@ -30,7 +30,15 @@ jobs:
 
             const toolsPath = 'data/tools.json';
             const statePath = 'data/health-state.json';
-            const tools = JSON.parse(fs.readFileSync(toolsPath, 'utf8'));
+            const rawTools = fs.readFileSync(toolsPath, 'utf8');
+            if (!rawTools.trim()) {
+              throw new Error('Safety stop: data/tools.json is empty. Refusing to overwrite the catalog.');
+            }
+            const tools = JSON.parse(rawTools);
+            if (!Array.isArray(tools) || tools.length < 100) {
+              throw new Error(`Safety stop: suspicious tools catalog size (${Array.isArray(tools) ? tools.length : 'not-array'}). Refusing to write.`);
+            }
+            const startingToolCount = tools.length;
             const now = new Date().toISOString();
 
             let state = {};
@@ -177,8 +185,24 @@ jobs:
               failures: failures.slice(0, 50)
             };
 
-            fs.writeFileSync(toolsPath, JSON.stringify(tools, null, 2) + '\n');
-            fs.writeFileSync(statePath, JSON.stringify(state, null, 2) + '\n');
+            if (!Array.isArray(tools) || tools.length !== startingToolCount || tools.length < 100) {
+              throw new Error(`Safety stop before write: catalog count changed unexpectedly (${startingToolCount} -> ${Array.isArray(tools) ? tools.length : 'not-array'}).`);
+            }
+
+            const toolsJson = JSON.stringify(tools, null, 2) + '\n';
+            const stateJson = JSON.stringify(state, null, 2) + '\n';
+            if (toolsJson.length < 10000) {
+              throw new Error(`Safety stop before write: serialized tools.json is suspiciously small (${toolsJson.length} bytes).`);
+            }
+
+            const toolsTemp = toolsPath + '.tmp';
+            const stateTemp = statePath + '.tmp';
+            fs.writeFileSync(toolsTemp, toolsJson);
+            fs.writeFileSync(stateTemp, stateJson);
+            JSON.parse(fs.readFileSync(toolsTemp, 'utf8'));
+            JSON.parse(fs.readFileSync(stateTemp, 'utf8'));
+            fs.renameSync(toolsTemp, toolsPath);
+            fs.renameSync(stateTemp, statePath);
 
             core.info(`Health refresh complete: checked=${checked}, updated=${updated}, failed=${failed}`);
 
