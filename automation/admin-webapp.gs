@@ -15,9 +15,21 @@
 const ADMIN_SESSION_SECONDS = 21600; // 6 hours
 
 function doGet() {
-  return HtmlService.createHtmlOutput(adminHtml_())
-    .setTitle('OpenShelf Admin')
-    .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.DEFAULT);
+  try {
+    return HtmlService.createHtmlOutput(adminHtml_())
+      .setTitle('OpenShelf Admin')
+      .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.DEFAULT);
+  } catch (err) {
+    var message = String(err && err.stack ? err.stack : err);
+    return HtmlService.createHtmlOutput(
+      '<!doctype html><meta charset="utf-8"><title>OpenShelf Admin Error</title>' +
+      '<body style="font-family:Arial,sans-serif;padding:32px;background:#f3efe7;color:#141414">' +
+      '<h1>OpenShelf Admin 오류</h1><p>관리자 페이지 생성 중 오류가 발생했습니다.</p>' +
+      '<pre style="white-space:pre-wrap;background:#fff;padding:16px;border:1px solid #141414">' +
+      message.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;') +
+      '</pre></body>'
+    );
+  }
 }
 
 function adminLogin(username, password) {
@@ -329,6 +341,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 </head>
 <body>
 <div class="shell">
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -416,6 +429,10 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
   </main>
 </div>
 <script>
+window.addEventListener('error',function(e){
+  var boot=document.getElementById('bootStatus');
+  if(boot){boot.style.display='block';boot.style.color='#a33';boot.textContent='브라우저 오류: '+(e.message||'알 수 없는 오류');}
+});
 const key='openshelf-admin-session';
 let token=sessionStorage.getItem(key)||'';
 let adminTools=[];
@@ -425,14 +442,26 @@ let automationEnabled=true;
 let reviewApproved=[];
 let reviewMode='problems';
 const login=document.getElementById('login'),dash=document.getElementById('dashboard'),logout=document.getElementById('logout'),msg=document.getElementById('msg');
-const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const esc=v=>String(v==null?'':v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=v=>{if(!v)return'—';const d=new Date(v);return Number.isNaN(d.getTime())?'—':new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false}).format(d)};
 
-function showLogin(){login.hidden=false;dash.hidden=true;logout.hidden=true}
-function showDash(){login.hidden=true;dash.hidden=false;logout.hidden=false}
+function showLogin(){
+  login.hidden=false;dash.hidden=true;logout.hidden=true;
+  var boot=document.getElementById('bootStatus');if(boot)boot.style.display='none';
+}
+function clientFailure(err){
+  var boot=document.getElementById('bootStatus');
+  if(boot){boot.style.display='block';boot.textContent='오류: '+String(err&&err.message?err.message:err);boot.style.color='#a33'}
+  login.hidden=false;dash.hidden=true;logout.hidden=true;
+  msg.textContent='관리자 데이터를 불러오지 못했습니다.';
+}
+function showDash(){
+  login.hidden=true;dash.hidden=false;logout.hidden=false;
+  var boot=document.getElementById('bootStatus');if(boot)boot.style.display='none';
+}
 function loadDashboard(){
-  google.script.run.withSuccessHandler(r=>{
-    if(!r||!r.ok){sessionStorage.removeItem(key);token='';showLogin();msg.textContent=r?.error||'세션이 만료되었습니다.';return}
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+    if(!r||!r.ok){sessionStorage.removeItem(key);token='';showLogin();msg.textContent=(r&&r.error)||'세션이 만료되었습니다.';return}
     showDash();
     const s=r.state||{};
     document.getElementById('lastRun').textContent=fmt(s.lastRun);
@@ -497,8 +526,8 @@ function renderReview(){
   root.querySelectorAll('[data-review-approve]').forEach(btn=>btn.addEventListener('click',()=>{
     const id=btn.dataset.reviewApprove;
     opMessage('검수 승인 저장 중...');
-    google.script.run.withSuccessHandler(r=>{
-      if(!r||!r.ok){opMessage(r?.error||'승인에 실패했습니다.','error');return}
+    google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage((r&&r.error)||'승인에 실패했습니다.','error');return}
       reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;renderReview();opMessage(r.message||'승인했습니다.');
     }).adminApproveReview(token,id);
   }));
@@ -506,8 +535,8 @@ function renderReview(){
     const repo=btn.dataset.reviewDeny;if(!repo)return;
     if(!confirm('이 저장소를 Denylist에 추가할까요?'))return;
     opMessage('Denylist 추가 중...');
-    google.script.run.withSuccessHandler(r=>{
-      if(!r||!r.ok){opMessage(r?.error||'Denylist 추가에 실패했습니다.','error');return}
+    google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage((r&&r.error)||'Denylist 추가에 실패했습니다.','error');return}
       adminDenylist=Array.isArray(r.denylist)?r.denylist:adminDenylist;renderDenylist();opMessage(r.message||'추가했습니다.');
     }).adminAddDenylist(token,repo);
   }));
@@ -515,19 +544,19 @@ function renderReview(){
     const id=btn.dataset.reviewRemove;const tool=adminTools.find(t=>String(t.id)===String(id));if(!tool)return;
     if(!confirm(tool.name+' 을(를) 삭제하고 재수집도 차단할까요?'))return;
     opMessage('삭제 처리 중...');
-    google.script.run.withSuccessHandler(r=>{
-      if(!r||!r.ok){opMessage(r?.error||'삭제에 실패했습니다.','error');return}
+    google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage((r&&r.error)||'삭제에 실패했습니다.','error');return}
       opMessage(r.message||'삭제했습니다.');loadDashboard();
     }).adminRemoveTool(token,id);
   }));
 }
-document.getElementById('reviewProblems')?.addEventListener('click',()=>{reviewMode='problems';renderReview()});
-document.getElementById('reviewRecent')?.addEventListener('click',()=>{reviewMode='recent';renderReview()});
+document.getElementById('reviewProblems').addEventListener('click',()=>{reviewMode='problems';renderReview()});
+document.getElementById('reviewRecent').addEventListener('click',()=>{reviewMode='recent';renderReview()});
 
 function renderConfig(){
   document.getElementById('cfgTarget').value=String(adminConfig.targetPerHour||20);
   document.getElementById('cfgRound').value=String(adminConfig.roundSize||10);
-  document.getElementById('cfgStars').value=String(adminConfig.minimumStars??200);
+  document.getElementById('cfgStars').value=String(adminConfig.minimumStars==null?200:adminConfig.minimumStars);
   document.getElementById('cfgPages').value=String(adminConfig.searchPagesPerTopic||3);
   document.getElementById('cfgRetries').value=String(adminConfig.geminiRetryAttempts||3);
   document.getElementById('automationState').textContent=automationEnabled?'RUNNING':'PAUSED';
@@ -535,7 +564,7 @@ function renderConfig(){
   toggle.textContent=automationEnabled?'일시정지':'재개';
   document.getElementById('configSummary').textContent=(adminConfig.roundSize||10)+'개 × '+Math.ceil((adminConfig.targetPerHour||20)/(adminConfig.roundSize||10))+'라운드';
 }
-document.getElementById('saveConfig')?.addEventListener('click',()=>{
+document.getElementById('saveConfig').addEventListener('click',()=>{
   const input={
     targetPerHour:Number(document.getElementById('cfgTarget').value),
     roundSize:Number(document.getElementById('cfgRound').value),
@@ -544,17 +573,17 @@ document.getElementById('saveConfig')?.addEventListener('click',()=>{
     geminiRetryAttempts:Number(document.getElementById('cfgRetries').value)
   };
   opMessage('설정을 저장하는 중...');
-  google.script.run.withSuccessHandler(r=>{
-    if(!r||!r.ok){opMessage(r?.error||'설정 저장에 실패했습니다.','error');return}
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+    if(!r||!r.ok){opMessage((r&&r.error)||'설정 저장에 실패했습니다.','error');return}
     adminConfig=r.config||input;renderConfig();opMessage(r.message||'설정을 저장했습니다.');
   }).adminSaveDiscoveryConfig(token,input);
 });
-document.getElementById('toggleAutomation')?.addEventListener('click',()=>{
+document.getElementById('toggleAutomation').addEventListener('click',()=>{
   const next=!automationEnabled;
   if(!confirm(next?'자동수집을 다시 시작할까요?':'매시간 자동수집을 일시정지할까요?'))return;
   opMessage('상태를 변경하는 중...');
-  google.script.run.withSuccessHandler(r=>{
-    if(!r||!r.ok){opMessage(r?.error||'상태 변경에 실패했습니다.','error');return}
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+    if(!r||!r.ok){opMessage((r&&r.error)||'상태 변경에 실패했습니다.','error');return}
     automationEnabled=r.enabled!==false;renderConfig();opMessage(r.message||'변경했습니다.');
   }).adminSetAutomationEnabled(token,next);
 });
@@ -571,15 +600,15 @@ function renderDenylist(){
     const repo=btn.dataset.removeDeny;
     if(!confirm(repo+' 를 제외 목록에서 해제할까요?'))return;
     opMessage('처리 중...');
-    google.script.run.withSuccessHandler(r=>{
-      if(!r||!r.ok){opMessage(r?.error||'처리에 실패했습니다.','error');return}
+    google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage((r&&r.error)||'처리에 실패했습니다.','error');return}
       adminDenylist=Array.isArray(r.denylist)?r.denylist:adminDenylist;renderDenylist();opMessage(r.message||'해제했습니다.');
     }).adminRemoveDenylist(token,repo);
   }));
 }
 function renderToolResults(){
   const root=document.getElementById('toolResults');
-  const q=String(document.getElementById('toolSearch')?.value||'').trim().toLowerCase();
+  const q=String(document.getElementById('toolSearch').value||'').trim().toLowerCase();
   if(!q){root.innerHTML='<span class="section-note">삭제할 도구 이름을 검색하세요.</span>';return}
   const matches=adminTools.filter(t=>(String(t.name)+' '+String(t.category)+' '+String(t.github)).toLowerCase().includes(q)).slice(0,8);
   root.innerHTML=matches.length?matches.map(t=>'<div class="tool-result"><div><strong>'+esc(t.name)+'</strong><small>'+esc(t.category||'')+'</small></div><button class="danger-action" type="button" data-remove-tool="'+esc(t.id)+'">삭제</button></div>').join(''):'<span class="section-note">검색 결과가 없습니다.</span>';
@@ -587,34 +616,34 @@ function renderToolResults(){
     const id=btn.dataset.removeTool;const tool=adminTools.find(t=>String(t.id)===String(id));if(!tool)return;
     if(!confirm(tool.name+' 을(를) OpenShelf에서 삭제하고 재수집도 차단할까요?'))return;
     opMessage('삭제 처리 중...');
-    google.script.run.withSuccessHandler(r=>{
-      if(!r||!r.ok){opMessage(r?.error||'삭제에 실패했습니다.','error');return}
+    google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+      if(!r||!r.ok){opMessage((r&&r.error)||'삭제에 실패했습니다.','error');return}
       opMessage(r.message||'삭제했습니다.');loadDashboard();
     }).adminRemoveTool(token,id);
   }));
 }
-document.getElementById('runDiscovery')?.addEventListener('click',()=>{
+document.getElementById('runDiscovery').addEventListener('click',()=>{
   if(!confirm('자동수집을 지금 바로 실행할까요?'))return;
   const btn=document.getElementById('runDiscovery');btn.disabled=true;opMessage('수집 실행을 요청하는 중...');
-  google.script.run.withSuccessHandler(r=>{btn.disabled=false;if(!r||!r.ok){opMessage(r?.error||'실행 요청에 실패했습니다.','error');return}opMessage(r.message||'실행 요청 완료');}).adminRunDiscovery(token);
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{btn.disabled=false;if(!r||!r.ok){opMessage((r&&r.error)||'실행 요청에 실패했습니다.','error');return}opMessage(r.message||'실행 요청 완료');}).adminRunDiscovery(token);
 });
-document.getElementById('addDeny')?.addEventListener('click',()=>{
+document.getElementById('addDeny').addEventListener('click',()=>{
   const input=document.getElementById('denyInput');const repo=String(input.value||'').trim();if(!repo)return;
   opMessage('제외 목록에 추가하는 중...');
-  google.script.run.withSuccessHandler(r=>{if(!r||!r.ok){opMessage(r?.error||'추가에 실패했습니다.','error');return}adminDenylist=Array.isArray(r.denylist)?r.denylist:adminDenylist;input.value='';renderDenylist();opMessage(r.message||'추가했습니다.');}).adminAddDenylist(token,repo);
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{if(!r||!r.ok){opMessage((r&&r.error)||'추가에 실패했습니다.','error');return}adminDenylist=Array.isArray(r.denylist)?r.denylist:adminDenylist;input.value='';renderDenylist();opMessage(r.message||'추가했습니다.');}).adminAddDenylist(token,repo);
 });
-document.getElementById('toolSearch')?.addEventListener('input',renderToolResults);
+document.getElementById('toolSearch').addEventListener('input',renderToolResults);
 
 document.getElementById('form').addEventListener('submit',e=>{
   e.preventDefault();msg.textContent='확인 중...';
   const u=document.getElementById('user').value,p=document.getElementById('pass').value;
-  google.script.run.withSuccessHandler(r=>{
-    if(!r||!r.ok){msg.textContent=r?.error||'로그인에 실패했습니다.';return}
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+    if(!r||!r.ok){msg.textContent=(r&&r.error)||'로그인에 실패했습니다.';return}
     token=r.token;sessionStorage.setItem(key,token);msg.textContent='';loadDashboard();
   }).adminLogin(u,p);
 });
 logout.addEventListener('click',()=>{google.script.run.adminLogout(token);sessionStorage.removeItem(key);token='';showLogin()});
-if(token){google.script.run.withSuccessHandler(r=>{if(r&&r.ok)loadDashboard();else{sessionStorage.removeItem(key);token='';showLogin()}}).adminVerify(token)}else showLogin();
+if(token){google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{if(r&&r.ok)loadDashboard();else{sessionStorage.removeItem(key);token='';showLogin()}}).adminVerify(token)}else showLogin();
 </script>
 </body>
 </html>`;
