@@ -30,6 +30,9 @@ const compareSelected=new Set();
 let currentPreviewId='';
 let previewToolIds=[];
 let previewHoverTimer=null;
+let previewCloseTimer=null;
+function cancelPreviewClose(){clearTimeout(previewCloseTimer);previewCloseTimer=null}
+function schedulePreviewClose(){cancelPreviewClose();previewCloseTimer=setTimeout(()=>{previewCloseTimer=null;closeQuickPreview()},350)}
 const categoryDescriptions={
   'AI 에이전트':'AI 에이전트·스킬·오케스트레이션',
   '개발 도구':'코딩·디버깅·SDK·개발 워크플로',
@@ -675,6 +678,7 @@ function quickPreviewMarkup(tool){
     </div>`;
 }
 function openQuickPreview(id){
+  cancelPreviewClose();
   const tool=tools.find(t=>t.id===id);if(!tool||!els.quickPreview)return;
   currentPreviewId=id;
   els.quickPreviewContent.innerHTML=quickPreviewMarkup(tool);
@@ -693,6 +697,7 @@ function openQuickPreview(id){
   });
 }
 function closeQuickPreview(){
+  cancelPreviewClose();
   if(!els.quickPreview)return;
   currentPreviewId='';
   els.quickPreview.classList.remove('open');
@@ -726,12 +731,16 @@ function bindDynamicEvents(){
     if(!card||!els.toolGrid.contains(card)||card.contains(e.relatedTarget))return;
     if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
       clearTimeout(previewHoverTimer);
+      cancelPreviewClose();
       previewHoverTimer=setTimeout(()=>openQuickPreview(card.dataset.id),450);
     }
   });
   els.toolGrid.addEventListener('mouseout',e=>{
     const card=e.target.closest('.card[data-id]');
-    if(card&&!card.contains(e.relatedTarget))clearTimeout(previewHoverTimer);
+    if(card&&!card.contains(e.relatedTarget)){
+      clearTimeout(previewHoverTimer);
+      if(!els.quickPreview?.contains(e.relatedTarget))schedulePreviewClose();
+    }
   });
 }
 function resetFilters(scroll=true){clearTimeout(searchRenderTimer);searchRenderTimer=null;Object.assign(state,{category:'전체',query:'',openSource:false,free:false,favoritesOnly:false,todayOnly:false,platform:'all',sort:'popular'});els.search.value='';if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};if(els.searchFacets){els.searchFacets.hidden=true;els.searchFacets.innerHTML=''};if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};els.openSourceOnly.checked=false;els.freeOnly.checked=false;els.favoritesOnly.checked=false;if(els.todayOnly)els.todayOnly.checked=false;els.platformFilter.value='all';els.sortSelect.value='popular';renderChips();renderTools();if(scroll)document.querySelector('#tools').scrollIntoView({behavior:'smooth'})}
@@ -779,6 +788,10 @@ els.clearCompare?.addEventListener('click',()=>{compareSelected.clear();renderCo
 els.openCompare?.addEventListener('click',openCompareDialog);
 els.compareDialogClose?.addEventListener('click',()=>{els.compareDialog.close();document.body.classList.remove('dialog-open')});
 els.compareDialog?.addEventListener('click',e=>{if(e.target===els.compareDialog){els.compareDialog.close();document.body.classList.remove('dialog-open')}});
+els.quickPreview?.addEventListener('mouseenter',cancelPreviewClose);
+els.quickPreview?.addEventListener('mouseleave',e=>{
+  if(!els.toolGrid?.contains(e.relatedTarget))schedulePreviewClose();
+});
 els.quickPreviewClose?.addEventListener('click',closeQuickPreview);
 els.quickPreviewPrev?.addEventListener('click',()=>moveQuickPreview(-1));
 els.quickPreviewNext?.addEventListener('click',()=>moveQuickPreview(1));
