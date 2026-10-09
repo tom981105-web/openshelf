@@ -31,9 +31,11 @@ export function validateTools(data) {
       try {
         const url = new URL(tool.github);
         if (url.hostname.toLowerCase() === 'github.com') {
-          const slug = url.pathname.split('/').filter(Boolean).join('/').toLowerCase().replace(/\\.git$/i, '');
-          if (repositories.has(slug)) errors.push(label + '.github: duplicate GitHub repository "' + slug + '"');
-          repositories.add(slug);
+          const parts = url.pathname.split('/').filter(Boolean);
+          const slug = parts.join('/').toLowerCase();
+          const normalizedSlug = slug.endsWith('.git') ? slug.slice(0, -4) : slug;
+          if (repositories.has(normalizedSlug)) errors.push(label + '.github: duplicate GitHub repository "' + normalizedSlug + '"');
+          repositories.add(normalizedSlug);
         }
       } catch { errors.push(label + '.github: invalid URL'); }
     }
