@@ -14,8 +14,11 @@
 
 const ADMIN_SESSION_SECONDS = 21600; // 6 hours
 
-function doGet() {
+function doGet(e) {
   try {
+    if (e && e.parameter && e.parameter.action === 'recommend') {
+      return publicRecommendJsonp_(e);
+    }
     return HtmlService.createHtmlOutput(adminHtml_())
       .setTitle('OpenShelf Admin')
       .setXFrameOptionsMode(HtmlService.XFrameOptionsMode.DEFAULT);
@@ -30,6 +33,153 @@ function doGet() {
       '</pre></body>'
     );
   }
+}
+
+function publicRecommendJsonp_(e) {
+  const params = e && e.parameter ? e.parameter : {};
+  const callback = String(params.callback || '');
+  if (!/^[A-Za-z_$][A-Za-z0-9_$\.]{0,80}$/.test(callback)) {
+    return ContentService.createTextOutput('/* invalid callback */').setMimeType(ContentService.MimeType.JAVASCRIPT);
+  }
+
+  var payload;
+  try {
+    payload = publicRecommend_(String(params.q || ''), String(params.client || ''));
+  } catch (err) {
+    payload = { ok:false, error:String(err && err.message ? err.message : err) };
+  }
+
+  return ContentService
+    .createTextOutput(callback + '(' + JSON.stringify(payload).replace(/<\//g, '<\\/') + ');')
+    .setMimeType(ContentService.MimeType.JAVASCRIPT);
+}
+
+function publicRecommend_(query, clientId) {
+  query = String(query || '').trim().replace(/\s+/g, ' ');
+  if (query.length < 4) return { ok:false, error:'하고 싶은 일을 조금 더 자세히 적어주세요.' };
+  if (query.length > 300) return { ok:false, error:'요청은 300자 이내로 적어주세요.' };
+
+  var cache = CacheService.getScriptCache();
+  var clientKey = String(clientId || 'anonymous').replace(/[^A-Za-z0-9_-]/g, '').slice(0, 64) || 'anonymous';
+  var rateKey = 'public-ai-rate:' + clientKey;
+  if (cache.get(rateKey)) return { ok:false, error:'잠시 후 다시 추천해 주세요.' };
+  cache.put(rateKey, '1', 12);
+
+  const props = PropertiesService.getScriptProperties();
+  const apiKey = props.getProperty('GEMINI_API_KEY') || '';
+  const model = props.getProperty('GEMINI_MODEL') || 'gemini-3.5-flash-lite';
+  if (!apiKey) return { ok:false, error:'AI 추천 기능이 아직 설정되지 않았습니다.' };
+
+  const data = githubJsonFile_('data/tools.json') || [];
+  const tools = Array.isArray(data) ? data.filter(function(t){ return t && t.id && !t.githubArchived; }) : [];
+  if (!tools.length) return { ok:false, error:'추천할 도구 데이터를 불러오지 못했습니다.' };
+
+  const terms = query.toLowerCase().split(/[^0-9a-zA-Z가-힣]+/).filter(function(x){ return x.length >= 2; });
+  const scored = tools.map(function(t){
+    const hay = [
+      t.name, t.category, t.description, t.longDescription,
+      (t.tags || []).join(' '), (t.platforms || []).join(' '),
+      (t.requirements || []).join(' '), (t.usageSteps || []).join(' ')
+    ].join(' ').toLowerCase();
+    var hit = 0;
+    terms.forEach(function(term){ if (hay.indexOf(term) >= 0) hit += 12; });
+    if (String(t.category || '').toLowerCase().indexOf('ai') >= 0 && /ai|인공지능|요약|분석|생성/.test(query.toLowerCase())) hit += 4;
+    const stars = Math.log(Number(t.stars || 0) + 1) / Math.log(10);
+    const recent = t.githubPushedAt ? Math.max(0, 8 - ((Date.now() - new Date(t.githubPushedAt).getTime()) / 86400000) / 30) : 0;
+    return { tool:t, score:hit + stars + recent };
+  }).sort(function(a,b){ return b.score - a.score; });
+
+  const byCategory = {};
+  const candidates = [];
+  scored.forEach(function(x){
+    const category = String(x.tool.category || '기타');
+    byCategory[category] = byCategory[category] || 0;
+    if (candidates.length < 60 && (x.score > 4 || byCategory[category] < 5)) {
+      candidates.push(x.tool);
+      byCategory[category]++;
+    }
+  });
+
+  const compact = candidates.map(function(t){
+    return {
+      id:String(t.id),
+      name:String(t.name || ''),
+      category:String(t.category || ''),
+      description:String(t.description || ''),
+      tags:Array.isArray(t.tags) ? t.tags.slice(0, 8) : [],
+      platforms:Array.isArray(t.platforms) ? t.platforms : [],
+      free:t.free === true,
+      openSource:t.openSource === true,
+      stars:Number(t.stars || 0)
+    };
+  });
+
+  const prompt = [
+    'You are OpenShelf AI Tool Finder.',
+    'The user describes a task. Build a practical workflow using ONLY tool IDs from the supplied OpenShelf candidate list.',
+    'Never invent a tool, URL, feature, or capability that is not supported by the candidate metadata.',
+    'Prefer 2 to 4 complementary steps. Avoid choosing multiple tools that do the same job unless there is a clear reason.',
+    'Use Korean for all user-facing text.',
+    'Return JSON only with this exact shape:',
+    '{"title":"short title","summary":"1-2 sentence summary","steps":[{"toolId":"id","role":"short step label","reason":"why this tool fits this step"}],"alternatives":[{"toolId":"id","reason":"when this alternative is preferable"}]}',
+    'steps must contain 2-4 unique toolIds. alternatives may contain 0-3 unique toolIds not already used in steps.',
+    'User request: ' + query,
+    'Candidates: ' + JSON.stringify(compact)
+  ].join('\n');
+
+  const url = 'https://generativelanguage.googleapis.com/v1beta/models/' + encodeURIComponent(model) + ':generateContent?key=' + encodeURIComponent(apiKey);
+  const response = UrlFetchApp.fetch(url, {
+    method:'post',
+    muteHttpExceptions:true,
+    contentType:'application/json',
+    payload:JSON.stringify({
+      contents:[{parts:[{text:prompt}]}],
+      generationConfig:{responseMimeType:'application/json',temperature:0.25,maxOutputTokens:1400}
+    })
+  });
+
+  if (response.getResponseCode() < 200 || response.getResponseCode() >= 300) {
+    throw new Error('Gemini 추천 요청 실패 (' + response.getResponseCode() + ')');
+  }
+
+  const raw = JSON.parse(response.getContentText());
+  const text = raw && raw.candidates && raw.candidates[0] && raw.candidates[0].content && raw.candidates[0].content.parts
+    ? raw.candidates[0].content.parts.map(function(p){ return p.text || ''; }).join('')
+    : '';
+  const result = parseGeminiJson_(text);
+  const allowed = {};
+  compact.forEach(function(t){ allowed[t.id] = t; });
+
+  const seen = {};
+  const steps = (Array.isArray(result.steps) ? result.steps : []).filter(function(x){
+    const id = String(x && x.toolId || '');
+    if (!allowed[id] || seen[id]) return false;
+    seen[id] = true;
+    return true;
+  }).slice(0, 4).map(function(x){
+    return { toolId:String(x.toolId), role:String(x.role || '추천 단계').slice(0,40), reason:String(x.reason || '').slice(0,220) };
+  });
+
+  if (steps.length < 2) return { ok:false, error:'이 요청에 맞는 도구 조합을 충분히 찾지 못했습니다. 조금 다르게 적어보세요.' };
+
+  const alternatives = (Array.isArray(result.alternatives) ? result.alternatives : []).filter(function(x){
+    const id = String(x && x.toolId || '');
+    if (!allowed[id] || seen[id]) return false;
+    seen[id] = true;
+    return true;
+  }).slice(0, 3).map(function(x){
+    return { toolId:String(x.toolId), reason:String(x.reason || '').slice(0,180) };
+  });
+
+  return {
+    ok:true,
+    query:query,
+    title:String(result.title || '추천 워크플로').slice(0,80),
+    summary:String(result.summary || '').slice(0,320),
+    steps:steps,
+    alternatives:alternatives,
+    model:model
+  };
 }
 
 function adminLogin(username, password) {
