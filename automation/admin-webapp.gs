@@ -71,6 +71,7 @@ function adminGetDashboard(token) {
     const denylist = githubJsonFile_('data/discovery-denylist.json') || [];
     const toolData = githubJsonFile_('data/tools.json') || [];
     const config = githubJsonFile_('data/discovery-config.json') || {};
+    const healthState = githubJsonFile_('data/health-state.json') || {};
     const reviewApprovedRaw = PropertiesService.getScriptProperties().getProperty('OPENSHELF_REVIEW_APPROVED') || '[]';
     var reviewApproved = [];
     try { reviewApproved = JSON.parse(reviewApprovedRaw); } catch (e) { reviewApproved = []; }
@@ -93,6 +94,7 @@ function adminGetDashboard(token) {
       reviewApproved: Array.isArray(reviewApproved) ? reviewApproved : [],
       geminiReviews: geminiReviews,
       config: config,
+      healthState: healthState,
       automationEnabled: automationEnabled
     };
   } catch (err) {
@@ -882,7 +884,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 .login{max-width:420px;margin:100px auto;background:var(--paper);border:1px solid var(--ink);padding:28px;box-shadow:7px 7px 0 var(--ink)}
 .login h1{font:700 42px/1 Georgia,serif;margin:8px 0 24px}.login label{display:block;font-size:11px;margin:14px 0 6px}.login input{width:100%;padding:12px;border:1px solid var(--line);background:white}.login button,.logout{border:1px solid var(--ink);background:var(--ink);color:white;padding:11px 14px;font-weight:800;cursor:pointer}.login button{width:100%;margin-top:18px}.msg{min-height:20px;margin-top:12px;font-size:12px;color:#a33}
 #dashboard[hidden],#login[hidden]{display:none}.hero{padding:46px 0 28px}.hero h1{font:700 58px/1 Georgia,serif;margin:9px 0}.hero p{color:var(--muted)}
-.status{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--ink);background:var(--paper)}.status>div{padding:16px;border-right:1px solid var(--line)}.status>div:last-child{border-right:0}.status span{display:block;font-size:9px;color:var(--muted);margin-bottom:7px}.status strong{font:700 19px Georgia,serif}
+.status{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--ink);background:var(--paper)}.status>div{padding:16px;border-right:1px solid var(--line)}.status>div:last-child{border-right:0}.status span{display:block;font-size:9px;color:var(--muted);margin-bottom:7px}.status strong{font:700 19px Georgia,serif}.health-admin{display:grid;grid-template-columns:repeat(6,1fr);border:1px solid var(--ink);border-top:0;background:var(--paper)}.health-admin>div{padding:13px 16px;border-right:1px solid var(--line)}.health-admin>div:last-child{border-right:0}.health-admin span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.health-admin strong{font:700 16px Georgia,serif}
 .section{margin-top:42px}.section h2{font:700 30px Georgia,serif}.log{border:1px solid var(--line);background:var(--paper);margin:9px 0}.log summary{cursor:pointer;padding:15px;display:flex;justify-content:space-between}.log-body{border-top:1px solid var(--line);padding:14px}.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:7px}.tool{border:1px solid var(--line);padding:9px}.tool b{display:block}.tool small{color:var(--muted)}ul{color:var(--muted);font-size:12px;line-height:1.7}.deny{display:flex;flex-wrap:wrap;gap:7px}.deny-item{display:inline-flex;align-items:center;border:1px solid var(--line);background:var(--paper)}.deny-item code{padding:7px;border:0}.deny-item button{border:0;border-left:1px solid var(--line);background:transparent;padding:7px 9px;cursor:pointer}.section-note{color:var(--muted);font-size:12px}.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.op-card{border:1px solid var(--line);background:var(--paper);padding:18px;min-height:220px}.op-card>span{font-size:9px;letter-spacing:.12em;color:var(--accent);font-weight:800}.op-card h3{font:700 22px/1 Georgia,serif;margin:12px 0 8px}.op-card p{font-size:12px;color:var(--muted);line-height:1.55}.op-card input{width:100%;border:1px solid var(--line);padding:10px;background:white}.primary-action,.inline-action button,.danger-action{border:1px solid var(--ink);background:var(--ink);color:white;padding:10px 12px;font-weight:800;cursor:pointer}.primary-action{margin-top:12px}.inline-action{display:flex;gap:7px}.inline-action input{flex:1}.tool-results{margin-top:8px;display:grid;gap:6px;max-height:190px;overflow:auto}.tool-result{border:1px solid var(--line);padding:8px;display:flex;align-items:center;justify-content:space-between;gap:10px}.tool-result small{display:block;color:var(--muted);margin-top:3px}.danger-action{background:#9f2e22;border-color:#9f2e22;padding:7px 9px;font-size:10px}.operation-message{min-height:24px;margin-top:12px;font-size:12px;font-weight:700}.operation-message.ok{color:#2d7b43}.operation-message.error{color:#a33}.settings-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.settings-grid label,.automation-control{border:1px solid var(--line);background:var(--paper);padding:14px}.settings-grid label>span,.automation-control>span{display:block;font-size:9px;color:var(--muted);margin-bottom:8px;letter-spacing:.08em}.settings-grid input,.settings-grid select{width:100%;border:1px solid var(--line);background:white;padding:9px}.automation-control strong{display:block;font:700 20px Georgia,serif;margin-bottom:10px}.automation-control button{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.settings-actions{display:flex;align-items:center;gap:12px;margin-top:12px}
 .analytics-summary{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}
 .analytics-summary>div{padding:15px;border-right:1px solid var(--line)}
@@ -910,12 +912,12 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 .run-state.success{color:#2d7b43}
 .run-state.partial{color:#9b6b10}
 .run-state.failed,.run-state.error{color:#a33}.review-top{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);background:var(--paper);margin-bottom:12px}.review-top>div{padding:14px;border-right:1px solid var(--line)}.review-top>div:last-child{border-right:0}.review-top span{display:block;font-size:9px;color:var(--muted);margin-bottom:6px}.review-top strong{font:700 24px Georgia,serif}.review-tabs{display:flex;gap:7px;margin-bottom:10px}.review-tab{border:1px solid var(--ink);background:transparent;padding:8px 10px;font-weight:800}.review-tab.active{background:var(--ink);color:white}.review-list{display:grid;gap:9px}.review-card{border:1px solid var(--line);background:var(--paper);padding:14px}.review-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start}.review-title{font:700 21px Georgia,serif}.score{font:700 22px Georgia,serif}.score.low{color:#a33}.score.mid{color:#9b6b10}.score.good{color:#2d7b43}.review-meta{font-size:11px;color:var(--muted);margin-top:4px}.review-flags{display:flex;flex-wrap:wrap;gap:5px;margin:10px 0}.review-flag{font-size:10px;border:1px solid var(--line);padding:4px 6px;background:#fff}.review-desc{font-size:12px;line-height:1.55;color:#3e3a35}.review-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:12px}.review-actions button{border:1px solid var(--ink);background:transparent;padding:7px 9px;font-weight:800}.review-actions .approve{background:#2d7b43;border-color:#2d7b43;color:white}.review-actions .remove{background:#9f2e22;border-color:#9f2e22;color:white}.review-actions .gemini{background:var(--ink);color:white}.review-actions .apply{background:#d68000;border-color:#d68000;color:white}.gemini-review{margin-top:12px;border-top:1px solid var(--line);padding-top:12px}.gemini-head{display:flex;justify-content:space-between;gap:10px;align-items:center}.gemini-verdict{font-weight:800}.gemini-summary{font-size:12px;line-height:1.55;margin:8px 0}.gemini-list{margin:6px 0 0 18px;padding:0}.gemini-meta{font-size:10px;color:var(--muted);margin-top:8px}.gemini-suggestions{font-size:11px;line-height:1.55;margin-top:8px;padding:9px;border:1px solid var(--line);background:#fff}
-@media(max-width:800px){.status{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid,.analytics-grid{grid-template-columns:1fr}.analytics-summary{grid-template-columns:repeat(2,1fr)}.analytics-summary>div{border-bottom:1px solid var(--line)}.review-top{grid-template-columns:1fr}.review-top>div{border-right:0;border-bottom:1px solid var(--line)}}
+@media(max-width:800px){.status,.health-admin{grid-template-columns:repeat(2,1fr)}.tools{grid-template-columns:repeat(2,1fr)}.op-grid,.settings-grid,.analytics-grid{grid-template-columns:1fr}.analytics-summary{grid-template-columns:repeat(2,1fr)}.analytics-summary>div{border-bottom:1px solid var(--line)}.review-top{grid-template-columns:1fr}.review-top>div{border-right:0;border-bottom:1px solid var(--line)}}
 </style>
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.7 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.8 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -940,6 +942,15 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
       <div><span>누적 자동추가</span><strong id="total">—</strong></div>
       <div><span>배치 오류</span><strong id="batch">—</strong></div>
       <div><span>상태</span><strong id="status">—</strong></div>
+    </section>
+
+    <section class="health-admin">
+      <div><span>마지막 전체 점검</span><strong id="healthAdminLast">—</strong></div>
+      <div><span>점검 완료</span><strong id="healthAdminChecked">0</strong></div>
+      <div><span>변경 감지</span><strong id="healthAdminUpdated">0</strong></div>
+      <div><span>확인 오류</span><strong id="healthAdminFailed">0</strong></div>
+      <div><span>접근 불가</span><strong id="healthAdminUnavailable">0</strong></div>
+      <div><span>점검 상태</span><strong id="healthAdminStatus">WAITING</strong></div>
     </section>
 
     <section class="section analytics">
@@ -1083,6 +1094,13 @@ function loadDashboard(){
     document.getElementById('total').textContent=Number(s.totalAutoAdded||0).toLocaleString();
     document.getElementById('batch').textContent=Array.isArray(s.lastBatchErrors)&&s.lastBatchErrors.length?s.lastBatchErrors.length+'건':'없음';
     document.getElementById('status').textContent=(s.lastStatus||'ready').toUpperCase();
+    const h=r.healthState||{};
+    document.getElementById('healthAdminLast').textContent=fmt(h.lastRun);
+    document.getElementById('healthAdminChecked').textContent=Number(h.checked||0).toLocaleString();
+    document.getElementById('healthAdminUpdated').textContent=Number(h.updated||0).toLocaleString();
+    document.getElementById('healthAdminFailed').textContent=Number(h.failed||0).toLocaleString();
+    document.getElementById('healthAdminUnavailable').textContent=Number(h.unavailable||0).toLocaleString();
+    document.getElementById('healthAdminStatus').textContent=String(h.status||'waiting').toUpperCase();
     const logs=Array.isArray(r.logs)?r.logs:[];
     adminLogs=logs;
     document.getElementById('logs').innerHTML=logs.length?logs.map((x,i)=>'<details class="log" '+(i===0?'open':'')+'><summary><strong>'+fmt(x.timestamp)+'</strong><span>+'+Number(x.addedCount||0)+' / 탈락 '+Number(x.rejectedCount||0)+'</span></summary><div class="log-body"><div class="tools">'+((x.addedTools||[]).map(t=>'<div class="tool"><b>'+esc(t.name)+'</b><small>'+esc(t.category||'')+'</small></div>').join('')||'<span>추가 도구 없음</span>')+'</div>'+((x.rejected||[]).length?'<h3>탈락 사유</h3><ul>'+(x.rejected||[]).map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':'')+((x.batchErrors||[]).length?'<h3>배치 오류</h3><ul>'+(x.batchErrors||[]).map(v=>'<li>'+esc(v)+'</li>').join('')+'</ul>':'')+'</div></details>').join(''):'<p>다음 자동수집부터 로그가 기록됩니다.</p>';
