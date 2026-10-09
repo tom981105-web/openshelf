@@ -32,7 +32,7 @@ const collections=[
 ];
 
 const els={
-  search:document.querySelector('#search'),searchWrap:document.querySelector('#searchWrap'),categoryChips:document.querySelector('#categoryChips'),categoryGrid:document.querySelector('#categoryGrid'),
+  adminGate:document.querySelector('#adminGate'),search:document.querySelector('#search'),searchWrap:document.querySelector('#searchWrap'),categoryChips:document.querySelector('#categoryChips'),categoryGrid:document.querySelector('#categoryGrid'),
   collectionGrid:document.querySelector('#collectionGrid'),openSourceOnly:document.querySelector('#openSourceOnly'),freeOnly:document.querySelector('#freeOnly'),
   favoritesOnly:document.querySelector('#favoritesOnly'),todayOnly:document.querySelector('#todayOnly'),platformFilter:document.querySelector('#platformFilter'),sortSelect:document.querySelector('#sortSelect'),
   toolGrid:document.querySelector('#toolGrid'),resultCount:document.querySelector('#resultCount'),emptyState:document.querySelector('#emptyState'),
@@ -374,6 +374,22 @@ els.search.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){if(moveSearchS
 els.search.addEventListener('focus',()=>{els.searchWrap.classList.add('focused');renderSearchSuggestions()});
 els.search.addEventListener('blur',()=>{els.searchWrap.classList.remove('focused');setTimeout(()=>{if(els.searchSuggestions)els.searchSuggestions.hidden=true},120)});
 els.openSourceOnly.addEventListener('change',e=>{state.openSource=e.target.checked;renderTools()});els.freeOnly.addEventListener('change',e=>{state.free=e.target.checked;renderTools()});els.favoritesOnly.addEventListener('change',e=>{state.favoritesOnly=e.target.checked;renderTools()});els.todayOnly?.addEventListener('change',e=>{state.todayOnly=e.target.checked;renderTools()});els.platformFilter.addEventListener('change',e=>{state.platform=e.target.value;renderTools()});els.sortSelect.addEventListener('change',e=>{state.sort=e.target.value;renderTools()});
+let adminGateClicks=0;
+let adminGateTimer=null;
+els.adminGate?.addEventListener('click',()=>{
+  adminGateClicks+=1;
+  clearTimeout(adminGateTimer);
+  adminGateTimer=setTimeout(()=>{adminGateClicks=0},3500);
+  if(adminGateClicks<5)return;
+  adminGateClicks=0;
+  clearTimeout(adminGateTimer);
+  const url=String(window.OPENSHELF_ADMIN_URL||'').trim();
+  if(!url){
+    alert('관리자 페이지 주소가 아직 연결되지 않았습니다.');
+    return;
+  }
+  window.open(url,'openshelf-admin','noopener,noreferrer');
+});
 els.favoritesNav.addEventListener('click',openFavorites);els.mobileFavorites.addEventListener('click',openFavorites);els.scrollToAll.addEventListener('click',()=>document.querySelector('#tools').scrollIntoView({behavior:'smooth'}));els.resetFilters.addEventListener('click',()=>resetFilters());els.dialogClose.addEventListener('click',closeDialog);els.toolDialog.addEventListener('click',e=>{if(e.target===els.toolDialog)closeDialog()});els.mobileMenuButton.addEventListener('click',toggleMobileMenu);els.mobileMenu.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeMobileMenu));
 document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==els.search){e.preventDefault();els.search.focus()}if(e.key==='Escape'&&els.toolDialog.open)closeDialog();else if(e.key==='Escape')closeMobileMenu()});
 async function loadTools(){els.loadingState.hidden=false;els.errorState.hidden=true;els.toolGrid.hidden=true;try{const [r,sr]=await Promise.all([fetch('./data/tools.json',{cache:'no-store'}),fetch('./data/discovery-state.json',{cache:'no-store'})]);if(!r.ok)throw new Error('load failed');tools=await r.json();discoveryState=sr.ok?await sr.json():null;restoreStateFromUrl();els.heroToolCount.textContent=tools.length;saveFavorites();renderChips();renderCategories();renderCollections();renderLatest();renderTrending();renderRecentlyViewed();renderStats();renderDiscoveryStatus();renderTools();els.loadingState.hidden=true;els.toolGrid.hidden=false;setupReveal();setupActiveNav();const detailId=new URLSearchParams(location.search).get('tool');if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId)}catch{els.loadingState.hidden=true;els.errorState.hidden=false;els.toolGrid.hidden=true}}
