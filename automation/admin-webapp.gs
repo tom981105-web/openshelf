@@ -423,8 +423,15 @@ function adminGeminiReview(token, toolId) {
       'Check usefulness, duplicate/overlap risk, category fit, description quality, license clarity, maintenance signals, and whether it is actually a usable tool rather than a low-level library/dataset/demo.',
       'Do not automatically reject a tool only because it has low stars. Focus on usefulness and metadata quality.',
       'Use only one of these categories for categorySuggestion: ' + categories.join(', '),
+      'IMPORTANT VERDICT RULES:',
+      '- 승인 권장: no material, evidence-backed defect remains. Do NOT keep asking for stylistic rewrites, alternate wording, or optional tag/category preferences once metadata is already acceptable.',
+      '- 수정 필요: there is at least one CONCRETE field-level defect that can be truthfully fixed from the supplied GitHub metadata/README right now.',
+      '- 수동 확인 필요: a concern remains but it cannot be safely fixed from the supplied evidence (for example missing/unclear license, ambiguous project nature, insufficient evidence).',
+      '- 삭제 권장: the project clearly should not be listed.',
+      '- 중복 의심: substantial duplicate/overlap risk requires a human decision.',
+      'If the only remaining differences are subjective wording/category/tag preferences, choose 승인 권장, not 수정 필요.',
       'Return JSON only with this exact shape:',
-      '{"verdict":"승인 권장|수정 필요|삭제 권장|중복 의심","score":0,"summary":"2-4 concise Korean sentences","reasons":["2-5 concise Korean reasons"],"categorySuggestion":"one allowed category","descriptionSuggestion":"one concise Korean sentence","tagsSuggestion":["3-5 concise Korean tags"],"duplicateRisk":"낮음|보통|높음","confidence":0}',
+      '{"verdict":"승인 권장|수정 필요|수동 확인 필요|삭제 권장|중복 의심","score":0,"summary":"2-4 concise Korean sentences","reasons":["2-5 concise Korean reasons"],"categorySuggestion":"one allowed category","descriptionSuggestion":"one concise Korean sentence","tagsSuggestion":["3-5 concise Korean tags"],"duplicateRisk":"낮음|보통|높음","confidence":0}',
       'score and confidence are integers from 0 to 100.',
       '',
       'CURRENT OPENSHELF ITEM:',
@@ -642,11 +649,11 @@ function adminGeminiAutoFix(token, toolId) {
     for (var round = 1; round <= 3; round++) {
       const verdict = String(review.verdict || '');
 
-      if (verdict === '삭제 권장' || verdict === '중복 의심') {
+      if (verdict === '삭제 권장' || verdict === '중복 의심' || verdict === '수동 확인 필요') {
         return {
           ok:true,
           status:'manual_required',
-          message:'Gemini가 ' + verdict + '으로 판단해 자동 수정을 중단했습니다. 직접 승인 또는 삭제+차단을 결정해주세요.',
+          message:'Gemini가 ' + verdict + '으로 판단해 자동 수정을 중단했습니다. 남은 문제는 자동으로 안전하게 고칠 수 없으므로 직접 판단해주세요.',
           review:review,
           geminiReviews:getGeminiReviews_(),
           history:history
@@ -717,13 +724,27 @@ function adminGeminiAutoFix(token, toolId) {
         return reviewResult || { ok:false, error:'수정 후 Gemini 재검수에 실패했습니다.' };
       }
 
-      review = reviewResult.review || {};
+      const nextReview = reviewResult.review || {};
+      const previousReasons = Array.isArray(review.reasons) ? review.reasons.map(String).sort().join('|') : '';
+      const nextReasons = Array.isArray(nextReview.reasons) ? nextReview.reasons.map(String).sort().join('|') : '';
+      review = nextReview;
 
       if (String(review.verdict || '') === '승인 권장') {
         return {
           ok:true,
           status:'approved',
           message:'Gemini 자동 수정 완료: ' + round + '회 수정 후 승인 권장으로 변경되었습니다.',
+          review:review,
+          geminiReviews:reviewResult.geminiReviews || getGeminiReviews_(),
+          history:history
+        };
+      }
+
+      if (String(review.verdict || '') === '수정 필요' && previousReasons && previousReasons === nextReasons) {
+        return {
+          ok:true,
+          status:'manual_required',
+          message:'자동 수정 후에도 Gemini가 같은 사유를 반복하고 있어 더 이상 자동 수정하지 않습니다. 이 항목은 직접 판단이 필요합니다.',
           review:review,
           geminiReviews:reviewResult.geminiReviews || getGeminiReviews_(),
           history:history
@@ -822,7 +843,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.5 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.6 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -885,7 +906,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
     <section class="section review">
       <span class="kicker">REVIEW INBOX</span>
       <h2>자동 검수함</h2>
-      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. <strong>Gemini 자동 수정</strong>은 설명·카테고리·태그뿐 아니라 GitHub가 직접 확인해주는 라이선스·홈페이지·오픈소스 상태도 안전하게 보정한 뒤 최대 3회 재검수합니다.</p>
+      <p class="section-note">기본 점수는 규칙 기반 1차 검수입니다. <strong>Gemini 자동 수정</strong>은 실제로 고칠 수 있는 오류만 수정합니다. 수정 후 같은 사유가 반복되거나 근거 부족 문제면 더 이상 '수정 필요'를 반복하지 않고 <strong>수동 확인 필요</strong>로 멈춥니다.</p>
       <div class="review-top">
         <div><span>검수 필요</span><strong id="reviewCount">0</strong></div>
         <div><span>최근 추가 20개</span><strong id="recentCount">0</strong></div>
