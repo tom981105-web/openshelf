@@ -888,3 +888,17 @@ h1{
 /* v2.3 admin gate */
 .admin-gate{border:0;background:transparent;padding:0;color:inherit;font:inherit;cursor:pointer}
 .admin-gate:hover{text-decoration:underline;text-underline-offset:5px}
+
+/* Hourly project health */
+.health-status{margin:0 0 34px;border:1px solid var(--line);background:var(--paper);display:grid;grid-template-columns:minmax(220px,1fr) 2fr;align-items:stretch}
+.health-status>div:first-child{padding:18px 20px;border-right:1px solid var(--line);display:flex;flex-direction:column;justify-content:center;gap:8px}
+.health-status>div:first-child strong{font:700 18px Georgia,serif}
+.health-status-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+.health-status-grid span{padding:16px;border-right:1px solid var(--line);display:flex;flex-direction:column;gap:5px}
+.health-status-grid span:last-child{border-right:0}
+.health-status-grid b{font:700 16px Georgia,serif}
+.health-status-grid small{font-size:9px;color:var(--muted);letter-spacing:.05em}
+.health-status[data-status="success"]>div:first-child strong{color:#2d7b43}
+.health-status[data-status="partial"]>div:first-child strong{color:#9b6b10}
+.health-status[data-status="failed"]>div:first-child strong{color:#a33}
+@media(max-width:800px){.health-status{grid-template-columns:1fr}.health-status>div:first-child{border-right:0;border-bottom:1px solid var(--line)}.health-status-grid{grid-template-columns:repeat(2,1fr)}.health-status-grid span{border-bottom:1px solid var(--line)}}
