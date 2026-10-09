@@ -41,7 +41,7 @@ const els={
   toolDialog:document.querySelector('#toolDialog'),dialogContent:document.querySelector('#dialogContent'),dialogClose:document.querySelector('#dialogClose'),
   resetFilters:document.querySelector('#resetFilters'),scrollToAll:document.querySelector('#scrollToAll'),statCategories:document.querySelector('#statCategories'),
   statPlatforms:document.querySelector('#statPlatforms'),statOpenSource:document.querySelector('#statOpenSource'),mobileMenuButton:document.querySelector('#mobileMenuButton'),
-  mobileMenu:document.querySelector('#mobileMenu'),activeFilters:document.querySelector('#activeFilters'),resultContext:document.querySelector('#resultContext'),loadingState:document.querySelector('#loadingState'),errorState:document.querySelector('#errorState'),retryLoad:document.querySelector('#retryLoad'),searchSuggestions:document.querySelector('#searchSuggestions'),searchFacets:document.querySelector('#searchFacets'),trendingSection:document.querySelector('#trending'),trendingGrid:document.querySelector('#trendingGrid'),recentlyViewedSection:document.querySelector('#recentlyViewed'),recentlyViewedGrid:document.querySelector('#recentlyViewedGrid'),clearRecentlyViewed:document.querySelector('#clearRecentlyViewed'),dailyDiscoveryGrid:document.querySelector('#dailyDiscoveryGrid'),dailyDiscoveryDate:document.querySelector('#dailyDiscoveryDate'),workflowGrid:document.querySelector('#workflowGrid'),compareBar:document.querySelector('#compareBar'),compareCount:document.querySelector('#compareCount'),clearCompare:document.querySelector('#clearCompare'),openCompare:document.querySelector('#openCompare'),compareDialog:document.querySelector('#compareDialog'),compareDialogContent:document.querySelector('#compareDialogContent'),compareDialogClose:document.querySelector('#compareDialogClose'),heroCategoryCount:document.querySelector('#heroCategoryCount'),heroOpenSourceCount:document.querySelector('#heroOpenSourceCount'),discoveryStatusBadge:document.querySelector('#discoveryStatusBadge'),discoveryLastRun:document.querySelector('#discoveryLastRun'),discoveryLastAdded:document.querySelector('#discoveryLastAdded'),discoveryRejected:document.querySelector('#discoveryRejected'),discoveryTotal:document.querySelector('#discoveryTotal'),discoveryBatch:document.querySelector('#discoveryBatch'),discoveryNextRun:document.querySelector('#discoveryNextRun')
+  mobileMenu:document.querySelector('#mobileMenu'),activeFilters:document.querySelector('#activeFilters'),resultContext:document.querySelector('#resultContext'),loadingState:document.querySelector('#loadingState'),errorState:document.querySelector('#errorState'),retryLoad:document.querySelector('#retryLoad'),searchSuggestions:document.querySelector('#searchSuggestions'),searchFacets:document.querySelector('#searchFacets'),trendingSection:document.querySelector('#trending'),trendingGrid:document.querySelector('#trendingGrid'),recentlyViewedSection:document.querySelector('#recentlyViewed'),recentlyViewedGrid:document.querySelector('#recentlyViewedGrid'),clearRecentlyViewed:document.querySelector('#clearRecentlyViewed'),dailyDiscoveryGrid:document.querySelector('#dailyDiscoveryGrid'),dailyDiscoveryDate:document.querySelector('#dailyDiscoveryDate'),workflowGrid:document.querySelector('#workflowGrid'),aiFinderForm:document.querySelector('#aiFinderForm'),aiFinderInput:document.querySelector('#aiFinderInput'),aiFinderSubmit:document.querySelector('#aiFinderSubmit'),aiFinderStatus:document.querySelector('#aiFinderStatus'),aiFinderResult:document.querySelector('#aiFinderResult'),compareBar:document.querySelector('#compareBar'),compareCount:document.querySelector('#compareCount'),clearCompare:document.querySelector('#clearCompare'),openCompare:document.querySelector('#openCompare'),compareDialog:document.querySelector('#compareDialog'),compareDialogContent:document.querySelector('#compareDialogContent'),compareDialogClose:document.querySelector('#compareDialogClose'),heroCategoryCount:document.querySelector('#heroCategoryCount'),heroOpenSourceCount:document.querySelector('#heroOpenSourceCount'),discoveryStatusBadge:document.querySelector('#discoveryStatusBadge'),discoveryLastRun:document.querySelector('#discoveryLastRun'),discoveryLastAdded:document.querySelector('#discoveryLastAdded'),discoveryRejected:document.querySelector('#discoveryRejected'),discoveryTotal:document.querySelector('#discoveryTotal'),discoveryBatch:document.querySelector('#discoveryBatch'),discoveryNextRun:document.querySelector('#discoveryNextRun')
 };
 
 function saveFavorites(){localStorage.setItem(FAVORITES_KEY,JSON.stringify([...favorites]));els.favoriteCount.textContent=favorites.size;els.mobileFavoriteCount.textContent=favorites.size}
@@ -417,6 +417,85 @@ function renderWorkflows(){
   }).join('');
   els.workflowGrid.querySelectorAll('[data-workflow-tool]').forEach(btn=>btn.addEventListener('click',()=>openDetail(btn.dataset.workflowTool)));
 }
+const AI_CLIENT_KEY='openshelf-ai-client-v1';
+function getAiClientId(){
+  let id=localStorage.getItem(AI_CLIENT_KEY)||'';
+  if(!id){
+    id='c_'+Math.random().toString(36).slice(2)+Date.now().toString(36);
+    localStorage.setItem(AI_CLIENT_KEY,id);
+  }
+  return id;
+}
+function requestAiRecommendation(query){
+  return new Promise((resolve,reject)=>{
+    const base=window.OPENSHELF_AI_URL||window.OPENSHELF_ADMIN_URL||'';
+    if(!base){reject(new Error('AI 추천 서버 주소가 설정되지 않았습니다.'));return}
+    const callback='__openshelfAi_'+Date.now()+'_'+Math.random().toString(36).slice(2);
+    const script=document.createElement('script');
+    const cleanup=()=>{try{delete window[callback]}catch{};script.remove()};
+    const timer=setTimeout(()=>{cleanup();reject(new Error('AI 추천 응답 시간이 초과되었습니다.'))},30000);
+    window[callback]=data=>{clearTimeout(timer);cleanup();resolve(data)};
+    script.onerror=()=>{clearTimeout(timer);cleanup();reject(new Error('AI 추천 서버에 연결하지 못했습니다.'))};
+    const sep=base.includes('?')?'&':'?';
+    script.src=base+sep+'action=recommend&q='+encodeURIComponent(query)+'&client='+encodeURIComponent(getAiClientId())+'&callback='+encodeURIComponent(callback)+'&_='+Date.now();
+    document.head.appendChild(script);
+  });
+}
+function renderAiRecommendation(data){
+  if(!els.aiFinderResult)return;
+  const steps=Array.isArray(data.steps)?data.steps:[];
+  const alternatives=Array.isArray(data.alternatives)?data.alternatives:[];
+  const stepMarkup=steps.map((step,i)=>{
+    const tool=tools.find(t=>String(t.id)===String(step.toolId));
+    if(!tool)return'';
+    return '<article class="ai-step"><div class="ai-step-no">0'+(i+1)+'</div><div class="ai-step-body"><span>'+escapeHtml(step.role||'추천 단계')+'</span><h3>'+escapeHtml(tool.name)+'</h3><p>'+escapeHtml(step.reason||tool.description||'')+'</p><div class="ai-step-meta">'+escapeHtml(tool.category)+' · OS '+openShelfScore(tool).score+' · ★ '+compactNumber(tool.stars||0)+'</div><button type="button" data-ai-open="'+escapeHtml(tool.id)+'">도구 자세히 보기 →</button></div></article>';
+  }).join('');
+  const altMarkup=alternatives.map(a=>{
+    const tool=tools.find(t=>String(t.id)===String(a.toolId));
+    if(!tool)return'';
+    return '<button type="button" class="ai-alt" data-ai-open="'+escapeHtml(tool.id)+'"><strong>'+escapeHtml(tool.name)+'</strong><span>'+escapeHtml(a.reason||tool.description||'')+'</span></button>';
+  }).join('');
+  els.aiFinderResult.innerHTML='<div class="ai-result-head"><span>GEMINI RECOMMENDATION</span><h3>'+escapeHtml(data.title||'추천 워크플로')+'</h3><p>'+escapeHtml(data.summary||'')+'</p></div><div class="ai-steps">'+stepMarkup+'</div>'+(altMarkup?'<div class="ai-alternatives"><h4>대체 도구</h4>'+altMarkup+'</div>':'');
+  els.aiFinderResult.hidden=false;
+  els.aiFinderResult.querySelectorAll('[data-ai-open]').forEach(btn=>btn.addEventListener('click',()=>openDetail(btn.dataset.aiOpen)));
+}
+function setupAiFinder(){
+  if(!els.aiFinderForm||els.aiFinderForm.dataset.ready==='1')return;
+  els.aiFinderForm.dataset.ready='1';
+  document.querySelectorAll('[data-ai-example]').forEach(btn=>btn.addEventListener('click',()=>{
+    els.aiFinderInput.value=btn.dataset.aiExample||'';
+    els.aiFinderInput.focus();
+  }));
+  els.aiFinderForm.addEventListener('submit',async e=>{
+    e.preventDefault();
+    const query=String(els.aiFinderInput.value||'').trim();
+    if(query.length<4){
+      els.aiFinderStatus.hidden=false;
+      els.aiFinderStatus.className='ai-finder-status error';
+      els.aiFinderStatus.textContent='하고 싶은 일을 조금 더 자세히 적어주세요.';
+      return;
+    }
+    els.aiFinderSubmit.disabled=true;
+    els.aiFinderSubmit.textContent='Gemini가 조합 찾는 중...';
+    els.aiFinderStatus.hidden=false;
+    els.aiFinderStatus.className='ai-finder-status loading';
+    els.aiFinderStatus.textContent='OpenShelf 도구를 분석해 작업 조합을 만들고 있습니다.';
+    els.aiFinderResult.hidden=true;
+    try{
+      const data=await requestAiRecommendation(query);
+      if(!data||!data.ok)throw new Error((data&&data.error)||'추천 결과를 만들지 못했습니다.');
+      els.aiFinderStatus.hidden=true;
+      renderAiRecommendation(data);
+    }catch(err){
+      els.aiFinderStatus.hidden=false;
+      els.aiFinderStatus.className='ai-finder-status error';
+      els.aiFinderStatus.textContent=String(err&&err.message?err.message:err);
+    }finally{
+      els.aiFinderSubmit.disabled=false;
+      els.aiFinderSubmit.textContent='AI로 조합 찾기 →';
+    }
+  });
+}
 function rememberRecentlyViewed(id){recentlyViewed=[id,...recentlyViewed.filter(x=>x!==id)].slice(0,8);localStorage.setItem(RECENTLY_VIEWED_KEY,JSON.stringify(recentlyViewed));renderRecentlyViewed()}
 function renderRecentlyViewed(){if(!els.recentlyViewedGrid||!els.recentlyViewedSection)return;const items=recentlyViewed.map(id=>tools.find(t=>t.id===id)).filter(Boolean).slice(0,4);if(!items.length){els.recentlyViewedSection.hidden=true;return}els.recentlyViewedSection.hidden=false;els.recentlyViewedGrid.innerHTML=items.map(t=>miniToolCard(t,'RECENT')).join('');bindMiniCards(els.recentlyViewedGrid)}
 function renderCompareBar(){if(!els.compareBar)return;const n=compareSelected.size;els.compareBar.hidden=n===0;els.compareCount.textContent=n;els.openCompare.disabled=n<2;document.body.classList.toggle('compare-active',n>0)}
@@ -497,7 +576,7 @@ els.adminGate?.addEventListener('click',()=>{
 });
 els.favoritesNav.addEventListener('click',openFavorites);els.mobileFavorites.addEventListener('click',openFavorites);els.scrollToAll.addEventListener('click',()=>document.querySelector('#tools').scrollIntoView({behavior:'smooth'}));els.resetFilters.addEventListener('click',()=>resetFilters());els.dialogClose.addEventListener('click',closeDialog);els.toolDialog.addEventListener('click',e=>{if(e.target===els.toolDialog)closeDialog()});els.mobileMenuButton.addEventListener('click',toggleMobileMenu);els.mobileMenu.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeMobileMenu));
 document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==els.search){e.preventDefault();els.search.focus()}if(e.key==='Escape'&&els.toolDialog.open)closeDialog();else if(e.key==='Escape')closeMobileMenu()});
-async function loadTools(){els.loadingState.hidden=false;els.errorState.hidden=true;els.toolGrid.hidden=true;try{const [r,sr]=await Promise.all([fetch('./data/tools.json',{cache:'no-store'}),fetch('./data/discovery-state.json',{cache:'no-store'})]);if(!r.ok)throw new Error('load failed');tools=await r.json();discoveryState=sr.ok?await sr.json():null;restoreStateFromUrl();els.heroToolCount.textContent=tools.length;saveFavorites();renderChips();renderCategories();renderCollections();renderLatest();renderTrending();renderDailyDiscovery();renderWorkflows();renderRecentlyViewed();renderStats();renderDiscoveryStatus();renderTools();els.loadingState.hidden=true;els.toolGrid.hidden=false;setupReveal();setupActiveNav();const detailId=new URLSearchParams(location.search).get('tool');if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId)}catch{els.loadingState.hidden=true;els.errorState.hidden=false;els.toolGrid.hidden=true}}
+async function loadTools(){els.loadingState.hidden=false;els.errorState.hidden=true;els.toolGrid.hidden=true;try{const [r,sr]=await Promise.all([fetch('./data/tools.json',{cache:'no-store'}),fetch('./data/discovery-state.json',{cache:'no-store'})]);if(!r.ok)throw new Error('load failed');tools=await r.json();discoveryState=sr.ok?await sr.json():null;restoreStateFromUrl();els.heroToolCount.textContent=tools.length;saveFavorites();renderChips();renderCategories();renderCollections();renderLatest();renderTrending();renderDailyDiscovery();renderWorkflows();setupAiFinder();renderRecentlyViewed();renderStats();renderDiscoveryStatus();renderTools();els.loadingState.hidden=true;els.toolGrid.hidden=false;setupReveal();setupActiveNav();const detailId=new URLSearchParams(location.search).get('tool');if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId)}catch{els.loadingState.hidden=true;els.errorState.hidden=false;els.toolGrid.hidden=true}}
 els.retryLoad.addEventListener('click',loadTools);
 window.addEventListener('popstate',()=>{if(!tools.length)return;restoreStateFromUrl();renderChips();renderTools();const detailId=new URLSearchParams(location.search).get('tool');if(detailId)openDetail(detailId);else if(els.toolDialog.open)closeDialog()});
 els.clearRecentlyViewed?.addEventListener('click',()=>{recentlyViewed=[];localStorage.removeItem(RECENTLY_VIEWED_KEY);renderRecentlyViewed()});
