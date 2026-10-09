@@ -1747,8 +1747,86 @@ function renderReview(){
 }
 document.getElementById('reviewProblems').addEventListener('click',()=>{reviewMode='problems';renderReview()});
 document.getElementById('reviewIssues').addEventListener('click',()=>{reviewMode='issues';issueFilter='전체';renderReview()});
+document.getElementById('reviewRecheckSoon').addEventListener('click',()=>{reviewMode='recheckSoon';renderReview()});
+document.getElementById('reviewRecheckDue').addEventListener('click',()=>{reviewMode='recheckDue';renderReview()});
 document.getElementById('reviewRecent').addEventListener('click',()=>{reviewMode='recent';renderReview()});
 document.getElementById('reviewApproved').addEventListener('click',()=>{reviewMode='approved';renderReview()});
+
+const EDIT_CATEGORIES=['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'];
+const toolEditor=document.getElementById('toolEditor');
+function openToolEditor(id){
+  const t=adminTools.find(x=>String(x.id)===String(id));if(!t)return;
+  document.getElementById('editToolId').value=String(t.id);
+  document.getElementById('editName').value=t.name||'';
+  const cat=document.getElementById('editCategory');
+  cat.innerHTML=EDIT_CATEGORIES.map(v=>'<option value="'+esc(v)+'">'+esc(v)+'</option>').join('');
+  cat.value=t.category||EDIT_CATEGORIES[0];
+  document.getElementById('editDescription').value=t.description||'';
+  document.getElementById('editLongDescription').value=t.longDescription||'';
+  document.getElementById('editWebsite').value=t.website||'';
+  document.getElementById('editLicense').value=t.license||'';
+  document.getElementById('editTags').value=(t.tags||[]).join(', ');
+  toolEditor.showModal();
+}
+function closeToolEditor(){if(toolEditor.open)toolEditor.close()}
+document.getElementById('closeToolEditor').addEventListener('click',closeToolEditor);
+document.getElementById('cancelToolEditor').addEventListener('click',closeToolEditor);
+toolEditor.addEventListener('click',e=>{if(e.target===toolEditor)closeToolEditor()});
+document.getElementById('toolEditorForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const id=document.getElementById('editToolId').value;
+  const patch={
+    name:document.getElementById('editName').value,
+    category:document.getElementById('editCategory').value,
+    description:document.getElementById('editDescription').value,
+    longDescription:document.getElementById('editLongDescription').value,
+    website:document.getElementById('editWebsite').value,
+    license:document.getElementById('editLicense').value,
+    tags:document.getElementById('editTags').value.split(',').map(v=>v.trim()).filter(Boolean)
+  };
+  opMessage('도구 정보를 저장하는 중...');
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+    if(!r||!r.ok){opMessage((r&&r.error)||'도구 수정에 실패했습니다.','error');return}
+    closeToolEditor();
+    reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;
+    reviewState=r.reviewState&&typeof r.reviewState==='object'?r.reviewState:reviewState;
+    opMessage(r.message||'도구를 수정했습니다.');
+    loadDashboard();
+  }).adminUpdateTool(token,id,patch);
+});
+
+document.getElementById('selectVisibleReviews').addEventListener('click',()=>{
+  currentReviewRows.slice(0,20).forEach(x=>selectedReviewIds.add(String(x.tool.id)));
+  renderReview();
+});
+document.getElementById('clearSelectedReviews').addEventListener('click',()=>{selectedReviewIds.clear();renderReview()});
+document.getElementById('bulkApproveReviews').addEventListener('click',()=>{
+  const ids=[...selectedReviewIds];
+  if(!ids.length){opMessage('선택된 도구가 없습니다.','error');return}
+  if(!confirm(ids.length+'개 도구를 일괄 승인할까요?'))return;
+  opMessage('일괄 승인 중...');
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+    if(!r||!r.ok){opMessage((r&&r.error)||'일괄 승인에 실패했습니다.','error');return}
+    reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;
+    reviewState=r.reviewState&&typeof r.reviewState==='object'?r.reviewState:reviewState;
+    selectedReviewIds.clear();
+    opMessage(r.message||'일괄 승인했습니다.');
+    renderReview();renderAnalytics();
+  }).adminBulkApprove(token,ids);
+});
+document.getElementById('bulkGeminiReview').addEventListener('click',()=>{
+  const ids=[...selectedReviewIds].slice(0,5);
+  if(!ids.length){opMessage('선택된 도구가 없습니다.','error');return}
+  if(!confirm(ids.length+'개 도구를 Gemini로 일괄 재검수할까요? 한 번에 최대 5개까지 처리합니다.'))return;
+  opMessage('Gemini 일괄 재검수 중...');
+  google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
+    if(!r||!r.ok){opMessage((r&&r.error)||'일괄 재검수에 실패했습니다.','error');return}
+    geminiReviews=r.geminiReviews&&typeof r.geminiReviews==='object'?r.geminiReviews:geminiReviews;
+    selectedReviewIds.clear();
+    opMessage(r.message||'일괄 재검수를 완료했습니다.');
+    renderReview();
+  }).adminBulkGeminiReview(token,ids);
+});
 
 function renderConfig(){
   document.getElementById('cfgTarget').value=String(adminConfig.targetPerHour||20);
