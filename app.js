@@ -331,7 +331,15 @@ function syncUrl(detailId=null){const p=new URLSearchParams();if(state.query)p.s
 function restoreStateFromUrl(){const p=new URLSearchParams(location.search);state.query=(p.get('q')||'').toLowerCase();state.category=p.get('category')||'전체';state.platform=p.get('platform')||'all';state.openSource=p.get('open')==='1';state.free=p.get('free')==='1';state.favoritesOnly=p.get('favorites')==='1';state.todayOnly=p.get('today')==='1';state.sort=p.get('sort')||'popular';els.search.value=state.query;els.platformFilter.value=state.platform;els.openSourceOnly.checked=state.openSource;els.freeOnly.checked=state.free;els.favoritesOnly.checked=state.favoritesOnly;if(els.todayOnly)els.todayOnly.checked=state.todayOnly;els.sortSelect.value=state.sort}
 const TOOL_PAGE_SIZE=24;
 let visibleToolCount=TOOL_PAGE_SIZE;
-function renderTools(preserveVisible=false){if(!preserveVisible)visibleToolCount=TOOL_PAGE_SIZE;let results=tools.filter(toolMatches);if(state.query)results.sort((a,b)=>searchScore(b,state.query)-searchScore(a,state.query)||(b.stars||0)-(a.stars||0));else if(state.sort==='name')results.sort((a,b)=>a.name.localeCompare(b.name));else if(state.sort==='newest')results.sort((a,b)=>String(b.addedAt||b.added||'').localeCompare(String(a.addedAt||a.added||'')));else if(state.sort==='featured')results.sort((a,b)=>(b.featured||0)-(a.featured||0)||(b.stars||0)-(a.stars||0));else if(state.sort==='trending')results.sort((a,b)=>Number(b.starDelta1d||0)-Number(a.starDelta1d||0)||(b.stars||0)-(a.stars||0));else if(state.sort==='score')results.sort((a,b)=>openShelfScore(b).score-openShelfScore(a).score||(b.stars||0)-(a.stars||0));else results.sort((a,b)=>(b.stars||0)-(a.stars||0)||(b.forks||0)-(a.forks||0)||(b.featured||0)-(a.featured||0));previewToolIds=results.map(t=>t.id);els.toolGrid.innerHTML=results.slice(0,visibleToolCount).map(card).join('');if(els.loadMoreTools){els.loadMoreTools.hidden=results.length<=visibleToolCount;els.loadMoreTools.textContent=`더 보기 (${Math.min(visibleToolCount,results.length)} / ${results.length})`;}els.resultCount.textContent=`${results.length} tools`;els.resultContext.textContent=resultContextText();els.emptyState.hidden=results.length!==0;renderActiveFilters();renderSearchFacets();bindDynamicEvents();syncUrl()}
+function renderTools(preserveVisible=false){if(!preserveVisible)visibleToolCount=TOOL_PAGE_SIZE;let results;
+if(state.query){
+  const scored=tools.filter(t=>state.category==='전체'||t.category===state.category)
+    .filter(t=>(!state.todayOnly||isAddedToday(t))&&(!state.openSource||t.openSource)&&(!state.free||t.free)&&(!state.favoritesOnly||favorites.has(t.id))&&(state.platform==='all'||t.platforms.includes(state.platform)))
+    .map(tool=>({tool,score:searchScore(tool,state.query)}))
+    .filter(item=>item.score>0)
+    .sort((a,b)=>b.score-a.score||(b.tool.stars||0)-(a.tool.stars||0));
+  results=scored.map(item=>item.tool);
+}else{results=tools.filter(toolMatches);}else if(state.sort==='name')results.sort((a,b)=>a.name.localeCompare(b.name));else if(state.sort==='newest')results.sort((a,b)=>String(b.addedAt||b.added||'').localeCompare(String(a.addedAt||a.added||'')));else if(state.sort==='featured')results.sort((a,b)=>(b.featured||0)-(a.featured||0)||(b.stars||0)-(a.stars||0));else if(state.sort==='trending')results.sort((a,b)=>Number(b.starDelta1d||0)-Number(a.starDelta1d||0)||(b.stars||0)-(a.stars||0));else if(state.sort==='score')results.sort((a,b)=>openShelfScore(b).score-openShelfScore(a).score||(b.stars||0)-(a.stars||0));else results.sort((a,b)=>(b.stars||0)-(a.stars||0)||(b.forks||0)-(a.forks||0)||(b.featured||0)-(a.featured||0));previewToolIds=results.map(t=>t.id);els.toolGrid.innerHTML=results.slice(0,visibleToolCount).map(card).join('');if(els.loadMoreTools){els.loadMoreTools.hidden=results.length<=visibleToolCount;els.loadMoreTools.textContent=`더 보기 (${Math.min(visibleToolCount,results.length)} / ${results.length})`;}els.resultCount.textContent=`${results.length} tools`;els.resultContext.textContent=resultContextText();els.emptyState.hidden=results.length!==0;renderActiveFilters();renderSearchFacets();bindDynamicEvents();syncUrl()}
 function miniToolCard(tool,badge=''){return `<article class="latest-card" data-tone="${categoryTone(tool.category)}" data-mini-tool="${tool.id}" tabindex="0"><div class="latest-top">${visualMarkup(tool)}${badge?`<span class="latest-badge">${badge}</span>`:''}</div><span class="latest-category">${escapeHtml(tool.category)}</span><h3>${escapeHtml(tool.name)}</h3><p>${escapeHtml(tool.description)}</p><time>${tool.starDelta1d>0?`★ +${Number(tool.starDelta1d).toLocaleString()} / 24h`:(tool.added||'')}</time></article>`}
 function bindMiniCards(root){root?.querySelectorAll('[data-mini-tool]').forEach(el=>{const open=()=>openDetail(el.dataset.miniTool);el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()})})}
 function renderTrending(){if(!els.trendingGrid||!els.trendingSection)return;const rising=[...tools].filter(t=>Number(t.starDelta1d||0)>0).sort((a,b)=>Number(b.starDelta1d||0)-Number(a.starDelta1d||0)||(b.stars||0)-(a.stars||0)).slice(0,4);if(!rising.length){els.trendingSection.hidden=true;return}els.trendingSection.hidden=false;els.trendingGrid.innerHTML=rising.map(t=>miniToolCard(t,`+${compactNumber(t.starDelta1d)}`)).join('');bindMiniCards(els.trendingGrid)}
@@ -699,7 +707,33 @@ function moveQuickPreview(direction){
 }
 function closeDialog(){els.toolDialog.close();document.body.classList.remove('dialog-open');syncUrl()}
 function toggleFavorite(id){favorites.has(id)?favorites.delete(id):favorites.add(id);saveFavorites();renderTools()}
-function bindDynamicEvents(){els.toolGrid.querySelectorAll('[data-favorite]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();toggleFavorite(btn.dataset.favorite)}));els.toolGrid.querySelectorAll('[data-preview]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();openQuickPreview(btn.dataset.preview)}));els.toolGrid.querySelectorAll('.card[data-id]').forEach(cardEl=>{cardEl.addEventListener('mouseenter',()=>{if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){clearTimeout(previewHoverTimer);previewHoverTimer=setTimeout(()=>openQuickPreview(cardEl.dataset.id),450)}});cardEl.addEventListener('mouseleave',()=>clearTimeout(previewHoverTimer))});els.toolGrid.querySelectorAll('[data-detail]').forEach(btn=>btn.addEventListener('click',()=>{closeQuickPreview();openDetail(btn.dataset.detail)}));els.toolGrid.querySelectorAll('[data-tag]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();applyTagFilter(decodeURIComponent(btn.dataset.tag))}));els.toolGrid.querySelectorAll('[data-compare]').forEach(btn=>btn.addEventListener('click',e=>{e.stopPropagation();toggleCompare(btn.dataset.compare)}))}
+// Delegate card actions once: replacing visible cards no longer creates listeners per card.
+let toolGridEventsBound=false;
+function bindDynamicEvents(){
+  if(toolGridEventsBound)return;
+  toolGridEventsBound=true;
+  els.toolGrid.addEventListener('click',e=>{
+    const button=e.target.closest('[data-favorite],[data-preview],[data-detail],[data-tag],[data-compare]');
+    if(!button||!els.toolGrid.contains(button))return;
+    if(button.hasAttribute('data-favorite')){e.stopPropagation();toggleFavorite(button.dataset.favorite)}
+    else if(button.hasAttribute('data-preview')){e.stopPropagation();openQuickPreview(button.dataset.preview)}
+    else if(button.hasAttribute('data-detail')){closeQuickPreview();openDetail(button.dataset.detail)}
+    else if(button.hasAttribute('data-tag')){e.stopPropagation();applyTagFilter(decodeURIComponent(button.dataset.tag))}
+    else if(button.hasAttribute('data-compare')){e.stopPropagation();toggleCompare(button.dataset.compare)}
+  });
+  els.toolGrid.addEventListener('mouseover',e=>{
+    const card=e.target.closest('.card[data-id]');
+    if(!card||!els.toolGrid.contains(card)||card.contains(e.relatedTarget))return;
+    if(window.matchMedia('(hover:hover) and (pointer:fine)').matches){
+      clearTimeout(previewHoverTimer);
+      previewHoverTimer=setTimeout(()=>openQuickPreview(card.dataset.id),450);
+    }
+  });
+  els.toolGrid.addEventListener('mouseout',e=>{
+    const card=e.target.closest('.card[data-id]');
+    if(card&&!card.contains(e.relatedTarget))clearTimeout(previewHoverTimer);
+  });
+}
 function resetFilters(scroll=true){clearTimeout(searchRenderTimer);searchRenderTimer=null;Object.assign(state,{category:'전체',query:'',openSource:false,free:false,favoritesOnly:false,todayOnly:false,platform:'all',sort:'popular'});els.search.value='';if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};if(els.searchFacets){els.searchFacets.hidden=true;els.searchFacets.innerHTML=''};if(els.searchSuggestions){els.searchSuggestions.hidden=true;els.searchSuggestions.innerHTML=''};els.openSourceOnly.checked=false;els.freeOnly.checked=false;els.favoritesOnly.checked=false;if(els.todayOnly)els.todayOnly.checked=false;els.platformFilter.value='all';els.sortSelect.value='popular';renderChips();renderTools();if(scroll)document.querySelector('#tools').scrollIntoView({behavior:'smooth'})}
 function renderStats(){const categoryCount=new Set(tools.map(t=>t.category)).size;const platformCount=new Set(tools.flatMap(t=>t.platforms)).size;const openCount=tools.filter(t=>t.openSource).length;els.statCategories.textContent=categoryCount;els.statPlatforms.textContent=platformCount;els.statOpenSource.textContent=openCount;if(els.heroCategoryCount)els.heroCategoryCount.textContent=categoryCount;if(els.heroOpenSourceCount)els.heroOpenSourceCount.textContent=openCount}
 function resultContextText(){const parts=[];if(state.query){const intent=queryIntentLabel(state.query);parts.push(`“${state.query}” 관련도순${intent?' · '+intent:''}`);}if(state.category!=='전체')parts.push(state.category);if(state.platform!=='all')parts.push(state.platform);if(state.openSource)parts.push('오픈소스');if(state.free)parts.push('무료');if(state.favoritesOnly)parts.push('즐겨찾기');if(state.todayOnly)parts.push('오늘 추가');return parts.length?' · '+parts.join(' · '):' · 전체 도구'}
