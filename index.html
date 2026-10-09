@@ -93,6 +93,24 @@
         <p>새로 들어온 도구와 최근 주목받는 프로젝트를 한 번에 훑어보세요.</p>
       </div>
 
+      <section class="system-status reveal" id="systemStatus" aria-label="OpenShelf 자동수집 상태">
+        <div class="system-status-head">
+          <div>
+            <span class="eyebrow">SYSTEM STATUS</span>
+            <h2>자동수집 현황</h2>
+          </div>
+          <span id="discoveryStatusBadge" class="status-badge">CHECKING</span>
+        </div>
+        <div class="system-status-grid">
+          <div><span>최근 수집</span><strong id="discoveryLastRun">—</strong></div>
+          <div><span>이번 회차</span><strong id="discoveryLastAdded">—</strong></div>
+          <div><span>탈락</span><strong id="discoveryRejected">—</strong></div>
+          <div><span>누적 자동추가</span><strong id="discoveryTotal">—</strong></div>
+          <div><span>배치 오류</span><strong id="discoveryBatch">—</strong></div>
+          <div><span>다음 예정</span><strong id="discoveryNextRun">—</strong></div>
+        </div>
+      </section>
+
       <div class="discovery-board reveal">
       <section class="section-block reveal" id="trending">
         <div class="section-heading">
@@ -172,6 +190,7 @@
           <label><input id="openSourceOnly" type="checkbox" /> 오픈소스</label>
           <label><input id="freeOnly" type="checkbox" /> 무료</label>
           <label><input id="favoritesOnly" type="checkbox" /> 즐겨찾기</label>
+          <label class="today-filter"><input id="todayOnly" type="checkbox" /> 오늘 추가</label>
           <select id="platformFilter" aria-label="플랫폼 필터">
             <option value="all">모든 플랫폼</option>
             <option value="Web">Web</option>
