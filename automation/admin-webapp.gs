@@ -1340,6 +1340,8 @@ let reviewApproved=[];
 let reviewState={version:1,updatedAt:null,items:{}};
 let reviewMode='problems';
 let issueFilter='전체';
+const selectedReviewIds=new Set();
+let currentReviewRows=[];
 let adminLogs=[];
 let geminiReviews={};
 const login=document.getElementById('login'),dash=document.getElementById('dashboard'),logout=document.getElementById('logout'),msg=document.getElementById('msg');
@@ -1561,6 +1563,53 @@ function renderIssueFilters(){
   root.hidden=false;
   root.innerHTML=filters.map(v=>'<button type="button" class="issue-filter '+(issueFilter===v?'active':'')+'" data-issue-filter="'+esc(v)+'">'+esc(v)+(v==='전체'?'':' '+Number(counts[v]||0))+'</button>').join('');
   root.querySelectorAll('[data-issue-filter]').forEach(btn=>btn.addEventListener('click',()=>{issueFilter=btn.dataset.issueFilter;renderReview()}));
+}
+function healthSignature(tool){
+  return JSON.stringify({
+    license:String(tool.license||''),
+    website:String(tool.website||''),
+    githubLicense:String(tool.githubLicense||''),
+    githubArchived:tool.githubArchived===true,
+    githubDisabled:tool.githubDisabled===true,
+    healthCheckStatus:String(tool.healthCheckStatus||''),
+    githubPushedAt:String(tool.githubPushedAt||''),
+    githubUpdatedAt:String(tool.githubUpdatedAt||'')
+  });
+}
+function snapshotSignature(snapshot){
+  snapshot=snapshot||{};
+  return JSON.stringify({
+    license:String(snapshot.license||''),
+    website:String(snapshot.website||''),
+    githubLicense:String(snapshot.githubLicense||''),
+    githubArchived:snapshot.githubArchived===true,
+    githubDisabled:snapshot.githubDisabled===true,
+    healthCheckStatus:String(snapshot.healthCheckStatus||''),
+    githubPushedAt:String(snapshot.githubPushedAt||''),
+    githubUpdatedAt:String(snapshot.githubUpdatedAt||'')
+  });
+}
+function recheckInfo(tool){
+  const record=reviewState&&reviewState.items?reviewState.items[String(tool.id)]:null;
+  if(!record||record.status!=='approved')return {status:'none',days:0,reasons:[]};
+  const last=Date.parse(record.lastReviewedAt||record.approvedAt||0);
+  const days=last?Math.floor((Date.now()-last)/86400000):9999;
+  const reasons=[];
+  const snapshot=record.healthSnapshot||null;
+  if(snapshot&&healthSignature(tool)!==snapshotSignature(snapshot))reasons.push('GitHub 상태 변경');
+  if(tool.githubArchived===true)reasons.push('Archived');
+  if(tool.githubDisabled===true)reasons.push('Disabled');
+  if(['not_found','forbidden','error'].includes(String(tool.healthCheckStatus||'')))reasons.push('점검 상태 변경');
+  if(reasons.length||days>=60)return {status:'due',days:days,reasons:[...new Set(reasons.length?reasons:['60일 이상 경과'])]};
+  if(days>=30)return {status:'soon',days:days,reasons:['30일 이상 경과']};
+  return {status:'ok',days:days,reasons:[]};
+}
+function recheckRows(status){
+  return adminTools.filter(t=>recheckInfo(t).status===status).map(t=>({tool:t,review:qualityReview(t)})).sort((a,b)=>recheckInfo(b.tool).days-recheckInfo(a.tool).days);
+}
+function renderBulkBar(){
+  const count=document.getElementById('bulkSelectedCount');
+  if(count)count.textContent=String(selectedReviewIds.size);
 }
 function recentTools20(){
   return adminTools.slice().sort((a,b)=>{
