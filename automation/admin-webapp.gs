@@ -341,7 +341,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v4.2 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v4.3 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -497,8 +497,9 @@ function qualityReview(tool){
   if(Number(tool.stars||0)<500){score-=10;flags.push('Stars 낮음')}
   if(!tool.category){score-=15;flags.push('카테고리 없음')}
   const dupName=adminTools.filter(x=>x.id!==tool.id&&canon(x.name)===canon(tool.name)).length>0;
-  const site=String(tool.website||'').replace(/\\\/$/,'').toLowerCase();
-  const dupSite=site&&adminTools.filter(x=>x.id!==tool.id&&String(x.website||'').replace(/\/$/,'').toLowerCase()===site).length>0;
+  const rawSite=String(tool.website||'').toLowerCase();
+  const site=rawSite.endsWith('/')?rawSite.slice(0,-1):rawSite;
+  const dupSite=site&&adminTools.filter(x=>{const raw=String(x.website||'').toLowerCase();const normalized=raw.endsWith('/')?raw.slice(0,-1):raw;return x.id!==tool.id&&normalized===site}).length>0;
   if(dupName||dupSite){score-=25;flags.push('중복 의심')}
   return {score:Math.max(0,score),flags:flags};
 }
