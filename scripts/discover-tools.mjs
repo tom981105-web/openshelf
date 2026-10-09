@@ -9,8 +9,8 @@ const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
 const GEMINI_MODEL = process.env.GEMINI_MODEL || 'gemini-3.5-flash-lite';
 const GITHUB_EVENT_NAME = process.env.GITHUB_EVENT_NAME || '';
 const BATCH_SIZE = 10;
-const BATCH_COUNT = 1;
-const TARGET_COUNT = BATCH_SIZE;
+const BATCH_COUNT = 2;
+const TARGET_COUNT = BATCH_SIZE * BATCH_COUNT;
 const CANDIDATE_COUNT = 20;
 const SEARCH_PAGES_PER_TOPIC = 3;
 const MIN_DESCRIPTION_LENGTH = 20;
@@ -95,7 +95,7 @@ async function ghJson(url) {
   return res.json();
 }
 
-async function searchCandidates() {
+async function searchCandidates(runExcludedRepos = new Set()) {
   const floor = Number(state.minimumStars || 200);
   const merged = new Map();
 
@@ -108,7 +108,7 @@ async function searchCandidates() {
 
       for (const repo of items) {
         const key = repo.full_name.toLowerCase();
-        if (existingRepos.has(key) || deniedRepos.has(key)) continue;
+        if (existingRepos.has(key) || deniedRepos.has(key) || runExcludedRepos.has(key)) continue;
         if (repo.archived || repo.fork || repo.stargazers_count < floor) continue;
         const prev = merged.get(key);
         if (!prev || repo.stargazers_count > prev.stargazers_count) merged.set(key, repo);
@@ -167,19 +167,6 @@ function candidateForGemini(repo, readme) {
     readme_excerpt: compactReadme(readme)
   };
 }
-
-const candidates = await searchCandidates();
-if (candidates.length < TARGET_COUNT) {
-  console.log(`Not enough candidates in current star range: ${candidates.length}. No changes made.`);
-  process.exit(0);
-}
-
-const enriched = [];
-for (const repo of candidates) {
-  enriched.push(candidateForGemini(repo, await getReadme(repo)));
-  await sleep(120);
-}
-
 
 const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(GEMINI_MODEL)}:generateContent?key=${encodeURIComponent(GEMINI_API_KEY)}`;
 
@@ -291,29 +278,51 @@ ${JSON.stringify(batchCandidates)}
 
 const selectedItems = [];
 const batchErrors = [];
+const selectedRepoKeys = new Set();
+const candidateRepoMap = new Map();
+
 for (let batchIndex = 0; batchIndex < BATCH_COUNT; batchIndex++) {
-  const start = batchIndex * CANDIDATE_COUNT;
-  const batchCandidates = enriched.slice(start, start + CANDIDATE_COUNT);
-  if (batchCandidates.length < BATCH_SIZE) {
-    batchErrors.push(`Batch ${batchIndex + 1}: only ${batchCandidates.length} candidates`);
+  console.log(`Round ${batchIndex + 1}/${BATCH_COUNT}: searching popular candidates again...`);
+
+  const roundCandidates = await searchCandidates(selectedRepoKeys);
+  if (roundCandidates.length < BATCH_SIZE) {
+    batchErrors.push(`Round ${batchIndex + 1}: only ${roundCandidates.length} candidates`);
     continue;
   }
 
-  try {
-    const selected = await selectBatch(batchCandidates, batchIndex + 1);
-    selectedItems.push(...selected);
-  } catch (error) {
-    batchErrors.push(`Batch ${batchIndex + 1}: ${error.message}`);
-    console.error(`Batch ${batchIndex + 1} failed:`, error.message);
+  for (const repo of roundCandidates) {
+    candidateRepoMap.set(repo.full_name.toLowerCase(), repo);
   }
 
-  if (batchIndex < BATCH_COUNT - 1) await sleep(500);
+  const roundEnriched = [];
+  for (const repo of roundCandidates) {
+    roundEnriched.push(candidateForGemini(repo, await getReadme(repo)));
+    await sleep(120);
+  }
+
+  try {
+    const selected = await selectBatch(roundEnriched, batchIndex + 1);
+    selectedItems.push(...selected);
+
+    for (const item of selected) {
+      const key = String(item.full_name || '').toLowerCase();
+      if (key) selectedRepoKeys.add(key);
+    }
+
+    console.log(`Round ${batchIndex + 1}: selected ${selected.length} tools. Next round will search popularity from the top again while excluding these repositories.`);
+  } catch (error) {
+    batchErrors.push(`Round ${batchIndex + 1}: ${error.message}`);
+    console.error(`Round ${batchIndex + 1} failed:`, error.message);
+  }
+
+  if (batchIndex < BATCH_COUNT - 1) await sleep(750);
 }
 
 if (!selectedItems.length) {
-  throw new Error(`All discovery batches failed: ${batchErrors.join(' | ')}`);
+  throw new Error(`All discovery rounds failed: ${batchErrors.join(' | ')}`);
 }
-const byFullName = new Map(candidates.map(r => [r.full_name.toLowerCase(), r]));
+
+const byFullName = candidateRepoMap;
 const sanitizeText = (value, max = 1000) => String(value || '').replace(/[<>]/g, '').trim().slice(0, max);
 const slugify = value => sanitizeText(value, 120).toLowerCase()
   .replace(/[^a-z0-9가-힣]+/g, '-')
@@ -447,4 +456,4 @@ console.log(`Added ${additions.length}/${TARGET_COUNT}:`, additions.map(x => `${
 if (rejectionReasons.length) console.log('Rejected:', rejectionReasons.join(' | '));
 if (batchErrors.length) console.log('Batch errors:', batchErrors.join(' | '));
 console.log(`Candidate search: up to ${SEARCH_PAGES_PER_TOPIC} GitHub pages per topic; denylist enforced.`);
-console.log('Popularity strategy: always restart from the highest-star candidates and skip existing repositories.');
+console.log('Popularity strategy: 10 tools per round × 2 rounds. Each round re-runs popularity search from the top, excluding existing tools and repositories selected earlier in the same hour.');
