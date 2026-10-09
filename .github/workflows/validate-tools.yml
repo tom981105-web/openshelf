@@ -1,0 +1,34 @@
+name: Validate OpenShelf data
+
+on:
+  pull_request:
+    paths:
+      - 'data/tools.json'
+      - 'scripts/validate-tools.mjs'
+      - 'scripts/validate-tools.test.mjs'
+      - '.github/workflows/validate-tools.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'data/tools.json'
+      - 'scripts/validate-tools.mjs'
+      - 'scripts/validate-tools.test.mjs'
+      - '.github/workflows/validate-tools.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validator smoke tests
+        run: node scripts/validate-tools.test.mjs
+      - name: Validate tools.json
+        run: node scripts/validate-tools.mjs data/tools.json

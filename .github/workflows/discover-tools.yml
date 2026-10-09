@@ -28,6 +28,11 @@ jobs:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: node scripts/discover-tools.mjs
 
+      - name: Validate discovery output before commit
+        run: |
+          node scripts/validate-tools.test.mjs
+          node scripts/validate-tools.mjs data/tools.json
+
       - name: Commit new tools
         run: |
           if git diff --quiet -- data/tools.json data/discovery-state.json data/discovery-log.json; then
