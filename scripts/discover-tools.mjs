@@ -37,7 +37,8 @@ const githubHeaders = {
 };
 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
-const today = new Date().toISOString().slice(0, 10);
+const runTimestamp = new Date().toISOString();
+const today = runTimestamp.slice(0, 10);
 const tools = JSON.parse(await fs.readFile(TOOLS_PATH, 'utf8'));
 const state = JSON.parse(await fs.readFile(STATE_PATH, 'utf8'));
 let denylist = [];
@@ -372,6 +373,7 @@ for (const item of selectedItems) {
     website: repo.homepage || github,
     featured: 9,
     added: today,
+    addedAt: runTimestamp,
     requirements: Array.isArray(item.requirements) ? item.requirements.slice(0, 4).map(x => sanitizeText(x, 120)).filter(Boolean) : [],
     supportedAgents: Array.isArray(item.supportedAgents) ? item.supportedAgents.slice(0, 8).map(x => sanitizeText(x, 80)).filter(Boolean) : [],
     install,
