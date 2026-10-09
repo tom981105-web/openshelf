@@ -20,7 +20,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Discover 20 popular tools
+      - name: Discover up to 20 popular tools
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
@@ -37,6 +37,6 @@ jobs:
           git config user.name "openshelf-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/tools.json data/discovery-state.json
-          git commit -m "chore: discover 20 OpenShelf tools"
+          git commit -m "chore: discover OpenShelf tools"
           git pull --rebase
           git push
