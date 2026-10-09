@@ -1251,6 +1251,15 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
         <button id="reviewApproved" class="review-tab" type="button">승인 완료</button>
       </div>
       <div id="issueFilters" class="issue-filters" hidden></div>
+      <div id="bulkReviewBar" class="bulk-review-bar">
+        <div><strong id="bulkSelectedCount">0</strong><span>개 선택 · 최대 20개</span></div>
+        <div>
+          <button id="selectVisibleReviews" type="button">현재 목록 전체 선택</button>
+          <button id="clearSelectedReviews" type="button">선택 해제</button>
+          <button id="bulkGeminiReview" type="button">Gemini 일괄 재검수</button>
+          <button id="bulkApproveReviews" type="button">선택 일괄 승인</button>
+        </div>
+      </div>
       <div id="reviewList" class="review-list"></div>
     </section>
 
