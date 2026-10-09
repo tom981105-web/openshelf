@@ -28,6 +28,11 @@ function dispatchOpenShelfIfDue() {
   }
 
   const props = PropertiesService.getScriptProperties();
+  const automationEnabled = props.getProperty('OPENSHELF_AUTOMATION_ENABLED') !== 'false';
+  if (!automationEnabled) {
+    console.log('OpenShelf automatic discovery is paused.');
+    return;
+  }
   const lastDispatchedHour = props.getProperty('OPENSHELF_LAST_DISPATCH_HOUR');
 
   if (lastDispatchedHour === hourKey) {
