@@ -41,7 +41,7 @@ const els={
   toolDialog:document.querySelector('#toolDialog'),dialogContent:document.querySelector('#dialogContent'),dialogClose:document.querySelector('#dialogClose'),
   resetFilters:document.querySelector('#resetFilters'),scrollToAll:document.querySelector('#scrollToAll'),statCategories:document.querySelector('#statCategories'),
   statPlatforms:document.querySelector('#statPlatforms'),statOpenSource:document.querySelector('#statOpenSource'),mobileMenuButton:document.querySelector('#mobileMenuButton'),
-  mobileMenu:document.querySelector('#mobileMenu'),activeFilters:document.querySelector('#activeFilters'),resultContext:document.querySelector('#resultContext'),loadingState:document.querySelector('#loadingState'),errorState:document.querySelector('#errorState'),retryLoad:document.querySelector('#retryLoad'),searchSuggestions:document.querySelector('#searchSuggestions'),searchFacets:document.querySelector('#searchFacets'),trendingSection:document.querySelector('#trending'),trendingGrid:document.querySelector('#trendingGrid'),recentlyViewedSection:document.querySelector('#recentlyViewed'),recentlyViewedGrid:document.querySelector('#recentlyViewedGrid'),clearRecentlyViewed:document.querySelector('#clearRecentlyViewed'),compareBar:document.querySelector('#compareBar'),compareCount:document.querySelector('#compareCount'),clearCompare:document.querySelector('#clearCompare'),openCompare:document.querySelector('#openCompare'),compareDialog:document.querySelector('#compareDialog'),compareDialogContent:document.querySelector('#compareDialogContent'),compareDialogClose:document.querySelector('#compareDialogClose'),heroCategoryCount:document.querySelector('#heroCategoryCount'),heroOpenSourceCount:document.querySelector('#heroOpenSourceCount'),discoveryStatusBadge:document.querySelector('#discoveryStatusBadge'),discoveryLastRun:document.querySelector('#discoveryLastRun'),discoveryLastAdded:document.querySelector('#discoveryLastAdded'),discoveryRejected:document.querySelector('#discoveryRejected'),discoveryTotal:document.querySelector('#discoveryTotal'),discoveryBatch:document.querySelector('#discoveryBatch'),discoveryNextRun:document.querySelector('#discoveryNextRun')
+  mobileMenu:document.querySelector('#mobileMenu'),activeFilters:document.querySelector('#activeFilters'),resultContext:document.querySelector('#resultContext'),loadingState:document.querySelector('#loadingState'),errorState:document.querySelector('#errorState'),retryLoad:document.querySelector('#retryLoad'),searchSuggestions:document.querySelector('#searchSuggestions'),searchFacets:document.querySelector('#searchFacets'),trendingSection:document.querySelector('#trending'),trendingGrid:document.querySelector('#trendingGrid'),recentlyViewedSection:document.querySelector('#recentlyViewed'),recentlyViewedGrid:document.querySelector('#recentlyViewedGrid'),clearRecentlyViewed:document.querySelector('#clearRecentlyViewed'),dailyDiscoveryGrid:document.querySelector('#dailyDiscoveryGrid'),dailyDiscoveryDate:document.querySelector('#dailyDiscoveryDate'),workflowGrid:document.querySelector('#workflowGrid'),compareBar:document.querySelector('#compareBar'),compareCount:document.querySelector('#compareCount'),clearCompare:document.querySelector('#clearCompare'),openCompare:document.querySelector('#openCompare'),compareDialog:document.querySelector('#compareDialog'),compareDialogContent:document.querySelector('#compareDialogContent'),compareDialogClose:document.querySelector('#compareDialogClose'),heroCategoryCount:document.querySelector('#heroCategoryCount'),heroOpenSourceCount:document.querySelector('#heroOpenSourceCount'),discoveryStatusBadge:document.querySelector('#discoveryStatusBadge'),discoveryLastRun:document.querySelector('#discoveryLastRun'),discoveryLastAdded:document.querySelector('#discoveryLastAdded'),discoveryRejected:document.querySelector('#discoveryRejected'),discoveryTotal:document.querySelector('#discoveryTotal'),discoveryBatch:document.querySelector('#discoveryBatch'),discoveryNextRun:document.querySelector('#discoveryNextRun')
 };
 
 function saveFavorites(){localStorage.setItem(FAVORITES_KEY,JSON.stringify([...favorites]));els.favoriteCount.textContent=favorites.size;els.mobileFavoriteCount.textContent=favorites.size}
@@ -312,6 +312,111 @@ function renderTools(){let results=tools.filter(toolMatches);if(state.query)resu
 function miniToolCard(tool,badge=''){return `<article class="latest-card" data-tone="${categoryTone(tool.category)}" data-mini-tool="${tool.id}" tabindex="0"><div class="latest-top">${visualMarkup(tool)}${badge?`<span class="latest-badge">${badge}</span>`:''}</div><span class="latest-category">${escapeHtml(tool.category)}</span><h3>${escapeHtml(tool.name)}</h3><p>${escapeHtml(tool.description)}</p><time>${tool.starDelta1d>0?`★ +${Number(tool.starDelta1d).toLocaleString()} / 24h`:(tool.added||'')}</time></article>`}
 function bindMiniCards(root){root?.querySelectorAll('[data-mini-tool]').forEach(el=>{const open=()=>openDetail(el.dataset.miniTool);el.addEventListener('click',open);el.addEventListener('keydown',e=>{if(e.key==='Enter')open()})})}
 function renderTrending(){if(!els.trendingGrid||!els.trendingSection)return;const rising=[...tools].filter(t=>Number(t.starDelta1d||0)>0).sort((a,b)=>Number(b.starDelta1d||0)-Number(a.starDelta1d||0)||(b.stars||0)-(a.stars||0)).slice(0,4);if(!rising.length){els.trendingSection.hidden=true;return}els.trendingSection.hidden=false;els.trendingGrid.innerHTML=rising.map(t=>miniToolCard(t,`+${compactNumber(t.starDelta1d)}`)).join('');bindMiniCards(els.trendingGrid)}
+function stableHash(text){
+  let h=2166136261;
+  for(const ch of String(text||'')){h^=ch.charCodeAt(0);h=Math.imul(h,16777619)}
+  return h>>>0;
+}
+function dailyDiscoveryCandidates(){
+  const day=seoulDateKey();
+  const ranked=[...tools].filter(t=>!t.githubArchived&&activityStatus(t).tone!=='dead').map(t=>{
+    const score=openShelfScore(t).score;
+    const stars=Math.log10(Number(t.stars||0)+1)*6;
+    const activity=Math.max(0,14-Math.min(14,daysSince(t.githubPushedAt||t.githubUpdatedAt)/15));
+    const recent=String(t.added||'')===day?16:Math.max(0,8-Math.min(8,daysSince(t.addedAt||t.added)/10));
+    const jitter=(stableHash(day+'|'+t.id)%1000)/100;
+    return {tool:t,rank:score*1.4+stars+activity+recent+jitter};
+  }).sort((a,b)=>b.rank-a.rank);
+
+  const picked=[],categories=new Set();
+  for(const x of ranked){
+    if(picked.length>=5)break;
+    if(categories.has(x.tool.category)&&picked.length<4)continue;
+    picked.push(x.tool);categories.add(x.tool.category);
+  }
+  for(const x of ranked){
+    if(picked.length>=5)break;
+    if(!picked.some(t=>t.id===x.tool.id))picked.push(x.tool);
+  }
+  return picked;
+}
+function renderDailyDiscovery(){
+  if(!els.dailyDiscoveryGrid)return;
+  const day=seoulDateKey();
+  const picked=dailyDiscoveryCandidates();
+  if(els.dailyDiscoveryDate)els.dailyDiscoveryDate.textContent=day.replaceAll('-','.')+' · 매일 새롭게 고르는 5개';
+  els.dailyDiscoveryGrid.innerHTML=picked.map((t,i)=>{
+    const status=activityStatus(t);
+    return '<article class="daily-card" data-daily-tool="'+esc(t.id)+'" tabindex="0"><div class="daily-index">0'+(i+1)+'</div><div class="daily-main"><div class="daily-top">'+visualMarkup(t)+'<div><span>'+esc(t.category)+'</span><b>'+esc(scoreLabel(openShelfScore(t).score))+' · OS '+openShelfScore(t).score+'</b></div></div><h3>'+esc(t.name)+'</h3><p>'+esc(t.description)+'</p><footer><span class="activity-dot '+status.tone+'"></span>'+esc(status.label)+'<strong>★ '+compactNumber(t.stars||0)+'</strong></footer></div></article>';
+  }).join('');
+  els.dailyDiscoveryGrid.querySelectorAll('[data-daily-tool]').forEach(el=>{
+    const open=()=>openDetail(el.dataset.dailyTool);
+    el.addEventListener('click',open);
+    el.addEventListener('keydown',e=>{if(e.key==='Enter')open()});
+  });
+}
+const workflowDefinitions=[
+  {
+    id:'research',
+    kicker:'RESEARCH FLOW',
+    title:'웹 자료를 찾고 정리하기',
+    description:'웹에서 자료를 모으고, 필요한 내용을 찾고, AI로 정리하는 흐름.',
+    steps:[
+      {label:'수집',match:t=>t.category==='브라우저 자동화'||(t.tags||[]).some(x=>/크롤|스크랩|browser/i.test(x))},
+      {label:'검색',match:t=>t.category==='지식·검색'},
+      {label:'정리',match:t=>t.category==='AI 에이전트'||t.category==='AI 모델'}
+    ]
+  },
+  {
+    id:'build',
+    kicker:'BUILD FLOW',
+    title:'AI로 개발 작업 이어가기',
+    description:'코딩 보조부터 자동화, 지식 연결까지 개발 흐름을 한 번에.',
+    steps:[
+      {label:'개발',match:t=>t.category==='개발 도구'},
+      {label:'에이전트',match:t=>t.category==='AI 에이전트'},
+      {label:'자동화',match:t=>t.category==='업무 자동화'}
+    ]
+  },
+  {
+    id:'docs',
+    kicker:'KNOWLEDGE FLOW',
+    title:'문서를 만들고 지식으로 쌓기',
+    description:'문서를 다루고 검색 가능한 지식으로 만든 뒤 반복 작업까지 줄이는 조합.',
+    steps:[
+      {label:'문서',match:t=>t.category==='문서'},
+      {label:'지식',match:t=>t.category==='지식·검색'},
+      {label:'자동화',match:t=>t.category==='업무 자동화'}
+    ]
+  },
+  {
+    id:'create',
+    kicker:'CREATE FLOW',
+    title:'아이디어를 시각 결과물로',
+    description:'아이디어 생성부터 디자인과 영상 결과물까지 이어지는 제작 조합.',
+    steps:[
+      {label:'아이디어',match:t=>t.category==='AI 모델'||t.category==='AI 에이전트'},
+      {label:'디자인',match:t=>t.category==='디자인·시각화'},
+      {label:'영상',match:t=>t.category==='영상·애니메이션'}
+    ]
+  }
+];
+function workflowPick(match,used){
+  return tools.filter(t=>!used.has(t.id)&&match(t)&&!t.githubArchived).sort((a,b)=>{
+    const as=openShelfScore(a).score,bs=openShelfScore(b).score;
+    return bs-as||Number(b.stars||0)-Number(a.stars||0);
+  })[0]||null;
+}
+function renderWorkflows(){
+  if(!els.workflowGrid)return;
+  els.workflowGrid.innerHTML=workflowDefinitions.map(w=>{
+    const used=new Set();
+    const selected=w.steps.map(step=>{const tool=workflowPick(step.match,used);if(tool)used.add(tool.id);return {step,tool}}).filter(x=>x.tool);
+    if(selected.length<2)return '';
+    return '<article class="workflow-card"><div class="workflow-head"><span>'+esc(w.kicker)+'</span><h3>'+esc(w.title)+'</h3><p>'+esc(w.description)+'</p></div><div class="workflow-steps">'+selected.map((x,i)=>'<button type="button" data-workflow-tool="'+esc(x.tool.id)+'"><em>0'+(i+1)+'</em><span>'+esc(x.step.label)+'</span><strong>'+esc(x.tool.name)+'</strong><small>'+esc(x.tool.description)+'</small></button>').join('')+'</div></article>';
+  }).join('');
+  els.workflowGrid.querySelectorAll('[data-workflow-tool]').forEach(btn=>btn.addEventListener('click',()=>openDetail(btn.dataset.workflowTool)));
+}
 function rememberRecentlyViewed(id){recentlyViewed=[id,...recentlyViewed.filter(x=>x!==id)].slice(0,8);localStorage.setItem(RECENTLY_VIEWED_KEY,JSON.stringify(recentlyViewed));renderRecentlyViewed()}
 function renderRecentlyViewed(){if(!els.recentlyViewedGrid||!els.recentlyViewedSection)return;const items=recentlyViewed.map(id=>tools.find(t=>t.id===id)).filter(Boolean).slice(0,4);if(!items.length){els.recentlyViewedSection.hidden=true;return}els.recentlyViewedSection.hidden=false;els.recentlyViewedGrid.innerHTML=items.map(t=>miniToolCard(t,'RECENT')).join('');bindMiniCards(els.recentlyViewedGrid)}
 function renderCompareBar(){if(!els.compareBar)return;const n=compareSelected.size;els.compareBar.hidden=n===0;els.compareCount.textContent=n;els.openCompare.disabled=n<2;document.body.classList.toggle('compare-active',n>0)}
@@ -392,7 +497,7 @@ els.adminGate?.addEventListener('click',()=>{
 });
 els.favoritesNav.addEventListener('click',openFavorites);els.mobileFavorites.addEventListener('click',openFavorites);els.scrollToAll.addEventListener('click',()=>document.querySelector('#tools').scrollIntoView({behavior:'smooth'}));els.resetFilters.addEventListener('click',()=>resetFilters());els.dialogClose.addEventListener('click',closeDialog);els.toolDialog.addEventListener('click',e=>{if(e.target===els.toolDialog)closeDialog()});els.mobileMenuButton.addEventListener('click',toggleMobileMenu);els.mobileMenu.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',closeMobileMenu));
 document.addEventListener('keydown',e=>{if(e.key==='/'&&document.activeElement!==els.search){e.preventDefault();els.search.focus()}if(e.key==='Escape'&&els.toolDialog.open)closeDialog();else if(e.key==='Escape')closeMobileMenu()});
-async function loadTools(){els.loadingState.hidden=false;els.errorState.hidden=true;els.toolGrid.hidden=true;try{const [r,sr]=await Promise.all([fetch('./data/tools.json',{cache:'no-store'}),fetch('./data/discovery-state.json',{cache:'no-store'})]);if(!r.ok)throw new Error('load failed');tools=await r.json();discoveryState=sr.ok?await sr.json():null;restoreStateFromUrl();els.heroToolCount.textContent=tools.length;saveFavorites();renderChips();renderCategories();renderCollections();renderLatest();renderTrending();renderRecentlyViewed();renderStats();renderDiscoveryStatus();renderTools();els.loadingState.hidden=true;els.toolGrid.hidden=false;setupReveal();setupActiveNav();const detailId=new URLSearchParams(location.search).get('tool');if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId)}catch{els.loadingState.hidden=true;els.errorState.hidden=false;els.toolGrid.hidden=true}}
+async function loadTools(){els.loadingState.hidden=false;els.errorState.hidden=true;els.toolGrid.hidden=true;try{const [r,sr]=await Promise.all([fetch('./data/tools.json',{cache:'no-store'}),fetch('./data/discovery-state.json',{cache:'no-store'})]);if(!r.ok)throw new Error('load failed');tools=await r.json();discoveryState=sr.ok?await sr.json():null;restoreStateFromUrl();els.heroToolCount.textContent=tools.length;saveFavorites();renderChips();renderCategories();renderCollections();renderLatest();renderTrending();renderDailyDiscovery();renderWorkflows();renderRecentlyViewed();renderStats();renderDiscoveryStatus();renderTools();els.loadingState.hidden=true;els.toolGrid.hidden=false;setupReveal();setupActiveNav();const detailId=new URLSearchParams(location.search).get('tool');if(detailId&&tools.some(t=>t.id===detailId))openDetail(detailId)}catch{els.loadingState.hidden=true;els.errorState.hidden=false;els.toolGrid.hidden=true}}
 els.retryLoad.addEventListener('click',loadTools);
 window.addEventListener('popstate',()=>{if(!tools.length)return;restoreStateFromUrl();renderChips();renderTools();const detailId=new URLSearchParams(location.search).get('tool');if(detailId)openDetail(detailId);else if(els.toolDialog.open)closeDialog()});
 els.clearRecentlyViewed?.addEventListener('click',()=>{recentlyViewed=[];localStorage.removeItem(RECENTLY_VIEWED_KEY);renderRecentlyViewed()});
