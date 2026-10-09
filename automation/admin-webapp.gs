@@ -72,9 +72,8 @@ function adminGetDashboard(token) {
     const toolData = githubJsonFile_('data/tools.json') || [];
     const config = githubJsonFile_('data/discovery-config.json') || {};
     const healthState = githubJsonFile_('data/health-state.json') || {};
-    const reviewApprovedRaw = PropertiesService.getScriptProperties().getProperty('OPENSHELF_REVIEW_APPROVED') || '[]';
-    var reviewApproved = [];
-    try { reviewApproved = JSON.parse(reviewApprovedRaw); } catch (e) { reviewApproved = []; }
+    const reviewState = getReviewStateWithMigration_();
+    const reviewApproved = reviewApprovedIds_(reviewState);
     const geminiReviews = getGeminiReviews_();
     const automationEnabled = PropertiesService.getScriptProperties().getProperty('OPENSHELF_AUTOMATION_ENABLED') !== 'false';
 
@@ -96,6 +95,7 @@ function adminGetDashboard(token) {
         };
       }) : [],
       reviewApproved: Array.isArray(reviewApproved) ? reviewApproved : [],
+      reviewState: reviewState,
       geminiReviews: geminiReviews,
       config: config,
       healthState: healthState,
@@ -287,9 +287,21 @@ function adminSetAutomationEnabled(token, enabled) {
   };
 }
 
-function getReviewApproved_() {
-  const props = PropertiesService.getScriptProperties();
-  const raw = props.getProperty('OPENSHELF_REVIEW_APPROVED') || '[]';
+function emptyReviewState_() {
+  return { version:1, updatedAt:null, items:{} };
+}
+
+function normalizeReviewState_(value) {
+  const out = emptyReviewState_();
+  if (!value || typeof value !== 'object') return out;
+  out.version = 1;
+  out.updatedAt = value.updatedAt || null;
+  out.items = value.items && typeof value.items === 'object' && !Array.isArray(value.items) ? value.items : {};
+  return out;
+}
+
+function getLegacyReviewApproved_() {
+  const raw = PropertiesService.getScriptProperties().getProperty('OPENSHELF_REVIEW_APPROVED') || '[]';
   try {
     const list = JSON.parse(raw);
     return Array.isArray(list) ? list.map(String) : [];
@@ -298,11 +310,64 @@ function getReviewApproved_() {
   }
 }
 
-function setReviewApproved_(list) {
-  PropertiesService.getScriptProperties().setProperty(
-    'OPENSHELF_REVIEW_APPROVED',
-    JSON.stringify(Array.isArray(list) ? list.map(String) : [])
-  );
+function getPersistentReviewState_() {
+  try {
+    return normalizeReviewState_(githubJsonFile_('data/review-state.json'));
+  } catch (err) {
+    return emptyReviewState_();
+  }
+}
+
+function reviewApprovedIds_(state) {
+  state = normalizeReviewState_(state);
+  return Object.keys(state.items).filter(function(id){
+    return state.items[id] && state.items[id].status === 'approved';
+  });
+}
+
+function getReviewStateWithMigration_() {
+  const state = getPersistentReviewState_();
+  const legacy = getLegacyReviewApproved_();
+  var changed = false;
+  const now = new Date().toISOString();
+
+  legacy.forEach(function(id){
+    if (!state.items[id] || state.items[id].status !== 'approved') {
+      state.items[id] = {
+        status:'approved',
+        approvedAt:now,
+        approvedBy:'admin',
+        lastReviewedAt:now,
+        geminiVerdict:'',
+        source:'legacy-migration',
+        history:[
+          { action:'approved', at:now, by:'admin', note:'Script Properties 승인 기록에서 이전' }
+        ]
+      };
+      changed = true;
+    }
+  });
+
+  if (changed) {
+    try {
+      const file = githubJsonFileMeta_('data/review-state.json');
+      state.updatedAt = now;
+      githubWriteJsonFile_('data/review-state.json', state, 'admin: migrate review approvals to persistent state', file.sha);
+      PropertiesService.getScriptProperties().deleteProperty('OPENSHELF_REVIEW_APPROVED');
+    } catch (err) {
+      // Keep the merged in-memory state even if migration cannot be persisted yet.
+    }
+  }
+
+  return state;
+}
+
+function saveReviewState_(state, message) {
+  const file = githubJsonFileMeta_('data/review-state.json');
+  const next = normalizeReviewState_(state);
+  next.updatedAt = new Date().toISOString();
+  githubWriteJsonFile_('data/review-state.json', next, message || 'admin: update persistent review state', file.sha);
+  return next;
 }
 
 function adminApproveReview(token, toolId) {
@@ -310,14 +375,44 @@ function adminApproveReview(token, toolId) {
   try {
     const id = String(toolId || '').trim();
     if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
-    const list = getReviewApproved_();
-    if (list.indexOf(id) < 0) list.push(id);
-    setReviewApproved_(list);
-    return { ok:true, message:'검수 승인했습니다.', reviewApproved:list };
+
+    const state = getReviewStateWithMigration_();
+    const previous = state.items[id] && typeof state.items[id] === 'object' ? state.items[id] : {};
+    const now = new Date().toISOString();
+    const gemini = getGeminiReviews_()[id] || {};
+    const history = Array.isArray(previous.history) ? previous.history.slice(-19) : [];
+    history.push({
+      action:'approved',
+      at:now,
+      by:'admin',
+      geminiVerdict:String(gemini.verdict || ''),
+      geminiScore:Number(gemini.score || 0)
+    });
+
+    state.items[id] = {
+      status:'approved',
+      approvedAt:previous.approvedAt || now,
+      approvedBy:'admin',
+      lastReviewedAt:now,
+      geminiVerdict:String(gemini.verdict || previous.geminiVerdict || ''),
+      geminiScore:Number(gemini.score || previous.geminiScore || 0),
+      source:'admin',
+      history:history
+    };
+
+    const saved = saveReviewState_(state, 'admin: approve OpenShelf review ' + id);
+    PropertiesService.getScriptProperties().deleteProperty('OPENSHELF_REVIEW_APPROVED');
+    return {
+      ok:true,
+      message:'검수 승인했습니다. 승인 기록을 GitHub에 영구 저장했습니다.',
+      reviewApproved:reviewApprovedIds_(saved),
+      reviewState:saved
+    };
   } catch (err) {
     return { ok:false, error:String(err && err.message ? err.message : err) };
   }
 }
+
 
 function getGeminiReviews_() {
   const raw = PropertiesService.getScriptProperties().getProperty('OPENSHELF_GEMINI_REVIEWS') || '{}';
@@ -338,13 +433,37 @@ function adminUnapproveReview(token, toolId) {
   try {
     const id = String(toolId || '').trim();
     if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
-    const list = getReviewApproved_().filter(function(x){ return String(x) !== id; });
-    setReviewApproved_(list);
-    return { ok:true, message:'승인을 취소했습니다.', reviewApproved:list };
+
+    const state = getReviewStateWithMigration_();
+    const previous = state.items[id] && typeof state.items[id] === 'object' ? state.items[id] : {};
+    const now = new Date().toISOString();
+    const history = Array.isArray(previous.history) ? previous.history.slice(-19) : [];
+    history.push({ action:'approval_cancelled', at:now, by:'admin' });
+
+    state.items[id] = {
+      status:'pending',
+      approvedAt:previous.approvedAt || null,
+      approvedBy:previous.approvedBy || 'admin',
+      lastReviewedAt:now,
+      geminiVerdict:previous.geminiVerdict || '',
+      geminiScore:Number(previous.geminiScore || 0),
+      source:'admin',
+      history:history
+    };
+
+    const saved = saveReviewState_(state, 'admin: cancel OpenShelf review approval ' + id);
+    PropertiesService.getScriptProperties().deleteProperty('OPENSHELF_REVIEW_APPROVED');
+    return {
+      ok:true,
+      message:'승인을 취소했습니다. 변경 이력도 GitHub에 저장했습니다.',
+      reviewApproved:reviewApprovedIds_(saved),
+      reviewState:saved
+    };
   } catch (err) {
     return { ok:false, error:String(err && err.message ? err.message : err) };
   }
 }
+
 
 function githubRepoContextForReview_(tool) {
   const repo = normalizeRepoInput_(tool && tool.github);
@@ -921,7 +1040,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
 </head>
 <body>
 <div class="shell">
-  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v5.9 불러오는 중...</div>
+  <div id="bootStatus" style="padding:10px 12px;margin-bottom:12px;border:1px solid #141414;background:#fffdf8;font-size:12px">관리자 페이지 v6.0 불러오는 중...</div>
   <div class="top"><div class="brand">OpenShelf <span class="kicker">ADMIN</span></div><button id="logout" class="logout" hidden>로그아웃</button></div>
 
   <section id="login" class="login">
@@ -1049,7 +1168,8 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
         </article>
       </div>
       <div id="operationMessage" class="operation-message"></div>
-      <p class="section-note"><strong>GitHub 쓰기 기능 안내:</strong> 수집 제외, 도구 삭제, 수집 설정 저장은 Apps Script의 GITHUB_TOKEN에 해당 저장소 <strong>Contents: Read and write</strong> 권한이 필요합니다. 검수 승인과 Gemini 재검수 결과는 Apps Script 내부에 저장됩니다. Gemini 재검수/자동 수정에는 GEMINI_API_KEY가 필요하며, 자동 수정은 tools.json을 실제 변경하므로 GITHUB_TOKEN의 Contents: Read and write 권한이 필요합니다.</p>
+      <p class="section-note"><strong>승인 기록:</strong> 승인/승인 취소 상태와 이력은 <code>data/review-state.json</code>에 영구 저장됩니다.</p>
+      <p class="section-note"><strong>GitHub 쓰기 기능 안내:</strong> 수집 제외, 도구 삭제, 수집 설정 저장은 Apps Script의 GITHUB_TOKEN에 해당 저장소 <strong>Contents: Read and write</strong> 권한이 필요합니다. 검수 승인은 GitHub review-state에 영구 저장되고 Gemini 재검수 결과는 Apps Script 내부에 저장됩니다. Gemini 재검수/자동 수정에는 GEMINI_API_KEY가 필요하며, 자동 수정은 tools.json을 실제 변경하므로 GITHUB_TOKEN의 Contents: Read and write 권한이 필요합니다.</p>
     </section>
 
     <section class="section"><span class="kicker">RUN HISTORY</span><h2>최근 수집 로그</h2><div id="logs"></div></section>
@@ -1068,6 +1188,7 @@ let adminDenylist=[];
 let adminConfig={};
 let automationEnabled=true;
 let reviewApproved=[];
+let reviewState={version:1,updatedAt:null,items:{}};
 let reviewMode='problems';
 let issueFilter='전체';
 let adminLogs=[];
@@ -1116,6 +1237,7 @@ function loadDashboard(){
     adminConfig=r.config||{};
     automationEnabled=r.automationEnabled!==false;
     reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:[];
+    reviewState=r.reviewState&&typeof r.reviewState==='object'?r.reviewState:{version:1,updatedAt:null,items:{}};
     geminiReviews=r.geminiReviews&&typeof r.geminiReviews==='object'?r.geminiReviews:{};
     renderConfig();
     renderAnalytics();
@@ -1319,6 +1441,10 @@ function renderReview(){
     const t=x.tool,r=x.review;
     const scoreClass=r.score<55?'low':(r.score<70?'mid':'good');
     const approvedNow=reviewApproved.includes(String(t.id));
+    const reviewRecord=reviewState&&reviewState.items?reviewState.items[String(t.id)]:null;
+    const approvalMeta=approvedNow&&reviewRecord
+      ? '<div class="review-meta">승인 '+fmt(reviewRecord.approvedAt)+' · 마지막 검수 '+fmt(reviewRecord.lastReviewedAt)+(reviewRecord.geminiVerdict?' · '+esc(reviewRecord.geminiVerdict):'')+'</div>'
+      : '';
     const approvalButton=approvedNow
       ? '<button type="button" data-review-unapprove="'+esc(t.id)+'">승인 취소</button>'
       : '<button class="approve" type="button" data-review-approve="'+esc(t.id)+'">승인</button>';
@@ -1333,14 +1459,14 @@ function renderReview(){
     const applyButton=gr&&String(gr.verdict||'')==='수정 필요'
       ? '<button class="apply" type="button" data-gemini-autofix="'+esc(t.id)+'">Gemini 자동 수정</button>'
       : '';
-    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div>'+issueBlock+geminiBlock+'<div class="review-actions">'+approvalButton+'<button class="gemini" type="button" data-gemini-review="'+esc(t.id)+'">Gemini 재검수</button>'+applyButton+'<button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
+    return '<article class="review-card"><div class="review-head"><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div>'+approvalMeta+issueBlock+geminiBlock+'<div class="review-actions">'+approvalButton+'<button class="gemini" type="button" data-gemini-review="'+esc(t.id)+'">Gemini 재검수</button>'+applyButton+'<button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
   }).join('');
   root.querySelectorAll('[data-review-approve]').forEach(btn=>btn.addEventListener('click',()=>{
     const id=btn.dataset.reviewApprove;
     opMessage('검수 승인 저장 중...');
     google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
       if(!r||!r.ok){opMessage((r&&r.error)||'승인에 실패했습니다.','error');return}
-      reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;renderReview();renderAnalytics();opMessage(r.message||'승인했습니다.');
+      reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;reviewState=r.reviewState&&typeof r.reviewState==='object'?r.reviewState:reviewState;renderReview();renderAnalytics();opMessage(r.message||'승인했습니다.');
     }).adminApproveReview(token,id);
   }));
   root.querySelectorAll('[data-review-unapprove]').forEach(btn=>btn.addEventListener('click',()=>{
@@ -1348,7 +1474,7 @@ function renderReview(){
     opMessage('승인 취소 중...');
     google.script.run.withFailureHandler(clientFailure).withSuccessHandler(r=>{
       if(!r||!r.ok){opMessage((r&&r.error)||'승인 취소에 실패했습니다.','error');return}
-      reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;renderReview();renderAnalytics();opMessage(r.message||'승인을 취소했습니다.');
+      reviewApproved=Array.isArray(r.reviewApproved)?r.reviewApproved:reviewApproved;reviewState=r.reviewState&&typeof r.reviewState==='object'?r.reviewState:reviewState;renderReview();renderAnalytics();opMessage(r.message||'승인을 취소했습니다.');
     }).adminUnapproveReview(token,id);
   }));
   root.querySelectorAll('[data-gemini-review]').forEach(btn=>btn.addEventListener('click',()=>{
