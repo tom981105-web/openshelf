@@ -24,6 +24,7 @@
       </a>
 
       <nav class="desktop-nav" aria-label="주요 메뉴">
+        <button id="adminGate" class="admin-gate" type="button" aria-label="관리자">Admin</button>
         <a href="#categories" data-nav="categories">Categories</a>
         <a href="#collections" data-nav="collections">Collections</a>
         <a href="#tools" data-nav="tools">Explore</a>
@@ -92,24 +93,6 @@
         </div>
         <p>새로 들어온 도구와 최근 주목받는 프로젝트를 한 번에 훑어보세요.</p>
       </div>
-
-      <section class="system-status reveal" id="systemStatus" aria-label="OpenShelf 자동수집 상태">
-        <div class="system-status-head">
-          <div>
-            <span class="eyebrow">SYSTEM STATUS</span>
-            <h2>자동수집 현황</h2>
-          </div>
-          <div class="system-status-actions"><a href="logs.html">수집 로그 보기 →</a><span id="discoveryStatusBadge" class="status-badge">CHECKING</span></div>
-        </div>
-        <div class="system-status-grid">
-          <div><span>최근 수집</span><strong id="discoveryLastRun">—</strong></div>
-          <div><span>이번 회차</span><strong id="discoveryLastAdded">—</strong></div>
-          <div><span>탈락</span><strong id="discoveryRejected">—</strong></div>
-          <div><span>누적 자동추가</span><strong id="discoveryTotal">—</strong></div>
-          <div><span>배치 오류</span><strong id="discoveryBatch">—</strong></div>
-          <div><span>다음 예정</span><strong id="discoveryNextRun">—</strong></div>
-        </div>
-      </section>
 
       <div class="discovery-board reveal">
       <section class="section-block reveal" id="trending">
@@ -277,13 +260,13 @@
         <a href="#categories">Categories</a>
         <a href="#collections">Collections</a>
         <a href="#about">About</a>
-        <a href="logs.html">Logs</a>
         <a href="https://github.com/tom981105-web/openshelf" target="_blank" rel="noreferrer">GitHub</a>
       </div>
       <span>v2.0 · 2026</span>
     </footer>
   </div>
 
+  <script src="admin-config.js"></script>
   <script src="app.js" defer></script>
 </body>
 </html>
