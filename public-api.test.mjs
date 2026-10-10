@@ -1,7 +1,8 @@
 import assert from 'node:assert/strict';import fs from 'node:fs';import {validatedPublicApis,filterPublicApis} from './public-api-core.mjs';
 const source=JSON.parse(fs.readFileSync('data/public-apis.json','utf8'));
 const rows=validatedPublicApis(source.items);
-assert.equal(rows.length,5,'All curated official API entries must validate');
+assert.equal(rows.length,source.items.length,'All curated official API entries must validate');
+assert.ok(rows.length>=5,'Published catalog must not lose seeded records');
 assert.equal(new Set(rows.map(x=>x.id)).size,rows.length);
 assert.equal(filterPublicApis(rows,{query:'조달청'}).length,2);
 assert.equal(filterPublicApis(rows,{category:'조달·행정'}).length,2);
