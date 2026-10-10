@@ -16,13 +16,15 @@ const expected=new Map([
   ['grex','regex'],
   ['excalidraw','official-excalidraw'],
   ['visidata','csv'],
-  ['q','csv']
+  ['q','csv'],
+  ['photoprism','image'],
+  ['immich','image']
 ]);
 for(const [id,mode] of expected){
   const tool=catalog.find(t=>t.id===id);
   assert.ok(tool,'Registered demo tool not found: '+id);
   assert.equal(playgroundModeForTool(tool),mode,'Wrong demo mode for '+id);
-  assert.equal(playgroundLink(tool),mode==='csv'?(id==='q'?'playground-sql.html?source='+encodeURIComponent(id):'playground-csv.html?source='+encodeURIComponent(id)):mode==='official-excalidraw'?'playground-live.html?source='+encodeURIComponent(id):['glow','zettlr'].includes(id)?'playground-engine.html?source='+encodeURIComponent(id):['jsonhero-web','dasel','jc'].includes(id)?'playground-jsonata.html?source='+encodeURIComponent(id):'playground.html?mode='+mode+'&source='+encodeURIComponent(id));
+  assert.equal(playgroundLink(tool),mode==='image'?'playground-image.html?source='+encodeURIComponent(id):mode==='csv'?(id==='q'?'playground-sql.html?source='+encodeURIComponent(id):'playground-csv.html?source='+encodeURIComponent(id)):mode==='official-excalidraw'?'playground-live.html?source='+encodeURIComponent(id):['glow','zettlr'].includes(id)?'playground-engine.html?source='+encodeURIComponent(id):['jsonhero-web','dasel','jc'].includes(id)?'playground-jsonata.html?source='+encodeURIComponent(id):'playground.html?mode='+mode+'&source='+encodeURIComponent(id));
 }
 assert.equal(playgroundModeForTool({id:'unknown',github:'https://github.com/unknown/repo'}),null);
 assert.equal(playgroundModeForTool({id:'bad',github:'https://notgithub.com/charmbracelet/glow'}),null);
@@ -33,7 +35,7 @@ assert.equal(playgroundLink({id:'glow',github:'https://github.com/charmbracelet/
 console.log('Playground links verified for '+expected.size+' registered tools');
 
 const hub= context.lookup.playgroundHubEntries(catalog);
-assert.equal(hub.length,6,'Only populated experience types should be shown; JSON formatter has no catalog links');
+assert.equal(hub.length,7,'Only populated experience types should be shown; JSON formatter has no catalog links');
 const linkedIds=hub.flatMap(entry=>entry.tools.map(tool=>tool.id));
 assert.equal(linkedIds.length,expected.size,'All verified catalog tools must be represented once');
 assert.equal(new Set(linkedIds).size,linkedIds.length,'No duplicated linked tools');
