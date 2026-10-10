@@ -1,5 +1,981 @@
 [
   {
+    "id": "testcontainers-dotnet",
+    "name": "Testcontainers for .NET",
+    "github": "https://github.com/testcontainers/testcontainers-dotnet",
+    "description": ".NET 표준 환경에서 임시 Docker 컨테이너를 활용하여 간편하게 테스트를 수행할 수 있는 라이브러리입니다.",
+    "longDescription": "도커 컨테이너 기반의 종속성을 격리된 상태에서 테스트할 수 있도록 지원하며, .NET 환경에서 데이터베이스나 외부 서비스 연동 테스트를 자동화하는 데 유용합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "Docker",
+      "dotnet",
+      "테스팅"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://dotnet.testcontainers.org",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Docker",
+      ".NET Standard 호환 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NuGet 패키지 설치",
+        "command": "dotnet add package Testcontainers",
+        "note": "프로젝트에 Testcontainers 라이브러리를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Testcontainers 패키지를 설치합니다.",
+      "테스트 코드 내에서 필요한 컨테이너 빌더를 정의합니다.",
+      "테스트 실행 시 컨테이너가 자동으로 시작되고 종료됩니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4366,
+    "forks": 361,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "libmodbus",
+    "name": "libmodbus",
+    "github": "https://github.com/stephane/libmodbus",
+    "description": "시리얼 포트나 이더넷을 통해 Modbus 프로토콜 통신을 지원하는 무료 소프트웨어 라이브러리입니다.",
+    "longDescription": "임베디드 장치 및 산업용 기기와의 통신을 구현하기 위한 C 언어 기반의 Modbus 프로토콜 라이브러리로, 리눅스, 윈도우 등 다양한 운영체제를 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "Modbus",
+      "C",
+      "임베디드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-2.1",
+    "website": "http://libmodbus.org",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "C 컴파일러 (gcc 또는 clang)",
+      "automake",
+      "libtool"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드 및 설치",
+        "command": "./autogen.sh && ./configure && make install",
+        "note": "설정 스크립트를 생성하고 라이브러리를 컴파일 및 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소 소스코드를 클론합니다.",
+      "./autogen.sh를 실행하여 설정 파일을 생성합니다.",
+      "./configure 및 make 명령어로 빌드 후 설치를 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4260,
+    "forks": 1952,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "youtube-automation-agent",
+    "name": "YouTube Automation Agent",
+    "github": "https://github.com/darkzOGx/youtube-automation-agent",
+    "description": "AI 에이전트를 활용해 유튜브 채널을 24시간 자동으로 관리하고 콘텐츠를 발행하는 오픈소스 툴입니다.",
+    "longDescription": "주제 조사부터 스크립트 작성, 음성 및 시각 자료 생성, 영상 조립 및 SEO 최적화까지 유튜브 채널 운영의 전 과정을 자동화합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "유튜브",
+      "자동화",
+      "콘텐츠 생성",
+      "Node.js"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/darkzOGx/youtube-automation-agent#readme",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Node.js 18+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "npm install",
+        "note": "프로젝트에 필요한 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 Node.js 환경을 준비합니다.",
+      "API 키 및 설정을 구성합니다.",
+      "에이전트를 실행하여 자동 콘텐츠 파이프라인을 가동합니다."
+    ],
+    "examplePrompt": "Read channel strategy and start generating today's video script.",
+    "usageNote": "Gemini 또는 OpenAI API 키가 필요합니다.",
+    "stars": 4179,
+    "forks": 1301,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "kubefwd",
+    "name": "kubefwd",
+    "github": "https://github.com/txn2/kubefwd",
+    "description": "쿠버네티스 클러스터 내의 여러 서비스를 로컬 개발 환경으로 일괄 포트 포워딩하는 도구입니다.",
+    "longDescription": "네임스페이스 내의 서비스들을 로컬 루프백 IP에 매핑하고 /etc/hosts를 자동 업데이트하여, 클러스터 내부와 동일한 이름으로 서비스를 호출할 수 있게 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "Kubernetes",
+      "CLI",
+      "포트 포워딩",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://kubefwd.com/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Kubernetes 클러스터 접근 권한"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "바이너리 다운로드 및 설치",
+        "command": "brew install txn2/tap/kubefwd",
+        "note": "macOS 환경에서 Homebrew로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "kubectl 설정이 올바르게 구성되어 있는지 확인합니다.",
+      "kubefwd 명령어로 대상 네임스페이스와 서비스를 지정합니다.",
+      "로컬 환경에서 클러스터 서비스 이름으로 접속하여 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "루트 권한이 필요할 수 있습니다.",
+    "stars": 4176,
+    "forks": 238,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "2fauth",
+    "name": "2FAuth",
+    "github": "https://github.com/Bubka/2FAuth",
+    "description": "이중 인증(2FA) 계정을 안전하게 관리하고 보안 코드를 생성하는 웹 애플리케이션입니다.",
+    "longDescription": "셀프 호스팅 방식으로 동작하며, 다양한 서비스의 TOTP 및 HOTP 계정을 웹 인터페이스에서 중앙 집중식으로 관리할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "보안",
+      "2FA",
+      "OTP",
+      "웹 앱",
+      "셀프 호스팅"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://docs.2fauth.app/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "PHP",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose로 실행",
+        "command": "docker compose up -d",
+        "note": "도커 환경에서 컨테이너를 백그라운드로 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 또는 PHP 서버 환경에 2FAuth를 배포합니다.",
+      "웹 브라우저를 통해 대시보드에 접속합니다.",
+      "QR 코드를 스캔하거나 수동으로 2FA 계정을 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4174,
+    "forks": 302,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "personal-management-system",
+    "name": "Personal Management System",
+    "github": "https://github.com/Volmarg/personal-management-system",
+    "description": "개인 데이터, 일정, 재정, 메모 등을 통합 관리할 수 있는 셀프 호스팅 웹 애플리케이션 백엔드입니다.",
+    "longDescription": "CMS나 CRM과 유사한 구조를 가지고 있어 개인의 일상과 관련된 다양한 정보를 한곳에서 체계적으로 관리하고 확장할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "개인 관리",
+      "CRM",
+      "대시보드",
+      "재정 관리",
+      "PHP"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://personal-management-system.pl/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "PHP",
+      "Symfony 호환 서버"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 문서 참조 설치",
+        "command": "composer install",
+        "note": "컴포저를 통해 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 환경에 프로젝트 코드를 클론합니다.",
+      "필요한 의존성을 설치하고 데이터베이스를 설정합니다.",
+      "관리자 계정으로 로그인하여 개인 데이터 관리를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4170,
+    "forks": 349,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "flox",
+    "name": "Flox",
+    "github": "https://github.com/flox/flox",
+    "description": "개발부터 프로덕션까지 일관된 소프트웨어 실행 환경을 구축할 수 있게 해주는 패키지 관리 및 환경 플랫폼입니다.",
+    "longDescription": "Nix 기술을 기반으로 하며 복잡한 설정 없이도 암호화된 가상 환경을 생성하여 개발 환경의 차이를 없애고 소프트웨어 공급망 보안을 강화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "패키지 관리",
+      "Nix",
+      "Rust",
+      "가상 환경"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://flox.dev",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Nix (내장 지원)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Flox 초기화",
+        "command": "flox init",
+        "note": "현재 프로젝트 디렉토리에 새로운 환경을 생성합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 flox init을 실행합니다.",
+      "flox install 명령어로 필요한 패키지를 추가합니다.",
+      "동일한 환경 정의를 통해 다른 머신이나 CI에서 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4168,
+    "forks": 135,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "godoxy",
+    "name": "GoDoxy",
+    "github": "https://github.com/yusing/godoxy",
+    "description": "셀프 호스터를 위한 고성능 리버스 프록시 및 컨테이너 오케스트레이터입니다.",
+    "longDescription": "가볍고 빠르게 동작하며 도컨 컨테이너와 연동하여 라우팅, 인증, 스타트페이지 기능 등을 통합 제공하는 웹 기반 프록시 툴입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "리버스 프록시",
+      "Docker",
+      "Go",
+      "셀프 호스팅"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://docs.godoxy.dev",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Docker",
+      "Go 환경 (소스 빌드 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "에이전트 설치",
+        "command": "sh -c \"$(curl -fsSL https://github.com/yusing/godoxy/raw/refs/heads/main/scripts/install-agent.sh)\"",
+        "note": "공식 설치 스크립트를 실행하여 에이전트를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트 또는 Docker를 통해 GoDoxy를 배포합니다.",
+      "웹 관리 화면에서 리버스 프록시 규칙을 설정합니다.",
+      "컨테이너 서비스를 연동하고 프록시 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4161,
+    "forks": 188,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "hyper-extract",
+    "name": "Hyper-Extract",
+    "github": "https://github.com/yifanfeng97/Hyper-Extract",
+    "description": "LLM을 활용해 비정형 텍스트를 구조화된 지식 그래프 및 하이퍼그래프 데이터로 변환해주는 CLI 도구입니다.",
+    "longDescription": "단 한 번의 명령어로 대규모 문서나 텍스트에서 개체와 관계를 추출하여 효율적인 정보 검색 및 지식 기반 구축을 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식·검색",
+      "LLM",
+      "지식 그래프",
+      "CLI",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://yifanfeng97.github.io/Hyper-Extract/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Python",
+      "uv 또는 pipx"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI 도구 설치",
+        "command": "uv tool install hyperextract",
+        "note": "uv 툴을 사용하여 Hyper-Extract를 전역에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "uv 또는 pipx를 이용하여 패키지를 설치합니다.",
+      "사용할 LLM 제공자 API 키를 설정합니다.",
+      "명령어를 통해 문서를 입력하고 구조화된 데이터를 추출합니다."
+    ],
+    "examplePrompt": "he config init -p openai -k YOUR_OPENAI_API_KEY",
+    "usageNote": "OpenAI 또는 DeepSeek 등의 LLM API 키가 필요합니다.",
+    "stars": 4156,
+    "forks": 475,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "httplab",
+    "name": "HTTPLab",
+    "github": "https://github.com/qustavo/httplab",
+    "description": "HTTP 요청을 실시간으로 검사하고 응답을 조작할 수 있는 대화형 웹 서버 도구입니다.",
+    "longDescription": "개발 및 테스트 과정에서 클라이언트의 HTTP 요청 내용을 상세히 살펴보고, 원하는 응답을 동적으로 생성하여 테스트할 수 있는 Go 기반 유틸리티입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "HTTP",
+      "디버깅",
+      "테스팅",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/qustavo/httplab",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Go 런타임 (바이너리 설치 시 불필요)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go를 이용한 설치",
+        "command": "go install github.com/gchaincl/httplab/cmd/httplab@latest",
+        "note": "Go 명령어로 최신 버전을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "go install 명령어로 툴을 설치합니다.",
+      "터미널에서 httplab을 실행하여 웹 서버를 구동합니다.",
+      "브라우저 인터페이스에 접속하여 들어오는 요청을 확인하고 응답을 수정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4138,
+    "forks": 122,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "python",
+    "name": "FlyPython",
+    "github": "https://github.com/flypythoncom/python",
+    "description": "AI 코딩 에이전트와 함께 실제 파이썬 프로젝트를 학습할 수 있는 오픈소스 챌린지 코스 플랫폼입니다.",
+    "longDescription": "사용자가 선호하는 AI 코딩 에이전트를 통해 실무 중심의 파이썬 프로젝트를 수행하며, 내장된 검증 스크립트를 통해 학습 완료 여부를 자동으로 판정합니다. 웹 브라우저나 별도의 복잡한 설치 없이 에이전트 스킬을 연동하여 곧바로 실습에 들어갈 수 있습니다.",
+    "category": "교육·학습",
+    "tags": [
+      "AI 코딩",
+      "파이썬",
+      "교육",
+      "MCP",
+      "CLI"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://flypython.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Python 3",
+      "AI 코딩 에이전트 (Claude Code, Cursor 등)"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Cursor",
+      "DeepSeek Harness"
+    ],
+    "install": [
+      {
+        "title": "에이전트 스킬 연동",
+        "command": "Read https://flypython.com/skills/flypython/SKILL.md and start the FlyPython course da-eda.",
+        "note": "AI 코딩 에이전트에 해당 문장을 입력하여 코스를 시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 AI 코딩 에이전트에 FlyPython 스킬을 설치합니다.",
+      "에이전트에게 코스 시작 프롬프트를 전달합니다.",
+      "에이전트가 코스 파일을 가져오고 가이드에 따라 과제를 수행합니다.",
+      "verify.py를 통해 코드가 정답인지 확인합니다."
+    ],
+    "examplePrompt": "Read https://flypython.com/skills/flypython/SKILL.md and start the FlyPython course da-eda.",
+    "usageNote": "채팅 전용 웹 AI는 코스를 직접 실행할 수 없으므로 로컬 에이전트가 필요합니다.",
+    "stars": 4155,
+    "forks": 1415,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "browser-agent",
+    "name": "Magnitude Browser Agent",
+    "github": "https://github.com/magnitudedev/browser-agent",
+    "description": "자연어 명령과 비전 AI를 활용해 웹 브라우저를 자동 제어하고 테스트할 수 있는 오픈소스 비전 브라우저 에이전트입니다.",
+    "longDescription": "Playwright 기반 위에 비전 AI를 결합하여 웹사이트 인터페이스를 직접 보고 이해하며 정밀한 마우스 및 키보드 조작, 데이터 추출, UI 테스트를 수행합니다. 복잡한 웹 업무 자동화나 웹 앱 테스트 자동화 도구로 활용할 수 있습니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "브라우저 자동화",
+      "비전 AI",
+      "Playwright",
+      "테스트",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://magnitude.run",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "테스트 러너 설치",
+        "command": "npm i --save-dev magnitude-test && npx magnitude init",
+        "note": "기존 웹 프로젝트에 테스트 러너와 기본 설정 파일을 초기화합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 초기화 명령을 실행합니다.",
+      "생성된 magnitude.config.ts 파일을 환경에 맞게 설정합니다.",
+      "자연어 프롬프트와 테스트 스크립트를 작성하여 브라우저 작업을 자동화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4134,
+    "forks": 241,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "basic-memory",
+    "name": "Basic Memory",
+    "github": "https://github.com/basicmachines-co/basic-memory",
+    "description": "AI와의 대화 내역 및 프로젝트 맥락을 장기 기억하도록 돕는 로컬 퍼스트 지식 관리 및 MCP 서버 도구입니다.",
+    "longDescription": "AI 코딩 도구(Claude, Cursor 등)를 사용할 때 매번 프로젝트 설명을 반복하지 않도록 대화 내용과 지식 그래프를 유지 관리해 주는 오픈소스 도구입니다. 로컬 우선으로 동작하여 개인 정보 보호와 효율적인 컨텍스트 유지를 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "AI",
+      "지식 관리",
+      "지식 그래프",
+      "MCP",
+      "Obsidian"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://basicmemory.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Python 3.12+"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Cursor",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "PyPI 패키지 설치",
+        "command": "pip install basic-memory",
+        "note": "파이썬 환경에서 기본 메모리 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 로컬 환경에 구성합니다.",
+      "지원되는 AI 에이전트 또는 MCP 클라이언트에 연결합니다.",
+      "AI가 프로젝트의 맥락을 기억한 상태로 대화와 작업을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4130,
+    "forks": 306,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "homelable",
+    "name": "Homelable",
+    "github": "https://github.com/Pouzor/homelable",
+    "description": "홈랩 인프라를 시각화하고 네트워크 장치와 가상화 상태를 실시간 모니터링할 수 있는 셀프호스팅 대시보드입니다.",
+    "longDescription": "로컬 인프라에 배포된 머신, 스마트 홈 기기, 서비스들을 자동으로 스캔하여 인터랙티브한 네트워크 및 랙 다이어그램으로 시각화해 줍니다. 헬스체크 기능과 Proxmox 연동, 개별 장치 문서화 기능을 제공하여 홈랩 관리를 체계화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "홈랩",
+      "인프라 모니터링",
+      "네트워크 스캐너",
+      "Docker",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://homelable.net",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Docker",
+      "Node.js (개발 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 실행",
+        "command": "docker run -d -p 8080:8080 homelable/homelable",
+        "note": "Docker를 통해 홈레이블 컨테이너를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 이미지 또는 소스 코드를 통해 인스턴스를 실행합니다.",
+      "웹 UI에 접속하여 로컬 네트워크 및 기기를 스캔합니다.",
+      "인프라 맵과 서비스 상태 모니터링 대시보드를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4093,
+    "forks": 185,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "docker-zerotier-planet",
+    "name": "Docker ZeroTier Planet",
+    "github": "https://github.com/xubiaolin/docker-zerotier-planet",
+    "description": "ZeroTier Planet 루트 서버를 Docker 컨테이너 환경에서 1분 만에 사설 구축할 수 있는 도구입니다.",
+    "longDescription": "공인망 환경에서 ZeroTier 루트 서버(Planet)를 직접 구축하여 외부 중계 서버 의존성을 낮추고 네트워크 제어권을 확보할 수 있게 해줍니다. 원격 접속, 커스텀 설정 파일 적용, 시각화된 Web 관리 환경을 Docker 기반으로 간편하게 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "ZeroTier",
+      "Docker",
+      "네트워크",
+      "가상사설망",
+      "셀프호스팅"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/xubiaolin/docker-zerotier-planet",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Docker",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 설치",
+        "command": "curl -fsSL https://get.docker.com | bash",
+        "note": "리눅스 환경에 Docker를 자동으로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 서버 환경을 준비합니다.",
+      "Docker 컨테이너를 빌드 및 실행하여 Planet 서버를 기동합니다.",
+      "생성된 planet 파일을 ZeroTier 클라이언트에 적용하여 연결합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4080,
+    "forks": 763,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "rustpad",
+    "name": "Rustpad",
+    "github": "https://github.com/ekzhang/rustpad",
+    "description": "데이터베이스가 필요 없고 가벼우며 빠릿하게 동작하는 오픈소스 실시간 공동 코드 편집기입니다.",
+    "longDescription": "조작적 변환(Operational Transformation) 알고리즘을 기반으로 하여 웹 브라우저에서 여러 사용자가 지연 없이 실시간으로 코드를 공동 작성할 수 있습니다. Rust 백엔드와 작은 도커 이미지 크기로 가볍고 빠르게 셀프호스팅하여 운영할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "코드 편집기",
+      "실시간 협업",
+      "Rust",
+      "웹",
+      "셀프호스팅"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://rustpad.io",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Docker 또는 Rust 및 Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Wasm 빌드",
+        "command": "wasm-pack build rustpad-wasm",
+        "note": "프론트엔드 웹어셈블리 모듈을 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "필수 의존성을 설치하고 WebAssembly 및 프론트엔드를 빌드합니다.",
+      "Cargo 명령어로 백엔드 웹 서버를 실행합니다.",
+      "브라우저로 접속하여 실시간 공동 편집 세션을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4078,
+    "forks": 218,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "serenity-skill",
+    "name": "Serenity Skill",
+    "github": "https://github.com/muxuuu/serenity-skill",
+    "description": "공급망 병목 현상과 핵심 밸류체인을 분석하는 투자 연구 방법론을 AI 에이전트 스킬로 구현한 도구입니다.",
+    "longDescription": "AI, 반도체, 로보틱스, 2차전지 등 주요 기술 테마의 대형 트렌드 속에서 실제 수요가 집중되는 공급망 병목 구간을 AI가 탐색하도록 돕습니다. 공시, 재무제표, 고객사 및产能 데이터를 바탕으로 후보 종목과 펀드 방향을 구조화된 연구 리스트로 정리해 줍니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "AI 에이전트",
+      "투자 연구",
+      "공급망",
+      "주식 분석",
+      "Claude Code"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/muxuuu/serenity-skill",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "AI 코딩 에이전트 (Claude Code 등)"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "스킬 파일 활용",
+        "command": "git clone https://github.com/muxuuu/serenity-skill",
+        "note": "저장소를 복제하여 에이전트 스킬 환경에 통합합니다."
+      }
+    ],
+    "usageSteps": [
+      "에이전트 환경에 Serenity Skill을 로드합니다.",
+      "관심 있는 테마나 산업군의 시장 동향을 입력합니다.",
+      "AI가 밸류체인과 병목 구간을 분석해 도출한 연구 리포트를 확인합니다."
+    ],
+    "examplePrompt": "해당 테마의 공급망 병목 구간과 유망 종목 리스트를 분석해줘.",
+    "usageNote": "투자 참고용 연구 보조 도구이며 최종 투자 결정은 사용자 본인의 책임입니다.",
+    "stars": 4061,
+    "forks": 626,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "hi-events",
+    "name": "Hi.Events",
+    "github": "https://github.com/HiEventsDev/Hi.Events",
+    "description": "콘퍼런스, 워크숍, 축제 등의 티켓 판매와 이벤트 관리를 직접 호스팅할 수 있는 오픈소스 플랫폼입니다.",
+    "longDescription": "브랜드 고유의 도메인과 데이터를 유지하면서 온라인 티켓 판매, 체크인 관리, 참가자 등록을 원스톱으로 처리할 수 있는 오픈소스 이벤트 관리 시스템입니다. Laravel과 React 기반으로 구축되어 있으며 자체 서버에 손쉽게 배포할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "이벤트 관리",
+      "티켓 판매",
+      "콘퍼런스",
+      "Laravel",
+      "셀프호스팅"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://hi.events",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "PHP",
+      "Docker 또는 웹 서버 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "API 문서 내보내기",
+        "command": "php artisan scramble:export",
+        "note": "설치된 인스턴스에서 OpenAPI 명세서를 내보냅니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 환경 또는 도커를 통해 Hi.Events를 배포합니다.",
+      "관리자 계정을 생성하고 새로운 이벤트를 등록합니다.",
+      "티켓 유형을 설정하고 참가자 관리 및 체크인을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4055,
+    "forks": 741,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "desktop",
+    "name": "HTTPie Desktop",
+    "github": "https://github.com/httpie/desktop",
+    "description": "REST, GraphQL, HTTP API를 직관적이고 간편하게 테스트할 수 있는 크로스플랫폼 API 클라이언트입니다.",
+    "longDescription": "사람 중심의 친숙한 인터페이스를 제공하여 복잡한 API 요청과 응답 검증을 손쉽게 수행할 수 있도록 돕는 데스크톱 애플리케이션입니다. macOS, Windows, Linux 환경을 지원하며 API 개발과 디버깅 생산성을 높여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API",
+      "HTTP 클라이언트",
+      "REST",
+      "GraphQL",
+      "개발자 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://httpie.io",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "최신 데스크톱 OS"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "다운로드 링크",
+        "command": "https://httpie.io/download",
+        "note": "공식 웹사이트에서 각 운영체제별 설치 파일을 내려받습니다."
+      }
+    ],
+    "usageSteps": [
+      "앱을 다운로드하여 설치 및 실행합니다.",
+      "새로운 요청 탭을 열고 테스트할 API 엔드포인트와 메서드를 입력합니다.",
+      "헤더, 파라미터, 본문을 구성한 뒤 요청을 전송하고 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4047,
+    "forks": 62,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "wslmanager",
+    "name": "WSL Manager",
+    "github": "https://github.com/bostrot/wslmanager",
+    "description": "Windows Subsystem for Linux 배포판 및 macOS 가상머신을 그래픽 환경에서 손쉽게 관리할 수 있는 GUI 도구입니다.",
+    "longDescription": "명령어 입력 없이 WSL 배포판의 설치, 백업, 이동, 이름 변경, 구성 편집 등을 마우스 클릭으로 처리할 수 있는 오픈소스 프로그램입니다. 원격 SSH 연결 및 AI 에이전트와 연동 가능한 MCP 서버 기능을 지원하여 개발 환경 관리를 극대화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "WSL",
+      "가상화",
+      "개발자 도구",
+      "Flutter",
+      "GUI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://wslmanager.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T19:03:56.532Z",
+    "requirements": [
+      "Windows 10/11 (WSL2 활성화) 또는 macOS"
+    ],
+    "supportedAgents": [
+      "MCP 클라이언트 에이전트"
+    ],
+    "install": [
+      {
+        "title": "릴리즈 다운로드",
+        "command": "https://github.com/bostrot/wslmanager/releases",
+        "note": "GitHub 릴리즈 페이지에서 최신 설치 버전을 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "애플리케이션을 다운로드하여 실행합니다.",
+      "GUI 대시보드에서 보유한 WSL 배포판 목록을 확인합니다.",
+      "클릭 한 번으로 배포판을 백업하거나 설정을 변경합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4026,
+    "forks": 179,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
     "id": "kirocrew",
     "name": "KiroCrew",
     "github": "https://github.com/kirodotdev/KiroCrew",
