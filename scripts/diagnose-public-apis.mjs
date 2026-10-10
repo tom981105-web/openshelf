@@ -4,7 +4,7 @@ const maxBytes=4_000_000;
 export function diagnoseListing(html){
  const ids=discoverIds(html);
  return {htmlBytes:Buffer.byteLength(html,'utf8'),apiIdCount:ids.length,
-  signals:{openApiTab:/오픈\\s*API|오픈API/.test(html),datasetList:/데이터목록|데이터 목록/.test(html),javascriptLinks:/fn_datasetDetail|goDatasetDetail|onclick/.test(html)},
+  signals:{openApiTab:/오픈\s*API|오픈API/.test(html),datasetList:/데이터목록|데이터 목록/.test(html),javascriptLinks:/fn_datasetDetail|goDatasetDetail|onclick/.test(html)},
   discoveredIds:ids.slice(0,10)};
 }
 export async function probeOfficialCatalog({fetcher=fetch}={}){
@@ -37,7 +37,7 @@ if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href){
  console.log('OFFICIAL_PUBLIC_API_DIAGNOSTIC '+JSON.stringify(report));
  if(process.env.GITHUB_STEP_SUMMARY){
   const fs=await import('node:fs/promises');
-  await fs.appendFile(process.env.GITHUB_STEP_SUMMARY,'### Official Public API listing probe\\n\\n'+
-   '| Field | Value |\\n|---|---|\\n'+Object.entries(report).map(([k,v])=>'| '+k+' | '+JSON.stringify(v).replace(/\\|/g,'/')+' |').join('\\n')+'\\n');
+  await fs.appendFile(process.env.GITHUB_STEP_SUMMARY,'### Official Public API listing probe\n\n'+
+   '| Field | Value |\n|---|---|\n'+Object.entries(report).map(([k,v])=>'| '+k+' | '+JSON.stringify(v).replace(/\\|/g,'/')+' |').join('\n')+'\n');
  }
 }
