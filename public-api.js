@@ -49,8 +49,7 @@ async function loadCatalog(){
  const retry=$('apiRetry');if(retry)retry.hidden=true;
  try{
   const data=await fetchCatalog();
-  items=validatedPublicApis(data.items);
-  if(items.length===0)throw new Error('API catalog is empty');
+  if(!data.items.length)throw new Error('API catalog is empty');
   category.replaceChildren(new Option('모든 분야',''));
   providerFilter.replaceChildren(new Option('모든 기관',''));
 
