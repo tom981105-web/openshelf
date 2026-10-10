@@ -26,7 +26,10 @@ function playgroundModeForTool(tool){
 function playgroundLink(tool){
   const mode=playgroundModeForTool(tool);
   if(mode==='official-excalidraw')return 'playground-live.html?source='+encodeURIComponent(tool.id);
+  if(mode==='markdown'&&['glow','zettlr'].includes(tool.id))return 'playground-engine.html?source='+encodeURIComponent(tool.id);
   return mode?'playground.html?mode='+encodeURIComponent(mode)+'&source='+encodeURIComponent(tool.id):null;
 }
 
 function playgroundIsOfficial(tool){return playgroundModeForTool(tool)==='official-excalidraw'}
+
+function playgroundUsesRealEngine(tool){return !!tool&&['glow','zettlr'].includes(tool.id)&&playgroundModeForTool(tool)==='markdown'}
