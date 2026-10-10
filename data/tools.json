@@ -1,5 +1,944 @@
 [
   {
+    "id": "big-agi",
+    "name": "Big-AGI",
+    "github": "https://github.com/enricoros/big-AGI",
+    "description": "최첨단 AI 모델을 활용하여 다중 모델 채팅, 텍스트 생성, 이미지 생성, 음성 기능을 제공하는 오픈소스 AI 스위트입니다.",
+    "longDescription": "다양한 대형 언어 모델을 통합하여 멀티모달 채팅과 AGI 기능을 웹 브라우저나 도커 환경에서 손쉽게 배포하고 활용할 수 있도록 지원합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "AI 스위트",
+      "멀티모달",
+      "도커",
+      "웹 UI"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://big-agi.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Docker 또는 Vercel 계정"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 배포",
+        "command": "docker run -d -p 3000:3000 ghcr.io/enricoros/big-agi",
+        "note": "도커를 이용해 로컬 서버에 즉시 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "웹 브라우저를 통해 Big-AGI 인터페이스에 접속합니다.",
+      "사용하려는 LLM 백엔드 API 키를 입력하거나 Ollama 등의 로컬 모델을 연결합니다.",
+      "멀티 모델 채팅 창에서 동시에 여러 모델의 답변을 비교하거나 AGI 기능을 사용합니다."
+    ],
+    "examplePrompt": "수행할 작업의 개요를 작성하고 각 단계별 예상 결과를 요약해 주세요.",
+    "usageNote": "일부 기능은 유료 AI 제공자의 API 키가 필요합니다.",
+    "stars": 7140,
+    "forks": 1589,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "deepaudit",
+    "name": "DeepAudit",
+    "github": "https://github.com/lintsinghua/DeepAudit",
+    "description": "오픈소스 코드를 스스로 감사하고 자동화된 샌드박스로 취약점을 검증하는 멀티 에이전트 보안 감사 도구입니다.",
+    "longDescription": "인공지능 기반의 에이전트들이 협력하여 소스 코드 내의 SQL 주입, XSS 등 다양한 취약점을 자동으로 탐지하고 검증 리포트를 생성합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "코드 감사",
+      "보안 스캐너",
+      "멀티 에이전트",
+      "FastAPI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/lintsinghua/DeepAudit",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Python 3.11+",
+      "Docker",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "백엔드 의존성 설치",
+        "command": "pip install -r requirements.txt",
+        "note": "백엔드 파이썬 패키지를 설치합니다."
+      },
+      {
+        "title": "프론트엔드 의존성 설치",
+        "command": "pnpm install",
+        "note": "프론트엔드 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "백엔드 및 프론트엔드 환경 변수(.env) 파일을 설정합니다.",
+      "도커를 통해 샌드박스 이미지를 가져옵니다.",
+      "FastAPI 백엔드와 프론트엔드 개발 서버를 실행하여 웹 UI에 접속합니다.",
+      "검사할 소스 코드를 지정하고 에이전트 기반 보안 감사를 시작합니다."
+    ],
+    "examplePrompt": "주어진 프로젝트 소스 코드에서 SQL 주입 및 경로 순회 취약점을 감사해 주세요.",
+    "usageNote": "로컬 실행 시 Ollama 또는 외부 LLM API 키가 필요합니다.",
+    "stars": 7130,
+    "forks": 862,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "opensquilla",
+    "name": "OpenSquilla",
+    "github": "https://github.com/TokenRhythm/opensquilla",
+    "description": "토큰 효율성을 극대화하여 동일한 예산으로 더 높은 지능 밀도를 제공하는 마이크로커널 기반 AI 에이전트입니다.",
+    "longDescription": "CLI, 웹 UI 및 다양한 채팅 채널에서 동작하며, 토큰 낭비를 줄이고 에이전트의 실질적인 작업 수행 능력을 높이도록 설계된 에이전트 프레임워크입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "토큰 최적화",
+      "CLI",
+      "Python"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://opensquilla.ai",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Python",
+      "Git LFS"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 클론",
+        "command": "git clone https://github.com/TokenRhythm/opensquilla.git",
+        "note": "저장소를 로컬에 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론하고 안내에 따라 설치를 진행합니다.",
+      "CLI 또는 웹 제어 콘솔을 실행합니다.",
+      "필요한 환경 설정 및 모델 연동을 마친 후 에이전트와 상호작용합니다."
+    ],
+    "examplePrompt": "현재 저장소의 파일 구조를 분석하고 최적화 방안을 제안해 주세요.",
+    "usageNote": "사전 빌드된 데스크톱 설치러나 터미널 설치 경로를 선택할 수 있습니다.",
+    "stars": 7092,
+    "forks": 580,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "foundation-sunshine",
+    "name": "Foundation Sunshine",
+    "github": "https://github.com/AlkaidLab/foundation-sunshine",
+    "description": "Windows 주기의 고성능 게임 스트리밍을 지원하며 HDR10, 가상 디스플레이, 최적화된 인코더를 포함하는 Sunshine 포크 버전입니다.",
+    "longDescription": "Moonlight 클라이언트와 연동하여 뛰어난 품질로 화면을 송출할 수 있는 오픈소스 자가 호스팅 게임 스트리밍 호스트입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "게임 스트리밍",
+      "HDR",
+      "원격 데스크톱",
+      "C++"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.alkaidlab.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "호환되는 GPU",
+      "Moonlight 클라이언트"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "GitHub 릴리스 페이지에서 최신 설치 패키지를 다운로드합니다.",
+      "호스트 시스템에 프로그램을 설치하고 실행합니다.",
+      "웹 제어판을 통해 스트리밍 설정 및 디스플레이 옵션을 구성합니다.",
+      "Moonlight 클라이언트로 연결하여 게임을 스트리밍합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Windows 호스트 환경에 최적화되어 있습니다.",
+    "stars": 7134,
+    "forks": 196,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "codex-with-chatgpt",
+    "name": "Codex with ChatGPT",
+    "github": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+    "description": "유료 웹 버전 ChatGPT를 기획과 검토 브레인으로 활용하고, 코덱스는 실제 코드 실행에 전념하도록 연결해 주는 도구입니다.",
+    "longDescription": "API 비용 부담을 줄이기 위해 ChatGPT Plus/Pro 웹 구독의 유휴 할당량을 활용하고, 코덱스는 읽기 전용 MCP 다리를 통해 명령을 실행합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "ChatGPT",
+      "코덱스",
+      "MCP",
+      "TypeScript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/XiaoDuoYa/codex-with-chatgpt",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Node.js",
+      "ChatGPT 구독 계정"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 빌드",
+        "command": "git clone https://github.com/XiaoDuoYa/codex-with-chatgpt.git",
+        "note": "프로젝트 소스코드를 가져옵니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 체크아웃하고 코덱스 스킬 디렉토리에 SKILL.md를 설치합니다.",
+      "c2c setup 명령을 실행하여 ChatGPT 커넥터를 구성합니다.",
+      "초기 설정을 완료한 후 코덱스를 통해 작업을 요청합니다."
+    ],
+    "examplePrompt": "Use Codex with ChatGPT to implement authentication flow.",
+    "usageNote": "API 키 없이 공식 웹 인터페이스의 연결을 활용합니다.",
+    "stars": 7175,
+    "forks": 669,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "pydoll",
+    "name": "Pydoll",
+    "github": "https://github.com/autoscrape-labs/pydoll",
+    "description": "WebDriver나 브라우저 드라이버 프로세스 없이 Chromium 기반 브라우저를 원시 CDP로 자동화하는 파이썬 라이브러리입니다.",
+    "longDescription": "지문 위변조 방지 및 안티봇 우회 기능이 포함되어 있으며, Playwright 스크립트를 단 한 줄의 임포트로 실행할 수 있습니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "웹 스크레이핑",
+      "CDP",
+      "자동화",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pydoll.tech/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Python 3.10+",
+      "Google Chrome 또는 Microsoft Edge"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install pydoll-python",
+        "note": "파이썬 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경에 pydoll-python을 설치합니다.",
+      "스크립트에서 Chrome 클래스를 임포트하고 비동기 함수를 작성합니다.",
+      "사람과 유사한 타이밍으로 요소를 검색하고 상호작용 코드를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "로컬에 크롬 또는 엣지 브라우저가 설치되어 있어야 합니다.",
+    "stars": 7110,
+    "forks": 411,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "plasmic",
+    "name": "Plasmic",
+    "github": "https://github.com/plasmicapp/plasmic",
+    "description": "코드베이스에 직접 통합할 수 있는 React 기반 오픈소스 시각적 웹 빌더 및 로코드 플랫폼입니다.",
+    "longDescription": "드래그 앤 드롭 방식으로 컴포넌트를 배치하여 웹사이트와 애플리케이션을 빠르게 구축하고 기존 React 프로젝트에 CMS나 페이지 빌더로 임베드할 수 있습니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "시각적 빌더",
+      "React",
+      "로코드",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.plasmic.app",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Node.js",
+      "React 프로젝트"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Next.js 로더 설치",
+        "command": "npm install @plasmicapp/loader-nextjs",
+        "note": "Next.js 프로젝트에 플라스믹 로더를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "기존 React 또는 Next.js 코드베이스에 패키지를 설치합니다.",
+      "Plasmic 스튜디오에서 시각적으로 컴포넌트와 페이지를 디자인합니다.",
+      "코드베이스와 연동하여 드래그 앤 드롭한 요소를 실시간으로 서비스에 반영합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프레임워크에 맞는 전용 패키지를 설치하여 연동해야 합니다.",
+    "stars": 7082,
+    "forks": 733,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "rod",
+    "name": "Rod",
+    "github": "https://github.com/go-rod/rod",
+    "description": "Chrome DevTools Protocol을 직접 기반으로 하여 웹 자동화와 스크레이핑을 수행하는 고성능 Go 언어 드라이버입니다.",
+    "longDescription": "헤드리스 브라우저를 간편하게 제어할 수 있으며, 초급 개발자부터 시니어 개발자까지 직관적인 고수준 API와 유연한 저수준 패키지를 활용할 수 있습니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "웹 자동화",
+      "스크레이핑",
+      "CDP",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://go-rod.github.io",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Go 1.18+",
+      "Google Chrome"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 모듈 추가",
+        "command": "go get github.com/go-rod/rod",
+        "note": "프로젝트에 Rod 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Go 프로젝트에서 rod 패키지를 임포트합니다.",
+      "브라우저 인스턴스를 생성하고 대상 웹페이지 URL로 이동합니다.",
+      "페이지 요소를 선택하고 클릭, 입력 등의 자동화 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "시스템에 크롬 브라우저가 설치되어 있어야 정상 동작합니다.",
+    "stars": 7124,
+    "forks": 486,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "docker-ipsec-vpn-server",
+    "name": "IPsec VPN Server on Docker",
+    "github": "https://github.com/hwdsl2/docker-ipsec-vpn-server",
+    "description": "IPsec/L2TP, Cisco IPsec 및 IKEv2를 지원하는 자가 호스팅 IPsec VPN 서버 도커 이미지입니다.",
+    "longDescription": "서버 설정을 자동으로 생성하며 Linux, Windows, macOS, iOS, Android 등 다양한 플랫폼의 VPN 클라이언트 설정을 손쉽게 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "VPN",
+      "도커",
+      "네트워크",
+      "보안"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://hub.docker.com/r/hwdsl2/ipsec-vpn-server",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "공인 IP가 있는 Linux 서버",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 이미지 실행",
+        "command": "docker run --name ipsec-vpn-server -d --privileged --restart=always -p 500:500/udp -p 4500:4500/udp hwdsl2/ipsec-vpn-server",
+        "note": "필수 포트를 개방하고 VPN 서버 컨테이너를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "공인 IP가 있는 서버에 도커를 설치합니다.",
+      "방화벽에서 UDP 500번과 4500번 포트를 허용합니다.",
+      "도커 명령어를 통해 VPN 서버 컨테이너를 구동합니다.",
+      "출력되는 접속 정보를 이용해 각 기기별 클라이언트 설정을 완료합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "방화벽 포트 개방과 루트 권한 혹은 `--privileged` 옵션이 필요합니다.",
+    "stars": 7144,
+    "forks": 1461,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "spotify-player",
+    "name": "spotify-player",
+    "github": "https://github.com/aome510/spotify-player",
+    "description": "터미널 환경에서 스포티파이 음악을 재생하고 제어할 수 있는 모든 기능을 갖춘 TUI 플레이어입니다.",
+    "longDescription": "Rust로 작성되어 가볍고 빠르며, 재생 제어, 오디오 시각화, 키보드 단축키 지원, 알림 기능 등을 텍스트 기반 인터페이스에서 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "음악 플레이어",
+      "TUI",
+      "터미널",
+      "Rust"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/aome510/spotify-player",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Spotify 계정 (프리미엄 권장)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo 설치",
+        "command": "cargo install spotify_player",
+        "note": "러스트 패키지 매니저로 플레이어를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 spotify_player 명령을 실행합니다.",
+      "안내에 따라 스포티파이 계정 인증을 진행합니다.",
+      "키보드 단축키를 이용해 재생 목록을 탐색하고 음악을 감상합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "음악 스트리밍 기능 이용 시 스포티파이 프리미엄 구독이 필요할 수 있습니다.",
+    "stars": 7268,
+    "forks": 396,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "opensign",
+    "name": "OpenSign",
+    "github": "https://github.com/OpenSignLabs/OpenSign",
+    "description": "DocuSign의 완전한 오픈소스 대안인 전자 서명 솔루션입니다.",
+    "longDescription": "보안성과 신뢰성을 갖춘 무료 오픈소스 문서 전자 서명 솔루션입니다. 자체 호스팅을 지원하며 문서 서명 및 관리 기능을 제공합니다.",
+    "category": "문서",
+    "tags": [
+      "전자서명",
+      "PDF",
+      "Node.js",
+      "MongoDB",
+      "자체호스팅"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://www.opensignlabs.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Docker",
+      "Node.js",
+      "MongoDB"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "소스 코드를 클론하거나 Docker를 통해 컨테이너를 실행합니다.",
+      "환경 변수 및 데이터베이스 연결 설정을 구성합니다.",
+      "웹 인터페이스에 접속하여 전자 서명 문서를 업로드하고 서명 요청을 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경 배포 시 환경 변수와 보안 설정을 별도로 점검해야 합니다.",
+    "stars": 7080,
+    "forks": 839,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "gpt-load",
+    "name": "GPT-Load",
+    "github": "https://github.com/tbphp/gpt-load",
+    "description": "다양한 AI 모델 API 키와 구독 계정을 통합 관리하고 라우팅하는 자체 호스팅 AI 게이트웨이입니다.",
+    "longDescription": "여러 AI 제공자와 계정을 하나의 진입점으로 통합하여 트래픽 스케줄링, 장애 조치, 요청 로깅 및 사용량 집계를 지원합니다. 다양한 LLM 연동 환경을 효율적으로 관리할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI게이트웨이",
+      "Go",
+      "Docker",
+      "부하분산",
+      "OpenAI"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.gpt-load.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Docker",
+      "Go 1.27+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d --name gpt-load -p 8080:8080 ghcr.io/tbphp/gpt-load:2",
+        "note": "Docker를 통해 컨테이너 형태로 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 또는 데몬을 통해 게이트웨이를 실행합니다.",
+      "관리자 패널에 접속하여 사용할 AI API 키 및 구독 계정을 등록합니다.",
+      "클라이언트 애플리케이션의 엔드포인트를 GPT-Load 주소로 설정하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "관리 키와 환경 변수는 안전한 곳에 별도 보관해야 합니다.",
+    "stars": 7065,
+    "forks": 788,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "masscode",
+    "name": "massCode",
+    "github": "https://github.com/massCodeIO/massCode",
+    "description": "코드 조각, 메모, HTTP 요청 등을 로컬 우선 방식으로 관리하는 오픈소스 개발자 워크스페이스입니다.",
+    "longDescription": "개발 중에 필요한 코드 스니펫과 노트, API 요청 등을 한곳에 모아 관리할 수 있는 데스크톱 애플리케이션입니다. 모든 데이터는 로컬에 평문 마크다운 파일로 저장됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "코드조각",
+      "개발자도구",
+      "노트",
+      "Electron",
+      "Vue"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://masscode.io",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트 또는 릴리스 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+      "애플리케이션을 실행하고 로컬 워크스페이스 폴더를 지정합니다.",
+      "코드 스니펫, 노트, API 요청 등을 카테고리별로 나누어 저장하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "로컬 파일 기반이므로 정기적인 백업을 권장합니다.",
+    "stars": 7056,
+    "forks": 277,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "cursor-talk-to-figma-mcp",
+    "name": "TalkToFigma MCP",
+    "github": "https://github.com/grab/cursor-talk-to-figma-mcp",
+    "description": "AI 에이전트와 Figma 간의 모델 컨텍스트 프로토콜(MCP) 연동을 통해 디자인을 읽고 수정할 수 있는 도구입니다.",
+    "longDescription": "Cursor, Claude Code 등의 AI 에이전트가 Figma와 통신하여 디자인 구조를 프로그래밍 방식으로 읽고 변경 작업을 수행할 수 있도록 지원하는 MCP 통합 패키지입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "MCP",
+      "Figma",
+      "AI에이전트",
+      "TypeScript",
+      "디자인자동화"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.figma.com/community/plugin/1485687494525374295/cursor-talk-to-figma-mcp-plugin",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Bun"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Bun 설치",
+        "command": "curl -fsSL https://bun.sh/install | bash",
+        "note": "Bun 패키지 매니저를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Bun을 설치하고 프로젝트 의존성을 설정합니다.",
+      "Cursor 등의 MCP 설정 파일에 서버 구성을 추가합니다.",
+      "웹소켓 서버를 실행하고 Figma 플러그인과 연동하여 AI를 통해 디자인을 제어합니다."
+    ],
+    "examplePrompt": "현재 Figma 화면의 디자인 요소를 읽고 컴포넌트 구조를 분석해줘.",
+    "usageNote": "Figma 개발자 모드 및 로컬 플러그인 설정이 필요합니다.",
+    "stars": 7048,
+    "forks": 778,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "zerobyte",
+    "name": "Zerobyte",
+    "github": "https://github.com/nicotsx/zerobyte",
+    "description": "Restic 기반으로 원격 스토리지 백업을 자동화하고 관리할 수 있는 자체 호스팅 도구입니다.",
+    "longDescription": "Restic 백업 엔진을 기반으로 하여 암호화, 압축, 스케줄링 및 모니터링 기능을 현대적인 웹 인터페이스로 제공하는 백업 자동화 솔루션입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "백업",
+      "Restic",
+      "Docker",
+      "자체호스팅",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://zerobyte.app",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 실행",
+        "command": "docker compose up -d",
+        "note": "Docker Compose를 사용하여 컨테이너를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "provided compose.yaml 파일을 서버에 다운로드합니다.",
+      "필요한 환경 변수 및 볼륨 마운트 경로를 수정합니다.",
+      "웹 인터페이스에 접속하여 백업 스케줄과 타겟 스토리지를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "초기 버전이므로 주요 변경 사항이 발생할 수 있습니다.",
+    "stars": 7027,
+    "forks": 178,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "blocky",
+    "name": "Blocky",
+    "github": "https://github.com/0xERR0R/blocky",
+    "description": "로컬 네트워크를 위한 빠르고 가벼운 고성능 DNS 프록시 겸 광고 차단기입니다.",
+    "longDescription": "Go 언어로 작성되어 메모리 사용량이 적고 빠른 속도를 자랑하는 DNS 기반 광고 차단 서버입니다. 다양한 차단 목록과 부모 통제 기능을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "DNS",
+      "광고차단",
+      "Go",
+      "네트워크",
+      "자체호스팅"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://0xERR0R.github.io/blocky/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Docker 또는 Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "YAML 형식의 설정 파일을 작성합니다.",
+      "Docker 또는바이너리를 통해 Blocky 서비스를 실행합니다.",
+      "라우터 또는 기기의 DNS 설정을 Blocky 서버 주소로 지정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "상태가 없는(stateless) 구조로 데이터베이스 없이 가볍게 동작합니다.",
+    "stars": 7017,
+    "forks": 307,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "dsh-routing-suite",
+    "name": "DSH Routing Suite",
+    "github": "https://github.com/yjh051108/dsh-routing-suite",
+    "description": "AI 에이전트를 위한 런타임 주입기와 작업 인식형 사고 패턴 라우터 프리셋이 포함된 패키지입니다.",
+    "longDescription": "런타임 주입기를 통해 재시작 없이 관리 계층을 제어하고, 모델 페르소나에 따른 라우팅 프리셋과 세션 급별 작업 프로토콜을 제공하여 에이전트 워크플로우를 확장합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "라우터",
+      "JavaScript",
+      "자동화",
+      "프레임워크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/yjh051108/dsh-routing-suite",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 설치",
+        "command": "git clone https://github.com/yjh051108/dsh-routing-suite.git && cd dsh-routing-suite",
+        "note": "저장소를 복제하고 디렉터리로 이동합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 설치 스크립트를 실행합니다.",
+      "런타임 주입기를 프로필에 맞게 장착합니다.",
+      "라우터 프리셋을 에이전트 경로에 복사하고 레이아웃을 자체 검사합니다."
+    ],
+    "examplePrompt": "주어진 작업을 분석하여 가장 적절한 사고 모델 라우터 프리셋을 적용해줘.",
+    "usageNote": "고급 에이전트 환경 설정을 위한 사전 지식이 필요합니다.",
+    "stars": 7013,
+    "forks": 183,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "wger",
+    "name": "wger",
+    "github": "https://github.com/wger-project/wger",
+    "description": "운동 루틴, 영양 식단, 체중 변화를 추적하고 관리할 수 있는 오픈소스 피트니스 관리 프로그램입니다.",
+    "longDescription": "자체 호스팅이 가능한 피트니스 및 영양 관리 매니저입니다. 개인 맞춤형 운동 루틴 생성, 식단 계획, 신체 측정값 기록 기능을 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "피트니스",
+      "운동",
+      "식단",
+      "Django",
+      "자체호스팅"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://wger.de",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Docker",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 이미지를 다운로드하거나 소스 코드를 클론합니다.",
+      "데이터베이스 및 환경 설정을 완료합니다.",
+      "웹 인터페이스를 통해 운동 루틴을 생성하고 식단을 기록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "AGPL-3.0 라이선스를 따르므로 수정 사항 공개 의무를 확인해야 합니다.",
+    "stars": 7080,
+    "forks": 1035,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "mac-dev-playbook",
+    "name": "Mac Development Ansible Playbook",
+    "github": "https://github.com/geerlingguy/mac-dev-playbook",
+    "description": "Ansible을 활용하여 macOS 개발 환경을 자동 설정하고 구성하는 도구입니다.",
+    "longDescription": "웹 및 소프트웨어 개발에 필요한 다양한 애플리케이션과 설정을 Ansible 플레이북을 통해 자동으로 설치하고 구성합니다. 수동으로 설정하기 번거로운 macOS 환경을 코드로 관리할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Ansible",
+      "macOS",
+      "자동화",
+      "개발 환경",
+      "Homebrew"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/geerlingguy/mac-dev-playbook",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Apple command line tools",
+      "Ansible"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Command Line Tools 설치",
+        "command": "xcode-select --install",
+        "note": "macOS 커맨드 라인 개발 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Apple command line tools를 설치합니다.",
+      "Python 3 및 Ansible을 시스템에 설치합니다.",
+      "저장소를 클론하고 플레이북 파일을 준비합니다.",
+      "Ansible 플레이북을 실행하여 개발 환경 구성을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "일부 macOS 시스템 설정은 보안 및 권한 문제로 인해 수동 조치가 필요할 수 있습니다.",
+    "stars": 7058,
+    "forks": 1885,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "sandstorm",
+    "name": "Sandstorm",
+    "github": "https://github.com/sandstorm-io/sandstorm",
+    "description": "자체 호스팅이 가능한 보안 강화형 웹 생산성 스위트 및 애플리케이션 패키지 매니저입니다.",
+    "longDescription": "보안이 강화된 컨테이너 환경에서 다양한 웹 애플리케이션을 손쉽게 설치하고 실행할 수 있는 자체 호스팅 플랫폼입니다. 문서 작성, 스프레드시트, 블로그, Git 저장소 등 다양한 생산성 도구를 통합 관리할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "자체 호스팅",
+      "웹",
+      "생산성",
+      "패키지 매니저",
+      "보안"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://sandstorm.org",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T02:03:59.538Z",
+    "requirements": [
+      "Linux server",
+      "Docker 또는 지원되는 컨테이너 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Sandstorm 공식 문서의 설치 가이드를 참조하여 서버에 환경을 구축합니다.",
+      "관리자 계정을 설정하고 웹 패널에 접속합니다.",
+      "필요한 웹 생산성 앱을 패키지 매니저를 통해 설치합니다.",
+      "웹 인터페이스를 통해 문서, 블로그 등의 서비스를 이용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "서버 환경에 따른 도메인 및 SSL 설정이 권장됩니다.",
+    "stars": 7078,
+    "forks": 715,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
     "id": "repowise",
     "name": "Repowise",
     "github": "https://github.com/repowise-dev/repowise",
