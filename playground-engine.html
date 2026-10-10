@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><title>Markdown Engine Lab — OpenShelf</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="playground.css"></head>
+<body><main class="playground-shell">
+<a class="playground-back" href="./">← OpenShelf로 돌아가기</a><div class="playground-eyebrow">OPENSHELF / RUN LOCAL</div>
+<h1>Engine Lab<span>.</span></h1>
+<p class="playground-intro">실제 오픈소스 <strong>Marked</strong> Markdown 렌더러를 브라우저 안에서 실행합니다. Glow·Zettlr의 원본 코드를 실행하는 것은 아닙니다. 렌더링에는 외부 공식 앱 iframe이나 별도 서버가 필요하지 않습니다. 최초 라이브러리 로딩에 인터넷 연결이 필요합니다.</p>
+<section class="playground-panel" aria-labelledby="engineTitle">
+<div class="playground-heading"><h2 id="engineTitle">Marked · Markdown Engine</h2><span id="engineState" aria-live="polite">엔진 로딩 중…</span></div>
+<label class="playground-input-label" for="engineInput">Markdown 입력</label>
+<textarea id="engineInput" rows="11" spellcheck="false"># OpenShelf Engine Lab
+
+실제 **Marked** 오픈소스 엔진으로 렌더링합니다.
+
+- 브라우저 안에서 실행
+- 코드 블록 및 표 지원
+- 입력 HTML 안전하게 정리
+
+| 도구 | 상태 |
+| --- | --- |
+| Marked | Ready |
+
+`console.log("hello")`</textarea>
+<div class="playground-actions"><button class="playground-primary" id="engineRun" type="button" disabled>렌더링 실행 →</button><button id="engineReset" type="button">초기화</button><button id="engineCopy" type="button">Markdown 복사</button></div>
+<div class="playground-result-title"><h3>실제 엔진 결과</h3><span id="engineStatus" aria-live="polite">준비 중</span></div>
+<div id="enginePreview" class="playground-preview" aria-live="polite">오픈소스 엔진을 불러오는 중입니다.</div>
+</section>
+<p class="playground-footnote">오픈소스: Marked(MIT), DOMPurify(MPL 2.0 / Apache 2.0). 라이브러리는 버전이 고정된 CDN에서 로드됩니다. HTML·스크립트 등 위험 요소는 DOMPurify로 제거하며 이미지는 렌더링하지 않습니다.</p>
+</main><script type="module" src="playground-engine.js"></script></body></html>
