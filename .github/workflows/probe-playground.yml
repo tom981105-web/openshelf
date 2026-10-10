@@ -1,0 +1,34 @@
+name: Check Playground candidates
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: openshelf-playground-probes
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Probe tests
+        run: node scripts/probe-playground-candidates.test.mjs
+      - name: Check up to 20 candidate sites
+        run: node scripts/probe-playground-candidates.mjs
+      - name: Commit report only
+        run: |
+          if git diff --quiet -- data/playground-probes.json; then exit 0; fi
+          git config user.name "openshelf-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/playground-probes.json
+          git commit -m "chore: refresh Playground candidate reachability"
+          git pull --rebase
+          git push
