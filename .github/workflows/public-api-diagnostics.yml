@@ -1,0 +1,24 @@
+name: Public API official source diagnostics
+on:
+  pull_request:
+    paths:
+      - 'scripts/diagnose-public-apis.mjs'
+      - 'scripts/diagnose-public-apis.test.mjs'
+      - 'scripts/discover-public-apis.mjs'
+      - '.github/workflows/public-api-diagnostics.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Unit test diagnostic parser
+        run: node scripts/diagnose-public-apis.test.mjs
+      - name: Probe real official portal response
+        run: node scripts/diagnose-public-apis.mjs
