@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {formatJson,testRegex,renderMarkdown} from './playground-core.mjs';
+assert.equal(formatJson('{"a":1}').ok,true);
+assert.match(formatJson('{"a":1}').output,/\n/);
+assert.equal(formatJson('{broken').ok,false);
+assert.match(testRegex('[a-z]+','gi','ABC 123 xyz').output,/ABC/);
+assert.equal(testRegex('(','g','abc').ok,false);
+assert.equal(testRegex('(a+)+','g','a'.repeat(100)).ok,false);
+assert.equal(testRegex('a','gg','abc').ok,false);
+assert.equal(testRegex('a','g','a'.repeat(2100)).ok,false);
+assert.match(renderMarkdown('# Hello'),/<h1>Hello<\/h1>/);
+assert.match(renderMarkdown('**bold**'),/<strong>bold<\/strong>/);
+assert.doesNotMatch(renderMarkdown('<img src=x onerror=alert(1)>'),/<img/);
+assert.doesNotMatch(renderMarkdown('<script>alert(1)<\/script>'),/<script/);
+console.log('Playground functional and HTML safety smoke tests passed');
