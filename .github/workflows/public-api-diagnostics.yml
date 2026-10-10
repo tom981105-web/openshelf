@@ -22,6 +22,8 @@ jobs:
         run: node scripts/diagnose-public-apis.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
-      - name: Dry-run one official discovery page (do not commit)
-        run: node --input-type=module -e "import {discover} from './scripts/discover-public-apis.mjs'; await discover({pages:20,maxDetails:200});"
+      - name: V10 live batch discovery
+        run: |
+          node --input-type=module -e "import {discover} from './scripts/discover-public-apis.mjs'; await discover({pages:20,maxDetails:200});"
+          node --input-type=module -e "import fs from 'node:fs';const c=JSON.parse(fs.readFileSync('data/public-api-candidates.json','utf8'));console.log('V10_CANDIDATES_JSON='+JSON.stringify(c.items));"
 
