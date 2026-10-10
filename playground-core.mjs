@@ -5,10 +5,10 @@ export function formatJson(input) {
 }
 export function testRegex(pattern,flags,input) {
   try {
-    if(pattern.length>180||input.length>10000) return {ok:false,output:'입력 길이 제한을 초과했어요.'};
+    if(pattern.length>120||input.length>2000) return {ok:false,output:'입력 길이 제한을 초과했어요.'};
     if(!/^[gimsuy]*$/.test(flags)||new Set(flags).size!==flags.length) return {ok:false,output:'지원하지 않는 정규식 플래그입니다.'};
     // Avoid exponential regex execution by prohibiting nested repetition and lookarounds.
-    if(/\([^)]*[+*}][^)]*\)[+*{]/.test(pattern)||pattern.includes('(?'))return {ok:false,output:'안전을 위해 중첩 반복·전후방 탐색 표현식은 제한합니다.'};
+    if(/\)[+*{]/.test(pattern)||pattern.includes('(?'))return {ok:false,output:'안전을 위해 중첩 반복·전후방 탐색 표현식은 제한합니다.'};
     const expression=new RegExp(pattern,flags.includes('g')?flags:flags+'g');
     const matches=[];let found;
     while((found=expression.exec(input))!==null&&matches.length<100){
