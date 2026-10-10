@@ -12,6 +12,8 @@ on:
       - 'playground-core.test.mjs'
       - 'playground-catalog.js'
       - 'playground-catalog.test.mjs'
+      - 'playground-image.html'
+      - 'playground-image.js'
       - 'playground-sql.html'
       - 'playground-sql.js'
       - 'playground-sql-worker.js'
@@ -55,6 +57,8 @@ on:
       - 'playground-core.test.mjs'
       - 'playground-catalog.js'
       - 'playground-catalog.test.mjs'
+      - 'playground-image.html'
+      - 'playground-image.js'
       - 'playground-sql.html'
       - 'playground-sql.js'
       - 'playground-sql-worker.js'
@@ -129,6 +133,8 @@ jobs:
         run: |
           node --check playground-sql.js
           node --check playground-sql-worker.js
+      - name: Image lab JavaScript syntax
+        run: node --check playground-image.js
       - name: CSV engine JavaScript syntax
         run: node --check playground-csv.js
       - name: Playground catalog routing tests
