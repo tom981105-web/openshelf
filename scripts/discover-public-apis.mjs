@@ -59,12 +59,12 @@ export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFil
     if(detail){additions.push(detail);known.add(id);pending.delete(id)}else{detailErrors++;failedDetail=true;pending.add(id);console.warn('Unverified official detail',id)}
    }catch(e){detailErrors++;failedDetail=true;pending.add(id);console.warn('Official detail failed',id,e.message)}
   }
-  if(failedDetail){console.warn('Hold cursor for retry at page',page);break}
+  if(failedDetail)console.warn('Deferred detail retry count',pending.size,'at page',page);
   scanned++;page=nextPage(page);
  }
  if(additions.length)await write('data/public-api-candidates.json',JSON.stringify({...existing,scope:'official-discovered-review-candidates',items:[...existing.items,...additions]},null,2)+'\n');
- if(page!==state.nextPage)await write(STATE_PATH,JSON.stringify({...state,nextPage:page,lastRunScannedPages:scanned},null,2)+'\n');
- const report={startPage:state.nextPage,nextPage:page,scannedPages:scanned,discovered,addedCandidates:additions.length,listingErrors,detailErrors};
+ if(page!==state.nextPage||pending.size!==failedDetails.length)await write(STATE_PATH,JSON.stringify({...state,nextPage:page,lastRunScannedPages:scanned,failedDetails:[...pending]},null,2)+'\n');
+ const report={startPage:state.nextPage,nextPage:page,scannedPages:scanned,discovered,addedCandidates:additions.length,listingErrors,detailErrors,pendingRetries:pending.size};
  console.log(JSON.stringify(report));return report;
 }
 if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href)await discover();
