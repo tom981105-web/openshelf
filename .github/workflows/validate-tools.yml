@@ -16,6 +16,8 @@ on:
       - 'public-api-core.mjs'
       - 'public-api.test.mjs'
       - 'data/public-api-candidates.json'
+      - 'scripts/discover-public-apis.mjs'
+      - 'scripts/discover-public-apis.test.mjs'
       - 'scripts/refresh-public-apis.mjs'
       - 'scripts/refresh-public-apis.test.mjs'
       - '.github/workflows/refresh-public-apis.yml'
@@ -78,6 +80,8 @@ on:
       - 'public-api-core.mjs'
       - 'public-api.test.mjs'
       - 'data/public-api-candidates.json'
+      - 'scripts/discover-public-apis.mjs'
+      - 'scripts/discover-public-apis.test.mjs'
       - 'scripts/refresh-public-apis.mjs'
       - 'scripts/refresh-public-apis.test.mjs'
       - '.github/workflows/refresh-public-apis.yml'
@@ -137,6 +141,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Public API discovery tests
+        run: node scripts/discover-public-apis.test.mjs
       - name: Public API refresh safety tests
         run: node scripts/refresh-public-apis.test.mjs
       - name: Public API catalog smoke tests
