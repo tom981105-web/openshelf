@@ -32,7 +32,7 @@ worker.onerror=()=>{status('런타임 오류');$('pythonOutput').textContent='Py
 timer=setTimeout(()=>{status('시간 제한 초과');$('pythonOutput').textContent='15초 제한으로 종료했습니다. 초기 다운로드가 오래 걸리는 경우 다시 시도하세요.';stop()},15000)}
 $('pythonRun').addEventListener('click',run);
 $('pythonStop').addEventListener('click',()=>{stop();status('사용자 중단');$('pythonState').textContent='대기'});
-$('pythonReset').addEventListener('click',()=>{stop();input.value=initial;csvInput.value=initialCsv;clearChart();outputText='';clearChart();$('pythonOutput').textContent='Python 코드를 입력하고 실행하세요.';status('실행 전')});
+$('pythonReset').addEventListener('click',()=>{stop();input.value=initial;csvInput.value=initialCsv;clearChart();outputText='';$('pythonOutput').textContent='Python 코드를 입력하고 실행하세요.';status('실행 전')});
 $('pythonCopy').addEventListener('click',async()=>{if(!outputText)return;try{await navigator.clipboard.writeText(outputText);status('복사 완료')}catch{status('복사 실패')}});
 window.addEventListener('pagehide',stop);
 
