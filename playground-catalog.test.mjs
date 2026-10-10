@@ -31,7 +31,7 @@ assert.equal(playgroundLink({id:'glow',github:'https://github.com/charmbracelet/
 console.log('Playground links verified for '+expected.size+' registered tools');
 
 const hub= context.lookup.playgroundHubEntries(catalog);
-assert.equal(hub.length,5,'All five currently verified experience categories must be populated');
+assert.equal(hub.length,4,'Only populated experience types should be shown; JSON formatter has no catalog links');
 const linkedIds=hub.flatMap(entry=>entry.tools.map(tool=>tool.id));
 assert.equal(linkedIds.length,expected.size,'All verified catalog tools must be represented once');
 assert.equal(new Set(linkedIds).size,linkedIds.length,'No duplicated linked tools');
