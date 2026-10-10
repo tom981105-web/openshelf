@@ -22,6 +22,11 @@ on:
       - 'playground-hub.html'
       - 'playground-hub.css'
       - 'playground-hub.js'
+      - 'playground-candidates.html'
+      - 'playground-candidates.js'
+      - 'data/playground-candidates.json'
+      - 'scripts/playground-candidates.mjs'
+      - 'scripts/playground-candidates.test.mjs'
       - 'playground-live.html'
       - '.github/workflows/validate-tools.yml'
   push:
@@ -46,6 +51,11 @@ on:
       - 'playground-hub.html'
       - 'playground-hub.css'
       - 'playground-hub.js'
+      - 'playground-candidates.html'
+      - 'playground-candidates.js'
+      - 'data/playground-candidates.json'
+      - 'scripts/playground-candidates.mjs'
+      - 'scripts/playground-candidates.test.mjs'
       - '.github/workflows/validate-tools.yml'
   workflow_dispatch:
 
@@ -77,6 +87,10 @@ jobs:
         run: |
           node --check playground-hub.js
           node --check playground-catalog.js
+      - name: Candidate scanner tests
+        run: |
+          node scripts/playground-candidates.test.mjs
+          node --check playground-candidates.js
       - name: Playground catalog routing tests
         run: node playground-catalog.test.mjs
       - name: Validate tools.json
