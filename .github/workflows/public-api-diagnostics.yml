@@ -22,3 +22,5 @@ jobs:
         run: node scripts/diagnose-public-apis.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
+      - name: Dry-run one official discovery page (do not commit)
+        run: node --input-type=module -e "import {discover} from './scripts/discover-public-apis.mjs'; await discover({pages:1,maxDetails:12});"
