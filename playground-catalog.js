@@ -46,9 +46,9 @@ function playgroundLink(tool){
 
 function playgroundIsOfficial(tool){return playgroundModeForTool(tool)==='official-excalidraw'}
 
-function playgroundUsesRealEngine(tool){return !!tool&&['glow','zettlr'].includes(tool.id)&&playgroundModeForTool(tool)==='markdown'}
+function playgroundUsesRealEngine(tool){return playgroundExperienceForTool(tool)==='markdown'}
 
-function playgroundUsesJsonata(tool){return !!tool&&['jsonhero-web','dasel','jc'].includes(tool.id)&&playgroundModeForTool(tool)==='json'}
+function playgroundUsesJsonata(tool){return playgroundExperienceForTool(tool)==='json-query'}
 
 const PLAYGROUND_EXPERIENCES=Object.freeze([
   {key:'sql',title:'SQL WebAssembly Lab',type:'engine',kind:'실제 WebAssembly 엔진',description:'sql.js의 실제 SQLite WebAssembly를 브라우저에서 실행합니다. q 원본 CLI 실행은 아닙니다.',meta:'SQLite WASM · 격리 Worker',href:'playground-sql.html',action:'SQL 실행하기 ↗'},
@@ -71,4 +71,5 @@ function playgroundHubEntries(tools){
   })).filter(entry=>entry.tools.length>0);
 }
 
-function playgroundUsesCsvEngine(tool){return playgroundModeForTool(tool)==='csv'}
+function playgroundUsesCsvEngine(tool){return playgroundExperienceForTool(tool)==='csv'}
+function playgroundUsesSqlEngine(tool){return playgroundExperienceForTool(tool)==='sql'}
