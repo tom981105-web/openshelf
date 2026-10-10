@@ -7,12 +7,20 @@ const doc='<html><body>'+'.'.repeat(220)+' OpenAPI 명 조달청_나라장터 �
 const row=parseOfficialDetail(doc,'15129415');assert.equal(row?.provider,'조달청');assert.equal(row?.name,'조달청_나라장터 가격정보현황서비스');
 assert.equal(parseOfficialDetail('<html>error</html>','15129415'),null);
 let writes=[];
-const current={'data/public-api-candidates.json':JSON.stringify({items:[]}), 'data/public-apis.json':JSON.stringify({items:[]})};
+const current={'data/public-api-candidates.json':JSON.stringify({items:[]}), 'data/public-apis.json':JSON.stringify({items:[]}), 'data/public-api-discovery-state.json':JSON.stringify({nextPage:1})};
 const fetcher=async url=>({ok:true,headers:new Headers({'content-type':'text/html'}),text:async()=>url.includes('selectDataSetList')?'<a href="/data/15129415/openapi.do">sample</a>':doc});
 const result=await discover({pages:1,fetcher,read:async key=>current[key],write:async(key,val)=>writes.push({key,val})});
-assert.equal(result.addedCandidates,1);assert.equal(writes.length,1);
+assert.equal(result.addedCandidates,1);assert.equal(writes.length,2);
 assert.equal(JSON.parse(writes[0].val).items[0].id,'15129415');
 writes=[];
 const fail=await discover({pages:1,fetcher:async()=>{throw Error('offline')},read:async key=>current[key],write:async(key,val)=>writes.push({key,val})});
 assert.equal(fail.addedCandidates,0);assert.equal(writes.length,0);
 console.log('Official API discovery safe-mode tests passed');
+
+writes=[];const resumed={...current,'data/public-api-discovery-state.json':JSON.stringify({nextPage:7})};
+const more=await discover({pages:2,fetcher,read:async k=>resumed[k],write:async(k,v)=>writes.push({key:k,val:v})});
+assert.equal(more.startPage,7);assert.equal(more.nextPage,9);assert.equal(more.scannedPages,2);
+assert.equal(JSON.parse(writes.find(w=>w.key==='data/public-api-discovery-state.json').val).nextPage,9);
+writes=[];const blocked=await discover({pages:2,fetcher:async u=>u.includes('selectDataSetList')?fetcher(u):Promise.reject(Error('offline detail')),read:async k=>current[k],write:async(k,v)=>writes.push({key:k,val:v})});
+assert.equal(blocked.nextPage,1);assert.equal(blocked.detailErrors,1);assert.equal(writes.length,0);
+console.log('Resume cursor and fail-closed detail tests passed');
