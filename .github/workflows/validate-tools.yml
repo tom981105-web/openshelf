@@ -10,6 +10,8 @@ on:
       - 'scripts/guard-discovery.test.mjs'
       - 'playground-core.mjs'
       - 'playground-core.test.mjs'
+      - 'playground-catalog.js'
+      - 'playground-catalog.test.mjs'
       - 'playground.js'
       - 'playground.html'
       - '.github/workflows/validate-tools.yml'
@@ -23,6 +25,8 @@ on:
       - 'scripts/guard-discovery.test.mjs'
       - 'playground-core.mjs'
       - 'playground-core.test.mjs'
+      - 'playground-catalog.js'
+      - 'playground-catalog.test.mjs'
       - 'playground.js'
       - 'playground.html'
       - '.github/workflows/validate-tools.yml'
@@ -46,5 +50,7 @@ jobs:
         run: node scripts/guard-discovery.test.mjs
       - name: Playground functional smoke tests
         run: node playground-core.test.mjs
+      - name: Playground catalog routing tests
+        run: node playground-catalog.test.mjs
       - name: Validate tools.json
         run: node scripts/validate-tools.mjs data/tools.json
