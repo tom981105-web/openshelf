@@ -20,6 +20,10 @@ jobs:
           node-version: '22'
       - name: Test safe ingestion
         run: node scripts/refresh-public-apis.test.mjs
+      - name: Discover new candidates from official catalog
+        run: |
+          node scripts/discover-public-apis.test.mjs
+          node scripts/discover-public-apis.mjs
       - name: Verify candidates against official portal
         run: node scripts/refresh-public-apis.mjs
       - name: Validate resulting catalog
@@ -28,7 +32,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- data/public-apis.json; then
+          if git diff --quiet -- data/public-apis.json data/public-api-candidates.json; then
             echo "No verified additions; preserving catalog."
             exit 0
           fi
@@ -36,7 +40,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "$branch"
-          git add data/public-apis.json
+          git add data/public-apis.json data/public-api-candidates.json
           git commit -m "data: add newly verified public APIs"
           git push origin "$branch"
-          gh pr create --base main --head "$branch" --title "data: verified Public API updates" --body "Automated official data.go.kr page verification. Review metadata and usage conditions before merging; source remains unchanged on failed checks."
+          gh pr create --base main --head "$branch" --title "data: verified Public API updates" --body "Official catalog candidate discovery and page verification. Review all additions before merging. Failed source reads leave current data intact."
