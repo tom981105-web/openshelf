@@ -27,6 +27,7 @@ function playgroundModeForTool(tool){
 }
 function playgroundLink(tool){
   const mode=playgroundModeForTool(tool);
+  if(mode==='csv'&&tool.id==='q')return 'playground-sql.html?source='+encodeURIComponent(tool.id);
   if(mode==='csv')return 'playground-csv.html?source='+encodeURIComponent(tool.id);
   if(mode==='official-excalidraw')return 'playground-live.html?source='+encodeURIComponent(tool.id);
   if(mode==='json'&&['jsonhero-web','dasel','jc'].includes(tool.id))return 'playground-jsonata.html?source='+encodeURIComponent(tool.id);
@@ -41,6 +42,7 @@ function playgroundUsesRealEngine(tool){return !!tool&&['glow','zettlr'].include
 function playgroundUsesJsonata(tool){return !!tool&&['jsonhero-web','dasel','jc'].includes(tool.id)&&playgroundModeForTool(tool)==='json'}
 
 const PLAYGROUND_EXPERIENCES=Object.freeze([
+  {key:'sql',title:'SQL WebAssembly Lab',type:'engine',kind:'실제 WebAssembly 엔진',description:'sql.js의 실제 SQLite WebAssembly를 브라우저에서 실행합니다. q 원본 CLI 실행은 아닙니다.',meta:'SQLite WASM · 격리 Worker',href:'playground-sql.html',action:'SQL 실행하기 ↗'},
   {key:'csv',title:'CSV Engine',type:'engine',kind:'실제 오픈소스 엔진',description:'Papa Parse로 CSV를 분석합니다. VisiData·q 원본 프로그램을 실행하는 것은 아닙니다.',meta:'Papa Parse · 브라우저 실행',href:'playground-csv.html',action:'CSV 분석하기 ↗'},
   {key:'markdown',title:'Markdown Engine',type:'engine',kind:'실제 오픈소스 엔진',description:'Marked 라이브러리로 Markdown·표·코드 블록을 렌더링합니다. 연결 도구의 원본 프로그램을 실행하는 것은 아닙니다.',meta:'Marked · 브라우저 실행',href:'playground-engine.html',action:'Markdown 실행하기 ↗'},
   {key:'json-query',title:'JSON Query Engine',type:'engine',kind:'실제 오픈소스 엔진',description:'JSONata로 JSON 데이터를 조회·필터링합니다. 연결 도구의 원본 프로그램을 실행하는 것은 아닙니다.',meta:'JSONata · Web Worker',href:'playground-jsonata.html',action:'JSON 조회하기 ↗'},
@@ -51,6 +53,7 @@ const PLAYGROUND_EXPERIENCES=Object.freeze([
 function playgroundExperienceForTool(tool){
   if(!playgroundModeForTool(tool))return null;
   if(playgroundIsOfficial(tool))return 'official';
+  if(playgroundModeForTool(tool)==='csv'&&tool.id==='q')return 'sql';
   if(playgroundUsesCsvEngine(tool))return 'csv';
   if(playgroundUsesRealEngine(tool))return 'markdown';
   if(playgroundUsesJsonata(tool))return 'json-query';
