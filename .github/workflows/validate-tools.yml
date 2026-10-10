@@ -14,6 +14,9 @@ on:
       - 'playground-catalog.test.mjs'
       - 'playground-engine.js'
       - 'playground-engine.html'
+      - 'playground-jsonata.html'
+      - 'playground-jsonata.js'
+      - 'playground-jsonata-worker.js'
       - 'playground.js'
       - 'playground.html'
       - 'playground-live.html'
@@ -32,6 +35,9 @@ on:
       - 'playground-catalog.test.mjs'
       - 'playground-engine.js'
       - 'playground-engine.html'
+      - 'playground-jsonata.html'
+      - 'playground-jsonata.js'
+      - 'playground-jsonata-worker.js'
       - 'playground.js'
       - 'playground.html'
       - '.github/workflows/validate-tools.yml'
@@ -57,6 +63,10 @@ jobs:
         run: node playground-core.test.mjs
       - name: Browser engine JavaScript syntax
         run: node --check playground-engine.js
+      - name: JSONata engine JavaScript syntax
+        run: |
+          node --check playground-jsonata.js
+          node --check playground-jsonata-worker.js
       - name: Playground catalog routing tests
         run: node playground-catalog.test.mjs
       - name: Validate tools.json
