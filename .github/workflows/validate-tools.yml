@@ -15,6 +15,10 @@ on:
       - 'public-api.css'
       - 'public-api-core.mjs'
       - 'public-api.test.mjs'
+      - 'data/public-api-candidates.json'
+      - 'scripts/refresh-public-apis.mjs'
+      - 'scripts/refresh-public-apis.test.mjs'
+      - '.github/workflows/refresh-public-apis.yml'
       - 'data/public-apis.json'
       - 'index.html'
       - 'playground-catalog.js'
@@ -73,6 +77,10 @@ on:
       - 'public-api.css'
       - 'public-api-core.mjs'
       - 'public-api.test.mjs'
+      - 'data/public-api-candidates.json'
+      - 'scripts/refresh-public-apis.mjs'
+      - 'scripts/refresh-public-apis.test.mjs'
+      - '.github/workflows/refresh-public-apis.yml'
       - 'data/public-apis.json'
       - 'index.html'
       - 'playground-catalog.js'
@@ -129,6 +137,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Public API refresh safety tests
+        run: node scripts/refresh-public-apis.test.mjs
       - name: Public API catalog smoke tests
         run: |
           node public-api.test.mjs
