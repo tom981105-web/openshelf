@@ -10,7 +10,9 @@ const PLAYGROUND_REPOSITORIES=Object.freeze({
   'zettlr/zettlr':'markdown',
   'burntsushi/ripgrep':'regex',
   'pemistahl/grex':'regex',
-  'excalidraw/excalidraw':'official-excalidraw'
+  'excalidraw/excalidraw':'official-excalidraw',
+  'saulpw/visidata':'csv',
+  'harelba/q':'csv'
 });
 function playgroundModeForTool(tool){
   if(!tool||typeof tool.github!=='string')return null;
@@ -25,6 +27,7 @@ function playgroundModeForTool(tool){
 }
 function playgroundLink(tool){
   const mode=playgroundModeForTool(tool);
+  if(mode==='csv')return 'playground-csv.html?source='+encodeURIComponent(tool.id);
   if(mode==='official-excalidraw')return 'playground-live.html?source='+encodeURIComponent(tool.id);
   if(mode==='json'&&['jsonhero-web','dasel','jc'].includes(tool.id))return 'playground-jsonata.html?source='+encodeURIComponent(tool.id);
   if(mode==='markdown'&&['glow','zettlr'].includes(tool.id))return 'playground-engine.html?source='+encodeURIComponent(tool.id);
@@ -38,6 +41,7 @@ function playgroundUsesRealEngine(tool){return !!tool&&['glow','zettlr'].include
 function playgroundUsesJsonata(tool){return !!tool&&['jsonhero-web','dasel','jc'].includes(tool.id)&&playgroundModeForTool(tool)==='json'}
 
 const PLAYGROUND_EXPERIENCES=Object.freeze([
+  {key:'csv',title:'CSV Engine',type:'engine',kind:'실제 오픈소스 엔진',description:'Papa Parse로 CSV를 분석합니다. VisiData·q 원본 프로그램을 실행하는 것은 아닙니다.',meta:'Papa Parse · 브라우저 실행',href:'playground-csv.html',action:'CSV 분석하기 ↗'},
   {key:'markdown',title:'Markdown Engine',type:'engine',kind:'실제 오픈소스 엔진',description:'Marked 라이브러리로 Markdown·표·코드 블록을 렌더링합니다. 연결 도구의 원본 프로그램을 실행하는 것은 아닙니다.',meta:'Marked · 브라우저 실행',href:'playground-engine.html',action:'Markdown 실행하기 ↗'},
   {key:'json-query',title:'JSON Query Engine',type:'engine',kind:'실제 오픈소스 엔진',description:'JSONata로 JSON 데이터를 조회·필터링합니다. 연결 도구의 원본 프로그램을 실행하는 것은 아닙니다.',meta:'JSONata · Web Worker',href:'playground-jsonata.html',action:'JSON 조회하기 ↗'},
   {key:'official',title:'Excalidraw Live',type:'official',kind:'공식 외부 앱',description:'실제 Excalidraw 공식 웹앱을 연결합니다. 외부 사이트의 이용 및 개인정보 처리 정책이 적용됩니다.',meta:'공식 호스팅 · 외부 서비스',href:'playground-live.html?source=excalidraw',action:'공식 앱 열기 ↗'},
@@ -47,6 +51,7 @@ const PLAYGROUND_EXPERIENCES=Object.freeze([
 function playgroundExperienceForTool(tool){
   if(!playgroundModeForTool(tool))return null;
   if(playgroundIsOfficial(tool))return 'official';
+  if(playgroundUsesCsvEngine(tool))return 'csv';
   if(playgroundUsesRealEngine(tool))return 'markdown';
   if(playgroundUsesJsonata(tool))return 'json-query';
   if(playgroundModeForTool(tool)==='regex')return 'regex';
@@ -60,3 +65,5 @@ function playgroundHubEntries(tools){
     tools:valid.filter(tool=>playgroundExperienceForTool(tool)===experience.key).map(tool=>({id:tool.id,name:tool.name,href:playgroundLink(tool)}))
   })).filter(entry=>entry.tools.length>0);
 }
+
+function playgroundUsesCsvEngine(tool){return playgroundModeForTool(tool)==='csv'}
