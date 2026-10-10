@@ -9,7 +9,8 @@ const PLAYGROUND_REPOSITORIES=Object.freeze({
   'charmbracelet/glow':'markdown',
   'zettlr/zettlr':'markdown',
   'burntsushi/ripgrep':'regex',
-  'pemistahl/grex':'regex'
+  'pemistahl/grex':'regex',
+  'excalidraw/excalidraw':'official-excalidraw'
 });
 function playgroundModeForTool(tool){
   if(!tool||typeof tool.github!=='string')return null;
@@ -24,5 +25,8 @@ function playgroundModeForTool(tool){
 }
 function playgroundLink(tool){
   const mode=playgroundModeForTool(tool);
+  if(mode==='official-excalidraw')return 'playground-live.html?source='+encodeURIComponent(tool.id);
   return mode?'playground.html?mode='+encodeURIComponent(mode)+'&source='+encodeURIComponent(tool.id):null;
 }
+
+function playgroundIsOfficial(tool){return playgroundModeForTool(tool)==='official-excalidraw'}
