@@ -55,6 +55,8 @@ jobs:
         run: node scripts/guard-discovery.test.mjs
       - name: Playground functional smoke tests
         run: node playground-core.test.mjs
+      - name: Browser engine JavaScript syntax
+        run: node --check playground-engine.js
       - name: Playground catalog routing tests
         run: node playground-catalog.test.mjs
       - name: Validate tools.json
