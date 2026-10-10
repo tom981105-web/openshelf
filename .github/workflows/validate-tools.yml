@@ -25,6 +25,8 @@ on:
       - 'playground-hub.css'
       - 'playground-hub.js'
       - 'playground-all.js'
+      - 'playground-launch-core.mjs'
+      - 'playground-launch-core.test.mjs'
       - 'playground-all.html'
       - 'playground-all.css'
       - 'playground-candidates.html'
@@ -63,6 +65,8 @@ on:
       - 'playground-hub.css'
       - 'playground-hub.js'
       - 'playground-all.js'
+      - 'playground-launch-core.mjs'
+      - 'playground-launch-core.test.mjs'
       - 'playground-all.html'
       - 'playground-all.css'
       - 'playground-candidates.html'
@@ -111,6 +115,8 @@ jobs:
           node --check playground-candidates.js
       - name: Playground probe safety tests
         run: node scripts/probe-playground-candidates.test.mjs
+      - name: Safe launch classifier tests
+        run: node playground-launch-core.test.mjs
       - name: Universal tool navigator syntax
         run: node --check playground-all.js
       - name: CSV engine JavaScript syntax
