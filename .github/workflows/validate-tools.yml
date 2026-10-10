@@ -10,6 +10,13 @@ on:
       - 'scripts/guard-discovery.test.mjs'
       - 'playground-core.mjs'
       - 'playground-core.test.mjs'
+      - 'public-api.html'
+      - 'public-api.js'
+      - 'public-api.css'
+      - 'public-api-core.mjs'
+      - 'public-api.test.mjs'
+      - 'data/public-apis.json'
+      - 'index.html'
       - 'playground-catalog.js'
       - 'playground-catalog.test.mjs'
       - 'playground-python.html'
@@ -61,6 +68,13 @@ on:
       - 'scripts/guard-discovery.test.mjs'
       - 'playground-core.mjs'
       - 'playground-core.test.mjs'
+      - 'public-api.html'
+      - 'public-api.js'
+      - 'public-api.css'
+      - 'public-api-core.mjs'
+      - 'public-api.test.mjs'
+      - 'data/public-apis.json'
+      - 'index.html'
       - 'playground-catalog.js'
       - 'playground-catalog.test.mjs'
       - 'playground-python.html'
@@ -115,6 +129,10 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Public API catalog smoke tests
+        run: |
+          node public-api.test.mjs
+          node --check public-api.js
       - name: Validator smoke tests
         run: node scripts/validate-tools.test.mjs
       - name: Discovery safety guard tests

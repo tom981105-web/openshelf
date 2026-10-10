@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';import {validatedPublicApis,filterPublicApis} from './public-api-core.mjs';
+const source=JSON.parse(fs.readFileSync('data/public-apis.json','utf8'));
+const rows=validatedPublicApis(source.items);
+assert.equal(rows.length,5,'All curated official API entries must validate');
+assert.equal(new Set(rows.map(x=>x.id)).size,rows.length);
+assert.equal(filterPublicApis(rows,{query:'조달청'}).length,2);
+assert.equal(filterPublicApis(rows,{category:'조달·행정'}).length,2);
+assert.equal(filterPublicApis(rows,{approval:'심의승인'}).length,1);
+assert.equal(filterPublicApis(rows,{query:'not-present'}).length,0);
+assert.equal(validatedPublicApis([{...rows[0],url:'https://example.org'}]).length,0);
+const html=fs.readFileSync('index.html','utf8');assert.ok(html.includes('href="public-api.html"'));
+console.log('Public API metadata & navigation tests passed');
