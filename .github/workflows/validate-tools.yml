@@ -27,6 +27,10 @@ on:
       - 'data/playground-candidates.json'
       - 'scripts/playground-candidates.mjs'
       - 'scripts/playground-candidates.test.mjs'
+      - 'scripts/probe-playground-candidates.mjs'
+      - 'scripts/probe-playground-candidates.test.mjs'
+      - 'data/playground-probes.json'
+      - '.github/workflows/probe-playground.yml'
       - 'playground-live.html'
       - '.github/workflows/validate-tools.yml'
   push:
@@ -56,6 +60,10 @@ on:
       - 'data/playground-candidates.json'
       - 'scripts/playground-candidates.mjs'
       - 'scripts/playground-candidates.test.mjs'
+      - 'scripts/probe-playground-candidates.mjs'
+      - 'scripts/probe-playground-candidates.test.mjs'
+      - 'data/playground-probes.json'
+      - '.github/workflows/probe-playground.yml'
       - '.github/workflows/validate-tools.yml'
   workflow_dispatch:
 
@@ -91,6 +99,8 @@ jobs:
         run: |
           node scripts/playground-candidates.test.mjs
           node --check playground-candidates.js
+      - name: Playground probe safety tests
+        run: node scripts/probe-playground-candidates.test.mjs
       - name: Playground catalog routing tests
         run: node playground-catalog.test.mjs
       - name: Validate tools.json
