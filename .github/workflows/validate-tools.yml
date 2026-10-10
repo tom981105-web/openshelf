@@ -12,6 +12,9 @@ on:
       - 'playground-core.test.mjs'
       - 'playground-catalog.js'
       - 'playground-catalog.test.mjs'
+      - 'playground-python.html'
+      - 'playground-python.js'
+      - 'playground-python-worker.js'
       - 'playground-image.html'
       - 'playground-image.js'
       - 'playground-sql.html'
@@ -57,6 +60,9 @@ on:
       - 'playground-core.test.mjs'
       - 'playground-catalog.js'
       - 'playground-catalog.test.mjs'
+      - 'playground-python.html'
+      - 'playground-python.js'
+      - 'playground-python-worker.js'
       - 'playground-image.html'
       - 'playground-image.js'
       - 'playground-sql.html'
@@ -133,6 +139,10 @@ jobs:
         run: |
           node --check playground-sql.js
           node --check playground-sql-worker.js
+      - name: Python WASM runtime syntax
+        run: |
+          node --check playground-python.js
+          node --check playground-python-worker.js
       - name: Image lab JavaScript syntax
         run: node --check playground-image.js
       - name: CSV engine JavaScript syntax
