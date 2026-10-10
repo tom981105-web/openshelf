@@ -14,7 +14,7 @@ export async function updatePublicApis({read=fs.readFile,write=fs.writeFile,fetc
  if(currentRows.length!==current.items.length||currentRows.length===0)throw Error('Existing catalog contains invalid entries');
  const known=new Set(currentRows.map(x=>x.id));let added=0,checked=0,failed=0;
  for(const c of candidateData.items.slice(0,40)){
-  if(!/^\\d{8}$/.test(String(c?.id))||known.has(c.id))continue;
+  if(!/^\d{8}$/.test(String(c?.id))||known.has(c.id))continue;
   const row=canonical(c);
   if(validatedPublicApis([row]).length!==1){failed++;continue}
   checked++;
@@ -29,7 +29,7 @@ export async function updatePublicApis({read=fs.readFile,write=fs.writeFile,fetc
    currentRows.push(row);known.add(row.id);added++;
   }catch(e){failed++;console.warn('Skip unverified API',c.id,String(e.message||e))}
  }
- if(added)await write(sourceFile,JSON.stringify({...current,scope:'verified-curated',items:currentRows},null,2)+'\\n');
+ if(added)await write(sourceFile,JSON.stringify({...current,scope:'verified-curated',items:currentRows},null,2)+'\n');
  console.log(JSON.stringify({checked,added,failed,total:currentRows.length}));
  return {checked,added,failed,total:currentRows.length};
 }
