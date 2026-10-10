@@ -49,12 +49,14 @@ export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFil
   const unknown=ids.filter(id=>!known.has(id));
   if(unknown.length>budget-(discovered))break; // Do not skip unprocessed IDs by advancing cursor.
   discovered+=unknown.length;
+  let failedDetail=false;
   for(const id of unknown){
    try{
     const detail=parseOfficialDetail(await getHtml(ORIGIN+'/data/'+id+'/openapi.do',fetcher),id);
-    if(detail){additions.push(detail);known.add(id)}else{detailErrors++;console.warn('Unverified official detail',id)}
-   }catch(e){detailErrors++;console.warn('Official detail failed',id,e.message)}
+    if(detail){additions.push(detail);known.add(id)}else{detailErrors++;failedDetail=true;console.warn('Unverified official detail',id)}
+   }catch(e){detailErrors++;failedDetail=true;console.warn('Official detail failed',id,e.message)}
   }
+  if(failedDetail){console.warn('Hold cursor for retry at page',page);break}
   scanned++;page=nextPage(page);
  }
  if(additions.length)await write('data/public-api-candidates.json',JSON.stringify({...existing,scope:'official-discovered-review-candidates',items:[...existing.items,...additions]},null,2)+'\n');
