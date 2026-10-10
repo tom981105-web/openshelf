@@ -11,7 +11,9 @@ const PLAYGROUND_REGISTRY=Object.freeze({
  'pemistahl/grex':{mode:'regex',experience:'regex'},
  'excalidraw/excalidraw':{mode:'official-excalidraw',experience:'official'},
  'saulpw/visidata':{mode:'csv',experience:'csv'},
- 'harelba/q':{mode:'csv',experience:'sql'}
+ 'harelba/q':{mode:'csv',experience:'sql'},
+ 'photoprism/photoprism':{mode:'image',experience:'image'},
+ 'immich-app/immich':{mode:'image',experience:'image'}
 });
 const PLAYGROUND_REPOSITORIES=Object.freeze(Object.fromEntries(Object.entries(PLAYGROUND_REGISTRY).map(([repo,entry])=>[repo,entry.mode])));
 function playgroundRegistryEntry(tool){
@@ -51,6 +53,7 @@ function playgroundUsesRealEngine(tool){return playgroundExperienceForTool(tool)
 function playgroundUsesJsonata(tool){return playgroundExperienceForTool(tool)==='json-query'}
 
 const PLAYGROUND_EXPERIENCES=Object.freeze([
+  {key:'image',title:'Image Lab',type:'demo',kind:'브라우저 내장 이미지 처리',description:'Canvas로 이미지 크기 조절 및 형식 변환을 체험합니다. PhotoPrism·Immich 원본 서비스는 실행하지 않습니다.',meta:'Canvas API · 서버 전송 없음',href:'playground-image.html',action:'이미지 변환하기 ↗'},
   {key:'sql',title:'SQL WebAssembly Lab',type:'engine',kind:'실제 WebAssembly 엔진',description:'sql.js의 실제 SQLite WebAssembly를 브라우저에서 실행합니다. q 원본 CLI 실행은 아닙니다.',meta:'SQLite WASM · 격리 Worker',href:'playground-sql.html',action:'SQL 실행하기 ↗'},
   {key:'csv',title:'CSV Engine',type:'engine',kind:'실제 오픈소스 엔진',description:'Papa Parse로 CSV를 분석합니다. VisiData·q 원본 프로그램을 실행하는 것은 아닙니다.',meta:'Papa Parse · 브라우저 실행',href:'playground-csv.html',action:'CSV 분석하기 ↗'},
   {key:'markdown',title:'Markdown Engine',type:'engine',kind:'실제 오픈소스 엔진',description:'Marked 라이브러리로 Markdown·표·코드 블록을 렌더링합니다. 연결 도구의 원본 프로그램을 실행하는 것은 아닙니다.',meta:'Marked · 브라우저 실행',href:'playground-engine.html',action:'Markdown 실행하기 ↗'},
