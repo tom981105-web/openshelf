@@ -20,6 +20,8 @@ jobs:
           node-version: '22'
       - name: Test safe ingestion
         run: node scripts/refresh-public-apis.test.mjs
+      - name: Official portal compatibility diagnostics
+        run: node scripts/diagnose-public-apis.mjs
       - name: Discover new candidates from official catalog
         run: |
           node scripts/discover-public-apis.test.mjs
