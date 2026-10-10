@@ -1,5 +1,934 @@
 [
   {
+    "id": "memgraph",
+    "name": "Memgraph",
+    "github": "https://github.com/memgraph/memgraph",
+    "description": "GraphRAG, AI 메모리, 실시간 분석을 지원하는 고성능 인메모리 그래프 데이터베이스입니다.",
+    "longDescription": "Memgraph는 C++로 작성된 고성능 인메모리 그래프 데이터베이스로, AI 에이전트의 문맥 관리 및 GraphRAG 파이프라인 구축을 지원합니다. Cypher 쿼리 언어와 호환되며 벡터 인덱스 및 그래프 탐색 기능을 단일 쿼리 계층에서 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "그래프 데이터베이스",
+      "GraphRAG",
+      "C++",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://memgraph.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -p 7687:7687 memgraph/memgraph",
+        "note": "Docker를 통해 Memgraph 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 컨테이너로 Memgraph를 실행합니다.",
+      "Cypher 쿼리를 사용하여 그래프 노드와 관계를 생성합니다.",
+      "GraphRAG 및 AI 에이전트의 메모리 저장소로 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4606,
+    "forks": 285,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "all-agentic-architectures",
+    "name": "All Agentic Architectures",
+    "github": "https://github.com/FareedKhan-dev/all-agentic-architectures",
+    "description": "다양한 LLM 제공자를 지원하는 35가지 프로덕션급 에이전틱 AI 아키텍처 구현 라이브러리입니다.",
+    "longDescription": "Reflexion, LATS, GraphRAG, MemGPT 등 35가지 프로덕션급 에이전틱 AI 패턴을 코드로 구현하고 벤치마크를 제공하는 라이브러리 겸 학습서입니다. 다중 LLM 제공자를 지원하며 실습 가능한 코드를 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "Python",
+      "LangChain",
+      "LLM"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://fareedkhan-dev.github.io/all-agentic-architectures/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Python 3.11+"
+    ],
+    "supportedAgents": [
+      "LangChain",
+      "LangGraph"
+    ],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install \"agentic-architectures[nebius,faiss,tavily]\"",
+        "note": "필요한 의존성과 함께 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "지원되는 LLM 클라이언트를 가져옵니다.",
+      "원하는 아키텍처 클래스를 초기화하고 `.run()` 메서드를 호출합니다."
+    ],
+    "examplePrompt": "Write a haiku about a glacier.",
+    "usageNote": "",
+    "stars": 4592,
+    "forks": 775,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "council-of-high-intelligence",
+    "name": "Council of High Intelligence",
+    "github": "https://github.com/0xNyk/council-of-high-intelligence",
+    "description": "복잡한 의사 결정을 위해 여러 분석 페르소나의 구조화된 다각도 토론을 수행하는 도구입니다.",
+    "longDescription": "Claude Code, Codex, Gemini CLI 등 다양한 AI 호스트 환경에서 복잡한 질문에 대해 서로 다른 독립적 분석 페르소나가 토론하도록 유도합니다. 의견 불일치와 해결되지 않은 쟁점을 보존하는 판정을 반환합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "CLI",
+      "의사결정",
+      "다중 에이전트"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.nyk.dev/oss/council-of-high-intelligence",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Shell 환경"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Gemini CLI",
+      "OpenCode"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 추가",
+        "command": "/plugin marketplace add 0xNyk/council-of-high-intelligence",
+        "note": "마켓플레이스에서 플러그인을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 AI CLI 클라이언트에 플러그인을 설치합니다.",
+      "의사 결정 질문과 제약 조건을 정의합니다.",
+      "위원회 명령어를 실행하여 다각도 토론 결과를 확인합니다."
+    ],
+    "examplePrompt": "우리 팀이 모놀리식 구조에서 마이크로서비스로 전환해야 할까요?",
+    "usageNote": "",
+    "stars": 4590,
+    "forks": 431,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "cloudflare-ddns",
+    "name": "Cloudflare DDNS",
+    "github": "https://github.com/timothymiller/cloudflare-ddns",
+    "description": "Rust로 작성된 가볍고 효율적인 Cloudflare 동적 DNS(DDNS) 업데이트 도구입니다.",
+    "longDescription": "고정 IP가 없는 홈 네트워크에서 사용자 지정 도메인으로 원격 접속할 수 있도록 지원하는 Cloudflare 전용 동적 DNS 클라이언트입니다. Rust로 작성되어 매우 작은 이미지 크기와 적은 메모리 사용량을 자랑합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Rust",
+      "Docker",
+      "Cloudflare",
+      "DDNS"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://timknowsbest.com/free-dynamic-dns",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Docker 또는 Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm 설치",
+        "command": "helm install cloudflare-ddns oci://ghcr.io/timothymiller/cloudflare-ddns --namespace ddns --create-namespace --set cloudflare.apiToken=your-api-token --set domains=example.com",
+        "note": "Helm을 사용하여 쿠버네티스 클러스터에 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "Cloudflare API 토큰을 발급받습니다.",
+      "Docker 또는 Helm을 통해 DDNS 클라이언트를 배포합니다.",
+      "환경 변수를 통해 도메인 및 갱신 주기를 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4529,
+    "forks": 430,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "dockertest",
+    "name": "Dockertest",
+    "github": "https://github.com/ory/dockertest",
+    "description": "Go 테스트 환경에서 임시 Docker 컨테이너를 쉽게 실행하여 통합 테스트를 작성할 수 있는 도구입니다.",
+    "longDescription": "Go 언어로 작성된 통합 테스트에서 외부 서비스(데이터베이스 등)를 Docker 컨테이너로 손쉽게 띄우고 테스트가 끝난 뒤 정리할 수 있도록 돕는 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "Docker",
+      "통합 테스트",
+      "자동화"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.ory.com/?utm_source=github&utm_medium=banner&utm_campaign=dockertest",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Go",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 패키지 추가",
+        "command": "go get github.com/ory/dockertest/v3",
+        "note": "프로젝트에 dockertest 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "테스트 코드에 dockertest 풀을 설정합니다.",
+      "필요한 Docker 이미지를 지정하여 컨테이너를 실행합니다.",
+      "컨테이너 준비 완료를 기다린 후 테스트를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4526,
+    "forks": 270,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "longmemory",
+    "name": "LongMemory",
+    "github": "https://github.com/CaviraOSS/LongMemory",
+    "description": "AI 에이전트를 위한 로컬 우선(Local-first)의 영구적이고 시간 흐름에 따른 메모리 저장소입니다.",
+    "longDescription": "Claude Desktop, GitHub Copilot 등 다양한 LLM 애플리케이션 및 에이전트가 장기 기억을 유지할 수 있도록 지원하는 로컬 기반 메모리 엔진입니다. 임베디드 벡터 검색과 구조화된 기억 관리 기능을 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 메모리",
+      "RAG",
+      "TypeScript",
+      "벡터 데이터베이스"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/CaviraOSS/LongMemory",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Node.js 또는 Docker"
+    ],
+    "supportedAgents": [
+      "Claude Desktop",
+      "GitHub Copilot"
+    ],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pnpm install",
+        "note": "소스 코드 빌드 및 패키지 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "LongMemory 서비스를 로컬 또는 Docker로 실행합니다.",
+      "지원되는 LLM 환경이나 VS Code 확장 프로그램에 연결합니다.",
+      "에이전트 대화 내용이 로컬 메모리에 자동으로 저장되고 검색됩니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4525,
+    "forks": 506,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "anakin",
+    "name": "Anakin Scraper",
+    "github": "https://github.com/Anakin-Inc/anakin",
+    "description": "웹사이트를 깔끔한 마크다운이나 구조화된 JSON으로 변환하는 오픈소스 웹 스크래핑 API입니다.",
+    "longDescription": "안티 바이패스 브라우저와 프록시 자동 선택 기능을 탑재한 자체 호스팅 가능한 웹 스크래핑 도구입니다. 단일 명령어로 실행할 수 있으며 LLM을 통한 데이터 추출을 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "웹 스크래핑",
+      "Go",
+      "Playwright",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://anakin.io",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 실행",
+        "command": "make up",
+        "note": "명령어로 스크래퍼 서비스를 빌드하고 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker Compose 환경을 설정합니다.",
+      "서비스를 실행하여 Web UI 또는 API에 접속합니다.",
+      "스크래핑할 URL을 입력하고 마크다운 또는 JSON 형식으로 결과를 추출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4525,
+    "forks": 177,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "ueli",
+    "name": "Ueli",
+    "github": "https://github.com/oliverschwendener/ueli",
+    "description": "빠른 키 입력으로 앱, 파일, 웹 검색 등을 실행할 수 있는 크로스 플랫폼 키스트로크 런처입니다.",
+    "longDescription": "Electron과 TypeScript로 제작된 키스트로크 런처로, 사용자가 단축키를 눌러 애플리케이션을 실행하거나 파일을 찾고 다양한 유틸리티 기능을 빠르게 호출할 수 있도록 돕습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Electron",
+      "TypeScript",
+      "생산성",
+      "런처"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ueli.app",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Node.js (소스 빌드 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Windows winget 설치",
+        "command": "winget install Ueli -s msstore",
+        "note": "winget을 통해 Microsoft Store에서 앱을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 후 단축키를 눌러 런처 창을 엽니다.",
+      "검색어나 명령어의 일부를 입력합니다.",
+      "결과 목록에서 원하는 항목을 선택해 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4604,
+    "forks": 275,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "your-spotify",
+    "name": "Your Spotify",
+    "github": "https://github.com/Yooooomi/your_spotify",
+    "description": "스포티파이 재생 기록을 주기적으로 수집하여 통계 대시보드를 제공하는 자체 호스팅 웹앱입니다.",
+    "longDescription": "사용자의 Spotify API를 주기적으로 폴링하여 청취 기록을 백업하고, 웹 대시보드를 통해 음악 감상 통계와 취향 분석을 탐색할 수 있는 Self-hosted 애플리케이션입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "TypeScript",
+      "React",
+      "Docker",
+      "Spotify"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/Yooooomi/your_spotify",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Docker",
+      "Spotify Developer 계정"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 실행",
+        "command": "docker compose up -d",
+        "note": "도커 컴포즈로 백엔드와 프론트엔드 서비스를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Spotify Developer 대시보드에서 애플리케이션을 생성합니다.",
+      "환경 변수 파일에 클라이언트 ID와 시크릿을 설정합니다.",
+      "Docker로 서비스를 실행하고 웹 대시보드에 접속하여 통계를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4596,
+    "forks": 214,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "collision",
+    "name": "Collision",
+    "github": "https://github.com/nunomaduro/collision",
+    "description": "명령어(CLI) 애플리케이션을 위한 아름답고 가독성 높은 에러 및 예외 리포팅 도구입니다.",
+    "longDescription": "PHP 콘솔 애플리케이션에서 발생하는 예외와 에러를 보기 쉽게 출력해 주는 라이브러리입니다. Laravel 프레임워크에 기본 포함되어 있으며 Symfony, PHPUnit 등과 호환됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PHP",
+      "CLI",
+      "Laravel",
+      "디버깅"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://youtube.com/@nunomaduro?sub_confirmation=1",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "PHP 8.2+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Composer 패키지 설치",
+        "command": "composer require nunomaduro/collision --dev",
+        "note": "Composer를 사용하여 개발 의존성으로 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Composer를 통해 프로젝트에 Collision을 설치합니다.",
+      "CLI 애플리케이션이나 테스트를 실행합니다.",
+      "예외 발생 시 컬러풀하고 가독성 높은 스택 트레이스 리포트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4659,
+    "forks": 183,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "go-recipes",
+    "name": "go-recipes",
+    "github": "https://github.com/nikolaydubina/go-recipes",
+    "description": "Go 언어 프로젝트 개발을 위한 유용한 도구와 레시피 모음입니다.",
+    "longDescription": "테스트, 코드 생성, 프로파일링, 벤치마킹, 정적 분석 등 Go 프로젝트 개발 생산성을 높여주는 다양한 도구들을 카테고리별로 정리한 모음집입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "개발도구",
+      "코드 분석",
+      "테스트",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/nikolaydubina/go-recipes",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "목록에서 필요한 도구나 레시피를 선택합니다.",
+      "해당 도구의 공식 저장소로 이동하여 설치 방법을 확인합니다.",
+      "Go 프로젝트에 적용하여 개발 및 테스트에 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4783,
+    "forks": 186,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "notcurses",
+    "name": "notcurses",
+    "github": "https://github.com/dankamongmen/notcurses",
+    "description": "최신 터미널 에뮬레이터에서 화려한 캐릭터 그래픽과 TUI를 구현하는 라이브러리입니다.",
+    "longDescription": "생생한 색상, 멀티미디어, 스레드, 유니코드를 지원하여 기존 ncurses로는 불가능했던 복잡하고 화려한 터미널 사용자 인터페이스(TUI)를 고성능으로 구현할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C",
+      "CLI",
+      "TUI",
+      "터미널",
+      "그래픽"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://nick-black.com/dankwiki/index.php/Notcurses",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Linux 2.6+, FreeBSD 11+, Windows 10 v1093+, 또는 macOS 11.4+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소의 INSTALL.md 파일을 참고하여 라이브러리를 빌드하고 설치합니다.",
+      "C 또는 지원되는 언어의 래퍼를 사용하여 프로젝트에 통합합니다.",
+      "터미널 기반의 복잡한 사용자 인터페이스와 그래픽 요소를 구현합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4740,
+    "forks": 165,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "youtube",
+    "name": "youtube",
+    "github": "https://github.com/code-charity/youtube",
+    "description": "유튜브 시청 경험을 향상시키고 다양한 맞춤 설정 기능을 제공하는 브라우저 확장 프로그램입니다.",
+    "longDescription": "재생 제어, 플레이어 디자인 커스텀, 단축키 설정, 광고 및 산만함 제거 등 300개 이상의 유용한 기능을 제공하여 유튜브 사용 환경을 최적화합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "Chrome Extension",
+      "유튜브",
+      "생산성",
+      "웹 확장프로그램",
+      "동영상"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "http://improvedtube.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Chrome 또는 호환 웹 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "릴리즈 다운로드",
+        "command": "Release.zip 다운로드 후 확장 프로그램으로 로드",
+        "note": "최신 릴리즈 압축 해제 후 브라우저에 설치"
+      }
+    ],
+    "usageSteps": [
+      "GitHub 릴리즈 페이지에서 확장 프로그램을 다운로드합니다.",
+      "브라우저의 확장 프로그램 관리 페이지에서 압축을 해제하거나 파일로 로드합니다.",
+      "유튜브 페이지에 접속하여 설정 메뉴를 통해 원하는 기능과 단축키를 활성화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4622,
+    "forks": 1005,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "awesome-openclaw-tutorial",
+    "name": "awesome-openclaw-tutorial",
+    "github": "https://github.com/xianyu110/awesome-openclaw-tutorial",
+    "description": "OpenClaw AI 어시스턴트 구축과 활용법을 다루는 종합 중국어 튜토리얼입니다.",
+    "longDescription": "설치, 환경 설정, AI 에이전트 스킬 연동, 파일 관리 및 지식베이스 구축까지 개인 AI 비서를 만들기 위한 실전 가이드를 제공합니다.",
+    "category": "교육·학습",
+    "tags": [
+      "AI 어시스턴트",
+      "AI 에이전트",
+      "튜토리얼",
+      "자동화",
+      "문서"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://awesome.tryopenclaw.asia/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "온라인 문서 또는 저장소의 튜토리얼 목차를 확인합니다.",
+      "기본 개념과 빠른 배포 챕터를 참고하여 환경을 설정합니다.",
+      "파일 관리, 일정 관리 및 자동화 실전 예제를 따라 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4565,
+    "forks": 678,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "pyjianyingdraft",
+    "name": "pyJianYingDraft",
+    "github": "https://github.com/GuanYixuan/pyJianYingDraft",
+    "description": "Python을 통해 剪映(JianYing/CapCut) 초안을 생성하고 자동 영상 편집 파이프라인을 구축하는 도구입니다.",
+    "longDescription": "파이썬 코드로 영상, 이미지, 텍스트, 오디오 자막 등의 요소를 조작하여 剪映 프로젝트 초안 파일을 유연하게 생성하고 대량 편집 자동화를 구현할 수 있습니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "Python",
+      "영상 편집",
+      "자동화",
+      "API",
+      "CapCut"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/GuanYixuan/pyJianYingDraft",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Python 3.8 또는 3.11"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install pyJianYingDraft",
+        "note": "파이썬 패키지 관리자를 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "편집할 미디어 소스와 텍스트 정보를 정의하는 파이썬 스크립트를 작성합니다.",
+      "스크립트를 실행하여 剪映 초안 파일을 생성하고 편집 작업을 자동화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "자동 엑스포트 기능은 Windows 환경의 剪映 앱에 의존합니다.",
+    "stars": 4517,
+    "forks": 678,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "deskcommcrm",
+    "name": "DeskcommCRM",
+    "github": "https://github.com/melgarafael/DeskcommCRM",
+    "description": "WhatsApp 및 AI 에이전트가 통합된 셀프 호스팅 오픈소스 AI 세일즈 CRM입니다.",
+    "longDescription": "채팅 기반 비즈니스를 위한 대안 CRM 솔루션으로, 네이티브 AI 에이전트가 고객 응대, 자격 심사, 판매를 자동화하며 다중 테넌트와 MCP 연동을 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "CRM",
+      "AI 에이전트",
+      "WhatsApp",
+      "챗봇",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://deskcomm.com.br",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Docker 및 Docker Compose가 설치된 VPS"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "git clone https://github.com/melgarafael/DeskcommCRM.git && cd DeskcommCRM && bash hostgator-setup-kit/install.sh",
+        "note": "저장소 클론 후 설치 스크립트 실행"
+      }
+    ],
+    "usageSteps": [
+      "도커가 설치된 서버 환경에서 저장소를 클론합니다.",
+      "제공되는 설치 스크립트를 실행하여 애플리케이션 컨테이너를 구동합니다.",
+      "웹 인터페이스에 접속하여 WhatsApp 연동 및 AI 에이전트 설정을 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4515,
+    "forks": 1200,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "chat-on-steroids",
+    "name": "chat-on-steroids",
+    "github": "https://github.com/totec448-spec/chat-on-steroids",
+    "description": "크롬 브라우저 연동과 로컬 MCP 기능을 통해 ChatGPT의 기능을 확장하는 멀티 플랫폼 도구입니다.",
+    "longDescription": "파일 읽기 및 편집, 터미널 실행, 데스크톱 제어 등 ChatGPT가 실제 프로젝트 작업을 수행할 수 있도록 지원하며, 다중 에이전트 워크플로우를 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "ChatGPT",
+      "AI 에이전트",
+      "Chrome Extension",
+      "TypeScript",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/totec448-spec/chat-on-steroids",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Windows 10/11, macOS 13+, 또는 Linux",
+      "Chrome 116+ 이상 및 ChatGPT 계정"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "시스템 환경에 맞는 애플리케이션을 다운로드하여 설치합니다.",
+      "크롬 브라우저 확장 프로그램을 연동합니다.",
+      "모델을 선택하고 작업을 지시하여 파일 수정 및 테스트 자동화를 수행합니다."
+    ],
+    "examplePrompt": "로컬 프로젝트의 코드를 검토하고 버그를 수정해줘.",
+    "usageNote": "",
+    "stars": 4514,
+    "forks": 585,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "open-knowledge",
+    "name": "open-knowledge",
+    "github": "https://github.com/inkeep/open-knowledge",
+    "description": "Claude, Codex 등과 연동되는 AI 네이티브 마크다운 에디터이자 LLM 위키 도구입니다.",
+    "longDescription": "구글 문서나 노션처럼 직관적인 위이지윅(WYSIWYG) 편집 경험을 제공하며, 로컬 환경에서 마크다운 기반의 지식베이스와 그래프 위키를 관리할 수 있습니다.",
+    "category": "문서",
+    "tags": [
+      "Markdown",
+      "지식베이스",
+      "에디터",
+      "LLM",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://openknowledge.ai",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "데스크톱 앱 다운로드",
+        "command": "https://openknowledge.ai/download 에서 설치 파일 다운로드",
+        "note": "macOS, Windows, Linux 설치 지원"
+      }
+    ],
+    "usageSteps": [
+      "공식 웹사이트 또는 릴리즈 페이지에서 데스크톱 앱을 다운로드하여 설치합니다.",
+      "로컬 디렉토리나 마크다운 파일들을 불러와 위이지윅 방식으로 편집합니다.",
+      "사이드바 AI 기능을 통해 Claude나 다른 LLM과 연동하여 문서를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4507,
+    "forks": 304,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "grimmory",
+    "name": "grimmory",
+    "github": "https://github.com/grimmory-tools/grimmory",
+    "description": "전자책, 만화, 오디오북을 체계적으로 관리할 수 있는 셀프 호스팅 디지털 라이브러리입니다.",
+    "longDescription": "EPUB, PDF, CBZ, CBR 등 다양한 포맷의 독서 자료를 웹에서 편리하게 읽고 메타데이터를 관리할 수 있는 스프링 부트 기반의 오픈소스 플랫폼입니다.",
+    "category": "문서",
+    "tags": [
+      "전자책",
+      "만화",
+      "오디오북",
+      "셀프 호스팅",
+      "Java"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://grimmory.org",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 컴포즈 실행",
+        "command": "docker compose up -d",
+        "note": ".env 파일 설정 후 컨테이너 실행"
+      }
+    ],
+    "usageSteps": [
+      "`.env` 파일을 생성하여 데이터베이스 및 사용자 권한 설정을 구성합니다.",
+      "Docker Compose 명령어로 서비스를 실행합니다.",
+      "웹 브라우저로 접속하여 전자책 및 만화 파일을 업로드하고 라이브러리를 구축합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4501,
+    "forks": 341,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "judge0",
+    "name": "judge0",
+    "github": "https://github.com/judge0/judge0",
+    "description": "안전한 샌드박스 환경에서 코드를 실행하고 채점할 수 있는 고성능 오픈소스 온라인 코드 실행 시스템입니다.",
+    "longDescription": "다양한 프로그래밍 언어를 지원하는 빠르고 확장 가능한 HTTP JSON API를 제공하며, AI 에이전트 도구 및 온라인 코딩 테스트 플랫폼 구축에 최적화되어 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "코드 실행",
+      "API",
+      "샌드박스",
+      "개발 도구",
+      "컴파일러"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://judge0.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T16:04:41.934Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 배포",
+        "command": "CHANGELOG.md의 배포 절차 또는 공식 문서 참고",
+        "note": "도커를 통한 빠르고 쉬운 자가 호스팅 설치"
+      }
+    ],
+    "usageSteps": [
+      "배포 문서를 참고하여 Judge0 서버를 Docker로 실행합니다.",
+      "HTTP API를 통해 실행할 소스 코드와 언어 번호를 POST 요청으로 전송합니다.",
+      "샌드박스 환경에서 안전하게 컴파일 및 실행된 결과 데이터를 응답으로 받습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4465,
+    "forks": 941,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
     "id": "awesome-harness-engineering",
     "name": "Awesome Harness Engineering",
     "github": "https://github.com/ai-boost/awesome-harness-engineering",
