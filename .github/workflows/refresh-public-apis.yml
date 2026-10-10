@@ -32,7 +32,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          if git diff --quiet -- data/public-apis.json data/public-api-candidates.json; then
+          if git diff --quiet -- data/public-apis.json data/public-api-candidates.json data/public-api-discovery-state.json; then
             echo "No verified additions; preserving catalog."
             exit 0
           fi
@@ -40,7 +40,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "$branch"
-          git add data/public-apis.json data/public-api-candidates.json
+          git add data/public-apis.json data/public-api-candidates.json data/public-api-discovery-state.json
           git commit -m "data: add newly verified public APIs"
           git push origin "$branch"
-          gh pr create --base main --head "$branch" --title "data: verified Public API updates" --body "Official catalog candidate discovery and page verification. Review all additions before merging. Failed source reads leave current data intact."
+          gh pr create --base main --head "$branch" --title "data: verified Public API updates" --body "Official catalog paginated discovery and cursor progress, with page verification. Review all additions before merging. Failed source reads leave current data intact."

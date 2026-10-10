@@ -3,7 +3,8 @@ import fs from 'node:fs/promises';
 const ORIGIN='https://www.data.go.kr';
 const LIST='/tcs/dss/selectDataSetList.do';
 const ID_RE=/\/data\/(\d{8})\/openapi\.do/g;
-export const searchUrl=(page)=>ORIGIN+LIST+'?dType=API&currentPage='+page+'&perPage=10';
+const STATE_PATH='data/public-api-discovery-state.json';
+export const searchUrl=page=>ORIGIN+LIST+'?dType=API&currentPage='+page+'&perPage=10';
 export function discoverIds(html){
  if(typeof html!=='string'||html.length>4_000_000)return [];
  return [...new Set([...html.matchAll(ID_RE)].map(m=>m[1]))];
@@ -29,24 +30,38 @@ async function getHtml(url,fetcher){
   const txt=await r.text();if(txt.length>4_000_000)throw Error('oversized response');return txt;
  }finally{clearTimeout(timer)}
 }
-export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFile,pages=2,maxDetails=24}={}){
+export function nextPage(page,maxPage=1200){return page>=maxPage?1:page+1}
+export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFile,pages=8,maxDetails=80}={}){
  const existing=JSON.parse(await read('data/public-api-candidates.json','utf8'));
  const catalog=JSON.parse(await read('data/public-apis.json','utf8'));
+ const state=JSON.parse(await read(STATE_PATH,'utf8'));
+ if(!Array.isArray(existing.items)||!Array.isArray(catalog.items)||!Number.isInteger(state.nextPage)||state.nextPage<1||state.nextPage>1200)throw Error('Invalid discovery state');
  const known=new Set([...existing.items,...catalog.items].map(x=>String(x.id)));
- const discovered=new Set();let listingErrors=0,detailErrors=0;
- for(let page=1;page<=Math.min(pages,5);page++){
-  try{for(const id of discoverIds(await getHtml(searchUrl(page),fetcher)))if(!known.has(id))discovered.add(id)}
-  catch(e){listingErrors++;console.warn('Official listing unavailable, page',page,e.message)}
- }
- const additions=[];
- for(const id of [...discovered].slice(0,Math.min(maxDetails,40))){
+ const additions=[];let listingErrors=0,detailErrors=0,discovered=0,scanned=0;
+ const limit=Math.max(1,Math.min(20,Number(pages)||8)),budget=Math.max(1,Math.min(200,Number(maxDetails)||80));
+ let page=state.nextPage;
+ for(let i=0;i<limit;i++){
+  let ids;
   try{
-   const detail=parseOfficialDetail(await getHtml(ORIGIN+'/data/'+id+'/openapi.do',fetcher),id);
-   if(detail){additions.push(detail);known.add(id)}else detailErrors++;
-  }catch(e){detailErrors++;console.warn('Unverified detail',id,e.message)}
+   ids=discoverIds(await getHtml(searchUrl(page),fetcher));
+   if(!ids.length)throw Error('No API detail links: listing empty or markup changed');
+  }catch(e){listingErrors++;console.warn('Pause discovery at page',page,e.message);break}
+  const unknown=ids.filter(id=>!known.has(id));
+  if(unknown.length>budget-(discovered))break; // Do not skip unprocessed IDs by advancing cursor.
+  discovered+=unknown.length;
+  let failedDetail=false;
+  for(const id of unknown){
+   try{
+    const detail=parseOfficialDetail(await getHtml(ORIGIN+'/data/'+id+'/openapi.do',fetcher),id);
+    if(detail){additions.push(detail);known.add(id)}else{detailErrors++;failedDetail=true;console.warn('Unverified official detail',id)}
+   }catch(e){detailErrors++;failedDetail=true;console.warn('Official detail failed',id,e.message)}
+  }
+  if(failedDetail){console.warn('Hold cursor for retry at page',page);break}
+  scanned++;page=nextPage(page);
  }
  if(additions.length)await write('data/public-api-candidates.json',JSON.stringify({...existing,scope:'official-discovered-review-candidates',items:[...existing.items,...additions]},null,2)+'\n');
- const report={pages:Math.min(pages,5),discovered:discovered.size,addedCandidates:additions.length,listingErrors,detailErrors};
+ if(page!==state.nextPage)await write(STATE_PATH,JSON.stringify({...state,nextPage:page,lastRunScannedPages:scanned},null,2)+'\n');
+ const report={startPage:state.nextPage,nextPage:page,scannedPages:scanned,discovered,addedCandidates:additions.length,listingErrors,detailErrors};
  console.log(JSON.stringify(report));return report;
 }
 if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href)await discover();
