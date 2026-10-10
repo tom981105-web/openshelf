@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Playground — OpenShelf</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="playground.css"></head>
+<body><main class="playground-shell">
+<a class="playground-back" href="./">← OpenShelf로 돌아가기</a>
+<div class="playground-eyebrow">OPENSHELF / LAB 001</div><h1>Playground<span>.</span></h1>
+<p class="playground-intro">설치 없이 직접 입력하고 결과를 확인하는 로컬 체험실입니다. 이 기능은 외부 도구를 실제 실행하는 것이 아니라 OpenShelf 자체 내장 체험입니다.</p>
+<div class="playground-tabs" role="tablist" aria-label="체험 도구">
+<button role="tab" aria-selected="true" data-mode="json">JSON 포맷</button>
+<button role="tab" aria-selected="false" data-mode="markdown">Markdown 미리보기</button>
+<button role="tab" aria-selected="false" data-mode="regex">정규식 테스트</button>
+</div>
+<section class="playground-panel" aria-labelledby="playground-title">
+<div class="playground-heading"><h2 id="playground-title">JSON 포맷</h2><span id="playground-kind">로컬 처리 · 전송 없음</span></div>
+<div id="regexOptions" class="playground-regex" hidden><label>패턴<input id="regexPattern" spellcheck="false" value="[a-z]+"></label><label>플래그<input id="regexFlags" spellcheck="false" value="gi"></label></div>
+<label class="playground-input-label" for="playgroundInput">입력</label><textarea id="playgroundInput" spellcheck="false" rows="9">{"name":"OpenShelf","tools":3,"active":true}</textarea>
+<div class="playground-actions"><button id="playgroundRun" class="playground-primary" type="button">실행하기 →</button><button id="playgroundReset" type="button">초기화</button><button id="playgroundCopy" type="button">결과 복사</button></div>
+<div class="playground-result-title"><h3>실행 결과</h3><span id="playgroundStatus" aria-live="polite">실행 전</span></div>
+<pre id="playgroundOutput" class="playground-output" aria-live="polite">실행 버튼을 눌러보세요.</pre>
+<div id="playgroundPreview" class="playground-preview" hidden></div>
+</section>
+<p class="playground-footnote">개인정보·비밀번호 입력은 피해주세요. 정규식 엔진은 JavaScript 기반이며 복잡한 패턴은 제한됩니다.</p>
+</main><script type="module" src="playground.js"></script></body></html>
