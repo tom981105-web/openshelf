@@ -1,5 +1,954 @@
 [
   {
+    "id": "claude-code-ultimate-guide",
+    "name": "claude-code-ultimate-guide",
+    "github": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide",
+    "description": "에이전틱 워크플로우, MCP 서버, 훅 등을 다루는 포괄적인 Claude Code 가이드입니다.",
+    "longDescription": "에이전틱 코딩 방식과 MCP 서버 활용법, 보안 모범 사례를 포함하여 Claude Code를 실무에서 효과적으로 다루기 위한 종합 가이드 및 템플릿 모음입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI",
+      "클로드",
+      "CLI",
+      "프롬프트",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "CC-BY-SA-4.0",
+    "website": "https://cc.bruniaux.com/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install -g @anthropic-ai/claude-code",
+        "note": "npm을 통해 전역 설치"
+      }
+    ],
+    "usageSteps": [
+      "가이드 문서 웹사이트에서 아키텍처와 개념을 확인합니다.",
+      "터미널에서 클로드 코드를 설치하고 인증을 진행합니다.",
+      "제공되는 템플릿과 훅 설정을 프로젝트에 적용합니다."
+    ],
+    "examplePrompt": "Claude Code를 활용하여 안전하고 신뢰할 수 있는 에이전틱 워크플로우를 설정하는 방법을 알려주세요.",
+    "usageNote": "",
+    "stars": 6136,
+    "forks": 805,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "destructive-command-guard",
+    "name": "destructive_command_guard",
+    "github": "https://github.com/Dicklesworthstone/destructive_command_guard",
+    "description": "AI 코딩 에이전트가 실행하려는 위험한 Git 및 셸 명령을 차단하는 고성능 훅 도구입니다.",
+    "longDescription": "실수로 인한 파일 삭제나 위험한 명령 실행으로부터 작업물을 보호하기 위해 설계된 Rust 기반의 안전 장치입니다. 주요 AI 코딩 어시스턴트 및 CLI 도구들과 연동됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Rust",
+      "안전성",
+      "CLI",
+      "Git",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/Dicklesworthstone/destructive_command_guard",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Rust",
+      "Bash"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex CLI",
+      "Cursor"
+    ],
+    "install": [
+      {
+        "title": "간편 설치 스크립트",
+        "command": "curl -fsSL \"https://raw.githubusercontent.com/Dicklesworthstone/destructive_command_guard/main/install.sh?$(date +%s)\" | bash -s -- --easy-mode",
+        "note": "자동으로 플랫폼에 맞는 바이너리를 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 바이너리를 설치합니다.",
+      "에이전트 환경에 훅을 연동하여 위험 명령 차단 기능을 활성화합니다.",
+      "테스트 명령어를 통해 방어 동작을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6126,
+    "forks": 255,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "jnv",
+    "name": "jnv",
+    "github": "https://github.com/ynqa/jnv",
+    "description": "jq 필터를 실시간으로 편집하며 결과를 확인할 수 있는 대화형 JSON 뷰어입니다.",
+    "longDescription": "터미널 환경에서 JSON 데이터를 손쉽게 탐색하고 jq 쿼리를 대화형으로 작성하여 결과를 실시간으로 미리 볼 수 있도록 지원하는 Rust 기반 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Rust",
+      "JSON",
+      "CLI",
+      "jq",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/ynqa/jnv",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Homebrew 또는 MacPorts"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew로 설치",
+        "command": "brew install jnv",
+        "note": "macOS 환경에서 가장 간편한 설치 방법"
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 대상 JSON 파일을 jnv 명령어로 실행합니다.",
+      "대화형 화면에서 키보드를 이용해 jq 필터를 입력합니다.",
+      "실시간으로 필터링된 결과 노드를 확인하고 복사합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6125,
+    "forks": 78,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "baserow",
+    "name": "baserow",
+    "github": "https://github.com/baserow/baserow",
+    "description": "AI 기능과 연동하여 데이터베이스, 업무 자동화, 맞춤형 앱을 노코드 환경으로 구축하는 오픈소스 플랫폼입니다.",
+    "longDescription": "Airtable의 강력한 오픈소스 대안으로, 직관적인 스프레드시트 형태의 데이터베이스 구축부터 자연어 기반의 AI 어시스턴트를 통한 워크플로우 생성까지 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Python",
+      "Docker",
+      "데이터베이스",
+      "노코드",
+      "업무자동화"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://baserow.io",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose로 실행",
+        "command": "docker-compose up -d",
+        "note": "로컬 또는 서버 환경에서 컨테이너 구동"
+      }
+    ],
+    "usageSteps": [
+      "Docker를 통해 Baserow 인스턴스를 실행합니다.",
+      "웹 인터페이스에 접속하여 새 데이터베이스나 스프레드시트를 생성합니다.",
+      "AI 어시스턴트나 노코드 폼을 활용해 데이터를 수집하고 자동화 규칙을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6108,
+    "forks": 755,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "bit",
+    "name": "bit",
+    "github": "https://github.com/chriswalz/bit",
+    "description": "명령어 제안과 자동완성 기능을 제공하는 현대적인 Git CLI 도구입니다.",
+    "longDescription": "Git의 복잡한 옵션과 명령어 사용을 돕기 위해 친숙한 기본값, 브랜치 자동완성, 빠른 동기화 및 가시적인 통계 기능을 제공하는 실험적인 Git 보조 클라이언트입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "Git",
+      "CLI",
+      "자동완성",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/chriswalz/bit",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "업데이트 명령어",
+        "command": "bit update",
+        "note": "기존 설치된 bit 버전을 최신으로 업데이트"
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 일반 git 명령어 대신 bit 명령어를 입력합니다.",
+      "제공되는 대화형 제안 및 자동완성 목록에서 원하는 옵션을 선택합니다.",
+      "커밋, 태그 생성, 푸시 등의 작업을 단일 명령어로 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6101,
+    "forks": 106,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "lobsterai",
+    "name": "LobsterAI",
+    "github": "https://github.com/netease-youdao/LobsterAI",
+    "description": "로컬 파일 조작, 문서 작성, 웹 조사 등 실제 업무를 처리하는 오픈소스 데스크톱 AI 에이전트입니다.",
+    "longDescription": "네트이즈 유다이가 개발한 개방형 데스크톱 에이전트로, PC 환경에서 직접 브라우저나 문서 작업을 수행하며 모바일 메신저를 통한 원격 명령도 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "TypeScript",
+      "Electron",
+      "AI에이전트",
+      "자동화",
+      "데스크톱"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://lobsterai.youdao.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Node.js",
+      "TypeScript"
+    ],
+    "supportedAgents": [
+      "OpenClaw"
+    ],
+    "install": [
+      {
+        "title": "소스 레포지토리 클론",
+        "command": "git clone https://github.com/netease-youdao/LobsterAI.git",
+        "note": "소스 코드를 로컬에 내려받아 빌드 및 실행"
+      }
+    ],
+    "usageSteps": [
+      "데스크톱 애플리케이션을 설치하고 실행합니다.",
+      "기본 제공되는 스킬이나 전문가 키트(Expert Kits)를 활성화합니다.",
+      "채팅 인터페이스를 통해 문서 작성, 데이터 분석 등의 업무를 지시합니다."
+    ],
+    "examplePrompt": "오늘 수집한 시장 조사 데이터를 바탕으로 PowerPoint 슬라이드 초안을 작성해 주세요.",
+    "usageNote": "",
+    "stars": 6099,
+    "forks": 974,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "gdu",
+    "name": "gdu",
+    "github": "https://github.com/dundee/gdu",
+    "description": "Go 언어로 작성되어 SSD 환경에서 매우 빠르게 동작하는 디스크 사용량 분석 CLI 도구입니다.",
+    "longDescription": "디렉토리와 파일 시스템의 디스크 점유 상태를 콘솔 환경에서 시각적으로 빠르게 분석할 수 있으며, 병렬 처리를 적극 활용하여 대용량 디스크 조사에 최적화되어 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "CLI",
+      "디스크분석",
+      "시스템",
+      "개발도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/dundee/gdu",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "curl",
+      "tar"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "curl로 바이너리 다운로드 및 설치",
+        "command": "curl -L https://github.com/dundee/gdu/releases/latest/download/gdu_linux_amd64.tgz | tar xz",
+        "note": "리눅스 환경에서 최신 릴리스 다운로드 및 압축 해제"
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 gdu 명령어를 실행하여 현재 디렉토리의 용량을 분석합니다.",
+      "화살표 키를 이용해 하위 디렉토리를 탐색합니다.",
+      "불필요한 대용량 파일이나 폴더를 식별하여 정리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6099,
+    "forks": 237,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "dsh-our-free-model",
+    "name": "dsh-our-free-model",
+    "github": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+    "description": "로그인이나 API 키 없이 DeepSeek 등 최신 AI 모델을 무료로 사용할 수 있게 해주는 dsh 플러그인입니다.",
+    "longDescription": "dsh 환경에 간단히 장착하는 플러그인 형태로, 별도의 회원가입이나 유료 크레딧 충전 없이 퍼블릭 게이트웨이를 통해 최신 대형 언어 모델들을 제약 없이 이용할 수 있습니다.",
+    "category": "AI 모델",
+    "tags": [
+      "JavaScript",
+      "DeepSeek",
+      "LLM",
+      "무료모델",
+      "AI"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Ebony-Vinyl/dsh-our-free-model",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "dsh 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "플러그인 장착",
+        "command": "git clone https://github.com/Ebony-Vinyl/dsh-our-free-model.git",
+        "note": "dsh 플러그인 디렉토리에 클론하여 장착"
+      }
+    ],
+    "usageSteps": [
+      "dsh 플랫폼에 해당 플러그인을 설치합니다.",
+      "추가적인 API 키 설정 없이 모델 목록에서 원하는 모델을 선택합니다.",
+      "자유롭게 대화를 나누거나 로컬 포워딩 포트를 통해 요청을 보냅니다."
+    ],
+    "examplePrompt": "DeepSeek 모델을 사용하여 복잡한 알고리즘 소스 코드를 최적화해 주세요.",
+    "usageNote": "",
+    "stars": 6089,
+    "forks": 125,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "zcf",
+    "name": "zcf",
+    "github": "https://github.com/UfoMiao/zcf",
+    "description": "Claude Code 및 Codex 개발 환경을 대화형 메뉴를 통해 원클릭으로 설정해주는 도구입니다.",
+    "longDescription": "복잡한 설정 과정 없이 에이전트 워크플로우와 API 연동, MCP 서버 구성을 자동으로 처리하여 개발자가 즉시 AI 코딩 환경을 구축할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "Node.js",
+      "Claude",
+      "CLI",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://zcf.ufomiao.com/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "npx로 대화형 실행",
+        "command": "npx zcf",
+        "note": "인터랙티브 메뉴를 열어 필요한 설정 항목 선택"
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 `npx zcf` 명령을 실행합니다.",
+      "대화형 메뉴에서 원하는 초기화 옵션이나 언어를 선택합니다.",
+      "필요한 API 키와 프로바이더 정보를 입력하여 설정을 완료합니다."
+    ],
+    "examplePrompt": "Claude Code 환경을 위한 전체 워크플로우와 MCP 서버를 초기화해 주세요.",
+    "usageNote": "",
+    "stars": 6079,
+    "forks": 422,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "mosint",
+    "name": "mosint",
+    "github": "https://github.com/alpkeskin/mosint",
+    "description": "이메일 주소를 바탕으로 소셜 계정, 데이터 유출 여부 등을 자동으로 조사하는 OSINT 도구입니다.",
+    "longDescription": "보안 연구원들이 타겟 이메일에 대한 정보를 빠르고 효율적으로 수집할 수 있도록 다양한 검증 서비스와 소셜 미디어 확인, DNS 조회를 통합한 Go 기반의 자동화 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "OSINT",
+      "보안",
+      "자동화",
+      "개발도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/alpkeskin/mosint",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go를 이용한 설치",
+        "command": "go install github.com/alpkeskin/mosint/v4/cmd/mosint@latest",
+        "note": "Go 패키지 관리자를 통해 최신 버전 설치"
+      }
+    ],
+    "usageSteps": [
+      "명령어를 통해 도구를 설치하거나 Docker를 실행합니다.",
+      "조사할 대상 이메일 주소를 인자로 전달하여 스캔을 시작합니다.",
+      "결과를 확인하거나 JSON 파일로 리포트를 내보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6047,
+    "forks": 661,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "passbolt-api",
+    "name": "Passbolt API",
+    "github": "https://github.com/passbolt/passbolt_api",
+    "description": "팀을 위한 오픈소스 비밀번호 관리자 Passbolt의 JSON API입니다.",
+    "longDescription": "팀 단위로 안전하게 자격 증명과 비밀번호를 공유하고 관리할 수 있는 오픈소스 비밀번호 관리자의 백엔드 API입니다. 자체 서버에 네이티브로 설치하거나 도커 및 쿠버네티스를 통해 간편하게 배포할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "보안",
+      "비밀번호관리",
+      "API",
+      "PHP",
+      "Docker"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://passbolt.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "PHP",
+      "Docker 또는 Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 설치",
+        "command": "docker run -d...",
+        "note": "도커를 이용한 빠른 배포"
+      }
+    ],
+    "usageSteps": [
+      "서버에 Passbolt API 및 데이터베이스를 배포합니다.",
+      "웹 또는 브라우저 확장 프로그램을 통해 관리자 계정을 생성합니다.",
+      "팀원을 초대하고 필요한 비밀번호 자격 증명을 공유합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6150,
+    "forks": 405,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "lesspass",
+    "name": "LessPass",
+    "github": "https://github.com/lesspass/lesspass",
+    "description": "비밀번호 저장소 동기화가 필요 없는 상태 비저장(stateless) 오픈소스 비밀번호 관리자입니다.",
+    "longDescription": "마스터 비밀번호와 사이트 정보 조합을 통해 실시간으로 비밀번호를 생성하므로 별도의 암호화된 볼트를 동기화할 필요가 없습니다. 웹 확장 프로그램과 웹사이트를 통해 언제 어디서나 안전하게 비밀번호를 이용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "보안",
+      "비밀번호관리",
+      "TypeScript",
+      "웹확장프로그램",
+      "셀프호스팅"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.lesspass.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "웹 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "크롬 또는 파이어폭스 웹 확장 프로그램을 설치합니다.",
+      "생성하려는 사이트의 입력 필드에서 단축키를 누릅니다.",
+      "마스터 비밀번호를 입력하여 비밀번호를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6065,
+    "forks": 362,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "carbon-now-cli",
+    "name": "Carbon Now CLI",
+    "github": "https://github.com/mixn/carbon-now-cli",
+    "description": "터미널에서 바로 소스코드를 아름다운 이미지로 변환해주는 CLI 도구입니다.",
+    "longDescription": "Carbon(carbon.now.sh)의 강력한 기능을 커맨드 라인으로 가져와, 단일 명령어로 소스코드의 시각적으로 매력적인 이미지를 생성할 수 있습니다. 대화형 모드를 지원하여 이미지 생성 전 다양한 커스터마이징이 가능합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "CLI",
+      "TypeScript",
+      "코드비주얼라이제이션",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mixn/carbon-now-cli",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "코드를 파일로 준비하거나 터미널에서 입력합니다.",
+      "CLI 명령어를 통해 코드 이미지를 생성합니다.",
+      "생성된 이미지를 공유하거나 저장합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6032,
+    "forks": 125,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "jira-cli",
+    "name": "Jira CLI",
+    "github": "https://github.com/ankitpokhrel/jira-cli",
+    "description": "지라(Jira) UI 대신 터미널에서 이슈 검색과 워크플로우를 관리할 수 있는 대화형 CLI 도구입니다.",
+    "longDescription": "개발자가 브라우저 UI로 이동하지 않고도 터미널 환경에서 Atlassian Jira 이슈를 검색, 생성, 탐색할 수 있도록 돕는 기능이 풍부한 명령줄 도구입니다. Claude Code 등 LLM 기반 CLI 도구와도 잘 연동됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "Jira",
+      "Go",
+      "업무생산성",
+      "터미널"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/ankitpokhrel/jira-cli",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Atlassian Jira 계정 및 API 토큰"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Jira 계정 정보를 이용해 CLI를 인증합니다.",
+      "터미널에서 이슈 목록을 검색하거나 필터링합니다.",
+      "이슈 상태를 변경하거나 새로운 이슈를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6024,
+    "forks": 419,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "zotero-arxiv-daily",
+    "name": "Zotero arXiv Daily",
+    "github": "https://github.com/TideDra/zotero-arxiv-daily",
+    "description": "Zotero 라이브러리 관심사에 맞춰 매일 새로운 아카이브(arXiv) 논문을 추천하고 이메일로 보내주는 자동화 도구입니다.",
+    "longDescription": "사용자의 Zotero 서재를 분석하여 관심 분야와 일치하는 최신 arXiv 논문을 매일 자동으로 수집하고, AI 기반 요약(TL;DR)과 함께 메일함으로 전달합니다. GitHub Actions를 통해 비용 부담 없이 제로 코스트로 배포할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "arXiv",
+      "자동화",
+      "Python",
+      "연구",
+      "Zotero"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/TideDra/zotero-arxiv-daily",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "GitHub 계정",
+      "Zotero 계정"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "GitHub 리포지토리를 포크하거나 환경 변수를 설정합니다.",
+      "Zotero API 자격 증명을 등록합니다.",
+      "GitHub Actions 워크플로우를 활성화하여 매일 추천 논문을 받아봅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6022,
+    "forks": 5262,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "open-connector",
+    "name": "Open Connector",
+    "github": "https://github.com/oomol-lab/open-connector",
+    "description": "1500개 이상의 SaaS 공급자를 AI 에이전트 및 SDK, CLI, MCP와 연결해주는 오픈소스 인증 게이트웨이입니다.",
+    "longDescription": "다양한 외부 SaaS 서비스의 인증과 API 연동을 통합 관리하며, 모델 콘텍스트 프로토콜(MCP) 및 OpenAPI 표준을 지원하여 AI 에이전트가 외부 도구와 원활하게 상호작용할 수 있도록 돕습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "API게이트웨이",
+      "TypeScript",
+      "MCP",
+      "통합플랫폼"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://oomol.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Node.js 22+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "npm install",
+        "note": "프로젝트 패키지 설치"
+      },
+      {
+        "title": "개발 서버 실행",
+        "command": "npm run dev",
+        "note": "로컬 API 런타임 및 웹 콘솔 실행"
+      }
+    ],
+    "usageSteps": [
+      "Node.js 22 이상 환경에서 저장소를 클론하고 패키지를 설치합니다.",
+      "개발 서버를 실행하여 로컬 API 런타임과 웹 콘솔을 구동합니다.",
+      "원하는 SaaS 프로바이더를 연동하여 AI 에이전트나 MCP 환경에서 활용합니다."
+    ],
+    "examplePrompt": "GitHub과 연동하여 최근 이슈를 검색해줘",
+    "usageNote": "",
+    "stars": 5974,
+    "forks": 549,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "paperless-ai",
+    "name": "Paperless-AI",
+    "github": "https://github.com/clusterzx/paperless-ai",
+    "description": "Paperless-ngx 문서 관리 시스템을 위한 AI 기반 자동 문서 분석 및 태깅 도구입니다.",
+    "longDescription": "OpenAI API, Ollama, DeepSeek 등 다양한 LLM 서비스를 활용하여 Paperless-ngx에 업로드된 문서를 자동으로 분석하고 요약 및 태그를 생성해주는 문서 자동화 솔루션입니다.",
+    "category": "문서",
+    "tags": [
+      "문서분석",
+      "AI",
+      "자동화",
+      "JavaScript",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://clusterzx.github.io/paperless-ai/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Docker",
+      "Paperless-ngx",
+      "LLM API 키 또는 로컬 LLM"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 환경에서 Paperless-AI 컨테이너를 구성합니다.",
+      "Paperless-ngx 인스턴스와 LLM API 정보를 환경 변수로 연결합니다.",
+      "문서를 업로드하면 AI가 자동으로 분석하여 태그를 부여합니다."
+    ],
+    "examplePrompt": "업로드된 인보이스 문서 내용을 요약하고 관련 태그를 붙여줘",
+    "usageNote": "",
+    "stars": 5972,
+    "forks": 330,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "onlyswitch",
+    "name": "OnlySwitch",
+    "github": "https://github.com/jacklandrin/OnlySwitch",
+    "description": "맥북 노치 숨기기, 다크 모드, 에어팟 연결 등 macOS의 주요 제어 기능을 메뉴바에 모아둔 올인원 스위치 앱입니다.",
+    "longDescription": "다양한 macOS 제어 스위치와 단축어를 하나의 커스텀 가능한 메뉴바 앱으로 통합하여 제공합니다. 단축키 지정이나 데스크톱 위젯 배치를 통해 일상적인 맥 사용 편의성을 크게 높여줍니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "macOS",
+      "메뉴바앱",
+      "Swift",
+      "단축어",
+      "유틸리티"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://onlyswitch.click/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "macOS"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install only-switch",
+        "note": "홈브루를 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "Homebrew 또는 DMG 파일을 통해 앱을 설치하고 실행합니다.",
+      "메뉴바에서 필요한 스위치와 제어 항목을 활성화합니다.",
+      "단축키나 위젯을 설정하여 빠르게 기능을 제어합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5970,
+    "forks": 243,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "shimmy",
+    "name": "Shimmy",
+    "github": "https://github.com/Michael-A-Kuykendall/shimmy",
+    "description": "파이썬이나 llama.cpp 없이 웹뷰(WebGPU) 기반으로 동작하는 고성능 단일 바디 로컬 LLM 추론 엔진입니다.",
+    "longDescription": "100% 러스트(Rust)로 작성되어 가볍고 빠르게 동작하며, OpenAI API와 호환되는 GGFU 네이티브 로컬 인스턴스 서버를 단일 바이너리로 제공합니다. 다양한 GPU 환경에서 효율적인 모델 추론이 가능합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "Rust",
+      "로컬AI",
+      "LLM",
+      "추론엔진",
+      "WebGPU"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/Michael-A-Kuykendall/shimmy",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "Rust",
+      "지원되는 GPU"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Crates.io 설치",
+        "command": "cargo install shimmy",
+        "note": "러스트 패키지 매니저를 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "cargo 명령어로 shimmy를 설치합니다.",
+      "serve 명령어로 GGUF 모델 파일 경로를 지정하여 API 서버를 구동합니다.",
+      "OpenAI 호환 API 엔드포인트를 통해 로컬 LLM과 통신합니다."
+    ],
+    "examplePrompt": "안녕하세요, 5단어로 답변해주세요.",
+    "usageNote": "",
+    "stars": 5961,
+    "forks": 585,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "emdash",
+    "name": "Emdash",
+    "github": "https://github.com/generalaction/emdash",
+    "description": "여러 코딩 에이전트를 병렬로 실행하고 관리할 수 있는 오픈소스 에이전틱 개발 환경(ADE)입니다.",
+    "longDescription": "개발자가 여러 AI 코딩 에이전트를 동시에 구동하여 병렬로 작업을 수행하고, Git 워크트리와 터미널 환경을 통합 관리할 수 있도록 지원하는 에이전트 오케스트레이션 개발 환경입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "개발환경",
+      "TypeScript",
+      "병렬처리",
+      "CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://emdash.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T07:03:56.277Z",
+    "requirements": [
+      "macOS, Windows 또는 Linux"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "macOS Homebrew 설치",
+        "command": "brew install --cask emdash",
+        "note": "macOS 홈브루를 이용한 설치"
+      }
+    ],
+    "usageSteps": [
+      "운영체제에 맞는 인스톨러나 패키지로 Emdash를 설치합니다.",
+      "프로젝트 디렉토리에서 여러 코딩 에이전트를 병렬 태스크로 실행합니다.",
+      "에이전트의 작업 진행 상황을 모니터링하고 결과를 병합합니다."
+    ],
+    "examplePrompt": "백엔드 API 리팩토링 작업을 두 개의 에이전트로 나누어 병렬 수행해줘",
+    "usageNote": "",
+    "stars": 5948,
+    "forks": 625,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
     "id": "awesome-codex-subagents",
     "name": "Awesome Codex Subagents",
     "github": "https://github.com/VoltAgent/awesome-codex-subagents",
