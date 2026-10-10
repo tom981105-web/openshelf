@@ -13,16 +13,18 @@ const expected=new Map([
   ['glow','markdown'],
   ['zettlr','markdown'],
   ['ripgrep','regex'],
-  ['grex','regex']
+  ['grex','regex'],
+  ['excalidraw','official-excalidraw']
 ]);
 for(const [id,mode] of expected){
   const tool=catalog.find(t=>t.id===id);
   assert.ok(tool,'Registered demo tool not found: '+id);
   assert.equal(playgroundModeForTool(tool),mode,'Wrong demo mode for '+id);
-  assert.equal(playgroundLink(tool),'playground.html?mode='+mode+'&source='+encodeURIComponent(id));
+  assert.equal(playgroundLink(tool),mode==='official-excalidraw'?'playground-live.html?source='+encodeURIComponent(id):'playground.html?mode='+mode+'&source='+encodeURIComponent(id));
 }
 assert.equal(playgroundModeForTool({id:'unknown',github:'https://github.com/unknown/repo'}),null);
 assert.equal(playgroundModeForTool({id:'bad',github:'https://notgithub.com/charmbracelet/glow'}),null);
 assert.equal(playgroundModeForTool({id:'bad',github:'https://github.com/charmbracelet/glow/issues'}),null);
 assert.equal(playgroundModeForTool({id:'old',github:'https://github.com/prettier/prettier'}),null);
+assert.equal(playgroundModeForTool({id:'fake',github:'https://notgithub.com/excalidraw/excalidraw'}),null);
 console.log('Playground links verified for '+expected.size+' registered tools');
