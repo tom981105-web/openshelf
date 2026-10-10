@@ -1,10 +1,15 @@
 // Only explicitly reviewed GitHub repositories may display a related local demo.
 // This is an OpenShelf simulation, never the repository's own code.
 const PLAYGROUND_REPOSITORIES=Object.freeze({
-  'prettier/prettier':'json',
-  'jqlang/jq':'json',
-  'markedjs/marked':'markdown',
-  'markdown-it/markdown-it':'markdown'
+  // These catalog entries are confirmed present in data/tools.json.
+  // The demonstration is illustrative and does not execute original project code.
+  'triggerdotdev/jsonhero-web':'json',
+  'tomwright/dasel':'json',
+  'kellyjonbrazil/jc':'json',
+  'charmbracelet/glow':'markdown',
+  'zettlr/zettlr':'markdown',
+  'burntsushi/ripgrep':'regex',
+  'pemistahl/grex':'regex'
 });
 function playgroundModeForTool(tool){
   if(!tool||typeof tool.github!=='string')return null;
