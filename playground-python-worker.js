@@ -9,17 +9,23 @@ onmessage=async e=>{
   runtime=await loadPyodide({indexURL:base});
   runtime.globals.set('openshelf_source',String(e.data.code));
   runtime.globals.set('openshelf_csv',String(e.data.csv||''));
-  const output=await runtime.runPythonAsync(`import sys,io,traceback
+  const output=await runtime.runPythonAsync(`import sys,io,traceback,json
 _oldout,_olderr=sys.stdout,sys.stderr
 _buffer=io.StringIO()
 sys.stdout=sys.stderr=_buffer
+_scope={'__name__':'__main__','openshelf_csv':openshelf_csv}
+_chart_result=None
 try:
-    exec(compile(openshelf_source,'<openshelf>','exec'), {'__name__':'__main__','openshelf_csv':openshelf_csv})
+    exec(compile(openshelf_source,'<openshelf>','exec'), _scope)
+    if 'openshelf_chart' in _scope:
+        _chart_result=json.dumps(_scope['openshelf_chart'],allow_nan=False)
 except BaseException:
     traceback.print_exc()
 finally:
     sys.stdout,sys.stderr=_oldout,_olderr
-_buffer.getvalue()`);
-  postMessage({type:'result',value:String(output).slice(0,60000)});
+(_buffer.getvalue(),_chart_result)`);
+  const parts=output.toJs();
+  postMessage({type:'result',value:String(parts[0]).slice(0,60000),chart:typeof parts[1]==='string'?parts[1].slice(0,15000):null});
+  output.destroy();
  }catch(err){postMessage({type:'error',message:String(err.message||err).slice(0,3000)})}
 };
