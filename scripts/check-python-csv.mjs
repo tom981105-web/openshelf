@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';import fs from 'node:fs';
+const html=fs.readFileSync('playground-python.html','utf8');
+const browser=fs.readFileSync('playground-python.js','utf8');
+const worker=fs.readFileSync('playground-python-worker.js','utf8');
+for(const id of ['pythonCsv','pythonExampleCsv','pythonExampleBasic'])assert.ok(html.includes('id="'+id+'"'),id);
+assert.ok(browser.includes("worker.postMessage({code,csv:csvInput.value})"));
+assert.ok(browser.includes('csv.DictReader'));
+assert.ok(browser.includes("csvInput.value.length>50000"));
+assert.ok(worker.includes("runtime.globals.set('openshelf_csv'"));
+assert.ok(worker.includes("'openshelf_csv':openshelf_csv"));
+assert.ok(!worker.includes("exec(e.data.csv"));
+console.log('Python CSV variable and UI integration contract passed');
