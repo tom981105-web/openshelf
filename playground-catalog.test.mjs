@@ -20,7 +20,7 @@ for(const [id,mode] of expected){
   const tool=catalog.find(t=>t.id===id);
   assert.ok(tool,'Registered demo tool not found: '+id);
   assert.equal(playgroundModeForTool(tool),mode,'Wrong demo mode for '+id);
-  assert.equal(playgroundLink(tool),mode==='official-excalidraw'?'playground-live.html?source='+encodeURIComponent(id):['glow','zettlr'].includes(id)?'playground-engine.html?source='+encodeURIComponent(id):'playground.html?mode='+mode+'&source='+encodeURIComponent(id));
+  assert.equal(playgroundLink(tool),mode==='official-excalidraw'?'playground-live.html?source='+encodeURIComponent(id):['glow','zettlr'].includes(id)?'playground-engine.html?source='+encodeURIComponent(id):['jsonhero-web','dasel','jc'].includes(id)?'playground-jsonata.html?source='+encodeURIComponent(id):'playground.html?mode='+mode+'&source='+encodeURIComponent(id));
 }
 assert.equal(playgroundModeForTool({id:'unknown',github:'https://github.com/unknown/repo'}),null);
 assert.equal(playgroundModeForTool({id:'bad',github:'https://notgithub.com/charmbracelet/glow'}),null);
