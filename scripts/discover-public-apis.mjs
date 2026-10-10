@@ -39,6 +39,8 @@ export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFil
  if(!Array.isArray(existing.items)||!Array.isArray(catalog.items)||!Number.isInteger(state.nextPage)||state.nextPage<1||state.nextPage>1200)throw Error('Invalid discovery state');
  const known=new Set([...existing.items,...catalog.items].map(x=>String(x.id)));
  const additions=[];let listingErrors=0,detailErrors=0,discovered=0,scanned=0;
+ const failedDetails=Array.isArray(state.failedDetails)?state.failedDetails:[];
+ const pending=new Set(failedDetails);
  const limit=Math.max(1,Math.min(20,Number(pages)||8)),budget=Math.max(1,Math.min(200,Number(maxDetails)||80));
  let page=state.nextPage;
  for(let i=0;i<limit;i++){
