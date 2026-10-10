@@ -77,7 +77,15 @@ async function loadCatalog(){
   category.replaceChildren(new Option('모든 분야',''));
   providerFilter.replaceChildren(new Option('모든 기관',''));
 
- items=validatedPublicApis(data.items);$('apiTotal').textContent=String(items.length);
+ const confirmed=validatedPublicApis(data.items);verifiedIds=new Set(confirmed.map(x=>x.id));
+ let listing=[];
+ try{
+  const response=await fetch('data/public-api-official-list.json',{cache:'no-store'});
+  if(response.ok){const source=await response.json();if(source.verification==='metadata-only')listing=validatedPublicApis(source.items)}
+ }catch(e){console.warn('Official CSV listing unavailable; using verified catalog',e)}
+ const merged=new Map(listing.map(x=>[x.id,x]));for(const item of confirmed)merged.set(item.id,item);
+ items=[...merged.values()];$('apiTotal').textContent=items.length.toLocaleString('ko-KR');
+ const verifiedCount=$('apiVerifiedCount');if(verifiedCount)verifiedCount.textContent=confirmed.length.toLocaleString('ko-KR');
  const categories=[...new Set(items.map(x=>x.category))].sort((a,b)=>a.localeCompare(b,'ko'));
  const providers=[...new Set(items.map(x=>x.provider))].sort((a,b)=>a.localeCompare(b,'ko'));
  for(const name of providers){const option=document.createElement('option');option.value=name;option.textContent=name;providerFilter.append(option)}
