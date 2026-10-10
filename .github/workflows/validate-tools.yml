@@ -22,6 +22,9 @@ on:
       - 'playground-hub.html'
       - 'playground-hub.css'
       - 'playground-hub.js'
+      - 'playground-all.js'
+      - 'playground-all.html'
+      - 'playground-all.css'
       - 'playground-candidates.html'
       - 'playground-candidates.js'
       - 'data/playground-candidates.json'
@@ -55,6 +58,9 @@ on:
       - 'playground-hub.html'
       - 'playground-hub.css'
       - 'playground-hub.js'
+      - 'playground-all.js'
+      - 'playground-all.html'
+      - 'playground-all.css'
       - 'playground-candidates.html'
       - 'playground-candidates.js'
       - 'data/playground-candidates.json'
@@ -101,6 +107,8 @@ jobs:
           node --check playground-candidates.js
       - name: Playground probe safety tests
         run: node scripts/probe-playground-candidates.test.mjs
+      - name: Universal tool navigator syntax
+        run: node --check playground-all.js
       - name: Playground catalog routing tests
         run: node playground-catalog.test.mjs
       - name: Validate tools.json
