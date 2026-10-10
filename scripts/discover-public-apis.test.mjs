@@ -22,5 +22,6 @@ const more=await discover({pages:2,fetcher,read:async k=>resumed[k],write:async(
 assert.equal(more.startPage,7);assert.equal(more.nextPage,9);assert.equal(more.scannedPages,2);
 assert.equal(JSON.parse(writes.find(w=>w.key==='data/public-api-discovery-state.json').val).nextPage,9);
 writes=[];const blocked=await discover({pages:2,fetcher:async u=>u.includes('selectDataSetList')?fetcher(u):Promise.reject(Error('offline detail')),read:async k=>current[k],write:async(k,v)=>writes.push({key:k,val:v})});
-assert.equal(blocked.nextPage,1);assert.equal(blocked.detailErrors,1);assert.equal(writes.length,0);
+assert.equal(blocked.nextPage,3);assert.equal(blocked.detailErrors,2);
+assert.deepEqual(JSON.parse(writes[0].val).failedDetails,['15129415']);
 console.log('Resume cursor and fail-closed detail tests passed');
