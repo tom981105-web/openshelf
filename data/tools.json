@@ -1,5 +1,994 @@
 [
   {
+    "id": "repowise",
+    "name": "Repowise",
+    "github": "https://github.com/repowise-dev/repowise",
+    "description": "AI와 개발자를 위한 코드베이스 인텔리전스 도구로 코드 품질 분석, 자동 문서 생성 및 MCP를 지원합니다.",
+    "longDescription": "코드베이스를 로컬에서 한 번 인덱싱하여 호출 그래프, Git 이력, 문서 등을 분석합니다. API 키 없이도 에이전트와 연동하여 코드 구조 질문, 영향도 분석, 데드 코드 탐색 등을 수행할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "정적 분석",
+      "MCP",
+      "코드 품질",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://repowise.dev",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Python",
+      "uv 또는 pipx"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "pipx 설치",
+        "command": "pipx install repowise",
+        "note": "pipx를 통한 간편 설치"
+      },
+      {
+        "title": "uv 도구 설치",
+        "command": "uv tool install repowise",
+        "note": "uv를 통한 빠른 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리로 이동합니다.",
+      "repowise init 명령어로 저장소를 초기화합니다.",
+      "repowise serve 명령어로 로컬 대시보드 및 MCP 서버를 실행합니다."
+    ],
+    "examplePrompt": "이 코드를 변경하면 어떤 파일에 영향을 미치나요?",
+    "usageNote": "",
+    "stars": 7393,
+    "forks": 810,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "awesome-agentic-ai-zh",
+    "name": "Awesome Agentic AI",
+    "github": "https://github.com/WenyuChiou/awesome-agentic-ai-zh",
+    "description": "에이전틱 AI 구축을 위한 체계적인 3개 국어 학습 로드맵 및 240여 개의 선별된 리소스 모음입니다.",
+    "longDescription": "LLM 기초부터 다중 에이전트 시스템까지 에이전틱 AI를 마스터하기 위한 단계별 가이드를 제공합니다. 실습 예제와 함께 프롬프트 엔지니어링, RAG, MCP 등 최신 에이전트 기술을 다룹니다.",
+    "category": "교육·학습",
+    "tags": [
+      "AI 에이전트",
+      "학습 로드맵",
+      "튜토리얼",
+      "LLM",
+      "MCP"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://wenyuchiou.github.io/awesome-agentic-ai-zh/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "온라인 문서 사이트에 접속합니다.",
+      "학습 단계(Stage 0~8) 중 원하는 단계를 선택합니다.",
+      "제공되는 가이드와 오픈소스 예제를 통해 실습을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7444,
+    "forks": 992,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "yuxi",
+    "name": "Yuxi",
+    "github": "https://github.com/xerrors/Yuxi",
+    "description": "RAG, 짓(Git) 지식 그래프, 멀티 에이전트 오케스트레이션을 지원하는 프라이버시 중심의 멀티테넌트 지식 에이전트 플랫폼입니다.",
+    "longDescription": "도커 기반으로 사내에 구축할 수 있는 지식 에이전트 플랫폼으로, 문서 검색과 MCP/Skills, 샌드박스 환경을 통합 제공합니다. 사용자가 자신만의 클라우드 Codex를 구축하여 기업 데이터를 안전하게 관리할 수 있도록 돕습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "AI 에이전트",
+      "RAG",
+      "지식 그래프",
+      "Docker",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://xerrors.github.io/Yuxi/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/xerrors/Yuxi.git",
+        "note": "프로젝트 소스코드 다운로드"
+      },
+      {
+        "title": "도커 실행",
+        "command": "docker compose up -d",
+        "note": "컨테이너 백그라운드 실행"
+      }
+    ],
+    "usageSteps": [
+      "Docker Compose를 사용하여 플랫폼을 실행합니다.",
+      "웹 브라우저를 통해 관리자 대시보드에 접속합니다.",
+      "문서 및 지식베이스를 연동하고 지식 에이전트를 구성합니다."
+    ],
+    "examplePrompt": "우리 회사의 지난 분기 보고서 내용을 요약해줘.",
+    "usageNote": "",
+    "stars": 7335,
+    "forks": 1176,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "jrnl",
+    "name": "jrnl",
+    "github": "https://github.com/jrnl-org/jrnl",
+    "description": "명령 줄 환경에서 간편하게 생각과 노트를 기록하고 관리할 수 있는 암호화 저널링 도구입니다.",
+    "longDescription": "터미널을 떠나지 않고도 일기를 작성하고 태그별로 검색할 수 있는 파이썬 기반 CLI 도구입니다. 작성된 노트는 암호화되어 안전하게 보관되며 다양한 포맷으로 내보내기를 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "터미널",
+      "노트 작성",
+      "Python",
+      "생산성"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://jrnl.sh",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install jrnl",
+        "note": "파이썬 패키지 관리자를 통한 설치"
+      },
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install jrnl",
+        "note": "macOS 홈브루 설치"
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 'jrnl 오늘: 새로운 프로젝트를 시작했다'를 입력하여 노트를 작성합니다.",
+      "저장된 전체 노트를 확인하려면 'jrnl'을 실행합니다.",
+      "특정 키워드나 태그로 노트를 검색합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7337,
+    "forks": 567,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "sd",
+    "name": "sd",
+    "github": "https://github.com/chmln/sd",
+    "description": "기존 sed 명령어를 대체하는 직관적이고 빠른 Rust 기반 정규식 검색 및 치환 CLI 도구입니다.",
+    "longDescription": "JavaScript 및 Python에서 사용하던 익숙한 정규식 문법을 지원하며, 특수문자 이스케이프의 번거로움이 없는 문자열 리터럴 모드를 제공합니다. 대규모 텍스트 처리 작업에서 뛰어난 성능과 메모리 효율성을 보여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "텍스트 처리",
+      "Rust",
+      "정규식",
+      "개발 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/chmln/sd",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Rust (Cargo)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo 설치",
+        "command": "cargo install sd",
+        "note": "러스트 패키지 관리자를 이용한 설치"
+      }
+    ],
+    "usageSteps": [
+      "sd '검색어' '변경어' 파일이름 명령어를 실행합니다.",
+      "문자열 리터럴 모드를 사용하려면 -s 옵션을 붙입니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7386,
+    "forks": 172,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "consola",
+    "name": "Consola",
+    "github": "https://github.com/unjs/consola",
+    "description": "Node.js 및 브라우저 환경을 위한 깔끔하고 확장 가능한 우아한 콘솔 로거 유틸리티입니다.",
+    "longDescription": "시각적으로 보기 좋은 출력, 다양한 리포터 플러그인, 일관된 CLI 인터페이스 경험을 제공하는 타입스크립트 기반 로거입니다. 로그 스팸 방지 기능 및 인터랙티브 프롬프트 기능이 내장되어 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "Node.js",
+      "CLI",
+      "로깅",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/unjs/consola",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm i consola",
+        "note": "npm 패키지 관리자 설치"
+      },
+      {
+        "title": "yarn 설치",
+        "command": "yarn add consola",
+        "note": "yarn 패키지 관리자 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 consola를 임포트합니다.",
+      "consola.info() 또는 consola.success() 메서드로 로그를 출력합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7336,
+    "forks": 226,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "ctags",
+    "name": "Universal Ctags",
+    "github": "https://github.com/universal-ctags/ctags",
+    "description": "소스 코드 파일 내 함수, 변수 등의 언어 요소 색인(Tag)을 생성하여 코드 탐색과 점프를 돕는 도구입니다.",
+    "longDescription": "다양한 프로그래밍 언어를 지원하는 전통적인 ctags의 현대적 유지보수 버전입니다. 편집기나 개발 도구와 연동하여 대규모 코드베이스에서 심볼 정의부로 빠르게 이동할 수 있게 합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "코드 분석",
+      "코드 탐색",
+      "C",
+      "개발 도구",
+      "텍스트 편집기"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://ctags.io",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "GNU make",
+      "C 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드",
+        "command": "./autogen.sh && ./configure && make && make install",
+        "note": "소스코드에서 직접 빌드 및 설치"
+      }
+    ],
+    "usageSteps": [
+      "소스 코드 루트 디렉토리에서 'ctags -R' 명령어를 실행합니다.",
+      "생성된 tags 파일을 기반으로 편집기에서 심볼 탐색을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7295,
+    "forks": 670,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "puppeteer-extra",
+    "name": "puppeteer-extra",
+    "github": "https://github.com/berstend/puppeteer-extra",
+    "description": "플러그인 아키텍처를 통해 Puppeteer 브라우저 자동화 도구에 새로운 기능과 트릭을 확장하는 프레임워크입니다.",
+    "longDescription": "봇 탐지 우회, 자동 캡차 해결, 광고 차단 등 유용한 플러그인을 Puppeteer에 쉽게 추가할 수 있습니다. 모노레포 구조로 관리되며 Playwright도 일부 지원합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "Puppeteer",
+      "JavaScript",
+      "웹 크롤링",
+      "자동화",
+      "플러그인"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://extra.community",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Node.js",
+      "Yarn"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "yarn",
+        "note": "yarn 패키지 설치"
+      },
+      {
+        "title": "패키지 빌드",
+        "command": "yarn build",
+        "note": "타입스크립트 소스 빌드"
+      }
+    ],
+    "usageSteps": [
+      "puppeteer-extra 및 필요한 스텔스 플러그인을 프로젝트에 설치합니다.",
+      "additions 플러그인을 코드로 임포트하여 Puppeteer 인스턴스를 확장합니다.",
+      "일반적인 Puppeteer 스크립트와 동일하게 자동화 코드를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7405,
+    "forks": 781,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "standard-version",
+    "name": "standard-version",
+    "github": "https://github.com/conventional-changelog/standard-version",
+    "description": "Conventional Commits 규격에 기반하여 시멘틱 버저닝과 CHANGELOG 자동 생성을 수행하는 도구입니다.",
+    "longDescription": "깃 커밋 메시지를 분석하여 적절한 버전 번호를 자동으로 올리고 변경 이력 문서를 생성해줍니다. 릴리스 프로세스를 자동화하여 개발 팀의 수고를 덜어줍니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Git",
+      "CLI",
+      "버전 관리",
+      "JavaScript",
+      "자동화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "ISC",
+    "website": "https://github.com/conventional-changelog/standard-version",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 개발 의존성 설치",
+        "command": "npm i --save-dev standard-version",
+        "note": "프로젝트에 패키지 추가"
+      }
+    ],
+    "usageSteps": [
+      "package.json 파일에 release 스크립트를 추가합니다.",
+      "터미널에서 npm run release 명령어를 실행하여 버전을 갱신하고 changelog를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 본 프로젝트는 deprecated 상태이며 대체재로 release-please 등을 권장합니다.",
+    "stars": 7985,
+    "forks": 757,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "agent-scripts",
+    "name": "Agent Scripts",
+    "github": "https://github.com/steipete/agent-scripts",
+    "description": "클로드 및 코덱스 등 AI 에이전트와 로컬 워크스페이스에서 공유하는 스크립트, 스킬 및 규칙 모음입니다.",
+    "longDescription": "AI 에이전트 구동을 위한 공통 규칙(AGENTS.MD)과 재사용 가능한 워크스페이스 스킬, 의존성이 적은 가벼운 헬퍼 스크립트를 제공합니다. 로컬 개발 환경에서 에이전트의 효율성을 높이기 위한 유틸리티를 담고 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "셸 스크립트",
+      "자동화",
+      "개발 도구",
+      "워크플로우"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://steipete.me",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Git",
+      "Shell"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/steipete/agent-scripts.git",
+        "note": "로컬 작업 공간에 스크립트 복제"
+      }
+    ],
+    "usageSteps": [
+      "저장소 내 스크립트 및 훅을 로컬 환경에 맞게 심볼릭 링크로 연결합니다.",
+      "validate-skills 스크립트를 통해 에이전트 스킬 형식을 검증합니다.",
+      "에이전트 워크플로우에 공유 규칙을 적용합니다."
+    ],
+    "examplePrompt": "로컬 워크스페이스의 에이전트 스킬 형식이 올바른지 검증해줘.",
+    "usageNote": "",
+    "stars": 7321,
+    "forks": 635,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "cyberstrikeai",
+    "name": "CyberStrikeAI",
+    "github": "https://github.com/AIPentest/CyberStrikeAI",
+    "description": "AI 기반 사이버 보안 및 모의 해킹 자동화 플랫폼입니다.",
+    "longDescription": "Eino 기반 에이전트와 MCP 네이티브 도구를 결합하여 계획, 실행, 증거 수집 과정을 하나의 작업 공간에서 처리합니다. 인가된 보안 운영 환경에서 공격 체인 모델링과 분석을 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "사이버보안",
+      "모의해킹",
+      "Go",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/AIPentest/CyberStrikeAI",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Docker",
+      "Go"
+    ],
+    "supportedAgents": [
+      "Eino"
+    ],
+    "install": [
+      {
+        "title": "클론 및 실행",
+        "command": "./run.sh",
+        "note": "기본 HTTPS 모드로 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소 클론 후 run.sh 실행",
+      "브라우저에서 로컬 주소 접속",
+      "관리자 패스워드 설정 후 로그인",
+      "AI 기반 보안 에이전트 워크플로우 활용"
+    ],
+    "examplePrompt": "권한 취약점 분석을 위한 공격 체인 시뮬레이션을 수행해줘.",
+    "usageNote": "인가된 테스트 및 보안 운영 목적으로만 사용해야 합니다.",
+    "stars": 7336,
+    "forks": 1308,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "unstract",
+    "name": "Unstract",
+    "github": "https://github.com/Zipstack/unstract",
+    "description": "LLM을 활용해 비정조 문서에서 구조화된 데이터를 추출하는 플랫폼입니다.",
+    "longDescription": "PDF나 스캔 이미지 같은 비정형 문서에서 자연어 프롬프트를 통해 필요한 JSON 데이터를 추출하고 API나 ETL 파이프라인으로 배포할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "LLM",
+      "데이터추출",
+      "PDF",
+      "ETL",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://unstract.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "개발 환경 설정",
+        "command": "./dev-env-cli.sh -p",
+        "note": "pre-commit 훅을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론하고 도커 환경 구동",
+      "프롬프트 스튜디오에서 추출 스키마 정의",
+      "문서 업로드 및 LLM 기반 데이터 추출 수행",
+      "추출된 데이터를 API 또는 파이프라인으로 배포"
+    ],
+    "examplePrompt": "첨부된 인보이스 PDF에서 공급자명, 품목, 총 금액을 추출해줘.",
+    "usageNote": "정확한 추출을 위해 적절한 LLM API 키 설정이 필요합니다.",
+    "stars": 7278,
+    "forks": 718,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "dayflow",
+    "name": "Dayflow",
+    "github": "https://github.com/JerryZLiu/Dayflow",
+    "description": "macOS 화면 활동을 자동 기록해 타임라인과 업무 일지를 생성하는 도구입니다.",
+    "longDescription": "로컬 우선 방식으로 작동하며, 사용자의 화면 활동을 분석하여 시간대별 타임라인과 일일 스탠업 미팅용 요약을 자동으로 만들어줍니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "생산성",
+      "타임트래커",
+      "macOS",
+      "로컬AI",
+      "Swift"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.dayflow.so/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "macOS 14+",
+      "화면 및 시스템 오디오 녹화 권한"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install --cask dayflow",
+        "note": "Homebrew를 통해 macOS 앱을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Dayflow 앱 설치 및 권한 허용",
+      "백그라운드에서 평소처럼 작업 진행",
+      "자동으로 기록된 타임라인 확인",
+      "일일 스탠업 및 주간 리뷰 요약 생성"
+    ],
+    "examplePrompt": "",
+    "usageNote": "로컬 AI 모델을 사용하면 데이터가 외부로 유출되지 않습니다.",
+    "stars": 7247,
+    "forks": 441,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "wasm-pack",
+    "name": "wasm-pack",
+    "github": "https://github.com/wasm-bindgen/wasm-pack",
+    "description": "Rust로 작성된 코드를 WebAssembly로 빌드하고 패키징하는 도구입니다.",
+    "longDescription": "Rust 코드를 브라우저나 Node.js 환경에서 자바스크립트와 연동할 수 있는 WebAssembly 패키지로 손쉽게 변환하고 npm에 발행할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Rust",
+      "Wasm",
+      "CLI",
+      "npm",
+      "웹개발"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://wasm-bindgen.github.io/wasm-pack/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Rust 1.30.0+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 가이드 참고",
+        "command": "cargo install wasm-pack",
+        "note": "Cargo를 통해 설치할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "Rust 프로젝트 작성",
+      "wasm-pack build 명령어로 Wasm 패키지 빌드",
+      "npm 패키지 형태로 발행 또는 웹 프로젝트에 연동"
+    ],
+    "examplePrompt": "",
+    "usageNote": "사전에 Rust 개발 환경이 세팅되어 있어야 합니다.",
+    "stars": 7285,
+    "forks": 490,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "watchexec",
+    "name": "Watchexec",
+    "github": "https://github.com/watchexec/watchexec",
+    "description": "파일 변경을 감지하여 지정된 명령어를 자동으로 실행해주는 CLI 도구입니다.",
+    "longDescription": "디렉토리 내 파일 수정 사항을 모니터링하고 유닛 테스트 실행, 린트 검사, 빌드 등의 작업을 자동으로 반복 수행해 주는 범용 파일 감시기입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "파일감시",
+      "개발유틸리티",
+      "Rust",
+      "자동화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://watchexec.github.io",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo로 설치",
+        "command": "cargo install --locked watchexec-cli",
+        "note": "Rust 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 watchexec 명령어 실행",
+      "감시할 경로와 변경 시 실행할 명령어 지정",
+      "소스 코드 파일 수정 후 자동 실행 결과 확인"
+    ],
+    "examplePrompt": "",
+    "usageNote": "복잡한 xargs 조합 없이 단순하게 파일 변경을 트리거할 수 있습니다.",
+    "stars": 7227,
+    "forks": 206,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "buku",
+    "name": "Buku",
+    "github": "https://github.com/jarun/buku",
+    "description": "터미널 환경에서 사용할 수 있는 강력한 북마크 관리 및 미니 웹 도구입니다.",
+    "longDescription": "가볍고 프라이버시를 존중하는 명령줄 북마크 관리자로, 북마크 태그 지정, 웹 페이지 제목 및 설명 자동 가져오기, 로컬 서버 연동 GUI 기능을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "북마크",
+      "CLI",
+      "터미널",
+      "Python",
+      "지식관리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/jarun/buku",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Python 3+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 관리자 설치",
+        "command": "pip install buku",
+        "note": "파이썬 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "buku 명령어로 북마크 추가 및 관리",
+      "키워드 및 태그를 통한 빠른 검색",
+      "필요시 bukuserver를 통해 웹 인터페이스 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "브라우저 북마크를 가져와서 터미널에서 통합 관리할 수 있습니다.",
+    "stars": 7212,
+    "forks": 321,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "jid",
+    "name": "jid",
+    "github": "https://github.com/simeji/jid",
+    "description": "대화형 방식으로 JSON 데이터를 탐색하고 드릴다운할 수 있는 CLI 도구입니다.",
+    "longDescription": "jq와사사사 유사한 필터링 쿼리를 사용하되 자동 완성, 후보 추천, JMESPath 지원을 결합하여 터미널에서 복잡한 JSON 구조를 실시간으로 탐색할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "JSON",
+      "CLI",
+      "개발도구",
+      "Go",
+      "대화형"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/simeji/jid",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install jid",
+        "note": "macOS 홈브루를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "JSON 데이터를 jid 명령어로 파이프 전달",
+      "화면에서 실시간 쿼리를 입력하며 키 경로 탐색",
+      "탭 자동완성을 활용해 원하는 데이터 추출"
+    ],
+    "examplePrompt": "",
+    "usageNote": "복잡한 API 응답 JSON 구조를 분석할 때 유용합니다.",
+    "stars": 7199,
+    "forks": 159,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "hatch",
+    "name": "Hatch",
+    "github": "https://github.com/pypa/hatch",
+    "description": "모던하고 확장 가능한 파이프라인 중심의 Python 프로젝트 관리 도구입니다.",
+    "longDescription": "가상 환경 관리, 의존성 관리, 빌드 및 패키징, 멀티버전 테스트 실행을 통합적으로 지원하는 현대적인 파이썬 프로젝트 관리 및 빌드 시스템입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "패키징",
+      "CLI",
+      "빌드",
+      "의존성관리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hatch.pypa.io/latest/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pipx 설치",
+        "command": "pipx install hatch",
+        "note": "pipx를 이용해 전역으로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "새 프로젝트 생성 시 hatch new 명령어 사용",
+      "pyproject.toml을 통한 의존성 및 환경 설정",
+      "hatch run 명령어로 테스트 및 스크립트 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "기존 poetry나 flit의 대안으로 활용할 수 있습니다.",
+    "stars": 7244,
+    "forks": 479,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "product-manager-skills",
+    "name": "Product Manager Skills",
+    "github": "https://github.com/deanpeters/Product-Manager-Skills",
+    "description": "AI 에이전트와 LLM을 위한 제품 관리(PM) 프레임워크 및 스킬 모음입니다.",
+    "longDescription": "Claude Code, Codex 등 AI 에이전트 환경에서 제품 관리 실무를 수행할 수 있도록 검증된 PM 방법론과 스킬 템플릿을 제공하는 리포지토리입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "제품관리",
+      "프레임워크",
+      "Claude",
+      "기획"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/deanpeters/Product-Manager-Skills",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "릴리스 파일 다운로드",
+        "command": "curl -L -O https://github.com/deanpeters/Product-Manager-Skills/releases/latest/download/pm-skills-starter-pack.zip",
+        "note": "스타터 팩 압축파일을 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "스타터 팩 또는 테마별 패키지 다운로드",
+      "프로젝트 루트의 .agents/skills 디렉토리에 적용",
+      "AI 에이전트에게 제품 기획 및 요구사항 정의 지시"
+    ],
+    "examplePrompt": "이 제품의 기능 요구사항 명세서(PRD) 초안을 작성해줘.",
+    "usageNote": "AI 기반 제품 기획 워크플로우를 구축하는 데 유용합니다.",
+    "stars": 7218,
+    "forks": 855,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "ods",
+    "name": "ODS (Osmantic Deployment System)",
+    "github": "https://github.com/Osmantic/ODS",
+    "description": "개인 PC를 사내 프라이빗 AI 서버 및 홈랩 환경으로 구축해주는 통합 배포 시스템입니다.",
+    "longDescription": "LLM, RAG, ComfyUI, 음성 인식 및 합성과 같은 다양한 AI 도구와 워크플로우 자동화 도구를 PC나 Mac에서 손쉽게 셀프 호스팅할 수 있도록 패키징한 시스템입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "프라이빗AI",
+      "셀프호스팅",
+      "홈랩",
+      "Docker",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://discord.gg/qGVygYada3",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T01:03:56.877Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "git clone https://github.com/Osmantic/ODS.git && cd ODS",
+        "note": "저장소를 클론하여 로컬 환경을 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소 클론 후 설정 파일 확인",
+      "제공되는 인스톨러를 통해 컨테이너 구동",
+      "로컬 웹 인터페이스에 접속하여 프라이빗 AI 서비스 이용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "고성능 하드웨어(GPU 등) 환경에서 원활하게 동작합니다.",
+    "stars": 7189,
+    "forks": 1022,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
     "id": "gentle-ai",
     "name": "Gentle-AI",
     "github": "https://github.com/Gentleman-Programming/gentle-ai",
