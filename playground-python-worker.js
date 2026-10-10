@@ -2,11 +2,10 @@ const base='https://cdn.jsdelivr.net/pyodide/v0.27.7/full/';
 let runtime;
 try{
  importScripts(base+'pyodide.js');
- postMessage({type:'ready'});
+ loadPyodide({indexURL:base}).then(value=>{runtime=value;postMessage({type:'ready'})}).catch(e=>postMessage({type:'error',message:'Pyodide 초기화 실패: '+e.message}));
 }catch(e){postMessage({type:'error',message:'Python 엔진 다운로드 실패: '+e.message})}
 onmessage=async e=>{
  try{
-  runtime=await loadPyodide({indexURL:base});
   runtime.globals.set('openshelf_source',String(e.data.code));
   runtime.globals.set('openshelf_csv',String(e.data.csv||''));
   const output=await runtime.runPythonAsync(`import sys,io,traceback,json
