@@ -8,6 +8,10 @@ on:
       - 'scripts/validate-tools.test.mjs'
       - 'scripts/guard-discovery.mjs'
       - 'scripts/guard-discovery.test.mjs'
+      - 'playground-core.mjs'
+      - 'playground-core.test.mjs'
+      - 'playground.js'
+      - 'playground.html'
       - '.github/workflows/validate-tools.yml'
   push:
     branches: [main]
@@ -17,6 +21,10 @@ on:
       - 'scripts/validate-tools.test.mjs'
       - 'scripts/guard-discovery.mjs'
       - 'scripts/guard-discovery.test.mjs'
+      - 'playground-core.mjs'
+      - 'playground-core.test.mjs'
+      - 'playground.js'
+      - 'playground.html'
       - '.github/workflows/validate-tools.yml'
   workflow_dispatch:
 
@@ -36,5 +44,7 @@ jobs:
         run: node scripts/validate-tools.test.mjs
       - name: Discovery safety guard tests
         run: node scripts/guard-discovery.test.mjs
+      - name: Playground functional smoke tests
+        run: node playground-core.test.mjs
       - name: Validate tools.json
         run: node scripts/validate-tools.mjs data/tools.json
