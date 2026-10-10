@@ -89,38 +89,7 @@ async function loadCatalog(){
         const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),18000);
         try{
           const groups=await Promise.all(source.parts.map(async file=>{
-            if(!new RegExp('^public-api-csv/part-[0-9]{2}[.]json
-            const shard=await fetch('data/'+file,{cache:'no-store',signal:controller.signal});
-            if(!shard.ok)throw Error('CSV shard HTTP '+shard.status);
-            const json=await shard.json();
-            if(json.verification!=='metadata-only'||!Array.isArray(json.items))throw Error('Invalid CSV shard');
-            return json.items;
-          }));
-          const combined=groups.flat();
-          if(combined.length!==source.total)throw Error('Incomplete CSV catalog');
-          listing=validatedPublicApis(combined);
-          if(listing.length!==source.total)throw Error('Invalid CSV catalog records');
-        }finally{clearTimeout(timer)}
-      }else listing=validatedPublicApis(source.items);
-    }
-  }
- }catch(e){console.warn('Official CSV listing unavailable; using verified catalog',e)}
- const merged=new Map(listing.map(x=>[x.id,x]));for(const item of confirmed)merged.set(item.id,item);
- items=[...merged.values()];$('apiTotal').textContent=items.length.toLocaleString('ko-KR');
- const verifiedCount=$('apiVerifiedCount');if(verifiedCount)verifiedCount.textContent=confirmed.length.toLocaleString('ko-KR');
- const categories=[...new Set(items.map(x=>x.category))].sort((a,b)=>a.localeCompare(b,'ko'));
- const providers=[...new Set(items.map(x=>x.provider))].sort((a,b)=>a.localeCompare(b,'ko'));
- for(const name of providers){const option=document.createElement('option');option.value=name;option.textContent=name;providerFilter.append(option)}
- for(const name of categories){const option=document.createElement('option');option.value=name;option.textContent=name;category.append(option)}
- show();
-}catch(error){showLoadError(error)}
-}
-$('apiRetry')?.addEventListener('click',loadCatalog);
-loadCatalog();
-for(const element of [search,category,approval,providerFilter,formatFilter])element.addEventListener(element===search?'input':'change',()=>{page=1;show()});
-$('apiPrev').addEventListener('click',()=>{if(page>1){page--;show();$('apiStatus').scrollIntoView({block:'start'});}});
-$('apiNext').addEventListener('click',()=>{page++;show();$('apiStatus').scrollIntoView({block:'start'});});
-).test(file))throw Error('Invalid CSV shard path');
+            if(!new RegExp('^public-api-csv/part-[0-9]{2}[.]json$').test(file))throw Error('Invalid CSV shard path');
             const shard=await fetch('data/'+file,{cache:'no-store',signal:controller.signal});
             if(!shard.ok)throw Error('CSV shard HTTP '+shard.status);
             const json=await shard.json();
