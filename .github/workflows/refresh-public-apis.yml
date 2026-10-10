@@ -45,4 +45,4 @@ jobs:
           git add data/public-apis.json data/public-api-candidates.json data/public-api-discovery-state.json
           git commit -m "data: add newly verified public APIs"
           git push origin "$branch"
-          gh pr create --base main --head "$branch" --title "data: verified Public API updates" --body "Official catalog paginated discovery and cursor progress, with page verification. Review all additions before merging. Failed source reads leave current data intact."
+          gh pr create --base main --head "$branch" --title "data: official-verified Public API publication batch" --body "Official catalog paginated discovery and cursor progress, with page verification. Review all additions before merging. Failed source reads leave current data intact."
