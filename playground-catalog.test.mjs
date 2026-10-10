@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import vm from 'node:vm';
+const context={URL,encodeURIComponent};
+vm.runInNewContext(fs.readFileSync('playground-catalog.js','utf8')+';globalThis.lookup={playgroundModeForTool,playgroundLink}',context);
+const {playgroundModeForTool,playgroundLink}=context.lookup;
+assert.equal(playgroundModeForTool({id:'fmt',github:'https://github.com/prettier/prettier'}),'json');
+assert.equal(playgroundModeForTool({id:'md',github:'https://github.com/markedjs/marked'}),'markdown');
+assert.equal(playgroundModeForTool({id:'unknown',github:'https://github.com/unknown/repo'}),null);
+assert.equal(playgroundModeForTool({id:'bad',github:'https://notgithub.com/prettier/prettier'}),null);
+assert.equal(playgroundModeForTool({id:'bad',github:'https://github.com/prettier/prettier/issues'}),null);
+assert.equal(playgroundLink({id:'foo bar',github:'https://github.com/jqlang/jq'}),'playground.html?mode=json&source=foo%20bar');
+console.log('Curated Playground catalog routing tests passed');
