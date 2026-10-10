@@ -8,12 +8,13 @@ onmessage=async e=>{
  try{
   runtime=await loadPyodide({indexURL:base});
   runtime.globals.set('openshelf_source',String(e.data.code));
+  runtime.globals.set('openshelf_csv',String(e.data.csv||''));
   const output=await runtime.runPythonAsync(`import sys,io,traceback
 _oldout,_olderr=sys.stdout,sys.stderr
 _buffer=io.StringIO()
 sys.stdout=sys.stderr=_buffer
 try:
-    exec(compile(openshelf_source,'<openshelf>','exec'), {'__name__':'__main__'})
+    exec(compile(openshelf_source,'<openshelf>','exec'), {'__name__':'__main__','openshelf_csv':openshelf_csv})
 except BaseException:
     traceback.print_exc()
 finally:

@@ -139,6 +139,8 @@ jobs:
         run: |
           node --check playground-sql.js
           node --check playground-sql-worker.js
+      - name: Python CSV example integration contract
+        run: node scripts/check-python-csv.mjs
       - name: Python WASM runtime syntax
         run: |
           node --check playground-python.js
