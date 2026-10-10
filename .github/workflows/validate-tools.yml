@@ -19,6 +19,9 @@ on:
       - 'playground-jsonata-worker.js'
       - 'playground.js'
       - 'playground.html'
+      - 'playground-hub.html'
+      - 'playground-hub.css'
+      - 'playground-hub.js'
       - 'playground-live.html'
       - '.github/workflows/validate-tools.yml'
   push:
@@ -40,6 +43,9 @@ on:
       - 'playground-jsonata-worker.js'
       - 'playground.js'
       - 'playground.html'
+      - 'playground-hub.html'
+      - 'playground-hub.css'
+      - 'playground-hub.js'
       - '.github/workflows/validate-tools.yml'
   workflow_dispatch:
 
@@ -67,6 +73,8 @@ jobs:
         run: |
           node --check playground-jsonata.js
           node --check playground-jsonata-worker.js
+      - name: Playground hub JavaScript syntax
+        run: node --check playground-hub.js
       - name: Playground catalog routing tests
         run: node playground-catalog.test.mjs
       - name: Validate tools.json
