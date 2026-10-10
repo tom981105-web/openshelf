@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {updatePublicApis,pageMatches} from './refresh-public-apis.mjs';
+const row={id:'15129412',name:'조달청_공공조달통계정보서비스',provider:'조달청',category:'조달·행정',summary:'통계',format:'API',approval:'원문 확인'};
+const canonical={...row,url:'https://www.data.go.kr/data/15129412/openapi.do'};
+const base={source:'data.go.kr',items:[{...row,id:'15074634',url:'https://www.data.go.kr/data/15074634/openapi.do'}]};
+const src={'data/public-apis.json':JSON.stringify(base),'data/public-api-candidates.json':JSON.stringify({items:[row]})};let writes=[];
+const read=async name=>src[name],write=async(name,content)=>writes.push({name,content});
+const html='<html><body>'+row.name+' · 제공기관 '+row.provider+' '+'.'.repeat(300)+'</body></html>';
+assert.equal(pageMatches(html,canonical),true);
+assert.equal(pageMatches(html.replace(row.name,'unrelated'),canonical),false);
+const fetcher=async()=>({ok:true,headers:new Headers({'content-type':'text/html;charset=utf-8'}),text:async()=>html});
+const success=await updatePublicApis({read,write,fetcher});assert.equal(success.added,1);assert.equal(writes.length,1);
+assert.equal(JSON.parse(writes[0].content).items.length,2);
+writes=[];const rejected=await updatePublicApis({read,write,fetcher:async()=>({ok:false,headers:new Headers(),text:async()=>''})});
+assert.equal(rejected.added,0);assert.equal(rejected.failed,1);assert.equal(writes.length,0);
+console.log('Official API refresh fail-closed tests passed');
