@@ -25,3 +25,9 @@ writes=[];const blocked=await discover({pages:2,fetcher:async u=>u.includes('sel
 assert.equal(blocked.nextPage,3);assert.equal(blocked.detailErrors,2);
 assert.deepEqual(JSON.parse(writes[0].val).failedDetails,['15129415']);
 console.log('Resume cursor and fail-closed detail tests passed');
+
+const retryState={...current,'data/public-api-discovery-state.json':JSON.stringify({nextPage:4,failedDetails:['15129415']})};
+writes=[];
+const recovered=await discover({pages:1,fetcher,read:async k=>retryState[k],write:async(k,v)=>writes.push({key:k,val:v})});
+assert.equal(recovered.recovered,1);
+assert.equal(recovered.pendingRetries,0);
