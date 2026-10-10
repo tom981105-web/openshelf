@@ -1,0 +1,42 @@
+name: Refresh Public API catalog
+on:
+  schedule:
+    - cron: '28 1 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+concurrency:
+  group: public-api-refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test safe ingestion
+        run: node scripts/refresh-public-apis.test.mjs
+      - name: Verify candidates against official portal
+        run: node scripts/refresh-public-apis.mjs
+      - name: Validate resulting catalog
+        run: node public-api.test.mjs
+      - name: Open review PR only if data changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/public-apis.json; then
+            echo "No verified additions; preserving catalog."
+            exit 0
+          fi
+          branch="automation/public-api-refresh-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data/public-apis.json
+          git commit -m "data: add newly verified public APIs"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" --title "data: verified Public API updates" --body "Automated official data.go.kr page verification. Review metadata and usage conditions before merging; source remains unchanged on failed checks."
