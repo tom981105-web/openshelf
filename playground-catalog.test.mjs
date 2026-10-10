@@ -3,7 +3,7 @@ import fs from 'node:fs';
 import vm from 'node:vm';
 
 const context={URL,encodeURIComponent};
-vm.runInNewContext(fs.readFileSync('playground-catalog.js','utf8')+';globalThis.lookup={playgroundModeForTool,playgroundLink,playgroundHubEntries}',context);
+vm.runInNewContext(fs.readFileSync('playground-catalog.js','utf8')+';globalThis.lookup={playgroundModeForTool,playgroundLink,playgroundHubEntries,playgroundExperienceForTool,playgroundUsesSqlEngine,playgroundUsesCsvEngine}',context);
 const {playgroundModeForTool,playgroundLink}=context.lookup;
 const catalog=JSON.parse(fs.readFileSync('data/tools.json','utf8'));
 const expected=new Map([
@@ -44,3 +44,10 @@ assert.equal(reduced[0].key,'markdown');
 assert.equal(context.lookup.playgroundHubEntries([]).length,0);
 assert.equal(context.lookup.playgroundHubEntries([{id:'other',github:'https://github.com/x/y'}]).length,0);
 console.log('Live Playground Hub grouping and zero-false-positive tests passed');
+
+assert.equal(context.lookup.playgroundExperienceForTool(catalog.find(t=>t.id==='q')),'sql');
+assert.equal(context.lookup.playgroundUsesSqlEngine(catalog.find(t=>t.id==='q')),true);
+assert.equal(context.lookup.playgroundUsesCsvEngine(catalog.find(t=>t.id==='q')),false);
+assert.equal(context.lookup.playgroundUsesCsvEngine(catalog.find(t=>t.id==='visidata')),true);
+assert.equal(playgroundLink({id:'unregistered',github:'https://github.com/unknown/unregistered'}),null);
+console.log('Unified registry engine classifications verified');
