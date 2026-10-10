@@ -4,6 +4,7 @@ const ORIGIN='https://www.data.go.kr';
 const LIST='/tcs/dss/selectDataSetList.do';
 const ID_RE=/\/data\/(\d{8})\/openapi\.do/g;
 const STATE_PATH='data/public-api-discovery-state.json';
+// Failed details should not block unrelated listings.
 export const searchUrl=page=>ORIGIN+LIST+'?dType=API&currentPage='+page+'&perPage=10';
 export function discoverIds(html){
  if(typeof html!=='string'||html.length>4_000_000)return [];
@@ -38,7 +39,18 @@ export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFil
  if(!Array.isArray(existing.items)||!Array.isArray(catalog.items)||!Number.isInteger(state.nextPage)||state.nextPage<1||state.nextPage>1200)throw Error('Invalid discovery state');
  const known=new Set([...existing.items,...catalog.items].map(x=>String(x.id)));
  const additions=[];let listingErrors=0,detailErrors=0,discovered=0,scanned=0;
+ const failedDetails=Array.isArray(state.failedDetails)?state.failedDetails:[];
+ const pending=new Set(failedDetails);
  const limit=Math.max(1,Math.min(20,Number(pages)||8)),budget=Math.max(1,Math.min(200,Number(maxDetails)||80));
+ let retried=0,recovered=0;
+ for(const id of failedDetails.slice(0,8)){
+  if(known.has(id)){pending.delete(id);continue}
+  retried++;
+  try{
+   const d=parseOfficialDetail(await getHtml(ORIGIN+'/data/'+id+'/openapi.do',fetcher),id);
+   if(d){additions.push(d);known.add(id);pending.delete(id);recovered++}
+  }catch(e){console.warn('Deferred retry',id,String(e.message||e))}
+ }
  let page=state.nextPage;
  for(let i=0;i<limit;i++){
   let ids;
@@ -53,15 +65,15 @@ export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFil
   for(const id of unknown){
    try{
     const detail=parseOfficialDetail(await getHtml(ORIGIN+'/data/'+id+'/openapi.do',fetcher),id);
-    if(detail){additions.push(detail);known.add(id)}else{detailErrors++;failedDetail=true;console.warn('Unverified official detail',id)}
-   }catch(e){detailErrors++;failedDetail=true;console.warn('Official detail failed',id,e.message)}
+    if(detail){additions.push(detail);known.add(id);pending.delete(id)}else{detailErrors++;failedDetail=true;pending.add(id);console.warn('Unverified official detail',id)}
+   }catch(e){detailErrors++;failedDetail=true;pending.add(id);console.warn('Official detail failed',id,e.message)}
   }
-  if(failedDetail){console.warn('Hold cursor for retry at page',page);break}
+  if(failedDetail)console.warn('Deferred detail retry count',pending.size,'at page',page);
   scanned++;page=nextPage(page);
  }
  if(additions.length)await write('data/public-api-candidates.json',JSON.stringify({...existing,scope:'official-discovered-review-candidates',items:[...existing.items,...additions]},null,2)+'\n');
- if(page!==state.nextPage)await write(STATE_PATH,JSON.stringify({...state,nextPage:page,lastRunScannedPages:scanned},null,2)+'\n');
- const report={startPage:state.nextPage,nextPage:page,scannedPages:scanned,discovered,addedCandidates:additions.length,listingErrors,detailErrors};
+ if(page!==state.nextPage||pending.size!==failedDetails.length)await write(STATE_PATH,JSON.stringify({...state,nextPage:page,lastRunScannedPages:scanned,failedDetails:[...pending]},null,2)+'\n');
+ const report={startPage:state.nextPage,nextPage:page,scannedPages:scanned,discovered,addedCandidates:additions.length,listingErrors,detailErrors,pendingRetries:pending.size,retried,recovered};
  console.log(JSON.stringify(report));return report;
 }
 if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href)await discover();
