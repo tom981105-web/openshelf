@@ -17,6 +17,8 @@ on:
       - 'public-api.test.mjs'
       - 'data/public-api-candidates.json'
       - 'data/public-api-discovery-state.json'
+      - 'scripts/diagnose-public-apis.mjs'
+      - 'scripts/diagnose-public-apis.test.mjs'
       - 'scripts/discover-public-apis.mjs'
       - 'scripts/discover-public-apis.test.mjs'
       - 'scripts/refresh-public-apis.mjs'
@@ -82,6 +84,8 @@ on:
       - 'public-api.test.mjs'
       - 'data/public-api-candidates.json'
       - 'data/public-api-discovery-state.json'
+      - 'scripts/diagnose-public-apis.mjs'
+      - 'scripts/diagnose-public-apis.test.mjs'
       - 'scripts/discover-public-apis.mjs'
       - 'scripts/discover-public-apis.test.mjs'
       - 'scripts/refresh-public-apis.mjs'
@@ -143,6 +147,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Public API diagnostics tests
+        run: node scripts/diagnose-public-apis.test.mjs
       - name: Public API discovery tests
         run: node scripts/discover-public-apis.test.mjs
       - name: Public API refresh safety tests

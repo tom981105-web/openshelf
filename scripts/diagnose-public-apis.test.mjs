@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {diagnoseListing,probeOfficialCatalog} from './diagnose-public-apis.mjs';
+const doc='<html><body>오픈 API 데이터목록 <a href="/data/15129415/openapi.do">A</a></body></html>';
+assert.equal(diagnoseListing(doc).apiIdCount,1);
+const sample='<html><body>'+'.'.repeat(220)+' OpenAPI 명 조달청_나라장터 가격정보현황서비스 분류체계 일반공공행정 - 정부자원관리 제공기관 조달청 관리부서명 조달데이터관리팀 설명 시설자재가격 조회 서비스입니다. 건축, 토목 등 다양한 시장 가격을 제공합니다. API 유형 REST 데이터 포맷 JSON+XML 운영단계 : 자동승인 </body></html>';
+const ok=await probeOfficialCatalog({fetcher:async url=>({ok:true,status:200,headers:new Headers({'content-type':'text/html'}),text:async()=>url.includes('selectDataSetList')?doc:sample})});
+assert.equal(ok.compatible,true);assert.equal(ok.detail.parsed,true);
+const bad=await probeOfficialCatalog({fetcher:async()=>{throw Error('offline')}});
+assert.equal(bad.ok,false);
+console.log('Official portal live diagnostics contract tests passed');
