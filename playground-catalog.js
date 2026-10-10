@@ -4,8 +4,7 @@ const PLAYGROUND_REPOSITORIES=Object.freeze({
   'prettier/prettier':'json',
   'jqlang/jq':'json',
   'markedjs/marked':'markdown',
-  'markdown-it/markdown-it':'markdown',
-  'highlightjs/highlight.js':'regex'
+  'markdown-it/markdown-it':'markdown'
 });
 function playgroundModeForTool(tool){
   if(!tool||typeof tool.github!=='string')return null;
