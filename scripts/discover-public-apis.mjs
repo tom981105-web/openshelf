@@ -56,8 +56,8 @@ export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFil
   for(const id of unknown){
    try{
     const detail=parseOfficialDetail(await getHtml(ORIGIN+'/data/'+id+'/openapi.do',fetcher),id);
-    if(detail){additions.push(detail);known.add(id)}else{detailErrors++;failedDetail=true;console.warn('Unverified official detail',id)}
-   }catch(e){detailErrors++;failedDetail=true;console.warn('Official detail failed',id,e.message)}
+    if(detail){additions.push(detail);known.add(id);pending.delete(id)}else{detailErrors++;failedDetail=true;pending.add(id);console.warn('Unverified official detail',id)}
+   }catch(e){detailErrors++;failedDetail=true;pending.add(id);console.warn('Official detail failed',id,e.message)}
   }
   if(failedDetail){console.warn('Hold cursor for retry at page',page);break}
   scanned++;page=nextPage(page);
