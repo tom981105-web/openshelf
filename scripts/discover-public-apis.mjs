@@ -42,6 +42,15 @@ export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFil
  const failedDetails=Array.isArray(state.failedDetails)?state.failedDetails:[];
  const pending=new Set(failedDetails);
  const limit=Math.max(1,Math.min(20,Number(pages)||8)),budget=Math.max(1,Math.min(200,Number(maxDetails)||80));
+ let retried=0,recovered=0;
+ for(const id of failedDetails.slice(0,8)){
+  if(known.has(id)){pending.delete(id);continue}
+  retried++;
+  try{
+   const d=parseOfficialDetail(await getHtml(ORIGIN+'/data/'+id+'/openapi.do',fetcher),id);
+   if(d){additions.push(d);known.add(id);pending.delete(id);recovered++}
+  }catch(e){console.warn('Deferred retry',id,String(e.message||e))}
+ }
  let page=state.nextPage;
  for(let i=0;i<limit;i++){
   let ids;
@@ -64,7 +73,7 @@ export async function discover({fetcher=fetch,read=fs.readFile,write=fs.writeFil
  }
  if(additions.length)await write('data/public-api-candidates.json',JSON.stringify({...existing,scope:'official-discovered-review-candidates',items:[...existing.items,...additions]},null,2)+'\n');
  if(page!==state.nextPage||pending.size!==failedDetails.length)await write(STATE_PATH,JSON.stringify({...state,nextPage:page,lastRunScannedPages:scanned,failedDetails:[...pending]},null,2)+'\n');
- const report={startPage:state.nextPage,nextPage:page,scannedPages:scanned,discovered,addedCandidates:additions.length,listingErrors,detailErrors,pendingRetries:pending.size};
+ const report={startPage:state.nextPage,nextPage:page,scannedPages:scanned,discovered,addedCandidates:additions.length,listingErrors,detailErrors,pendingRetries:pending.size,retried,recovered};
  console.log(JSON.stringify(report));return report;
 }
 if(process.argv[1]&&import.meta.url===new URL('file://'+process.argv[1]).href)await discover();
