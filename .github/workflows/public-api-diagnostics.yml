@@ -12,7 +12,7 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 4
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,8 +22,6 @@ jobs:
         run: node scripts/diagnose-public-apis.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
-      - name: V15 bulk verified collection
-        run: |
-          node --input-type=module -e "import {discover} from './scripts/discover-public-apis.mjs'; for(let batch=0;batch<2;batch++){let done=false;for(let attempt=0;attempt<4;attempt++){let r=await discover({pages:20,maxDetails:200});if(r.scannedPages>0){done=true;break}console.warn('V15 batch retry',batch+1,attempt+1);await new Promise(ok=>setTimeout(ok,30000*(attempt+1)));}if(!done)throw Error('Official portal unavailable; cannot verify API batch');}"
-          node --input-type=module -e "import fs from 'node:fs';const c=JSON.parse(fs.readFileSync('data/public-api-candidates.json','utf8'));const s=JSON.parse(fs.readFileSync('data/public-api-discovery-state.json','utf8'));console.log('V15_CANDIDATES_JSON='+JSON.stringify(c.items));console.log('V15_STATE_JSON='+JSON.stringify(s));"
+      - name: Dry-run one official discovery page (do not commit)
+        run: node --input-type=module -e "import {discover} from './scripts/discover-public-apis.mjs'; await discover({pages:1,maxDetails:12});"
 
