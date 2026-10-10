@@ -16,13 +16,16 @@ on:
       - '.github/workflows/public-api-diagnostics.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 350
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
+          persist-credentials: true
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
@@ -38,6 +41,10 @@ jobs:
         run: node scripts/public-api-csv-shards.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
+      - name: V16 official campaign (checkpoint in PR branch)
+        if: github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == 'tom981105-web/openshelf' && github.head_ref == 'data/public-api-v16-5000-20261010'
+        run: node scripts/expand-public-apis-v16.mjs
       - name: Dry-run one official discovery page (do not commit)
+        if: github.head_ref != 'data/public-api-v16-5000-20261010'
         run: node --input-type=module -e "import {discover} from './scripts/discover-public-apis.mjs'; await discover({pages:1,maxDetails:12});"
 
