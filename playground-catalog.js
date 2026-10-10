@@ -40,8 +40,8 @@ function playgroundLink(tool){
  if(!entry)return null;
  const experience=PLAYGROUND_EXPERIENCES.find(item=>item.key===entry.experience);
  if(!experience)return null;
- const delimiter=experience.href.includes('?')?'&':'?';
- return experience.href+delimiter+'source='+encodeURIComponent(tool.id);
+ const path=experience.href.split('?')[0];
+ return path+(experience.href.includes('?')&&entry.experience!=='official'?experience.href.slice(experience.href.indexOf('?'))+'&':'?')+'source='+encodeURIComponent(tool.id);
 }
 
 function playgroundIsOfficial(tool){return playgroundModeForTool(tool)==='official-excalidraw'}
