@@ -4,7 +4,7 @@ const sourceFile='data/public-apis.json',candidateFile='data/public-api-candidat
 export function canonical(x){return {...x,url:'https://www.data.go.kr/data/'+x.id+'/openapi.do'}}
 export function pageMatches(html,x){
  if(typeof html!=='string'||html.length<250||html.length>2_000_000)return false;
- const clean=html.replace(/<script\\b[^>]*>[\\s\\S]*?<\\/script>/gi,' ').replace(/<style\\b[^>]*>[\\s\\S]*?<\\/style>/gi,' ').replace(/<[^>]*>/g,' ').replace(/&(?:nbsp|amp|lt|gt);/g,' ').replace(/\\s+/g,' ');
+ const clean=html.replace(/<[^>]*>/g,' ').replace(/&nbsp;/g,' ').replace(/ +/g,' ');
  return clean.includes(x.name)&&clean.includes(x.provider);
 }
 export async function updatePublicApis({read=fs.readFile,write=fs.writeFile,fetcher=fetch}={}){
