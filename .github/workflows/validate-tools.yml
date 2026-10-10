@@ -15,6 +15,8 @@ on:
       - 'playground-python.html'
       - 'playground-python.js'
       - 'playground-python-worker.js'
+      - 'playground-python-chart.mjs'
+      - 'scripts/check-python-chart.mjs'
       - 'playground-image.html'
       - 'playground-image.js'
       - 'playground-sql.html'
@@ -63,6 +65,8 @@ on:
       - 'playground-python.html'
       - 'playground-python.js'
       - 'playground-python-worker.js'
+      - 'playground-python-chart.mjs'
+      - 'scripts/check-python-chart.mjs'
       - 'playground-image.html'
       - 'playground-image.js'
       - 'playground-sql.html'
@@ -141,6 +145,8 @@ jobs:
           node --check playground-sql-worker.js
       - name: Python CSV example integration contract
         run: node scripts/check-python-csv.mjs
+      - name: Python chart renderer tests
+        run: node scripts/check-python-chart.mjs
       - name: Python WASM runtime syntax
         run: |
           node --check playground-python.js
