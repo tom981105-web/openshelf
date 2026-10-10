@@ -4,6 +4,7 @@ const ORIGIN='https://www.data.go.kr';
 const LIST='/tcs/dss/selectDataSetList.do';
 const ID_RE=/\/data\/(\d{8})\/openapi\.do/g;
 const STATE_PATH='data/public-api-discovery-state.json';
+// Failed details should not block unrelated listings.
 export const searchUrl=page=>ORIGIN+LIST+'?dType=API&currentPage='+page+'&perPage=10';
 export function discoverIds(html){
  if(typeof html!=='string'||html.length>4_000_000)return [];
