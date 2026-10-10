@@ -6,6 +6,8 @@ on:
       - 'data/tools.json'
       - 'scripts/validate-tools.mjs'
       - 'scripts/validate-tools.test.mjs'
+      - 'scripts/guard-discovery.mjs'
+      - 'scripts/guard-discovery.test.mjs'
       - '.github/workflows/validate-tools.yml'
   push:
     branches: [main]
@@ -13,6 +15,8 @@ on:
       - 'data/tools.json'
       - 'scripts/validate-tools.mjs'
       - 'scripts/validate-tools.test.mjs'
+      - 'scripts/guard-discovery.mjs'
+      - 'scripts/guard-discovery.test.mjs'
       - '.github/workflows/validate-tools.yml'
   workflow_dispatch:
 
@@ -30,5 +34,7 @@ jobs:
           node-version: '22'
       - name: Validator smoke tests
         run: node scripts/validate-tools.test.mjs
+      - name: Discovery safety guard tests
+        run: node scripts/guard-discovery.test.mjs
       - name: Validate tools.json
         run: node scripts/validate-tools.mjs data/tools.json

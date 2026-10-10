@@ -32,6 +32,8 @@ jobs:
         run: |
           node scripts/validate-tools.test.mjs
           node scripts/validate-tools.mjs data/tools.json
+          node scripts/guard-discovery.test.mjs
+          node scripts/guard-discovery.mjs
 
       - name: Commit new tools
         run: |
