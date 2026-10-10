@@ -11,3 +11,11 @@ assert.equal(filterPublicApis(rows,{query:'not-present'}).length,0);
 assert.equal(validatedPublicApis([{...rows[0],url:'https://example.org'}]).length,0);
 const html=fs.readFileSync('index.html','utf8');assert.ok(html.includes('href="public-api.html"'));
 console.log('Public API metadata & navigation tests passed');
+
+const sample=rows[0];
+assert.equal(filterPublicApis(rows,{provider:sample.provider,format:sample.format}).every(x=>x.provider===sample.provider&&x.format.toLocaleLowerCase('ko').includes(sample.format.toLocaleLowerCase('ko'))),true);
+assert.ok(filterPublicApis(rows,{query:String(sample.id)}).some(x=>x.id===sample.id));
+assert.ok(filterPublicApis(rows,{query:sample.provider+' '+sample.id}).some(x=>x.id===sample.id));
+assert.equal(filterPublicApis(rows,{provider:'존재하지않는기관'}).length,0);
+const apiHtml=fs.readFileSync('public-api.html','utf8');
+for(const id of ['apiProvider','apiFormat','apiPagination','apiPrev','apiNext'])assert.ok(apiHtml.includes('id="'+id+'"'));

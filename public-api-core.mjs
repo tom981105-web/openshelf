@@ -10,7 +10,15 @@ export function validatedPublicApis(rows){
  }
  return result;
 }
-export function filterPublicApis(items,opts={}){
- const q=(opts.query||'').trim().toLocaleLowerCase('ko'),cat=opts.category||'',approval=opts.approval||'';
- return items.filter(x=>(!cat||x.category===cat)&&(!approval||x.approval.includes(approval))&&(!q||[x.name,x.provider,x.category,x.summary].join(' ').toLocaleLowerCase('ko').includes(q)));
+export function filterPublicApis(items,opts={}) {
+ const q=String(opts.query||'').trim().toLocaleLowerCase('ko').normalize('NFKC');
+ const terms=q.split(/\s+/).filter(Boolean),cat=opts.category||'',approval=opts.approval||'',format=opts.format||'',provider=opts.provider||'';
+ return items.filter(x=>{
+  if(cat&&x.category!==cat)return false;
+  if(provider&&x.provider!==provider)return false;
+  if(approval&&!x.approval.includes(approval))return false;
+  if(format&&!x.format.toLocaleLowerCase('ko').includes(format.toLocaleLowerCase('ko')))return false;
+  const hay=[x.id,x.name,x.provider,x.category,x.summary,x.approval,x.format].join(' ').toLocaleLowerCase('ko').normalize('NFKC');
+  return terms.every(term=>hay.includes(term));
+ });
 }
