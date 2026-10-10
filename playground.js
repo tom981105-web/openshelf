@@ -25,6 +25,9 @@ function run(){
   $('playgroundStatus').textContent=result.ok?'실행 완료':'입력 오류';
   copyText=result.output;
 }
+// Open a curated related-feature demo via the source card's explicit URL.
+const requestedMode=new URLSearchParams(location.search).get('mode');
+if(Object.prototype.hasOwnProperty.call(modes,requestedMode))selectMode(requestedMode);
 document.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>selectMode(b.dataset.mode)));
 $('playgroundRun').addEventListener('click',run);$('playgroundReset').addEventListener('click',reset);
 $('playgroundCopy').addEventListener('click',async()=>{if(!copyText)return;try{await navigator.clipboard.writeText(copyText);$('playgroundStatus').textContent='복사 완료'}catch{$('playgroundStatus').textContent='복사할 수 없습니다.'}});
