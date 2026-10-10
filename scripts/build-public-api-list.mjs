@@ -12,7 +12,7 @@ for(const row of rows){
  apiRows++;
  const id=(row[ix['목록키']]||'').trim();
  const url=(row[ix['목록 URL']]||'').trim();
- if(!/^\d{8}$/.test(id)||!url.startsWith('https://www.data.go.kr/data/'+id+'/openapi.do'))continue;
+ if(!/^\d{7,8}$/.test(id)||!url.startsWith('https://www.data.go.kr/data/'+id+'/openapi.do'))continue;
  if(seen.has(id))continue;
  const name=(row[ix['목록명']]||'').trim(),provider=(row[ix['제공기관']]||'').trim();
  if(!name||!provider)continue;
