@@ -1,19 +1,29 @@
 // Only explicitly reviewed GitHub repositories may display a related local demo.
 // This is an OpenShelf simulation, never the repository's own code.
-const PLAYGROUND_REPOSITORIES=Object.freeze({
-  // These catalog entries are confirmed present in data/tools.json.
-  // The demonstration is illustrative and does not execute original project code.
-  'triggerdotdev/jsonhero-web':'json',
-  'tomwright/dasel':'json',
-  'kellyjonbrazil/jc':'json',
-  'charmbracelet/glow':'markdown',
-  'zettlr/zettlr':'markdown',
-  'burntsushi/ripgrep':'regex',
-  'pemistahl/grex':'regex',
-  'excalidraw/excalidraw':'official-excalidraw',
-  'saulpw/visidata':'csv',
-  'harelba/q':'csv'
+// Reviewed repository-to-experience registry. No automatic execution by keyword.
+const PLAYGROUND_REGISTRY=Object.freeze({
+ 'triggerdotdev/jsonhero-web':{mode:'json',experience:'json-query'},
+ 'tomwright/dasel':{mode:'json',experience:'json-query'},
+ 'kellyjonbrazil/jc':{mode:'json',experience:'json-query'},
+ 'charmbracelet/glow':{mode:'markdown',experience:'markdown'},
+ 'zettlr/zettlr':{mode:'markdown',experience:'markdown'},
+ 'burntsushi/ripgrep':{mode:'regex',experience:'regex'},
+ 'pemistahl/grex':{mode:'regex',experience:'regex'},
+ 'excalidraw/excalidraw':{mode:'official-excalidraw',experience:'official'},
+ 'saulpw/visidata':{mode:'csv',experience:'csv'},
+ 'harelba/q':{mode:'csv',experience:'sql'}
 });
+const PLAYGROUND_REPOSITORIES=Object.freeze(Object.fromEntries(Object.entries(PLAYGROUND_REGISTRY).map(([repo,entry])=>[repo,entry.mode])));
+function playgroundRegistryEntry(tool){
+ if(!tool||typeof tool.github!=='string')return null;
+ try{const url=new URL(tool.github);if(url.protocol!=='https:'||url.hostname.toLowerCase()!=='github.com')return null;
+ const parts=url.pathname.split('/').filter(Boolean);
+ if(parts.length!==2)return null;
+ const slug=parts.join('/').toLowerCase().replace(/\.git$/,'');
+ return PLAYGROUND_REGISTRY[slug]||null;
+ }catch{return null}
+}
+
 function playgroundModeForTool(tool){
   if(!tool||typeof tool.github!=='string')return null;
   try {
@@ -26,20 +36,19 @@ function playgroundModeForTool(tool){
   }catch{return null}
 }
 function playgroundLink(tool){
-  const mode=playgroundModeForTool(tool);
-  if(mode==='csv'&&tool.id==='q')return 'playground-sql.html?source='+encodeURIComponent(tool.id);
-  if(mode==='csv')return 'playground-csv.html?source='+encodeURIComponent(tool.id);
-  if(mode==='official-excalidraw')return 'playground-live.html?source='+encodeURIComponent(tool.id);
-  if(mode==='json'&&['jsonhero-web','dasel','jc'].includes(tool.id))return 'playground-jsonata.html?source='+encodeURIComponent(tool.id);
-  if(mode==='markdown'&&['glow','zettlr'].includes(tool.id))return 'playground-engine.html?source='+encodeURIComponent(tool.id);
-  return mode?'playground.html?mode='+encodeURIComponent(mode)+'&source='+encodeURIComponent(tool.id):null;
+ const entry=playgroundRegistryEntry(tool);
+ if(!entry)return null;
+ const experience=PLAYGROUND_EXPERIENCES.find(item=>item.key===entry.experience);
+ if(!experience)return null;
+ const path=experience.href.split('?')[0];
+ return path+(experience.href.includes('?')&&entry.experience!=='official'?experience.href.slice(experience.href.indexOf('?'))+'&':'?')+'source='+encodeURIComponent(tool.id);
 }
 
 function playgroundIsOfficial(tool){return playgroundModeForTool(tool)==='official-excalidraw'}
 
-function playgroundUsesRealEngine(tool){return !!tool&&['glow','zettlr'].includes(tool.id)&&playgroundModeForTool(tool)==='markdown'}
+function playgroundUsesRealEngine(tool){return playgroundExperienceForTool(tool)==='markdown'}
 
-function playgroundUsesJsonata(tool){return !!tool&&['jsonhero-web','dasel','jc'].includes(tool.id)&&playgroundModeForTool(tool)==='json'}
+function playgroundUsesJsonata(tool){return playgroundExperienceForTool(tool)==='json-query'}
 
 const PLAYGROUND_EXPERIENCES=Object.freeze([
   {key:'sql',title:'SQL WebAssembly Lab',type:'engine',kind:'실제 WebAssembly 엔진',description:'sql.js의 실제 SQLite WebAssembly를 브라우저에서 실행합니다. q 원본 CLI 실행은 아닙니다.',meta:'SQLite WASM · 격리 Worker',href:'playground-sql.html',action:'SQL 실행하기 ↗'},
@@ -51,16 +60,9 @@ const PLAYGROUND_EXPERIENCES=Object.freeze([
   {key:'regex',title:'Regex Tester',type:'demo',kind:'OpenShelf 자체 데모',description:'JavaScript 기반 정규식을 테스트합니다. ripgrep·grex 원본 엔진은 아닙니다.',meta:'OpenShelf 자체 구현 · 제한된 정규식',href:'playground.html?mode=regex',action:'정규식 체험 ↗'}
 ]);
 function playgroundExperienceForTool(tool){
-  if(!playgroundModeForTool(tool))return null;
-  if(playgroundIsOfficial(tool))return 'official';
-  if(playgroundModeForTool(tool)==='csv'&&tool.id==='q')return 'sql';
-  if(playgroundUsesCsvEngine(tool))return 'csv';
-  if(playgroundUsesRealEngine(tool))return 'markdown';
-  if(playgroundUsesJsonata(tool))return 'json-query';
-  if(playgroundModeForTool(tool)==='regex')return 'regex';
-  if(playgroundModeForTool(tool)==='json')return 'json-format';
-  return null;
+ return playgroundRegistryEntry(tool)?.experience||null;
 }
+
 function playgroundHubEntries(tools){
   const valid=Array.isArray(tools)?tools:[];
   return PLAYGROUND_EXPERIENCES.map(experience=>({
@@ -69,4 +71,5 @@ function playgroundHubEntries(tools){
   })).filter(entry=>entry.tools.length>0);
 }
 
-function playgroundUsesCsvEngine(tool){return playgroundModeForTool(tool)==='csv'}
+function playgroundUsesCsvEngine(tool){return playgroundExperienceForTool(tool)==='csv'}
+function playgroundUsesSqlEngine(tool){return playgroundExperienceForTool(tool)==='sql'}
