@@ -1,5 +1,935 @@
 [
   {
+    "id": "harlequin",
+    "name": "Harlequin",
+    "github": "https://github.com/tconbeer/harlequin",
+    "description": "터미널에서 사용하는 강력한 SQL 데이터베이스 IDE 클라이언트입니다.",
+    "longDescription": "터미널 환경에서 직관적인 텍스트 사용자 인터페이스(TUI)로 여러 데이터베이스를 관리하고 SQL 쿼리를 작성 및 실행할 수 있는 현대적인 개발 도구입니다. DuckDB, PostgreSQL, MySQL, SQLite 등 다양한 데이터베이스 어댑터를 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "SQL",
+      "IDE",
+      "터미널",
+      "데이터베이스",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://harlequin.sh",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Python",
+      "uv 권장"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uv를 사용한 설치",
+        "command": "uv tool install harlequin",
+        "note": "uv 툴을 사용하여 독립된 환경에 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 지원하는 데이터베이스 연결 문자열과 함께 harlequin 명령어를 실행합니다.",
+      "인터페이스 좌측 탐색기에서 테이블과 스키마를 확인합니다.",
+      "편집기 창에서 SQL 쿼리를 작성하고 실행하여 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6453,
+    "forks": 182,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "agent-governance-toolkit",
+    "name": "Agent Governance Toolkit",
+    "github": "https://github.com/microsoft/agent-governance-toolkit",
+    "description": "자율형 AI 에이전트를 위한 정책 집행, 제로 트러스트 보안 및 실행 샌드박스 도구입니다.",
+    "longDescription": "OWASP 에이전트 보안 위협에 대응하여 프로덕션 환경에 AI 에이전트를 안전하게 배포할 수 있도록 지원하는 거버넌스 툴킷입니다. 정책 엔진 검증, 프롬프트 인젝션 취약점 감사, 에이전트 행동 모니터링 기능을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "AI 에이전트",
+      "보안",
+      "거버넌스",
+      "OWASP",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/microsoft/agent-governance-toolkit",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install agent-governance-toolkit",
+        "note": "PyPI를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "agt doctor 명령어로 설치 상태와 환경을 진단합니다.",
+      "agt lint-policy 명령어로 정의된 정책 파일을 검증합니다.",
+      "agt verify 명령어로 보안 규정 준수 여부를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6415,
+    "forks": 1127,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "n8n-skills",
+    "name": "n8n Skills",
+    "github": "https://github.com/czlonkowski/n8n-skills",
+    "description": "Claude Code 환경에서 오류 없는 n8n 워크플로우를 구축할 수 있도록 돕는 전문가 스킬 세트입니다.",
+    "longDescription": "n8n-mcp 서버와 연동하여 AI 코딩 어시스턴트가 고품질의 n8n 워크플로우 자동화 코드를 작성하고 검증할 수 있도록 지원합니다. 자동화 시나리오 설계 시 오류를 줄이고 모범 사례를 따르도록 유도합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "n8n",
+      "AI 에이전트",
+      "워크플로우",
+      "자동화",
+      "MCP"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.n8n-skills.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "n8n-mcp 서버",
+      "Claude Code 또는 호환 클라이언트"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "플러그인 설치",
+        "command": "/plugin install czlonkowski/n8n-skills",
+        "note": "Claude Code 환경에서 직접 플러그인으로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "n8n-mcp 서버를 설치하고 환경 설정을 마칩니다.",
+      "Claude Code에 n8n-skills 플러그인을 추가합니다.",
+      "AI에게 자연어로 n8n 자동화 워크플로우 구성을 요청합니다."
+    ],
+    "examplePrompt": "노션에 새로운 행이 추가되면 슬랙으로 알림을 보내는 n8n 워크플로우를 만들어줘",
+    "usageNote": "",
+    "stars": 6398,
+    "forks": 1054,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "ludusavi",
+    "name": "Ludusavi",
+    "github": "https://github.com/mtkennerly/ludusavi",
+    "description": "PC 게임 세이브 데이터를 여러 플랫폼에서 백업하고 복원할 수 있는 도구입니다.",
+    "longDescription": "Rust로 작성된 크로스플랫폼 게임 세이브 백업 유틸리티로, 19,000개 이상의 게임을 지원합니다. Steam, GOG, Epic Games 등 다양한 스토어의 세이브 파일과 Windows 레지스트리 항목을 간편하게 백업 및 복원할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "백업",
+      "게임",
+      "CLI",
+      "GUI",
+      "Rust"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mtkennerly/ludusavi",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "릴리스 바이너리 다운로드",
+        "command": "https://github.com/mtkennerly/ludusavi/releases",
+        "note": "공식 릴리스 페이지에서 시스템에 맞는 실행파일을 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로그램을 실행하거나 명령줄 인터페이스를 엽니다.",
+      "백업(Backup) 버튼이나 명령을 실행하여 지원되는 게임의 세이브 경로를 스캔합니다.",
+      "백업 결과 확인 후 안전한 위치에 압축 저장하거나 복원합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6378,
+    "forks": 140,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "jscpd",
+    "name": "jscpd",
+    "github": "https://github.com/kucherenko/jscpd",
+    "description": "220개 이상의 프로그래밍 언어를 지원하는 소스 코드 중복 및 복사/붙여넣기 탐지 도구입니다.",
+    "longDescription": "Rust 엔진 기반으로 동작하여 매우 빠른 속도로 코드베이스 내의 중복 패턴을 찾아내는 정적 분석 도구입니다. SARIF, HTML 리포트 출력 및 AI 에이전트를 위한 MCP 서버 연동 기능을 제공하여 코드 품질 관리를 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "코드 중복",
+      "정적 분석",
+      "린터",
+      "MCP",
+      "Rust"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://jscpd.dev",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Node.js 또는 Rust 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM을 통한 설치",
+        "command": "npm install -g jscpd",
+        "note": "전역 패키지로 설치하여 터미널에서 바로 사용합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 루트 디렉토리에서 분석할 경로를 지정해 jscpd 명령어를 실행합니다.",
+      "생성된 리포트나 터미널 출력을 통해 코드 중복률과 위치를 확인합니다.",
+      "리팩토링을 통해 중복 코드를 제거합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6365,
+    "forks": 267,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "television",
+    "name": "Television",
+    "github": "https://github.com/alexpasmantier/television",
+    "description": "터미널에서 파일, 텍스트, Git 저장소 등을 실시간으로 탐색할 수 있는 빠른 퍼지 파인더입니다.",
+    "longDescription": "Rust 기반으로 개발된 고성능 터미널 퍼지 파인더로, 파일 검색뿐만 아니라 환경 변수, Docker 컨테이너 등 다양한 데이터 소스를 유연하고 빠르게 검색할 수 있도록 설계되었습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "퍼지 파인더",
+      "터미널",
+      "CLI",
+      "검색",
+      "Rust"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://alexpasmantier.github.io/television/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "빠른 설치 스크립트",
+        "command": "curl -fsSL https://alexpasmantier.github.io/television/install.sh | bash",
+        "note": "셸 스크립트를 통해 최신 버전을 다운로드하고 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 tv 명령어를 입력하여 실행합니다.",
+      "검색하고자 하는 대상 채널(파일, 환경 변수 등)을 선택합니다.",
+      "키워드를 입력하여 실시간으로 필터링된 결과를 확인하고 선택합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6334,
+    "forks": 189,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "mission-control",
+    "name": "Mission Control",
+    "github": "https://github.com/builderz-labs/mission-control",
+    "description": "AI 에이전트의 태스크 디스패치, 실행 모니터링, 비용 추적을 위한 자체 호스팅 제어판입니다.",
+    "longDescription": "OpenClaw, Claude Code, Codex 등 다양한 에이전트 런타임을 통합 관리할 수 있는 오픈소스 대시보드입니다. 로컬 SQLite 데이터베이스 기반으로 작동하며, 에이전트의 작업 실행 내역 검토와 실패 원인 분석, 스케줄 관리를 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "모니터링",
+      "오케스트레이션",
+      "대시보드",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://mc.builderz.dev",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Node.js",
+      "SQLite"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "OpenClaw",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "저장소 복제 및 의존성 설치",
+        "command": "git clone https://github.com/builderz-labs/mission-control.git && cd mission-control && npm install",
+        "note": "소스 코드를 다운로드하고 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm run dev 명령어로 개발 서버를 시작합니다.",
+      "웹 브라우저에서 로컬 대시보드 주소로 접속합니다.",
+      "에이전트 런타임을 연결하고 태스크를 할당하여 모니터링합니다."
+    ],
+    "examplePrompt": "에이전트의 최근 실행 실패 내역을 요약해줘",
+    "usageNote": "",
+    "stars": 6334,
+    "forks": 108,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "slack-term",
+    "name": "slack-term",
+    "github": "https://github.com/jpbruinsslot/slack-term",
+    "description": "그래픽 인터페이스 없이 터미널에서 직접 슬랙(Slack) 메시지를 확인하고 소통하는 클라이언트입니다.",
+    "longDescription": "Go 언어로 작성되어 가볍고 빠르게 동작하는 터미널용 슬랙 클라이언트입니다. 명령어 환경을 선호하는 개발자들이 터미널 창을 벗어나지 않고 채널 메시지를 읽고 대화할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Slack",
+      "터미널",
+      "CLI",
+      "메신저",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/jpbruinsslot/slack-term",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Slack API 토큰"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "바이너리 다운로드 후 이동",
+        "command": "mv slack-term /usr/local/bin",
+        "note": "다운로드한 실행 파일을 PATH 경로에 위치시킵니다."
+      }
+    ],
+    "usageSteps": [
+      "슬랙 API 토큰을 발급받아 환경 변수로 설정합니다.",
+      "터미널에서 slack-term 명령어를 실행합니다.",
+      "원하는 채널을 선택하고 메시지를 입력하거나 읽습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6614,
+    "forks": 225,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "beehive",
+    "name": "Beehive",
+    "github": "https://github.com/muesli/beehive",
+    "description": "이벤트와 필터를 기반으로 다양한 자동화 태스크를 수행할 수 있는 유연한 이벤트 및 에이전트 시스템입니다.",
+    "longDescription": "모듈식 구조로 설계되어 트위터, 이메일, RSS, IRC 등 다양한 소스의 이벤트를 감지하고 사용자가 정의한 규칙에 따라 자동화된 작업을 수행하도록 돕는 Go 언어 기반 시스템입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "이벤트",
+      "자동화",
+      "에이전트",
+      "워크플로우",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/muesli/beehive",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Go 환경 (소스 빌드 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "정적 바이너리 다운로드",
+        "command": "wget https://github.com/muesli/beehive/releases/download/v0.4.0/beehive_0.4.0_Linux_x86_64.tar.gz",
+        "note": "리눅스용 정적 빌드 파일을 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "설정 파일을 열어 연동할 서비스(Hive)와 이벤트 트리거 조건을 정의합니다.",
+      "beehive 서비스를 실행합니다.",
+      "설정된 이벤트가 발생하면 자동으로 연결된 작업이 수행되는지 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6490,
+    "forks": 327,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "promptui",
+    "name": "Promptui",
+    "github": "https://github.com/manifoldco/promptui",
+    "description": "Go 언어 기반의 명령줄 애플리케이션에서 대화형 입력 프롬프트를 쉽게 구현할 수 있는 라이브러리입니다.",
+    "longDescription": "CLI 도구를 개발할 때 사용자로부터 입력을 받거나 목록에서 항목을 선택하는 등의 대화형 인터페이스를 아름답고 직관적으로 만들 수 있도록 지원하는 Go 패키지입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "프롬프트",
+      "대화형",
+      "입력",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://www.manifold.co",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 패키지 가져오기",
+        "command": "go get github.com/manifoldco/promptui",
+        "note": "프로젝트에 라이브러리를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Go 소스 코드에서 promptui 패키지를 임포트합니다.",
+      "Prompt 또는 Select 구조체를 정의하여 라벨과 검증 로직을 작성합니다.",
+      "Run() 메서드를 호출하여 터미널에 대화형 프롬프트를 띄우고 사용자 입력을 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6405,
+    "forks": 343,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "kun",
+    "name": "Kun",
+    "github": "https://github.com/KunAgent/Kun",
+    "description": "코드, 문서 작성, 리서치 등을 지원하는 로컬 우선 AI 에이전트 작업 공간입니다.",
+    "longDescription": "소프트웨어 개발과 글쓰기, 디자인 작업을 지원하는 로컬 우선 AI 에이전트 작업 공간입니다. 데스크톱 GUI와 터미널 TUI를 모두 제공하며 동일한 로컬 런타임을 공유합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "로컬 우선",
+      "코딩 에이전트",
+      "생산성",
+      "데스크톱 앱"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://www.kun-agent.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트 또는 릴리스 페이지에서 데스크톱 버전을 다운로드합니다.",
+      "로컬 환경에서 런타임을 실행하고 프로젝트 디렉토리를 엽니다.",
+      "Code 또는 Work 모드에서 AI 에이전트에게 작업을 지시합니다."
+    ],
+    "examplePrompt": "현재 프로젝트의 주요 버그를 찾고 수정 계획을 세워줘",
+    "usageNote": "",
+    "stars": 6319,
+    "forks": 594,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "everywhere",
+    "name": "Everywhere",
+    "github": "https://github.com/Sylinko/Everywhere",
+    "description": "현재 앱 컨텍스트와 다중 LLM을 활용하는 화면 인식형 데스크톱 AI 어시스턴트입니다.",
+    "longDescription": "화면상의 내용을 인식하고 여러 LLM과 MCP 도구를 연동하여 사용자의 앱 간 작업을 돕는 대화형 AI 어시스턴트입니다. 최신 윈도우 및 크로스 플랫폼 환경을 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 어시스턴트",
+      "데스크톱 앱",
+      "화면 인식",
+      "MCP",
+      "AI 에이전트"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://everywhere.sylinko.com",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      ".NET 10"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "애플리케이션을 설치하고 실행합니다.",
+      "단축키를 통해 현재 화면의 컨텍스트를 불러옵니다.",
+      "AI 어시스턴트에게 필요한 작업을 요청합니다."
+    ],
+    "examplePrompt": "현재 화면에 있는 오류 메시지를 분석하고 해결 방법을 알려줘",
+    "usageNote": "",
+    "stars": 6306,
+    "forks": 392,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "calibre-web-automated",
+    "name": "Calibre-Web-Automated",
+    "github": "https://github.com/crocodilestick/Calibre-Web-Automated",
+    "description": "전자책 관리와 설정을 완전히 자동화해주는 셀프호스팅 디지털 라이브러리 솔루션입니다.",
+    "longDescription": "기존 Calibre-Web을 확장하여 전자책 수집, 메타데이터 정리, 변환 및 동기화 과정을 완전히 자동화합니다. 도커를 통해 간편하게 배포하고 개인 도서관을 구축할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "전자책",
+      "자동화",
+      "도커",
+      "셀프호스팅",
+      "캘리버"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/crocodilestick/Calibre-Web-Automated",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 컴포즈 실행",
+        "command": "docker compose up -d",
+        "note": "도커를 이용해 컨테이너를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 환경을 준비하고 설정 파일을 작성합니다.",
+      "docker compose up 명령어로 서비스를 시작합니다.",
+      "웹 브라우저로 접속하여 디지털 도서관을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6393,
+    "forks": 541,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "solopi",
+    "name": "SoloPi",
+    "github": "https://github.com/alipay/SoloPi",
+    "description": "모바일 안드로이드 기기를 위한 녹화, 재생, 성능 진단 기능을 갖춘 자동화 테스트 도구입니다.",
+    "longDescription": "안드로이드 실기기에서 UI 조작을 기록하고 재생하며 성능 지표를 측정할 수 있는 모바일 테스트 자동화 플랫폼입니다. AI 에이전트 연동과 무인 원격 제어 기능을 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "안드로이드",
+      "자동화 테스트",
+      "모바일",
+      "UI 테스트",
+      "ADB"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/alipay/SoloPi",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Android API 18+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "안드로이드 기기를 PC에 연결하고 USB 디버깅을 활성화합니다.",
+      "SoloPi 앱을 실행하여 테스트할 애플리케이션의 동작을 녹화합니다.",
+      "녹화된 시나리오를 재생하거나 성능 리포트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6325,
+    "forks": 1264,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "sparkyfitness",
+    "name": "SparkyFitness",
+    "github": "https://github.com/CodeWithCJ/SparkyFitness",
+    "description": "AI 기능을 탑재하여 영양, 운동, 건강 데이터를 함께 기록할 수 있는 셀프호스팅 피트니스 플랫폼입니다.",
+    "longDescription": "프라이버시를 보호하면서 식단, 운동, 수분 섭취, 신체 지표 등을 종합적으로 관리할 수 있는 오픈소스 피트니스 트래커입니다. AI 기반 식단 로깅 및 건강 코칭 기능을 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "피트니스",
+      "건강",
+      "셀프호스팅",
+      "도커",
+      "AI"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://codewithcj.github.io/SparkyFitness/",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 컴포즈 다운로드 및 실행",
+        "command": "curl -L -o docker-compose.yml https://raw.githubusercontent.com/CodeWithCJ/SparkyFitness/main/docker/docker-compose.prod.yml",
+        "note": "프로덕션용 도커 컴포즈 파일을 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "전용 디렉토리를 생성하고 도커 컴포즈 파일을 다운로드합니다.",
+      "도커 컨테이너를 백그라운드에서 실행합니다.",
+      "웹 브라우저나 모바일 앱을 통해 건강 및 운동 데이터를 기록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6284,
+    "forks": 403,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "yalc",
+    "name": "yalc",
+    "github": "https://github.com/wclr/yalc",
+    "description": "로컬 패키지 개발 시 npm 또는 yarn link보다 안정적으로 패키지를 테스트할 수 있는 개발 도구입니다.",
+    "longDescription": "원격 레지스트리에 배포하지 않고도 로컬 환경에서 여러 패키지 간의 의존성을 쉽게 테스트하고 관리할 수 있도록 돕는 CLI 도구입니다. 심볼릭 링크의 한계를 극복합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "NPM",
+      "Yarn",
+      "개발 도구",
+      "패키지 관리",
+      "CLI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/wclr/yalc",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Node.js",
+      "npm 또는 yarn"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "전역 설치",
+        "command": "npm i yalc -g",
+        "note": "npm을 사용하여 yalc를 전역으로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 디렉토리에서 yalc publish를 실행하여 로컬 저장소에 발행합니다.",
+      "사용할 프로젝트 디렉토리로 이동합니다.",
+      "yalc add package-name 명령어로 패키지를 추가하여 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6310,
+    "forks": 166,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "alive-progress",
+    "name": "alive-progress",
+    "github": "https://github.com/rsalmei/alive-progress",
+    "description": "실시간 처리량, 예상 완료 시간, 애니메이션을 지원하는 향상된 파이썬 진행률 표시바 라이브러리입니다.",
+    "longDescription": "터미널 환경에서 시각적으로 뛰어난 애니메이션과 함께 작업 진행 상황, 처리 속도, 남은 시간을 실시간으로 보여주는 파이썬용 프로그레스 바 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "파이썬",
+      "CLI",
+      "진행률 바",
+      "애니메이션",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/rsalmei/alive-progress",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install alive-progress",
+        "note": "파이썬 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 프로젝트에 라이브러리를 임포트합니다.",
+      "with 문과 함께 alive_bar 함수를 호출합니다.",
+      "반복문 안에서 바를 업데이트하여 시각적인 진행 상태를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6316,
+    "forks": 239,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "powerline-shell",
+    "name": "powerline-shell",
+    "github": "https://github.com/b-ryan/powerline-shell",
+    "description": "Git 상태, 현재 디렉토리, 가상환경 정보를 아름답게 표시해주는 셸 프롬프트 생성기입니다.",
+    "longDescription": "Bash, ZSH, Fish 등 주요 셸에서 사용할 수 있는 유용한 프롬프트 생성 도구입니다. Git 브랜치 상태나 이전 명령어의 성공 여부에 따라 색상이 변경됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "셸",
+      "Bash",
+      "ZSH",
+      "CLI",
+      "개발 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/b-ryan/powerline-shell",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Python",
+      "Powerline 호환 폰트"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install powerline-shell",
+        "note": "파이썬 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "셸 설정 파일(rc 파일)에 프롬프트 설정 스크립트를 추가합니다.",
+      "터미널을 재시작하여 적용된 프롬프트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6288,
+    "forks": 728,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "rundeck",
+    "name": "rundeck",
+    "github": "https://github.com/rundeck/rundeck",
+    "description": "기존 스크립트와 도구를 웹 콘솔을 통해 셀프서비스 운영 및 자동화할 수 있는 런북 자동화 서비스입니다.",
+    "longDescription": "운영 작업을 표준화하고 팀 내 권한 관리를 통해 안전하게 스크립트나 배포 작업을 실행할 수 있도록 지원하는 오픈소스 런북 자동화 서비스입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "자동화",
+      "데브옵스",
+      "운영",
+      "워크플로우",
+      "셀프호스팅"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://rundeck.org",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [
+      "Java 11",
+      "Node.js 18"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "요구사항에 맞춰 Java와 Node.js 환경을 구성합니다.",
+      "공식 다운로드 페이지에서 패키지를 내려받거나 서버에 설치합니다.",
+      "웹 콘솔에 접속하여 작업 스크립트를 등록하고 실행 권한을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6330,
+    "forks": 988,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
+    "id": "headlessbrowsers",
+    "name": "HeadlessBrowsers",
+    "github": "https://github.com/dhamaniasad/HeadlessBrowsers",
+    "description": "자동화, 테스트 등에 사용되는 전 세계의 헤드리스 웹 브라우저들을 모아둔 목록입니다.",
+    "longDescription": "그래픽 사용자 인터페이스가 없는 가상 DOM 환경에서 웹 페이지를 렌더링하고 자바스크립트를 실행할 수 있는 다양한 헤드리스 브라우저와 엔진들을 정리한 큐레이션 목록입니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "헤드리스 브라우저",
+      "웹 자동화",
+      "테스팅",
+      "큐레이션",
+      "크롤링"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "CC0-1.0",
+    "website": "http://dhamaniasad.github.io/HeadlessBrowsers",
+    "featured": 9,
+    "added": "2026-10-10",
+    "addedAt": "2026-10-10T05:03:57.253Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "목록 페이지에서 목적에 맞는 브라우저 엔진을 선택합니다.",
+      "해당 프로젝트의 공식 저장소로 이동합니다.",
+      "문서에 따라 브라우저를 설치하고 자동화 스크립트에 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6702,
+    "forks": 453,
+    "starsUpdatedAt": "2026-10-10"
+  },
+  {
     "id": "deploy-your-own-saas",
     "name": "Deploy Your Own SaaS",
     "github": "https://github.com/Atarity/deploy-your-own-saas",
