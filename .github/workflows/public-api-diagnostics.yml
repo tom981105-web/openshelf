@@ -12,7 +12,7 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 35
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,6 +22,8 @@ jobs:
         run: node scripts/diagnose-public-apis.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
-      - name: Dry-run one official discovery page (do not commit)
-        run: node --input-type=module -e "import {discover} from './scripts/discover-public-apis.mjs'; await discover({pages:1,maxDetails:12});"
+      - name: V15 bulk verified collection
+        run: |
+          node --input-type=module -e "import {discover} from './scripts/discover-public-apis.mjs'; await discover({pages:20,maxDetails:200}); await discover({pages:20,maxDetails:200});"
+          node --input-type=module -e "import fs from 'node:fs';const c=JSON.parse(fs.readFileSync('data/public-api-candidates.json','utf8'));const s=JSON.parse(fs.readFileSync('data/public-api-discovery-state.json','utf8'));console.log('V15_CANDIDATES_JSON='+JSON.stringify(c.items));console.log('V15_STATE_JSON='+JSON.stringify(s));"
 
