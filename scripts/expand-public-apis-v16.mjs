@@ -8,6 +8,7 @@ const starting=JSON.parse(await fs.readFile(repo,'utf8'));
 const baseCount=starting.items.length;
 if(baseCount<1419)throw Error('Refusing catalog shrink');
 const target=baseCount+5000;
+const baselineCandidates=new Set(JSON.parse(await fs.readFile(candidates,'utf8')).items.map(x=>String(x.id)));
 let completed=0,stalled=0,previousPage=0;
 const run=(command,args)=>execFileSync(command,args,{stdio:'inherit'});
 async function publish(){
@@ -16,7 +17,7 @@ async function publish(){
  const known=new Set(published.items.map(x=>String(x.id)));
  for(const item of candidateList){
   if(published.items.length>=target)break;
-  if(known.has(String(item.id)))continue;
+  if(known.has(String(item.id))||baselineCandidates.has(String(item.id)))continue;
   const entry={...item,url:'https://www.data.go.kr/data/'+item.id+'/openapi.do'};
   if(validatedPublicApis([entry]).length!==1)continue;
   published.items.push(entry); known.add(String(entry.id));
