@@ -88,5 +88,5 @@ async function loadCatalog(){
 $('apiRetry')?.addEventListener('click',loadCatalog);
 loadCatalog();
 for(const element of [search,category,approval,providerFilter,formatFilter])element.addEventListener(element===search?'input':'change',()=>{page=1;show()});
-$('apiPrev').addEventListener('click',()=>{if(page>1){page--;show();$('apiStatus').scrollIntoView({block:'start'})}});
+$('apiPrev').addEventListener('click',()=>{if(page>1){page--;show();$('apiStatus').scrollIntoView({block:'start'})});
 $('apiNext').addEventListener('click',()=>{page++;show();$('apiStatus').scrollIntoView({block:'start'})}});
