@@ -9,7 +9,7 @@ onmessage=async e=>{
   runtime=await loadPyodide({indexURL:base});
   runtime.globals.set('openshelf_source',String(e.data.code));
   runtime.globals.set('openshelf_csv',String(e.data.csv||''));
-  const output=await runtime.runPythonAsync(`import sys,io,traceback,json
+  const output=await runtime.runPythonAsync(`import sys,io,traceback,json,json
 _oldout,_olderr=sys.stdout,sys.stderr
 _buffer=io.StringIO()
 sys.stdout=sys.stderr=_buffer
