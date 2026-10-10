@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {discoverIds,parseOfficialDetail,discover,searchUrl} from './discover-public-apis.mjs';
+assert.ok(searchUrl(2).includes('dType=API'));
+assert.deepEqual(discoverIds('<a href="/data/15129415/openapi.do">A</a><a href="/data/15129415/openapi.do">B</a>'),['15129415']);
+assert.deepEqual(discoverIds('<a href="/data/15129415/fileData.do">file</a>'),[]);
+const doc='<html><body>'+'.'.repeat(220)+' OpenAPI 명 조달청_나라장터 가격정보현황서비스 분류체계 일반공공행정 - 정부자원관리 제공기관 조달청 관리부서명 조달데이터관리팀 설명 시설자재가격 조회 서비스입니다. 건축, 토목 등 다양한 시장 가격을 제공합니다. API 유형 REST 데이터 포맷 JSON+XML 운영단계 : 자동승인 </body></html>';
+const row=parseOfficialDetail(doc,'15129415');assert.equal(row?.provider,'조달청');assert.equal(row?.name,'조달청_나라장터 가격정보현황서비스');
+assert.equal(parseOfficialDetail('<html>error</html>','15129415'),null);
+let writes=[];
+const current={'data/public-api-candidates.json':JSON.stringify({items:[]}), 'data/public-apis.json':JSON.stringify({items:[]})};
+const fetcher=async url=>({ok:true,headers:new Headers({'content-type':'text/html'}),text:async()=>url.includes('selectDataSetList')?'<a href="/data/15129415/openapi.do">sample</a>':doc});
+const result=await discover({pages:1,fetcher,read:async key=>current[key],write:async(key,val)=>writes.push({key,val})});
+assert.equal(result.addedCandidates,1);assert.equal(writes.length,1);
+assert.equal(JSON.parse(writes[0].val).items[0].id,'15129415');
+writes=[];
+const fail=await discover({pages:1,fetcher:async()=>{throw Error('offline')},read:async key=>current[key],write:async(key,val)=>writes.push({key,val})});
+assert.equal(fail.addedCandidates,0);assert.equal(writes.length,0);
+console.log('Official API discovery safe-mode tests passed');
