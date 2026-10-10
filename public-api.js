@@ -81,7 +81,29 @@ async function loadCatalog(){
  let listing=[];
  try{
   const response=await fetch('data/public-api-official-list.json',{cache:'no-store'});
-  if(response.ok){const source=await response.json();if(source.verification==='metadata-only')listing=validatedPublicApis(source.items)}
+  if(response.ok){
+    const source=await response.json();
+    if(source.verification==='metadata-only'){
+      if(Array.isArray(source.parts)){
+        if(source.parts.length>30||source.total>20000)throw Error('Unexpected CSV manifest');
+        const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),18000);
+        try{
+          const groups=await Promise.all(source.parts.map(async file=>{
+            if(!new RegExp('^public-api-csv/part-[0-9]{2}[.]json$').test(file))throw Error('Invalid CSV shard path');
+            const shard=await fetch('data/'+file,{cache:'no-store',signal:controller.signal});
+            if(!shard.ok)throw Error('CSV shard HTTP '+shard.status);
+            const json=await shard.json();
+            if(json.verification!=='metadata-only'||!Array.isArray(json.items))throw Error('Invalid CSV shard');
+            return json.items;
+          }));
+          const combined=groups.flat();
+          if(combined.length!==source.total)throw Error('Incomplete CSV catalog');
+          listing=validatedPublicApis(combined);
+          if(listing.length!==source.total)throw Error('Invalid CSV catalog records');
+        }finally{clearTimeout(timer)}
+      }else listing=validatedPublicApis(source.items);
+    }
+  }
  }catch(e){console.warn('Official CSV listing unavailable; using verified catalog',e)}
  const merged=new Map(listing.map(x=>[x.id,x]));for(const item of confirmed)merged.set(item.id,item);
  items=[...merged.values()];$('apiTotal').textContent=items.length.toLocaleString('ko-KR');

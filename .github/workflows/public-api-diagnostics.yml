@@ -7,6 +7,9 @@ on:
       - 'scripts/discover-public-apis.mjs'
       - 'scripts/build-public-api-list.mjs'
       - 'scripts/public-api-full-catalog.test.mjs'
+      - 'scripts/public-api-csv-shards.test.mjs'
+      - 'data/public-api-official-list.json'
+      - 'data/public-api-csv/**'
       - 'scripts/verify-public-api-csv.mjs'
       - 'scripts/import-public-api-csv.mjs'
       - 'scripts/import-public-api-csv.test.mjs'
@@ -31,6 +34,8 @@ jobs:
         run: node --check scripts/verify-public-api-csv.mjs
       - name: Full CSV catalog integration tests
         run: node scripts/public-api-full-catalog.test.mjs
+      - name: Full CSV shard integrity tests
+        run: node scripts/public-api-csv-shards.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
