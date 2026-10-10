@@ -2,7 +2,7 @@ function validatedPublicApis(rows){
  if(!Array.isArray(rows))return [];
  const seen=new Set(),result=[];
  for(const x of rows){
-  if(!x||!/^\d{8}$/.test(String(x.id)))continue;
+  if(!x||!/^\d{7,8}$/.test(String(x.id)))continue;
   const expected='https://www.data.go.kr/data/'+x.id+'/openapi.do';
   if(x.url!==expected||seen.has(x.id))continue;
   if(![x.name,x.provider,x.category,x.summary,x.approval,x.format].every(v=>typeof v==='string'&&v.length>0))continue;
@@ -23,7 +23,7 @@ function filterPublicApis(items,opts={}) {
  });
 }
 
-const $=id=>document.getElementById(id);let items=[];
+const $=id=>document.getElementById(id);let items=[];let verifiedIds=new Set();
 const search=$('apiSearch'),category=$('apiCategory'),approval=$('apiApproval'),providerFilter=$('apiProvider'),formatFilter=$('apiFormat');
 const PAGE_SIZE=24;let page=1;
 function show(){
@@ -34,7 +34,7 @@ function show(){
  $('apiPageInfo').textContent=page+' / '+totalPages+' 페이지';
  $('apiPrev').disabled=page===1;$('apiNext').disabled=page===totalPages;
  $('apiList').replaceChildren();$('apiEmpty').hidden=filtered.length!==0;
- $('apiStatus').textContent=items.length+'개 확인 목록 중 '+filtered.length+'개 표시';
+ $('apiStatus').textContent=items.length.toLocaleString('ko-KR')+'개 API 중 '+filtered.length.toLocaleString('ko-KR')+'개 표시';
  for(const item of visible){
   const card=document.createElement('article');card.className='public-card';
   const meta=document.createElement('div');meta.className='public-meta';
@@ -43,7 +43,7 @@ function show(){
   const title=document.createElement('h3');title.textContent=item.name;
   const summary=document.createElement('p');summary.textContent=item.summary;
   const bottom=document.createElement('div');bottom.className='public-card-bottom';
-  const badge=document.createElement('span');badge.textContent=item.approval+' · '+item.format;
+  const badge=document.createElement('span');badge.textContent=(verifiedIds.has(item.id)?'상세페이지 확인':'공식 목록 등록')+' · '+item.approval+' · '+item.format;
   const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='공식 상세·신청 ↗';
   bottom.append(badge,link);card.append(meta,title,summary,bottom);$('apiList').append(card);
  }
@@ -77,7 +77,15 @@ async function loadCatalog(){
   category.replaceChildren(new Option('모든 분야',''));
   providerFilter.replaceChildren(new Option('모든 기관',''));
 
- items=validatedPublicApis(data.items);$('apiTotal').textContent=String(items.length);
+ const confirmed=validatedPublicApis(data.items);verifiedIds=new Set(confirmed.map(x=>x.id));
+ let listing=[];
+ try{
+  const response=await fetch('data/public-api-official-list.json',{cache:'no-store'});
+  if(response.ok){const source=await response.json();if(source.verification==='metadata-only')listing=validatedPublicApis(source.items)}
+ }catch(e){console.warn('Official CSV listing unavailable; using verified catalog',e)}
+ const merged=new Map(listing.map(x=>[x.id,x]));for(const item of confirmed)merged.set(item.id,item);
+ items=[...merged.values()];$('apiTotal').textContent=items.length.toLocaleString('ko-KR');
+ const verifiedCount=$('apiVerifiedCount');if(verifiedCount)verifiedCount.textContent=confirmed.length.toLocaleString('ko-KR');
  const categories=[...new Set(items.map(x=>x.category))].sort((a,b)=>a.localeCompare(b,'ko'));
  const providers=[...new Set(items.map(x=>x.provider))].sort((a,b)=>a.localeCompare(b,'ko'));
  for(const name of providers){const option=document.createElement('option');option.value=name;option.textContent=name;providerFilter.append(option)}

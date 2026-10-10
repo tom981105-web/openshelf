@@ -5,6 +5,8 @@ on:
       - 'scripts/diagnose-public-apis.mjs'
       - 'scripts/diagnose-public-apis.test.mjs'
       - 'scripts/discover-public-apis.mjs'
+      - 'scripts/build-public-api-list.mjs'
+      - 'scripts/public-api-full-catalog.test.mjs'
       - 'scripts/verify-public-api-csv.mjs'
       - 'scripts/import-public-api-csv.mjs'
       - 'scripts/import-public-api-csv.test.mjs'
@@ -27,6 +29,8 @@ jobs:
         run: node scripts/import-public-api-csv.test.mjs
       - name: Verify CSV staging script syntax
         run: node --check scripts/verify-public-api-csv.mjs
+      - name: Full CSV catalog integration tests
+        run: node scripts/public-api-full-catalog.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
