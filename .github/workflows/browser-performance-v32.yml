@@ -5,6 +5,9 @@ on:
     paths:
       - 'unified-search.html'
       - 'unified-search.js'
+      - 'ai-search-config.js'
+      - 'worker/ai-smart-search.mjs'
+      - 'scripts/ai-search-v39.test.mjs'
       - 'unified-search-core.mjs'
       - 'unified-search.css'
       - 'catalog-ui-v33.css'
@@ -43,6 +46,8 @@ jobs:
         run: node scripts/catalog-ui-v33.test.mjs
       - name: Validate V34 card and detail markup
         run: node scripts/search-cards-v34.test.mjs
+      - name: Validate V39 AI boundary and fallback
+        run: node scripts/ai-search-v39.test.mjs
       - name: Measure real Chromium search flows
         run: node scripts/browser-performance-v32.mjs
       - name: Upload performance report

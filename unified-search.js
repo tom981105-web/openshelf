@@ -1,4 +1,5 @@
 import {normalize,rank,filterResults,makeUrl,suggestQueries,sortResults,SORT_MODES,filterFacets,facetOptions} from './unified-search-core.mjs';
+import {AI_SEARCH_ENDPOINT} from './ai-search-config.js';
 const $=id=>document.getElementById(id);
 const types=[['tool','오픈소스'],['api','Public API'],['file','Public Data']];
 const state={provider:'',category:'',format:'',sort:new URLSearchParams(location.search).get('sort')||'relevance',rows:[],failed:[],loaded:0,page:1,query:new URLSearchParams(location.search).get('q')||'',type:new URLSearchParams(location.search).get('type')||'all'};
@@ -59,3 +60,30 @@ async function ensure(type){if(cache.has(type)||pending.has(type))return pending
 function refreshCatalogs(){for(const type of requiredTypes())void ensure(type);displayState()}
 $('retry').addEventListener('click',()=>{for(const type of requiredTypes())if(errors.has(type)){cache.delete(type);errors.delete(type)}refreshCatalogs()});
 refreshCatalogs();
+
+async function askAi(){
+ const question=$('aiQuestion').value.trim(),button=$('aiAsk');
+ if(question.length<4){$('aiStatus').textContent='질문을 4자 이상 입력해 주세요.';return}
+ $('aiAnswer').hidden=true;
+ if(!AI_SEARCH_ENDPOINT){$('aiStatus').textContent='Gemini 서버 설정 전입니다. 아래의 기존 통합 검색을 이용해 주세요.';return}
+ if(!/^https:\/\/[^\s]+$/.test(AI_SEARCH_ENDPOINT)){$('aiStatus').textContent='안전한 HTTPS 서버 주소를 확인해 주세요.';return}
+ button.disabled=true;$('aiStatus').textContent='관련 목록 검색 중…';
+ try{
+  const pendingTypes=requiredTypes();for(const type of pendingTypes)await ensure(type);
+  const rows=pendingTypes.flatMap(type=>cache.get(type)||[]);
+  const tokens=normalize(question).split(/\s+/).filter(x=>x.length>=2&&!/^(싶어|해줘|알려줘|찾아줘|어떻게|만들고|싶어요|관련|추천|도구|데이터|정보)$/.test(x)).slice(0,8);
+  let candidates=filterResults(rows,question,state.type).slice(0,12);
+  if(!candidates.length){const pool=new Map();for(const token of tokens)for(const row of filterResults(rows,token,state.type).slice(0,12)){const id=row.type+':'+row.id;pool.set(id,{row,count:(pool.get(id)?.count||0)+1})}candidates=[...pool.values()].sort((a,b)=>b.count-a.count).slice(0,12).map(x=>x.row)}
+  if(!candidates.length){$('aiStatus').textContent='관련 후보를 찾지 못했습니다. 핵심 키워드를 포함해 다시 질문해 주세요.';return}
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
+  let response;try{response=await fetch(AI_SEARCH_ENDPOINT,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({query:question,candidates:candidates.map(x=>({id:x.id,type:x.type,name:x.name,provider:x.provider,category:x.category,summary:x.summary||x.description}))}),signal:controller.signal})}finally{clearTimeout(timer)}
+  const data=await response.json();if(!response.ok)throw Error(data.error||'AI 서버 오류');
+  const chosen=(data.ids||[]).map(id=>candidates.find(x=>x.id===id)).filter(Boolean);
+  $('aiSummary').textContent=String(data.summary||'추천 결과를 확인해 주세요.');
+  $('aiMatches').replaceChildren(...chosen.map(card));$('aiAnswer').hidden=false;
+  $('aiStatus').textContent='등록된 후보 '+candidates.length+'건을 기준으로 분석했습니다. AI 설명은 정확성을 확인해 주세요.';
+ }catch(error){$('aiStatus').textContent='AI 추천을 사용할 수 없습니다. 기존 통합 검색은 계속 이용할 수 있습니다.';console.warn('AI search unavailable',error.message)}
+ finally{button.disabled=false}
+}
+$('aiAsk').addEventListener('click',askAi);
+$('aiQuestion').addEventListener('keydown',event=>{if(event.key==='Enter')void askAi()});
