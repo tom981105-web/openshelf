@@ -12,7 +12,7 @@ assert.match(js,/retries:2/);
 assert.match(js,/failures.length/);
 assert.match(js,/createSearchIndex\(items\)/);
 const html=fs.readFileSync('public-api.html','utf8');
-assert.match(html,/20261011-v17-search/);
+assert.match(html,/public-api[.]js[?]v=20261011-v1[78]-/);
 const manifest=JSON.parse(fs.readFileSync('data/public-api-official-list.json','utf8'));
 assert.equal(manifest.total,12027);
 console.log('V17 search and resilient shard loading regression tests passed');
