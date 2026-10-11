@@ -1,0 +1,22 @@
+/* V33: shared, responsive catalogue design enhancements. No data or behaviour dependencies. */
+.public-shell{width:100%}
+.public-header{gap:20px}
+.public-header nav{align-items:center;flex-wrap:wrap;row-gap:8px}
+.public-header nav a{display:inline-flex;align-items:center;min-height:36px;padding:7px 10px;border-radius:8px;transition:background .15s ease,color .15s ease}
+.public-header nav a:hover,.public-header nav a:focus-visible{background:var(--soft);color:var(--ink)}
+.public-header nav a[aria-current="page"]{background:var(--soft);font-weight:800}
+.public-hero{padding-top:clamp(48px,7vw,88px);padding-bottom:clamp(45px,6vw,70px)}
+.public-catalog{padding-top:clamp(42px,5vw,72px)}
+.public-controls input,.public-controls select{border-radius:9px;transition:border-color .15s ease,box-shadow .15s ease}
+.public-controls input:focus,.public-controls select:focus{outline:none;border-color:var(--accent);box-shadow:0 0 0 3px color-mix(in srgb,var(--accent) 20%,transparent)}
+.public-card,.result-card{border-radius:12px;transition:transform .15s ease,box-shadow .15s ease,border-color .15s ease}
+.public-card:hover,.result-card:hover{transform:translateY(-2px);box-shadow:var(--shadow);border-color:var(--accent)}
+.public-pagination button,.file-detail-btn,.file-detail-actions button{border-radius:8px;min-height:42px}
+.public-pagination button:not(:disabled):hover,.file-detail-btn:hover,.file-detail-actions button:hover{border-color:var(--accent)}
+.public-empty{border-radius:12px}
+#apiStatus,#fileStatus,#status{line-height:1.7;min-height:24px}
+#apiRetry,#fileRetry,#retry{min-height:42px;border:1px solid var(--line);border-radius:8px;background:var(--paper);padding:9px 16px;cursor:pointer}
+#apiRetry:hover,#fileRetry:hover,#retry:hover{border-color:var(--accent)}
+:where(a,button,input,select):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:760px){.public-header{height:auto;min-height:76px;flex-wrap:wrap;padding:12px 0}.public-header nav{width:100%;overflow-x:auto;flex-wrap:nowrap;gap:4px;padding-bottom:4px;scrollbar-width:thin}.public-header nav a{white-space:nowrap;font-size:12px}.public-hero h1{font-size:clamp(39px,11vw,62px);letter-spacing:-2px}.public-catalog{padding-bottom:40px}.public-controls input{min-width:0}.result-card,.public-card{padding:20px}}
+@media(prefers-reduced-motion:reduce){.public-card,.result-card,.public-controls input,.public-controls select,.public-header nav a{transition:none}.public-card:hover,.result-card:hover{transform:none}}
