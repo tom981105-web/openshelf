@@ -1,7 +1,27 @@
 export const normalize=value=>String(value??'').normalize('NFKC').toLocaleLowerCase('ko-KR').replace(/\s+/g,' ').trim();
 const indexed=new WeakMap();
-function fields(row){let result=indexed.get(row);if(!result){result={name:normalize(row.name),provider:normalize(row.provider||row.category),summary:normalize(row.summary||row.description),tags:normalize(Array.isArray(row.tags)?row.tags.join(' '):'')};indexed.set(row,result)}return result}
-export function rank(row,query){const terms=normalize(query).split(' ').filter(Boolean);if(!terms.length)return 1;const {name,provider,summary,tags}=fields(row);let score=0;for(const term of terms){if(name===term)score+=30;else if(name.startsWith(term))score+=15;else if(name.includes(term))score+=9;else if(provider.includes(term))score+=5;else if(tags.includes(term))score+=4;else if(summary.includes(term))score+=1;else if(String(row.id).includes(term))score+=3;else return 0}return score}
+function fields(row){let result=indexed.get(row);if(!result){result={name:normalize(row.name),provider:normalize(row.provider),category:normalize(row.category),summary:normalize(row.summary||row.description),tags:normalize(Array.isArray(row.tags)?row.tags.join(' '):'')};indexed.set(row,result)}return result}
+export function rank(row,query){
+ const q=normalize(query),terms=q.split(' ').filter(Boolean);if(!terms.length)return 1;
+ const {name,provider,category,summary,tags}=fields(row),id=String(row.id||'');
+ if(id===q)return 1000;
+ let score=0;
+ if(name===q)score+=150;
+ else if(name.startsWith(q))score+=65;
+ else if(name.includes(q))score+=30;
+ for(const term of terms){
+  if(name===term)score+=35;
+  else if(name.startsWith(term))score+=22;
+  else if(name.includes(term))score+=15;
+  else if(provider.includes(term))score+=9;
+  else if(category.includes(term))score+=8;
+  else if(tags.includes(term))score+=6;
+  else if(summary.includes(term))score+=2;
+  else if(id.includes(term))score+=12;
+  else return 0;
+ }
+ return score;
+}
 export function filterResults(rows,query,type='all'){return rows.filter(row=>type==='all'||row.type===type).map((row,index)=>({row,index,score:rank(row,query)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.index-b.index).map(x=>x.row)}
 export function makeUrl(row){if(row.type==='api'&&/^\d{7,8}$/.test(row.id))return 'public-api.html?api='+encodeURIComponent(row.id);if(row.type==='file'&&/^\d{7,8}$/.test(row.id))return 'public-data.html?file='+encodeURIComponent(row.id);return 'index.html?tool='+encodeURIComponent(row.id||'')}
 
