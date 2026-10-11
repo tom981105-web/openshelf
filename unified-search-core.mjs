@@ -37,3 +37,14 @@ export function suggestQueries(rows,query,limit=6){
  for(const row of rows){if(++seen>150000)break;const values=[row.name,row.category,row.provider].filter(x=>typeof x==='string');for(const value of values){const v=normalize(value);if(!v)continue;for(const word of [v,...v.split(/[\s/(),·_-]+/).filter(w=>w.length>=2)]){if(word===q)continue;if(word.startsWith(q))put(word,70-Math.min(25,word.length-q.length));else if(q.length>=3&&word.length<=24&&Math.abs(word.length-q.length)<=2){const dist=editDistance(q,word,2);if(dist<=1||(dist===2&&q.length>=6))put(word,40-dist*10)}}}}
  return [...scored].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'ko')).slice(0,limit).map(([value])=>value);
 }
+
+export const SORT_MODES=['relevance','name-asc','name-desc','provider','type'];
+export function sortResults(rows,mode='relevance'){
+ if(!SORT_MODES.includes(mode)||mode==='relevance')return rows;
+ const collator=new Intl.Collator('ko',{numeric:true,sensitivity:'base'});
+ const key=row=>mode==='provider'?(row.provider||row.category||''):mode==='type'?(row.type||''):(row.name||'');
+ return rows.map((row,index)=>({row,index})).sort((a,b)=>{
+  const cmp=collator.compare(String(key(a.row)),String(key(b.row)));
+  return (mode==='name-desc'?-cmp:cmp)||a.index-b.index;
+ }).map(x=>x.row);
+}
