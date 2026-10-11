@@ -7,6 +7,10 @@ on:
       - 'unified-search.js'
       - 'unified-search-core.mjs'
       - 'unified-search.css'
+      - 'catalog-ui-v33.css'
+      - 'public-api.html'
+      - 'public-data.html'
+      - 'scripts/catalog-ui-v33.test.mjs'
       - 'scripts/browser-performance-v32.mjs'
       - '.github/workflows/browser-performance-v32.yml'
       - 'data/public-api-csv/**'
@@ -34,6 +38,8 @@ jobs:
             sleep 1
           done
           exit 1
+      - name: Validate V33 catalogue markup and styles
+        run: node scripts/catalog-ui-v33.test.mjs
       - name: Measure real Chromium search flows
         run: node scripts/browser-performance-v32.mjs
       - name: Upload performance report
