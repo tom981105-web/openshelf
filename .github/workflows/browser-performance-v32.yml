@@ -11,6 +11,7 @@ on:
       - 'public-api.html'
       - 'public-data.html'
       - 'scripts/catalog-ui-v33.test.mjs'
+      - 'scripts/search-cards-v34.test.mjs'
       - 'scripts/browser-performance-v32.mjs'
       - '.github/workflows/browser-performance-v32.yml'
       - 'data/public-api-csv/**'
@@ -40,6 +41,8 @@ jobs:
           exit 1
       - name: Validate V33 catalogue markup and styles
         run: node scripts/catalog-ui-v33.test.mjs
+      - name: Validate V34 card and detail markup
+        run: node scripts/search-cards-v34.test.mjs
       - name: Measure real Chromium search flows
         run: node scripts/browser-performance-v32.mjs
       - name: Upload performance report
