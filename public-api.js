@@ -10,13 +10,32 @@ function validatedPublicApis(rows){
  }
  return result;
 }
+const SECTOR_RULES=[
+ ['교통·물류',/교통|물류|항공|철도|도로|해운|자동차|운송/],
+ ['환경·에너지',/환경|에너지|기상|기후|대기|수질|폐기물|자연/],
+ ['보건·의료',/보건|의료|건강|질병|식품|의약/],
+ ['교육·연구',/교육|연구|과학|기술|학교|학술/],
+ ['건축·시설',/건축|시설|주택|도시|국토|건설|토목|소방|안전/],
+ ['경제·산업',/경제|산업|금융|재정|기업|고용|노동|무역|조달/],
+ ['농림·해양',/농림|농업|축산|산림|수산|해양|어업/],
+ ['문화·관광',/문화|관광|체육|예술|여가|여행/],
+ ['행정·법률',/행정|법률|법무|공공|정치|지방자치|국방|통계/],
+ ['사회·복지',/사회|복지|인구|가족|보육|노인|아동/]
+];
+function sectorOf(category){
+ const name=String(category||'').split(/\s*[-–>]\s*/)[0].trim();
+ for(const [label,re] of SECTOR_RULES)if(re.test(name))return label;
+ return '기타·미분류';
+}
 const indexedText=new Map();
 function createSearchIndex(rows){indexedText.clear();for(const x of rows)indexedText.set(x.id,[x.id,x.name,x.provider,x.category,x.summary,x.approval,x.format].join(' ').toLocaleLowerCase('ko').normalize('NFKC'));}
 function filterPublicApis(items,opts={}) {
  const q=String(opts.query||'').trim().toLocaleLowerCase('ko').normalize('NFKC');
- const terms=q.split(/\s+/).filter(Boolean),cat=opts.category||'',approval=opts.approval||'',format=opts.format||'',provider=opts.provider||'';
+ const terms=q.split(/\s+/).filter(Boolean),cat=opts.category||'',approval=opts.approval||'',format=opts.format||'',provider=opts.provider||'',sector=opts.sector||'',verification=opts.verification||'',verified=opts.verifiedIds;
  return items.filter(x=>{
   if(cat&&x.category!==cat)return false;
+  if(sector&&sectorOf(x.category)!==sector)return false;
+  if(verification&&verified&&((verification==='verified')!==verified.has(x.id)))return false;
   if(provider&&x.provider!==provider)return false;
   if(approval&&!x.approval.includes(approval))return false;
   if(format&&!x.format.toLocaleLowerCase('ko').includes(format.toLocaleLowerCase('ko')))return false;
@@ -26,10 +45,10 @@ function filterPublicApis(items,opts={}) {
 }
 
 const $=id=>document.getElementById(id);let items=[];let verifiedIds=new Set();
-const search=$('apiSearch'),category=$('apiCategory'),approval=$('apiApproval'),providerFilter=$('apiProvider'),formatFilter=$('apiFormat');
+const search=$('apiSearch'),category=$('apiCategory'),approval=$('apiApproval'),providerFilter=$('apiProvider'),formatFilter=$('apiFormat'),sectorFilter=$('apiSector'),verificationFilter=$('apiVerification');
 const PAGE_SIZE=24;let page=1;
 function show(){
- const filtered=filterPublicApis(items,{query:search.value,category:category.value,approval:approval.value,provider:providerFilter.value,format:formatFilter.value});
+ const filtered=filterPublicApis(items,{query:search.value,category:category.value,approval:approval.value,provider:providerFilter.value,format:formatFilter.value,sector:sectorFilter.value,verification:verificationFilter.value,verifiedIds});
  const totalPages=Math.max(1,Math.ceil(filtered.length/PAGE_SIZE));page=Math.min(page,totalPages);
  const visible=filtered.slice((page-1)*PAGE_SIZE,page*PAGE_SIZE);
  $('apiPagination').hidden=filtered.length<=PAGE_SIZE;
@@ -115,8 +134,12 @@ async function loadCatalog(){
   verifiedIds=new Set(confirmed.map(x=>x.id));
   createSearchIndex(items);
   page=1;
-  category.replaceChildren(new Option('모든 분야',''));
+  category.replaceChildren(new Option('모든 세부 분야',''));
+  sectorFilter.replaceChildren(new Option('모든 대분류',''));
   providerFilter.replaceChildren(new Option('모든 기관',''));
+  const sectors=[...new Set(items.map(x=>sectorOf(x.category)))].sort((a,b)=>a.localeCompare(b,'ko'));
+  const sectorCounts=new Map(sectors.map(name=>[name,items.filter(x=>sectorOf(x.category)===name).length]));
+  for(const name of sectors)sectorFilter.add(new Option(name+' ('+sectorCounts.get(name).toLocaleString('ko-KR')+')',name));
   const categories=[...new Set(items.map(x=>x.category))].sort((a,b)=>a.localeCompare(b,'ko'));
   const providers=[...new Set(items.map(x=>x.provider))].sort((a,b)=>a.localeCompare(b,'ko'));
   for(const name of categories)category.add(new Option(name,name));
@@ -132,6 +155,6 @@ async function loadCatalog(){
 }
 $('apiRetry')?.addEventListener('click',loadCatalog);
 loadCatalog();
-for(const element of [search,category,approval,providerFilter,formatFilter])element.addEventListener(element===search?'input':'change',()=>{if(element===search){clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;show()},180)}else{page=1;show()}});
+for(const element of [search,sectorFilter,category,approval,providerFilter,formatFilter,verificationFilter])element.addEventListener(element===search?'input':'change',()=>{if(element===search){clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;show()},180)}else{page=1;show()}});
 $('apiPrev').addEventListener('click',()=>{if(page>1){page--;show();$('apiStatus').scrollIntoView({block:'start'});}});
 $('apiNext').addEventListener('click',()=>{page++;show();$('apiStatus').scrollIntoView({block:'start'});});
