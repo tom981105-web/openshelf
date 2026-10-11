@@ -1,0 +1,37 @@
+name: Public catalog quality audit
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '15 4 * * 2'
+  pull_request:
+    paths:
+      - 'scripts/audit-public-catalogs.mjs'
+      - 'scripts/audit-public-catalogs.test.mjs'
+      - '.github/workflows/public-catalog-quality.yml'
+      - 'data/public-api-official-list.json'
+      - 'data/public-data-official-list.json'
+      - 'data/public-api-csv/**'
+      - 'data/public-data-csv/**'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run quality regression tests
+        run: node scripts/audit-public-catalogs.test.mjs
+      - name: Produce catalog quality report
+        if: always()
+        run: node scripts/audit-public-catalogs.mjs data public-catalog-quality-report.json
+      - name: Upload review report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-catalog-quality-report
+          path: public-catalog-quality-report.json
+          if-no-files-found: warn
