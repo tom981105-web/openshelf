@@ -65,10 +65,57 @@ function show(){
   const summary=document.createElement('p');summary.textContent=item.summary;
   const bottom=document.createElement('div');bottom.className='public-card-bottom';
   const badge=document.createElement('span');badge.textContent=(verifiedIds.has(item.id)?'상세페이지 확인':'공식 목록 등록')+' · '+item.approval+' · '+item.format;
-  const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='공식 상세·신청 ↗';
-  bottom.append(badge,link);card.append(meta,title,summary,bottom);$('apiList').append(card);
+  const detail=document.createElement('button');detail.type='button';detail.className='public-detail-trigger';detail.textContent='상세정보 보기';detail.addEventListener('click',()=>openApiDetail(item.id));
+  const link=document.createElement('a');link.href=item.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='공식 신청 ↗';
+  bottom.append(badge,detail,link);card.append(meta,title,summary,bottom);$('apiList').append(card);
  }
 }
+let detailPreviousFocus=null;
+function closeApiDetail(){
+ const dialog=$('apiDetailDialog');
+ if(!dialog||dialog.hidden)return;
+ dialog.hidden=true;document.body.classList.remove('api-detail-open');
+ if(detailPreviousFocus&&document.contains(detailPreviousFocus))detailPreviousFocus.focus();
+}
+function openApiDetail(id){
+ const item=items.find(x=>x.id===id);
+ if(!item)return;
+ const dialog=$('apiDetailDialog');
+ if(!dialog)return;
+ detailPreviousFocus=document.activeElement;
+ $('detailTitle').textContent=item.name;
+ $('detailId').textContent=item.id;
+ $('detailProvider').textContent=item.provider;
+ $('detailCategory').textContent=item.category;
+ $('detailSector').textContent=sectorOf(item.category);
+ $('detailFormat').textContent=item.format;
+ $('detailApproval').textContent=item.approval;
+ $('detailSummary').textContent=item.summary;
+ const verified=verifiedIds.has(item.id);
+ $('detailVerification').textContent=verified?'공식 상세페이지 정보 확인':'공식 CSV 목록 등록 (상세페이지 미확인)';
+ $('detailVerificationNote').textContent=verified
+  ?'공식 상세페이지에서 이름·기관 등의 메타데이터를 확인한 항목입니다. 실제 API 호출 성공까지 검증한 것은 아닙니다.'
+  :'공식 목록 CSV에 등록된 정보입니다. 상세페이지 메타데이터와 실제 API 호출 성공 여부는 검증하지 않았습니다.';
+ const official=$('detailOfficialLink');official.href=item.url;
+ dialog.hidden=false;document.body.classList.add('api-detail-open');
+ $('apiDetailClose').focus();
+ const url=new URL(window.location.href);url.searchParams.set('api',item.id);
+ history.replaceState(null,'',url);
+}
+function detailFromUrl(){
+ const id=new URLSearchParams(window.location.search).get('api');
+ if(id&&/^[0-9]{7,8}$/.test(id))openApiDetail(id);
+}
+$('apiDetailClose')?.addEventListener('click',()=>{
+ closeApiDetail();
+ const url=new URL(window.location.href);url.searchParams.delete('api');history.replaceState(null,'',url);
+});
+$('apiDetailDialog')?.addEventListener('click',event=>{
+ if(event.target===event.currentTarget){closeApiDetail();const url=new URL(location.href);url.searchParams.delete('api');history.replaceState(null,'',url)}
+});
+document.addEventListener('keydown',event=>{
+ if(event.key==='Escape'&&!$('apiDetailDialog')?.hidden){closeApiDetail();const url=new URL(location.href);url.searchParams.delete('api');history.replaceState(null,'',url)}
+});
 async function fetchJson(url,{timeoutMs=12000,retries=1}={}){
  for(let attempt=0;attempt<=retries;attempt++){
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
@@ -147,6 +194,7 @@ async function loadCatalog(){
   $('apiTotal').textContent=items.length.toLocaleString('ko-KR');
   const v=$('apiVerifiedCount');if(v)v.textContent=confirmed.length.toLocaleString('ko-KR');
   show();
+  detailFromUrl();
   if(failures.length){
    $('apiStatus').textContent+=' · 일부 공식 목록 파일을 불러오지 못했습니다 ('+failures.length+'개). 다시 시도할 수 있습니다.';
    if(retry)retry.hidden=false;
