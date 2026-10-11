@@ -11,6 +11,12 @@ on:
       - 'scripts/public-api-v17.test.mjs'
       - 'scripts/public-api-v18.test.mjs'
       - 'scripts/public-api-v19.test.mjs'
+      - 'scripts/public-data-v21-v22.test.mjs'
+      - 'public-data.js'
+      - 'public-data.html'
+      - 'public-data.css'
+      - 'data/public-data-csv/**'
+      - 'data/public-data-official-list.json'
       - 'scripts/public-api-v20.test.mjs'
       - 'scripts/validate-public-api-v20.mjs'
       - 'scripts/update-public-api-csv.mjs'
@@ -56,6 +62,8 @@ jobs:
         run: node scripts/public-api-v20.test.mjs
       - name: V20 dynamic catalog validation
         run: node scripts/validate-public-api-v20.mjs
+      - name: Public Data V21/V22 full catalog validation
+        run: node scripts/public-data-v21-v22.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
