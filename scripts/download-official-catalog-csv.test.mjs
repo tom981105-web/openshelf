@@ -1,9 +1,12 @@
 import assert from 'node:assert/strict';
-import {findDetailIds,parseAttachment,isCsv} from './download-official-catalog-csv.mjs';
+import {findDetailIds,parseAttachment,acceptSingleAttachment,isCsv} from './download-official-catalog-csv.mjs';
 const id='uddi:53db1572-bcd7-497c-86c4-b200cb73ee63';
 assert.equal(findDetailIds(id)[0],id);
 assert.equal(parseAttachment({status:true,atchFileId:'FILE_000000007710132',fileDetailSn:'1',fileDataRegistVO:{atchFileExtsn:'csv'}}).id,'FILE_000000007710132');
 assert.throws(()=>parseAttachment({status:false}));
+const first={id:'FILE_A',sn:'1',name:'a.csv'};
+assert.equal(acceptSingleAttachment(null,first),first);
+assert.throws(()=>acceptSingleAttachment(first,{id:'FILE_B',sn:'1',name:'b.csv'}),/Ambiguous multiple CSV attachments/);
 assert.throws(()=>isCsv(Buffer.alloc(1200000,0)));
 const csv='목록키,목록유형,목록명,제공기관\n'+'15062804,FILE,예시,기관\n'.repeat(50000);
 assert.equal(isCsv(Buffer.from(csv)),true);
