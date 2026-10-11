@@ -1,0 +1,36 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import os from 'node:os';
+import path from 'node:path';
+import {csvToApis,compareApis,validateUpdate,refresh} from './update-public-api-csv.mjs';
+const header='목록키,목록유형,목록명,제공기관,분류체계,설명,확장자(데이터포맷),심의 유형,목록 URL\n';
+const line=(id,name)=>[id,'API',name,'기관','교통 - 도로','상세 설명','JSON','운영단계 : 자동승인','https://www.data.go.kr/data/'+id+'/openapi.do'].join(',');
+const source=header+[line('15000017','도로 데이터'),line('15000018','버스 정보')].join('\n')+'\n';
+const rows=Array.from({length:10000},(_,i)=>line(String(15000000+i),'API '+i));
+assert.equal(csvToApis(header+rows.join('\n')).length,10000);
+assert.throws(()=>csvToApis(source),/Rejecting incomplete/);
+assert.throws(()=>csvToApis(header+rows.concat(rows[0]).join('\n')),/Rejecting incomplete/);
+assert.throws(()=>csvToApis('broken,data\nfoo,bar'),/schema/);
+const old=[{id:'15000017',name:'old'},{id:'15000018',name:'keep'}];
+const next=[{id:'15000017',name:'new'},{id:'15000019',name:'add'}];
+const diff=compareApis(old,next);
+assert.deepEqual(diff,{added:['15000019'],modified:['15000017'],removed:['15000018']});
+assert.throws(()=>validateUpdate(Array.from({length:200},(_,i)=>({id:String(i)})),[],{removed:Array.from({length:200},(_,i)=>String(i))}),/shrink/);
+const tmp=await fs.mkdtemp(path.join(os.tmpdir(),'v20-'));
+try{
+ await fs.mkdir(path.join(tmp,'public-api-csv'));
+ const previous=csvToApis(header+rows.join('\n'));
+ const manifest={source:'official-portal-csv',snapshot:'2026-09-30',verification:'metadata-only',total:10000,parts:['public-api-csv/part-01.json']};
+ await fs.writeFile(path.join(tmp,'public-api-official-list.json'),JSON.stringify(manifest));
+ await fs.writeFile(path.join(tmp,manifest.parts[0]),JSON.stringify({verification:'metadata-only',items:previous}));
+ const file=path.join(tmp,'new.csv');
+ await fs.writeFile(file,header+[...rows.slice(1),line('15999999','new API')].join('\n'));
+ const report=await refresh({csvPath:file,snapshot:'2026-10-11',root:tmp});
+ assert.equal(report.counts.added,1);assert.equal(report.counts.removed,1);
+ assert.equal(report.counts.modified,0);
+ const updated=JSON.parse(await fs.readFile(path.join(tmp,'public-api-official-list.json'),'utf8'));
+ assert.equal(updated.total,10000);assert.equal(updated.parts.length,10);
+ assert.equal(JSON.parse(await fs.readFile(path.join(tmp,'public-api-update-report.json'),'utf8')).counts.added,1);
+ await assert.rejects(()=>refresh({csvPath:file,snapshot:'2026-09-29',root:tmp}),/older snapshot/);
+}finally{await fs.rm(tmp,{recursive:true,force:true})}
+console.log('V20 CSV change tracking, rollback safety, and 10,000 item shard tests passed');

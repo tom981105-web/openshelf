@@ -1,0 +1,68 @@
+name: Public API official CSV update check
+on:
+  schedule:
+    - cron: '17 3 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  official-csv:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    env:
+      OFFICIAL_CSV_URL: ${{ vars.OFFICIAL_PUBLIC_API_CSV_URL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify configured official download URL
+        id: source
+        shell: bash
+        run: |
+          if [[ -z "$OFFICIAL_CSV_URL" ]]; then
+            echo "Official CSV URL not configured. Set repository variable OFFICIAL_PUBLIC_API_CSV_URL to the actual data.go.kr CSV download link."
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          if [[ "$OFFICIAL_CSV_URL" != https://data.go.kr/* && "$OFFICIAL_CSV_URL" != https://www.data.go.kr/* ]]; then
+            echo "::error::CSV URL must start with official data.go.kr origin"
+            exit 1
+          fi
+          echo "enabled=true" >> "$GITHUB_OUTPUT"
+      - name: Download current official CSV
+        if: steps.source.outputs.enabled == 'true'
+        run: |
+          curl -fLSsS --retry 3 --max-time 240 --output /tmp/official-public-api.csv "$OFFICIAL_CSV_URL"
+          size=$(wc -c < /tmp/official-public-api.csv)
+          if (( size < 1000000 || size > 350000000 )); then
+            echo "::error::Unexpected CSV download size: $size"
+            exit 1
+          fi
+      - name: Validate and compute snapshot differences
+        if: steps.source.outputs.enabled == 'true'
+        run: |
+          node scripts/public-api-v20.test.mjs
+          node scripts/update-public-api-csv.mjs /tmp/official-public-api.csv "$(date -u +%F)"
+          node scripts/public-api-v20.test.mjs
+          node scripts/validate-public-api-v20.mjs
+          node --check public-api.js
+      - name: Open pull request for review (never auto-merge removals)
+        if: steps.source.outputs.enabled == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/public-api-monthly-csv
+          delete-branch: true
+          title: 'data: official public API CSV changes'
+          commit-message: 'data: refresh official API CSV catalog'
+          body: |
+            Automated official data.go.kr CSV metadata update.
+            Review `data/public-api-update-report.json` to inspect new, modified, and removed IDs.
+            Snapshot items are metadata-only; no detail-page or API invocation is claimed.
+            **Do not merge** if source update or removals are unexpected.
+          add-paths: |
+            data/public-api-official-list.json
+            data/public-api-csv/*.json
+            data/public-api-update-report.json
