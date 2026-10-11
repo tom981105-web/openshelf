@@ -48,3 +48,18 @@ export function sortResults(rows,mode='relevance'){
   return (mode==='name-desc'?-cmp:cmp)||a.index-b.index;
  }).map(x=>x.row);
 }
+
+export function filterFacets(rows,{provider='',category='',format=''}={}){
+ const n=normalize;
+ return rows.filter(row=>(!provider||n(row.provider||row.category)===n(provider))&&(!category||n(row.category)===n(category))&&(!format||n(String(row.format||'').split(/[,/|+;\s]+/).join(' ')).split(' ').includes(n(format))));
+}
+export function facetOptions(rows,field,limit=180){
+ const counts=new Map();
+ for(const row of rows){
+  const raw=field==='provider'?(row.provider||row.category):row[field];
+  if(typeof raw!=='string')continue;
+  const vals=field==='format'?raw.split(/[,/|+;\s]+/):[raw];
+  for(const value of vals){const v=value.trim();if(!v||v.length>90)continue;counts.set(v,(counts.get(v)||0)+1)}
+ }
+ return [...counts].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'ko')).slice(0,limit).map(([value,count])=>({value,count}));
+}
