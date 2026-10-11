@@ -1,0 +1,45 @@
+name: V32 browser performance regression
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'unified-search.html'
+      - 'unified-search.js'
+      - 'unified-search-core.mjs'
+      - 'unified-search.css'
+      - 'scripts/browser-performance-v32.mjs'
+      - '.github/workflows/browser-performance-v32.yml'
+      - 'data/public-api-csv/**'
+      - 'data/public-data-csv/**'
+permissions:
+  contents: read
+jobs:
+  chromium:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Chromium testing tools
+        run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - name: Start local static site
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/openshelf-server.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/unified-search.html -o /dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - name: Measure real Chromium search flows
+        run: node scripts/browser-performance-v32.mjs
+      - name: Upload performance report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: browser-performance-report
+          path: browser-performance-report.json
+          if-no-files-found: warn

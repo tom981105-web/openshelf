@@ -15,13 +15,13 @@ async function loadCatalog(manifestFile,type,pattern){const manifest=await get(m
 // V28: load only the selected catalog; an empty "all" query opens with tools.
 const sources={
  tool:async()=>{const data=await get('data/tools.json');if(!Array.isArray(data))throw Error('Invalid tools list');return data.filter(x=>validItem(x,'tool')).map(x=>({...x,type:'tool',summary:x.description||'',provider:x.category||''}))},
- api:()=>loadCatalog('data/public-api-official-list.json','api',/^public-api-csv\\/part-\\d{2}\\.json$/),
- file:()=>loadCatalog('data/public-data-official-list.json','file',/^public-data-csv\\/part-\\d{2,3}\\.json$/)
+ api:()=>loadCatalog('data/public-api-official-list.json','api',new RegExp('^public-api-csv/part-[0-9]{2}[.]json$')),
+ file:()=>loadCatalog('data/public-data-official-list.json','file',new RegExp('^public-data-csv/part-[0-9]{2,3}[.]json$'))
 };
 const cache=new Map(),pending=new Map(),errors=new Map();
 function requiredTypes(){return state.type==='all'?(state.query.trim()?['tool','api','file']:['tool']):[state.type]}
 function displayState(){const required=requiredTypes();state.rows=required.flatMap(type=>cache.get(type)||[]);render();const wait=required.filter(type=>pending.has(type));const failed=required.filter(type=>errors.has(type));$('status').textContent=wait.length?'목록 불러오는 중: '+wait.join(', ')+' · '+state.rows.length.toLocaleString('ko-KR')+'건 표시':failed.length?'일부 목록 실패: '+failed.join(', ')+' · 다시 불러오기 가능':state.type==='all'&&!state.query.trim()?'오픈소스를 먼저 표시합니다. 전체 검색어를 입력하면 API·파일데이터를 추가로 불러옵니다.':'검색 준비 완료 · '+state.rows.length.toLocaleString('ko-KR')+'건';$('retry').hidden=!failed.length}
 async function ensure(type){if(cache.has(type)||pending.has(type))return pending.get(type);const task=sources[type]().then(rows=>{cache.set(type,rows);errors.delete(type)}).catch(error=>{console.error('Catalog load error',type,error);errors.set(type,error)}).finally(()=>{pending.delete(type);displayState()});pending.set(type,task);return task}
-function refreshCatalogs(){displayState();for(const type of requiredTypes())void ensure(type)}
+function refreshCatalogs(){for(const type of requiredTypes())void ensure(type);displayState()}
 $('retry').addEventListener('click',()=>{for(const type of requiredTypes())if(errors.has(type)){cache.delete(type);errors.delete(type)}refreshCatalogs()});
 refreshCatalogs();
