@@ -1,5 +1,5 @@
 const $=id=>document.getElementById(id);
-const search=$('fileSearch'),category=$('fileCategory'),provider=$('fileProvider'),format=$('fileFormat'),sector=$('fileSector');
+const search=$('fileSearch'),category=$('fileCategory'),provider=$('fileProvider'),format=$('fileFormat'),sector=$('fileSector'),sort=$('fileSort');
 let rows=[],index=[],page=1,requestId=0,searchTimer=0,lastFocus=null;
 const PAGE_SIZE=24;
 const SECTORS=[['교통·물류',/교통|물류|도로|운송/],['환경·에너지',/환경|에너지|기상|기후|대기|수질/],['보건·의료',/보건|의료|건강|질병|식품/],['교육·연구',/교육|연구|과학|기술|학술/],['건축·시설',/건축|시설|주택|도시|국토|건설|안전/],['경제·산업',/경제|산업|금융|기업|고용|무역/],['농림·해양',/농림|농업|축산|산림|수산|해양/],['문화·관광',/문화|관광|체육|예술/],['행정·법률',/행정|법률|법무|공공|통계|국방/],['사회·복지',/사회|복지|인구|가족|보육/]];
@@ -14,6 +14,8 @@ function selectOptions(el,label,values){
  el.replaceChildren(new Option(label,''));
  for(const name of values.sort((a,b)=>a.localeCompare(b,'ko')))el.add(new Option(name,name));
 }
+function relevance(x,terms){if(!terms.length)return 0;const name=normalized(x.name),id=String(x.id),providerName=normalized(x.provider);let score=0;for(const term of terms){if(id===term)score+=100;else if(name===term)score+=80;else if(name.startsWith(term))score+=45;else if(name.includes(term))score+=25;else if(providerName.includes(term))score+=10;else score+=1}return score}
+function updateCategories(){const previous=category.value;const values=[...new Set(rows.filter(x=>!sector.value||sectorOf(x.category)===sector.value).map(x=>x.category))];selectOptions(category,'모든 세부 분야',values);if(values.includes(previous))category.value=previous}
 function render(){
  if(!rows.length)return;
  const terms=normalized(search.value).trim().split(/\s+/).filter(Boolean);
@@ -27,6 +29,11 @@ function render(){
   if(terms.some(term=>!index[i].includes(term)))continue;
   matches.push(x);
  }
+ const choice=sort.value;
+ if(choice==='name-asc')matches.sort((a,b)=>a.name.localeCompare(b.name,'ko'));
+ else if(choice==='name-desc')matches.sort((a,b)=>b.name.localeCompare(a.name,'ko'));
+ else if(choice==='provider')matches.sort((a,b)=>a.provider.localeCompare(b.provider,'ko')||a.name.localeCompare(b.name,'ko'));
+ else if(terms.length)matches.sort((a,b)=>relevance(b,terms)-relevance(a,terms)||a.name.localeCompare(b.name,'ko'));
  const totalPages=Math.max(1,Math.ceil(matches.length/PAGE_SIZE));page=Math.min(page,totalPages);
  $('filePageInfo').textContent=page+' / '+totalPages+' 페이지';
  $('filePrev').disabled=page<=1;$('fileNext').disabled=page>=totalPages;
@@ -89,7 +96,7 @@ async function load(){
   if(!failures.length&&combined.length!==manifest.total)throw Error('Unexpected catalog count');
   if(!combined.length)throw Error('All catalog files failed');
   rows=combined;index=rows.map(x=>normalized([x.id,x.name,x.provider,x.category,x.format,x.summary].join(' ')));
-  selectOptions(category,'모든 세부 분야',[...new Set(rows.map(x=>x.category))]);
+  updateCategories();
   const sectorNames=[...new Set(rows.map(x=>sectorOf(x.category)))];selectOptions(sector,'모든 대분류',sectorNames);
   selectOptions(provider,'모든 기관',[...new Set(rows.map(x=>x.provider))]);
   selectOptions(format,'모든 형식',[...new Set(rows.flatMap(x=>formatsOf(x.format)))]);
@@ -99,7 +106,8 @@ async function load(){
 }
 $('fileRetry').addEventListener('click',load);
 search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;render()},180)});
-for(const el of [sector,category,provider,format])el.addEventListener('change',()=>{page=1;render()});
+sector.addEventListener('change',()=>{updateCategories();page=1;render()});
+for(const el of [category,provider,format,sort])el.addEventListener('change',()=>{page=1;render()});
 $('filePrev').addEventListener('click',()=>{if(page>1){page--;render();$('fileStatus').scrollIntoView({block:'start'})}});
 $('fileNext').addEventListener('click',()=>{page++;render();$('fileStatus').scrollIntoView({block:'start'})});
 load();
