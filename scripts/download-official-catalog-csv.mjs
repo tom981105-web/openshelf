@@ -60,7 +60,10 @@ export async function probeOfficialSource(){
  const html=await (await get(PAGE)).text();
  const ids=findDetailIds(html);
  if(!ids.length)throw Error('Official page did not reveal current file detail ID');
- console.log(JSON.stringify({source:PAGE,foundDetailIds:ids.length}));
+ const url=new URL(SELECT);
+ for(const [k,v] of Object.entries({publicDataDetailPk:ids[0],publicDataPk:'15062804',atchFileId:'',fileDetailSn:'1',publicDataTyCode:'PR0051',url:'/tcs/dss/selectFileDataDownload.do'}))url.searchParams.set(k,v);
+ const info=parseAttachment(await (await get(url.href,{headers:{Accept:'application/json'}})).json());
+ console.log(JSON.stringify({source:PAGE,foundDetailIds:ids.length,attachmentConfirmed:true,extension:info.name.slice(-4)}));
 }
 if(process.argv[1]?.endsWith('/download-official-catalog-csv.mjs')){
  if(process.argv[2]==='--probe')await probeOfficialSource();
