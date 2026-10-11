@@ -17,6 +17,10 @@ export function parseAttachment(response){
  const name=String(response.fileDataRegistVO?.orginlFileNm||response.fileDataRegistVO?.dataNm||'');
  return {id,sn:String(sn),name};
 }
+export function acceptSingleAttachment(current,next){
+ if(current)throw Error('Ambiguous multiple CSV attachments; manual review needed');
+ return next;
+}
 export function isCsv(bytes){
  if(bytes.length<1000000||bytes.length>350000000)throw Error('Unexpected downloaded CSV size');
  const head=bytes.subarray(0,10240).toString('utf8').replace(/^\uFEFF/,'');
@@ -43,9 +47,11 @@ export async function downloadOfficialCsv(output,config={}){
    for(const [k,v] of Object.entries({publicDataDetailPk:detail,publicDataPk:'15062804',atchFileId:'',fileDetailSn:'1',publicDataTyCode:'PR0051',url:'/tcs/dss/selectFileDataDownload.do'}))url.searchParams.set(k,v);
    const response=await get(url.href,{headers:{Accept:'application/json'}});
    const info=parseAttachment(await response.json());
-   if(chosen)throw Error('Ambiguous multiple CSV attachments; manual review needed');
-   chosen=info;
-  }catch(error){reason=String(error.message||error)}
+   chosen=acceptSingleAttachment(chosen,info);
+  }catch(error){
+   if(String(error.message||error).includes('Ambiguous multiple CSV attachments'))throw error;
+   reason=String(error.message||error);
+  }
  }
  if(!chosen)throw Error('Official attachment lookup unsuccessful: '+reason);
  const url=new URL(DOWNLOAD);
