@@ -1,5 +1,7 @@
 import {normalize,rank,filterResults,makeUrl,suggestQueries,sortResults,SORT_MODES,filterFacets,facetOptions} from './unified-search-core.mjs';
 import {AI_SEARCH_ENDPOINT} from './ai-search-config.js';
+import {hasSavedKey,savePrivateKey,unlockPrivateKey,removeSavedKey} from './gemini-key-vault.js';
+let activeGeminiKey=null;
 const $=id=>document.getElementById(id);
 const types=[['tool','오픈소스'],['api','Public API'],['file','Public Data']];
 const state={provider:'',category:'',format:'',sort:new URLSearchParams(location.search).get('sort')||'relevance',rows:[],failed:[],loaded:0,page:1,query:new URLSearchParams(location.search).get('q')||'',type:new URLSearchParams(location.search).get('type')||'all'};
@@ -61,10 +63,23 @@ function refreshCatalogs(){for(const type of requiredTypes())void ensure(type);d
 $('retry').addEventListener('click',()=>{for(const type of requiredTypes())if(errors.has(type)){cache.delete(type);errors.delete(type)}refreshCatalogs()});
 refreshCatalogs();
 
+function updateKeyStatus(){ $('geminiKeyStatus').textContent=activeGeminiKey?'이 브라우저에서 잠금 해제됨':hasSavedKey()?'암호화된 키가 이 브라우저에 저장됨 · 사용하려면 잠금 해제':'이 브라우저에 저장된 키 없음';}
+$('geminiSave').addEventListener('click',async()=>{
+ try{await savePrivateKey($('geminiKeyInput').value,$('geminiPassword').value);activeGeminiKey=null;$('geminiKeyInput').value='';$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='이 브라우저에 암호화해 저장했습니다. 사용 전에 잠금을 해제하세요.'}
+ catch(e){$('aiStatus').textContent=e.message}
+});
+$('geminiUnlock').addEventListener('click',async()=>{
+ try{activeGeminiKey=await unlockPrivateKey($('geminiPassword').value);$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='개인 Gemini 키 잠금 해제 완료'}
+ catch(e){activeGeminiKey=null;$('aiStatus').textContent=e.message;updateKeyStatus()}
+});
+$('geminiLock').addEventListener('click',()=>{activeGeminiKey=null;$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='잠금 처리했습니다.'});
+$('geminiDelete').addEventListener('click',()=>{activeGeminiKey=null;removeSavedKey();$('geminiKeyInput').value='';$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='이 브라우저에 저장된 키를 삭제했습니다.'});
+updateKeyStatus();
 async function askAi(){
  const question=$('aiQuestion').value.trim(),button=$('aiAsk');
  if(question.length<4){$('aiStatus').textContent='질문을 4자 이상 입력해 주세요.';return}
  $('aiAnswer').hidden=true;
+ if(!activeGeminiKey){$('aiStatus').textContent='먼저 이 기기의 Gemini API 키를 저장하고 비밀번호로 잠금 해제하세요.';return}
  if(!AI_SEARCH_ENDPOINT){$('aiStatus').textContent='Gemini 서버 설정 전입니다. 아래의 기존 통합 검색을 이용해 주세요.';return}
  if(!/^https:\/\/[^\s]+$/.test(AI_SEARCH_ENDPOINT)){$('aiStatus').textContent='안전한 HTTPS 서버 주소를 확인해 주세요.';return}
  button.disabled=true;$('aiStatus').textContent='관련 목록 검색 중…';
@@ -76,13 +91,13 @@ async function askAi(){
   if(!candidates.length){const pool=new Map();for(const token of tokens)for(const row of filterResults(rows,token,state.type).slice(0,12)){const id=row.type+':'+row.id;pool.set(id,{row,count:(pool.get(id)?.count||0)+1})}candidates=[...pool.values()].sort((a,b)=>b.count-a.count).slice(0,12).map(x=>x.row)}
   if(!candidates.length){$('aiStatus').textContent='관련 후보를 찾지 못했습니다. 핵심 키워드를 포함해 다시 질문해 주세요.';return}
   const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),20000);
-  let response;try{response=await fetch(AI_SEARCH_ENDPOINT,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({query:question,candidates:candidates.map(x=>({id:x.id,type:x.type,name:x.name,provider:x.provider,category:x.category,summary:x.summary||x.description}))}),signal:controller.signal})}finally{clearTimeout(timer)}
+  let response;try{response=await fetch(AI_SEARCH_ENDPOINT,{method:'POST',headers:{'content-type':'application/json','x-openshelf-key':activeGeminiKey},body:JSON.stringify({query:question,candidates:candidates.map(x=>({id:x.id,type:x.type,name:x.name,provider:x.provider,category:x.category,summary:x.summary||x.description}))}),signal:controller.signal})}finally{clearTimeout(timer)}
   const data=await response.json();if(!response.ok)throw Error(data.error||'AI 서버 오류');
   const chosen=(data.ids||[]).map(id=>candidates.find(x=>x.id===id)).filter(Boolean);
   $('aiSummary').textContent=String(data.summary||'추천 결과를 확인해 주세요.');
   $('aiMatches').replaceChildren(...chosen.map(card));$('aiAnswer').hidden=false;
   $('aiStatus').textContent='등록된 후보 '+candidates.length+'건을 기준으로 분석했습니다. AI 설명은 정확성을 확인해 주세요.';
- }catch(error){$('aiStatus').textContent='AI 추천을 사용할 수 없습니다. 기존 통합 검색은 계속 이용할 수 있습니다.';console.warn('AI search unavailable',error.message)}
+ }catch(error){$('aiStatus').textContent='AI 추천을 사용할 수 없습니다. 기존 통합 검색은 계속 이용할 수 있습니다.';console.warn('AI search unavailable (details redacted)')}
  finally{button.disabled=false}
 }
 $('aiAsk').addEventListener('click',askAi);

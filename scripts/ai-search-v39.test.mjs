@@ -10,7 +10,7 @@ assert.throws(()=>sanitize({...valid,candidates:Array(13).fill(valid.candidates[
 const denied=await worker.fetch(new Request('https://example.workers.dev/',{method:'POST',headers:{origin:'https://bad.example'}}),{});
 assert.equal(denied.status,403);
 const missingKey=await worker.fetch(new Request('https://example.workers.dev/',{method:'POST',headers:{origin:'https://tom981105-web.github.io'}}),{});
-assert.equal(missingKey.status,503);
+assert.equal(missingKey.status,401);
 const ui=fs.readFileSync('unified-search.js','utf8'),html=fs.readFileSync('unified-search.html','utf8');
 for(const id of ['aiQuestion','aiAsk','aiStatus','aiSummary','aiMatches'])assert.ok(html.includes('id="'+id+'"'));
 assert.match(ui,/if\(!AI_SEARCH_ENDPOINT\)/);
