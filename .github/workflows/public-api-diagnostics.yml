@@ -15,6 +15,8 @@ on:
       - 'scripts/public-data-v23.test.mjs'
       - 'scripts/public-data-v24.test.mjs'
       - 'scripts/public-data-v25.test.mjs'
+      - 'scripts/download-official-catalog-csv.mjs'
+      - 'scripts/download-official-catalog-csv.test.mjs'
       - 'scripts/validate-public-data-v25.mjs'
       - 'scripts/update-public-data-csv.mjs'
       - '.github/workflows/public-data-monthly-update.yml'
@@ -78,6 +80,10 @@ jobs:
         run: |
           node scripts/public-data-v25.test.mjs
           node scripts/validate-public-data-v25.mjs
+      - name: Official CSV downloader tests
+        run: node scripts/download-official-catalog-csv.test.mjs
+      - name: Probe official CSV attachment discovery
+        run: node scripts/download-official-catalog-csv.mjs --probe
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)

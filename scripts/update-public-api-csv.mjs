@@ -18,7 +18,7 @@ export function csvToApis(csv){
   if(!name||!provider){invalid++;continue}
   seen.add(id);
   out.push({id,name,provider,category:String(row[col['분류체계']]||'').trim()||'미분류',
-   summary:String(row[col['설명']]||'').trim().slice(0,600)||name,
+   summary:String(row[col['설명']]||'').trim().slice(0,200)||name,
    format:String(row[col['확장자(데이터포맷)']]||'').trim()||'원문 확인',
    approval:String(row[col['심의 유형']]||'').match(/운영단계\s*:\s*(자동승인|심의승인)/)?.[1]||'원문 확인',
    url:'https://www.data.go.kr/data/'+id+'/openapi.do'});

@@ -10,43 +10,18 @@ jobs:
   official-files:
     runs-on: ubuntu-latest
     timeout-minutes: 25
-    env:
-      OFFICIAL_CSV_URL: ${{ vars.OFFICIAL_PUBLIC_API_CSV_URL }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Verify configured official direct CSV URL
-        id: source
-        shell: bash
-        run: |
-          if [[ -z "$OFFICIAL_CSV_URL" ]]; then
-            echo "::notice::Set repository variable OFFICIAL_PUBLIC_API_CSV_URL to the official direct CSV download URL."
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
-            exit 0
-          fi
-          if [[ "$OFFICIAL_CSV_URL" != https://data.go.kr/* && "$OFFICIAL_CSV_URL" != https://www.data.go.kr/* ]]; then
-            echo "::error::Official CSV URL must belong to data.go.kr"
-            exit 1
-          fi
-          echo "enabled=true" >> "$GITHUB_OUTPUT"
-      - name: Download official CSV
-        if: steps.source.outputs.enabled == 'true'
-        run: |
-          curl -fLSsS --retry 3 --max-time 300 -o /tmp/official-public-data.csv "$OFFICIAL_CSV_URL"
-          bytes=$(wc -c < /tmp/official-public-data.csv)
-          if (( bytes < 1000000 || bytes > 350000000 )); then
-            echo "::error::Unexpected CSV bytes: $bytes"
-            exit 1
-          fi
+      - name: Discover current official CSV attachment and download
+        run: node scripts/download-official-catalog-csv.mjs /tmp/official-public-data.csv
       - name: Verify latest file catalog changes
-        if: steps.source.outputs.enabled == 'true'
         run: |
           node scripts/update-public-data-csv.mjs /tmp/official-public-data.csv "$(date -u +%F)"
           node scripts/validate-public-data-v25.mjs
       - name: Create change-review PR
-        if: steps.source.outputs.enabled == 'true'
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
