@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+const js=fs.readFileSync('public-api.js','utf8');
+execFileSync(process.execPath,['--check','public-api.js']);
+assert.match(js,/function createSearchIndex\(/);
+assert.match(js,/indexedText.get\(x.id\)/);
+assert.match(js,/setTimeout\(\(\)=>\{page=1;show\(\)\},180\)/);
+assert.match(js,/Math.min\(4,manifest.parts.length\)/);
+assert.match(js,/await Promise.all\(workers\)/);
+assert.match(js,/retries:2/);
+assert.match(js,/failures.length/);
+assert.match(js,/createSearchIndex\(items\)/);
+const html=fs.readFileSync('public-api.html','utf8');
+assert.match(html,/20261011-v17-search/);
+const manifest=JSON.parse(fs.readFileSync('data/public-api-official-list.json','utf8'));
+assert.equal(manifest.total,12027);
+console.log('V17 search and resilient shard loading regression tests passed');
