@@ -6,12 +6,13 @@ const reports=[];const browser=await chromium.launch({headless:true,args:['--no-
 async function scenario(name,run){
  const page=await browser.newPage({viewport:{width:1365,height:900}});
  const errors=[];page.on('pageerror',error=>errors.push(String(error.message)));
+ page.on('console',msg=>{if(msg.type()==='error')errors.push('console: '+msg.text())});
  const started=performance.now();
  try{
   const details=await run(page);
   if(errors.length)throw Error('Browser errors: '+errors.join('; '));
   const item={name,status:'passed',elapsedMs:Math.round(performance.now()-started),...details};reports.push(item);console.log(JSON.stringify(item));
- }catch(error){const item={name,status:'failed',elapsedMs:Math.round(performance.now()-started),error:String(error.message||error)};reports.push(item);console.error(JSON.stringify(item))}
+ }catch(error){const item={name,status:'failed',elapsedMs:Math.round(performance.now()-started),error:String(error.message||error)+(errors.length?' | '+errors.join('; '):'')};reports.push(item);console.error(JSON.stringify(item))}
  finally{await page.close()}
 }
 try{
