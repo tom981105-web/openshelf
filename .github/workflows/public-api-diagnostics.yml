@@ -8,6 +8,9 @@ on:
       - 'scripts/build-public-api-list.mjs'
       - 'scripts/public-api-full-catalog.test.mjs'
       - 'scripts/public-api-csv-shards.test.mjs'
+      - 'scripts/public-api-v17.test.mjs'
+      - 'public-api.js'
+      - 'public-api.html'
       - 'data/public-api-official-list.json'
       - 'data/public-api-csv/**'
       - 'scripts/verify-public-api-csv.mjs'
@@ -36,6 +39,8 @@ jobs:
         run: node scripts/public-api-full-catalog.test.mjs
       - name: Full CSV shard integrity tests
         run: node scripts/public-api-csv-shards.test.mjs
+      - name: V17 search and loading regression tests
+        run: node scripts/public-api-v17.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
