@@ -20,6 +20,7 @@ on:
       - 'unified-search-core.mjs'
       - 'unified-search.css'
       - 'scripts/unified-search-v27.test.mjs'
+      - 'scripts/unified-search-v28.test.mjs'
       - 'scripts/download-official-catalog-csv.mjs'
       - 'scripts/download-official-catalog-csv.test.mjs'
       - 'scripts/validate-public-data-v25.mjs'
@@ -88,6 +89,7 @@ jobs:
       - name: V27 unified search tests
         run: |
           node scripts/unified-search-v27.test.mjs
+          node scripts/unified-search-v28.test.mjs
           node --check unified-search.js
       - name: Official CSV downloader tests
         run: node scripts/download-official-catalog-csv.test.mjs
