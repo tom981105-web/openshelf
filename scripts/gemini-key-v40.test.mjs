@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import {webcrypto} from 'node:crypto';
-globalThis.crypto=webcrypto;
+if(!globalThis.crypto?.subtle)Object.defineProperty(globalThis,'crypto',{value:webcrypto,configurable:true});
 const data=new Map();globalThis.localStorage={getItem:k=>data.get(k)||null,setItem:(k,v)=>data.set(k,v),removeItem:k=>data.delete(k)};
 const {savePrivateKey,unlockPrivateKey,hasSavedKey,removeSavedKey}=await import('../gemini-key-vault.js');
 const key='AIza'+'a'.repeat(35),password='strong-long-passphrase';
