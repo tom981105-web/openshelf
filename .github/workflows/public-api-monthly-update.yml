@@ -26,7 +26,7 @@ jobs:
             echo "enabled=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
-          if [[ ! "$OFFICIAL_CSV_URL" =~ ^https://(www\\.)?data\\.go\\.kr/ ]]; then
+          if [[ "$OFFICIAL_CSV_URL" != https://data.go.kr/* && "$OFFICIAL_CSV_URL" != https://www.data.go.kr/* ]]; then
             echo "::error::CSV URL must start with official data.go.kr origin"
             exit 1
           fi
@@ -46,7 +46,7 @@ jobs:
           node scripts/public-api-v20.test.mjs
           node scripts/update-public-api-csv.mjs /tmp/official-public-api.csv "$(date -u +%F)"
           node scripts/public-api-v20.test.mjs
-          node scripts/public-api-full-catalog.test.mjs
+          node scripts/validate-public-api-v20.mjs
           node --check public-api.js
       - name: Open pull request for review (never auto-merge removals)
         if: steps.source.outputs.enabled == 'true'
