@@ -28,7 +28,7 @@ try{
  await scenario('public-api-search',async page=>{
   await page.goto(base+'/unified-search.html',{waitUntil:'domcontentloaded'});
   await page.locator('#type').selectOption('api');
-  await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('검색 준비 완료')||document.querySelector('#status')?.textContent.includes('실패'),null,{timeout:180000});
+  await page.waitForFunction(()=>Number(document.querySelector('#total')?.textContent.replace(/,/g,''))>=10000||document.querySelector('#status')?.textContent.includes('실패'),null,{timeout:180000});
   if((await page.locator('#status').innerText()).includes('실패'))throw Error('API catalog loading failed');
   const total=Number((await page.locator('#total').innerText()).replace(/,/g,''));
   if(total<10000)throw Error('API catalog count unexpectedly small '+total);
@@ -40,7 +40,7 @@ try{
  await scenario('public-data-search',async page=>{
   await page.goto(base+'/unified-search.html',{waitUntil:'domcontentloaded'});
   await page.locator('#type').selectOption('file');
-  await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('검색 준비 완료')||document.querySelector('#status')?.textContent.includes('실패'),null,{timeout:240000});
+  await page.waitForFunction(()=>Number(document.querySelector('#total')?.textContent.replace(/,/g,''))>=80000||document.querySelector('#status')?.textContent.includes('실패'),null,{timeout:240000});
   if((await page.locator('#status').innerText()).includes('실패'))throw Error('File catalog loading failed');
   const total=Number((await page.locator('#total').innerText()).replace(/,/g,''));
   if(total<80000)throw Error('File catalog count unexpectedly small '+total);
