@@ -15,6 +15,11 @@ on:
       - 'scripts/public-data-v23.test.mjs'
       - 'scripts/public-data-v24.test.mjs'
       - 'scripts/public-data-v25.test.mjs'
+      - 'unified-search.html'
+      - 'unified-search.js'
+      - 'unified-search-core.mjs'
+      - 'unified-search.css'
+      - 'scripts/unified-search-v27.test.mjs'
       - 'scripts/download-official-catalog-csv.mjs'
       - 'scripts/download-official-catalog-csv.test.mjs'
       - 'scripts/validate-public-data-v25.mjs'
@@ -80,6 +85,10 @@ jobs:
         run: |
           node scripts/public-data-v25.test.mjs
           node scripts/validate-public-data-v25.mjs
+      - name: V27 unified search tests
+        run: |
+          node scripts/unified-search-v27.test.mjs
+          node --check unified-search.js
       - name: Official CSV downloader tests
         run: node scripts/download-official-catalog-csv.test.mjs
       - name: Probe official CSV attachment discovery
