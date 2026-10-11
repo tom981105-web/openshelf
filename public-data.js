@@ -1,7 +1,10 @@
 const $=id=>document.getElementById(id);
-const search=$('fileSearch'),category=$('fileCategory'),provider=$('fileProvider'),format=$('fileFormat');
+const search=$('fileSearch'),category=$('fileCategory'),provider=$('fileProvider'),format=$('fileFormat'),sector=$('fileSector');
 let rows=[],index=[],page=1,requestId=0,searchTimer=0,lastFocus=null;
 const PAGE_SIZE=24;
+const SECTORS=[['교통·물류',/교통|물류|도로|운송/],['환경·에너지',/환경|에너지|기상|기후|대기|수질/],['보건·의료',/보건|의료|건강|질병|식품/],['교육·연구',/교육|연구|과학|기술|학술/],['건축·시설',/건축|시설|주택|도시|국토|건설|안전/],['경제·산업',/경제|산업|금융|기업|고용|무역/],['농림·해양',/농림|농업|축산|산림|수산|해양/],['문화·관광',/문화|관광|체육|예술/],['행정·법률',/행정|법률|법무|공공|통계|국방/],['사회·복지',/사회|복지|인구|가족|보육/]];
+function sectorOf(value){const top=String(value||'').split(/\s*[-–>]\s*/)[0];for(const [name,re] of SECTORS)if(re.test(top))return name;return '기타·미분류'}
+function formatsOf(value){return String(value||'').toUpperCase().split(/[^A-Z0-9]+/).filter(Boolean)}
 function valid(x){
  return x&&/^[0-9]{7,8}$/.test(String(x.id))&&x.url==='https://www.data.go.kr/data/'+x.id+'/fileData.do'&&
  [x.name,x.provider,x.category,x.format,x.summary].every(v=>typeof v==='string'&&v.length>0);
@@ -18,8 +21,9 @@ function render(){
  for(let i=0;i<rows.length;i++){
   const x=rows[i];
   if(category.value&&category.value!==x.category)continue;
+  if(sector.value&&sector.value!==sectorOf(x.category))continue;
   if(provider.value&&provider.value!==x.provider)continue;
-  if(format.value&&!normalized(x.format).includes(normalized(format.value)))continue;
+  if(format.value&&!formatsOf(x.format).includes(format.value))continue;
   if(terms.some(term=>!index[i].includes(term)))continue;
   matches.push(x);
  }
@@ -85,16 +89,17 @@ async function load(){
   if(!failures.length&&combined.length!==manifest.total)throw Error('Unexpected catalog count');
   if(!combined.length)throw Error('All catalog files failed');
   rows=combined;index=rows.map(x=>normalized([x.id,x.name,x.provider,x.category,x.format,x.summary].join(' ')));
-  selectOptions(category,'모든 분야',[...new Set(rows.map(x=>x.category))]);
+  selectOptions(category,'모든 세부 분야',[...new Set(rows.map(x=>x.category))]);
+  const sectorNames=[...new Set(rows.map(x=>sectorOf(x.category)))];selectOptions(sector,'모든 대분류',sectorNames);
   selectOptions(provider,'모든 기관',[...new Set(rows.map(x=>x.provider))]);
-  selectOptions(format,'모든 형식',[...new Set(rows.map(x=>x.format))]);
+  selectOptions(format,'모든 형식',[...new Set(rows.flatMap(x=>formatsOf(x.format)))]);
   $('fileTotal').textContent=rows.length.toLocaleString('ko-KR');page=1;render();
   if(failures.length){$('fileStatus').textContent+=' · 파일 '+failures.length+'개 일부 누락, 다시 불러오기 가능';$('fileRetry').hidden=false}
  }catch(error){if(version!==requestId)return;console.error('Public Data load error',error);$('fileStatus').textContent='목록을 불러오지 못했습니다. 다시 불러오기를 눌러주세요.';$('fileRetry').hidden=false}
 }
 $('fileRetry').addEventListener('click',load);
 search.addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;render()},180)});
-for(const el of [category,provider,format])el.addEventListener('change',()=>{page=1;render()});
+for(const el of [sector,category,provider,format])el.addEventListener('change',()=>{page=1;render()});
 $('filePrev').addEventListener('click',()=>{if(page>1){page--;render();$('fileStatus').scrollIntoView({block:'start'})}});
 $('fileNext').addEventListener('click',()=>{page++;render();$('fileStatus').scrollIntoView({block:'start'})});
 load();
