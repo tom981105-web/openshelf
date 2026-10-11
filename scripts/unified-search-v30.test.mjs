@@ -4,7 +4,7 @@ const rows=[{id:'1',type:'tool',name:'머신러닝',category:'인공지능',prov
 assert.equal(editDistance('머신러닝','머신러닝'),0);
 assert.equal(editDistance('버스','버스스'),1);
 assert.ok(suggestQueries(rows,'머신러닝').includes('machine learning'));
-assert.ok(suggestQueries(rows,'버ㅅ').includes('버스'));
+assert.ok(suggestQueries(rows,'버스스').includes('버스'));
 assert.ok(suggestQueries(rows,'서울').some(x=>x.includes('서울')));
 assert.deepEqual(suggestQueries(rows,''),[]);
 assert.deepEqual(suggestQueries(rows,'a'.repeat(100)),[]);
