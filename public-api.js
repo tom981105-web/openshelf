@@ -10,6 +10,8 @@ function validatedPublicApis(rows){
  }
  return result;
 }
+const indexedText=new Map();
+function createSearchIndex(rows){indexedText.clear();for(const x of rows)indexedText.set(x.id,[x.id,x.name,x.provider,x.category,x.summary,x.approval,x.format].join(' ').toLocaleLowerCase('ko').normalize('NFKC'));}
 function filterPublicApis(items,opts={}) {
  const q=String(opts.query||'').trim().toLocaleLowerCase('ko').normalize('NFKC');
  const terms=q.split(/\s+/).filter(Boolean),cat=opts.category||'',approval=opts.approval||'',format=opts.format||'',provider=opts.provider||'';
@@ -18,7 +20,7 @@ function filterPublicApis(items,opts={}) {
   if(provider&&x.provider!==provider)return false;
   if(approval&&!x.approval.includes(approval))return false;
   if(format&&!x.format.toLocaleLowerCase('ko').includes(format.toLocaleLowerCase('ko')))return false;
-  const hay=[x.id,x.name,x.provider,x.category,x.summary,x.approval,x.format].join(' ').toLocaleLowerCase('ko').normalize('NFKC');
+  const hay=indexedText.get(x.id)||[x.id,x.name,x.provider,x.category,x.summary,x.approval,x.format].join(' ').toLocaleLowerCase('ko').normalize('NFKC');
   return terms.every(term=>hay.includes(term));
  });
 }
@@ -48,75 +50,88 @@ function show(){
   bottom.append(badge,link);card.append(meta,title,summary,bottom);$('apiList').append(card);
  }
 }
-async function fetchCatalog(attempt=0){
- const controller=new AbortController();
- const timeout=setTimeout(()=>controller.abort(),12000);
- try{
-  const response=await fetch('data/public-apis.json',{cache:'no-store',signal:controller.signal});
-  if(!response.ok)throw new Error('HTTP '+response.status);
-  const data=await response.json();
-  if(!data||!Array.isArray(data.items))throw new Error('Invalid API catalog format');
-  return data;
- }catch(error){
-  if(attempt<2){await new Promise(resolve=>setTimeout(resolve,750*(attempt+1)));return fetchCatalog(attempt+1)}
-  throw error;
- }finally{clearTimeout(timeout)}
+async function fetchJson(url,{timeoutMs=12000,retries=1}={}){
+ for(let attempt=0;attempt<=retries;attempt++){
+  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),timeoutMs);
+  try{
+   const response=await fetch(url,{cache:'no-store',signal:controller.signal});
+   if(!response.ok)throw new Error('HTTP '+response.status+' '+url);
+   return await response.json();
+  }catch(error){
+   if(attempt===retries)throw error;
+   await new Promise(resolve=>setTimeout(resolve,400*(attempt+1)));
+  }finally{clearTimeout(timer)}
+ }
 }
 function showLoadError(error){
  console.error('OpenShelf Public API catalog load failed',error);
  $('apiTotal').textContent='—';
- $('apiStatus').textContent='목록을 불러오지 못했습니다. 인터넷 연결을 확인하고 다시 시도해 주세요.';
+ $('apiStatus').textContent='목록을 불러오지 못했습니다. 다시 불러오기를 눌러주세요.';
  const retry=$('apiRetry');if(retry)retry.hidden=false;
 }
+async function loadCsvParts(manifest){
+ if(!Array.isArray(manifest.parts)||manifest.parts.length>30||manifest.total>20000||manifest.total<1)throw Error('Invalid CSV manifest');
+ const chunks=new Array(manifest.parts.length),failures=[];let cursor=0;
+ const workers=Array.from({length:Math.min(4,manifest.parts.length)},async()=>{
+  while(cursor<manifest.parts.length){
+   const index=cursor++,file=manifest.parts[index];
+   try{
+    if(!/^public-api-csv\/part-[0-9]{2}[.]json$/.test(file))throw Error('Invalid shard filename');
+    const data=await fetchJson('data/'+file,{timeoutMs:11000,retries:2});
+    if(data.verification!=='metadata-only'||!Array.isArray(data.items))throw Error('Invalid shard format');
+    chunks[index]=validatedPublicApis(data.items);
+    $('apiStatus').textContent='공식 API 목록 '+(chunks.filter(Boolean).length)+' / '+manifest.parts.length+'개 파일 확인 중…';
+   }catch(error){failures.push(file);console.warn('CSV shard failed',file,error)}
+  }
+ });
+ await Promise.all(workers);
+ const all=chunks.flatMap(x=>x||[]);
+ const deduped=validatedPublicApis(all);
+ if(failures.length===0&&deduped.length!==manifest.total)throw Error('CSV catalog count mismatch');
+ return {items:deduped,failures};
+}
+let loadVersion=0,searchTimer;
 async function loadCatalog(){
+ const version=++loadVersion;
  $('apiStatus').textContent='공공 API 목록을 불러오는 중…';
  const retry=$('apiRetry');if(retry)retry.hidden=true;
  try{
-  const data=await fetchCatalog();
-  if(!data.items.length)throw new Error('API catalog is empty');
+  const data=await fetchJson('data/public-apis.json',{timeoutMs:12000,retries:2});
+  const confirmed=validatedPublicApis(data.items);
+  if(!confirmed.length)throw Error('Verified API catalog is empty');
+  let listing=[],failures=[];
+  try{
+   const manifest=await fetchJson('data/public-api-official-list.json',{timeoutMs:10000,retries:1});
+   if(manifest.verification==='metadata-only'){
+    if(Array.isArray(manifest.parts)){
+     const loaded=await loadCsvParts(manifest);listing=loaded.items;failures=loaded.failures;
+    }else listing=validatedPublicApis(manifest.items);
+   }
+  }catch(error){console.warn('Using verified-only fallback',error);failures=['공식 목록 파일']}
+  if(version!==loadVersion)return;
+  const merged=new Map(listing.map(x=>[x.id,x]));
+  for(const item of confirmed)merged.set(item.id,item);
+  items=[...merged.values()];
+  verifiedIds=new Set(confirmed.map(x=>x.id));
+  createSearchIndex(items);
+  page=1;
   category.replaceChildren(new Option('모든 분야',''));
   providerFilter.replaceChildren(new Option('모든 기관',''));
-
- const confirmed=validatedPublicApis(data.items);verifiedIds=new Set(confirmed.map(x=>x.id));
- let listing=[];
- try{
-  const response=await fetch('data/public-api-official-list.json',{cache:'no-store'});
-  if(response.ok){
-    const source=await response.json();
-    if(source.verification==='metadata-only'){
-      if(Array.isArray(source.parts)){
-        if(source.parts.length>30||source.total>20000)throw Error('Unexpected CSV manifest');
-        const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),18000);
-        try{
-          const groups=await Promise.all(source.parts.map(async file=>{
-            if(!new RegExp('^public-api-csv/part-[0-9]{2}[.]json$').test(file))throw Error('Invalid CSV shard path');
-            const shard=await fetch('data/'+file,{cache:'no-store',signal:controller.signal});
-            if(!shard.ok)throw Error('CSV shard HTTP '+shard.status);
-            const json=await shard.json();
-            if(json.verification!=='metadata-only'||!Array.isArray(json.items))throw Error('Invalid CSV shard');
-            return json.items;
-          }));
-          const combined=groups.flat();
-          if(combined.length!==source.total)throw Error('Incomplete CSV catalog');
-          listing=validatedPublicApis(combined);
-          if(listing.length!==source.total)throw Error('Invalid CSV catalog records');
-        }finally{clearTimeout(timer)}
-      }else listing=validatedPublicApis(source.items);
-    }
+  const categories=[...new Set(items.map(x=>x.category))].sort((a,b)=>a.localeCompare(b,'ko'));
+  const providers=[...new Set(items.map(x=>x.provider))].sort((a,b)=>a.localeCompare(b,'ko'));
+  for(const name of categories)category.add(new Option(name,name));
+  for(const name of providers)providerFilter.add(new Option(name,name));
+  $('apiTotal').textContent=items.length.toLocaleString('ko-KR');
+  const v=$('apiVerifiedCount');if(v)v.textContent=confirmed.length.toLocaleString('ko-KR');
+  show();
+  if(failures.length){
+   $('apiStatus').textContent+=' · 일부 공식 목록 파일을 불러오지 못했습니다 ('+failures.length+'개). 다시 시도할 수 있습니다.';
+   if(retry)retry.hidden=false;
   }
- }catch(e){console.warn('Official CSV listing unavailable; using verified catalog',e)}
- const merged=new Map(listing.map(x=>[x.id,x]));for(const item of confirmed)merged.set(item.id,item);
- items=[...merged.values()];$('apiTotal').textContent=items.length.toLocaleString('ko-KR');
- const verifiedCount=$('apiVerifiedCount');if(verifiedCount)verifiedCount.textContent=confirmed.length.toLocaleString('ko-KR');
- const categories=[...new Set(items.map(x=>x.category))].sort((a,b)=>a.localeCompare(b,'ko'));
- const providers=[...new Set(items.map(x=>x.provider))].sort((a,b)=>a.localeCompare(b,'ko'));
- for(const name of providers){const option=document.createElement('option');option.value=name;option.textContent=name;providerFilter.append(option)}
- for(const name of categories){const option=document.createElement('option');option.value=name;option.textContent=name;category.append(option)}
- show();
-}catch(error){showLoadError(error)}
+ }catch(error){if(version===loadVersion)showLoadError(error)}
 }
 $('apiRetry')?.addEventListener('click',loadCatalog);
 loadCatalog();
-for(const element of [search,category,approval,providerFilter,formatFilter])element.addEventListener(element===search?'input':'change',()=>{page=1;show()});
+for(const element of [search,category,approval,providerFilter,formatFilter])element.addEventListener(element===search?'input':'change',()=>{if(element===search){clearTimeout(searchTimer);searchTimer=setTimeout(()=>{page=1;show()},180)}else{page=1;show()}});
 $('apiPrev').addEventListener('click',()=>{if(page>1){page--;show();$('apiStatus').scrollIntoView({block:'start'});}});
 $('apiNext').addEventListener('click',()=>{page++;show();$('apiStatus').scrollIntoView({block:'start'});});
