@@ -15,8 +15,8 @@ async function loadCatalog(manifestFile,type,pattern){const manifest=await get(m
 // V28: load only the selected catalog; an empty "all" query opens with tools.
 const sources={
  tool:async()=>{const data=await get('data/tools.json');if(!Array.isArray(data))throw Error('Invalid tools list');return data.filter(x=>validItem(x,'tool')).map(x=>({...x,type:'tool',summary:x.description||'',provider:x.category||''}))},
- api:()=>loadCatalog('data/public-api-official-list.json','api',/^public-api-csv\\/part-\\d{2}\\.json$/),
- file:()=>loadCatalog('data/public-data-official-list.json','file',/^public-data-csv\\/part-\\d{2,3}\\.json$/)
+ api:()=>loadCatalog('data/public-api-official-list.json','api',new RegExp('^public-api-csv/part-[0-9]{2}[.]json$')),
+ file:()=>loadCatalog('data/public-data-official-list.json','file',new RegExp('^public-data-csv/part-[0-9]{2,3}[.]json$'))
 };
 const cache=new Map(),pending=new Map(),errors=new Map();
 function requiredTypes(){return state.type==='all'?(state.query.trim()?['tool','api','file']:['tool']):[state.type]}
