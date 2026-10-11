@@ -1,5 +1,5 @@
 import fs from 'node:fs/promises';
-import {parseCsv} from './import-public-data-csv.mjs';
+import {parseCsv} from './import-public-api-csv.mjs';
 
 const FIELDS=['목록키','목록유형','목록명','제공기관','분류체계','설명','확장자(데이터포맷)','목록 URL'];
 export function csvToFiles(csv){
