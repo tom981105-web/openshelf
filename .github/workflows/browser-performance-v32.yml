@@ -16,6 +16,7 @@ on:
       - 'scripts/catalog-ui-v33.test.mjs'
       - 'scripts/search-cards-v34.test.mjs'
       - 'scripts/browser-performance-v32.mjs'
+      - 'scripts/search-card-overflow.test.mjs'
       - '.github/workflows/browser-performance-v32.yml'
       - 'data/public-api-csv/**'
       - 'data/public-data-csv/**'
@@ -48,6 +49,8 @@ jobs:
         run: node scripts/search-cards-v34.test.mjs
       - name: Validate V39 AI boundary and fallback
         run: node scripts/ai-search-v39.test.mjs
+      - name: Verify overflow regression
+        run: node scripts/search-card-overflow.test.mjs
       - name: Measure real Chromium search flows
         run: node scripts/browser-performance-v32.mjs
       - name: Upload performance report
