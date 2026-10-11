@@ -5,7 +5,36 @@ const state={rows:[],failed:[],loaded:0,page:1,query:new URLSearchParams(locatio
 $('query').value=state.query;$('type').value=types.some(x=>x[0]===state.type)?state.type:'all';
 const text=(tag,cls,value)=>{const node=document.createElement(tag);if(cls)node.className=cls;node.textContent=value;return node};
 const get=async url=>{const controller=new AbortController();const timeout=setTimeout(()=>controller.abort(),20000);try{const res=await fetch(url,{cache:'no-store',signal:controller.signal});if(!res.ok)throw Error('HTTP '+res.status+' '+url);return await res.json()}finally{clearTimeout(timeout)}};
-function card(item){const node=text('article','result-card','');const meta=text('div','result-meta',types.find(t=>t[0]===item.type)?.[1]||'');const title=text('h3','',item.name);const info=text('p','',item.provider||item.category||'');const summary=text('p','result-summary',item.summary||'');const link=text('a','result-link','상세 보기 ↗');link.href=makeUrl(item);node.append(meta,title,info,summary,link);return node}
+function card(item){
+ const node=text('article','result-card','');
+ const meta=text('div','result-meta',types.find(t=>t[0]===item.type)?.[1]||'');
+ const title=text('h3','',item.name);
+ const info=text('p','result-provider',item.provider||item.category||'');
+ const summary=text('p','result-summary',item.summary||item.description||'설명이 등록되지 않았습니다.');
+ const actions=text('div','result-actions','');
+ const detail=text('button','result-detail-btn','요약 보기');
+ detail.type='button';detail.addEventListener('click',()=>openDetails(item));
+ const link=text('a','result-link','전체 상세정보 ↗');link.href=makeUrl(item);
+ actions.append(detail,link);node.append(meta,title,info,summary,actions);return node;
+}
+let detailsPreviousFocus=null;
+function openDetails(item){
+ const dialog=$('quickDetail');
+ detailsPreviousFocus=document.activeElement;
+ $('quickTitle').textContent=item.name;
+ $('quickType').textContent=types.find(t=>t[0]===item.type)?.[1]||'';
+ $('quickProvider').textContent=item.provider||item.category||'정보 없음';
+ $('quickCategory').textContent=item.category||'분류 없음';
+ $('quickSummary').textContent=item.summary||item.description||'설명이 등록되지 않았습니다.';
+ $('quickId').textContent=item.id||'없음';
+ $('quickVerification').textContent=item.type==='tool'?'도구 정보는 등록 내용 기준입니다.':'공식 목록 메타데이터 · 실제 이용 가능 여부는 원문에서 확인하세요.';
+ $('quickLink').href=makeUrl(item);
+ if(!dialog.open)dialog.showModal();
+}
+function closeDetails(){const dialog=$('quickDetail');if(dialog.open)dialog.close();if(detailsPreviousFocus?.isConnected)detailsPreviousFocus.focus()}
+$('quickClose').addEventListener('click',closeDetails);
+$('quickDetail').addEventListener('click',event=>{if(event.target===$('quickDetail'))closeDetails()});
+$('quickDetail').addEventListener('close',()=>{if(detailsPreviousFocus?.isConnected)detailsPreviousFocus.focus()});
 let previousSuggestionsKey='',previousSuggestions=[];
 function renderSuggestions(items){const root=$('suggestions');const key=state.query+'|'+state.type+'|'+state.rows.length;if(key!==previousSuggestionsKey){previousSuggestions=suggestQueries(state.rows,state.query,6);previousSuggestionsKey=key}const suggestions=previousSuggestions;root.replaceChildren(...suggestions.map(value=>{const b=text('button','suggestion-chip',value);b.type='button';b.addEventListener('click',()=>{$('query').value=value;state.query=value;state.page=1;refreshCatalogs();$('query').focus()});return b}));root.hidden=!suggestions.length;root.setAttribute('aria-label','연관 검색어 추천')}
 function render(){const items=filterResults(state.rows,state.query,state.type);const pages=Math.max(1,Math.ceil(items.length/24));state.page=Math.min(state.page,pages);$('total').textContent=items.length.toLocaleString('ko-KR');$('page').textContent=state.page+' / '+pages;$('prev').disabled=state.page===1;$('next').disabled=state.page===pages;renderSuggestions(items);const list=$('results');list.replaceChildren(...items.slice((state.page-1)*24,state.page*24).map(card));$('empty').hidden=items.length>0||requiredTypes().some(type=>pending.has(type));const u=new URL(location.href);if(state.query)u.searchParams.set('q',state.query);else u.searchParams.delete('q');if(state.type!=='all')u.searchParams.set('type',state.type);else u.searchParams.delete('type');history.replaceState(null,'',u)}
