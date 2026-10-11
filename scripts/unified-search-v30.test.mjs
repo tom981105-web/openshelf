@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {editDistance,suggestQueries,filterResults} from '../unified-search-core.mjs';
+const rows=[{id:'1',type:'tool',name:'머신러닝',category:'인공지능',provider:'연구소'},{id:'2',type:'file',name:'교통 통계',category:'교통',provider:'서울특별시'},{id:'3',type:'api',name:'버스 노선 API',category:'교통',provider:'교통공사'}];
+assert.equal(editDistance('머신러닝','머신러닝'),0);
+assert.equal(editDistance('버스','버스스'),1);
+assert.ok(suggestQueries(rows,'머신러닝').includes('machine learning'));
+assert.ok(suggestQueries(rows,'버스스').includes('버스'));
+assert.ok(suggestQueries(rows,'서울').some(x=>x.includes('서울')));
+assert.deepEqual(suggestQueries(rows,''),[]);
+assert.deepEqual(suggestQueries(rows,'a'.repeat(100)),[]);
+assert.equal(suggestQueries(rows,'서울',2).length<=2,true);
+assert.equal(filterResults(rows,'버스','api').length,1);
+console.log('V30 smart suggestions and typo checks passed');
