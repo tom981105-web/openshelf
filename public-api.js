@@ -104,7 +104,7 @@ function openApiDetail(id){
 }
 function detailFromUrl(){
  const id=new URLSearchParams(window.location.search).get('api');
- if(id&&/^\\d{7,8}$/.test(id))openApiDetail(id);
+ if(id&&/^[0-9]{7,8}$/.test(id))openApiDetail(id);
 }
 $('apiDetailClose')?.addEventListener('click',()=>{
  closeApiDetail();
