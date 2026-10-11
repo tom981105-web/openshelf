@@ -1,6 +1,6 @@
 const $=id=>document.getElementById(id);
 const search=$('fileSearch'),category=$('fileCategory'),provider=$('fileProvider'),format=$('fileFormat'),sector=$('fileSector'),sort=$('fileSort');
-let rows=[],index=[],page=1,requestId=0,searchTimer=0,lastFocus=null;
+let rows=[],index=[],page=1,requestId=0,searchTimer=0,lastFocus=null,currentDetailId=null;
 const PAGE_SIZE=24;
 const SECTORS=[['교통·물류',/교통|물류|도로|운송/],['환경·에너지',/환경|에너지|기상|기후|대기|수질/],['보건·의료',/보건|의료|건강|질병|식품/],['교육·연구',/교육|연구|과학|기술|학술/],['건축·시설',/건축|시설|주택|도시|국토|건설|안전/],['경제·산업',/경제|산업|금융|기업|고용|무역/],['농림·해양',/농림|농업|축산|산림|수산|해양/],['문화·관광',/문화|관광|체육|예술/],['행정·법률',/행정|법률|법무|공공|통계|국방/],['사회·복지',/사회|복지|인구|가족|보육/]];
 function sectorOf(value){const top=String(value||'').split(/\s*[-–>]\s*/)[0];for(const [name,re] of SECTORS)if(re.test(top))return name;return '기타·미분류'}
@@ -56,15 +56,18 @@ function render(){
  $('fileList').replaceChildren(frag);
 }
 function openDetail(x){
+ currentDetailId=x.id;
  lastFocus=document.activeElement;
  for(const [id,key] of [['fileDetailTitle','name'],['fileDetailId','id'],['fileDetailProvider','provider'],['fileDetailCategory','category'],['fileDetailFormat','format'],['fileDetailSummary','summary']])$(id).textContent=x[key];
- $('fileDetailLink').href=x.url;$('fileDialog').hidden=false;document.body.classList.add('file-dialog-open');$('fileClose').focus();
+ $('fileDetailLink').href=x.url;$('fileCopyStatus').textContent='';const url=new URL(location.href);url.searchParams.set('file',x.id);history.replaceState(null,'',url);$('fileDialog').hidden=false;document.body.classList.add('file-dialog-open');$('fileClose').focus();
 }
 function closeDetail(){
+ currentDetailId=null;const url=new URL(location.href);url.searchParams.delete('file');history.replaceState(null,'',url);
  $('fileDialog').hidden=true;document.body.classList.remove('file-dialog-open');
  if(lastFocus&&document.contains(lastFocus))lastFocus.focus();
 }
 $('fileClose').addEventListener('click',closeDetail);
+$('fileCopyLink').addEventListener('click',async()=>{if(!currentDetailId)return;const url=new URL(location.href);url.searchParams.set('file',currentDetailId);try{await navigator.clipboard.writeText(url.href);$('fileCopyStatus').textContent='링크를 복사했습니다.'}catch(error){$('fileCopyStatus').textContent='복사에 실패했습니다. 주소창에서 링크를 복사해 주세요.'}});
 $('fileDialog').addEventListener('click',e=>{if(e.target===e.currentTarget)closeDetail()});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('fileDialog').hidden)closeDetail()});
 async function json(url,timeoutMs=13000){
@@ -101,6 +104,7 @@ async function load(){
   selectOptions(provider,'모든 기관',[...new Set(rows.map(x=>x.provider))]);
   selectOptions(format,'모든 형식',[...new Set(rows.flatMap(x=>formatsOf(x.format)))]);
   $('fileTotal').textContent=rows.length.toLocaleString('ko-KR');page=1;render();
+  const requested=new URLSearchParams(location.search).get('file');if(requested&&/^[0-9]{7,8}$/.test(requested)){const found=rows.find(x=>x.id===requested);if(found)openDetail(found)}
   if(failures.length){$('fileStatus').textContent+=' · 파일 '+failures.length+'개 일부 누락, 다시 불러오기 가능';$('fileRetry').hidden=false}
  }catch(error){if(version!==requestId)return;console.error('Public Data load error',error);$('fileStatus').textContent='목록을 불러오지 못했습니다. 다시 불러오기를 눌러주세요.';$('fileRetry').hidden=false}
 }
