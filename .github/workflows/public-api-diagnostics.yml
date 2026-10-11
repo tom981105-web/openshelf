@@ -10,6 +10,7 @@ on:
       - 'scripts/public-api-csv-shards.test.mjs'
       - 'scripts/public-api-v17.test.mjs'
       - 'scripts/public-api-v18.test.mjs'
+      - 'scripts/public-api-v19.test.mjs'
       - 'public-api.css'
       - 'public-api.js'
       - 'public-api.html'
@@ -45,6 +46,8 @@ jobs:
         run: node scripts/public-api-v17.test.mjs
       - name: V18 classification and filter tests
         run: node scripts/public-api-v18.test.mjs
+      - name: V19 API detail panel regression tests
+        run: node scripts/public-api-v19.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
