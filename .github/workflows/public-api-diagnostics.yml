@@ -82,6 +82,8 @@ jobs:
           node scripts/validate-public-data-v25.mjs
       - name: Official CSV downloader tests
         run: node scripts/download-official-catalog-csv.test.mjs
+      - name: Probe official CSV attachment discovery
+        run: node scripts/download-official-catalog-csv.mjs --probe
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
