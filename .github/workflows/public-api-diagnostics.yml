@@ -14,6 +14,10 @@ on:
       - 'scripts/public-data-v21-v22.test.mjs'
       - 'scripts/public-data-v23.test.mjs'
       - 'scripts/public-data-v24.test.mjs'
+      - 'scripts/public-data-v25.test.mjs'
+      - 'scripts/validate-public-data-v25.mjs'
+      - 'scripts/update-public-data-csv.mjs'
+      - '.github/workflows/public-data-monthly-update.yml'
       - 'public-data.js'
       - 'public-data.html'
       - 'public-data.css'
@@ -70,6 +74,10 @@ jobs:
         run: node scripts/public-data-v23.test.mjs
       - name: V24 file-data search and sharing tests
         run: node scripts/public-data-v24.test.mjs
+      - name: V25 file-data snapshot changes and catalog validation
+        run: |
+          node scripts/public-data-v25.test.mjs
+          node scripts/validate-public-data-v25.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
