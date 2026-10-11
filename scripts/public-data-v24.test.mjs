@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+import {execFileSync} from 'node:child_process';
+execFileSync(process.execPath,['--check','public-data.js']);
+const js=fs.readFileSync('public-data.js','utf8'),html=fs.readFileSync('public-data.html','utf8');
+for(const id of ['fileSort','fileCopyLink','fileCopyStatus'])assert.ok(html.includes('id="'+id+'"'));
+for(const value of ['relevance','name-asc','name-desc','provider'])assert.ok(html.includes('value="'+value+'"'));
+assert.match(js,/function relevance\(/);assert.match(js,/function updateCategories\(/);assert.match(js,/matches\.sort/);assert.match(js,/updateCategories\(\);page=1;render\(\)/);assert.match(js,/navigator\.clipboard\.writeText/);assert.match(js,/searchParams\.set\('file'/);assert.match(js,/searchParams\.delete\('file'/);
+const manifest=JSON.parse(fs.readFileSync('data/public-data-official-list.json','utf8'));assert.equal(manifest.total,86411);
+console.log('V24 sort, linked categories, detail deep links passed');
