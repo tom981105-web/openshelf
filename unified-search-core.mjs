@@ -1,8 +1,7 @@
 export const normalize=value=>String(value??'').normalize('NFKC').toLocaleLowerCase('ko-KR').replace(/\s+/g,' ').trim();
 const indexed=new WeakMap();
 function fields(row){let result=indexed.get(row);if(!result){result={name:normalize(row.name),provider:normalize(row.provider),category:normalize(row.category),summary:normalize(row.summary||row.description),tags:normalize(Array.isArray(row.tags)?row.tags.join(' '):'')};indexed.set(row,result)}return result}
-export function rank(row,query){
- const q=normalize(query),terms=q.split(' ').filter(Boolean);if(!terms.length)return 1;
+function scoreTerms(row,q,terms){if(!terms.length)return 1;
  const {name,provider,category,summary,tags}=fields(row),id=String(row.id||'');
  if(id===q)return 1000;
  let score=0;
@@ -22,7 +21,8 @@ export function rank(row,query){
  }
  return score;
 }
-export function filterResults(rows,query,type='all'){return rows.filter(row=>type==='all'||row.type===type).map((row,index)=>({row,index,score:rank(row,query)})).filter(x=>x.score>0).sort((a,b)=>b.score-a.score||a.index-b.index).map(x=>x.row)}
+export function rank(row,query){const q=normalize(query);return scoreTerms(row,q,q.split(' ').filter(Boolean))}
+export function filterResults(rows,query,type='all'){const q=normalize(query),terms=q.split(' ').filter(Boolean),found=[];for(let index=0;index<rows.length;index++){const row=rows[index];if(type!=='all'&&row.type!==type)continue;const score=scoreTerms(row,q,terms);if(score>0)found.push({row,index,score})}found.sort((a,b)=>b.score-a.score||a.index-b.index);return found.map(x=>x.row)}
 export function makeUrl(row){if(row.type==='api'&&/^\d{7,8}$/.test(row.id))return 'public-api.html?api='+encodeURIComponent(row.id);if(row.type==='file'&&/^\d{7,8}$/.test(row.id))return 'public-data.html?file='+encodeURIComponent(row.id);return 'index.html?tool='+encodeURIComponent(row.id||'')}
 
 const ALIASES=[['인공지능','ai'],['머신러닝','machine learning'],['문서','pdf'],['교통','버스'],['데이터','data'],['지도','map']];
