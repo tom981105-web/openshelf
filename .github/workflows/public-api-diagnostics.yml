@@ -44,7 +44,7 @@ permissions:
 jobs:
   probe:
     runs-on: ubuntu-latest
-    timeout-minutes: 4
+    timeout-minutes: 8
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -84,6 +84,8 @@ jobs:
         run: node scripts/download-official-catalog-csv.test.mjs
       - name: Probe official CSV attachment discovery
         run: node scripts/download-official-catalog-csv.mjs --probe
+      - name: Download and validate current official CSV (V26 integration)
+        run: node scripts/download-official-catalog-csv.mjs /tmp/v26-official.csv
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
