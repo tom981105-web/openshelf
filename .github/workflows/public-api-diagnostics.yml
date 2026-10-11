@@ -13,6 +13,7 @@ on:
       - 'scripts/public-api-v19.test.mjs'
       - 'scripts/public-data-v21-v22.test.mjs'
       - 'scripts/public-data-v23.test.mjs'
+      - 'scripts/public-data-v24.test.mjs'
       - 'public-data.js'
       - 'public-data.html'
       - 'public-data.css'
@@ -67,6 +68,8 @@ jobs:
         run: node scripts/public-data-v21-v22.test.mjs
       - name: V23 file-data category and format tests
         run: node scripts/public-data-v23.test.mjs
+      - name: V24 file-data search and sharing tests
+        run: node scripts/public-data-v24.test.mjs
       - name: Probe real official portal response
         run: node scripts/diagnose-public-apis.mjs
       - name: Dry-run one official discovery page (do not commit)
