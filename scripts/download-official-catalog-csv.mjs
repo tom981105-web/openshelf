@@ -56,4 +56,13 @@ export async function downloadOfficialCsv(output,config={}){
  await fs.writeFile(output,bytes);
  console.log(JSON.stringify({downloaded:true,bytes:bytes.length,attachment:chosen.id,output}));
 }
-if(process.argv[1]?.endsWith('/download-official-catalog-csv.mjs'))await downloadOfficialCsv(process.argv[2]);
+export async function probeOfficialSource(){
+ const html=await (await get(PAGE)).text();
+ const ids=findDetailIds(html);
+ if(!ids.length)throw Error('Official page did not reveal current file detail ID');
+ console.log(JSON.stringify({source:PAGE,foundDetailIds:ids.length}));
+}
+if(process.argv[1]?.endsWith('/download-official-catalog-csv.mjs')){
+ if(process.argv[2]==='--probe')await probeOfficialSource();
+ else await downloadOfficialCsv(process.argv[2]);
+}
