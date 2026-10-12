@@ -1,5 +1,851 @@
 [
   {
+    "id": "ai-fomo-skills",
+    "name": "AI FOMO Skills",
+    "github": "https://github.com/vincelele/ai-fomo-skills",
+    "description": "AI 정보 과부하를 방지하고 유용한 지식과 시그널을 선별하는 개인용 에이전트 스킬입니다.",
+    "longDescription": "다양한 채널에서 쏟아지는 AI 관련 콘텐츠 중 가치 있는 정보를 필터링하고 장기 기억 저장소로 축적할 수 있도록 돕는 에이전트 스킬입니다. 불필요한 정보 탐색에 낭비되는 주의력을 줄이고 핵심 인사이트에 집중하게 만듭니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "지식 관리",
+      "정보 필터링",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/vincelele/ai-fomo-skills",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Python 3.x",
+      "Git"
+    ],
+    "supportedAgents": [
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Codex 스킬 설치",
+        "command": "python ~/.codex/skills/.system/skill-installer/scripts/install-skill-from-github.py --repo vincelele/ai-fomo-skills --path ai-fomo-init ai-fomo-sources ai-fomo",
+        "note": "Codex CLI를 통한 자동 설치 방법입니다."
+      },
+      {
+        "title": "수동 설치",
+        "command": "git clone https://github.com/vincelele/ai-fomo-skills.git && cd ai-fomo-skills && cp -R ai-fomo-init ai-fomo-sources ai-fomo ~/.codex/skills/",
+        "note": "저장소를 복제하여 수동으로 스킬 디렉토리에 등록합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하거나 스킬 설치 명령어를 실행합니다.",
+      "정보 수집 소스를 설정하고 dry-run을 통해 필터링 결과를 확인합니다.",
+      "에이전트를 통해 필요한 콘텐츠만 요약 및 지식화합니다."
+    ],
+    "examplePrompt": "이 AI 관련 링크가 내 프로젝트와 관련이 있는지 분석하고 가치를 판단해줘.",
+    "usageNote": "",
+    "stars": 248,
+    "forks": 1,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "project-cairn",
+    "name": "Project Cairn",
+    "github": "https://github.com/iBlinkQ/project-cairn",
+    "description": "프로젝트 작업을 재사용 가능한 지식으로 전환하는 AI 에이전트 스킬입니다.",
+    "longDescription": "반복되는 문제와 흩어져 있는 프로젝트 맥락을 정리하여 에이전트가 이전 작업의 결론과 규칙을 기억하도록 돕습니다. 여러 세션이나 에이전트 간 전환 시 동일한 맥락을 반복해서 설명할 필요가 없도록 관리해 줍니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "지식 관리",
+      "Claude Code",
+      "Codex"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/iBlinkQ/project-cairn",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Git"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "WorkBuddy"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 사용자 설치",
+        "command": "git clone https://github.com/iBlinkQ/project-cairn.git ~/.claude/skills/project-cairn",
+        "note": "Claude Code 환경에 스킬을 복제합니다."
+      },
+      {
+        "title": "Codex 사용자 설치",
+        "command": "git clone https://github.com/iBlinkQ/project-cairn.git ~/.agents/skills/project-cairn",
+        "note": "Codex 에이전트 경로에 스킬을 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원하는 에이전트의 스킬 디렉토리에 프로젝트를 클론합니다.",
+      "에이전트 세션 내에서 프로젝트 지식 관리 기능을 활성화합니다.",
+      "작업 과정과 결론을 기록하여 다음 세션에서 재사용합니다."
+    ],
+    "examplePrompt": "이전 프로젝트에서 해결했던 아키텍처 결정 사항을 현재 세션으로 불러와줘.",
+    "usageNote": "",
+    "stars": 238,
+    "forks": 45,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "design-harness",
+    "name": "Design Harness",
+    "github": "https://github.com/tigerless-labs/design-harness",
+    "description": "흩어진 읽기 자료와 아이디어를 검증 가능한 시스템 설계로 연결해 주는 에이전트 스킬입니다.",
+    "longDescription": "참고자료와 거친 아이디어를 에이전트에 입력하면 마크다운 기록과 시각적 캔버스를 통해 체계적인 시스템 설계로 조립해 줍니다. 인간이 결정을 내리고 에이전트는 자료 정리와 출처 관리를 보조합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "시스템 설계",
+      "지식 관리",
+      "Markdown"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/tigerless-labs/design-harness",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Python 3.x"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 추가",
+        "command": "/plugin marketplace add tigerless-labs/design-harness && /plugin install design-harness@design-harness",
+        "note": "Claude Code 마켓플레이스를 통해 설치합니다."
+      },
+      {
+        "title": "Codex 플러그인 추가",
+        "command": "codex plugin marketplace add tigerless-labs/design-harness",
+        "note": "Codex CLI 환경에서 플러그인을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "마켓플레이스 명령어를 통해 플러그인을 설치합니다.",
+      "참고 문서와 아이디어를 에이전트에 입력합니다.",
+      "생성된 마크다운 기록과 캔버스를 검토하고 설계를 확정합니다."
+    ],
+    "examplePrompt": "수집한 논문과 아이디어를 바탕으로 시스템 설계 초안을 작성하고 근거를 정리해줘.",
+    "usageNote": "",
+    "stars": 231,
+    "forks": 33,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "scholar-skill",
+    "name": "ScholarSkill",
+    "github": "https://github.com/EESJGong/scholar-skill",
+    "description": "Obsidian에서 학술 논문 읽기, 지식 연결, 비판적 사고를 지원하는 OpenClaw 스킬입니다.",
+    "longDescription": "단순한 논문 수집이나 노트 덤프를 넘어 에이전트가 논문을 읽고 지속 가능한 지식을 추출하도록 돕습니다. 새로운 아이디어를 기존 지식베이스에 연결하고 시간이 지나며 지식 체계가 진화하도록 설계되었습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "학술 연구",
+      "지식 관리",
+      "Obsidian",
+      "AI 에이전트"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/EESJGong/scholar-skill",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Python 3.x",
+      "Obsidian"
+    ],
+    "supportedAgents": [
+      "OpenClaw"
+    ],
+    "install": [],
+    "usageSteps": [
+      "OpenClaw 환경에 ScholarSkill을 설치합니다.",
+      "Obsidian 볼트와 연동하여 읽을 논문을 지정합니다.",
+      "에이전트와 대화하며 논문 핵심 내용을 요약하고 기존 노트와 연결합니다."
+    ],
+    "examplePrompt": "이 논문의 핵심 기여를 요약하고 내 기존 연구 노트와 어떤 연관이 있는지 분석해줘.",
+    "usageNote": "",
+    "stars": 223,
+    "forks": 17,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "hipocampus",
+    "name": "Hipocampus",
+    "github": "https://github.com/kevin-hs-sohn/hipocampus",
+    "description": "AI 에이전트를 위한 3계층 메모리 및 하이브리드 검색 기반의 드롭인 메모리 하네스입니다.",
+    "longDescription": "별도의 복잡한 인프라 없이 파일 기반으로 동작하며, 3계층 메모리와 압축 트리를 활용해 AI 에이전트가 과거의 대화와 맥락을 능동적으로 상기할 수 있도록 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 메모리",
+      "컨텍스트 관리",
+      "RAG",
+      "Node.js"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/kevin-hs-sohn/hipocampus",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "OpenCode",
+      "OpenClaw"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 설치",
+        "command": "/plugin marketplace add kevin-hs-sohn/hipocampus && /plugin install hipocampus@kevin-hs-sohn/hipocampus",
+        "note": "Claude Code 환경에 플러그인을 추가합니다."
+      },
+      {
+        "title": "npm을 통한 독립 실행형 설치",
+        "command": "npx hipocampus init",
+        "note": "프로젝트 디렉토리에서 초기화 명령어를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "플러그인 추가 또는 npx 명령어로 초기화합니다.",
+      "에이전트 작업 시 메모리 하네스가 자동으로 맥락을 색인하고 관리하도록 둡니다.",
+      "필요에 따라 벡터 검색이나 압축 트리 옵션을 설정합니다."
+    ],
+    "examplePrompt": "지난달에 논의했던 아키텍처 관련 주요 제약 사항을 기억해내줘.",
+    "usageNote": "",
+    "stars": 210,
+    "forks": 12,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "obsidian-knowledge-agent",
+    "name": "Obsidian Knowledge Agent",
+    "github": "https://github.com/Michael-OvO/obsidian-knowledge-agent",
+    "description": "PDF, 강의 슬롯, 논문 등의 원시 자료를 구조화된 Obsidian 노트로 변환하는 에이전트 파이프라인입니다.",
+    "longDescription": "다양한 형태의 학습 및 연구 자료를 입력받아 자동으로 분류하고, 사용자의 취향에 맞게 교육용 노트로 컴파일 및 배포하여 지식 볼트를 풍부하게 만들어 줍니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식 관리",
+      "Obsidian",
+      "AI 에이전트",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Michael-OvO/obsidian-knowledge-agent",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Python 3.x",
+      "Obsidian"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "Cursor"
+    ],
+    "install": [],
+    "usageSteps": [
+      "원시 자료(PDF, URL 등)를 지정된 폴더에 넣습니다.",
+      "에이전트 파이프라인을 실행하여 자료를 분석하고 구조화합니다.",
+      "Obsidian에서 정리된 노트를 확인하고 활용합니다."
+    ],
+    "examplePrompt": "이 PDF 강의 자료를 읽고 핵심 개념을 Obsidian 노트 형식으로 정리해줘.",
+    "usageNote": "",
+    "stars": 205,
+    "forks": 13,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "nanzi-ai-agent-platform",
+    "name": "NanZi AI Agent Platform",
+    "github": "https://github.com/RandyChen1985/nanzi-ai-agent-platform",
+    "description": "다중 에이전트 협업, RAG, ChatBI 데이터 인사이트를 제공하는 오픈소스 기업용 AI 에이전트 플랫폼입니다.",
+    "longDescription": "물리 데이터원 직결, 안전한 샌드박스 실행, Redis 장기 기억 엔진을 지원하며 다모달 챗봇 위젯과 토큰 소비량 감사 기능을 통합한 엔터프라이즈급 AI 플랫폼입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "ChatBI",
+      "RAG",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/RandyChen1985/nanzi-ai-agent-platform",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Python 3.11",
+      "FastAPI",
+      "SQLAlchemy"
+    ],
+    "supportedAgents": [
+      "AgentScope"
+    ],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 파이썬 환경을 설정합니다.",
+      "데이터베이스 및 Redis 등 필수 서비스를 구성합니다.",
+      "웹 인터페이스를 통해 다중 에이전트 워크플로우를 실행합니다."
+    ],
+    "examplePrompt": "데이터베이스에서 지난 분기 매출 데이터를 조회하고 트렌드를 분석해줘.",
+    "usageNote": "",
+    "stars": 203,
+    "forks": 57,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "personal-external-brain",
+    "name": "Personal External Brain",
+    "github": "https://github.com/chenkanglin198904/Personal_External_Brain",
+    "description": "노트, 웹페이지, PDF, 오디오/비디오를 개인용 지식 그래프로 변환하는 로컬 우선 도구입니다.",
+    "longDescription": "단순한 LLM 래퍼가 아니라 로컬 환경에서 실행되며, 수집한 정보의 원본 소스와 맥락, 추론 과정을 온전히 유지하여 필요할 때 정확한 정보를 되찾을 수 있게 돕습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식 그래프",
+      "로컬 우선",
+      "RAG",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/chenkanglin198904/Personal_External_Brain",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Python 3.x",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "백엔드 가상환경 설정 및 패키지 설치 (macOS / Linux)",
+        "command": "cd backend && python -m venv .venv && .venv/bin/python -m pip install -e \".[dev]\"",
+        "note": "파이썬 가상환경을 생성하고 개발 종속성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "백엔드 및 프론트엔드 환경을 로컬에 설정합니다.",
+      "PDF, 웹페이지, 노트 등의 파일을 임포트합니다.",
+      "지식 그래프를 통해 연결된 정보를 검색하고 탐색합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "로컬 환경에서 완전히 독립적으로 실행됩니다.",
+    "stars": 201,
+    "forks": 1,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "sketchsheets",
+    "name": "Sketchsheets",
+    "github": "https://github.com/mrk-us/sketchsheets",
+    "description": "UX 디자이너를 위해 프린트하여 바로 사용할 수 있는 무료 스케치 시트 템플릿 모음입니다.",
+    "longDescription": "최신 디바이스와 플랫폼에 맞춰 아이디어를 손으로 스케치할 수 있도록 오픈소스로 제공되는 인쇄용 템플릿 모음입니다. UI/UX 와이어프레임 작성 시 유용하게 활용할 수 있습니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "UI/UX",
+      "디자인 도구",
+      "와이어프레임",
+      "템플릿"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://sketchsheets.com",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹사이트 또는 저장소에서 필요한 디바이스 템플릿을 확인합니다.",
+      "템플릿 파일(ZIP 등)을 다운로드합니다.",
+      "프린터로 인쇄하여 아이디어 스케치 및 와이어프레임 작성에 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 274,
+    "forks": 16,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "monotome",
+    "name": "Monotome",
+    "github": "https://github.com/cblgh/monotome",
+    "description": "브라우저에서 실행되며 마크다운 기반으로 동작하는 개인용 지식 베이스 및 위키 시스템입니다.",
+    "longDescription": "가볍고 단순한 디렉토리 구조를 가지며, 백링크와 마크다운을 지원하여 자신만의 개인 위키나 노트 공간을 로컬 또는 간단한 정적 서버 환경에서 구축할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "개인 위키",
+      "지식 관리",
+      "Markdown",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/cblgh/monotome",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Python 또는 Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 서버 실행",
+        "command": "python -m http.server 8900",
+        "note": "클론한 디렉토리에서 간단한 HTTP 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론합니다.",
+      "터미널에서 파이썬 등 간이 HTTP 서버를 실행합니다.",
+      "브라우저에서 지정된 포트로 접속하여 마크다운 노트를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 212,
+    "forks": 10,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "mindforger-repository",
+    "name": "MindForger Repository",
+    "github": "https://github.com/dvorka/mindforger-repository",
+    "description": "MindForger 지식 노트 및 문서 관리용 저장소입니다.",
+    "longDescription": "MindForger 마크다운 에디터와 지식 노트북을 위한 문서 및 스텐실 모음 저장소입니다. 애플리케이션 소스 코드와 분리되어 독립적인 문서 관리를 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식관리",
+      "Markdown",
+      "노트북",
+      "문서화",
+      "연구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://projects.mindforger.com/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하거나 문서를 참조합니다.",
+      "MindForger 애플리케이션에서 메모리 폴더를 엽니다.",
+      "마크다운 기반의 노트와 문서를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 265,
+    "forks": 38,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "composeshadowsplus",
+    "name": "ComposeShadowsPlus",
+    "github": "https://github.com/GIGAMOLE/ComposeShadowsPlus",
+    "description": "안드로이드 제트팩 컴포즈 UI에 화려한 커스텀 그림자를 제공하는 라이브러리입니다.",
+    "longDescription": "오프셋, 색상, 확산 등을 지원하여 Jetpack Compose UI 요소에 고품질의 그림자를 쉽게 적용할 수 있는 안드로이드 UI 라이브러리입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Android",
+      "Jetpack Compose",
+      "Kotlin",
+      "UI",
+      "디자인도구"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.linkedin.com/in/gigamole/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Android Compose"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 JitPayK 의존성을 추가합니다.",
+      "컴포즈 UI 컴포넌트에 그림자 지정 모디파이어를 적용합니다.",
+      "색상과 오프셋을 조절하여 그림자 효과를 커스텀합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 217,
+    "forks": 10,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "underexpress",
+    "name": "UnderExpress",
+    "github": "https://github.com/ankythshukla/underexpress",
+    "description": "부트스트랩 4 기반으로 제작된 무료 반응형 웹사이트 UI 키트입니다.",
+    "longDescription": "100개 이상의 수작업 UI 컴포넌트와 랜딩 페이지 템플릿을 제공하여 웹 프로젝트 제작 시간을 단축해주는 반응형 UI 키트입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Bootstrap 4",
+      "UI Kit",
+      "HTML",
+      "웹디자인",
+      "템플릿"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/ankythshukla/underexpress",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Bootstrap 4"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소에서 HTML 및 CSS 자산을 다운로드합니다.",
+      "원하는 랜딩 페이지 템플릿과 컴포넌트를 선택합니다.",
+      "웹사이트 프로젝트에 반영하여 커스텀합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 212,
+    "forks": 26,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "logseq13-full-house-plugin",
+    "name": "Logseq Full House Templates Plugin",
+    "github": "https://github.com/stdword/logseq13-full-house-plugin",
+    "description": "로그스크 사용자들을 위한 슈퍼 커스텀 템플릿 플러그인입니다.",
+    "longDescription": "Logseq 지식 관리 도구에서 강력하고 유연한 템플릿 활용을 도와주는 자바스크립트 기반의 플러그인입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Logseq",
+      "지식관리",
+      "노트테이킹",
+      "플러그인",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://logseq.com",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Logseq"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Logseq 마켓플레이스에서 플러그인 섹션을 엽니다.",
+      "Full House Templates 플러그인을 검색하여 설치합니다.",
+      "튜토리얼을 참고하여 템플릿 기능을 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 209,
+    "forks": 6,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "subtle-patterns-bookmarklet",
+    "name": "SubtlePatterns Bookmarklet",
+    "github": "https://github.com/bradjasper/subtle-patterns-bookmarklet",
+    "description": "웹사이트에서 다양한 패턴을 실시간으로 미리 볼 수 있는 북마클릿입니다.",
+    "longDescription": "subtlepatterns.com의 배경 패턴을 현재 작업 중인 웹사이트에 간편하게 적용하고 좌우 화살표로 빠르게 전환하며 테스트할 수 있는 개발 및 디자인 도구입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "북마클릿",
+      "디자인도구",
+      "텍스처",
+      "CoffeeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://bradjasper.com/subtle-patterns-bookmarklet/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "북마클릿 페이지에서 링크를 브라우저 툴바에 드래그하여 추가합니다.",
+      "테스트할 웹사이트에서 북마클릿을 클릭합니다.",
+      "좌우 화살표 키를 사용하여 패턴을 전환하며 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 304,
+    "forks": 34,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "free-ai-coding",
+    "name": "Free AI Coding",
+    "github": "https://github.com/inmve/free-ai-coding",
+    "description": "무료 AI 코딩 도구의 사용량 리셋 및 추가 혜택 정보를 모은 저장소입니다.",
+    "longDescription": "Codex, Claude Code, Grok Bot 등 주요 AI 코딩 어시스턴트의 사용량 한도 초기화 소식과 관련 업데이트를 추적하는 안내 저장소입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI",
+      "코드생성",
+      "코딩어시스턴트",
+      "생산성",
+      "LLM"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/inmve/free-ai-coding",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소의 알림 설정에서 원하는 도구의 업데이트를 확인합니다.",
+      "공지된 사용량 초기화 정보를 참고하여 계정 상태를 체크합니다.",
+      "필요시 릴리스 알림을 구독합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 771,
+    "forks": 106,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "awesome-react-framer-x",
+    "name": "Awesome React Framer X",
+    "github": "https://github.com/davo/awesome-react-framer-x",
+    "description": "React, ES6 및 Framer X 학습을 위한 유용한 링크 모음 큐레이션입니다.",
+    "longDescription": "인터랙션 디자인 도구인 Framer X와 React, ES6를 학습할 수 있는 다양한 강좌, 튜토리얼, 비디오 링크들을 모아놓은 어썸 리스트입니다.",
+    "category": "교육·학습",
+    "tags": [
+      "React",
+      "디자인",
+      "학습자료",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/davo/awesome-react-framer-x",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "목록에서 학습하고 싶은 주제의 링크를 선택합니다.",
+      "연결된 튜토리얼이나 강좌를 통해 React 및 Framer X를 학습합니다.",
+      "커뮤니티 디스코드에 참여하여 소통합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 913,
+    "forks": 73,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "100-redteam-projects",
+    "name": "100 Red Team Projects",
+    "github": "https://github.com/kurogai/100-redteam-projects",
+    "description": "모의 해킹 및 보안 학습자를 위한 레드팀 프로젝트 모음입니다.",
+    "longDescription": "보안 학생과 네트워크 관리자를 위해 오프펜시브 보안 분야의 다양한 자동화, 해킹 툴, 네트워크 프로그래밍 프로젝트 소스를 모아놓은 학습용 저장소입니다.",
+    "category": "교육·학습",
+    "tags": [
+      "보안",
+      "모의해킹",
+      "자동화",
+      "Python",
+      "Linux"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/kurogai/100-redteam-projects",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [
+      "Python",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소에서 관심 있는 보안 프로젝트를 선택합니다.",
+      "코드와 구조를 분석하며 레드팀 방법론을 학습합니다.",
+      "안전한 실습 환경에서 도구를 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "학습 및 윤리적 보안 연구 목적으로만 사용해야 합니다.",
+    "stars": 2920,
+    "forks": 410,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "fresh-start",
+    "name": "Fresh Start",
+    "github": "https://github.com/nirholas/fresh-start",
+    "description": "AI 에이전트 및 LLM 환경 설정을 위한 오픈소스 프로젝트 아카이브입니다.",
+    "longDescription": "AGENTS.md와 llms.txt 표준을 활용하는 AI 에이전트 친화적인 오픈소스 프로젝트 저장소 구조를 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "LLM",
+      "오픈소스",
+      "웹3"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://three.ws",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T07:03:56.990Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소의 AGENTS.md 및 llms.txt 파일을 검토합니다.",
+      "AI 에이전트 통합 방식을 참고합니다.",
+      "프로젝트 구조를 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "비공식 미러 저장소이므로 외부 패키지 설치 시 주의가 필요합니다.",
+    "stars": 6228,
+    "forks": 16,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
     "id": "frappe-docker",
     "name": "Frappe Docker",
     "github": "https://github.com/frappe/frappe_docker",
