@@ -1,5 +1,872 @@
 [
   {
+    "id": "frappe-docker",
+    "name": "Frappe Docker",
+    "github": "https://github.com/frappe/frappe_docker",
+    "description": "Frappe 애플리케이션(ERPNext, CRM 등)을 개발, 배포, 실행하기 위한 공식 Docker 환경입니다.",
+    "longDescription": "ERPNext, Helpdesk 등 다양한 Frappe 애플리케이션을 컨테이너 환경에서 손쉽게 구축하고 운영할 수 있도록 도커 이미지와 컴포즈 설정 파일을 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Docker",
+      "Docker Compose",
+      "ERPNext",
+      "셀프호스팅"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://frappe.github.io/frappe_docker/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/frappe/frappe_docker.git",
+        "note": "프로젝트 소스 코드 복제"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "pwd.yml 파일을 이용하여 도커 컴포즈를 실행합니다.",
+      "컨테이너가 정상적으로 실행될 때까지 기다립니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "평가 및 데모 목적이며 프로덕션 환경에서는 공식 문서의 추가 설정이 필요합니다.",
+    "stars": 2590,
+    "forks": 2740,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "topic-db",
+    "name": "TopicDB",
+    "github": "https://github.com/brettkromkamp/topic-db",
+    "description": "토픽 맵 기반의 시맨틱 그래프 스토리지 라이브러리입니다.",
+    "longDescription": "SQLite를 백엔드로 사용하여 토픽 맵 기반의 지식 관리 시스템과 그래프 데이터를 효율적으로 저장하고 관리할 수 있도록 파이썬 라이브러리를 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Graph",
+      "SQLite",
+      "지식베이스",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/brettkromkamp/topic-db",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Python 3.10-3.12"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install --upgrade topic-db",
+        "note": "최신 안정 버전 설치"
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "파이썬 스크립트에서 topic-db 라이브러리를 임포트합니다.",
+      "지식 그래프 데이터를 생성하고 쿼리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 275,
+    "forks": 12,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "web-code-agent",
+    "name": "Folda-Scan",
+    "github": "https://github.com/oldjs/web-code-agent",
+    "description": "브라우저 로컬에서 동작하는 AI 코드 베이스 질의응답 및 분석 엔진입니다.",
+    "longDescription": "파일 시스템 액세스 API를 활용해 브라우저 환경에서 로컬 코드베이스를 색인화하고, 프라이버시를 유지하며 AI와 대화하듯 코드를 탐색할 수 있는 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "코드분석",
+      "AI",
+      "로컬우선"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://file.wen.bar",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Node.js",
+      "File System Access API 지원 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "지원하는 모던 브라우저로 애플리케이션을 엽니다.",
+      "로컬 코드 프로젝트 폴더에 대한 브라우저 접근 권한을 허용합니다.",
+      "색인이 완료되면 코드베이스에 대해 질문합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 268,
+    "forks": 21,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "lepton-eda",
+    "name": "Lepton EDA",
+    "github": "https://github.com/lepton-eda/lepton-eda",
+    "description": "회로도 작성 및 넷리스트 내보내기를 지원하는 오픈소스 전자 설계 자동화(EDA) 도구 모음입니다.",
+    "longDescription": "gEDA/gaf 스위트에서 포크되어 전자 회로 설계, 회로도 캡처, 다양한 포맷의 넷리스트 생성 등 엔지니어링 작업을 지원합니다.",
+    "category": "3D·CAD",
+    "tags": [
+      "CAD",
+      "회로설계",
+      "C",
+      "GPL"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://lepton-eda.github.io",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "C/C++ 컴파일러",
+      "pkg-config",
+      "Guile"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "필수 의존성 라이브러리를 설치합니다.",
+      "소스 코드를 컴파일하고 설치합니다.",
+      "회로 설계 및 스키매틱 캡처 도구를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 265,
+    "forks": 41,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "bkmr",
+    "name": "bkmr",
+    "github": "https://github.com/sysid/bkmr",
+    "description": "사용자와 AI 에이전트를 위한 의미 기반 로컬 지식 관리 도구입니다.",
+    "longDescription": "웹 URL, 코드 스니펫, 셸 명령어를 저장하고 시맨틱 검색(의미 검색)을 통해 빠르게 찾아 활용할 수 있는 Rust 기반 CLI 도구입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Rust",
+      "CLI",
+      "지식관리",
+      "시맨틱검색"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/sysid/bkmr",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Rust 툴체인 또는 Python/pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo 설치",
+        "command": "cargo install bkmr",
+        "note": "Rust 패키지 매니저를 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "Cargo 또는 앰버 관리자를 통해 bkmr을 설치합니다.",
+      "기본 설정을 생성합니다.",
+      "북마크나 스니펫을 추가하고 의미 기반으로 검색합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 264,
+    "forks": 13,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "vault-operator",
+    "name": "Vault Operator",
+    "github": "https://github.com/pssah4/vault-operator",
+    "description": "Obsidian 볼트를 위한 에이전틱 AI 운영 레이어 및 지식 관리 코파일럿입니다.",
+    "longDescription": "사용자의 지시를 받아 자동으로 계획을 세우고, 문서를 검색·읽기·쓰기하며 메모리를 유지하는 오픈소스 로컬 우선 AI 에이전트 플러그인입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "Obsidian",
+      "AI 에이전트",
+      "TypeScript",
+      "지식관리"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://pssah4.github.io/vault-operator/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Obsidian"
+    ],
+    "supportedAgents": [
+      "Ollama",
+      "LM Studio",
+      "ChatGPT",
+      "Claude"
+    ],
+    "install": [],
+    "usageSteps": [
+      "Obsidian 커뮤니티 플러그인에서 Vault Operator를 설치합니다.",
+      "사용할 AI 모델(API 또는 로컬 모델)을 설정합니다.",
+      "채팅창에 작업을 입력하여 에이전트가 문서를 관리하도록 지시합니다."
+    ],
+    "examplePrompt": "이번 주 노트를 분석해서 핵심 내용을 요약해줘",
+    "usageNote": "모든 쓰기 작업은 사용자의 승인 하에 안전하게 실행됩니다.",
+    "stars": 258,
+    "forks": 31,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "awesome-macos-commandline",
+    "name": "Awesome macOS Command-line",
+    "github": "https://github.com/phmullins/awesome-macos-commandline",
+    "description": "macOS에서 유용한 커맨드라인 소프트웨어와 유틸리티 모음입니다.",
+    "longDescription": "개발자, 시스템 관리자, 파워 유저들이 macOS 환경에서 생산성을 높일 수 있도록 검증된 CLI 도구들을 카테고리별로 정리한 큐레이션 리스트입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "macOS",
+      "CLI",
+      "유틸리티",
+      "유용한목록"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/phmullins/awesome-macos-commandline",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "문서에서 필요한 카테고리의 CLI 도구를 확인합니다.",
+      "Homebrew 등을 통해 원하는 도구를 설치합니다.",
+      "터미널에서 명령어를 활용해 생산성을 높입니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 669,
+    "forks": 32,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "izumi",
+    "name": "izumi",
+    "github": "https://github.com/7mind/izumi",
+    "description": "Scala 개발을 위한 생산성 지향 라이브러리 및 도구 모음입니다.",
+    "longDescription": "의존성 주입(DI), 구조화된 로깅, 기능형 프로그래밍 테스트 등을 지원하는 Scala 생태계의 경량 유틸리티 프레임워크입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Scala",
+      "의존성주입",
+      "로깅",
+      "프레임워크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://izumi.7mind.io",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Scala 툴체인"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Scala 프로젝트의 빌드 파일에 의존성을 추가합니다.",
+      "의존성 주입 및 로깅 모듈을 코드에 적용합니다.",
+      "기능형 테스트 및 프로덕션 코드를 빌드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 628,
+    "forks": 73,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "vue-designer",
+    "name": "Vue Designer",
+    "github": "https://github.com/ktsn/vue-designer",
+    "description": "Vue 싱글 파일 컴포넌트를 시각적으로 미리 보고 편집할 수 있는 VS Code 확장 프로그램입니다.",
+    "longDescription": "VS Code 내부에서 .vue 파일의 실시간 미리보기 패널을 제공하여 컴포넌트 디자인과 스타일링을 편리하게 보조합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Vue",
+      "VS Code",
+      "디자인도구",
+      "프론트엔드"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://marketplace.visualstudio.com/items?itemName=ktsn.vue-designer",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Visual Studio Code"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "VS Code Marketplace에서 Vue Designer 확장을 다운로드하여 설치합니다.",
+      "VS Code 팔레트에서 'Open Vue Designer'를 실행합니다.",
+      "열려 있는 .vue 컴포넌트의 미리보기 화면을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "개발 중인 실험적 확장 프로그램입니다.",
+    "stars": 373,
+    "forks": 22,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "sketch",
+    "name": "Sketch",
+    "github": "https://github.com/daihase/Sketch",
+    "description": "iOS 앱에서 그림판 및 드로잉 기능을 구현할 수 있는 Swift 라이브러리입니다.",
+    "longDescription": "네온, 블러 등 다양한 펜 필터와 색상 선택 기능을 갖추어 개발자가 iOS 애플리케이션에 쉽게 드로잉 기능을 추가할 수 있도록 지원합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Swift",
+      "iOS",
+      "드로잉",
+      "그래픽"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/daihase/Sketch",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "iOS 13.0+",
+      "Xcode 11.0+",
+      "Swift 5.0+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Swift Package Manager",
+        "command": "https://github.com/daihase/Sketch.git",
+        "note": "Xcode 패키지 종속성에 URL 추가"
+      }
+    ],
+    "usageSteps": [
+      "Xcode에서 프로젝트의 패키지 의존성에 저장소 URL을 추가합니다.",
+      "프로젝트 파일에서 Sketch 모듈을 임포트합니다.",
+      "뷰 컨트롤러에 드로잉 기능을 구현합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 349,
+    "forks": 62,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "sync-sketchplugin",
+    "name": "sync.sketchplugin",
+    "github": "https://github.com/nolastan/sync.sketchplugin",
+    "description": "Google 시트와 연동하여 Sketch 디자인 팀의 스타일과 타이포그래피를 동기화하는 플러그인입니다.",
+    "longDescription": "구글 시트의 데이터를 기반으로 Sketch 디자인 시스템의 스타일을 가져오거나 내보낼 수 있는 도구입니다. 시트 내 수식을 사용하여 상대적 폰트 크기나 행 간격을 일괄 관리할 수 있어 협업 효율을 높여줍니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Sketch",
+      "디자인 시스템",
+      "플러그인",
+      "Google Sheets",
+      "UX"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://www.usesync.com/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Sketch 앱"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "ZIP 다운로드",
+        "command": "curl -LO https://github.com/nolastan/sync.sketchplugin/releases/download/1.4/sync.sketchplugin.zip",
+        "note": "압축 해제 후 sync.sketchplugin 파일을 실행하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "제공된 템플릿을 기반으로 Google 시트를 생성하고 게시합니다.",
+      "Sketch에서 플러그인을 실행하여 Google 시트 URL을 연결합니다.",
+      "스타일을 가져오거나 내보내 팀원들과 일관된 디자인 시스템을 유지합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 348,
+    "forks": 13,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "lists",
+    "name": "Lists",
+    "github": "https://github.com/listsfordesign/Lists",
+    "description": "디자인 목업과 프로토타입에 실제 콘텐츠를 빠르게 채워 넣을 수 있도록 정리된 텍스트 기반 디자인 데이터 모음입니다.",
+    "longDescription": "디자이너들이 목업 작업 시 'Lorem Ipsum' 대신 현실적인 데이터를 사용할 수 있도록 팀 이름, 국가, 제품명 등 다양한 카테고리의 텍스트 데이터를 텍스트 파일 형태로 제공합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "디자인 에셋",
+      "목업",
+      "콘텐츠",
+      "UI 디자인"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/listsfordesign/Lists",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소에서 필요한 카테고리의 텍스트 파일을 확인합니다.",
+      "원하는 목록 데이터를 복사합니다.",
+      "디자인 도구(Figma, Sketch 등)의 목업 콘텐츠에 붙여넣어 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 252,
+    "forks": 71,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "mdsilo-web",
+    "name": "mdSilo Web",
+    "github": "https://github.com/danloh/mdSilo-web",
+    "description": "로컬 평문 마크다운 파일을 기반으로 동작하는 프라이버시 중심의 브라우저 기반 지식 관리 및 노트 앱입니다.",
+    "longDescription": "별도의 서버 설치나 회원가입 없이 브라우저 내에서 로컬 마크다운 파일들을 직접 열어 지식 베이스를 구축할 수 있는 도구입니다. 위와이위그(WYSIWYG) 에디터, 마인드맵, 그래프 뷰, 타임라인 뷰 등 다양한 시각화 기능을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Markdown",
+      "지식 관리",
+      "로컬 퍼스트",
+      "노트 작성",
+      "PWA"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://mdsilo.com",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "File System Access API 지원 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹 앱 접속 후 로컬 폴더 또는 파일 접근 권한을 허용합니다.",
+      "마크다운 파일을 작성하거나 불러와 지식 노트를 구성합니다.",
+      "그래프 뷰와 마인드맵을 통해 노트 간의 연결 관계를 시각적으로 파악합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 252,
+    "forks": 18,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "sketchize",
+    "name": "Sketchize",
+    "github": "https://github.com/selfishprimate/sketchize",
+    "description": "모바일, 태블릿, 데스크톱 앱 디자인을 위한 무료 인쇄용 와이어프레임 및 페이퍼 프로토타이핑 킷입니다.",
+    "longDescription": "제품 관리자, 디자이너, 개발자가 회의 중 빠른 아이디어 스케치와 와이어프레임을 그릴 수 있도록 다양한 기기 비율이 포함된 인쇄용 스케치 시트를 제공합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "와이어프레임",
+      "모바일 디자인",
+      "프로토타이핑",
+      "UI/UX"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "http://sketchize.com/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹사이트에서 원하는 기기 폼팩터의 스케치 시트를 다운로드합니다.",
+      "출력한 종이에 앱 인터페이스와 아이디어를 스케치합니다.",
+      "회의 및 기획 과정에서 팀원들과 공유합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 248,
+    "forks": 23,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "lore",
+    "name": "Lore",
+    "github": "https://github.com/ErezShahaf/Lore",
+    "description": "로컬 LLM과 벡터 데이터베이스를 활용해 생각과 메모를 완전한 프라이버시 환경에서 관리하는 AI 지식 캡처 데스크톱 앱입니다.",
+    "longDescription": "시스템 트레이에서 실행되며 단축키로 호출하여 단상, 투두 리스트, 코드 조각 등을 빠르게 기록할 수 있는 툴입니다. Ollama와 LanceDB를 기반으로 작동하여 클라우드 전송 없이 로컬 환경에서만 지식을 검색하고 대화할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "AI",
+      "로컬 LLM",
+      "RAG",
+      "지식 관리",
+      "메모"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/ErezShahaf/Lore",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Ollama"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 파일 다운로드",
+        "command": "https://github.com/ErezShahaf/lore/releases",
+        "note": "Releases 페이지에서 OS에 맞는 설치 파일을 다운로드하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "앱을 설치하고 Ollama 및 모델 경로를 설정합니다.",
+      "단축키를 눌러 생각이나 메모, 코드 조각을 입력합니다.",
+      "로컬 AI 채팅창을 통해 저장된 메모 내용을 질의하고 검색합니다."
+    ],
+    "examplePrompt": "작년에 작성했던 인증 관련 코드 스니펫 찾아줘",
+    "usageNote": "",
+    "stars": 245,
+    "forks": 24,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "penpot-mcp",
+    "name": "penpot-mcp",
+    "github": "https://github.com/montevive/penpot-mcp",
+    "description": "오픈소스 디자인 도구인 Penpot과 Claude 등 LLM을 모델 컨텍스트 프로토콜(MCP)로 연결하는 자동화 서버입니다.",
+    "longDescription": "AI 어시스턴트가 Penpot 디자인 파일에 프로그래밍 방식으로 접근하여 UI/UX 디자인을 분석하고 피드백을 제공할 수 있도록 돕는 MCP 서버입니다. Cursor IDE나 Claude Desktop과 연동하여 AI 기반 디자인 워크플로우를 자동화합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "MCP",
+      "Penpot",
+      "UI/UX",
+      "AI 에이전트",
+      "디자인 도구"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/montevive/penpot-mcp",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Python 3.12+",
+      "Penpot 계정"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI 설치",
+        "command": "pip install penpot-mcp",
+        "note": "Python 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 또는 uv를 통해 패키지를 설치합니다.",
+      "Claude Desktop 또는 Cursor IDE 설정에 MCP 서버로 등록합니다.",
+      "AI 어시스턴트를 통해 Penpot 디자인 분석 및 개선 사항을 요청합니다."
+    ],
+    "examplePrompt": "현재 열려 있는 Penpot 디자인의 UI 일관성을 검토하고 피드백을 줘",
+    "usageNote": "",
+    "stars": 241,
+    "forks": 30,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "ttf2mesh",
+    "name": "ttf2mesh",
+    "github": "https://github.com/fetisov/ttf2mesh",
+    "description": "트루타입(TTF) 글꼴의 글리프를 래스터화 없이 2차원 또는 3차원 메시 객체로 변환해 주는 가벼운 C 라이브러리입니다.",
+    "longDescription": "그래픽 컨텍스트나 시스템 종속 함수 없이 순수 C99 표준으로 작성된 크로스플랫폼 라이브러리입니다. 들로네 삼각분할(Delaunay triangulation) 알고리즘을 사용하여 폰트 글리프를 최적화된 삼각형 세트로 변환합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "폰트",
+      "3D 메시",
+      "C 라이브러리",
+      "그래픽스",
+      "벡터"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/fetisov/ttf2mesh",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "C99 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "ttf2mesh.c와 ttf2mesh.h 파일을 프로젝트에 포함합니다.",
+      "함수를 호출하여 TTF 파일의 글리프 데이터를 로드합니다.",
+      "삼각형 메시로 변환된 2D/3D 그래픽 데이터를 렌더링에 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 236,
+    "forks": 48,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "kuku",
+    "name": "Kuku",
+    "github": "https://github.com/kuku-mom/kuku",
+    "description": "로컬 평문 마크다운 파일 기반의 위키, AI 편집, 암호화 동기화를 지원하는 macOS 전용 지식 워크스페이스입니다.",
+    "longDescription": "사용자의 로컬 파일(`.md`)을 직접 편집하면서도 AI 분석, 그래프 네비게이션, 세컨 브레인 워크플로우를 결합한 오픈소스 노트 앱입니다. 종단간 암호화 동기화를 지원하여 프라이버시를 철저히 보호합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Markdown",
+      "지식 관리",
+      "로컬 퍼스트",
+      "Tauri",
+      "macOS"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.kuku.mom",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "macOS"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install kuku-mom/kuku/kuku",
+        "note": "Homebrew 패키지 관리자를 통해 macOS에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "앱을 실행하고 로컬 마크다운 저장소(Vault)를 지정합니다.",
+      "마크다운 문서를 작성하고 위키 링크 및 그래프 뷰로 노트를 연결합니다.",
+      "AI 기능을 활용하여 문서 요약 및 차이점을 편집합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 공식 빌드는 macOS를 지원합니다.",
+    "stars": 227,
+    "forks": 42,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "keep-the-why",
+    "name": "Keep the Why",
+    "github": "https://github.com/oliver-zehentleitner/keep-the-why",
+    "description": "코드베이스 내에 아키텍처 결정 배경과 거부된 아이디어를 마크다운으로 기록하여 AI 코딩 에이전트와 공유하는 도구입니다.",
+    "longDescription": "데이터베이스나 별도 데몬 없이 Git으로 버전 관리되는 마크다운 파일을 통해 프로젝트의 의사결정 이유('Why')를 저장하는 저장소 네이티브 메모리 레이어입니다. 코딩 에이전트가 이전 결정 사항을 학습하여 이미 거부된 방안을 다시 제안하지 않도록 방지합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "아키텍처 결정",
+      "개발 도구",
+      "문서화",
+      "Git"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://keepthewhy.com",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Python",
+      "Git",
+      "AI 코딩 에이전트"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "에이전트 지시를 통한 설치",
+        "command": "pip install keep-the-why-lint",
+        "note": "에이전트에게 관련 스킬 설치를 지시하여 프로젝트에 적용합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Keep the Why 스킬 및 설정을 초기화합니다.",
+      "아키텍처 결정 사항 및 기술적 배경을 마크다운 문서로 기록합니다.",
+      "AI 코딩 에이전트와 작업할 때 이전 결정 맥락이 자동으로 반영되도록 활용합니다."
+    ],
+    "examplePrompt": "이 프로젝트의 최근 아키텍처 결정 사항을 요약하고 왜 이 방식을 선택했는지 설명해줘",
+    "usageNote": "",
+    "stars": 224,
+    "forks": 13,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "obsidian-garden",
+    "name": "Obsidian Garden",
+    "github": "https://github.com/tanepiper/obsidian-garden",
+    "description": "Obsidian을 활용하여 아이디어를 발전시키고 연결할 수 있는 지식 관리 정원 템플릿 및 가이드입니다.",
+    "longDescription": "Obsidian을 활용해 두뇌를 확장하고 지식 그래프를 구축할 수 있도록 돕는 지식 관리 시스템 및 가이드라인 저장소입니다. 문서 간의 연결과 태그를 통해 체계적인 지식 베이스를 만들 수 있도록 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식관리",
+      "Obsidian",
+      "마크다운",
+      "지식그래프",
+      "템플릿"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "CC0-1.0",
+    "website": "https://github.com/tanepiper/obsidian-garden",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T06:04:00.184Z",
+    "requirements": [
+      "Obsidian"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/tanepiper/obsidian-garden.git",
+        "note": "지식 정원 템플릿 저장소를 로컬에 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 로컬에 복제합니다.",
+      "Obsidian을 실행하고 해당 폴더를 볼트로 엽니다.",
+      "가이드 문서와 템플릿을 참고하여 지식 노트를 작성합니다.",
+      "노트 간 링크를 연결하여 지식 그래프를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Obsidian 애플리케이션이 사전에 설치되어 있어야 합니다.",
+    "stars": 258,
+    "forks": 34,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
     "id": "penpot-exporter-figma-plugin",
     "name": "Penpot Exporter Figma Plugin",
     "github": "https://github.com/penpot/penpot-exporter-figma-plugin",
