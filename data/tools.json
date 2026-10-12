@@ -1,5 +1,894 @@
 [
   {
+    "id": "obsidian-ava",
+    "name": "Obsidian AVA",
+    "github": "https://github.com/different-ai/obsidian-ava",
+    "description": "옵시디언(Obsidian) 노트 내에서 ChatGPT를 활용해 빠르게 노트를 포맷팅하고 정리하는 도구입니다.",
+    "longDescription": "ChatGPT를 연동하여 옵시디언 노트의 내용을 자동으로 구조화하고 서식을 정리해 주는 인공지능 어시스턴트 플러그인입니다. 개인 지식 관리(PKM) 워크플로우를 개선하여 방대한 노트를 효율적으로 관리할 수 있도록 돕습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식관리",
+      "ChatGPT",
+      "옵시디언",
+      "인공지능",
+      "생산성"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://app.anotherai.co",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "옵시디언 플러그인 설정에서 AVA를 활성화합니다.",
+      "OpenAI API 키를 입력하여 연동합니다.",
+      "정리하고자 하는 노트 영역을 지정하고 단축키를 실행합니다.",
+      "생성된 포맷팅 결과를 확인하고 노트에 반영합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 프로젝트는 공식적으로 지원이 중단되었으며 대체재로 File Organizer 2000 사용을 권장합니다.",
+    "stars": 658,
+    "forks": 20,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "cambium",
+    "name": "Cambium",
+    "github": "https://github.com/KimGLee/Cambium",
+    "description": "LLM 에이전트가 유지 관리하는 지식 저장소를 위한 거버넌스 표준 및 참조 도구 모음입니다.",
+    "longDescription": "인공지능 에이전트가 관리하는 지식 베이스의 규칙, 작업 범위, 완료 기준 등을 엄격하게 관리하고 검증할 수 있는 표준과 툴셋을 제공합니다. 결정론적 유효성 검사와 휴먼 인 더 루프(Human-in-the-loop) 프로세스를 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식관리",
+      "LLM",
+      "거버넌스",
+      "AI에이전트",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://github.com/KimGLee/Cambium",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Python 3"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "후보 프로필 생성",
+        "command": "python3 Tools/scaffold_profile.py . --profile-id my-profile",
+        "note": "기본 프로필 템플릿을 생성합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소에 Cambium 도구 체인을 설정합니다.",
+      "프로필 스크립트를 실행하여 거버넌스 프로필을 초기화합니다.",
+      "에이전트 호스트 환경을 준비하고 정책을 정의합니다.",
+      "LLM 에이전트를 통해 지식 저장소 변경 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 561,
+    "forks": 37,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "brainapi2",
+    "name": "BrainAPI",
+    "github": "https://github.com/Lumen-Labs/brainapi2",
+    "description": "비정형 텍스트를 지식 그래프로 자동 변환하여 AI 에이전트와 애플리케이션에 맥락 기반 기억 계층을 제공합니다.",
+    "longDescription": "사용자가 입력한 문서나 메모를 AI 에이전트 군단이 읽고 분석하여 쿼리 가능한 지식 그래프를 스스로 구축합니다. 단순 유사도 검색을 넘어 추적 가능한 경로를 가진 신뢰도 높은 답변을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식그래프",
+      "AI기억",
+      "지식관리",
+      "추천시스템",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://brainapi.lumen-labs.ai/docs/v2",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI 도구 설치",
+        "command": "npm install -g brainapi-tui",
+        "note": "BrainAPI 터미널 인터페이스를 전역으로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "brainapi init 명령어로 초기 설정 마법사를 실행합니다.",
+      "brainapi start 명령어로 백엔드 서비스와 API, MCP 서버를 구동합니다.",
+      "웹 콘솔 인터페이스(http://localhost:8000/console)에 접속합니다.",
+      "텍스트 데이터를 입력하고 지식 그래프 기반의 검색 및 질의를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 537,
+    "forks": 69,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "printable-mockups",
+    "name": "Printable Mockups",
+    "github": "https://github.com/alexadam/printable-mockups",
+    "description": "인쇄 가능한 UI 목업 및 와이어프레임 템플릿을 생성해 주는 웹 기반 도구입니다.",
+    "longDescription": "브라우저 환경에서 손쉽게 UI 목업과 와이어프레임을 디자인하고 인쇄 가능한 PDF 문서로 내보낼 수 있는 도구입니다. 오프라인 스케치나 UX 리서치 세션에서 유용하게 활용할 수 있습니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "디자인도구",
+      "와이어프레임",
+      "UI목업",
+      "PDF",
+      "React"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.printablemockups.com/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Node.js",
+      "Yarn 또는 npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치 및 실행",
+        "command": "npm install && npm run dev",
+        "note": "로컬 개발 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "개발 서버를 실행한 뒤 웹 브라우저에서 http://localhost:5173/에 접속합니다.",
+      "원하는 UI 패턴과 목업 요소를 배치하여 화면을 구성합니다.",
+      "완성된 와이어프레임을 PDF로 생성하거나 인쇄합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "소형 화면이나 터치스크린 환경에서는 원활하게 동작하지 않을 수 있습니다.",
+    "stars": 537,
+    "forks": 24,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "cohesive-colors",
+    "name": "Cohesive Colors",
+    "github": "https://github.com/javierbyte/cohesive-colors",
+    "description": "기존 색상 팔레트에 미세한 톤 조정을 적용하여 조화롭고 일관성 있는 색상 조합을 만들어 주는 디자인 도구입니다.",
+    "longDescription": "디자이너와 프론트엔드 개발자가 더욱 통일감 있는 컬러 팔레트를 구성할 수 있도록 돕는 웹 기반 유틸리티입니다. 기본 색상들에 공통된 틴트를 부여하여 전체적인 디자인 일관성을 높여줍니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "디자인도구",
+      "컬러팔레트",
+      "프론트엔드",
+      "UI디자인"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://javier.xyz/cohesive-colors",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 개발 서버 실행",
+        "command": "pnpm i && pnpm run dev",
+        "note": "의존성 설치 후 개발 서버를 구동합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 패키지를 설치합니다.",
+      "로컬 개발 서버를 실행하여 브라우저에서 접속합니다.",
+      "기본 색상을 입력하고 틴트 및 조절 값을 변경합니다.",
+      "조화롭게 정돈된 색상 코드를 복사하여 프로젝트에 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 536,
+    "forks": 70,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "learndata",
+    "name": "LearnData",
+    "github": "https://github.com/rockbenben/LearnData",
+    "description": "VuePress 기반의 오픈소스 노트 템플릿으로, 개인 지식库와 블로그를 간편하게 구축할 수 있습니다.",
+    "longDescription": "효율적인 자기 계발 노트, 프로그래밍 지식, 심리학 탐구 등을 체계적으로 정리하고 공유할 수 있는 정적 사이트 템플릿입니다. 극장의 정취를 담은 미려한 테마와 강력한 검색 기능을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식관리",
+      "블로그템플릿",
+      "VuePress",
+      "Markdown",
+      "디지털가든"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://newzone.top",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 포크하거나 클론하여 프로젝트를 다운로드합니다.",
+      "Markdown 형식을 활용하여 개인 학습 노트와 문서를 작성합니다.",
+      "VuePress 설정 파일에서 사이트 정보를 수정합니다.",
+      "정적 사이트를 빌드하여 개인 블로그나 지식库로 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 528,
+    "forks": 107,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "pax",
+    "name": "Pax UI Engine",
+    "github": "https://github.com/paxdotdev/pax",
+    "description": "선언형 언어와 Rust를 결합하여 웹 및 다양한 플랫폼에서 동작하는 고성능 사용자 인터페이스 엔진입니다.",
+    "longDescription": "풍부한 인터랙션과 크로스플랫폼 지원을 목표로 하는 언어 중심의 GUI 프레임워크입니다. 선언형 UI 작성 방식과 Rust의 강력한 애플리케이션 로직을 통합하여 고성능 렌더링을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "GUI프레임워크",
+      "Rust",
+      "WebAssembly",
+      "디자인도구",
+      "크로스플랫폼"
+    ],
+    "platforms": [
+      "macOS",
+      "Web",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.pax.dev/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Rust",
+      "Cargo"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pax CLI 설치",
+        "command": "cargo install pax-cli",
+        "note": "러스트 패키지 관리자를 통해 Pax CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "cargo install pax-cli 명령어로 CLI 도구를 설치합니다.",
+      "pax-cli create my-first-project 명령어로 새 프로젝트를 생성합니다.",
+      "생성된 디렉토리로 이동하여 pax-cli run 명령어를 실행합니다.",
+      "웹 또는 타겟 플랫폼에서 UI가 렌더링되는 것을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 525,
+    "forks": 28,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "smartscan-android",
+    "name": "SmartScan Android",
+    "github": "https://github.com/smartscanapp/smartscan-android",
+    "description": "스마트폰에 저장된 이미지와 비디오를 온디바이스 머신러닝으로 분석해 개인 지식 베이스로 만들어 주는 앱입니다.",
+    "longDescription": "스크린샷과 미디어 파일을 자동으로 개념별, 컬렉션별로 그룹화하고 벡터 임베딩 기반의 유사도 검색을 지원합니다. 클라우드 전송 없이 기기 내부에서 머신러닝 모델을 구동하여 프라이버시를 보호합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "안드로이드앱",
+      "지식관리",
+      "온디바이스AI",
+      "벡터검색",
+      "Kotlin"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://smartscanapp.github.io/website/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Android 기기"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "안드로이드 기기에 SmartScan 애플리케이션을 설치합니다.",
+      "앱에 미디어 파일 접근 권한을 허용합니다.",
+      "앱이 기기 내 이미지와 비디오를 분석하여 자동으로 분류할 때까지 대기합니다.",
+      "검색 기능을 통해 저장해 둔 스크린샷이나 미디어를 빠르게 찾아봅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 500,
+    "forks": 29,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "osmosmemo",
+    "name": "Osmos Memo",
+    "github": "https://github.com/osmoscraft/osmosmemo",
+    "description": "브라우저 북마크를 빠르고 간편하게 캡처하여 GitHub 저장소에 마크다운 스니펫으로 저장해 주는 북마크 관리 도구입니다.",
+    "longDescription": "웹서핑 중 유용한 페이지의 제목과 URL을 추출하여 짧은 마크다운 스니펫으로 변환한 뒤, 클릭 한 번으로 사용자의 GitHub README.md에 자동 기록해 주는 브라우저 확장 프로그램입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "북마크관리",
+      "브라우저확장",
+      "지식관리",
+      "GitHub",
+      "마크다운"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://chrome.google.com/webstore/detail/osmosmemo/chgfencjlhmjhmnnpnlnchglkkdcipii",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Chrome 또는 Firefox 브라우저",
+      "GitHub 계정"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Chrome 웹 스토어 또는 Firefox 부가기능 페이지에서 확장 프로그램을 설치합니다.",
+      "툴바 아이콘을 클릭하여 GitHub 계정 연동을 진행합니다.",
+      "저장하고 싶은 웹페이지에서 확장 프로그램을 실행하여 스니펫을 생성합니다.",
+      "태그를 지정하고 연동된 GitHub 저장소에 원클릭으로 추가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 488,
+    "forks": 19,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "atlas-mcp-server",
+    "name": "ATLAS MCP Server",
+    "github": "https://github.com/cyanheads/atlas-mcp-server",
+    "description": "LLM 에이전트를 위한 Neo4j 기반 작업 관리 및 지식 그래프 시스템인 ATLAS를 위한 Model Context Protocol 서버입니다.",
+    "longDescription": "프로젝트, 작업, 지식의 3계층 아키텍처를 기반으로 복잡한 워크플로우를 관리할 수 있는 MCP 서버입니다. 심층 연구(Deep Research) 기능을 통합하여 AI 에이전트가 구조화된 데이터 기반으로 업무를 수행하도록 돕습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "MCP",
+      "AI에이전트",
+      "작업관리",
+      "그래프데이터베이스",
+      "TypeScript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.npmjs.com/package/atlas-mcp-server",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Node.js",
+      "Neo4j 데이터베이스"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Neo4j 데이터베이스 인스턴스를 준비하고 연결 정보를 설정합니다.",
+      "MCP 클라이언트 설정 파일에 atlas-mcp-server 경로와 환경 변수를 등록합니다.",
+      "AI 에이전트 클라이언트를 실행하여 MCP 서버와 연결합니다.",
+      "에이전트를 통해 프로젝트 작업 및 지식 그래프 관리 도구를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 477,
+    "forks": 67,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "opencrew",
+    "name": "opencrew",
+    "github": "https://github.com/AlexAnys/opencrew",
+    "description": "Slack, 飞书, Discord 등에서 작동하는 다중 AI 에이전트 협업 및 운영 체제입니다.",
+    "longDescription": "OpenClaw 기반으로 구성되어 여러 AI 에이전트가 각자의 역할에 맞게 자율적으로 협업하고 업무를 처리할 수 있도록 돕는 다중 에이전트 시스템입니다. 다양한 메신저 플랫폼과 연동하여 팀 단위의 AI 워크플로우를 구축할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "멀티에이전트",
+      "워크플로우",
+      "Slack",
+      "자동화"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/AlexAnys/opencrew",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [],
+    "supportedAgents": [
+      "OpenClaw"
+    ],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 환경 설정을 구성합니다.",
+      "연동할 메신저 플랫폼(Slack, 飞书, Discord 등)의 웹훅 및 API 토큰을 입력합니다.",
+      "에이전트 역할을 정의하고 시스템을 실행하여 팀 협업 워크플로우를 시작합니다."
+    ],
+    "examplePrompt": "market-researcher 에이전트, 최신 오픈소스 AI 트렌드를 조사하고 요약해줘.",
+    "usageNote": "",
+    "stars": 498,
+    "forks": 71,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "vinote",
+    "name": "ViNote",
+    "github": "https://github.com/zrt-ai-lab/ViNote",
+    "description": "YouTube 및 Bilibili 비디오를 검색, 다운로드하여 요약 노트와 마인드맵으로 변환해주는 AI 비디오 지식 에이전트입니다.",
+    "longDescription": "FastAPI와 React 기반으로 구축되었으며 DeepSeek Harness SDK를 활용하여 비디오 내용을 분석하고 챗봇 대화 형식으로 지식을 추출합니다. SQLite 세션 복구 및 스트리밍 상호작용을 지원하며 OpenAI 호환 모델을 사용할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "AI에이전트",
+      "비디오요약",
+      "YouTube",
+      "Bilibili",
+      "지식관리"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/zrt-ai-lab/ViNote",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Python 3.10+",
+      "uv",
+      "FFmpeg",
+      "Node.js 20.19+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치 (macOS)",
+        "command": "brew install python@3.12 ffmpeg node && curl -LsSf https://astral.sh/uv/install.sh | sh",
+        "note": "macOS 환경에서 Python, FFmpeg, Node.js 및 uv 패키지 관리자를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 필요한 전제 조건 프로그램을 설치합니다.",
+      "백엔드와 프론트엔드 환경을 설정하고 서버를 실행합니다.",
+      "웹 인터페이스에서 YouTube 또는 Bilibili 링크나 키워드를 입력하여 비디오 노트를 생성합니다."
+    ],
+    "examplePrompt": "이 YouTube 영상을 분석해서 핵심 개념과 마인드맵을 만들어줘.",
+    "usageNote": "",
+    "stars": 470,
+    "forks": 61,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "lineage-skill",
+    "name": "lineage-skill",
+    "github": "https://github.com/JuneYaooo/lineage-skill",
+    "description": "동영상, PDF, 강의록 등의 자료를 출처가 명확한 맞춤형 학습 에이전트 스킬로 변환해주는 도구입니다.",
+    "longDescription": "단순한 요약을 넘어 원문의 출처를 보존하면서 단계별 연습 문제를 제공하고 사용자의 이해도를 점검합니다. 사용자가 수동으로 프롬프트나 스크립트를 관리할 필요 없이 자료를 바탕으로 독자적인 학습 환경을 구축할 수 있습니다.",
+    "category": "교육·학습",
+    "tags": [
+      "교육",
+      "학습도구",
+      "지식추출",
+      "PDF요약",
+      "AI에이전트"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/JuneYaooo/lineage-skill",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Lineage를 설치하고 학습에 활용할 동영상, PDF, 책 등의 자료를 준비합니다.",
+      "자료를 시스템에 입력하여 맞춤형 학습 Skill을 생성합니다.",
+      "생성된 Skill을 활성화하고 대화를 통해 연습 문제를 풀며 학습을 진행합니다."
+    ],
+    "examplePrompt": "제공한 머신러닝 논문 PDF를 바탕으로 핵심 개념을 설명하고 퀴즈를 내줘.",
+    "usageNote": "",
+    "stars": 453,
+    "forks": 68,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "quake",
+    "name": "quake",
+    "github": "https://github.com/phodal/quake",
+    "description": "Git과 Markdown을 기반으로 메타데이터와 Transflow를 활용하여 데이터를 관리하는 지식 관리 메타 프레임워크입니다.",
+    "longDescription": "개발자와 긱(Geek) 성향의 사용자를 위한 유연한 지식 관리 도구로, 로우코드 방식으로 다양한 콘텐츠 구조를 정의하고 CRUD 작업을 수행할 수 있습니다. 웹 컴포넌트를 통해 프론트엔드 커스텀이 가능합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식관리",
+      "Markdown",
+      "Git",
+      "로우코드",
+      "메타프레임워크"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/phodal/quake",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Rust 툴체인 (cargo 선택사항)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo를 이용한 설치",
+        "command": "cargo install quake",
+        "note": "Rust 환경에서 quake를 빌드하고 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "quake를 초기화하기 위해 `quake init` 명령어를 실행합니다.",
+      "정의된 설정에 따라 데이터를 추가하고 관리합니다.",
+      "Markdown과 Git을 연동하여 지식베이스를 동기화하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 448,
+    "forks": 37,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "read-aware",
+    "name": "read-aware",
+    "github": "https://github.com/ahpxex/read-aware",
+    "description": "오프라인에서 작동하며 독서 기록을 기억하고 플러그인으로 확장 가능한 자체 진화형 AI 에이전트 전자책 리더기입니다.",
+    "longDescription": "EPUB, MOBI, AZW3, PDF 등 다양한 전자책 포맷을 지원하며 인터넷 연결 없이도 로컬에서 원활하게 작동합니다. 내장된 AI 에이전트가 책 전반에 걸친 독서 내용을 기억하고 질문에 답하며, 플러그인을 통해 기능을 확장할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "전자책",
+      "PDF리더",
+      "오프라인",
+      "지식관리",
+      "Tauri"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://readaware.app",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 홈페이지 또는 GitHub 릴리스에서 플랫폼에 맞는 앱을 다운로드하여 설치합니다.",
+      "읽고자 하는 EPUB, PDF 등의 전자책 파일을 앱에 불러옵니다.",
+      "독서를 진행하면서 내장된 에이전트에게 모르는 내용을 질문하거나 노트를 작성합니다."
+    ],
+    "examplePrompt": "이전 장에서 주인공이 언급했던 단서가 무엇이었는지 요약해줘.",
+    "usageNote": "",
+    "stars": 438,
+    "forks": 39,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "molio",
+    "name": "Molio",
+    "github": "https://github.com/zhuzhaoyun/Molio",
+    "description": "AI 에이전트를 위한 로컬 퍼스트 개인 지식 레이어로, LLM Wiki와 지식 그래프를 구축할 수 있습니다.",
+    "longDescription": "사용자의 모든 데이터가 로컬에 안전하게 보관되며, AI 런타임 CLI와 연동하여 에이전트 워크플로우를 구성할 수 있습니다. 웹 클리퍼, 위챗 봇 연동 및 지식 그래프 시각화를 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "로컬퍼스트",
+      "지식그래프",
+      "Obsidian",
+      "위키",
+      "AI에이전트"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://molio.cn",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "Gemini"
+    ],
+    "install": [],
+    "usageSteps": [
+      "최신 설치 파일을 다운로드하여 Molio를 설치하고 실행합니다.",
+      "초기 설정 마법사에서 연동할 AI 런타임 CLI(예: Claude Code)를 구성합니다.",
+      "로컬 지식베이스와 웹 클리퍼 등을 연동하여 AI와 지식을 공유하고 관리합니다."
+    ],
+    "examplePrompt": "내 지식베이스를 바탕으로 최근 메모한 프로젝트 아이디어를 정리해줘.",
+    "usageNote": "",
+    "stars": 433,
+    "forks": 55,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "neutrinote",
+    "name": "neutrinote",
+    "github": "https://github.com/appml/neutrinote",
+    "description": "프로그래밍 방식으로 확장 가능하며 수학 수식과 Markdown을 지원하는 초경량 안드로이드 노트 앱입니다.",
+    "longDescription": "동기화가 용이하고 락인(Lock-in)이 없는 평문 중심의 노트 작성 도구입니다. 약 3MB의 매우 가벼운 용량으로 최적화되어 있으며 플레인텍스트 순수주의자를 위해 설계되었습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Markdown",
+      "안드로이드앱",
+      "노트",
+      "LaTeX",
+      "지식관리"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://appml.github.io/nano/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Android 기기"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "IzzyOnDroid나 GitHub 릴리스를 통해 앱을 다운로드하여 안드로이드 기기에 설치합니다.",
+      "새로운 노트를 생성하고 Markdown 및 LaTeX 수식을 활용하여 기록합니다.",
+      "선호하는 저장소 서비스와 동기화하여 노트를 안전하게 백업합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 477,
+    "forks": 33,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "color-creator",
+    "name": "Color-Creator",
+    "github": "https://github.com/bjango/Color-Creator",
+    "description": "기본 색상을 바탕으로 대규모 색상 팔레트를 생성할 수 있는 포토샵, 스케치, 어피니티 디자이너 문서 템플릿입니다.",
+    "longDescription": "고급 컬러 피커와 유사한 형태의 문서 템플릿 모음으로, 디자인 작업 시 일관되고 조화로운 색상 팔레트를 쉽게 확장하고 관리할 수 있도록 지원합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "디자인도구",
+      "컬러팔레트",
+      "Photoshop",
+      "Sketch",
+      "AffinityDesigner"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": false,
+    "license": "확인 필요",
+    "website": "https://bjango.com/designresources/",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Photoshop 또는 Sketch 또는 Affinity Designer"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소에서 템플릿 압축파일을 다운로드하고 해제합니다.",
+      "사용 중인 디자인 프로그램(포토샵, 스케치 등)에서 해당 문서 템플릿을 엽니다.",
+      "기본 색상을 수정하여 전체 디자인 시스템에 맞는 확장된 컬러 팔레트를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 503,
+    "forks": 21,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "macos-ui-kit",
+    "name": "macOS-UI-Kit",
+    "github": "https://github.com/alexkaessner/macOS-UI-Kit",
+    "description": "Sketch에서 macOS 앱 디자인을 빠르게 시작할 수 있도록 돕는 정밀한 UI 컴포넌트 라이브러리입니다.",
+    "longDescription": "수백 개의 UI 컴포넌트, 색상, 텍스트 스타일 및 커서, 터치 바 UI 요소를 포함하고 있어 Mac 애플리케이션 인터페이스를 디자인할 때 가장 빠르고 정확한 가이드를 제공합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "UI키트",
+      "Sketch",
+      "디자인시스템",
+      "macOS",
+      "디자인도구"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.macos-uikit.xyz",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Sketch v101 이상"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "최신 릴리스에서 macOS UI Kit 압축파일을 다운로드합니다.",
+      "Sketch 앱을 실행하고 환경설정의 라이브러리 메뉴에서 해당 파일을 추가합니다.",
+      "디자인 작업 시 필요한 Mac 인터페이스 컴포넌트를 가져와서 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 637,
+    "forks": 25,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
+    "id": "chromatic-sketch",
+    "name": "chromatic-sketch",
+    "github": "https://github.com/petterheterjag/chromatic-sketch",
+    "description": "Lab 색상 공간과 Chroma.js를 사용하여 시각적으로 균일하고 아름다운 그라데이션과 색상 스케일을 만드는 Sketch 플러그인입니다.",
+    "longDescription": "디자이너가 직관적으로 그라데이션과 색상 스케일을 미리 보고 커스터마이징할 수 있는 UI를 제공하며, Lab, Lch, HSL, RGB 등 다양한 색상 모드와 투명도(Alpha)를 지원합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Sketch플러그인",
+      "디자인도구",
+      "그라데이션",
+      "컬러시스템",
+      "Chroma.js"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "ISC",
+    "website": "https://github.com/petterheterjag/chromatic-sketch",
+    "featured": 9,
+    "added": "2026-10-12",
+    "addedAt": "2026-10-12T04:03:56.893Z",
+    "requirements": [
+      "Sketch 앱",
+      "Node.js (소스 빌드 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "플러그인 설치",
+        "command": "npm install && npm run build",
+        "note": "소스 코드로부터 플러그인을 빌드하여 Sketch에 적용합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소에서 플러그인 파일을 다운로드하거나 소스 빌드를 진행합니다.",
+      "`chromatic-sketch.sketchplugin` 파일을 열어 Sketch에 설치합니다.",
+      "Sketch 플러그인 메뉴에서 실행하여 원하는 그라데이션 및 색상 스케일을 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 439,
+    "forks": 15,
+    "starsUpdatedAt": "2026-10-12"
+  },
+  {
     "id": "wtp",
     "name": "wtp",
     "github": "https://github.com/satococoa/wtp",
