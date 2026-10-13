@@ -24,3 +24,9 @@ export async function unlockPrivateKey(password){
  const apiKey=dec.decode(plain);if(!validKeyFormat(apiKey))throw Error('Invalid key');return apiKey
  }catch{throw Error('비밀번호가 틀렸거나 저장된 키가 손상되었습니다.')}
 }
+
+const AUTO_SLOT='openshelf.gemini.personal-auto.v44';
+// Opt-in convenience mode: key is readable by scripts on this browser origin.
+export function saveAutoKey(key){if(!validKeyFormat(key))throw Error('Gemini API 키 형식을 확인하세요.');localStorage.setItem(AUTO_SLOT,key)}
+export function loadAutoKey(){const key=localStorage.getItem(AUTO_SLOT);return validKeyFormat(key)?key:null}
+export function removeAutoKey(){localStorage.removeItem(AUTO_SLOT)}
