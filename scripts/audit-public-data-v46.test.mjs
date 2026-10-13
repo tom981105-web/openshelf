@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {sampleCatalog,classifyResponse,inspectItem,audit} from './audit-public-data-v46.mjs';
+const {manifest,selected}=await sampleCatalog(process.cwd(),100);
+assert.equal(manifest.total,86411);assert.equal(selected.length,100);
+assert.equal(new Set(selected.map(x=>x.id)).size,100);
+assert.ok(selected.every(x=>/^https:\/\/www\.data\.go\.kr\/data\/\d+\/fileData\.do$/.test(x.url)));
+const original='https://www.data.go.kr/data/12345678/fileData.do';
+const page=new Response('<html><a href="/download/report.csv">CSV</a></html>',{status:200,headers:{'content-type':'text/html'}});
+assert.equal(classifyResponse(page,original,'<html>Hello</html>').status,'landing_page_only');
+assert.equal(classifyResponse(new Response('',{status:403}),original).status,'http_error');
+const fake=async()=>new Response('<html><p>상세페이지</p><a href="https://www.data.go.kr/download/something.csv">파일</a></html>',{headers:{'content-type':'text/html'}});
+const one=await inspectItem(selected[0],{fetcher:fake});
+assert.equal(one.status,'landing_page_only');assert.ok(one.candidateLinks?.length===1);assert.equal(one.sizeBytes,null);
+const report=await audit(selected.slice(0,3),{fetcher:fake,concurrency:2});
+assert.equal(report.sampleSize,3);assert.equal(report.statuses.landing_page_only,3);assert.equal(report.verifiedRawFiles,0);
+console.log('V46 100-item sample, conservative HTML classification and no raw download tests passed');

@@ -12,6 +12,9 @@ on:
       - 'scripts/v44-unified-auto.test.mjs'
       - 'gemini-direct-client.js'
       - 'scripts/gemini-direct-v43.test.mjs'
+      - 'scripts/audit-public-data-v46.mjs'
+      - 'scripts/audit-public-data-v46.test.mjs'
+      - '.github/workflows/public-data-v46-audit.yml'
       - 'scripts/gemini-key-v40.test.mjs'
       - 'scripts/gemini-key-v42.test.mjs'
       - 'scripts/gemini-save-ui-v41.test.mjs'
@@ -68,6 +71,8 @@ jobs:
         run: node scripts/gemini-direct-v43.test.mjs
       - name: Verify V44 auto key and unified defaults
         run: node scripts/v44-unified-auto.test.mjs
+      - name: Validate V46 file-data audit sampling and classification
+        run: node scripts/audit-public-data-v46.test.mjs
       - name: Measure real Chromium search flows
         run: node scripts/browser-performance-v32.mjs
       - name: Upload performance report

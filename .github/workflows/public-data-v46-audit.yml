@@ -1,0 +1,36 @@
+name: V46 public file data availability survey
+on:
+  workflow_dispatch:
+    inputs:
+      sample_size:
+        description: 'Number of metadata records to check (1-100)'
+        required: false
+        default: '100'
+        type: choice
+        options:
+          - '100'
+          - '20'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test deterministic 100-record sample and classification
+        run: node scripts/audit-public-data-v46.test.mjs
+      - name: Audit official portal detail pages without bulk download
+        run: node scripts/audit-public-data-v46.mjs
+        env:
+          SAMPLE_SIZE: ${{ inputs.sample_size || '100' }}
+      - name: Upload JSON and human-readable audit report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-data-v46-audit
+          path: audit-output/
+          if-no-files-found: warn
