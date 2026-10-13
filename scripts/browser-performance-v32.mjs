@@ -49,6 +49,23 @@ try{
   if((await page.locator('#results article').count())===0)throw Error('File query found no results');
   return {catalogCount:total,matched:await page.locator('#total').innerText()};
  });
+ await scenario('personal-device-key-auto-restore',async page=>{
+  await page.goto(base+'/unified-search.html',{waitUntil:'domcontentloaded'});
+  await page.locator('.gemini-vault-v40 summary').click();
+  await page.locator('#geminiKeyInput').fill('AQ.'+'a'.repeat(44));
+  await page.locator('#geminiPassword').fill('7429');
+  await page.locator('#geminiAuto').check();
+  await page.locator('#geminiSave').click();
+  await page.waitForFunction(()=>document.querySelector('#aiReady')?.textContent==='AI 준비됨',null,{timeout:20000});
+  const storage=await page.evaluate(()=>Object.entries(localStorage).map(([k,v])=>[k,v]));
+  if(storage.some(([k,v])=>v.includes('AQ.'+'a'.repeat(44))))throw Error('Unencrypted key found in localStorage');
+  await page.reload({waitUntil:'domcontentloaded'});
+  await page.waitForFunction(()=>document.querySelector('#aiReady')?.textContent==='AI 준비됨',null,{timeout:20000});
+  if(!await page.locator('#geminiAuto').isChecked())throw Error('Auto-restore option not restored');
+  await page.locator('#geminiDelete').click();
+  await page.waitForFunction(()=>document.querySelector('#aiReady')?.textContent==='AI 키 설정 필요',null,{timeout:20000});
+  return {encryptedStorage:true,restoredAfterReload:true,deleted:true};
+ });
 }finally{
  await browser.close();
  const output={generatedAt:new Date().toISOString(),environment:'Chromium, local checked-out GitHub data',scenarios:reports};
