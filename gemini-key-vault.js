@@ -12,7 +12,7 @@ async function derive(password,salt){
 export function validKeyFormat(value){return typeof value==='string'&&value.length>=16&&value.length<=256&&Array.from(value).every(ch=>{const n=ch.charCodeAt(0);return (n>=48&&n<=57)||(n>=65&&n<=90)||(n>=97&&n<=122)||ch==='_'||ch==='-'||ch==='.'})}
 export async function savePrivateKey(apiKey,password){
  if(typeof apiKey!=='string'||!validKeyFormat(apiKey.trim()))throw Error('Gemini API 키 형식을 확인하세요.');
- if(typeof password!=='string'||password.length<12)throw Error('잠금 비밀번호는 12자 이상이어야 합니다.');
+ if(typeof password!=='string'||password.length<4)throw Error('잠금 비밀번호는 4자 이상이어야 합니다.');
  const salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12));
  const key=await derive(password,salt),cipher=await crypto.subtle.encrypt({name:'AES-GCM',iv},key,enc.encode(apiKey.trim()));
  localStorage.setItem(SLOT,JSON.stringify({version:1,salt:b64(salt),iv:b64(iv),cipher:b64(new Uint8Array(cipher))}));
