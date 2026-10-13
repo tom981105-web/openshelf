@@ -13,8 +13,8 @@ const missingKey=await worker.fetch(new Request('https://example.workers.dev/',{
 assert.equal(missingKey.status,401);
 const ui=fs.readFileSync('unified-search.js','utf8'),html=fs.readFileSync('unified-search.html','utf8');
 for(const id of ['aiQuestion','aiAsk','aiStatus','aiSummary','aiMatches'])assert.ok(html.includes('id="'+id+'"'));
-assert.match(ui,/if\(!AI_SEARCH_ENDPOINT\)/);
-assert.match(ui,/candidates\.map/);
+assert.match(ui,/if\(!activeGeminiKey\)/);
+assert.match(ui,/recommendWithGemini/);
 assert.ok(!ui.includes('GEMINI_API_KEY'),'no key reference in browser JavaScript');
 assert.match(fs.readFileSync('ai-search-config.js','utf8'),/AI_SEARCH_ENDPOINT=''/);
 console.log('V39 optional Gemini boundary tests passed');

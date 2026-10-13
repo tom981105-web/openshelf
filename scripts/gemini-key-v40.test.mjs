@@ -6,7 +6,9 @@ const data=new Map();globalThis.localStorage={getItem:k=>data.get(k)||null,setIt
 const {savePrivateKey,unlockPrivateKey,hasSavedKey,removeSavedKey}=await import('../gemini-key-vault.js');
 const key='AIza'+'a'.repeat(35),password='strong-long-passphrase';
 assert.equal(hasSavedKey(),false);
-await assert.rejects(savePrivateKey(key,'short'),/12자/);
+await assert.rejects(savePrivateKey(key,'abc'),/4자/);
+await savePrivateKey(key,'1234');
+assert.equal(await unlockPrivateKey('1234'),key);
 await savePrivateKey(key,password);
 assert.equal(hasSavedKey(),true);
 const raw=[...data.values()][0];assert.ok(!raw.includes(key));assert.ok(!raw.includes(password));
