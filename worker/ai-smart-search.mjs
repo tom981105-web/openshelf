@@ -14,7 +14,7 @@ export default {async fetch(request,env){
  if(request.method==='OPTIONS')return new Response(null,{status:204,headers:{'access-control-allow-origin':ORIGIN,'access-control-allow-methods':'POST, OPTIONS','access-control-allow-headers':'content-type, x-openshelf-key','vary':'Origin'}});
  if(request.method!=='POST'||origin!==ORIGIN)return json({error:'허용되지 않은 요청'},403);
  const apiKey=request.headers.get('x-openshelf-key')||'';
- if(!/^AIza[\w-]{20,}$/.test(apiKey))return json({error:'개인 Gemini API 키가 필요합니다.'},401);
+ if(!(/^[A-Za-z0-9_-]{16,256}$/.test(apiKey)))return json({error:'개인 Gemini API 키가 필요합니다.'},401);
  const length=Number(request.headers.get('content-length')||0);if(length>12000)return json({error:'요청 크기 초과'},413);
  let safe;try{safe=sanitize(await request.json())}catch(e){return json({error:e.message},400)}
  // No shared key fallback. Caller key is only passed to Gemini; never persist or log it.
