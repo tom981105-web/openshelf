@@ -91,7 +91,7 @@ updateKeyStatus();
 void loadAutoKey().then(key=>{if(key){activeGeminiKey=key;autoKeyEnabled=true;$('geminiAuto').checked=true}updateKeyStatus()}).catch(()=>updateKeyStatus());
 async function askAi(){
  const question=$('aiQuestion').value.trim(),button=$('aiAsk');
- if(question.length<4){$('aiStatus').textContent='질문을 4자 이상 입력해 주세요.';return}
+ if(question.length<2){$('aiStatus').textContent='질문을 2자 이상 입력해 주세요.';return}
  $('aiAnswer').hidden=true;
  if(!activeGeminiKey){$('aiStatus').textContent='먼저 이 기기의 Gemini API 키를 저장하고 비밀번호로 잠금 해제하세요.';return}
  button.disabled=true;$('aiStatus').textContent='관련 목록 검색 중…';

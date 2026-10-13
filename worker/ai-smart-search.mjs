@@ -3,7 +3,7 @@ const ORIGIN='https://tom981105-web.github.io';
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'content-type':'application/json; charset=utf-8','access-control-allow-origin':ORIGIN,'vary':'Origin','cache-control':'no-store'}});
 export function sanitize(body){
  const query=typeof body?.query==='string'?body.query.trim():'';
- if(query.length<4||query.length>400)throw Error('질문은 4~400자로 입력해 주세요.');
+ if(query.length<2||query.length>400)throw Error('질문은 2~400자로 입력해 주세요.');
  if(!Array.isArray(body?.candidates)||body.candidates.length<1||body.candidates.length>12)throw Error('검색 후보가 필요합니다.');
  const candidates=body.candidates.map(x=>({id:String(x.id||'').slice(0,80),type:String(x.type||'').slice(0,12),name:String(x.name||'').slice(0,150),provider:String(x.provider||'').slice(0,100),category:String(x.category||'').slice(0,80),summary:String(x.summary||'').slice(0,350)}));
  if(candidates.some(x=>!x.id||!x.name||!['tool','api','file'].includes(x.type)))throw Error('잘못된 검색 후보입니다.');
