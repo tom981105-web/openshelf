@@ -10,6 +10,7 @@ on:
       - 'scripts/ai-search-v39.test.mjs'
       - 'gemini-key-vault.js'
       - 'scripts/gemini-key-v40.test.mjs'
+      - 'scripts/gemini-save-ui-v41.test.mjs'
       - 'unified-search-core.mjs'
       - 'unified-search.css'
       - 'catalog-ui-v33.css'
@@ -55,6 +56,8 @@ jobs:
         run: node scripts/search-card-overflow.test.mjs
       - name: Verify personal Gemini key vault and no shared key
         run: node scripts/gemini-key-v40.test.mjs
+      - name: Verify nav and Gemini save behaviour
+        run: node scripts/gemini-save-ui-v41.test.mjs
       - name: Measure real Chromium search flows
         run: node scripts/browser-performance-v32.mjs
       - name: Upload performance report

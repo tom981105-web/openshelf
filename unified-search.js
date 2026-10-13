@@ -65,8 +65,20 @@ refreshCatalogs();
 
 function updateKeyStatus(){ $('geminiKeyStatus').textContent=activeGeminiKey?'이 브라우저에서 잠금 해제됨':hasSavedKey()?'암호화된 키가 이 브라우저에 저장됨 · 사용하려면 잠금 해제':'이 브라우저에 저장된 키 없음';}
 $('geminiSave').addEventListener('click',async()=>{
- try{await savePrivateKey($('geminiKeyInput').value,$('geminiPassword').value);activeGeminiKey=null;$('geminiKeyInput').value='';$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='이 브라우저에 암호화해 저장했습니다. 사용 전에 잠금을 해제하세요.'}
- catch(e){$('aiStatus').textContent=e.message}
+ const keyInput=$('geminiKeyInput'),passwordInput=$('geminiPassword'),saveButton=$('geminiSave');
+ const key=keyInput.value.trim(),password=passwordInput.value;
+ saveButton.disabled=true;
+ try{
+  await savePrivateKey(key,password);
+  activeGeminiKey=await unlockPrivateKey(password);
+  keyInput.value='';passwordInput.value='';
+  updateKeyStatus();
+  $('aiStatus').textContent='이 브라우저에 암호화 저장하고 잠금 해제했습니다. 이제 AI 검색을 사용할 수 있습니다. 새로고침 후에는 잠금 해제가 필요합니다.';
+ }catch(error){
+  activeGeminiKey=null;
+  updateKeyStatus();
+  $('aiStatus').textContent='저장하지 못했습니다: '+(error?.message||'브라우저 저장소 접근을 확인해 주세요.');
+ }finally{saveButton.disabled=false}
 });
 $('geminiUnlock').addEventListener('click',async()=>{
  try{activeGeminiKey=await unlockPrivateKey($('geminiPassword').value);$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='개인 Gemini 키 잠금 해제 완료'}
