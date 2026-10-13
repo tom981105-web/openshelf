@@ -1,0 +1,29 @@
+name: V47 limited CSV and Excel file probe
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  sample:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate V47 safe downloader logic
+        run: node scripts/probe-public-data-v47.test.mjs
+      - name: Collect V46 landing page evidence
+        run: node scripts/audit-public-data-v46.mjs
+        env:
+          SAMPLE_SIZE: '100'
+      - name: Verify up to 20 discovered CSV and Excel candidates
+        run: node scripts/probe-public-data-v47.mjs
+      - name: Upload audit reports without saving original files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: public-data-v47-probe
+          path: audit-output/
+          if-no-files-found: warn
