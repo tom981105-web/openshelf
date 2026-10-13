@@ -1,0 +1,25 @@
+name: V48 official download mechanism diagnostics
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnostics:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - name: Verify V48 safe download control detection
+        run: node scripts/diagnose-public-data-v48.test.mjs
+      - name: Inspect ten official file-data detail pages
+        run: node scripts/diagnose-public-data-v48.mjs
+      - name: Upload diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: public-data-v48-diagnostics
+          path: audit-output/public-data-v48-diagnostics.json
+          if-no-files-found: warn

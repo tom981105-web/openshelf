@@ -14,13 +14,13 @@ permissions:
   contents: read
 jobs:
   audit:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Test deterministic 100-record sample and classification
         run: node scripts/audit-public-data-v46.test.mjs
       - name: Audit official portal detail pages without bulk download
@@ -29,7 +29,7 @@ jobs:
           SAMPLE_SIZE: ${{ inputs.sample_size || '100' }}
       - name: Upload JSON and human-readable audit report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: public-data-v46-audit
           path: audit-output/
