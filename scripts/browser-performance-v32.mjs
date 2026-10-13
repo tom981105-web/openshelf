@@ -21,7 +21,7 @@ try{
   page.on('request',req=>{if(req.url().includes('/data/public-'))fetched.push(req.url())});
   await page.goto(base+'/unified-search.html',{waitUntil:'domcontentloaded',timeout:30000});
   await page.waitForFunction(()=>document.querySelector('#status')?.textContent.includes('검색 준비')||document.querySelector('#status')?.textContent.includes('오픈소스를 먼저')||document.querySelector('#status')?.textContent.includes('실패'),null,{timeout:60000});
-  if(fetched.length)throw Error('Initial search must not load public catalog shards');
+  if(!fetched.length)throw Error('Integrated search should begin fetching public catalogs');
   if((await page.locator('#results article').count())===0)throw Error('Tool search is empty');
   return {cards:await page.locator('#results article').count(),publicRequests:fetched.length};
  });
