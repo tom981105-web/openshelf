@@ -9,6 +9,7 @@ on:
       - 'worker/ai-smart-search.mjs'
       - 'scripts/ai-search-v39.test.mjs'
       - 'gemini-key-vault.js'
+      - 'scripts/v44-unified-auto.test.mjs'
       - 'gemini-direct-client.js'
       - 'scripts/gemini-direct-v43.test.mjs'
       - 'scripts/gemini-key-v40.test.mjs'
@@ -65,6 +66,8 @@ jobs:
         run: node scripts/gemini-save-ui-v41.test.mjs
       - name: Validate direct Gemini integration
         run: node scripts/gemini-direct-v43.test.mjs
+      - name: Verify V44 auto key and unified defaults
+        run: node scripts/v44-unified-auto.test.mjs
       - name: Measure real Chromium search flows
         run: node scripts/browser-performance-v32.mjs
       - name: Upload performance report
