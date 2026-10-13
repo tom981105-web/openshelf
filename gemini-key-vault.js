@@ -26,7 +26,35 @@ export async function unlockPrivateKey(password){
 }
 
 const AUTO_SLOT='openshelf.gemini.personal-auto.v44';
-// Opt-in convenience mode: key is readable by scripts on this browser origin.
-export function saveAutoKey(key){if(!validKeyFormat(key))throw Error('Gemini API 키 형식을 확인하세요.');localStorage.setItem(AUTO_SLOT,key)}
-export function loadAutoKey(){const key=localStorage.getItem(AUTO_SLOT);return validKeyFormat(key)?key:null}
-export function removeAutoKey(){localStorage.removeItem(AUTO_SLOT)}
+const DB_NAME='openshelf-private-device-v44';
+function deviceDb(){return new Promise((resolve,reject)=>{const r=indexedDB.open(DB_NAME,1);r.onupgradeneeded=()=>r.result.createObjectStore('keys');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(Error('브라우저의 개인 키 저장소에 접근할 수 없습니다.'))})}
+async function deviceKey(create=false){
+ const db=await deviceDb();
+ try{
+  const existing=await new Promise((resolve,reject)=>{const tx=db.transaction('keys','readonly');const r=tx.objectStore('keys').get('gemini');r.onsuccess=()=>resolve(r.result);r.onerror=()=>reject(r.error)});
+  if(existing||!create)return existing;
+  const key=await crypto.subtle.generateKey({name:'AES-GCM',length:256},false,['encrypt','decrypt']);
+  await new Promise((resolve,reject)=>{const tx=db.transaction('keys','readwrite');tx.objectStore('keys').put(key,'gemini');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)});
+  return key;
+ }finally{db.close()}
+}
+export async function saveAutoKey(value){
+ if(!validKeyFormat(value))throw Error('Gemini API 키 형식을 확인하세요.');
+ const key=await deviceKey(true),iv=crypto.getRandomValues(new Uint8Array(12));
+ const cipher=await crypto.subtle.encrypt({name:'AES-GCM',iv},key,enc.encode(value));
+ localStorage.setItem(AUTO_SLOT,JSON.stringify({v:1,iv:b64(iv),cipher:b64(new Uint8Array(cipher))}));
+}
+export async function loadAutoKey(){
+ const raw=localStorage.getItem(AUTO_SLOT);if(!raw)return null;
+ try{
+  const data=JSON.parse(raw),key=await deviceKey();
+  if(data.v!==1||!key)return null;
+  const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:un64(data.iv)},key,un64(data.cipher));
+  const value=dec.decode(plain);return validKeyFormat(value)?value:null;
+ }catch{return null}
+}
+export async function removeAutoKey(){
+ localStorage.removeItem(AUTO_SLOT);
+ const db=await deviceDb();
+ try{await new Promise((resolve,reject)=>{const tx=db.transaction('keys','readwrite');tx.objectStore('keys').delete('gemini');tx.oncomplete=resolve;tx.onerror=()=>reject(tx.error)})}finally{db.close()}
+}
