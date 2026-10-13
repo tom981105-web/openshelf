@@ -62,6 +62,7 @@ try{
   await page.reload({waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>document.querySelector('#aiReady')?.textContent==='AI 준비됨',null,{timeout:20000});
   if(!await page.locator('#geminiAuto').isChecked())throw Error('Auto-restore option not restored');
+  await page.locator('.gemini-vault-v40 summary').click();
   await page.locator('#geminiDelete').click();
   await page.waitForFunction(()=>document.querySelector('#aiReady')?.textContent==='AI 키 설정 필요',null,{timeout:20000});
   return {encryptedStorage:true,restoredAfterReload:true,deleted:true};
