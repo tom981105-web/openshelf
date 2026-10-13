@@ -18,7 +18,7 @@ jobs:
         run: node scripts/diagnose-public-data-v48.mjs
       - name: Upload diagnostic report
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: public-data-v48-diagnostics
           path: audit-output/public-data-v48-diagnostics.json
