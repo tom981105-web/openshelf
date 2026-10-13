@@ -9,7 +9,7 @@ async function derive(password,salt){
  const base=await crypto.subtle.importKey('raw',enc.encode(password),'PBKDF2',false,['deriveKey']);
  return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations:310000,hash:'SHA-256'},base,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);
 }
-export function validKeyFormat(value){return typeof value==='string'&&value.length>=16&&value.length<=256&&!/[\\s\\x00-\\x1f]/.test(value)&&/^[A-Za-z0-9_-]+$/.test(value)}
+export function validKeyFormat(value){return typeof value==='string'&&value.length>=16&&value.length<=256&&Array.from(value).every(ch=>{const n=ch.charCodeAt(0);return (n>=48&&n<=57)||(n>=65&&n<=90)||(n>=97&&n<=122)||ch==='_'||ch==='-'||ch==='.'})}
 export async function savePrivateKey(apiKey,password){
  if(typeof apiKey!=='string'||!validKeyFormat(apiKey.trim()))throw Error('Gemini API 키 형식을 확인하세요.');
  if(typeof password!=='string'||password.length<12)throw Error('잠금 비밀번호는 12자 이상이어야 합니다.');
