@@ -1,8 +1,7 @@
 import {normalize,rank,filterResults,makeUrl,suggestQueries,sortResults,SORT_MODES,filterFacets,facetOptions} from './unified-search-core.mjs';
 import {recommendWithGemini} from './gemini-direct-client.js';
 import {hasSavedKey,savePrivateKey,unlockPrivateKey,removeSavedKey,saveAutoKey,loadAutoKey,removeAutoKey} from './gemini-key-vault.js';
-let activeGeminiKey=null;
-try{activeGeminiKey=loadAutoKey()}catch{activeGeminiKey=null}
+let activeGeminiKey=null,autoKeyEnabled=false;
 const $=id=>document.getElementById(id);
 const types=[['tool','오픈소스'],['api','Public API'],['file','Public Data']];
 const state={provider:'',category:'',format:'',sort:new URLSearchParams(location.search).get('sort')||'relevance',rows:[],failed:[],loaded:0,page:1,query:new URLSearchParams(location.search).get('q')||'',type:new URLSearchParams(location.search).get('type')||'all'};
@@ -64,7 +63,7 @@ function refreshCatalogs(){for(const type of requiredTypes())void ensure(type);d
 $('retry').addEventListener('click',()=>{for(const type of requiredTypes())if(errors.has(type)){cache.delete(type);errors.delete(type)}refreshCatalogs()});
 refreshCatalogs();
 
-function updateKeyStatus(){ $('geminiKeyStatus').textContent=loadAutoKey()?'이 PC 자동 사용 활성화됨 (브라우저 저장)':activeGeminiKey?'현재 탭에서 사용 가능':hasSavedKey()?'암호화된 키 저장됨 · 잠금 해제 필요':'이 PC에 저장된 키 없음';$('aiReady').textContent=activeGeminiKey?'AI 준비됨':'AI 키 설정 필요';}
+function updateKeyStatus(){ $('geminiKeyStatus').textContent=autoKeyEnabled?'이 PC 자동 사용 활성화됨 (기기 키로 암호화)':activeGeminiKey?'현재 탭에서 사용 가능':hasSavedKey()?'암호화된 키 저장됨 · 잠금 해제 필요':'이 PC에 저장된 키 없음';$('aiReady').textContent=activeGeminiKey?'AI 준비됨':'AI 키 설정 필요';}
 $('geminiSave').addEventListener('click',async()=>{
  const keyInput=$('geminiKeyInput'),passwordInput=$('geminiPassword'),saveButton=$('geminiSave');
  const key=keyInput.value.trim(),password=passwordInput.value;
@@ -72,10 +71,10 @@ $('geminiSave').addEventListener('click',async()=>{
  try{
   await savePrivateKey(key,password);
   activeGeminiKey=await unlockPrivateKey(password);
-  if($('geminiAuto').checked)saveAutoKey(activeGeminiKey);else removeAutoKey();
+  if($('geminiAuto').checked){await saveAutoKey(activeGeminiKey);autoKeyEnabled=true}else{await removeAutoKey();autoKeyEnabled=false}
   keyInput.value='';passwordInput.value='';
   updateKeyStatus();
-  $('aiStatus').textContent=loadAutoKey()?'이 PC에서 Gemini를 자동 사용할 수 있습니다.':'암호화 저장 완료. 새로고침 후 잠금 해제가 필요합니다.';
+  $('aiStatus').textContent=autoKeyEnabled?'이 PC에서 Gemini를 자동 사용할 수 있습니다.':'암호화 저장 완료. 새로고침 후 잠금 해제가 필요합니다.';
  }catch(error){
   activeGeminiKey=null;
   updateKeyStatus();
@@ -83,13 +82,13 @@ $('geminiSave').addEventListener('click',async()=>{
  }finally{saveButton.disabled=false}
 });
 $('geminiUnlock').addEventListener('click',async()=>{
- try{activeGeminiKey=await unlockPrivateKey($('geminiPassword').value);if($('geminiAuto').checked)saveAutoKey(activeGeminiKey);$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='개인 Gemini 키 잠금 해제 완료'}
+ try{activeGeminiKey=await unlockPrivateKey($('geminiPassword').value);if($('geminiAuto').checked){await saveAutoKey(activeGeminiKey);autoKeyEnabled=true}$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='개인 Gemini 키 잠금 해제 완료'}
  catch(e){activeGeminiKey=null;$('aiStatus').textContent=e.message;updateKeyStatus()}
 });
-$('geminiLock').addEventListener('click',()=>{activeGeminiKey=null;removeAutoKey();$('geminiAuto').checked=false;$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='자동 사용도 해제하고 잠갔습니다.'});
-$('geminiDelete').addEventListener('click',()=>{activeGeminiKey=null;removeAutoKey();removeSavedKey();$('geminiKeyInput').value='';$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='이 브라우저에 저장된 키를 삭제했습니다.'});
-$('geminiAuto').checked=!!loadAutoKey();
+$('geminiLock').addEventListener('click',async()=>{activeGeminiKey=null;await removeAutoKey();autoKeyEnabled=false;$('geminiAuto').checked=false;$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='자동 사용도 해제하고 잠갔습니다.'});
+$('geminiDelete').addEventListener('click',async()=>{activeGeminiKey=null;await removeAutoKey();autoKeyEnabled=false;removeSavedKey();$('geminiKeyInput').value='';$('geminiPassword').value='';updateKeyStatus();$('aiStatus').textContent='이 브라우저에 저장된 키를 삭제했습니다.'});
 updateKeyStatus();
+void loadAutoKey().then(key=>{if(key){activeGeminiKey=key;autoKeyEnabled=true;$('geminiAuto').checked=true}updateKeyStatus()}).catch(()=>updateKeyStatus());
 async function askAi(){
  const question=$('aiQuestion').value.trim(),button=$('aiAsk');
  if(question.length<4){$('aiStatus').textContent='질문을 4자 이상 입력해 주세요.';return}
