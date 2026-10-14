@@ -1,5 +1,813 @@
 [
   {
+    "id": "lmms-eval",
+    "name": "lmms-eval",
+    "github": "https://github.com/EvolvingLMMs-Lab/lmms-eval",
+    "description": "텍스트, 이미지, 비디오, 오디오 태스크를 아우르는 통합 멀티모달 모델 평가 툴킷입니다.",
+    "longDescription": "다양한 멀티모달 대형 언어 모델의 성능을 정량적으로 평가하고 벤치마킹할 수 있는 통합 프레임워크입니다. 일관된 개발 환경을 위해 uv 패키지 매니저를 지원하며 다양한 비전-언어 모델을 손쉽게 테스트할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "멀티모달",
+      "평가",
+      "벤치마크",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.lmms-lab.com",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uv를 이용한 설치",
+        "command": "curl -LsSf https://astral.sh/uv/install.sh | sh",
+        "note": "권장 패키지 매니저 설치"
+      }
+    ],
+    "usageSteps": [
+      "저장소 복제 및 가상환경 설정",
+      "필요한 모델 및 벤치마크 데이터셋 구성",
+      "평가 명령어 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4448,
+    "forks": 674,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "mlflow",
+    "name": "MLflow",
+    "github": "https://github.com/mlflow/mlflow",
+    "description": "에이전트, LLM, 머신러닝 모델을 위한 오픈소스 AI 엔지니어링 플랫폼입니다.",
+    "longDescription": "프로덕션 수준의 AI 애플리케이션을 디버깅, 평가, 모니터링, 최적화할 수 있도록 지원합니다. 모델 접근 제어와 비용 관리를 동시에 수행하며 수많은 조직에서 AI 프로덕션 배포에 사용하고 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "MLOps",
+      "LLM",
+      "에이전트",
+      "모니터링",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://mlflow.org",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "OpenCode"
+    ],
+    "install": [
+      {
+        "title": "서버 실행",
+        "command": "uvx mlflow server",
+        "note": "uvx를 사용하여 MLflow 서버를 즉시 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 환경에서 MLflow 서버를 실행합니다.",
+      "Python 코드에서 tracking URI를 설정하고 로깅을 활성화합니다.",
+      "LLM 호출 및 에이전트 실행 결과를 추적하고 평가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 28380,
+    "forks": 6450,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "promptfoo",
+    "name": "Promptfoo",
+    "github": "https://github.com/promptfoo/promptfoo",
+    "description": "LLM 앱, 프롬프트, 에이전트, RAG의 성능 테스트 및 취약점 스캐닝을 위한 CLI 및 라이브러리입니다.",
+    "longDescription": "AI 애플리케이션의 신뢰성과 보안을 검증하기 위한 선언적 설정 기반 평가 도구입니다. GPT, Claude, Gemini, DeepSeek 등의 성능을 비교하고 레드 테이밍을 수행할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "테스트",
+      "평가",
+      "보안",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://promptfoo.dev",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Node.js 또는 Python",
+      "LLM 제공자 API 키"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "전역 설치",
+        "command": "npm install -g promptfoo",
+        "note": "npm을 사용하여 전역으로 promptfoo를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "promptfoo를 설치하고 초기화 예제를 실행합니다.",
+      "환경 변수에 API 키를 설정합니다.",
+      "평가 명령어를 실행하여 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 25998,
+    "forks": 2478,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "opik",
+    "name": "Opik",
+    "github": "https://github.com/comet-ml/opik",
+    "description": "AI 에이전트 트레이싱, LLM 평가, 프롬프트 관리, 프로덕션 모니터링을 위한 오픈소스 플랫폼입니다.",
+    "longDescription": "LLM 애플리케이션, RAG 시스템, 에이전트 워크플로우를 종합적으로 디버깅하고 평가할 수 있습니다. 상세한 트레이싱과 자동화된 평가 기능을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "모니터링",
+      "평가",
+      "트레이싱",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.comet.com/docs/opik/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python SDK",
+      "Opik 서버"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Python SDK 설치",
+        "command": "pip install opik",
+        "note": "PyPI를 통해 Opik 클라이언트 SDK를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 opik 패키지를 설치합니다.",
+      "애플리케이션 코드에 트레이싱 및 로깅 설정을 추가합니다.",
+      "대시보드를 통해 실행 결과와 성능을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22595,
+    "forks": 1858,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "ragas",
+    "name": "Ragas",
+    "github": "https://github.com/vibrantlabsai/ragas",
+    "description": "LLM 애플리케이션 평가 및 최적화를 위한 객관적 지표와 테스트 생성 도구입니다.",
+    "longDescription": "주관적인 평가 방식을 탈피하여 데이터 기반의 효율적인 평가 워크플로우를 제공합니다. 테스트 데이터셋 자동 생성 및 RAG 파이프라인 정밀 평가 기능을 지원합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "RAG",
+      "LLM",
+      "평가",
+      "테스트",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.ragas.io",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install ragas",
+        "note": "PyPI를 통해 Ragas를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 ragas를 설치합니다.",
+      "평가할 데이터셋과 LLM 애플리케이션 응답을 준비합니다.",
+      "Ragas 지표를 사용해 평가를 실행하고 피드백 루프를 구축합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16022,
+    "forks": 1761,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "opencompass",
+    "name": "OpenCompass",
+    "github": "https://github.com/open-compass/opencompass",
+    "description": "100개 이상의 데이터셋을 통해 다양한 LLM의 지식, 추론, 코딩, 안전성 등을 평가하는 종합 평가 플랫폼입니다.",
+    "longDescription": "OpenAI, Anthropic, Gemini, Qwen, DeepSeek 등 다양한 오픈소스 및 상용 모델을 지원하는 대규모 언어 모델 평가 플랫폼입니다. 다양한 벤치마크를 통한 다차원 모델 성능 분석을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "벤치마크",
+      "평가",
+      "대형언어모델",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://opencompass.org.cn/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스클론 및 설치",
+        "command": "git clone https://github.com/open-compass/opencompass.git",
+        "note": "저장소를 복제하여 설치 가이드에 따라 환경을 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필수 의존성을 설치합니다.",
+      "평가할 모델과 벤치마크 데이터셋을 설정 파일에서 지정합니다.",
+      "평가 명령어를 실행하여 성능 결과를 도출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7514,
+    "forks": 885,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "helicone",
+    "name": "Helicone",
+    "github": "https://github.com/Helicone/helicone",
+    "description": "단 한 줄의 코드로 LLM 요청을 모니터링, 평가, 실험할 수 있는 오픈소스 LLM 관측 플랫폼입니다.",
+    "longDescription": "AI 게이트웨이와 LLM 관측 기능을 동시에 제공하여 비용, 지연 시간 추적 및 프롬프트 관리를 지원합니다. 100개 이상의 AI 모델에 대한 통합 접근과 지능형 라우팅을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "모니터링",
+      "API게이트웨이",
+      "관측성",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.helicone.ai",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Helicone 계정 및 API 키"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "OpenAI 클라이언트 연동 설정",
+        "command": "npm install openai",
+        "note": "OpenAI SDK를 설치하고 baseURL을 Helicone으로 변경합니다."
+      }
+    ],
+    "usageSteps": [
+      "Helicone에서 API 키를 발급받습니다.",
+      "코드 내 OpenAI 클라이언트의 `baseURL`을 Helicone 엔드포인트로 설정합니다.",
+      "대시보드에서 실시간 요청 및 비용을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6221,
+    "forks": 683,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "coze-loop",
+    "name": "Coze Loop",
+    "github": "https://github.com/coze-dev/coze-loop",
+    "description": "개발, 디버깅, 평가, 모니터링 등 AI 에이전트의 전체 생명주기 관리를 지원하는 차세대 에이전트 최적화 플랫폼입니다.",
+    "longDescription": "개발자가 AI 에이전트를 구축할 때 직면하는 다양한 문제를 해결하기 위한 오픈소스 플랫폼입니다. 상용 버전의 핵심 기능 모듈을 기반으로 에이전트 개발 및 운영 역량을 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "LLM",
+      "모니터링",
+      "디버깅",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/coze-dev/coze-loop",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스코드 클론",
+        "command": "git clone https://github.com/coze-dev/coze-loop.git",
+        "note": "저장소를 복제하여 Docker Compose로 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 디렉터리로 이동합니다.",
+      "Docker Compose를 사용하여 서비스를 빌드하고 실행합니다.",
+      "웹 인터페이스에 접속하여 에이전트를 개발하고 평가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5769,
+    "forks": 799,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "langwatch",
+    "name": "LangWatch",
+    "github": "https://github.com/langwatch/langwatch",
+    "description": "프로덕션 환경의 AI 에이전트 및 코딩 어시스턴트를 위한 오픈소스 관측 및 평가 플랫폼입니다.",
+    "longDescription": "기업 내 모든 LLM 호출을 추적, 테스트, 라우팅, 거버넌스 관리할 수 있는 플랫폼입니다. 코딩 어시스턴트 사용량 최적화 및 가상 키 예산 관리 기능을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "관측성",
+      "에이전트",
+      "모니터링",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://langwatch.ai",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Codex",
+      "Copilot",
+      "OpenCode"
+    ],
+    "install": [
+      {
+        "title": "셀프 호스팅 실행",
+        "command": "npx @langwatch/server",
+        "note": "Node.js 환경에서 npx를 통해 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "npx 명령어로 LangWatch 서버를 실행하거나 클라우드 서비스를 이용합니다.",
+      "코딩 에이전트 추적 설정을 적용합니다.",
+      "대시보드에서 비용, 성능, 프롬프트 실행 로그를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4947,
+    "forks": 411,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "vlmevalkit",
+    "name": "VLMEvalKit",
+    "github": "https://github.com/open-compass/VLMEvalKit",
+    "description": "220개 이상의 대형 비전-언어 모델(LMM)과 80개 이상의 벤치마크를 지원하는 오픈소스 평가 툴킷입니다.",
+    "longDescription": "다양한 멀티모달 대형 언어 모델을 단일 코드베이스에서 간편하게 평가할 수 있도록 지원하는 파이썬 패키지입니다. 오픈소스 리더보드와 연동되어 모델 간 성능 비교가 용이합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "비전-언어",
+      "멀티모달",
+      "평가",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://huggingface.co/spaces/opencompass/open_vlm_leaderboard",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "플래시 어텐션 설치 예시",
+        "command": "pip install flash-attn --no-build-isolation",
+        "note": "특정 모델 평가 시 권장"
+      }
+    ],
+    "usageSteps": [
+      "패키지 설치",
+      "지원되는 VLM 설정 불러오기",
+      "단일 또는 다중 이미지 입력 후 추론 결과 확인"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4439,
+    "forks": 780,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "evo",
+    "name": "evo",
+    "github": "https://github.com/MichaelGrupp/evo",
+    "description": "로봇 공학의 오도메트리 및 SLAM 알고리즘의 궤적 출력을 다루고 평가하기 위한 파이썬 패키지입니다.",
+    "longDescription": "TUM, KITTI, EuRoC MAV 등 다양한 포맷의 궤적 파일을 처리, 시각화, 비교할 수 있는 커맨드라인 도구와 파이썬 라이브러리를 제공합니다. SLAM 및 자율주행 연구에서 널리 활용됩니다.",
+    "category": "공간정보",
+    "tags": [
+      "SLAM",
+      "오도메트리",
+      "로봇공학",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://michaelgrupp.github.io/evo/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "적절한 파이썬 환경(venv 등) 활성화",
+      "pip를 통한 패키지 설치",
+      "커맨드라인 실행파일을 통한 궤적 분석 수행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4334,
+    "forks": 800,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "evalscope",
+    "name": "evalscope",
+    "github": "https://github.com/modelscope/evalscope",
+    "description": "대형 언어 모델(LLM, VLM, AIGC)의 성능 평가와 추론 스트레스 테스트를 위한 간편하고 커스텀 가능한 프레임워크입니다.",
+    "longDescription": "ModelScope 커뮤니티에서 구축한 원스톱 대형 모델 평가 프레임워크로, 단 한 줄의 명령어로 모델 능력 평가와 성능 벤치마킹을 수행할 수 있습니다. 결과 시각화 기능도 지원합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "평가",
+      "벤치마크",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://modelscope.github.io/evalscope/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install evalscope",
+        "note": "기본 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "evalscope 패키지 설치",
+      "API URL 및 키 설정",
+      "eval 명령어를 사용하여 특정 데이터셋으로 모델 평가 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3542,
+    "forks": 520,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "mteb",
+    "name": "mteb",
+    "github": "https://github.com/embeddings-benchmark/mteb",
+    "description": "다양한 언어와 모달리티에 걸쳐 텍스트 임베딩 모델의 성능을 최첨단으로 평가하는 툴킷입니다.",
+    "longDescription": "임베딩 모델 및 검색 시스템의 성능을 객관적으로 비교할 수 있는 벤치마크 도구입니다. pip 또는 uv를 통해 간편하게 설치하여 다양한 검색 및 분류 태스크에 모델을 적용할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "임베딩",
+      "검색",
+      "평가",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.mteb.org",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install mteb",
+        "note": "기본 설치"
+      }
+    ],
+    "usageSteps": [
+      "mteb 패키지 설치",
+      "평가할 모델 객체 로드",
+      "벤치마크 스크립트 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3458,
+    "forks": 720,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "chainforge",
+    "name": "ChainForge",
+    "github": "https://github.com/ianarawjo/ChainForge",
+    "description": "LLM 프롬프트를 비교하고 검증하기 위한 오픈소스 시각적 프로그래밍 환경입니다.",
+    "longDescription": "프롬프트 엔지니어링 과정에서 여러 모델과 프롬프트 변형을 동시에 테스트하고 응답 품질을 신속하게 비교할 수 있는 데이터 플로우 기반 웹 환경을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "프롬프트",
+      "LLM",
+      "시각적프로그래밍",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://chainforge.ai/docs",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹 플레이그라운드 접속 또는 로컬 환경 구축",
+      "노드 기반 인터페이스를 통해 프롬프트와 모델 구성",
+      "병렬 질의를 통한 응답 비교 및 분석"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3034,
+    "forks": 259,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "lighteval",
+    "name": "lighteval",
+    "github": "https://github.com/huggingface/lighteval",
+    "description": "Hugging Face의 Leaderboard 및 Evals 팀이 개발한 빠르고 유연한 LLM 통합 평가 툴킷입니다.",
+    "longDescription": "다양한 백엔드에서 대형 언어 모델을 빠르게 평가할 수 있도록 지원하며, 허깅페이스 리더보드와 연동되어 평가 결과를 간편하게 공유할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "평가",
+      "HuggingFace",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://huggingface.co/docs/lighteval/en/index",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install lighteval",
+        "note": "기본 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "lighteval 패키지 설치",
+      "평가 설정 및 대상 모델 지정",
+      "평가 실행 및 결과 리포트 생성"
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 윈도우 환경은 공식적으로 지원되지 않으며 Mac 및 Linux 환경을 권장합니다.",
+    "stars": 2559,
+    "forks": 578,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "uptrain",
+    "name": "uptrain",
+    "github": "https://github.com/uptrain-ai/uptrain",
+    "description": "생성형 AI 애플리케이션의 성능을 평가하고 개선하기 위한 오픈소스 통합 플랫폼입니다.",
+    "longDescription": "언어, 코드, 임베딩 등 20가지 이상의 사전 설정된 검사 항목을 통해 LLM 애플리케이션의 환각 현상, 탈옥 시도 등을 진단하고 실패 사례에 대한 원인 분석 인사이트를 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "생성형AI",
+      "모니터링",
+      "평가",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://uptrain.ai/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/uptrain-ai/uptrain.git",
+        "note": "소스 코드 클론"
+      }
+    ],
+    "usageSteps": [
+      "저장소 복제 후 디렉토리 이동",
+      "도커를 활용한 대시보드 실행 쉘 스크립트 실행",
+      "웹 인터페이스를 통해 LLM 앱 평가 및 모니터링 수행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2366,
+    "forks": 206,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "alpaca-eval",
+    "name": "alpaca_eval",
+    "github": "https://github.com/tatsu-lab/alpaca_eval",
+    "description": "지시사항을 따르는 언어 모델의 성능을 빠르고 저렴하게 자동으로 평가해주는 도구입니다.",
+    "longDescription": "사람이 검증한 고품질 데이터셋을 기반으로 LLM의 응답 품질을 자동 평가하며, 길이 편향을 보정한 평가 방식을 지원하여 모델 간 성능을 신속하게 비교할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "평가",
+      "자동평가",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://tatsu-lab.github.io/alpaca_eval/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T16:04:05.453Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 안정 버전 설치",
+        "command": "pip install alpaca-eval",
+        "note": "stable release 설치"
+      }
+    ],
+    "usageSteps": [
+      "패키지 설치",
+      "API 키 환경 변수 설정",
+      "alpaca_eval 커맨드라인 도구를 사용하여 모델 출력 결과 평가 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2020,
+    "forks": 314,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
     "id": "pgbackrest",
     "name": "pgbackrest",
     "github": "https://github.com/pgbackrest/pgbackrest",
