@@ -225,6 +225,7 @@ function adminGetDashboard(token) {
     const reviewState = getReviewStateWithMigration_();
     const reviewApproved = reviewApprovedIds_(reviewState);
     const geminiReviews = getGeminiReviews_();
+    const autoReview = githubJsonFile_('data/auto-review-v51.json') || {items:[]};
     const automationEnabled = PropertiesService.getScriptProperties().getProperty('OPENSHELF_AUTOMATION_ENABLED') !== 'false';
 
     return {
@@ -247,6 +248,7 @@ function adminGetDashboard(token) {
       reviewApproved: Array.isArray(reviewApproved) ? reviewApproved : [],
       reviewState: reviewState,
       geminiReviews: geminiReviews,
+      autoReview: {updatedAt:autoReview.updatedAt||null,items:Array.isArray(autoReview.items)?autoReview.items.slice(0,100).map(function(x){return {id:String(x.id||''),name:String(x.name||''),status:String(x.status||''),checkedAt:x.checkedAt||null,recheckedAt:x.recheckedAt||null,reasons:Array.isArray(x.recheckReasons)?x.recheckReasons:(Array.isArray(x.reasons)?x.reasons:[]),recheckAttempts:Number(x.recheckAttempts||0)};}):[]},
       config: config,
       healthState: healthState,
       automationEnabled: automationEnabled
@@ -1488,7 +1490,14 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
     </section>
 
     <section class="section review">
-      <span class="kicker">REVIEW INBOX</span>
+      <span class="kicker">AUTONOMOUS REVIEW</span>
+      <h2>Gemini 자동 검수 현황</h2>
+      <p class="section-note">자동 승인·재검수·보류 기록을 확인합니다. 근거가 부족한 도구는 자동 보류되며 기존 등록 도구는 자동 삭제되지 않습니다.</p>
+      <div class="review-top"><div><span>자동 승인</span><strong id="autoApprovedCount">0</strong></div><div><span>자동 보류</span><strong id="autoHeldCount">0</strong></div><div><span>재검수 진행</span><strong id="autoRetriedCount">0</strong></div></div>
+      <p id="autoReviewUpdated" class="section-note">검수 기록을 불러오는 중…</p>
+      <div id="autoReviewSummary" class="review-list"></div>
+      <div style="display:none" aria-hidden="true" id="legacyReviewInbox">
+      <span class="kicker">LEGACY REVIEW INBOX</span>
       <h2>자동 검수함</h2>
       <p class="section-note">문제 도구 관리와 함께 승인 후 30일은 재검수 예정, 60일은 재검수 필요로 자동 분류합니다. 승인 당시와 비교해 라이선스·홈페이지·Archived·접근 상태가 바뀌면 즉시 재검수 필요로 이동하며, 직접 편집과 선택 일괄 작업도 지원합니다.</p>
       <div class="review-top">
@@ -1516,6 +1525,7 @@ button,input{font:inherit}.shell{max-width:1180px;margin:0 auto;padding:28px}
         </div>
       </div>
       <div id="reviewList" class="review-list"></div>
+      </div>
     </section>
 
     <section class="section settings">
@@ -1672,7 +1682,7 @@ function loadDashboard(){
     geminiReviews=r.geminiReviews&&typeof r.geminiReviews==='object'?r.geminiReviews:{};
     renderConfig();
     renderAnalytics();
-    renderReview();
+    renderAutoReview(r.autoReview);
     renderDenylist();
     renderToolResults();
   }).adminGetDashboard(token);
@@ -1932,6 +1942,18 @@ function getReviewIndex(){
  recent.push(...recentTools20().map(tool=>({tool,review:cachedQualityReview(tool)})));
  reviewIndexCache={tools:adminTools,approvedSignature,state:reviewState,problems,approved,issues,soon,due,recent,totalIssues};
  return reviewIndexCache;
+}
+function renderAutoReview(data){
+ const items=Array.isArray(data&&data.items)?data.items:[];
+ const approved=items.filter(x=>x.status==='auto_approved'||x.status==='auto_approved_after_recheck').length;
+ const held=items.filter(x=>x.status==='pending_review').length;
+ const retried=items.filter(x=>Number(x.recheckAttempts||0)>0).length;
+ document.getElementById('autoApprovedCount').textContent=String(approved);
+ document.getElementById('autoHeldCount').textContent=String(held);
+ document.getElementById('autoRetriedCount').textContent=String(retried);
+ document.getElementById('autoReviewUpdated').textContent='최근 기록: '+(data&&data.updatedAt?fmt(data.updatedAt):'아직 기록 없음')+' · 최근 최대 100건 표시';
+ const root=document.getElementById('autoReviewSummary');
+ root.innerHTML=items.length?items.slice(0,30).map(x=>'<article class="review-card"><div class="review-head"><strong>'+esc(x.name||x.id)+'</strong><span>'+esc(x.status==='pending_review'?'자동 보류':x.status==='auto_approved_after_recheck'?'재검수 후 승인':'자동 승인')+'</span></div><div class="review-meta">'+esc((x.reasons||[]).join(' · ')||'객관적 검증 기준 통과')+'</div></article>').join(''):'<p class="section-note">아직 기록된 자동 검수 결과가 없습니다. 다음 자동수집 후 표시됩니다.</p>';
 }
 function renderReview(){
  const index=getReviewIndex();
