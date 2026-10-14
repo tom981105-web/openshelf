@@ -797,10 +797,7 @@ function adminUpdateTool(token, toolId, patch) {
     if (!id) return { ok:false, error:'도구 ID가 없습니다.' };
     patch = patch && typeof patch === 'object' ? patch : {};
 
-    const categories = [
-      'AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서',
-      '브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'
-    ];
+    const categories = ['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션','데이터 분석','데이터베이스','보안·개인정보','시스템·인프라','네트워크','협업·소통','멀티미디어','음성·오디오','개발 운영','테스트·품질','생산성','개인 도구','과학·연구','하드웨어·IoT'];
     const file = githubJsonFileMeta_('data/tools.json');
     const list = Array.isArray(file.data) ? file.data : [];
     const index = list.findIndex(function(t){ return String(t.id) === id; });
@@ -952,10 +949,7 @@ function parseGeminiJson_(text) {
 function normalizeGeminiReviewVerdict_(review, tool, context) {
   review = review && typeof review === 'object' ? review : {};
   const metadata = context && context.metadata ? context.metadata : {};
-  const validCategories = [
-    'AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서',
-    '브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'
-  ];
+  const validCategories = ['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션','데이터 분석','데이터베이스','보안·개인정보','시스템·인프라','네트워크','협업·소통','멀티미디어','음성·오디오','개발 운영','테스트·품질','생산성','개인 도구','과학·연구','하드웨어·IoT'];
 
   const objective = [];
   const manual = [];
@@ -1036,10 +1030,7 @@ function adminGeminiReview(token, toolId) {
     if (!tool) return { ok:false, error:'검수할 도구를 찾지 못했습니다.' };
 
     const context = githubRepoContextForReview_(tool);
-    const categories = [
-      'AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서',
-      '브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'
-    ];
+    const categories = ['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션','데이터 분석','데이터베이스','보안·개인정보','시스템·인프라','네트워크','협업·소통','멀티미디어','음성·오디오','개발 운영','테스트·품질','생산성','개인 도구','과학·연구','하드웨어·IoT'];
 
     const prompt = [
       'You are a strict second-pass reviewer for OpenShelf, a Korean directory of useful software and AI tools.',
@@ -1166,10 +1157,7 @@ function geminiAutoPatch_(tool, review, context) {
   const model = props.getProperty('GEMINI_MODEL') || 'gemini-3.5-flash-lite';
   if (!apiKey) throw new Error('Apps Script의 Script Properties에 GEMINI_API_KEY를 추가해주세요.');
 
-  const categories = [
-    'AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서',
-    '브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'
-  ];
+  const categories = ['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션','데이터 분석','데이터베이스','보안·개인정보','시스템·인프라','네트워크','협업·소통','멀티미디어','음성·오디오','개발 운영','테스트·품질','생산성','개인 도구','과학·연구','하드웨어·IoT'];
 
   const prompt = [
     'You are the metadata repair agent for OpenShelf.',
@@ -1237,10 +1225,7 @@ function geminiAutoPatch_(tool, review, context) {
 function applyGeminiPatchToTool_(tool, patch) {
   const next = Object.assign({}, tool);
   const changed = [];
-  const validCategories = [
-    'AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서',
-    '브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'
-  ];
+  const validCategories = ['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션','데이터 분석','데이터베이스','보안·개인정보','시스템·인프라','네트워크','협업·소통','멀티미디어','음성·오디오','개발 운영','테스트·품질','생산성','개인 도구','과학·연구','하드웨어·IoT'];
 
   patch = patch && typeof patch === 'object' ? patch : {};
 
@@ -2178,7 +2163,7 @@ document.getElementById('reviewRecheckDue').addEventListener('click',()=>{review
 document.getElementById('reviewRecent').addEventListener('click',()=>{reviewMode='recent';reviewVisibleLimit=20;renderReview()});
 document.getElementById('reviewApproved').addEventListener('click',()=>{reviewMode='approved';reviewVisibleLimit=20;renderReview()});
 
-const EDIT_CATEGORIES=['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'];
+const EDIT_CATEGORIES=['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션','데이터 분석','데이터베이스','보안·개인정보','시스템·인프라','네트워크','협업·소통','멀티미디어','음성·오디오','개발 운영','테스트·품질','생산성','개인 도구','과학·연구','하드웨어·IoT'];
 const toolEditor=document.getElementById('toolEditor');
 function openToolEditor(id){
   const t=adminTools.find(x=>String(x.id)===String(id));if(!t)return;

@@ -109,11 +109,8 @@ const deniedRepos = new Set(denylist.map(x => normalizeRepoUrl(String(x).startsW
 const existingIds = new Set(tools.map(t => String(t.id || '').toLowerCase()));
 const existingNames = new Set(tools.map(t => String(t.name || '').trim().toLowerCase()));
 const existingCanonicalNames = new Set(tools.map(t => canonicalName(t.name)).filter(Boolean));
-const categories = [...new Set(tools.map(t => t.category).filter(Boolean))];
-const validCategories = new Set([
-  'AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서',
-  '브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'
-]);
+const validCategories = new Set(JSON.parse(await fs.readFile('data/tool-categories.json','utf8')).categories);
+const categories = [...validCategories];
 
 async function ghJson(url) {
   const res = await fetch(url, { headers: githubHeaders });

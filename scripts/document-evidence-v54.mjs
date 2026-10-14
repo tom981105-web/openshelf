@@ -5,7 +5,8 @@ const LICENSES=new Map([['MIT License','MIT'],['Apache License, Version 2.0','Ap
 export function assessText(text){
  const value=String(text||'').slice(0,50000);
  let license=null;for(const [marker,id] of LICENSES)if(value.toLowerCase().includes(marker.toLowerCase())){license=id;break}
- return {license,source:license?'LICENSE text pattern (unverified equivalence)':'unknown'};
+ const verified=license==='MIT'&&/permission is hereby granted, free of charge/i.test(value)&&/copies or substantial portions of the software/i.test(value)&&/the software is provided [\"'‘’]as is[\"'‘’]/i.test(value)&&/the above copyright notice and this permission notice/i.test(value);
+ return {license,verifiedLicense:verified?'MIT':null,source:verified?'LICENSE complete MIT provisions (text match)':license?'LICENSE header only, unverified':'unknown'};
 }
 export function assessReadme(text){
  const value=String(text||'').slice(0,30000);
@@ -29,7 +30,7 @@ export async function inspectDocuments(tool,{fetcher=fetch,token=process.env.GIT
  for(const file of ['LICENSE','LICENSE.md','LICENSE.txt']){try{license=await getContent(repo,file,{fetcher,token})}catch{}if(license)break}
  for(const file of ['README.md','README']){try{readme=await getContent(repo,file,{fetcher,token})}catch{}if(readme)break}
  const lp=assessText(license),rp=assessReadme(readme);
- return {license:lp.license,licenseSource:lp.source,freeClaim:rp.freeClaim,freeSource:rp.source,notes:[]};
+ return {license:lp.license,verifiedLicense:lp.verifiedLicense,licenseSource:lp.source,freeClaim:rp.freeClaim,freeSource:rp.source,notes:[]};
 }
 export async function verifyDocumentEvidence({root='data',fetcher=fetch,token=process.env.GITHUB_TOKEN,limit=10}={}){
  const base=root.replace(/\/$/,'')+'/';
@@ -44,9 +45,12 @@ export async function verifyDocumentEvidence({root='data',fetcher=fetch,token=pr
   const evidence=await inspectDocuments(entry.tool,{fetcher,token});
   entry.documentEvidenceCheckedAt=new Date().toISOString();
   entry.documentEvidence=evidence;
-  // LICENSE text signatures can be ambiguous; only record as a lead, not as proven SPDX.
-  // README free statements also never override free:false/unknown.
+  // Only a complete MIT text provision match is eligible for auto reassessment.
+  // README free statements never override free:false/unknown.
   const candidate={...entry.tool};
+  if(evidence.verifiedLicense==='MIT'){
+   candidate.license='MIT';candidate.openSource=true;
+  }
   const verdict=decision(candidate,{existingRepos:existing,deniedRepos:denied});
   entry.recheckReasons=verdict.reasons;
   if(verdict.status==='auto_approved'&&!tools.some(x=>x.id===candidate.id)){

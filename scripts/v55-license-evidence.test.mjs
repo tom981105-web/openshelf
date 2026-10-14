@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {assessText,assessReadme,inspectDocuments} from './document-evidence-v54.mjs';
+const full='MIT License\nCopyright (c) 2026 Example\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software.\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.';
+const verified=assessText(full);
+assert.equal(verified.verifiedLicense,'MIT');
+assert.equal(assessText('MIT License').verifiedLicense,null);
+assert.equal(assessText('Apache License, Version 2.0').verifiedLicense,null);
+assert.equal(assessReadme('Free tier, paid plans available').freeClaim,'mixed_or_paid');
+assert.equal(assessReadme('free and open-source').freeClaim,'claimed_free');
+const reply=data=>new Response(JSON.stringify({type:'file',encoding:'base64',size:data.length,content:Buffer.from(data).toString('base64')}));
+const fetcher=async(url)=>url.endsWith('/LICENSE')?reply(full):url.endsWith('/README.md')?reply('free and open-source'):new Response('',{status:404});
+const evidence=await inspectDocuments({github:'https://github.com/example/project'},{fetcher});
+assert.equal(evidence.verifiedLicense,'MIT');
+assert.equal(evidence.freeClaim,'claimed_free');
+console.log('V55 strong MIT text check and README claims tests passed');
