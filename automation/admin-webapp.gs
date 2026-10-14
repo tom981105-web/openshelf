@@ -1898,10 +1898,17 @@ function recentTools20(){
     return bv-av;
   }).slice(0,20);
 }
+let reviewVisibleLimit=20;
+const reviewScoreMemo=new WeakMap();
+function cachedQualityReview(tool){
+ let value=reviewScoreMemo.get(tool);
+ if(!value){value=qualityReview(tool);reviewScoreMemo.set(tool,value)}
+ return value;
+}
 function renderReview(){
-  const problems=adminTools.map(t=>({tool:t,review:qualityReview(t)})).filter(x=>x.review.score<70&&!reviewApproved.includes(String(x.tool.id))).sort((a,b)=>a.review.score-b.review.score);
-  const recent=recentTools20().map(t=>({tool:t,review:qualityReview(t)}));
-  const approved=adminTools.filter(t=>reviewApproved.includes(String(t.id))).map(t=>({tool:t,review:qualityReview(t)}));
+  const problems=adminTools.map(t=>({tool:t,review:cachedQualityReview(t)})).filter(x=>x.review.score<70&&!reviewApproved.includes(String(x.tool.id))).sort((a,b)=>a.review.score-b.review.score);
+  const recent=recentTools20().map(t=>({tool:t,review:cachedQualityReview(t)}));
+  const approved=adminTools.filter(t=>reviewApproved.includes(String(t.id))).map(t=>({tool:t,review:cachedQualityReview(t)}));
   const issues=issueRows();
   const recheckSoon=recheckRows('soon');
   const recheckDue=recheckRows('due');
@@ -1924,7 +1931,7 @@ function renderReview(){
   renderBulkBar();
   const root=document.getElementById('reviewList');
   if(!rows.length){root.innerHTML='<p class="section-note">현재 검수할 도구가 없습니다.</p>';return}
-  root.innerHTML=rows.map(x=>{
+  root.innerHTML=rows.slice(0,reviewVisibleLimit).map(x=>{
     const t=x.tool,r=x.review;
     const scoreClass=r.score<55?'low':(r.score<70?'mid':'good');
     const approvedNow=reviewApproved.includes(String(t.id));
@@ -1952,6 +1959,7 @@ function renderReview(){
       : '';
     return '<article class="review-card"><div class="review-head"><div style="display:flex;gap:10px;align-items:flex-start"><input class="review-select" type="checkbox" data-review-select="'+esc(t.id)+'" '+(selectedReviewIds.has(String(t.id))?'checked':'')+'><div><div class="review-title">'+esc(t.name)+'</div><div class="review-meta">'+esc(t.category||'미분류')+' · ★ '+Number(t.stars||0).toLocaleString()+'</div></div></div><div class="score '+scoreClass+'">'+r.score+'</div></div><div class="review-flags">'+(r.flags.length?r.flags.map(v=>'<span class="review-flag">'+esc(v)+'</span>').join(''):'<span class="review-flag">이상 없음</span>')+'</div><div class="review-desc">'+esc(t.description||'설명 없음')+'</div>'+recheckBadge+approvalMeta+issueBlock+geminiBlock+'<div class="review-actions">'+approvalButton+'<button class="gemini" type="button" data-gemini-review="'+esc(t.id)+'">Gemini 재검수</button>'+applyButton+'<button type="button" data-tool-edit="'+esc(t.id)+'">직접 편집</button><button type="button" data-review-deny="'+esc(t.github||'')+'">수집 제외</button><button class="remove" type="button" data-review-remove="'+esc(t.id)+'">삭제+차단</button></div></article>';
   }).join('');
+  if(rows.length>reviewVisibleLimit){const more=document.createElement('button');more.type='button';more.className='review-more';more.textContent='다음 20개 보기 ('+reviewVisibleLimit+' / '+rows.length+')';more.addEventListener('click',()=>{reviewVisibleLimit+=20;renderReview()});root.appendChild(more)}
   root.querySelectorAll('[data-review-select]').forEach(box=>box.addEventListener('change',()=>{
     const id=String(box.dataset.reviewSelect||'');
     if(box.checked){
