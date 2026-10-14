@@ -20,6 +20,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Validate V49 discovery and admin rendering
+        run: node scripts/v49-discovery-review.test.cjs
+
       - name: Discover up to 20 popular tools
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
