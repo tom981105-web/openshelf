@@ -7,14 +7,13 @@ try{
  const errors=[];page.on('pageerror',e=>errors.push(e.message));
  await page.goto(base+'/index.html',{waitUntil:'domcontentloaded',timeout:30000});
  await page.waitForFunction(()=>Number(document.querySelector('#heroToolCount')?.textContent.replace(/,/g,''))>100,{timeout:45000});
- const initial=await page.locator('#toolGrid .tool-card').count();
+ const initial=await page.locator('#toolGrid .card').count();
  if(initial===0)throw Error('Home cards not displayed');
  const count=await page.locator('#categoryChips button').count();
  if(count<10)throw Error('Categories missing: '+count);
  const category=page.locator('#categoryChips button').nth(1);
  await category.click();
  await page.waitForTimeout(200);
- if(!await category.getAttribute('class')?.then(x=>x.includes('active')).catch(()=>false)){} // visual class may use chip active
  await page.locator('#categoryChips button').first().click();
  await page.locator('#search').fill('github');
  await page.waitForTimeout(500);
