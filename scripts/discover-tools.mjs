@@ -23,14 +23,19 @@ if (!GITHUB_TOKEN) throw new Error('GITHUB_TOKEN is required.');
 if (!GEMINI_API_KEY) throw new Error('GEMINI_API_KEY is required. Add it as a GitHub Actions repository secret.');
 
 const toolTopics = [
-  'developer-tools',
-  'ai-agents',
-  'productivity',
-  'self-hosted',
-  'automation',
-  'knowledge-management',
-  'cli',
-  'design-tools'
+ 'developer-tools','ai-agents','productivity','self-hosted','automation','knowledge-management','cli','design-tools',
+ 'machine-learning','artificial-intelligence','llm','rag','chatbot','workflow','devops','observability',
+ 'monitoring','security','privacy','database','data-engineering','analytics','data-visualization','web-development',
+ 'frontend','backend','testing','code-quality','static-analysis','documentation','markdown','note-taking',
+ 'personal-knowledge-management','search-engine','browser-extension','browser-automation','web-scraping',
+ 'pdf','office','spreadsheet','image-processing','video-editing','audio','speech-recognition','translation',
+ 'education','e-learning','scientific-computing','robotics','iot','home-automation','gis','mapping',
+ '3d','cad','game-development','mobile','desktop-app','linux','docker','kubernetes','infrastructure',
+ 'continuous-integration','api','api-client','http-client','terminal','shell','backup','file-management',
+ 'networking','accessibility','design-system','typography','vector-graphics','generative-ai','agentic-ai',
+ 'mcp','model-context-protocol','prompt-engineering','evaluation','benchmarking','simulation','finance',
+ 'project-management','calendar','communication','collaboration','email','rss','feed-reader','cms',
+ 'e-commerce','digital-garden','homelab','virtualization','container','open-source','developer-productivity'
 ];
 
 const githubHeaders = {
@@ -117,35 +122,35 @@ async function ghJson(url) {
 }
 
 async function searchCandidates(runExcludedRepos = new Set(), runExcludedNames = new Set()) {
-  const floor = MINIMUM_STARS;
   const merged = new Map();
-
-  for (const topic of toolTopics) {
-    for (let page = 1; page <= SEARCH_PAGES_PER_TOPIC; page++) {
-      const q = encodeURIComponent(`topic:${topic} stars:>=${floor} archived:false fork:false`);
-      const url = `https://api.github.com/search/repositories?q=${q}&sort=stars&order=desc&per_page=100&page=${page}`;
-      const data = await ghJson(url);
-      const items = data.items || [];
-
-      for (const repo of items) {
-        const key = repo.full_name.toLowerCase();
-        const repoCanonicalName = canonicalName(repo.name);
-        if (existingRepos.has(key) || deniedRepos.has(key) || runExcludedRepos.has(key)) continue;
-        if (existingCanonicalNames.has(repoCanonicalName) || runExcludedNames.has(repoCanonicalName)) continue;
-        if (repo.archived || repo.fork || repo.stargazers_count < floor) continue;
-        const prev = merged.get(key);
-        if (!prev || repo.stargazers_count > prev.stargazers_count) merged.set(key, repo);
-      }
-
-      if (items.length < 100) break;
-      await sleep(250);
+  // Re-query current rankings every run. Rotate thematic coverage, never freeze old rank pages.
+  const hour = Math.floor(Date.now() / 3600000);
+  const essentials = toolTopics.slice(0,8);
+  const others = toolTopics.slice(8);
+  const rotation = Array.from({length:12},(_,i)=>others[(hour*12+i)%others.length]);
+  const queries = [...new Set([...essentials,...rotation])];
+  const bands = [MINIMUM_STARS, Math.max(20, Math.floor(MINIMUM_STARS/4))];
+  for (const floor of bands) {
+   for (const topic of queries) {
+    for (let page=1;page<=Math.min(SEARCH_PAGES_PER_TOPIC,2);page++) {
+     const q=encodeURIComponent(`topic:${topic} stars:>=${floor} archived:false fork:false`);
+     const url=`https://api.github.com/search/repositories?q=${q}&sort=stars&order=desc&per_page=100&page=${page}`;
+     const data=await ghJson(url),items=data.items||[];
+     for (const repo of items) {
+      const key=repo.full_name.toLowerCase(),canonical=canonicalName(repo.name);
+      if(existingRepos.has(key)||deniedRepos.has(key)||runExcludedRepos.has(key))continue;
+      if(existingCanonicalNames.has(canonical)||runExcludedNames.has(canonical))continue;
+      if(repo.archived||repo.fork||repo.stargazers_count<floor)continue;
+      const prev=merged.get(key);if(!prev||repo.stargazers_count>prev.stargazers_count)merged.set(key,repo);
+     }
+     if(items.length<100)break;
+     await sleep(150);
     }
-    await sleep(250);
+    if(merged.size>=Math.max(CANDIDATE_COUNT*4,80))break;
+   }
+   if(merged.size>=Math.max(CANDIDATE_COUNT*2,40))break;
   }
-
-  return [...merged.values()]
-    .sort((a, b) => b.stargazers_count - a.stargazers_count || b.forks_count - a.forks_count)
-    .slice(0, CANDIDATE_COUNT);
+  return [...merged.values()].sort((a,b)=>b.stargazers_count-a.stargazers_count||b.forks_count-a.forks_count).slice(0,Math.max(CANDIDATE_COUNT*2,40));
 }
 function compactReadme(raw) {
   if (!raw) return '';
