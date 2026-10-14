@@ -19,7 +19,7 @@ try{
  assert.deepEqual(tools.map(x=>x.id),['new','existing']);
  const history=JSON.parse(await readFile(dir+'auto-review-v51.json','utf8'));
  assert.equal(history.items.find(x=>x.id==='held').tool.name,'Unclear');
- const second=await run({root:tmp}).then(()=>null,e=>e);
- assert.ok(second instanceof Error,'same batch must not be auto processed again');
+ const second=await run({root:tmp});
+ assert.match(second.note,/already been reviewed/);
 }finally{await rm(tmp,{recursive:true,force:true})}
 console.log('V51 auto approval / hold / preservation regression passed');
