@@ -37,6 +37,12 @@ jobs:
       - name: Auto review newly discovered repositories
         run: node scripts/auto-review-v51.mjs
 
+      - name: Recheck up to five held entries with Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3.5-flash-lite
+        run: node scripts/gemini-recheck-v51.mjs
+
       - name: Validate discovery output before commit
         run: |
           node scripts/validate-tools.test.mjs
