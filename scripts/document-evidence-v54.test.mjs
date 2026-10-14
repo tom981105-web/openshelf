@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {assessText,assessReadme,inspectDocuments} from './document-evidence-v54.mjs';
+assert.equal(assessText('MIT License\nCopyright 2026 Example').license,'MIT');
+assert.equal(assessText('proprietary agreement').license,null);
+assert.equal(assessReadme('Free and open-source software').freeClaim,'claimed_free');
+assert.equal(assessReadme('free tier and paid plans').freeClaim,'mixed_or_paid');
+const response=(content)=>new Response(JSON.stringify({type:'file',encoding:'base64',size:content.length,content:Buffer.from(content).toString('base64')}),{headers:{'content-type':'application/json'}});
+const fetcher=async url=>url.endsWith('/LICENSE')?response('MIT License'):url.endsWith('/README.md')?response('free to use'):new Response('',{status:404});
+const result=await inspectDocuments({github:'https://github.com/example/project'},{fetcher});
+assert.equal(result.license,'MIT');assert.equal(result.freeClaim,'claimed_free');
+console.log('V54 LICENSE / README evidence tests passed');
