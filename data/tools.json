@@ -1,5 +1,677 @@
 [
   {
+    "id": "mathjax",
+    "name": "MathJax",
+    "github": "https://github.com/mathjax/MathJax",
+    "description": "모든 브라우저에서 아름답고 접근성 높은 수학 수식을 표현할 수 있는 자바스크립트 엔진입니다.",
+    "longDescription": "웹 페이지 상에서 LaTeX, MathML, AsciiMath 표기법을 SVG나 HTML로 렌더링해주는 오픈소스 자바스크립트 라이브러리입니다. 별도의 설치 없이 CDN을 통해 간편하게 웹에 적용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "수학",
+      "LaTeX",
+      "HTML",
+      "자바스크립트",
+      "렌더링"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://www.mathjax.org/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "웹 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CDN 스크립트 추가",
+        "command": "script src=\"https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js\"/script",
+        "note": "HTML 문서의 head 또는 body에 스크립트 태그 삽입"
+      }
+    ],
+    "usageSteps": [
+      "HTML 페이지에 MathJax CDN 스크립트를 로드합니다.",
+      "TeX 또는 MathML 구문으로 수식을 작성합니다.",
+      "브라우저에서 수식이 자동으로 렌더링되는지 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10933,
+    "forks": 1190,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "heti",
+    "name": "Heti (赫蹏)",
+    "github": "https://github.com/sivan/heti",
+    "description": "통행하는 중국어 타이포그래피 규격에 맞춰 웹사이트의 한중 혼랭 및 가독성을 높여주는 CSS 스타일 강화 프레임워크입니다.",
+    "longDescription": "웹상의 중국어 및 한중 혼합 콘텐츠의 가독성을 극대화하기 위해 설계된 타이포그래피 스타일 강화 도구입니다. 자동 간격 조절 스크립트를 포함하여 별도의 수동 공백 입력 없이 깔끔한 정렬을 제공합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "타이포그래피",
+      "CSS",
+      "SCSS",
+      "중국어",
+      "웹디자인"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://sivan.github.io/heti/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "CSS / JS 지원 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CSS 파일 임포트",
+        "command": "link rel=\"stylesheet\" href=\"heti.css\"",
+        "note": "HTML 헤더에 스타일시트 추가"
+      }
+    ],
+    "usageSteps": [
+      "페이지에 heti.css 파일을 로드합니다.",
+      "적용할 컨테이너 요소에 class=\"heti\"를 추가합니다.",
+      "선택적으로 Heti 자바스크립트 인스턴스를 생성하여 autoSpacing()을 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6731,
+    "forks": 282,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "theme-ui",
+    "name": "Theme UI",
+    "github": "https://github.com/system-ui/theme-ui",
+    "description": "제약 기반 디자인 원칙을 바탕으로 일관되고 테마 적용이 가능한 React 앱을 구축하는 라이브러리입니다.",
+    "longDescription": "색상, 타이포그래피, 레이아웃을 전역 theme 객체 기반으로 유연하게 커스터마이징할 수 있는 React 디자인 시스템 프레임워크입니다. 컴포넌트 라이브러리와 웹 애플리케이션을 신속하게 구축하도록 돕습니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "React",
+      "디자인시스템",
+      "테마",
+      "UI",
+      "타입스크립트"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://theme-ui.com",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Node.js",
+      "React"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm install theme-ui @emotion/react",
+        "note": "npm을 이용한 의존성 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 theme-ui와 @emotion/react를 설치합니다.",
+      "전역 테마 객체를 정의합니다.",
+      "ThemeUIProvider로 애플리케이션을 감싸고 스타일 속성을 활용해 컴포넌트를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5405,
+    "forks": 654,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "react-wrap-balancer",
+    "name": "React Wrap Balancer",
+    "github": "https://github.com/shuding/react-wrap-balancer",
+    "description": "다양한 뷰포트 크기에서 제목 등 텍스트의 줄바꿈을 균형 있게 맞춰 가독성을 높여주는 간단한 React 컴포넌트입니다.",
+    "longDescription": "마지막 줄에 단 한 단어만 남는 등의 어색한 줄바꿈 현상을 방지하고, 텍스트 블록의 시각적 균형을 자동으로 맞춰주는 가벼운 리액트 유틸리티입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "React",
+      "타이포그래피",
+      "UI",
+      "컴포넌트",
+      "웹디자인"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://react-wrap-balancer.vercel.app",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "React"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm i react-wrap-balancer",
+        "note": "npm을 통한 라이브러리 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 패키지를 설치합니다.",
+      "균형을 맞추고 싶은 텍스트 요소를 Balancer 컴포넌트로 감쌉니다.",
+      "다양한 화면 크기에서 자연스럽게 정렬되는지 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4213,
+    "forks": 62,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "scroll-craft",
+    "name": "scroll-craft",
+    "github": "https://github.com/nateherkai/scroll-craft",
+    "description": "세련되고 몰입감 있는 스크롤 기반 웹사이트 구축을 위한 코딩 에이전트용 스킬 및 플러그인입니다.",
+    "longDescription": "Claude Code 및 기타 코딩 에이전트와 함께 동작하며, 인터랙션과 디자인 완성도를 동시에 충족하는 스크롤 애니메이션 및 웹 페이지 구현 워크플로우를 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "웹디자인",
+      "인터랙션",
+      "Claude-Code",
+      "프론트엔드"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/nateherkai/scroll-craft",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Claude Code 또는 호환 코딩 에이전트"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "클론 및 설치",
+        "command": "git clone https://github.com/nateherkai/scroll-craft.git",
+        "note": "저장소 클론을 통한 스킬 로드"
+      }
+    ],
+    "usageSteps": [
+      "코딩 에이전트 환경에 scroll-craft 스킬 또는 플러그인을 설치합니다.",
+      "에이전트에게 스크롤 기반 웹사이트 제작 지시를 내립니다.",
+      "생성된 컴포넌트와 인터랙션 코드를 검증하고 적용합니다."
+    ],
+    "examplePrompt": "Use scroll-craft to build an immersive landing page with smooth scroll animations.",
+    "usageNote": "코딩 에이전트와 연동하여 사용하는 전용 디자인/개발 스킬입니다.",
+    "stars": 3429,
+    "forks": 513,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "typeit",
+    "name": "TypeIt",
+    "github": "https://github.com/alexmacarthur/typeit",
+    "description": "다양한 타이핑 애니메이션과 텍스트 효과를 구현할 수 있는 범용 자바스크립트 라이브러리입니다.",
+    "longDescription": "웹 페이지 내에서 글자가 타이핑되는 듯한 효과를 쉽고 세밀하게 제어할 수 있는 가볍고 유연한 자바스크립트 유틸리티입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "애니메이션",
+      "자바스크립트",
+      "타이포그래피",
+      "텍스트효과",
+      "라이브러리"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://typeitjs.com",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "JavaScript 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install typeit",
+        "note": "패키지 매니저를 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 TypeIt 패키지를 설치하거나 CDN을 불러옵니다.",
+      "타이핑 효과를 적용할 HTML 요소를 선택합니다.",
+      "new TypeIt() 인스턴스를 생성하고 옵션을 설정하여 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3181,
+    "forks": 199,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "yamlresume",
+    "name": "YAMLResume",
+    "github": "https://github.com/yamlresume/yamlresume",
+    "description": "YAML 기반의 코드로 이력서를 작성하고 다양한 포맷으로 빌드할 수 있는 도구입니다.",
+    "longDescription": "PPResume에서 제공하는 이력서 작성 도구로, YAML 형식으로 이력서를 작성한 뒤 웹페이지나 PDF 등 다양한 형식으로 깔끔하게 변환 및 배포할 수 있습니다.",
+    "category": "문서",
+    "tags": [
+      "이력서",
+      "YAML",
+      "CV",
+      "문서작성",
+      "CLI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://yamlresume.dev",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Node.js 또는 Bun"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치 (macOS)",
+        "command": "brew install yamlresume",
+        "note": "Homebrew를 이용한 전역 설치"
+      }
+    ],
+    "usageSteps": [
+      "CLI 도구를 설치합니다.",
+      "샘플 템플릿을 참고하여 YAML 형식의 이력서 파일을 작성합니다.",
+      "yamlresume 명령어를 통해 이력서를 빌드하거나 검증합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1543,
+    "forks": 76,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "tech-doc-style-chinese",
+    "name": "Tech-Doc-Style-Chinese",
+    "github": "https://github.com/Fenng/Tech-Doc-Style-Chinese",
+    "description": "중국어 기술 문서, 제품 및 인터페이스 문장의 가독성과 정확성을 높여주는 AI 에이전트용 작문 스킬입니다.",
+    "longDescription": "지나치게 홍보성 짙거나 모호한 표현을 배제하고, 명확하고 간결한 중국어 기술 문서 작성을 지원하는 재사용 가능한 작문 가이드 및 에이전트 스킬입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "작문가이드",
+      "기술문서",
+      "AI에이전트",
+      "중국어",
+      "업무자동화"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Fenng/Tech-Doc-Style-Chinese",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Claude Code 또는 호환 에이전트 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Skill 저장소 클론",
+        "command": "git clone https://github.com/Fenng/tech-doc-style-chinese.git",
+        "note": "에이전트 스킬 디렉토리에 클론"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 에이전트 스킬 경로에 설치합니다.",
+      "에이전트에게 문서 윤문 및 교정 작업을 요청합니다.",
+      "결과물을 검토하고 기술 문서에 반영합니다."
+    ],
+    "examplePrompt": "Use $tech-doc-style-chinese to rewrite this Chinese technical copy.",
+    "usageNote": "중국어 기술 문서 작성 및 교정을 위한 에이전트 프롬프트 워크플로우입니다.",
+    "stars": 1504,
+    "forks": 84,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "rebass",
+    "name": "Rebass",
+    "github": "https://github.com/rebassjs/rebass",
+    "description": "Styled System 기반의 React 원시 UI 컴포넌트 라이브러리",
+    "longDescription": "최소한의 코드로 일관된 UI 시스템을 구축할 수 있도록 돕는 React 컴포넌트 라이브러리입니다. 스타일 시스템 프롭을 활용하여 반응형 디자인과 테마 설정을 손쉽게 적용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "React",
+      "UI",
+      "디자인 시스템",
+      "CSS-in-JS"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://rebassjs.org",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM 설치",
+        "command": "npm i rebass",
+        "note": "프로젝트 디렉토리에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 프로젝트에 설치합니다.",
+      "필요한 UI 컴포넌트를 import 합니다.",
+      "JSX 내에서 Box, Heading, Button 등의 컴포넌트를 조합하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7895,
+    "forks": 627,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "styled-system",
+    "name": "Styled System",
+    "github": "https://github.com/styled-system/styled-system",
+    "description": "React 애플리케이션을 위한 반응형 테마 기반 스타일 프롭 유틸리티",
+    "longDescription": "디자인 시스템 구축을 가속화하기 위해 CSS-in-JS 라이브러리와 연동되는 스타일 프롭을 제공합니다. 반응형 스타일과 디자인 토큰을 손쉽게 컴포넌트에 주입할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "React",
+      "CSS-in-JS",
+      "디자인 시스템",
+      "스타일"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://styled-system.com",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Node.js",
+      "React"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 Styled System 및 관련 CSS-in-JS 라이브러리를 설치합니다.",
+      "테마 객체를 정의하고 제공합니다.",
+      "컴포넌트 스타일에 width, fontSize 등의 프롭을 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7860,
+    "forks": 492,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "beautiful-web-type",
+    "name": "Beautiful Web Type",
+    "github": "https://github.com/ubuwaits/beautiful-web-type",
+    "description": "오픈소스 웹 폰트와 타이포그래피 가이드를 제공하는 선별 카탈로그",
+    "longDescription": "웹 디자인에 활용하기 좋은 고품질 오픈소스 폰트들을 모아 굵기, 글리프 세트, 자간 품질 등을 심층적으로 리뷰하고 추천 조합을 제공하는 가이드입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "폰트",
+      "타이포그래피",
+      "웹폰트",
+      "디자인 가이드"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.beautifulwebtype.com",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치 및 실행",
+        "command": "pnpm install && pnpm dev",
+        "note": "로컬 개발 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 pnpm install을 실행합니다.",
+      "pnpm dev 명령어로 로컬 개발 환경을 엽니다.",
+      "콘텐츠 및 폰트 메타데이터를 확인하고 가이드를 참고합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7340,
+    "forks": 272,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "typography-js",
+    "name": "Typography.js",
+    "github": "https://github.com/KyleAMathews/typography.js",
+    "description": "아름다운 웹 타이포그래피 디자인을 위한 강력한 CSS 생성 툴킷",
+    "longDescription": "웹사이트의 타이포그래피 디자인 의도를 일관된 API로 표현할 수 있게 해주는 도구입니다. 복잡한 수백 개의 스타일 선언을 조화롭게 정렬하여 가독성 높은 CSS를 생성합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CSS",
+      "JavaScript",
+      "타이포그래피",
+      "디자인"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://kyleamathews.github.io/typography.js/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm install typography",
+        "note": "프로젝트에 타이포그래피 툴킷을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm을 통해 라이브러리를 설치합니다.",
+      "설정 파일을 생성하고 원하는 타이포그래피 테마를 구성합니다.",
+      "생성된 스타일을 프로젝트 빌드 과정에 포함시킵니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3855,
+    "forks": 179,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "react-native-typography",
+    "name": "React Native Typography",
+    "github": "https://github.com/hectahertz/react-native-typography",
+    "description": "React Native에서 네이티브 스타일의 타이포그래피를 구현하는 라이브러리",
+    "longDescription": "iOS와 Android 환경에서 일관되고 픽셀 단위로 정교한 텍스트 스타일을 쉽게 적용할 수 있도록 기본값과 헬퍼를 제공하는 React Native 유틸리티입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "React Native",
+      "모바일",
+      "UI",
+      "타이포그래피"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/hectahertz/react-native-typography",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "React Native"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Yarn 설치",
+        "command": "yarn add react-native-typography",
+        "note": "프로젝트에 라이브러리를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 프로젝트에 설치합니다.",
+      "원하는 타이포그래피 컬렉션을 컴포넌트에 import 합니다.",
+      "텍스트 컴포넌트의 style 속성에 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3559,
+    "forks": 112,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "bonmot",
+    "name": "BonMot",
+    "github": "https://github.com/Rightpoint/BonMot",
+    "description": "Swift에서 속성 문자열(Attributed Strings)을 쉽고 우아하게 다루는 라이브러리",
+    "longDescription": "iOS 및 macOS 개발 시 복잡한 텍스트 포맷팅과 타이포그래피 스타일링을 선언적이고 직관적인 코드로 작성할 수 있게 돕는 Swift 유틸리티입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Swift",
+      "iOS",
+      "텍스트",
+      "타이포그래피"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Rightpoint/BonMot",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Swift 5.0",
+      "Xcode"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Swift Package Manager를 통해 패키지 URL을 추가합니다.",
+      "코드 상에서 스타일을 정의합니다.",
+      "문자열에 스타일을 적용하여 UI 요소에 표시합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3545,
+    "forks": 194,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "swiftrichstring",
+    "name": "SwiftRichString",
+    "github": "https://github.com/malcommac/SwiftRichString",
+    "description": "Apple 플랫폼을 위한 우아하고 선언적인 속성 문자열 구성 라이브러리",
+    "longDescription": "iOS, macOS, tvOS, watchOS 환경에서 텍스트 스타일을 재사용 가능한 객체로 관리하고, 태그 기반의 렌더링을 통해 서식 있는 문자열을 쉽게 다룰 수 있게 해줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Swift",
+      "iOS",
+      "macOS",
+      "텍스트 포맷팅"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/malcommac/SwiftRichString",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T23:03:58.145Z",
+    "requirements": [
+      "Swift",
+      "Xcode"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Swift 패키지 또는 CocoaPods를 통해 프로젝트에 추가합니다.",
+      "Style 객체를 정의하여 글꼴, 색상 등의 속성을 지정합니다.",
+      "문자열에 스타일을 적용하거나 XML 태그 형태로 렌더링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3142,
+    "forks": 211,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
     "id": "backstage",
     "name": "Backstage",
     "github": "https://github.com/backstage/backstage",
