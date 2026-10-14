@@ -1926,7 +1926,7 @@ function renderIssueFilters(){
   const root=document.getElementById('issueFilters');
   if(!root)return;
   if(reviewMode!=='issues'){root.hidden=true;root.innerHTML='';return}
-  const all=adminTools.flatMap(t=>toolIssueInfo(t).issues);
+  const all=getReviewIndex().issues.flatMap(x=>x.issue.issues);
   const counts={};
   all.forEach(v=>counts[v]=(counts[v]||0)+1);
   const order=['수정 필요','수동 확인 필요','삭제 권장','중복 의심','저장소 없음','접근 불가','점검 오류','Archived','Disabled','라이선스 불명확','1년 이상 미활동','품질 점수 낮음'];
@@ -1996,28 +1996,49 @@ function cachedQualityReview(tool){
  if(!value){value=qualityReview(tool);reviewScoreMemo.set(tool,value)}
  return value;
 }
+let reviewIndexCache=null;
+function getReviewIndex(){
+ const approvedSignature=reviewApproved.join('|');
+ if(reviewIndexCache&&reviewIndexCache.tools===adminTools&&reviewIndexCache.approvedSignature===approvedSignature&&reviewIndexCache.state===reviewState)return reviewIndexCache;
+ const approvedSet=new Set(reviewApproved.map(String));
+ const problems=[],approved=[],issues=[],soon=[],due=[],recent=[];
+ let totalIssues=0;
+ for(const tool of adminTools){
+  const id=String(tool.id),review=cachedQualityReview(tool),entry={tool,review};
+  if(review.score<70&&!approvedSet.has(id))problems.push(entry);
+  if(approvedSet.has(id))approved.push(entry);
+  const issue=toolIssueInfo(tool);
+  if(issue.issues.length){totalIssues++;issues.push({...entry,issue})}
+  const recheck=recheckInfo(tool);
+  if(recheck.status==='soon')soon.push({...entry,recheck});
+  if(recheck.status==='due')due.push({...entry,recheck});
+ }
+ problems.sort((a,b)=>a.review.score-b.review.score);
+ issues.sort((a,b)=>{
+  const critical=['삭제 권장','중복 의심','저장소 없음','Archived','점검 오류'];
+  return Number(b.issue.issues.some(v=>critical.includes(v)))-Number(a.issue.issues.some(v=>critical.includes(v)))||a.review.score-b.review.score;
+ });
+ soon.sort((a,b)=>b.recheck.days-a.recheck.days);
+ due.sort((a,b)=>b.recheck.days-a.recheck.days);
+ recent.push(...recentTools20().map(tool=>({tool,review:cachedQualityReview(tool)})));
+ reviewIndexCache={tools:adminTools,approvedSignature,state:reviewState,problems,approved,issues,soon,due,recent,totalIssues};
+ return reviewIndexCache;
+}
 function renderReview(){
-  const problems=adminTools.map(t=>({tool:t,review:cachedQualityReview(t)})).filter(x=>x.review.score<70&&!reviewApproved.includes(String(x.tool.id))).sort((a,b)=>a.review.score-b.review.score);
-  const recent=recentTools20().map(t=>({tool:t,review:cachedQualityReview(t)}));
-  const approved=adminTools.filter(t=>reviewApproved.includes(String(t.id))).map(t=>({tool:t,review:cachedQualityReview(t)}));
-  const issues=issueRows();
-  const recheckSoon=recheckRows('soon');
-  const recheckDue=recheckRows('due');
-  const allIssueCount=adminTools.filter(t=>toolIssueInfo(t).issues.length).length;
-  document.getElementById('reviewCount').textContent=String(problems.length);
-  document.getElementById('recentCount').textContent=String(recent.length);
-  document.getElementById('approvedCount').textContent=String(approved.length);
-  document.getElementById('issueCount').textContent=String(allIssueCount);
-  document.getElementById('recheckSoonCount').textContent=String(recheckSoon.length);
-  document.getElementById('recheckDueCount').textContent=String(recheckDue.length);
-  document.getElementById('reviewProblems').classList.toggle('active',reviewMode==='problems');
-  document.getElementById('reviewIssues').classList.toggle('active',reviewMode==='issues');
-  document.getElementById('reviewRecheckSoon').classList.toggle('active',reviewMode==='recheckSoon');
-  document.getElementById('reviewRecheckDue').classList.toggle('active',reviewMode==='recheckDue');
-  document.getElementById('reviewRecent').classList.toggle('active',reviewMode==='recent');
-  document.getElementById('reviewApproved').classList.toggle('active',reviewMode==='approved');
-  renderIssueFilters();
-  const rows=reviewMode==='issues'?issues:(reviewMode==='recheckSoon'?recheckSoon:(reviewMode==='recheckDue'?recheckDue:(reviewMode==='recent'?recent:(reviewMode==='approved'?approved:problems))));
+ const index=getReviewIndex();
+ const rows=reviewMode==='issues'?index.issues.filter(x=>issueFilter==='전체'||x.issue.issues.includes(issueFilter)):
+  reviewMode==='recheckSoon'?index.soon:reviewMode==='recheckDue'?index.due:
+  reviewMode==='recent'?index.recent:reviewMode==='approved'?index.approved:index.problems;
+ document.getElementById('reviewCount').textContent=String(index.problems.length);
+ document.getElementById('recentCount').textContent=String(index.recent.length);
+ document.getElementById('approvedCount').textContent=String(index.approved.length);
+ document.getElementById('issueCount').textContent=String(index.totalIssues);
+ document.getElementById('recheckSoonCount').textContent=String(index.soon.length);
+ document.getElementById('recheckDueCount').textContent=String(index.due.length);
+ for(const [id,mode] of [['reviewProblems','problems'],['reviewIssues','issues'],['reviewRecheckSoon','recheckSoon'],['reviewRecheckDue','recheckDue'],['reviewRecent','recent'],['reviewApproved','approved']]){
+  document.getElementById(id).classList.toggle('active',reviewMode===mode);
+ }
+ renderIssueFilters();
   currentReviewRows=rows;
   renderBulkBar();
   const root=document.getElementById('reviewList');
@@ -2128,12 +2149,12 @@ function renderReview(){
     }).adminRemoveTool(token,id);
   }));
 }
-document.getElementById('reviewProblems').addEventListener('click',()=>{reviewMode='problems';renderReview()});
-document.getElementById('reviewIssues').addEventListener('click',()=>{reviewMode='issues';issueFilter='전체';renderReview()});
-document.getElementById('reviewRecheckSoon').addEventListener('click',()=>{reviewMode='recheckSoon';renderReview()});
-document.getElementById('reviewRecheckDue').addEventListener('click',()=>{reviewMode='recheckDue';renderReview()});
-document.getElementById('reviewRecent').addEventListener('click',()=>{reviewMode='recent';renderReview()});
-document.getElementById('reviewApproved').addEventListener('click',()=>{reviewMode='approved';renderReview()});
+document.getElementById('reviewProblems').addEventListener('click',()=>{reviewMode='problems';reviewVisibleLimit=20;renderReview()});
+document.getElementById('reviewIssues').addEventListener('click',()=>{reviewMode='issues';issueFilter='전체';reviewVisibleLimit=20;renderReview()});
+document.getElementById('reviewRecheckSoon').addEventListener('click',()=>{reviewMode='recheckSoon';reviewVisibleLimit=20;renderReview()});
+document.getElementById('reviewRecheckDue').addEventListener('click',()=>{reviewMode='recheckDue';reviewVisibleLimit=20;renderReview()});
+document.getElementById('reviewRecent').addEventListener('click',()=>{reviewMode='recent';reviewVisibleLimit=20;renderReview()});
+document.getElementById('reviewApproved').addEventListener('click',()=>{reviewMode='approved';reviewVisibleLimit=20;renderReview()});
 
 const EDIT_CATEGORIES=['AI 에이전트','개발 도구','업무 자동화','지식·검색','디자인·시각화','문서','브라우저 자동화','AI 모델','AI 평가','교육·학습','공간정보','3D·CAD','영상·애니메이션'];
 const toolEditor=document.getElementById('toolEditor');

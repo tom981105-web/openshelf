@@ -1,0 +1,19 @@
+name: V50 review inbox responsiveness regression
+on:
+  pull_request:
+    paths:
+      - 'automation/admin-webapp.gs'
+      - 'automation/OpenShelf_Admin_v6_4_Code.gs'
+      - 'scripts/v50-review-fast-tabs.test.cjs'
+      - '.github/workflows/v50-review-fast-tabs.yml'
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/v50-review-fast-tabs.test.cjs
