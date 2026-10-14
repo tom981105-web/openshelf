@@ -1,0 +1,19 @@
+name: V54 document evidence regression
+on:
+  pull_request:
+    paths:
+      - 'scripts/document-evidence-v54.mjs'
+      - 'scripts/document-evidence-v54.test.mjs'
+      - '.github/workflows/v54-document-evidence.yml'
+      - '.github/workflows/discover-tools.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - run: node scripts/document-evidence-v54.test.mjs
