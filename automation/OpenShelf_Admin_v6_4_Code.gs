@@ -2021,7 +2021,7 @@ function getReviewIndex(){
 }
 function renderAutoReview(data){
  const items=Array.isArray(data&&data.items)?data.items:[];
- const approved=items.filter(x=>x.status==='auto_approved'||x.status==='auto_approved_after_recheck').length;
+ const approved=items.filter(x=>x.status==='auto_approved'||x.status==='auto_approved_after_recheck'||x.status==='auto_approved_after_license_check'||x.status==='auto_approved_after_document_review').length;
  const held=items.filter(x=>x.status==='pending_review').length;
  const retried=items.filter(x=>Number(x.recheckAttempts||0)>0).length;
  document.getElementById('autoApprovedCount').textContent=String(approved);
@@ -2029,7 +2029,7 @@ function renderAutoReview(data){
  document.getElementById('autoRetriedCount').textContent=String(retried);
  document.getElementById('autoReviewUpdated').textContent='최근 기록: '+(data&&data.updatedAt?fmt(data.updatedAt):'아직 기록 없음')+' · 최근 최대 100건 표시';
  const root=document.getElementById('autoReviewSummary');
- root.innerHTML=items.length?items.slice(0,30).map(x=>'<article class="review-card"><div class="review-head"><strong>'+esc(x.name||x.id)+'</strong><span>'+esc(x.status==='pending_review'?'자동 보류':x.status==='auto_approved_after_recheck'?'재검수 후 승인':'자동 승인')+'</span></div><div class="review-meta">'+esc((x.reasons||[]).join(' · ')||'객관적 검증 기준 통과')+'</div></article>').join(''):'<p class="section-note">아직 기록된 자동 검수 결과가 없습니다. 다음 자동수집 후 표시됩니다.</p>';
+ root.innerHTML=items.length?items.slice(0,30).map(x=>'<article class="review-card"><div class="review-head"><strong>'+esc(x.name||x.id)+'</strong><span>'+esc(x.status==='pending_review'?'자동 보류':x.status==='auto_approved_after_recheck'?'재검수 후 승인':x.status==='auto_approved_after_license_check'?'라이선스 검증 후 승인':x.status==='auto_approved_after_document_review'?'문서 검증 후 승인':x.status==='auto_approved'?'자동 승인':'확인 필요')+'</span></div><div class="review-meta">'+esc((x.reasons||[]).join(' · ')||'객관적 검증 기준 통과')+'</div></article>').join(''):'<p class="section-note">아직 기록된 자동 검수 결과가 없습니다. 다음 자동수집 후 표시됩니다.</p>';
 }
 function renderReview(){
  const index=getReviewIndex();
