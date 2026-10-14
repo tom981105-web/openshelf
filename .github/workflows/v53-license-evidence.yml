@@ -1,0 +1,19 @@
+name: V53 license evidence regression
+on:
+  pull_request:
+    paths:
+      - 'scripts/license-evidence-v53.mjs'
+      - 'scripts/license-evidence-v53.test.mjs'
+      - '.github/workflows/v53-license-evidence.yml'
+      - '.github/workflows/discover-tools.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/license-evidence-v53.test.mjs
