@@ -1,0 +1,21 @@
+name: V51 autonomous review regression
+on:
+  pull_request:
+    paths:
+      - 'scripts/auto-review-v51.mjs'
+      - 'scripts/auto-review-v51.test.mjs'
+      - '.github/workflows/discover-tools.yml'
+      - '.github/workflows/v51-auto-review.yml'
+      - 'data/auto-review-v51.json'
+permissions:
+  contents: read
+jobs:
+  review-checks:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check scripts/auto-review-v51.mjs
+      - run: node scripts/auto-review-v51.test.mjs
