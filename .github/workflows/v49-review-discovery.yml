@@ -1,0 +1,22 @@
+name: V49 discovery and review UI regression
+on:
+  pull_request:
+    paths:
+      - 'scripts/discover-tools.mjs'
+      - 'automation/admin-webapp.gs'
+      - 'automation/OpenShelf_Admin_v6_4_Code.gs'
+      - 'scripts/v49-discovery-review.test.cjs'
+      - '.github/workflows/v49-review-discovery.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check scripts/discover-tools.mjs
+      - run: node scripts/v49-discovery-review.test.cjs
