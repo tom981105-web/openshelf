@@ -109,8 +109,8 @@ const deniedRepos = new Set(denylist.map(x => normalizeRepoUrl(String(x).startsW
 const existingIds = new Set(tools.map(t => String(t.id || '').toLowerCase()));
 const existingNames = new Set(tools.map(t => String(t.name || '').trim().toLowerCase()));
 const existingCanonicalNames = new Set(tools.map(t => canonicalName(t.name)).filter(Boolean));
-const categories = [...validCategories];
 const validCategories = new Set(JSON.parse(await fs.readFile('data/tool-categories.json','utf8')).categories);
+const categories = [...validCategories];
 
 async function ghJson(url) {
   const res = await fetch(url, { headers: githubHeaders });
