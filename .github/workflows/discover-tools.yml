@@ -37,6 +37,11 @@ jobs:
       - name: Auto review newly discovered repositories
         run: node scripts/auto-review-v51.mjs
 
+      - name: Verify held licenses against official GitHub evidence
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/license-evidence-v53.mjs
+
       - name: Recheck up to five held entries with Gemini
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
