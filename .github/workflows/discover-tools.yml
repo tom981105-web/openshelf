@@ -31,6 +31,12 @@ jobs:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
         run: node scripts/discover-tools.mjs
 
+      - name: Test V51 autonomous review decisions
+        run: node scripts/auto-review-v51.test.mjs
+
+      - name: Auto review newly discovered repositories
+        run: node scripts/auto-review-v51.mjs
+
       - name: Validate discovery output before commit
         run: |
           node scripts/validate-tools.test.mjs
@@ -43,13 +49,13 @@ jobs:
 
       - name: Commit new tools
         run: |
-          if git diff --quiet -- data/tools.json data/discovery-state.json data/discovery-log.json data/playground-candidates.json; then
+          if git diff --quiet -- data/tools.json data/discovery-state.json data/discovery-log.json data/playground-candidates.json data/auto-review-v51.json; then
             echo "No discovery changes."
             exit 0
           fi
           git config user.name "openshelf-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/tools.json data/discovery-state.json data/discovery-log.json data/playground-candidates.json
+          git add data/tools.json data/discovery-state.json data/discovery-log.json data/playground-candidates.json data/auto-review-v51.json
           git commit -m "chore: discover OpenShelf tools"
           git pull --rebase
           git push
