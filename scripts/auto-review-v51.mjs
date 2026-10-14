@@ -28,6 +28,7 @@ export async function run({root='data',write=true}={}){
  let old={version:1,items:[]};
  try{old=JSON.parse(await fs.readFile(prefix+'auto-review-v51.json','utf8'))}catch{}
  if(!records.length)return {approved:0,held:0,note:'No newly discovered tools'};
+ if(state.lastAutoReviewRun===latest.id)return {approved:0,held:0,note:'This discovery hour has already been reviewed'};
  const ids=new Set(records.map(x=>String(x.id)));
  const fresh=tools.filter(x=>ids.has(String(x.id)));
  if(fresh.length!==records.length)throw Error('Discovery results did not match newly-added tool rows; review aborted');
@@ -47,6 +48,7 @@ export async function run({root='data',write=true}={}){
   latest.autoReview={approved:results.length-hold.size,held:hold.size,processed:results.length};
   await fs.writeFile(prefix+'discovery-log.json',JSON.stringify(log,null,2)+'\n');
   state.lastAutoReview=latest.autoReview;
+  state.lastAutoReviewRun=latest.id;
   await fs.writeFile(prefix+'discovery-state.json',JSON.stringify(state,null,2)+'\n');
  }
  return {approved:results.length-hold.size,held:hold.size,results};
