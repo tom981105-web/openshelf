@@ -1,0 +1,33 @@
+name: V56 homepage and Admin integration
+on:
+  pull_request:
+    paths:
+      - 'automation/**'
+      - 'index.html'
+      - 'app.js'
+      - 'scripts/v56-integrated-browser.mjs'
+      - 'scripts/v56-integrated-contract.test.mjs'
+      - '.github/workflows/v56-integration.yml'
+permissions:
+  contents: read
+jobs:
+  integration:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - run: node scripts/v56-integrated-contract.test.mjs
+      - run: |
+          npm install --no-save --no-package-lock playwright@1.56.1
+          npx playwright install --with-deps chromium
+      - run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/openshelf-v56.log 2>&1 &
+          for i in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:8765/index.html -o /dev/null; then exit 0; fi
+            sleep 1
+          done
+          exit 1
+      - run: node scripts/v56-integrated-browser.mjs
