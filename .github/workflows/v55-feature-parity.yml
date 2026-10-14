@@ -1,0 +1,23 @@
+name: V55 site and Admin feature parity
+on:
+  pull_request:
+    paths:
+      - 'data/tool-categories.json'
+      - 'scripts/discover-tools.mjs'
+      - 'app.js'
+      - 'automation/**'
+      - 'scripts/v55-feature-parity.test.mjs'
+      - '.github/workflows/v55-feature-parity.yml'
+permissions:
+  contents: read
+jobs:
+  parity:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - run: node --check scripts/discover-tools.mjs
+      - run: node --check app.js
+      - run: node scripts/v55-feature-parity.test.mjs
