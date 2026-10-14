@@ -1,0 +1,20 @@
+name: V57 held review regression
+on:
+  pull_request:
+    paths:
+      - 'scripts/recheck-held-v57.mjs'
+      - 'scripts/recheck-held-v57.test.mjs'
+      - 'automation/**'
+      - '.github/workflows/v57-held-review.yml'
+      - '.github/workflows/v57-held-review-regression.yml'
+permissions:
+  contents: read
+jobs:
+  regression:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - run: node scripts/recheck-held-v57.test.mjs
