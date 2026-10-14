@@ -25,18 +25,19 @@ export async function run({root='data',write=true}={}){
   fs.readFile(prefix+'discovery-denylist.json','utf8').then(JSON.parse)
  ]);
  const latest=log[0],records=Array.isArray(latest?.addedTools)?latest.addedTools:[];
- let old={version:1,items:{}};
+ let old={version:1,items:[]};
  try{old=JSON.parse(await fs.readFile(prefix+'auto-review-v51.json','utf8'))}catch{}
  if(!records.length)return {approved:0,held:0,note:'No newly discovered tools'};
  const ids=new Set(records.map(x=>String(x.id)));
  const fresh=tools.filter(x=>ids.has(String(x.id)));
+ if(fresh.length!==records.length)throw Error('Discovery results did not match newly-added tool rows; review aborted');
  const existingRepos=new Set(tools.filter(x=>!ids.has(String(x.id))).map(repoKey).filter(Boolean));
  const deniedRepos=new Set(denied.map(x=>{try{return new URL(String(x).startsWith('http')?x:'https://github.com/'+x).pathname.toLowerCase().replace(/^\/+|\/+$/g,'')}catch{return ''}}));
  const hold=new Set(),results=[];
  for(const tool of fresh){
   const check=decision(tool,{existingRepos,deniedRepos});
   if(check.status!=='auto_approved')hold.add(String(tool.id));
-  results.push({id:String(tool.id),github:tool.github,status:check.status,reasons:check.reasons,checkedAt:new Date().toISOString(),sourceRun:latest.id});
+  results.push({id:String(tool.id),name:tool.name,github:tool.github,license:tool.license,status:check.status,reasons:check.reasons,checkedAt:new Date().toISOString(),sourceRun:latest.id,tool:check.status==='pending_review'?tool:undefined});
  }
  if(write){
   const previous=Array.isArray(old.items)?old.items:[];
