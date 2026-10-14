@@ -1,4 +1,4 @@
-import assert from 'node:assert/strict';import fs from 'node:fs';
+const assert=require('node:assert/strict');const fs=require('node:fs');
 const discover=fs.readFileSync('scripts/discover-tools.mjs','utf8');
 assert.match(discover,/const rotation = Array\.from/);assert.match(discover,/Date\.now\(\) \/ 3600000/);assert.match(discover,/Math\.max\(20, Math\.floor\(MINIMUM_STARS\/4\)\)/);
 assert.match(discover,/sort=stars&order=desc/);
