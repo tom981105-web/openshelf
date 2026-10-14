@@ -1,0 +1,40 @@
+name: V57 held tools evidence refresh
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 3 * * *'
+permissions:
+  contents: write
+concurrency:
+  group: openshelf-discovery
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+      - run: node scripts/recheck-held-v57.test.mjs
+      - name: Refresh held entries even if discovery finds no new tools
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: node scripts/recheck-held-v57.mjs
+      - name: Guard existing catalog and commit refreshed evidence
+        run: |
+          node scripts/validate-tools.mjs data/tools.json
+          node scripts/guard-discovery.mjs
+          if git diff --quiet -- data/auto-review-v51.json data/tools.json; then
+            echo "No evidence changes"
+            exit 0
+          fi
+          git config user.name "openshelf-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/auto-review-v51.json data/tools.json
+          git commit -m "chore: refresh held tool evidence"
+          git pull --rebase
+          git push

@@ -248,7 +248,7 @@ function adminGetDashboard(token) {
       reviewApproved: Array.isArray(reviewApproved) ? reviewApproved : [],
       reviewState: reviewState,
       geminiReviews: geminiReviews,
-      autoReview: {updatedAt:autoReview.updatedAt||null,items:Array.isArray(autoReview.items)?autoReview.items.slice(0,100).map(function(x){return {id:String(x.id||''),name:String(x.name||''),status:String(x.status||''),checkedAt:x.checkedAt||null,recheckedAt:x.recheckedAt||null,reasons:Array.isArray(x.recheckReasons)?x.recheckReasons:(Array.isArray(x.reasons)?x.reasons:[]),recheckAttempts:Number(x.recheckAttempts||0)};}):[]},
+      autoReview: {updatedAt:autoReview.updatedAt||null,items:Array.isArray(autoReview.items)?autoReview.items.slice(0,100).map(function(x){return {id:String(x.id||''),name:String(x.name||''),status:String(x.status||''),checkedAt:x.checkedAt||null,recheckedAt:x.recheckedAt||null,lastVerifiedAt:x.lastVerifiedAt||x.documentEvidenceCheckedAt||x.licenseEvidenceCheckedAt||x.recheckedAt||x.checkedAt||null,reasons:Array.isArray(x.recheckReasons)?x.recheckReasons:(Array.isArray(x.reasons)?x.reasons:[]),recheckAttempts:Number(x.recheckAttempts||0),licenseEvidence:x.licenseEvidence&&x.licenseEvidence.license?String(x.licenseEvidence.license):null,freeClaim:x.documentEvidence&&x.documentEvidence.freeClaim?String(x.documentEvidence.freeClaim):'unknown'};}):[]},
       config: config,
       healthState: healthState,
       automationEnabled: automationEnabled
@@ -1938,7 +1938,7 @@ function renderAutoReview(data){
  document.getElementById('autoRetriedCount').textContent=String(retried);
  document.getElementById('autoReviewUpdated').textContent='최근 기록: '+(data&&data.updatedAt?fmt(data.updatedAt):'아직 기록 없음')+' · 최근 최대 100건 표시';
  const root=document.getElementById('autoReviewSummary');
- root.innerHTML=items.length?items.slice(0,30).map(x=>'<article class="review-card"><div class="review-head"><strong>'+esc(x.name||x.id)+'</strong><span>'+esc(x.status==='pending_review'?'자동 보류':x.status==='auto_approved_after_recheck'?'재검수 후 승인':x.status==='auto_approved_after_license_check'?'라이선스 검증 후 승인':x.status==='auto_approved_after_document_review'?'문서 검증 후 승인':x.status==='auto_approved'?'자동 승인':'확인 필요')+'</span></div><div class="review-meta">'+esc((x.reasons||[]).join(' · ')||'객관적 검증 기준 통과')+'</div></article>').join(''):'<p class="section-note">아직 기록된 자동 검수 결과가 없습니다. 다음 자동수집 후 표시됩니다.</p>';
+ root.innerHTML=items.length?items.slice(0,30).map(x=>'<article class="review-card"><div class="review-head"><strong>'+esc(x.name||x.id)+'</strong><span>'+esc(x.status==='pending_review'?'자동 보류':x.status==='auto_approved_after_recheck'?'재검수 후 승인':x.status==='auto_approved_after_license_check'?'라이선스 검증 후 승인':x.status==='auto_approved_after_document_review'?'문서 검증 후 승인':x.status==='auto_approved'?'자동 승인':'확인 필요')+'</span></div><div class="review-meta">'+esc((x.reasons||[]).join(' · ')||'객관적 검증 기준 통과')+'</div><div class="review-meta">마지막 검증: '+(x.lastVerifiedAt?fmt(x.lastVerifiedAt):'아직 추가 검증 전')+' · 확인된 라이선스: '+esc(x.licenseEvidence||'없음')+' · 무료 이용 문서: '+esc(x.freeClaim==='claimed_free'?'무료 주장 발견 (미검증)':x.freeClaim==='mixed_or_paid'?'유료·무료 혼합 가능성':'미확인')+'</div></article>').join(''):'<p class="section-note">아직 기록된 자동 검수 결과가 없습니다. 다음 자동수집 후 표시됩니다.</p>';
 }
 function renderReview(){
  const index=getReviewIndex();
