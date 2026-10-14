@@ -1,0 +1,19 @@
+name: V52 admin auto-review dashboard checks
+on:
+  pull_request:
+    paths:
+      - 'automation/admin-webapp.gs'
+      - 'automation/OpenShelf_Admin_v6_4_Code.gs'
+      - 'scripts/v52-admin-review.test.cjs'
+      - '.github/workflows/v52-admin-review.yml'
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/v52-admin-review.test.cjs
