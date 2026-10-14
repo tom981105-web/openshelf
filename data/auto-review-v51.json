@@ -1,7 +1,791 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-14T20:07:10.740Z",
+  "updatedAt": "2026-10-14T21:07:03.743Z",
   "items": [
+    {
+      "id": "tdengine",
+      "name": "TDengine",
+      "github": "https://github.com/taosdata/TDengine",
+      "license": "AGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "timescaledb",
+      "name": "TimescaleDB",
+      "github": "https://github.com/timescale/timescaledb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "tool": {
+        "id": "timescaledb",
+        "name": "TimescaleDB",
+        "github": "https://github.com/timescale/timescaledb",
+        "description": "PostgreSQL 기반의 고성능 실시간 시계열 분석 데이터베이스입니다.",
+        "longDescription": "관계형 데이터베이스의 친숙함과 안정성을 유지하면서도 시계열 및 이벤트 데이터를 고속으로 처리할 수 있도록 설계된 Postgres 확장 기능입니다. 로컬 개발 환경에서 빠르게 설치하여 사용할 수 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "PostgreSQL",
+          "시계열데이터베이스",
+          "SQL"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.tigerdata.com/",
+        "featured": 9,
+        "added": "2026-10-14",
+        "addedAt": "2026-10-14T21:04:01.109Z",
+        "requirements": [
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "로컬 빠른 시작",
+            "command": "curl -sL https://tsdb.co/start-local | sh",
+            "note": "로컬 개발 및 테스트를 위한 TimescaleDB를 다운로드하고 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 실행하여 PostgreSQL 인스턴스를 시작합니다.",
+          "포트 6543을 통해 데이터베이스에 연결합니다.",
+          "SQL을 사용하여 시계열 데이터를 적재하고 쿼리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "제공되는 스크립트는 로컬 개발 및 테스트용이며 프로덕션 환경에는 권장되지 않습니다.",
+        "stars": 23698,
+        "forks": 1170,
+        "starsUpdatedAt": "2026-10-14"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:34.099Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:36.492Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-14T21:06:44.715Z"
+    },
+    {
+      "id": "thingsboard",
+      "name": "ThingsBoard",
+      "github": "https://github.com/thingsboard/thingsboard",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "tool": {
+        "id": "thingsboard",
+        "name": "ThingsBoard",
+        "github": "https://github.com/thingsboard/thingsboard",
+        "description": "디바이스 관리와 데이터 시각화를 지원하는 오픈소스 IoT 플랫폼입니다.",
+        "longDescription": "수백만 개의 IoT 기기를 연결하고 원격으로 관리할 수 있는 오픈소스 사물인터넷 플랫폼입니다. 대시보드 시각화와 규칙 엔진을 통해 실시간 데이터 처리 및 알림을 구현할 수 있습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "IoT",
+          "대시보드",
+          "디바이스관리"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://thingsboard.io",
+        "featured": 9,
+        "added": "2026-10-14",
+        "addedAt": "2026-10-14T21:04:01.109Z",
+        "requirements": [
+          "Java",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "온프레미스 환경 또는 클라우드에 ThingsBoard를 설치합니다.",
+          "관리자 계정으로 웹 대시보드에 로그인합니다.",
+          "디바이스를 등록하고 MQTT 등의 프로토콜을 통해 데이터를 수집합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프로덕션 환경에서는 데이터베이스 연동 및 리소스 할당을 고려해야 합니다.",
+        "stars": 22549,
+        "forks": 6513,
+        "starsUpdatedAt": "2026-10-14"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:34.372Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:36.830Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-14T21:06:49.652Z"
+    },
+    {
+      "id": "apisix",
+      "name": "Apache APISIX",
+      "github": "https://github.com/apache/apisix",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "emqx",
+      "name": "EMQX",
+      "github": "https://github.com/emqx/emqx",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "tool": {
+        "id": "emqx",
+        "name": "EMQX",
+        "github": "https://github.com/emqx/emqx",
+        "description": "AI, IoT 및 커넥티드 카를 위한 확장 가능하고 신뢰성 높은 MQTT 브로커입니다.",
+        "longDescription": "수백만 대의 동시 연결을 지원하는 고성능 MQTT 메시지 브로커로, 산업용 IoT 및 분산 환경에서 대규모 실시간 데이터 수집과 메시징을 처리합니다. 클러스터 환경에서 대규모 실시간 데이터 처리를 효율적으로 수행할 수 있습니다.",
+        "category": "네트워크",
+        "tags": [
+          "MQTT",
+          "IoT",
+          "브로커"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.emqx.com",
+        "featured": 9,
+        "added": "2026-10-14",
+        "addedAt": "2026-10-14T21:04:01.109Z",
+        "requirements": [
+          "Docker 또는 Erlang 런타임"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 사이트나 Docker를 통해 EMQX를 다운로드 및 설치합니다.",
+          "브로커를 시작하고 웹 대시보드에 접속합니다.",
+          "MQTT 클라이언트 기기를 연결하여 메시지 발행 및 구독을 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "대규모 클러스터 배포 시 네트워크 포트 및 메모리 설정을 최적화해야 합니다.",
+        "stars": 16798,
+        "forks": 2563,
+        "starsUpdatedAt": "2026-10-14"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:34.672Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:37.125Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-14T21:06:54.507Z"
+    },
+    {
+      "id": "zephyr",
+      "name": "Zephyr",
+      "github": "https://github.com/zephyrproject-rtos/zephyr",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "mongoose",
+      "name": "Mongoose",
+      "github": "https://github.com/cesanta/mongoose",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "tool": {
+        "id": "mongoose",
+        "name": "Mongoose",
+        "github": "https://github.com/cesanta/mongoose",
+        "description": "TCP/IP 네트워크 스택, MQTT, 웹소켓을 지원하는 경량 임베디드 웹 서버 라이브러리입니다.",
+        "longDescription": "단 두 개의 파일로 구성되어 어떤 마이크로컨트롤러나 C/C++ 프로젝트에도 쉽게 통합할 수 있는 임베디드 네트워크 라이브러리입니다. TCP/IP 네트워크 스택과 다양한 통신 프로토콜을 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "웹서버",
+          "임베디드",
+          "C"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://mongoose.ws",
+        "featured": 9,
+        "added": "2026-10-14",
+        "addedAt": "2026-10-14T21:04:01.109Z",
+        "requirements": [
+          "C 컴파일러"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "컴파일 예시",
+            "command": "cc main.c mongoose.c",
+            "note": "mongoose.c와 mongoose.h 파일을 프로젝트에 포함하여 컴파일합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 mongoose.c와 mongoose.h를 추가합니다.",
+          "이벤트 핸들러 함수를 작성하여 HTTP 또는 웹소켓 동작을 정의합니다.",
+          "서버를 초기화하고 네트워크 이벤트 루프를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "상업적 용도의 경우 라이선스 조건을 확인하세요.",
+        "stars": 13089,
+        "forks": 2947,
+        "starsUpdatedAt": "2026-10-14"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:34.853Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:37.407Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-14T21:06:57.979Z"
+    },
+    {
+      "id": "mosquitto",
+      "name": "Eclipse Mosquitto",
+      "github": "https://github.com/eclipse-mosquitto/mosquitto",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "tool": {
+        "id": "mosquitto",
+        "name": "Eclipse Mosquitto",
+        "github": "https://github.com/eclipse-mosquitto/mosquitto",
+        "description": "MQTT v5.0, v3.1.1, v3.1 프로토콜을 지원하는 오픈소스 MQTT 브로커입니다.",
+        "longDescription": "가볍고 효율적인 오픈소스 메시지 브로커로, 메시지 발행 및 구독을 위한 클라이언트 유틸리티와 관리 도구를 함께 제공합니다. 자원 제약이 있는 환경부터 대규모 서버까지 다양한 IoT 및 메시징 시스템에 활용됩니다.",
+        "category": "네트워크",
+        "tags": [
+          "MQTT",
+          "메시징",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://mosquitto.org",
+        "featured": 9,
+        "added": "2026-10-14",
+        "addedAt": "2026-10-14T21:04:01.109Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "브로커 실행",
+            "command": "mosquitto",
+            "note": "기본 설정으로 Mosquitto 브로커를 시작합니다."
+          }
+        ],
+        "usageSteps": [
+          "바이너리 패키지를 설치하거나 브로커를 실행합니다.",
+          "mosquitto_sub 유틸리티를 사용하여 토픽을 구독합니다.",
+          "mosquitto_pub 유틸리티를 사용하여 메시지를 발행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "운영 환경에서는 접근 제어 및 TLS 보안 설정을 구성하는 것이 좋습니다.",
+        "stars": 11266,
+        "forks": 2646,
+        "starsUpdatedAt": "2026-10-14"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:35.112Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:38.000Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-14T21:07:03.743Z"
+    },
+    {
+      "id": "microk8s",
+      "name": "MicroK8s",
+      "github": "https://github.com/canonical/microk8s",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "wasm-micro-runtime",
+      "name": "WAMR",
+      "github": "https://github.com/wasm-micro-runtime/wasm-micro-runtime",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "ruview",
+      "name": "RuView",
+      "github": "https://github.com/ruvnet/RuView",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "raylib",
+      "name": "raylib",
+      "github": "https://github.com/raysan5/raylib",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "tool": {
+        "id": "raylib",
+        "name": "raylib",
+        "github": "https://github.com/raysan5/raylib",
+        "description": "비디오 게임 프로그래밍과 그래픽 애플리케이션 프로토타이핑을 쉽고 간단하게 즐길 수 있는 C 언어 그래픽 라이브러리입니다.",
+        "longDescription": "복잡한 인터페이스 없이 순수하게 코딩에 집중할 수 있도록 설계된 경량 그래픽 라이브러리입니다. 임베디드 시스템, 교육, 게임 개발 등 다양한 플랫폼에서 OpenGL 기반의 2D 및 3D 그래픽을 쉽게 다룰 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "C",
+          "그래픽",
+          "게임개발",
+          "OpenGL",
+          "임베디드"
+        ],
+        "platforms": [
+          "Windows",
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "http://www.raylib.com",
+        "featured": 9,
+        "added": "2026-10-14",
+        "addedAt": "2026-10-14T21:04:01.109Z",
+        "requirements": [
+          "C 컴파일러 (GCC, Clang, MSVC 등)"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "패키지 관리자나 소스 코드를 통해 raylib을 설치합니다.",
+          "기본 윈도우 생성 및 그리기 루프가 포함된 C 코드를 작성합니다.",
+          "컴파일 후 실행하여 그래픽 출력을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 35184,
+        "forks": 3336,
+        "starsUpdatedAt": "2026-10-14"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:35.292Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:38.320Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "salt",
+      "name": "Salt",
+      "github": "https://github.com/saltstack/salt",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "johnny-five",
+      "name": "Johnny-Five",
+      "github": "https://github.com/rwaldron/johnny-five",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "tool": {
+        "id": "johnny-five",
+        "name": "Johnny-Five",
+        "github": "https://github.com/rwaldron/johnny-five",
+        "description": "Node.js 기반으로 아두이노 및 다양한 하드웨어를 제어할 수 있는 자바스크립트 로보틱스 및 IoT 프로그래밍 프레임워크입니다.",
+        "longDescription": "Firmata 프로토콜을 기반으로 하여 자바스크립트 언어로 센서, 모터, LED 등 다양한 하드웨어 부품을 손쉽게 조작할 수 있습니다. 다양한 마이크로컨트롤러와 단일 보드 컴퓨터를 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "JavaScript",
+          "Node.js",
+          "로보틱스",
+          "IoT",
+          "아두이노"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://johnny-five.io",
+        "featured": 9,
+        "added": "2026-10-14",
+        "addedAt": "2026-10-14T21:04:01.109Z",
+        "requirements": [
+          "Node.js",
+          "Firmata가 업로드된 아두이노 보드"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치",
+            "command": "npm install johnny-five",
+            "note": "프로젝트 디렉토리에서 라이브러리 설치"
+          }
+        ],
+        "usageSteps": [
+          "아두이노 보드에 StandardFirmata 펌웨어를 업로드합니다.",
+          "프로젝트에 johnny-five 모듈을 불러옵니다.",
+          "보드 객체를 생성하고 핀 제어 코드를 작성하여 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 13411,
+        "forks": 1725,
+        "starsUpdatedAt": "2026-10-14"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:35.545Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:38.816Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "rt-thread",
+      "name": "RT-Thread",
+      "github": "https://github.com/RT-Thread/rt-thread",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "esphome",
+      "name": "ESPHome",
+      "github": "https://github.com/esphome/esphome",
+      "license": "확인 필요",
+      "status": "auto_approved_after_document_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:35.737Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:39.104Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": "MIT",
+        "licenseSource": "LICENSE complete MIT provisions (text match)",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "platformio-core",
+      "name": "PlatformIO Core",
+      "github": "https://github.com/platformio/platformio-core",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "gobot",
+      "name": "Gobot",
+      "github": "https://github.com/hybridgroup/gobot",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06",
+      "tool": {
+        "id": "gobot",
+        "name": "Gobot",
+        "github": "https://github.com/hybridgroup/gobot",
+        "description": "로봇, 드론, 사물인터넷(IoT) 장치를 제어하기 위한 Go 언어 기반의 프로그래밍 프레임워크입니다.",
+        "longDescription": "다양한 하드웨어 장치와 통신 프로토콜을 Go 언어의 동시성 모델을 활용해 동시에 제어할 수 있습니다. 아두이노, 라즈베리 파이, 블루투스, MQTT 등 폭넓은 에코시스템을 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Go",
+          "로보틱스",
+          "드론",
+          "IoT",
+          "하드웨어"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://gobot.io",
+        "featured": 9,
+        "added": "2026-10-14",
+        "addedAt": "2026-10-14T21:04:01.109Z",
+        "requirements": [
+          "Go 1.x"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "소스 복제",
+            "command": "git clone https://github.com/hybridgroup/gobot.git",
+            "note": "저장소 클론 후 예제 확인"
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 Gobot 패키지를 가져옵니다.",
+          "대상 하드웨어 어댑터와 드라이버를 정의합니다.",
+          "이벤트 핸들러를 작성하고 Go 프로그램을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 9476,
+        "forks": 1061,
+        "starsUpdatedAt": "2026-10-14"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-14T21:06:35.938Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-14T21:06:40.651Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "oatpp",
+      "name": "Oat++",
+      "github": "https://github.com/oatpp/oatpp",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
+    {
+      "id": "wasm3",
+      "name": "Wasm3",
+      "github": "https://github.com/wasm3/wasm3",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-14T21:06:33.661Z",
+      "sourceRun": "2026-10-15T06"
+    },
     {
       "id": "markitdown",
       "name": "markitdown",

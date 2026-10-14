@@ -1,5 +1,538 @@
 [
   {
+    "id": "esphome",
+    "name": "ESPHome",
+    "github": "https://github.com/esphome/esphome",
+    "description": "간단하면서도 강력한 YAML 설정 파일로 ESP32 및 ESP8266 장치를 제어하고 스마트홈 시스템과 연동하는 시스템입니다.",
+    "longDescription": "복잡한 코딩 없이 설정 파일 작성만으로 센서, 스위치, 디스플레이 등 다양한 하드웨어를 구성할 수 있습니다. 홈 어시스턴트(Home Assistant)와 완벽하게 통합되어 원격 제어 및 자동화를 구현합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "C++",
+      "Python",
+      "YAML",
+      "ESP32",
+      "홈스마트"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://esphome.io/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "Python 3.x",
+      "ESP32 또는 ESP8266 보드"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install esphome",
+        "note": "파이썬 환경을 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "esphome 마법사를 통해 프로젝트 설정 파일을 생성합니다.",
+      "YAML 파일에 하드웨어 핀 및 센서 정보를 정의합니다.",
+      "펌웨어를 컴파일하여 대상 장치에 업로드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11892,
+    "forks": 5706,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "tdengine",
+    "name": "TDengine",
+    "github": "https://github.com/taosdata/TDengine",
+    "description": "산업용 IoT 및 시계열 데이터 분석을 위해 설계된 고성능 클라우드 네이티브 시계열 데이터베이스입니다.",
+    "longDescription": "대규모 센서와 데이터 수집 장치가 생성하는 페타바이트급 시계열 데이터를 실시간으로 수집하고 처리할 수 있는 오픈소스 데이터베이스입니다. IoT 및 커넥티드 카 환경에서 고성능 인입과 분석을 지원합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "시계열데이터베이스",
+      "TSDB",
+      "SQL",
+      "클라우드네이티브",
+      "대용량데이터"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://tdengine.com",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "Docker 또는 Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 배포",
+        "command": "docker run -d -p 6030:6030 -p 6041:6041 taosdata/taosserver:latest",
+        "note": "Docker를 이용해 TDengine 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 또는 패키지를 통해 TDengine을 설치합니다.",
+      "타오스 클라이언트에 접속합니다.",
+      "데이터베이스를 생성하고 시계열 테이블을 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경 배포 시 공식 가이드의 보안 설정 및 클러스터 구성을 참고하세요.",
+    "stars": 25159,
+    "forks": 5020,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "apisix",
+    "name": "Apache APISIX",
+    "github": "https://github.com/apache/apisix",
+    "description": "동적 트래픽 제어와 AI 게이트웨이 기능을 지원하는 고성능 클라우드 네이티브 API 게이트웨이입니다.",
+    "longDescription": "마이크로서비스 아키텍처를 위한 확장 가능한 API 게이트웨이로, 동적 라우팅, 부하 분산, 보안 인증 및 AI 서비스 연동을 위한 AI 게이트웨이 기능을 제공합니다.",
+    "category": "네트워크",
+    "tags": [
+      "API게이트웨이",
+      "클라우드네이티브",
+      "마이크로서비스",
+      "Nginx",
+      "Lua"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://apisix.apache.org/blog/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "Docker 또는 Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker를 사용하여 APISIX를 설치하고 실행합니다.",
+      "Admin API를 통해라우팅 규칙과 플러그인을 설정합니다.",
+      "프록시 서버를 통해 API 트래픽을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "플러그인 확장 및 클러스터 구성은 공식 문서를 참조하세요.",
+    "stars": 17220,
+    "forks": 2964,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "zephyr",
+    "name": "Zephyr",
+    "github": "https://github.com/zephyrproject-rtos/zephyr",
+    "description": "리소스가 제한된 임베디드 기기를 위해 설계된 확장 가능하고 안전한 실시간 운영체제(RTOS)입니다.",
+    "longDescription": "다양한 하드웨어 아키텍처를 지원하는 차세대 실시간 운영체제로, 소형 풋프린트 커널을 기반으로 IoT 무선 게이트웨이부터 스마트 웨어러블까지 폭넓게 활용됩니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "RTOS",
+      "임베디드",
+      "마이크로컨트롤러",
+      "IoT",
+      "C"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.zephyrproject.org",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "CMake",
+      "Python",
+      "개발 보드 툴체인"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Zephyr 개발 환경 및 의존성 도구를 설치합니다.",
+      "소스 코드를 복제하고 타겟 보드 설정을 구성합니다.",
+      "애플리케이션 펌웨어를 빌드하고 보드에 업로드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "하드웨어 아키텍처에 맞는 툴체인 설정이 필요합니다.",
+    "stars": 16794,
+    "forks": 10173,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "microk8s",
+    "name": "MicroK8s",
+    "github": "https://github.com/canonical/microk8s",
+    "description": "워크스테이션, 엣지 및 IoT 환경을 위한 작고 빠른 단일 패키지 Kubernetes입니다.",
+    "longDescription": "가벼운 경량 쿠버네티스 배포판으로, 단일 명령어로 순정 쿠버네티스 클러스터를 구축할 수 있으며 다양한 Linux 배포판에서 애드온을 손쉽게 활성화할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "엣지컴퓨팅",
+      "클라우드네이티브",
+      "Snap",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://microk8s.io",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "Snap"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Snap을 통한 설치",
+        "command": "sudo snap install microk8s --classic",
+        "note": "Snap 패키지 관리자를 사용하여 MicroK8s를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "MicroK8s를 snap을 통해 설치합니다.",
+      "사용자 계정을 microk8s 그룹에 추가하여 권한을 부여합니다.",
+      "microk8s enable 명령어로 필요한 애드온(DNS 등)을 활성화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "multi-node 클러스터 구성도 지원합니다.",
+    "stars": 9382,
+    "forks": 833,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "wasm-micro-runtime",
+    "name": "WAMR",
+    "github": "https://github.com/wasm-micro-runtime/wasm-micro-runtime",
+    "description": "리소스가 제한된 임베디드 및 IoT 기기를 위한 효율적인 WebAssembly 마이크로 런타임입니다.",
+    "longDescription": "인터프리터와 AOT(Ahead-Of-Time) 컴파일러를 지원하는 초경량 WebAssembly 런타임으로, 임베디드 시스템과 보안 영역(SGX)에서 안전하게 코드를 실행할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "WebAssembly",
+      "WASM",
+      "임베디드",
+      "런타임",
+      "C"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/wasm-micro-runtime/wasm-micro-runtime",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "C 컴파일러",
+      "CMake"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "소스 코드를 클론하고 CMake를 사용하여 VM 코어를 빌드합니다.",
+      "AOT 컴파일러(wamrc)를 통해 WebAssembly 바이트코드를 네이티브 코드로 변환합니다.",
+      "iwasm 런타임 제품을 사용하여 모듈을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "플랫폼별 빌드 옵션은 공식 문서를 참조하세요.",
+    "stars": 6143,
+    "forks": 864,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "ruview",
+    "name": "RuView",
+    "github": "https://github.com/ruvnet/RuView",
+    "description": "일반 와이파이(WiFi) 신호를 활용하여 벽 너머의 사람 감지, 생체 신호 모니터링, 공간 지능을 구현하는 오픈소스 툴킷입니다.",
+    "longDescription": "와이파이 무선 신호의 물리적 변화를 분석하여 카메라나 웨어러블 장치 없이도 실내 재실 감지, 호흡 및 심박수 측정, 움직임 추적을 수행합니다. 주요 스마트홈 생태계와 네이티브로 연동되어 프라이버시를 보호하면서 공간 인식 기능을 제공합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "와이파이",
+      "공간지능",
+      "IoT",
+      "모니터링",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://Cognitum.One/RuView",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "Rust 툴체인",
+      "호환되는 와이파이 장치"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 복제하고 빌드 환경을 설정합니다.",
+      "센싱을 수행할 와이파이 인터페이스를 지정합니다.",
+      "스마트홈 플랫폼과 연동하여 모니터링을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 97973,
+    "forks": 12843,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "salt",
+    "name": "Salt",
+    "github": "https://github.com/saltstack/salt",
+    "description": "대규모 인프라와 애플리케이션의 구성 관리 및 원격 실행을 자동화하는 파이썬 기반 오픈소스 소프트웨어입니다.",
+    "longDescription": "제로MQ(ZeroMQ) 기반의 고속 통신을 활용하여 수천 대의 서버와 인프라 자원을 중앙에서 효율적으로 제어하고 구성할 수 있습니다. 인프라스트럭처 마이그레이션, 클라우드 프로비저닝, 실시간 이벤트 모니터링을 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Python",
+      "자동화",
+      "인프라",
+      "DevOps",
+      "구성관리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.saltproject.io/salt/install-guide/en/latest/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "Python 3.x"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 설치 가이드 참조",
+        "command": "pip install salt",
+        "note": "파이썬 환경에서 Salt 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "마스터와 미니언 노드에 Salt를 각각 설치합니다.",
+      "마스터 서버 주소를 미니언 설정에 지정합니다.",
+      "명령어 실행 또는 상태 파일을 통해 인프라 구성을 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15715,
+    "forks": 5603,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "rt-thread",
+    "name": "RT-Thread",
+    "github": "https://github.com/RT-Thread/rt-thread",
+    "description": "사물인터넷(IoT) 장치를 위해 설계된 고성능 오픈소스 실시간 운영체제(RTOS)입니다.",
+    "longDescription": "마이크로컨트롤러 환경에서 멀티태스킹과 실시간 응답성을 제공하는 컴팩트한 커널을 제공합니다. 풍부한 컴포넌트와 미들웨어, 네트워크 프로토콜 스택을 포함하여 다양한 임베디드 개발을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "C",
+      "RTOS",
+      "임베디드",
+      "IoT",
+      "마이크로컨트롤러"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.rt-thread.io",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "GCC, Keil MDK 또는 IAR 개발 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "소스 코드를 클론하고 환경 설정 도구를 실행합니다.",
+      "타겟 보드에 맞게 커널 및 드라이버 옵션을 설정합니다.",
+      "프로젝트를 빌드하고 하드웨어에 플래싱합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12282,
+    "forks": 5476,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "platformio-core",
+    "name": "PlatformIO Core",
+    "github": "https://github.com/platformio/platformio-core",
+    "description": "임베디드 소프트웨어 개발을 위한 전문 빌드 시스템, 디버깅 및 패키지 매니저를 제공하는 통합 개발 게이트웨이입니다.",
+    "longDescription": "아두이노, ESP32, STM32 등 수많은 마이크로컨트롤러 플랫폼과 라이브러리를 통합 관리합니다. 코드 빌드, 유닛 테스트, 원격 디버깅을 일관된 CLI 환경에서 수행할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "임베디드",
+      "아두이노",
+      "CLI",
+      "빌드 시스템"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://platformio.org",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "Python 3.x"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install -U platformio",
+        "note": "최신 PlatformIO Core 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 플랫폼 코어 환경을 초기화합니다.",
+      "platformio.ini 파일에 타겟 보드와 프레임워크를 설정합니다.",
+      "pio run 명령어로 소스 코드를 빌드하고 업로드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9529,
+    "forks": 912,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "oatpp",
+    "name": "Oat++",
+    "github": "https://github.com/oatpp/oatpp",
+    "description": "확장성과 리소스 효율성이 뛰어난 고성능 C++ 웹 애플리케이션 프레임워크입니다.",
+    "longDescription": "제로 의존성(zero-dependency) 구조로 설계되어 가벼우면서도 프로덕션 환경에 필요한 모든 웹 컴포넌트를 제공합니다. 마이크로서비스 및 임베디드 웹 서버 구축에 적합합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C++",
+      "웹프레임워크",
+      "마이크로서비스",
+      "고성능",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://oatpp.io/",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "C++ 컴파일러 (CMake 지원)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "CMake를 사용하여 소스 코드를 빌드합니다.",
+      "프로젝트에 Oat++ 라이브러리를 링크합니다.",
+      "라우터와 컴포넌트 제공자를 설정하여 웹 서버를 구동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8660,
+    "forks": 1361,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
+    "id": "wasm3",
+    "name": "Wasm3",
+    "github": "https://github.com/wasm3/wasm3",
+    "description": "임베디드 및 IoT 환경을 포함한 다양한 플랫폼에서 동작하는 고속 웹어셈블리(WebAssembly) 인터프리터 런타임입니다.",
+    "longDescription": "매우 가벼운 메모리 사용량과 빠른 실행 속도를 자랑하는 범용 WASM 런타임입니다. 마이크로컨트롤러나 리소스가 제한된 환경에서도 웹어셈블리 모듈을 원활하게 실행할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "WebAssembly",
+      "WASM",
+      "인터프리터",
+      "임베디드",
+      "런타임"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://x.com/wasm3_engine",
+    "featured": 9,
+    "added": "2026-10-14",
+    "addedAt": "2026-10-14T21:04:01.109Z",
+    "requirements": [
+      "C 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 프로젝트를 빌드합니다.",
+      "컴파일된 WASM 바이트코드 파일을 준비합니다.",
+      "wasm3 명령어로 바이트코드 파일을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8051,
+    "forks": 538,
+    "starsUpdatedAt": "2026-10-14"
+  },
+  {
     "id": "markitdown",
     "name": "markitdown",
     "github": "https://github.com/microsoft/markitdown",
