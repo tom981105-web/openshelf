@@ -1,5 +1,793 @@
 [
   {
+    "id": "netdata",
+    "name": "Netdata",
+    "github": "https://github.com/netdata/netdata",
+    "description": "실시간 인프라 모니터링 및 AI 기반 전체 스택 관측성 도구입니다.",
+    "longDescription": "시스템의 모든 지표를 매초 수집하여 시각화하고 이상 징후를 감지할 수 있는 오픈소스 모니터링 플랫폼입니다. 다양한 운영체제와 도커 환경에 쉽게 설치하여 인프라 상태를 실시간으로 진단할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "모니터링",
+      "관측성",
+      "Docker",
+      "Linux",
+      "성능분석"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.netdata.cloud",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "인터넷 연결 또는 설치 스크립트 실행 권한"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Linux 설치",
+        "command": "wget -O /tmp/netdata-kickstart.sh https://get.netdata.cloud/kickstart.sh && sh /tmp/netdata-kickstart.sh",
+        "note": "공식 원라인 설치 스크립트를 사용하여 Linux 시스템에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 Netdata 에이전트를 설치합니다.",
+      "웹 브라우저에서 기본 포트(보통 19999)로 접속합니다.",
+      "실시간으로 수집되는 CPU, 메모리, 네트워크 등 인프라 지표를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 80961,
+    "forks": 6669,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "vaultwarden",
+    "name": "Vaultwarden",
+    "github": "https://github.com/dani-garcia/vaultwarden",
+    "description": "Rust로 작성된 가벼운 비트와르덴(Bitwarden) 호환 자체 호스팅 서버입니다.",
+    "longDescription": "공식 비트와르덴 서버보다 리소스를 훨씬 적게 소모하도록 설계된 대안 서버 구현체입니다. 공식 비트와르덴 클라이언트와 완벽하게 호환되며, 개인 서버나 홈랩 환경에서 안전하게 비밀번호를 관리할 수 있습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "비밀번호관리",
+      "자체호스팅",
+      "Rust",
+      "Docker",
+      "보안"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/dani-garcia/vaultwarden",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Docker",
+      "역방향 프록시 (HTTPS 필수)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d --name vaultwarden -v /vw-data:/data -p 80:80 ghcr.io/dani-garcia/vaultwarden:latest",
+        "note": "Docker를 통해 Vaultwarden 서버를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 명령어를 통해 컨테이너를 실행합니다.",
+      "웹 브라우저로 접속하여 관리자 계정을 생성합니다.",
+      "공식 비트와르덴 브라우저 확장 프로그램이나 모바일 앱에서 자체 서버 URL을 설정하여 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "안전한 사용을 위해 반드시 HTTPS 환경(역방향 프록시 설정)에서 구동해야 합니다.",
+    "stars": 69084,
+    "forks": 3327,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "traefik",
+    "name": "Traefik",
+    "github": "https://github.com/traefik/traefik",
+    "description": "마이크로서비스 배포를 간소화하는 현대적인 클라우드 네이티브 HTTP 리버스 프록시 및 로드 밸런서입니다.",
+    "longDescription": "도커, 쿠버네티스 등과 완벽하게 통합되어 서비스 라우팅과 설정을 자동으로 구성해주는 고성능 리버스 프록시입니다. 동적 설정 변경을 지원하며 Let's Encrypt를 통한 SSL 인증서 자동 발급 기능을 제공합니다.",
+    "category": "네트워크",
+    "tags": [
+      "프록시",
+      "로드밸런서",
+      "Docker",
+      "Kubernetes",
+      "마이크로서비스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://traefik.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Docker 또는 쿠버네티스 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 실행",
+        "command": "docker-compose up -d",
+        "note": "설정 파일과 함께 도커 컴포즈로 트라픽을 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "정적 및 동적 설정 파일을 작성합니다.",
+      "Docker Compose를 사용하여 Traefik 컨테이너를 실행합니다.",
+      "대시보드에 접속하여 라우팅된 서비스 상태를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 65235,
+    "forks": 6253,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "trendradar",
+    "name": "TrendRadar",
+    "github": "https://github.com/sansan0/TrendRadar",
+    "description": "다중 플랫폼 트렌드와 RSS를 수집하고 AI를 통해 분석·알림을 제공하는 여론 및 트렌드 모니터링 도구입니다.",
+    "longDescription": "여러 플랫폼의 실시간 인기 검색어와 RSS 피드를 수집하고, LLM을 활용해 뉴스를 요약·번역·분석하여 메신저로 푸시해주는 AI 기반 정보 필터링 도구입니다. MCP 아키텍처를 지원하여 AI 대화 분석과 감성 분석이 가능합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "트렌드",
+      "AI",
+      "RSS",
+      "모니터링",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://trendradar.sandev.cc",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Python",
+      "uv 패키지 매니저"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 동기화",
+        "command": "git clone https://github.com/sansan0/TrendRadar.git && cd TrendRadar && uv sync",
+        "note": "프로젝트를 클론한 뒤 uv로 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론하고 의존성을 설치합니다.",
+      "설정 파일에 모니터링할 키워드와 알림 채널을 구성합니다.",
+      "실행 명령어를 통해 트렌드 수집 및 분석을 시작합니다."
+    ],
+    "examplePrompt": "오늘 수집된 주요 뉴스 중 경제 관련 이슈를 요약해줘.",
+    "usageNote": "",
+    "stars": 62920,
+    "forks": 24908,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "plane",
+    "name": "Plane",
+    "github": "https://github.com/makeplane/plane",
+    "description": "이슈 추적, 스프린트 관리, 제품 로드맵을 지원하는 오픈소스 현대적 프로젝트 관리 플랫폼입니다.",
+    "longDescription": "Jira, Linear, Trello 등의 훌륭한 오픈소스 대안으로, 팀의 업무 진행 상황을 칸반보드와 주기(스프린트) 단위로 관리할 수 있게 해줍니다. 깔끔한 인터페이스와 실시간 협업 기능을 갖추고 있습니다.",
+    "category": "협업·소통",
+    "tags": [
+      "프로젝트관리",
+      "이슈트래커",
+      "칸반",
+      "Docker",
+      "협업"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "http://plane.so",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose로 실행",
+        "command": "docker compose up -d",
+        "note": "도커 컴포즈를 사용하여 전체 서비스를 로컬에 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "소스 코드를 다운로드하거나 도커 Compose 설정을 준비합니다.",
+      "환경 변수 설정 후 도커 컨테이너를 실행합니다.",
+      "웹 브라우저로 접속하여 워크스페이스와 프로젝트를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 60870,
+    "forks": 6079,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "mastodon",
+    "name": "Mastodon",
+    "github": "https://github.com/mastodon/mastodon",
+    "description": "ActivityPub 프로토콜을 기반으로 하는 탈중앙화 오픈소스 소셜 네트워크 서버입니다.",
+    "longDescription": "서로 연동되는 독립된 서버들로 이루어진 연방형 마이크로블로그 플랫폼입니다. 사용자는 광고나 알고리즘 추천 없이 타임라인을 통해 친구를 팔로우하고 텍스트, 이미지, 영상을 공유할 수 있습니다.",
+    "category": "협업·소통",
+    "tags": [
+      "소셜네트워크",
+      "탈중앙화",
+      "ActivityPub",
+      "Ruby",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://joinmastodon.org",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Docker",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 기반 설치",
+        "command": "docker compose up -d",
+        "note": "도커 컴포즈를 통해 마스토돈 인스턴스를 구동합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 환경을 준비하고 설정 파일을 수정합니다.",
+      "컨테이너를 빌드하고 실행합니다.",
+      "관리자 계정을 생성하고 페디버스 네트워크와 소통을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 50407,
+    "forks": 7523,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "astrbot",
+    "name": "AstrBot",
+    "github": "https://github.com/AstrBotDevs/AstrBot",
+    "description": "다양한 인스턴스 메신저와 LLM을 통합하는 오픈소스 AI 에이전트 어시스턴트 및 개발 프레임워크입니다.",
+    "longDescription": "QQ, 텔레그램, 디스코드 등 주요 메신저 플랫폼과 거대언어모델을 연결해주는 올인원 챗봇 및 AI 에이전트 플랫폼입니다. 1000개 이상의 플러그인 확장과 샌드박스 환경을 지원하여 지능형 챗봇과 자동화 어시스턴트를 손쉽게 구축할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "챗봇",
+      "LLM",
+      "Python",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://astrbot.app",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Python",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d -p 6185:6185 --name astrbot astrbot/astrbot:latest",
+        "note": "Docker를 통해 AstrBot 컨테이너를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker를 통해 AstrBot을 실행하거나 소스 코드를 클론합니다.",
+      "웹 관리자 인터페이스(WebUI)에 접속합니다.",
+      "사용할 LLM API 키와 연동할 메신저 플랫폼을 설정하고 에이전트를 활성화합니다."
+    ],
+    "examplePrompt": "오늘 날씨를 확인하고 관련 일정이나 준비물을 제안해줘.",
+    "usageNote": "",
+    "stars": 41933,
+    "forks": 3070,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "trivy",
+    "name": "Trivy",
+    "github": "https://github.com/aquasecurity/trivy",
+    "description": "컨테이너, 파일 시스템, Kubernetes, 코드 저장소의 보안 취약점과 설정을 진단하는 종합 보안 스캐너입니다.",
+    "longDescription": "소프트웨어 구성요소(SBOM), 알려진 취약점, 비밀 정보 노출, 인프라 코드(IaC) 설정 오류 등을 빠르게 탐지하는 다목적 보안 도구입니다. 개발 파이프라인과 CI/CD 환경에 쉽게 통합할 수 있습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안스캐너",
+      "취약점진단",
+      "DevSecOps",
+      "Docker",
+      "Kubernetes"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://trivy.dev",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Homebrew 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치 (macOS / Linux)",
+        "command": "brew install trivy",
+        "note": "홈브루 패키지 매니저를 통해 Trivy를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Trivy를 패키지 관리자나 도커를 통해 설치합니다.",
+      "검사하고자 하는 타겟(예: 컨테이너 이미지 이름 또는 로컬 디렉토리 경로)을 지정합니다.",
+      "스캔 명령어를 실행하여 발견된 보안 취약점 리포트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 38435,
+    "forks": 764,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "mall",
+    "name": "mall",
+    "github": "https://github.com/macrozheng/mall",
+    "description": "Spring Boot와 MyBatis 기반의 완성도 높은 전자상거래 시스템입니다.",
+    "longDescription": "전방위적인 쇼핑몰 프론트엔드와 백엔드 관리 시스템을 제공하며, Docker 컨테이너 기반 배포와 상품, 주문, 회원, 마케팅 관리 등 다양한 비즈니스 모듈을 포함하고 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "Spring Boot",
+      "MyBatis",
+      "Docker",
+      "MySQL"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.macrozheng.com/admin/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Java 17+",
+      "Docker",
+      "Maven"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "Maven을 통해 프로젝트를 빌드합니다.",
+      "Docker Compose를 사용하여 관련 서비스를 실행합니다.",
+      "관리자 웹 UI에 접속하여 기능을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 84897,
+    "forks": 29837,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "windows",
+    "name": "Windows in Docker",
+    "github": "https://github.com/dockur/windows",
+    "description": "Docker 컨테이너 내부에서 Windows 운영체제를 실행하는 도구입니다.",
+    "longDescription": "KVM 가속을 활용하여 거의 네이티브에 가까운 성능으로 Windows 환경을 도커 컨테이너 안에서 구동하며, 자동 설치 및 다양한 커스텀 설정을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Docker",
+      "Windows",
+      "가상화",
+      "KVM"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/dockur/windows",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Docker",
+      "KVM 지원 호스트"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker Compose 설정 파일을 작성합니다.",
+      "docker compose up 명령어로 컨테이너를 시작합니다.",
+      "웹 브라우저나 RDP를 통해 Windows 데스크톱에 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "KVM 가속이 활성화된 Linux 호스트 환경이 권장됩니다.",
+    "stars": 53628,
+    "forks": 4995,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "docker-osx",
+    "name": "Docker-OSX",
+    "github": "https://github.com/sickcodes/Docker-OSX",
+    "description": "Docker 컨테이너 안에서 macOS 가상머신을 실행하는 보안 연구 및 개발 도구입니다.",
+    "longDescription": "KVM과 X11 포워딩을 활용하여 리눅스 및 윈도우 환경에서 macOS를 거의 네이티브 속도로 구동할 수 있으며, 보안 연구나 CI/CD 파이프라인에 활용됩니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Docker",
+      "macOS",
+      "KVM",
+      "가상화",
+      "X11"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://hub.docker.com/r/sickcodes/docker-osx",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "x86_64 KVM 지원 호스트",
+      "최소 20GB 이상의 디스크 공간",
+      "BIOS 가상화 활성화"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "KVM 모듈이 로드되어 있는지 확인합니다.",
+      "Docker를 통해 macOS 이미지를 실행합니다.",
+      "X11을 통해 가상 화면에 접속하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "고성능 그래픽 가속 및 대용량 디스크 공간이 필요합니다.",
+    "stars": 52980,
+    "forks": 2887,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "full-stack-fastapi-template",
+    "name": "Full Stack FastAPI Template",
+    "github": "https://github.com/fastapi/full-stack-fastapi-template",
+    "description": "FastAPI와 React를 기반으로 한 모던 풀스택 웹 애플리케이션 템플릿입니다.",
+    "longDescription": "백엔드의 FastAPI, 프론트엔드의 React 및 Vite, 데이터베이스 연동을 위한 SQLModel과 PostgreSQL을 결합하여 프로덕션 수준의 웹 서비스를 빠르게 구축할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "FastAPI",
+      "React",
+      "PostgreSQL",
+      "Docker",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/fastapi/full-stack-fastapi-template",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "GitHub에서 템플릿을 사용하여새 레포지토리를 생성합니다.",
+      "로컬 환경에 프로젝트를 클론합니다.",
+      "Docker Compose를 이용해 개발 환경을 실행합니다.",
+      "API 문서 및 프론트엔드 웹에 접속하여 개발을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 45988,
+    "forks": 9145,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "sunshine",
+    "name": "Sunshine",
+    "github": "https://github.com/LizardByte/Sunshine",
+    "description": "Moonlight 클라이언트를 위한 자체 호스팅 게임 스트리밍 호스트입니다.",
+    "longDescription": "AMD, Intel, Nvidia GPU의 하드웨어 가속 인코딩을 지원하여 저지연 클라우드 게임 서버를 구축할 수 있으며, 웹 UI를 통해 간편하게 설정할 수 있습니다.",
+    "category": "멀티미디어",
+    "tags": [
+      "게임 스트리밍",
+      "Moonlight",
+      "원격 데스크톱",
+      "C++",
+      "웹 UI"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "http://app.lizardbyte.dev/Sunshine/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "지원되는 GPU 및 하드웨어 인코더"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "운영체제에 맞는 Sunshine을 설치합니다.",
+      "웹 UI에 접속하여 초기 설정을 진행합니다.",
+      "Moonlight 클라이언트 기기에서 서버를 연결하고 게임을 스트리밍합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 42235,
+    "forks": 2243,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "1panel",
+    "name": "1Panel",
+    "github": "https://github.com/1Panel-dev/1Panel",
+    "description": "모던하고 직관적인 오픈소스 Linux 서버 관리 패널 및 AI 관리 플랫폼입니다.",
+    "longDescription": "웹 기반 GUI를 통해 호스트 모니터링, 파일 관리, 데이터베이스 및 컨테이너 관리 기능을 제공하며, 앱 스토어를 통한 원클릭 설치와 AI 모델 연동 기능을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Linux",
+      "서버 관리",
+      "Docker",
+      "웹 패널",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://1panel.pro",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Linux 운영체제",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "서버에 1Panel 설치 스크립트를 실행합니다.",
+      "설치 완료 후 출력되는 주소와 인증 정보로 웹 UI에 접속합니다.",
+      "웹 패널을 통해 서버 자원과 애플리케이션을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 37177,
+    "forks": 3376,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "colima",
+    "name": "Colima",
+    "github": "https://github.com/abiosoft/colima",
+    "description": "macOS 및 Linux에서 최소한의 설정으로 컨테이너 런타임을 구동하는 도구입니다.",
+    "longDescription": "Lima 기반으로 동작하며 Docker와 Kubernetes(K3s) 환경을 맥OS에서 손쉽게 구축할 수 있도록 돕는 가볍고 빠른 가상화 툴입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Docker",
+      "Kubernetes",
+      "macOS",
+      "Containerd",
+      "CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://colima.run",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Homebrew (macOS)",
+      "Lima/QEMU"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install colima",
+        "note": "macOS 환경에서 Homebrew를 통해 설치"
+      }
+    ],
+    "usageSteps": [
+      "명령어 패키지 매니저로 Colima를 설치합니다.",
+      "colima start 명령어로 컨테이너 런타임을 실행합니다.",
+      "Standard Docker CLI 명령어로 컨테이너를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 31221,
+    "forks": 633,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "hivisionidphotos",
+    "name": "HivisionIDPhotos",
+    "github": "https://github.com/Zeyi-Lin/HivisionIDPhotos",
+    "description": "인공지능 기술을 활용하여 가볍고 효율적으로 증명사진을 제작하는 도구입니다.",
+    "longDescription": "딥러닝 기반 인물抠图(배경 제거) 및 이미지 처리를 통해 증명사진의 크기 변경, 배경 색상 교체 등을 자동화된 웹 인터페이스와 API로 제공합니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "AI",
+      "증명사진",
+      "Python",
+      "FastAPI",
+      "Gradio"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://modelscope.cn/studios/SwanLab/HivisionIDPhotos",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Python 3.10+",
+      "Conda (권장)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "pip install -r requirements.txt",
+        "note": "필수 파이썬 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 파이썬 가상환경을 생성합니다.",
+      "필수 요구 패키지와 모델 가중치 파일을 다운로드합니다.",
+      "애플리케이션을 실행하여 웹 UI에서 증명사진을 생성합니다."
+    ],
+    "examplePrompt": "증명사진 배경을 파란색으로 변경하고 규격에 맞게 크기를 조절해줘",
+    "usageNote": "",
+    "stars": 21623,
+    "forks": 2518,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "ebook2audiobook",
+    "name": "ebook2audiobook",
+    "github": "https://github.com/DrewThomasson/ebook2audiobook",
+    "description": "전자책을 음성 합성 기술을 활용해 오디오북으로 변환해주는 도구입니다.",
+    "longDescription": "다양한 언어와 음성 복제 기능을 지원하여 챕터와 메타데이터가 포함된 고품질 오디오북을 생성할 수 있으며, CPU 및 GPU 환경 모두에서 구동 가능합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "오디오북",
+      "TTS",
+      "Python",
+      "음성 복제",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/DrewThomasson/ebook2audiobook",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T13:03:59.494Z",
+    "requirements": [
+      "Python",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/DrewThomasson/ebook2audiobook",
+        "note": "프로젝트 소스코드 다운로드"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "변환할 전자책 파일(EPUB 등)을 준비합니다.",
+      "실행 명령어를 통해 음성 합성 엔진과 언어를 선택하여 오디오북을 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "DRM이 없는 합법적으로 취득한 전자책에만 사용해야 합니다.",
+    "stars": 20355,
+    "forks": 1736,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
     "id": "serviette",
     "name": "Serviette",
     "github": "https://github.com/pathwaycom/serviette",
