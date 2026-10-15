@@ -1,5 +1,816 @@
 [
   {
+    "id": "eartrumpet",
+    "name": "EarTrumpet",
+    "github": "https://github.com/File-New-Project/EarTrumpet",
+    "description": "Windows 운영체제를 위한 강력하고 직관적인 볼륨 제어 및 오디오 장치 관리 툴입니다.",
+    "longDescription": "Windows의 기본 볼륨 믹서의 한계를 극복하고, 앱별 볼륨 조절과 출력 장치 간 빠른 전환을 메뉴 바에서 간편하게 처리할 수 있게 해줍니다.",
+    "category": "생산성",
+    "tags": [
+      "Windows",
+      "볼륨 믹서",
+      "오디오 제어",
+      "WPF"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://eartrumpet.app",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Windows 10 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "winget을 통한 설치",
+        "command": "winget install File-New-Project.EarTrumpet",
+        "note": "Windows 패키지 관리자를 사용하여 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "winget 또는 Microsoft Store를 통해 EarTrumpet을 설치합니다.",
+      "작업 표시줄 트레이 아이콘을 클릭합니다.",
+      "각 애플리케이션별 슬라이더를 조절하거나 오디오 출력 장치를 변경합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11443,
+    "forks": 611,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "transformers",
+    "name": "Transformers",
+    "github": "https://github.com/huggingface/transformers",
+    "description": "텍스트, 비전, 음성 및 멀티모달 모델을 위한 최첨단 머신러닝 모델 정의 프레임워크입니다.",
+    "longDescription": "다양한 딥러닝 프레임워크와 호환되어 사전 학습된 모델을 손쉽게 로드하고 추론 및 학습을 수행할 수 있도록 지원하는 핵심 라이브러리입니다.",
+    "category": "AI 모델",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "머신러닝",
+      "딥러닝",
+      "LLM"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://huggingface.co/transformers",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Python 3.10+",
+      "PyTorch 2.6+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "가상환경 생성 및 활성화",
+        "command": "python -m venv .my-env && source .my-env/bin/activate",
+        "note": "venv를 이용한 표준 Python 가상환경 설정"
+      }
+    ],
+    "usageSteps": [
+      "가상환경을 생성하고 활성화합니다.",
+      "pip을 통해 transformers 및 필요한 패키지를 설치합니다.",
+      "파이썬 코드에서 AutoModel 및 AutoTokenizer를 불러와 모델을 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "사용하려는 모델의 라이선스와 하드웨어 요구 사양을 미리 확인하세요.",
+    "stars": 167702,
+    "forks": 34868,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "srs",
+    "name": "SRS (Simple Realtime Server)",
+    "github": "https://github.com/ossrs/srs",
+    "description": "RTMP, WebRTC, HLS 등 다양한 스트리밍 프로토콜을 지원하는 고성능 실시간 미디어 서버입니다.",
+    "longDescription": "라이브 스트리밍 및 화상 통신을 위해 설계된 AI 연동형 실시간 미디어 서버로, 도커를 통해 간편하게 배포하고 운영할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "미디어 서버",
+      "WebRTC",
+      "RTMP",
+      "HLS",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ossrs.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run --rm -it -p 1935:1935 -p 1985:1985 -p 8080:8080 -p 8000:8000/udp -p 10080:10080/udp ossrs/srs:6",
+        "note": "도커를 이용해 SRS 미디어 서버를 즉시 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 명령어를 실행하여 미디어 서버 컨테이너를 구동합니다.",
+      "웹 브라우저를 통해 로컬 서버 관리 페이지에 접속합니다.",
+      "OBS 등의 스트리밍 소프트웨어를 통해 RTMP 또는 WebRTC 스트림을 송출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "방화벽 환경에 따라 필요한 포트(1935, 8080 등)를 개방해야 합니다.",
+    "stars": 29340,
+    "forks": 5700,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "ultimatevocalremovergui",
+    "name": "Ultimate Vocal Remover GUI",
+    "github": "https://github.com/Anjok07/ultimatevocalremovergui",
+    "description": "심층 신경망을 활용하여 오디오 파일에서 보컬과 반주를 분리하는 GUI 애플리케이션입니다.",
+    "longDescription": "최첨단 소스 분리 모델을 기반으로 음악 파일에서 보컬을 제거하거나 추출할 수 있으며, 사용자 친화적인 그래픽 인터페이스를 제공합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "오디오",
+      "보컬 제거",
+      "PyTorch",
+      "GUI",
+      "음악"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Anjok07/ultimatevocalremovergui",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Windows 10 이상 (권장)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 릴리즈 페이지에서 설치 버전을 다운로드하여 설치합니다.",
+      "프로그램을 실행하고 분리할 오디오 파일을 불러옵니다.",
+      "원하는 인공지능 모델을 선택하고 처리 버튼을 눌러 보컬을 분리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "고성능 GPU를 사용하면 처리 속도가 크게 향상됩니다.",
+    "stars": 26626,
+    "forks": 2030,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "funasr",
+    "name": "FunASR",
+    "github": "https://github.com/modelscope/FunASR",
+    "description": "오프라인 및 스트리밍 음성 인식, 화자 분할, 구두점 부착 등을 지원하는 산업용 음성 인식 툴킷입니다.",
+    "longDescription": "다양한 음성 처리 파이프라인과 OpenAI 호환 API 서버 기능을 제공하여 음성 인식 및 에이전트 연동 개발에 유용합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성 인식",
+      "ASR",
+      "음성 텍스트 변환",
+      "PyTorch",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "www.funasr.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "NVIDIA GPU 드라이버"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "GPU 확인 및 설치",
+        "command": "python -c \"import torch; print(torch.cuda.is_available())\"",
+        "note": "PyTorch 설치 후 GPU 가속 가능 여부를 확인합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이토치 및 필요한 의존성을 설치합니다.",
+      "제공되는 빠른 시작 가이드나 허깅페이스 API를 통해 모델을 로드합니다.",
+      "오디오 파일을 입력하여 텍스트로 변환하거나 API 서버로 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실시간 스트리밍 기능을 활용하려면 별도의 마이크 입력 권한이나 오디오 장치 설정이 필요합니다.",
+    "stars": 20697,
+    "forks": 2079,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "backgroundmusic",
+    "name": "Background Music",
+    "github": "https://github.com/kyleneideck/BackgroundMusic",
+    "description": "오디오 재생 시 음악 자동 일시 정지, 앱별 볼륨 조절, 시스템 오디오 녹음을 지원하는 macOS 유틸리티입니다.",
+    "longDescription": "macOS 환경에서 개별 애플리케이션의 음량을 정밀하게 제어하고 다른 소스가 재생될 때 백그라운드 음악을 자동으로 일시 정지해 주는 편리한 도구입니다.",
+    "category": "개인 도구",
+    "tags": [
+      "macOS",
+      "오디오 유틸리티",
+      "볼륨 믹서",
+      "시스템 오디오"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://github.com/kyleneideck/BackgroundMusic",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "macOS"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드 및 설치 스크립트 실행",
+        "command": "/bin/bash build_and_install.sh",
+        "note": "저장소를 클론한 후 빌드 스크립트를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소의 설치 스크립트를 실행하여 오디오 드라이버와 앱을 설치합니다.",
+      "시스템 오디오 프로세스가 재시작되면 완료됩니다.",
+      "메뉴 바 또는 설정에서 각 애플리케이션의 볼륨을 개별 조절합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "설치 중 시스템 오디오 프로세스가 재시작되므로 재생 중인 오디오를 잠시 멈추는 것이 좋습니다.",
+    "stars": 19342,
+    "forks": 783,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "ytdlnis",
+    "name": "YTDLnis",
+    "github": "https://github.com/deniscerri/ytdlnis",
+    "description": "yt-dlp를 기반으로 구동되는 안드로이드용 풀 프처 오디오 및 비디오 다운로더 앱입니다.",
+    "longDescription": "안드로이드 7.0 이상 기기에서 유튜브를 비롯한 다양한 플랫폼의 미디어 파일을 고화질 영상 또는 음원으로 손쉽게 다운로드할 수 있는 오픈소스 도구입니다.",
+    "category": "멀티미디어",
+    "tags": [
+      "Android",
+      "다운로더",
+      "yt-dlp",
+      "YouTube",
+      "오디오"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://ytdlnis.org",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Android 7.0 이상"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리즈 페이지에서 APK 파일을 다운로드하여 안드로이드 기기에 설치합니다.",
+      "공유 기능을 통해 다운로드할 미디어 링크를 YTDLnis로 보냅니다.",
+      "원하는 포맷(MP3, MP4 등)과 화질을 선택하여 다운로드를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "백그라운드 다운로드 및 포맷 변환을 위해 FFmpeg 구성요소가 필요할 수 있습니다.",
+    "stars": 10572,
+    "forks": 489,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "finetune",
+    "name": "FineTune",
+    "github": "https://github.com/ronitsingh10/FineTune",
+    "description": "앱별 독립 볼륨 조절, 오디오 라우팅, 10밴드 EQ를 지원하는 macOS 메뉴 바 오디오 유틸리티입니다.",
+    "longDescription": "macOS 환경에서 가볍고 빠르게 동작하며, 소리가 작은 앱의 볼륨을 증폭하고 정밀한 사운드 제어 기능을 제공하는 오픈소스 사운드 믹서입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "macOS",
+      "메뉴바",
+      "이퀄라이저",
+      "볼륨 조절",
+      "Swift"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/ronitsingh10/FineTune",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "macOS"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew를 통한 설치",
+        "command": "brew install --cask finetune",
+        "note": "Homebrew 패키지 매니저를 사용하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Homebrew 명령어를 통해 FineTune을 설치합니다.",
+      "앱 실행 후 화면 및 시스템 오디오 녹음 권한을 허용합니다.",
+      "메뉴 바 아이콘을 클릭하여 앱별 볼륨과 이퀄라이저 설정을 조정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정상적인 작동을 위해 시스템 오디오 녹음 권한 부여가 필수적입니다.",
+    "stars": 9717,
+    "forks": 368,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "librosa",
+    "name": "librosa",
+    "github": "https://github.com/librosa/librosa",
+    "description": "오디오 및 음악 신호 처리를 위한 파이썬 라이브러리입니다.",
+    "longDescription": "음악 정보 검색(MIR) 시스템 구축에 필요한 기초 알고리즘과 도구를 제공하며, 파형 분석, 특징 추출 등의 작업을 간편하게 수행할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Python",
+      "DSP",
+      "오디오 분석",
+      "음악",
+      "SciPy"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "ISC",
+    "website": "https://librosa.org/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Python",
+      "SciPy"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI를 통한 설치",
+        "command": "pip install librosa",
+        "note": "pip 패키지 관리자를 사용하여 최신 안정 버전을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 librosa 라이브러리를 설치합니다.",
+      "파이썬 코드에서 오디오 파일을 불러옵니다.",
+      "스펙트로그램 생성 및 특징 추출 함수를 호출하여 분석을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "오디오 파일 읽기 기능(soundfile 등)을 위해 추가 시스템 라이브러리가 필요할 수 있습니다.",
+    "stars": 8680,
+    "forks": 1087,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "eqmac",
+    "name": "eqMac",
+    "github": "https://github.com/bitgapp/eqMac",
+    "description": "macOS 시스템 전역 오디오 이퀄라이저 및 볼륨 믹서 소프트웨어입니다.",
+    "longDescription": "맥의 모든 출력 오디오 소스에 대해 전역적인 사운드 이퀄라이징, 볼륨 부스팅, 장치별 밸런스 조정 등을 제공하는 오디오 효과 유틸리티입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "macOS",
+      "이퀄라이저",
+      "오디오 효과",
+      "볼륨 믹서",
+      "Swift"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://eqmac.app",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "macOS"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 홈페이지 또는 저장소를 통해 애플리케이션을 다운로드 및 설치합니다.",
+      "오디오 드라이버 권한을 설정하고 eqMac을 실행합니다.",
+      "메뉴 바를 통해 이퀄라이저 밴드와 볼륨 증폭을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "최신 버전 중 일부 고급 기능은 비공개 포크로 전환되었을 수 있습니다.",
+    "stars": 6808,
+    "forks": 368,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "voxcpm",
+    "name": "VoxCPM",
+    "github": "https://github.com/OpenBMB/VoxCPM",
+    "description": "다국어 음성 생성, 목소리 디자인 및 음성 복제를 지원하는 토크나이저 없는 텍스트 음성 변환(TTS) 시스템입니다.",
+    "longDescription": "확산 자귀회귀 아키텍처를 기반으로 연속적인 음성 표현을 직접 생성하여 자연스럽고 표현력 있는 합성을 제공하며, 30개 이상의 언어를 지원합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "TTS",
+      "음성복제",
+      "파이토치",
+      "Python",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://voxcpm.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 복제하고 의존성을 설치합니다.",
+      "Python API 또는 CLI를 통해 텍스트 음성 변환 기능을 실행합니다."
+    ],
+    "examplePrompt": "VoxCPM을 사용하여 한국어 텍스트를 자연스러운 음성으로 변환해 주세요.",
+    "usageNote": "",
+    "stars": 39320,
+    "forks": 4459,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "speechbrain",
+    "name": "SpeechBrain",
+    "github": "https://github.com/speechbrain/speechbrain",
+    "description": "파이토치(PyTorch) 기반으로 구축된 유연하고 강력한 오픈소스 음성 처리 및 인식 툴킷입니다.",
+    "longDescription": "자동 음성 인식(ASR), 화자 인식, 음성 강화, 분할 등 다양한 음성 관련 인공지능 작업을 간편하게 수행할 수 있도록 지원하는 툴킷입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "ASR",
+      "음성처리",
+      "PyTorch",
+      "Python",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://speechbrain.github.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Python",
+      "PyPI"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI를 통한 설치",
+        "command": "pip install speechbrain",
+        "note": "파이썬 환경에서 pip 명령어로 간단히 설치할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 speechbrain 패키지를 설치합니다.",
+      "파이썬 코드에서 라이브러리를 임포트합니다.",
+      "원하는 음성 처리 모델 및 파이프라인을 불러와 학습 또는 추론을 진행합니다."
+    ],
+    "examplePrompt": "SpeechBrain을 이용해 주어진 오디오 파일의 음성을 텍스트로 변환하는 파이썬 코드를 작성해 주세요.",
+    "usageNote": "",
+    "stars": 11880,
+    "forks": 1741,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "wavesurfer-js",
+    "name": "wavesurfer.js",
+    "github": "https://github.com/katspaugh/wavesurfer.js",
+    "description": "웹 애플리케이션에서 상호작용 가능한 오디오 파형을 렌더링하고 재생할 수 있는 JavaScript/TypeScript 라이브러리입니다.",
+    "longDescription": "현대 웹 기술을 활용하여 시각적으로 매력적인 오디오 파형을 그리며, 웹 환경에서 정확하고 직관적인 오디오 재생 제어 기능을 제공합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "TypeScript",
+      "JavaScript",
+      "오디오파형",
+      "웹오디오"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://wavesurfer.xyz",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install --save wavesurfer.js",
+        "note": "프로젝트 디렉토리에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm을 통해 라이브러리를 설치합니다.",
+      "프로젝트 코드에서 WaveSurfer를 임포트합니다.",
+      "컨테이너 요소와 오디오 파일을 설정하여 인스턴스를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10440,
+    "forks": 1762,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "pedalboard",
+    "name": "Pedalboard",
+    "github": "https://github.com/spotify/pedalboard",
+    "description": "오디오 효과 처리, VST3 플러그인 호스팅 등을 Python 코드 내에서 수행할 수 있게 해주는 Spotify의 오디오 라이브러리입니다.",
+    "longDescription": "머신러닝 파이프라인이나 오디오 연구에서 오디오 파일에 다양한 효과를 주거나 오디오 augmentation을 손쉽게 적용할 수 있도록 설계된 파이썬 라이브러리입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "오디오처리",
+      "Python",
+      "VST3",
+      "JUCE"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://spotify.github.io/pedalboard",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI를 통한 설치",
+        "command": "pip install pedalboard",
+        "note": "파이썬 환경에서 명령어로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 사용하여 pedalboard를 설치합니다.",
+      "파이썬에서 pedalboard의 오디오 효과 모듈을 임포트합니다.",
+      "오디오 데이터에 효과를 적용하고 결과를 저장합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6352,
+    "forks": 361,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "basic-pitch",
+    "name": "Basic Pitch",
+    "github": "https://github.com/spotify/basic-pitch",
+    "description": "피치 벤드 감지 기능과 함께 음향 오디오를 MIDI 파일로 변환해 주는 가볍고 강력한 자동 음악 전사 도구입니다.",
+    "longDescription": "Spotify 오디오 인텔리전스 Lab에서 개발한 경량 신경망을 기반으로 하며, 오디오 녹음을 분석하여 악보나 MIDI로 손쉽게 변환해 줍니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "MIDI변환",
+      "음악",
+      "Python",
+      "머신러닝"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://basicpitch.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI 설치",
+        "command": "pip install basic-pitch",
+        "note": "파이썬 환경에서 기본 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip로 basic-pitch를 설치합니다.",
+      "CLI 또는 Python API를 통해 오디오 파일을 입력합니다.",
+      "출력된 MIDI 파일을 확인하고 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5904,
+    "forks": 535,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "rnnoise",
+    "name": "RNNoise",
+    "github": "https://github.com/xiph/rnnoise",
+    "description": "순환 신경망(RNN)을 기반으로 실시간 음성 노이즈를 억제하고 품질을 향상시키는 C 언어 라이브러리입니다.",
+    "longDescription": "전통적인 신호 처리와 딥러닝 기법을 결합하여 실시간으로 오디오 입력의 배경 소음을 효과적으로 제거해 주는 오픈소스 라이브러리입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "노이즈제거",
+      "C언어",
+      "RNN",
+      "오디오처리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/xiph/rnnoise",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "C compiler",
+      "Autotools"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 컴파일",
+        "command": "./autogen.sh && ./configure && make",
+        "note": "오토젠 및 설정 스크립트를 거쳐 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 소스 디렉토리로 이동합니다.",
+      "autogen.sh 및 configure를 실행하여 모델 파일을 다운로드하고 설정합니다.",
+      "make 명령어로 라이브러리를 빌드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5896,
+    "forks": 1082,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "deej",
+    "name": "deej",
+    "github": "https://github.com/omriharel/deej",
+    "description": "아두이노(Arduino)와 Go 언어를 결합하여 PC에서 앱별 볼륨을 물리 슬라이더로 조절할 수 있게 해주는 오픈소스 하드웨어 믹서 프로젝트입니다.",
+    "longDescription": "실제 물리적인 슬라이더 하드웨어를 직접 제작하여 윈도우 및 리눅스 환경에서 음악 플레이어, 게임, 음성 채팅 등의 볼륨을 개별적이고 직관적으로 제어할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "아두이노",
+      "볼륨제어",
+      "하드웨어믹서",
+      "Go"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://deej.rocks",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Arduino",
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "아두이노 보드에 제공되는 스케치 코드를 업로드하여 하드웨어 회로를 구성합니다.",
+      "Go로 작성된 데스크톱 클라이언트를 다운로드합니다.",
+      "설정 파일을 수정하여 각 물리 슬라이더와 제어할 응용프로그램을 매핑합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5516,
+    "forks": 575,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "picard",
+    "name": "MusicBrainz Picard",
+    "github": "https://github.com/metabrainz/picard",
+    "description": "MusicBrainz 데이터베이스를 기반으로 음악 파일의 태그를 자동으로 정리하고 교정해 주는 크로스플랫폼 오디오 태거입니다.",
+    "longDescription": "AcoustID 음향 지문 기술을 활용하여 오디오 파일이 어떤 곡인지 식별하고, 정확한 메타데이터와 앨범 정보를 자동으로 태깅할 수 있는 공식 MusicBrainz 태거입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음악태거",
+      "메타데이터",
+      "Python",
+      "오디오"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://picard.musicbrainz.org",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T04:03:59.212Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 다운로드 페이지에서 운영체제에 맞는 설치 버전을 다운로드합니다.",
+      "프로그램을 실행하고 태그를 정리할 음악 파일을 불러옵니다.",
+      "검색 또는 음향 지문 인식을 통해 올바른 앨범 정보를 매칭한 뒤 저장합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5301,
+    "forks": 475,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
     "id": "foam",
     "name": "Foam",
     "github": "https://github.com/foambubble/foam",
