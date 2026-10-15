@@ -1,5 +1,932 @@
 [
   {
+    "id": "imhex",
+    "name": "ImHex",
+    "github": "https://github.com/WerWolv/ImHex",
+    "description": "역 반전 분석가와 프로그래머를 위한 모던한 헥스 편집기입니다.",
+    "longDescription": "심층적인 바이너리 분석, 디스어셈블리, 패턴 언어 기능을 제공하는 크로스플랫폼 헥스 편집기입니다. 야간 작업 시 눈의 피로를 줄여주는 다크 모드 UI와 다양한 플러그인을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "헥스에디터",
+      "역공학",
+      "바이낸리분석",
+      "C++",
+      "개발도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://imhex.werwolv.net/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "GCC 또는 Clang (C++23 지원)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 코드 컴파일",
+        "command": "git clone https://github.com/WerWolv/ImHex.git",
+        "note": "저장소를 클론한 후 C++23 지원 컴파일러로 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "공식 웹사이트 또는 릴리스 페이지에서 설치 파일을 다운로드합니다.",
+      "ImHex를 실행하여 분석할 바이너리 파일을 불러옵니다.",
+      "패턴 언어 및 뷰어를 활용해 데이터 구조를 파악합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대용량 파일 분석 시 충분한 RAM이 필요합니다.",
+    "stars": 55218,
+    "forks": 2503,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "ruff",
+    "name": "Ruff",
+    "github": "https://github.com/astral-sh/ruff",
+    "description": "Rust로 작성된 극도로 빠른 Python 린터 및 코드 포매터입니다.",
+    "longDescription": "기존 도구들보다 수십 배 빠른 속도로 파이썬 코드를 검사하고 포맷팅하는 올인원 툴킷입니다. PEP 8 규칙을 준수하며 다양한 플러그인과 에디터 확장을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "린터",
+      "포매터",
+      "Rust",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.astral.sh/ruff",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Python 또는 uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uvx를 통한 실행",
+        "command": "uvx ruff@0.17.1 check",
+        "note": "설치 없이 즉시 린트를 실행합니다."
+      },
+      {
+        "title": "pip 설치",
+        "command": "pip install ruff",
+        "note": "파이썬 환경에 ruff를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 루트 디렉토리로 이동합니다.",
+      "ruff check 명령어로 코드 내 오류와 스타일 위반을 검사합니다.",
+      "ruff format 명령어로 코드를 자동으로 정렬합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 50099,
+    "forks": 2519,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "code-review-graph",
+    "name": "code-review-graph",
+    "github": "https://github.com/tirth8205/code-review-graph",
+    "description": "AI 코딩 도구를 위한 로컬 우선 코드 지식 그래프입니다.",
+    "longDescription": "Tree-sitter를 활용해 코드베이스의 구조적 맵을 생성하고 점진적으로 유지 관리합니다. Model Context Protocol(MCP)을 통해 AI 어시스턴트가 변경된 파일과 연관된 최소한의 컨텍스트만 읽도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI코딩",
+      "MCP",
+      "코드리뷰",
+      "지식그래프",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://code-review-graph.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install code-review-graph",
+        "note": "패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치한 후 AI 도구 설정을 연동합니다.",
+      "코드베이스의 그래프를 빌드하여 구조를 파악합니다.",
+      "MCP를 통해 AI 코딩 도구와 연동하여 정확한 리뷰를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 32169,
+    "forks": 2950,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "mobile-security-framework-mobsf",
+    "name": "Mobile-Security-Framework-MobSF",
+    "github": "https://github.com/MobSF/Mobile-Security-Framework-MobSF",
+    "description": "안드로이드, iOS 및 윈도우 모바일 애플리케이션을 위한 자동화된 보안 진단 프레임워크입니다.",
+    "longDescription": "모바일 앱의 정적 및 동적 분석, 악성코드 분석, 침투 테스트를 통합 수행할 수 있는 오픈소스 보안 플랫폼입니다. APK, IPA 등 다양한 바이너리 포맷을 지원합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "모바일보안",
+      "정적분석",
+      "동적분석",
+      "취약점진단",
+      "펜테스팅"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://opensecurity.in",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Python",
+      "Docker (권장)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 클론 및 실행",
+        "command": "git clone https://github.com/MobSF/Mobile-Security-Framework-MobSF.git",
+        "note": "저장소를 클론한 후 가상환경을 설정하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "MobSF 서버를 실행합니다.",
+      "웹 인터페이스에 접속하여 APK 또는 IPA 파일을 업로드합니다.",
+      "정적 및 동적 분석 리포트를 확인하고 취약점을 점검합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 21958,
+    "forks": 3786,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "swiftlint",
+    "name": "SwiftLint",
+    "github": "https://github.com/realm/SwiftLint",
+    "description": "Swift 스타일과 컨벤션을 강제하는 정적 분석 도구입니다.",
+    "longDescription": "Swift 커뮤니티에서 널리 통용되는 스타일 가이드를 바탕으로 코딩 스타일을 검사하고 수정 제안을 제공합니다. SwiftSyntax를 기반으로 동작하며 Xcode 빌드 단계에 통합할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Swift",
+      "린터",
+      "코드품질",
+      "iOS",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://realm.github.io/SwiftLint",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Swift",
+      "Xcode"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Swift Package Manager 추가",
+        "command": ".package(url: \"https://github.com/SimplyDanny/SwiftLintPlugins\", from: \"...\")",
+        "note": "Package.swift 파일에 플러그인을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 SwiftLint를 패키지나 플러그인으로 추가합니다.",
+      "프로젝트 루트에 .swiftlint.yml 설정 파일을 생성합니다.",
+      "빌드 시 자동으로 코드 스타일 위반 사항을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 19762,
+    "forks": 2333,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "semgrep",
+    "name": "Semgrep",
+    "github": "https://github.com/semgrep/semgrep",
+    "description": "다양한 언어를 지원하는 빠르고 유연한 오픈소스 정적 코드 분석 도구입니다.",
+    "longDescription": "소스 코드와 유사한 패턴을 사용하여 버그를 찾고 보안 취약점을 검사할 수 있습니다. 30개 이상의 프로그래밍 언어를 지원하며 로컬 IDE, 프리커밋 훅, CI/CD 파이프라인에서 실행할 수 있습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "SAST",
+      "정적분석",
+      "보안검사",
+      "코드스캔",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-2.1",
+    "website": "https://semgrep.dev",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Python 3",
+      "pip 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "python3 -m pip install semgrep",
+        "note": "파이썬 환경에 semgrep을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 대상 디렉토리로 이동합니다.",
+      "semgrep scan --config auto 명령어를 실행합니다.",
+      "발견된 취약점 및 코드 스멜 리포트를 검토합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17071,
+    "forks": 1100,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "ast-grep",
+    "name": "ast-grep",
+    "github": "https://github.com/ast-grep/ast-grep",
+    "description": "추상 구문 트리(AST)를 기반으로 코드 검색, 린트, 리팩토링을 수행하는 CLI 도구입니다.",
+    "longDescription": "기존의 정규식 기반 grep을 넘어 문법적 구조를 이해하는 패턴 매칭을 제공합니다. 대규모 코드베이스에서 코드를 안전하게 검색하고 치환(Codemod)할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AST",
+      "코드검색",
+      "리팩토링",
+      "Rust",
+      "CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ast-grep.github.io/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Cargo 또는 npm, Homebrew"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install ast-grep",
+        "note": "macOS 환경에서 홈브루를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "sg 명령어를 이용해 코드를 검색할 패턴을 지정합니다.",
+      "구조적 패턴 일치 항목을 확인합니다.",
+      "필요시 --rewrite 옵션을 주어 코드를 일괄 변경합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16244,
+    "forks": 476,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "bytecode-viewer",
+    "name": "Bytecode Viewer",
+    "github": "https://github.com/Konloch/bytecode-viewer",
+    "description": "자바 및 안드로이드 APK 파일을 위한 사용자 친화적인 바이트코드 뷰어 및 디컴파일러입니다.",
+    "longDescription": "CFR, Procyon, Fernflower 등 다양한 디컴파일러 엔진을 내장하고 있어 컴파일된 Java 및 Android 앱의 소스 코드를 탐색, 편집, 디버깅할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "Android",
+      "디컴파일러",
+      "바이트코드",
+      "역공학"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://bytecodeviewer.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Java 8+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "JAR 파일 실행",
+        "command": "java -jar Bytecode-Viewer-2.10.x.jar",
+        "note": "릴리스 페이지에서 다운로드한 JAR 파일을 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "최신 릴리스에서 JAR 파일을 다운로드하고 실행합니다.",
+      "분석할 JAR, DEX, APK 파일을 프로그램 창으로 드래그앤드롭합니다.",
+      "내장된 디컴파일러 탭을 통해 소스 코드를 확인하고 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15676,
+    "forks": 1294,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "grype",
+    "name": "Grype",
+    "github": "https://github.com/anchore/grype",
+    "description": "컨테이너 이미지 및 파일 시스템을 위한 취약점 스캐너입니다.",
+    "longDescription": "다양한 OS 패키지 및 언어 생태계의 취약점을 탐지하며, Syft와 연동하여 소프트웨어 자재 명세서(SBOM) 기반의 보안 검사를 수행할 수 있습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "컨테이너",
+      "보안스캔",
+      "취약점",
+      "SBOM",
+      "Go"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/anchore/grype",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "셸 스크립트 설치",
+        "command": "curl -sSfL https://get.anchore.io/grype | sudo sh -s -- -b /usr/local/bin",
+        "note": "시스템에 Grype 바이너리를 다운로드하고 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "grype [이미지 이름] 명령어를 실행합니다.",
+      "컨테이너 이미지나 파일 시스템 내에 포함된 취약점 목록을 확인합니다.",
+      "출력된 심각도별 결과를 바탕으로 대응 조치를 취합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13029,
+    "forks": 915,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "hadolint",
+    "name": "hadolint",
+    "github": "https://github.com/hadolint/hadolint",
+    "description": "Docker 파일의 구문을 분석하고 모범 사례를 검사하는 스마트한 린터입니다.",
+    "longDescription": "Dockerfile을 추상 구문 트리(AST)로 파싱하여 규칙 위반을 검사합니다. 내부의 RUN 명령어에 작성된 Bash 코드는 ShellCheck를 통해 함께 검증합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Docker",
+      "린터",
+      "DevOps",
+      "Haskell",
+      "개발도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/hadolint/hadolint",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker를 통한 실행",
+        "command": "docker run --rm -i hadolint/hadolint  Dockerfile",
+        "note": "컨테이너를 통해 별도의 설치 없이 Dockerfile을 린트합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 Dockerfile이 위치한 경로를 확인합니다.",
+      "hadolint 명령어 또는 Docker 컨테이너를 실행하여 Dockerfile을 검사합니다.",
+      "출력되는 모범 사례 위반 항목과 경고 메시지를 수정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12479,
+    "forks": 509,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "phpstan",
+    "name": "PHPStan",
+    "github": "https://github.com/phpstan/phpstan",
+    "description": "실행하지 않고도 PHP 코드에서 버그를 발견할 수 있는 정적 분석 도구입니다.",
+    "longDescription": "코드 실행 없이 오류를 찾아내어 PHP 코드의 품질을 높여주는 정적 분석 도구입니다. 컴파일 언어처럼 각 라인의 정확성을 미리 확인할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PHP",
+      "정적 분석",
+      "코드 품질",
+      "개발 도구",
+      "테스트"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://phpstan.org/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "PHP"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Composer를 통해 프로젝트에 PHPStan을 설치합니다.",
+      "설정 파일을 생성하고 분석할 디렉터리를 지정합니다.",
+      "명령어 인터페이스를 통해 정적 분석을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 14130,
+    "forks": 968,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "php-cs-fixer",
+    "name": "PHP CS Fixer",
+    "github": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer",
+    "description": "PHP 코딩 표준을 자동으로 수정해 주는 도구입니다.",
+    "longDescription": "대규모 프로젝트에서 수동으로 코딩 스타일 문제를 해결하는 번거로움을 줄여주며, 표준화된 규칙에 맞게 코드를 자동으로 교정합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PHP",
+      "코드 스타일",
+      "자동 수정",
+      "개발 도구",
+      "린터"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://cs.symfony.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "PHP"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Composer 설치",
+        "command": "composer require --dev friendsofphp/php-cs-fixer",
+        "note": "Composer를 이용한 개발 의존성 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Composer로 패키지를 설치합니다.",
+      "코드 정렬 규칙을 설정합니다.",
+      "명령어를 실행하여 코딩 표준에 맞게 소스 코드를 수정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13565,
+    "forks": 1649,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "detect-it-easy",
+    "name": "Detect It Easy (DiE)",
+    "github": "https://github.com/horsicq/Detect-It-Easy",
+    "description": "Windows, Linux, macOS에서 파일 유형을 식별하고 정적 검사하는 도구입니다.",
+    "longDescription": "바이너리 분석, 악성코드 연구, 리버스 엔지니어링을 위해 파일 형식, 패커, 컴파일러 등을 판별하는 크로스 플랫폼 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "바이너리 분석",
+      "리버스 엔지니어링",
+      "정적 분석",
+      "보안",
+      "크로스 플랫폼"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://ntinfo.biz",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 배포판 또는 패키지 관리자를 통해 프로그램을 설치합니다.",
+      "분석할 파일이나 바이너리를 프로그램에 로드합니다.",
+      "식별된 파일 형식 및 패커 정보를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11729,
+    "forks": 979,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "clair",
+    "name": "Clair",
+    "github": "https://github.com/quay/clair",
+    "description": "컨테이너 이미지 및 파일시스템을 위한 취약점 정적 분석 도구입니다.",
+    "longDescription": "OCI 이미지 및 컨테이너 내부의 패키지 취약점을 정적으로 스캔하여 보안 리스크를 사전에 파악할 수 있도록 돕습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "컨테이너",
+      "Docker",
+      "Kubernetes",
+      "취약점 스캔",
+      "보안"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://quay.github.io/clair/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Docker",
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 이미지를 통해 Clair를 실행합니다.",
+      "분석할 컨테이너 이미지를 대상으로 스캔을 요청합니다.",
+      "발견된 취약점 리포트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11077,
+    "forks": 1216,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "sonarqube",
+    "name": "SonarQube",
+    "github": "https://github.com/SonarSource/sonarqube",
+    "description": "코드 품질과 보안 취약점을 지속적으로 검사하는 플랫폼입니다.",
+    "longDescription": "다양한 프로그래밍 언어의 코드 스멜, 버그, 보안 취약점을 자동으로 분석하여 소프트웨어 품질을 지속적으로 관리합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "코드 품질",
+      "정적 분석",
+      "보안 감사",
+      "CI/CD",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-3.0",
+    "website": "http://www.sonarqube.org",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Java 21",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gradle 빌드",
+        "command": "./gradlew build",
+        "note": "소스 코드 빌드 및 배포판 생성"
+      }
+    ],
+    "usageSteps": [
+      "Java 21 및 필수 요구사항을 설치합니다.",
+      "소스 코드를 빌드하여 서버를 실행합니다.",
+      "웹 인터페이스를 통해 프로젝트 분석 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11070,
+    "forks": 2234,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "syft",
+    "name": "Syft",
+    "github": "https://github.com/anchore/syft",
+    "description": "컨테이너 이미지와 파일시스템에서 소프트웨어 자재 명세서(SBOM)를 생성하는 CLI 도구입니다.",
+    "longDescription": "다양한 패키지 생태계와 컨테이너 이미지로부터 SBOM을 생성하여 취약점 탐지 및 공급망 보안을 지원합니다.",
+    "category": "개발 운영",
+    "tags": [
+      "SBOM",
+      "CLI",
+      "Docker",
+      "보안",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/anchore/syft",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Quick Install",
+        "command": "curl -sSfL https://get.anchore.io/syft | sudo sh -s -- -b /usr/local/bin",
+        "note": "스크립트를 통한 간편 설치"
+      }
+    ],
+    "usageSteps": [
+      "CLI를 통해 Syft를 설치합니다.",
+      "스캔할 컨테이너 이미지나 디렉터리 경로를 지정하여 실행합니다.",
+      "출력된 SBOM 데이터를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9684,
+    "forks": 998,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "checkstyle",
+    "name": "Checkstyle",
+    "github": "https://github.com/checkstyle/checkstyle",
+    "description": "자바 코드 스타일과 코딩 표준 준수를 돕는 개발 도구입니다.",
+    "longDescription": "구글 자바 스타일 가이드 및 Sun 코딩 컨벤션을 지원하며, 컴파일 전 자바 코드의 일관성과 품질을 유지하도록 검사합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "코드 품질",
+      "정적 분석",
+      "린터",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-2.1",
+    "website": "https://checkstyle.org",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스 버전을 다운로드하거나 빌드 도구에 의존성을 추가합니다.",
+      "설정 파일을 바탕으로 검사 규칙을 정의합니다.",
+      "빌드 프로세스 또는 명령줄에서 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9601,
+    "forks": 4282,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "checkov",
+    "name": "Checkov",
+    "github": "https://github.com/bridgecrewio/checkov",
+    "description": "Infrastructure as Code(IaC) 및 컨테이너 이미지의 보안 설정 오류를 빌드 타임에 검사하는 도구입니다.",
+    "longDescription": "Terraform, Kubernetes, CloudFormation 등의 인프라 코드에서 발생할 수 있는 보안 취약점과 규정 미준수 항목을 탐지합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Terraform",
+      "Kubernetes",
+      "DevSecOps",
+      "보안",
+      "인프라 분석"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.checkov.io/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Python = 3.9"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip3 install checkov",
+        "note": "Python 패키지 관리자를 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "pip3를 이용하여 Checkov를 설치합니다.",
+      "인프라 코드가 위치한 디렉터리에서 명령어를 실행합니다.",
+      "보안 위반 사항 및 설정 오류 리포트를 검토합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9072,
+    "forks": 1439,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "gosec",
+    "name": "gosec",
+    "github": "https://github.com/securego/gosec",
+    "description": "Go 소스 코드의 AST를 분석하여 보안 취약점을 검사하는 도구입니다.",
+    "longDescription": "SQL 인젝션, 명령 주입, 암호화 이슈 등 Go 언어 코드에서 자주 발생하는 보안 문제를 패턴 기반 규칙과 Taint 분석으로 탐지합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Go",
+      "보안",
+      "정적 분석",
+      "취약점 스캔",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://securego.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Go 환경에서 도구를 설치합니다.",
+      "분석할 Go 프로젝트 루트 디렉터리로 이동합니다.",
+      "gosec 명령어를 실행하여 보안 취약점 검사를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8972,
+    "forks": 718,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "recaf",
+    "name": "Recaf",
+    "github": "https://github.com/Col-E/Recaf",
+    "description": "난독화된 애플리케이션 분석과 바이트코드 조작을 지원하는 현대적인 자바 바이트코드 편집기입니다.",
+    "longDescription": "자바 및 안드로이드 바이트코드를 디컴파일하고 소스 코드 없이 클래스를 수정할 수 있는 다기능 리버스 엔지니어링 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "바이트코드",
+      "리버스 엔지니어링",
+      "디컴파일러",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://recaf.coley.software",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T18:04:00.644Z",
+    "requirements": [
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스 페이지에서 실행 파일을 다운로드합니다.",
+      "분석할 자바 애플리케이션이나 클래스 파일을 불러옵니다.",
+      "디컴파일된 코드를 탐색하고 필요한 경우 바이트코드를 편집합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7435,
+    "forks": 547,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
     "id": "worldmonitor",
     "name": "worldmonitor",
     "github": "https://github.com/koala73/worldmonitor",
