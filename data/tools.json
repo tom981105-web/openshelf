@@ -1,5 +1,639 @@
 [
   {
+    "id": "worldmonitor",
+    "name": "worldmonitor",
+    "github": "https://github.com/koala73/worldmonitor",
+    "description": "실시간 글로벌 정보 대시보드로, AI 기반 뉴스 집계 및 지정학적 모니터링을 제공합니다.",
+    "longDescription": "인프라 추적과 오픈소스 정보(OSINT) 분석을 통합된 인터페이스로 지원하는 실시간 상황 인식 대시보드입니다. 다양한 기술, 금융, 에너지 분야의 글로벌 이슈를 한눈에 파악할 수 있도록 돕습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "대시보드",
+      "모니터링",
+      "OSINT",
+      "뉴스",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://worldmonitor.app",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/koala73/worldmonitor",
+        "note": "프로젝트 소스코드를 로컬에 클론합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "의존성을 설치하고 애플리케이션을 실행합니다.",
+      "웹 인터페이스를 통해 실시간 글로벌 모니터링 대시보드를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 88498,
+    "forks": 13542,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "grafana",
+    "name": "grafana",
+    "github": "https://github.com/grafana/grafana",
+    "description": "다양한 데이터 소스의 메트릭, 로그, 트레이스를 시각화하는 오픈소스 관측 플랫폼입니다.",
+    "longDescription": "Prometheus, Loki, Elasticsearch 등 다양한 백엔드와 연동하여 강력하고 동적인 대시보드를 구성할 수 있습니다. 팀 단위의 데이터 기반 의사결정을 돕는 표준 시각화 도구입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "대시보드",
+      "시각화",
+      "모니터링",
+      "메트릭",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://grafana.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 설치 가이드를 참고하여 Grafana를 설치합니다.",
+      "웹 브라우저로 접속하여 데이터 소스를 연결합니다.",
+      "사용자 정의 대시보드를 생성하여 메트릭을 시각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 77302,
+    "forks": 14861,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "prometheus",
+    "name": "prometheus",
+    "github": "https://github.com/prometheus/prometheus",
+    "description": "오픈소스 모니터링 시스템 및 시계열 데이터베이스입니다.",
+    "longDescription": "클라우드 네이트 환경에서 널리 사용되는 메트릭 수집 및 경고 도구입니다. 다차원 데이터 모델과 강력한 쿼리 언어(PromQL)를 제공합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "모니터링",
+      "시계열",
+      "데이터베이스",
+      "Go",
+      "메트릭"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://prometheus.io/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 다운로드 페이지에서 바이너리를 다운로드합니다.",
+      "설정 파일(prometheus.yml)을 편집하여 수집할 타겟을 지정합니다.",
+      "서버를 실행하고 웹 UI 또는 Grafana를 통해 메트릭을 조회합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 66574,
+    "forks": 10917,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "influxdb",
+    "name": "influxdb",
+    "github": "https://github.com/influxdata/influxdb",
+    "description": "실시간 이벤트, 분석 및 모니터링을 위한 고성능 시계열 데이터베이스입니다.",
+    "longDescription": "Apache Arrow, DataFusion, Parquet 기반으로 구축되어 대규모 시계열 데이터를 빠르게 수집하고 쿼리할 수 있습니다. IoT 센서 데이터 및 서버 모니터링에 최적화되어 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "시계열",
+      "데이터베이스",
+      "모니터링",
+      "Rust",
+      "분석"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://influxdata.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 다운로드 페이지 또는 Docker를 통해 InfluxDB를 설치합니다.",
+      "서버를 실행하고 웹 콘솔 또는 클라이언트 라이브러리로 접속합니다.",
+      "시계열 데이터를 수집하고 쿼리를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 31765,
+    "forks": 3722,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "vector",
+    "name": "vector",
+    "github": "https://github.com/vectordotdev/vector",
+    "description": "로그, 메트릭, 트레이스를 수집·변환·라우팅하는 고성능 관측 데이터 파이프라인입니다.",
+    "longDescription": "Rust로 작성되어 뛰어난 안정성과 성능을 제공하며, 다양한 소스에서 텔레메트리 데이터를 받아 목적지로 효율적으로 전달합니다. 클라우드 네이트 환경의 로그 수집 에이전트로 널리 사용됩니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "로그",
+      "파이프라인",
+      "관측성",
+      "Rust",
+      "데이터수집"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MPL-2.0",
+    "website": "https://vector.dev",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 퀵스타트 가이드를 참고하여 Vector를 설치합니다.",
+      "설정 파일에서 소스와 싱크를 정의합니다.",
+      "데이터 파이프라인을 실행하여 텔레메트리 수집을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22705,
+    "forks": 2329,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "openobserve",
+    "name": "openobserve",
+    "github": "https://github.com/openobserve/openobserve",
+    "description": "로그, 메트릭, 트레이스를 통합 관리할 수 있는 클라우드 네이트 오픈소스 관측 플랫폼입니다.",
+    "longDescription": "기존 상용 솔루션의 복잡성과 높은 비용을 줄이기 위해 설계되었으며, S3 네이티브 설계와 Parquet 포맷을 통해 저장소 비용을 크게 절감합니다. 단일 바이너리로 배포가 간편합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "모니터링",
+      "로그",
+      "APM",
+      "Rust",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://openobserve.ai",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker를 이용한 실행",
+        "command": "docker run --rm -p 5080:5080 openobserve/openobserve:latest",
+        "note": "Docker를 통해 OpenObserve를 간편하게 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 명령을 사용하여 OpenObserve 컨테이너를 실행합니다.",
+      "웹 브라우저로 http://localhost:5080에 접속합니다.",
+      "로그인 후 관측 데이터 수집 및 대시보드를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22381,
+    "forks": 1137,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "cilium",
+    "name": "Cilium",
+    "github": "https://github.com/cilium/cilium",
+    "description": "eBPF 기반의 쿠버네티스 네트워킹, 보안 및 관측성 솔루션",
+    "longDescription": "eBPF 데이터 플레인을 활용하여 고성능 레이어 3-7 네트워크 연결과 아이덴티티 기반 보안 정책을 제공합니다. 기존의 kube-proxy를 대체하여 효율적인 분산 로드 밸런싱과 클러스터 간 네트워킹을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "eBPF",
+      "쿠버네티스",
+      "네트워킹",
+      "보안",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cilium.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [
+      "Linux kernel = 4.9"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "시스템 환경에 맞는 Cilium CLI 도구를 설치합니다.",
+      "쿠버네티스 클러스터에 cilium install 명령어를 실행합니다.",
+      "cilium status 명령어로 정상 작동 여부를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "최신 커널 버전과 eBPF 지원이 필수적입니다.",
+    "stars": 25661,
+    "forks": 4156,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "victoriametrics",
+    "name": "VictoriaMetrics",
+    "github": "https://github.com/VictoriaMetrics/VictoriaMetrics",
+    "description": "고성능, 비용 효율적인 시계열 데이터베이스 및 모니터링 솔루션",
+    "longDescription": "Prometheus와 호환되는 고성능 시계열 데이터베이스로, 대규모 메트릭 데이터를 적은 리소스와 비용으로 수집하고 저장합니다. Grafana 등 다양한 모니터링 도구와 쉽게 연동됩니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "시계열",
+      "데이터베이스",
+      "Prometheus",
+      "Grafana",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://victoriametrics.com/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 릴리즈 페이지에서 바이너리를 다운로드하거나 Docker로 실행합니다.",
+      "Prometheus나 다른 수집기를 통해 메트릭을 VictoriaMetrics로 전송합니다.",
+      "Grafana를 데이터 소스로 연결하여 대시보드를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17864,
+    "forks": 1772,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "telegraf",
+    "name": "Telegraf",
+    "github": "https://github.com/influxdata/telegraf",
+    "description": "다양한 시스템과 서비스에서 메트릭을 수집하고 전송하는 서버 에이전트",
+    "longDescription": "Go 언어로 작성된 경량 에이전트로, 다양한 플러그인을 통해 시스템 리소스, 로그, 네트워크 등 광범위한 데이터를 수집합니다. 수집한 데이터를 InfluxDB를 비롯한 여러 저장소로 전달할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "메트릭",
+      "모니터링",
+      "에이전트",
+      "수집",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://influxdata.com/telegraf",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "운영체제에 맞는 패키지 또는 바이너리를 설치합니다.",
+      "TOML 설정 파일을 수정하여 수집할 입력 및 출력 플러그인을 지정합니다.",
+      "에이전트를 실행하여 데이터 수집을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17863,
+    "forks": 5844,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "ctop",
+    "name": "Ctop",
+    "github": "https://github.com/bcicen/ctop",
+    "description": "컨테이너 실시간 메트릭을 터미널에서 모니터링하는 top 스타일 도구",
+    "longDescription": "Docker 및 runC 컨테이너의 CPU, 메모리, 네트워크 사용량 등 핵심 실시간 메트릭을 직관적인 터미널 인터페이스로 보여줍니다. 특정 컨테이너를 선택하여 상세 정보를 검사할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "컨테이너",
+      "Docker",
+      "모니터링",
+      "CLI",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ctop.sh",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "GitHub 릴리즈 다운로드",
+        "command": "curl -Lo ctop https://github.com/bcicen/ctop/releases/download/v0.7.7/ctop-0.7.7-linux-amd64 && chmod +x ctop",
+        "note": "바이린 다운로드 후 실행 권한 부여"
+      }
+    ],
+    "usageSteps": [
+      "설치된 ctop 바이너리를 실행합니다.",
+      "방향키를 사용하여 모니터링할 컨테이너를 탐색합니다.",
+      "Enter를 눌러 개별 컨테이너 상세 뷰를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17844,
+    "forks": 590,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "systeminformer",
+    "name": "System Informer",
+    "github": "https://github.com/winsiderss/systeminformer",
+    "description": "윈도우 시스템 리소스 모니터링, 디버깅 및 악성코드 탐색을 위한 강력한 도구",
+    "longDescription": "기본 작업 관리자를 대체하는 오픈소스 시스템 분석 도구로, 프로세스 상세 활동, 네트워크 연결, 디스크 접근 현황을 실시간으로 제공합니다. 파일 점유 프로세스 추적과 커널 모드 스택 트레이스 기능을 지원합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "윈도우",
+      "작업관리자",
+      "모니터링",
+      "디버거",
+      "C"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://systeminformer.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [
+      "Windows 10 이상"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트 또는 릴리즈 페이지에서 프로그램을 다운로드합니다.",
+      "설치 없이 실행 파일을 구동합니다.",
+      "프로세스 탭과 리소스 그래프를 통해 시스템 상태를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16247,
+    "forks": 1802,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "psutil",
+    "name": "Psutil",
+    "github": "https://github.com/giampaolo/psutil",
+    "description": "파이썬에서 시스템 프로세스 및 자원 사용량을 조회하는 크로스플랫폼 라이브러리",
+    "longDescription": "파이썬 환경에서 CPU, 메모리, 디스크, 네트워크, 센서 등의 시스템 정보와 실행 중인 프로세스 목록을 손쉽게 가져올 수 있습니다. 시스템 모니터링, 프로파일링 및 프로세스 자원 제어에 주로 사용됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "모니터링",
+      "CPU",
+      "메모리",
+      "라이브러리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://psutil.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [
+      "Python = 3.5"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install psutil",
+        "note": "파이썬 패키지 관리자를 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "파이썬 스크립트에서 psutil 모듈을 임포트합니다.",
+      "psutil.cpu_percent() 등의 함수를 호출하여 시스템 메트릭을 가져옵니다.",
+      "조회한 데이터를 바탕으로 모니터링 로직을 구현합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11295,
+    "forks": 1527,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "healthchecks",
+    "name": "Healthchecks",
+    "github": "https://github.com/healthchecks/healthchecks",
+    "description": "크론잡 및 백그라운드 작업의 실행 상태를 모니터링하고 알림을 주는 오픈소스 서비스",
+    "longDescription": "Python과 Django 기반으로 제작되어 주기적인 작업(크론잡)이 지정된 시간에 정상적으로 핑(HTTP 요청 등)을 보내오는지 감시합니다. 작업이 시간 내에 완료되지 않으면 이메일, 슬랙 등으로 경고를 보냅니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Cron",
+      "모니터링",
+      "DevOps",
+      "Python",
+      "Django"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://healthchecks.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [
+      "Python = 3.8",
+      "PostgreSQL 또는 MySQL"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "가상환경을 생성하고 필요한 파이썬 패키지를 설치합니다.",
+      "데이터베이스 설정을 마치고 마이그레이션을 실행합니다.",
+      "서버를 구동하고 웹 대시보드에서 크론 체크 항목을 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10419,
+    "forks": 1022,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "nezha",
+    "name": "Nezha Monitoring",
+    "github": "https://github.com/nezhahq/nezha",
+    "description": "자가 호스팅이 가능한 가볍고 직관적인 서버 및 웹사이트 모니터링 도구",
+    "longDescription": "다수의 서버 상태, 웹사이트 가용성, SSL 인증서 만료일 등을 한눈에 모니터링할 수 있는 O&M 도구입니다. 임계치 초과 시 알림 푸시와 웹 터미널 기능을 제공합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "모니터링",
+      "서버",
+      "웹사이트",
+      "Go",
+      "대시보드"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://nezhahq.github.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "대시보드 서버에 네자 패널을 설치 및 설정합니다.",
+      "모니터링 대상 서버에 에이전트를 배포합니다.",
+      "웹 패널에 접속하여 서버 상태와 알림 설정을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10354,
+    "forks": 1620,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "eul",
+    "name": "Eul",
+    "github": "https://github.com/gao-sun/eul",
+    "description": "SwiftUI로 작성된 깔끔하고 모던한 macOS 상태 표시줄 모니터링 앱",
+    "longDescription": "macOS 메뉴바에서 CPU, 메모리, 디스크, 네트워크, 팬 속도 및 블루투스 기기 배터리 잔량을 실시간으로 보여줍니다. 다크 모드와 기본 위젯을 지원하며 가볍게 동작합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "macOS",
+      "상태표시줄",
+      "모니터링",
+      "SwiftUI",
+      "앱"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/gao-sun/eul",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T17:04:02.262Z",
+    "requirements": [
+      "macOS 10.15 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew Cask 설치",
+        "command": "brew install --cask eul",
+        "note": "Homebrew를 이용한 간편 설치"
+      }
+    ],
+    "usageSteps": [
+      "Homebrew 또는 릴리즈 페이지를 통해 앱을 설치합니다.",
+      "애플리케이션 폴더에서 eul을 실행합니다.",
+      "상태 표시줄 아이콘을 통해 각 시스템 지표를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9952,
+    "forks": 380,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
     "id": "cua",
     "name": "cua",
     "github": "https://github.com/trycua/cua",
