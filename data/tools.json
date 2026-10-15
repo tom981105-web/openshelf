@@ -1,5 +1,927 @@
 [
   {
+    "id": "crush",
+    "name": "Crush",
+    "github": "https://github.com/charmbracelet/crush",
+    "description": "터미널 환경에서 LLM과 연동하여 도구, 코드, 워크플로우를 활용할 수 있는 AI 기반 프로그래밍 보조 도구입니다.",
+    "longDescription": "다양한 오픈/상용 LLM 모델을 지원하며 컨텍스트를 유지하면서 세션 간 자유로운 전환이 가능합니다. LSP(Language Server Protocol)를 활용하여 정교한 코드 컨텍스트를 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "터미널",
+      "Go",
+      "LLM",
+      "개발 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/charmbracelet/crush",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install charmbracelet/tap/crush",
+        "note": "macOS 환경"
+      },
+      {
+        "title": "NPM 설치",
+        "command": "npm install -g @charmland/crush",
+        "note": "Node.js 환경"
+      },
+      {
+        "title": "Winget 설치",
+        "command": "winget install charmbracelet.crush",
+        "note": "Windows 환경"
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리자를 통해 Crush 설치",
+      "사용할 LLM API 키 설정",
+      "터미널에서 명령어를 입력하여 세션 시작"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 28667,
+    "forks": 2337,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "autogpt",
+    "name": "AutoGPT",
+    "github": "https://github.com/Significant-Gravitas/AutoGPT",
+    "description": "완전 자동화된 AI 에이전트를 구축하고 배포하여 복잡한 워크플로우를 실행할 수 있는 오픈소스 플랫폼입니다.",
+    "longDescription": "사용자가 평문으로 목표를 설명하거나 비주얼 빌더를 통해 단계별로 세부 설정을 하면 에이전트가 스스로 판단하고 작업을 수행합니다. 온디맨드, 예약 실행, 트리거 등 다양한 방식으로 AI 에이전트를 가동할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "오픈소스",
+      "Python",
+      "LLM",
+      "자동화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://agpt.co",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "레포지토리 클론 및 소스 코드 확인",
+      "Docker 데몬 실행 상태 확인",
+      "필요한 환경 변수 및 설정 구성",
+      "AI 에이전트 워크플로우 실행"
+    ],
+    "examplePrompt": "주어진 프로젝트 요구사항에 맞춰 코드를 작성하고 테스트를 실행해줘",
+    "usageNote": "",
+    "stars": 187602,
+    "forks": 45920,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "agenticseek",
+    "name": "AgenticSeek",
+    "github": "https://github.com/Fosowl/agenticSeek",
+    "description": "클라우드 의존성 없이 로컬 하드웨어에서 웹 서핑, 코드 작성, 태스크 계획을 수행하는 100% 로컬 AI 에이전트입니다.",
+    "longDescription": "로컬 추론 모델에 최적화되어 있어 데이터 프라이버시를 보장하며 월 구독료 없이 전기세만으로 완전한 자율형 에이전트 기능을 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "로컬 AI",
+      "AI 에이전트",
+      "Python",
+      "DeepSeek",
+      "프라이버시"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "http://agenticseek.tech",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 확인",
+        "command": "docker info",
+        "note": "도커 데몬 실행 상태 검증"
+      }
+    ],
+    "usageSteps": [
+      "Docker 실행 상태 확인",
+      "로컬 모델 및 프로바이더 설정",
+      "AgenticSeek 서비스 시작 및 로컬 에이전트 구동"
+    ],
+    "examplePrompt": "로컬 환경에서 최신 트렌드를 검색하고 코드를 정리해줘",
+    "usageNote": "",
+    "stars": 27495,
+    "forks": 3095,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "skillspector",
+    "name": "SkillSpector",
+    "github": "https://github.com/NVIDIA/SkillSpector",
+    "description": "AI 에이전트 스킬의 취약점, 악성 패턴, 프롬프트 인젝션 및 공급망 위험을 사전에 탐지하는 보안 스캐너입니다.",
+    "longDescription": "Claude Code, Codex, Gemini CLI 등 다양한 에이전트 환경에서 실행되는 스킬들을 검사하여 잠재적인 보안 위협과 취약점을 식별하고 차단합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "취약점 스캐너",
+      "Python",
+      "MCP",
+      "AI 보안"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.nvidia.com/skills/scanning-agent-skills",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Python 3.12+"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex CLI",
+      "Gemini CLI"
+    ],
+    "install": [],
+    "usageSteps": [
+      "Python 3.12 이상 환경 준비",
+      "SkillSpector 레포지토리 구성 또는 패키지 설치",
+      "설치 전 대상 에이전트 스킬 스캔 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 20293,
+    "forks": 1781,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "keploy",
+    "name": "Keploy",
+    "github": "https://github.com/keploy/keploy",
+    "description": "네트워크 트래픽을 eBPF로 캡처하여 API 및 통합 테스트와 데이터 목(Mock)을 자동 생성하는 오픈소스 플랫폼입니다.",
+    "longDescription": "실제 사용자 트래픽, 데이터베이스 쿼리, 스트리밍 이벤트 등을 기록하여 자동으로 견고한 E2E 및 API 테스트 케이스로 변환해 줍니다.",
+    "category": "테스트·품질",
+    "tags": [
+      "API 테스트",
+      "테스트 자동화",
+      "Go",
+      "eBPF",
+      "CI/CD"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://keploy.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "애플리케이션 환경에 맞게 Keploy 통합",
+      "사용자 트래픽 및 API 호출 기록 수행",
+      "기록된 데이터를 기반으로 자동 생성된 테스트 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 18587,
+    "forks": 2414,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "eigent",
+    "name": "Eigent",
+    "github": "https://github.com/eigent-ai/eigent",
+    "description": "Claude Cowork 및 Codex의 오픈소스 로컬 대체재로 제공되는 데스크톱 기반 멀티 에이전트 워크스페이스입니다.",
+    "longDescription": "로컬 환경에서 원활하게 동작하며, 개발 생산성을 높이기 위해 여러 특화된 AI 에이전트와 도구를 결합하여 직관적인 데스크톱 UI로 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "데스크톱 앱",
+      "AI 에이전트",
+      "TypeScript",
+      "오픈소스",
+      "생산성"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.eigent.ai",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Node.js (18-22)",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/eigent-ai/eigent.git",
+        "note": "프로젝트 소스 코드 다운로드"
+      },
+      {
+        "title": "의존성 설치 및 실행",
+        "command": "npm install && npm run dev",
+        "note": "개발 모드 실행"
+      }
+    ],
+    "usageSteps": [
+      "저장소 클론 및 프로젝트 디렉토리 이동",
+      "npm을 통한 의존성 패키지 설치",
+      "개발 서버 구동 후 데스크톱 인터페이스 접속"
+    ],
+    "examplePrompt": "프로젝트 폴더의 구조를 분석하고 주요 컴포넌트를 리팩토링해줘",
+    "usageNote": "",
+    "stars": 15559,
+    "forks": 1869,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "casdoor",
+    "name": "Casdoor",
+    "github": "https://github.com/casdoor/casdoor",
+    "description": "OAuth, OIDC, SAML, WebAuthn 및 MCP 게이트웨이를 지원하는 오픈소스 에이전트 중심 IAM(신원 및 액세스 관리) 서버입니다.",
+    "longDescription": "웹 UI를 통해 사용자 인증, 싱글 사인온(SSO), 다중 인증(MFA) 등을 통합 관리할 수 있으며 다양한 외부 신원 제공자와 연동됩니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "인증",
+      "SSO",
+      "IAM",
+      "Go",
+      "안전성"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://casdoor.ai",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker를 이용한 올인원 서버 구성",
+      "웹 관리자 콘솔 접속 및 초기 계정 설정",
+      "필요한 인증 제공자(OAuth, OIDC 등) 연동"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 14579,
+    "forks": 1859,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "everos",
+    "name": "EverOS",
+    "github": "https://github.com/EverMind-AI/EverOS",
+    "description": "모든 AI 에이전트가 공유할 수 있는 로컬 우선, 마크다운 기반의 휴대용 장기 기억(Memory) 런타임 레이어입니다.",
+    "longDescription": "코딩 어시스턴트, 앱, 디바이스 간에 일관된 메모리를 유지할 수 있도록 지원하며, 키워드 검색 및 지능형 기억 관리 기능을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "메모리 관리",
+      "RAG",
+      "Python",
+      "AI 에이전트",
+      "마크다운"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://evermind.ai/everos",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Python 3.12+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "uv pip install everos",
+        "note": "uv를 이용한 빠른 설치"
+      }
+    ],
+    "usageSteps": [
+      "Python 3.12 이상 환경에서 패키지 설치",
+      "데모 명령어를 통해 메모리 저장 및 회수 기능 테스트",
+      "에이전트 워크플로우에 메모리 레이어 연동"
+    ],
+    "examplePrompt": "지난 작업에서 논의했던 핵심 아키텍처 결정을 기억해줘",
+    "usageNote": "",
+    "stars": 13438,
+    "forks": 941,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "oumi",
+    "name": "Oumi",
+    "github": "https://github.com/oumi-ai/oumi",
+    "description": "오픈소스 에이전트 LLM 및 VLM의 파인튜닝(SFT/RL), 평가, 배포를 손쉽게 수행할 수 있는 통합 프레임워크입니다.",
+    "longDescription": "Qwen, Gemma 등 다양한 오픈 모델을 대상으로 지도학습(SFT), 강화학습(RL), vLLM 기반 고속 추론 및 평가를 일원화된 도구로 지원합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "파인튜닝",
+      "LLM",
+      "Python",
+      "강화학습",
+      "머신러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://oumi.ai",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "기본 설치",
+        "command": "uv pip install oumi",
+        "note": "기본 패키지 설치"
+      },
+      {
+        "title": "GPU 지원 설치",
+        "command": "uv pip install 'oumi[gpu]'",
+        "note": "GPU 연동 환경"
+      }
+    ],
+    "usageSteps": [
+      "uv 또는 pip를 이용해 oumi 패키지 설치",
+      "학습 또는 평가용 데이터셋 및 모델 구성",
+      "파인튜닝 혹은 추론 명령어 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9401,
+    "forks": 796,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "app-store-screenshots",
+    "name": "app-store-screenshots",
+    "github": "https://github.com/ParthJadhav/app-store-screenshots",
+    "description": "AI 코딩 에이전트를 활용해 앱스토어 및 구글 플레이 마케팅 스크린샷 편집기와 캔버스를 구축하는 개발 도구입니다.",
+    "longDescription": "실제 기기 프레임, 인스펙터 컨트롤, 프로젝트 상태 관리 기능을 포함한 Next.js 기반의 스크린샷 에디터를 자동 생성하고 스토어 규격에 맞는 번들 내보내기를 지원합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "스크린샷",
+      "디자인",
+      "TypeScript",
+      "Next.js",
+      "AI 에이전트"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.parthjadhav.com/products/app-store-screenshots",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "Cursor",
+      "Windsurf",
+      "OpenCode",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "스킬 추가",
+        "command": "npx skills add ParthJadhav/app-store-screenshots",
+        "note": "에이전트 스킬 등록"
+      }
+    ],
+    "usageSteps": [
+      "지원되는 AI 코딩 에이전트에 스킬 추가",
+      "에이전트를 통해 마케팅 스크린샷 에디터 스캐폴딩 생성",
+      "캔버스에서 디자인 편집 후 스토어 규격으로 내보내기"
+    ],
+    "examplePrompt": "앱스토어 등록용 커피 레시피 앱 스크린샷 캔버스를 생성해줘",
+    "usageNote": "",
+    "stars": 7341,
+    "forks": 537,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "agent-framework",
+    "name": "agent-framework",
+    "github": "https://github.com/microsoft/agent-framework",
+    "description": "파이썬과 .NET을 지원하는 AI 에이전트 및 멀티 에이전트 워크플로우 구축·오케스트레이션 프레임워크",
+    "longDescription": "마이크로소프트에서 제공하는 에이전트 개발 프레임워크로, 복잡한 다중 에이전트 상호작용과 오케스트레이션을 파이썬과 닷넷 환경에서 쉽게 구현할 수 있도록 돕습니다. 풍부한 샘플과 공식 가이드를 제공하여 엔터프라이즈 급 AI 애플리케이션 개발에 적합합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "오케스트레이션",
+      "파이썬",
+      "닷넷",
+      "SDK"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://aka.ms/agent-framework",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Python",
+      ".NET"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "파이썬 패키지 설치",
+        "command": "pip install agent-framework",
+        "note": "PyPI를 통해 파이썬 환경에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 API 키를 설정합니다.",
+      "기본 에이전트 인스턴스를 초기화합니다.",
+      "프롬프트와 도구를 연결하여 워크플로우를 실행합니다."
+    ],
+    "examplePrompt": "주어진 저장소의 최근 커밋 내역을 분석하고 요약해 주세요.",
+    "usageNote": "상세한 가이드는 공식 문서와 MS Learn 리소스를 참고하세요.",
+    "stars": 14146,
+    "forks": 2474,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "art",
+    "name": "ART",
+    "github": "https://github.com/OpenPipe/ART",
+    "description": "GRPO를 사용하여 실제 태스크를 수행하는 다중 단계 에이전트를 학습시키는 에이전트 강화학습 트레이너",
+    "longDescription": "OpenPipe에서 개발한 Agent Reinforcement Trainer(ART)는 대형 언어 모델 기반의 에이전트가 복잡한 다단계 실제 작업을 수행할 수 있도록 강화학습(GRPO)을 적용하는 도구입니다. Qwen, Llama 등 다양한 오픈웨이트 모델과 연동됩니다.",
+    "category": "AI 모델",
+    "tags": [
+      "강화학습",
+      "GRPO",
+      "LLM",
+      "에이전트",
+      "파이썬"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://art.openpipe.ai",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "라이브러리 설치",
+        "command": "pip install openpipe-art",
+        "note": "파이썬 환경에 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 학습 환경을 구성합니다.",
+      "대상 모델과 데이터셋을 설정합니다.",
+      "GRPO 기반 강화학습 스크립트를 실행하여 에이전트를 훈련합니다."
+    ],
+    "examplePrompt": "이메일 자동 응답 에이전트의 다단계 상호작용 능력을 강화하기 위한 학습을 수행해 줘.",
+    "usageNote": "GPU 환경 및 적절한 컴퓨팅 리소스가 필요합니다.",
+    "stars": 10802,
+    "forks": 1005,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "swarms",
+    "name": "swarms",
+    "github": "https://github.com/kyegomez/swarms",
+    "description": "엔터프라이즈 급 고성능 멀티 에이전트 오케스트레이션 및 확장 프레임워크",
+    "longDescription": "순차적, 병렬적, 계층적 아키텍처를 지원하며 MCP 및 다양한 모델과의 통합을 제공하는 프로덕션 레디 멀티 에이전트 프레임워크입니다. 고성능 AI 시스템 구축과 확장성을 염두에 두고 설계되었습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "멀티 에이전트",
+      "오케스트레이션",
+      "파이썬",
+      "MCP",
+      "AI"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.swarms.world",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uv를 통한 설치",
+        "command": "uv pip install swarms",
+        "note": "권장되는 패키지 관리자인 uv를 사용하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 API 키를 환경 변수에 설정합니다.",
+      "멀티 에이전트 시스템 아키텍처를 정의합니다.",
+      "에이전트 군집을 실행하여 작업을 처리합니다."
+    ],
+    "examplePrompt": "세 개의 전문 에이전트를 협력시켜 복잡한 리서치 보고서를 작성해 줘.",
+    "usageNote": "",
+    "stars": 7261,
+    "forks": 1045,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "backlog-md",
+    "name": "Backlog.md",
+    "github": "https://github.com/MrLesk/Backlog.md",
+    "description": "Git 생태계 내에서 인간과 AI 에이전트 간의 프로젝트 협업을 관리하는 마크다운 기반 태스크 매니저",
+    "longDescription": "AI 에이전트가 코드를 작성하는 시대에 맞춰, 평범한 마크다운 파일과 제로백 설정 CLI를 통해 폴더를 자체 포함형 프로젝트 보드로 변환해 주는 도구입니다. 에이전트가 작업한 내용을 명확하게 검토할 수 있도록 돕습니다.",
+    "category": "생산성",
+    "tags": [
+      "태스크 관리",
+      "마크다운",
+      "Git",
+      "CLI",
+      "협업"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://backlog.md",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Node.js 또는 Bun"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "전역 설치",
+        "command": "npm i -g backlog.md",
+        "note": "npm을 사용하여 시스템 전역에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 도구를 초기화합니다.",
+      "마크다운 기반의 태스크 스펙을 작성하거나 에이전트가 생성한 내역을 확인합니다.",
+      "칸반 보드 인터페이스를 통해 작업 진행 상황을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7038,
+    "forks": 449,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "ai-infra-guard",
+    "name": "AI-Infra-Guard",
+    "github": "https://github.com/Tencent/AI-Infra-Guard",
+    "description": "에이전트 스캔, 스킬 스캔, MCP 스캔, 인프라 취약점 및 LLM 탈옥 평가를 제공하는 AI 레드티밍 플랫폼",
+    "longDescription": "텐센트 Zhuque Lab에서 개발한 AI-Infra-Guard(A.I.G)는 AI 에코시스템의 보안을 강화하기 위한 풀스택 레드티밍 플랫폼입니다. 프롬프트 인젝션, 악성 스킬 탐지, 인프라 취약점 검사 등을 종합적으로 지원합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "AI 보안",
+      "레드티밍",
+      "취약점 진단",
+      "MCP",
+      "파이썬"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://tencent.github.io/AI-Infra-Guard/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Docker",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "원클릭 스크립트 실행",
+        "command": "curl https://raw.githubusercontent.com/Tencent/AI-Infra-Guard/refs/heads/main/docker.sh | bash",
+        "note": "Docker를 자동으로 설치하고 A.I.G 서비스를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 환경을 준비하고 설치 스크립트를 실행합니다.",
+      "웹 대시보드 또는 CLI를 통해 스캔할 대상(에이전트, MCP 서버 등)을 지정합니다.",
+      "취약점 진단 리포트를 확인하고 보안 조치를 취합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경 배포 시 보안 설정에 유의하세요.",
+    "stars": 6882,
+    "forks": 663,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "trueforge",
+    "name": "trueforge",
+    "github": "https://github.com/truefoundry/trueforge",
+    "description": "LLM을 실제 작동하는 에이전트로 전환해 주는 오픈소스 에이전트 하네스 런타임 레이어",
+    "longDescription": "모델 호출, MCP 도구, 스킬, 샌드박싱, 승인 관리, 세션 상태 유지를 통합하여 제공하는 에이전트 런타임입니다. 채팅 UI, HTTP API, SDK 등을 통해 쉽게 에이전트를 구축하고 배포할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "에이전트",
+      "하네스",
+      "TypeScript",
+      "MCP",
+      "런타임"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://trueforge.dev",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Node.js 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npx로 빠른 실행",
+        "command": "npx @truefoundry/trueforge@latest",
+        "note": "설치 과정 없이 npx를 통해 즉시 실행할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "npx 명령어를 실행하거나 도커를 통해 프로젝트를 시작합니다.",
+      "카탈로그에서 모델과 도구를 구성합니다.",
+      "채팅 UI 또는 API를 통해 에이전트와 상호작용합니다."
+    ],
+    "examplePrompt": "웹 검색 도구를 사용하여 최신 기술 동향을 조사하고 요약해 줘.",
+    "usageNote": "",
+    "stars": 6235,
+    "forks": 520,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "agentscope-java",
+    "name": "agentscope-java",
+    "github": "https://github.com/agentscope-ai/agentscope-java",
+    "description": "분산 환경에서 프로덕션 급의 장기 실행 에이전트를 구축하기 위한 자바 프레임워크",
+    "longDescription": "안전하게 제어되는 장기 실행 에이전트와 실시간 프론트엔드 렌더링을 위한 32가지 타입의 이벤트 스트림 시스템을 제공하는 자바/코틀린 기반의 프로덕션 레디 에이전트 프레임워크입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "Java",
+      "Kotlin",
+      "에이전트 프레임워크",
+      "엔터프라이즈",
+      "분산시스템"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://java.agentscope.io/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "JDK 17 이상",
+      "Maven 또는 Gradle"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Maven 의존성 추가",
+        "command": "mvn install",
+        "note": "pom.xml에 agentscope-harness 의존성을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 JDK 17 이상 환경을 구성합니다.",
+      "Maven 또는 Gradle 설정에 AgentScope 의존성을 추가합니다.",
+      "이벤트 시스템과 모델 확장 모듈을 활용하여 에이전트 로직을 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "모델 제공자(DashScope, OpenAI 등)에 따라 별도의 확장 모듈을 함께 추가해야 합니다.",
+    "stars": 5996,
+    "forks": 1487,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "nexent",
+    "name": "nexent",
+    "github": "https://github.com/ModelEngine-Group/nexent",
+    "description": "통합 도구, 메모리, 오케스트레이션을 활용해 프로덕션 급 AI 에이전트를 자동 생성하는 제로코드 플랫폼",
+    "longDescription": "하네스 엔지니어링 원칙을 기반으로 통제 장치, 피드백 루프 등이 내장된 프로덕션 급 AI 에이전트를 제로코드로 자동 생성할 수 있는 플랫폼입니다. 쿠버네티스 환경 배포를 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "제로코드",
+      "에이전트",
+      "오케스트레이션",
+      "RAG",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://modelengine-group.github.io/nexent/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Docker",
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Kubernetes 배포",
+        "command": "bash deploy.sh k8s",
+        "note": "소스 코드를 복제한 뒤 쿠버네티스 환경에 배포 스크립트를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 환경 설정을 마칩니다.",
+      "도커 또는 쿠버네티스 클러스터에 배포 스크립트를 실행합니다.",
+      "웹 인터페이스를 통해 에이전트를 구성하고 워크플로우를 실행합니다."
+    ],
+    "examplePrompt": "문서 데이터를 기반으로 답변을 생성하는 에이전트 워크플로우를 생성해 줘.",
+    "usageNote": "",
+    "stars": 5948,
+    "forks": 742,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "optillm",
+    "name": "optillm",
+    "github": "https://github.com/algorithmicsuperintelligence/optillm",
+    "description": "추론 작업에서 LLM의 정확도와 성능을 획기적으로 향상시키는 OpenAI API 호환 최적화 추론 프록시",
+    "longDescription": "모델을 직접 재학습하거나 미세조정하지 않고도, 추론 시점에 20가지 이상의 최신 기법(트리 탐색, 연쇄 사고 등)을 적용하여 복잡한 추론 작업에서 2~10배 향상된 정확도를 제공하는 API 프록시 서버입니다.",
+    "category": "AI 모델",
+    "tags": [
+      "LLM",
+      "추론 최적화",
+      "프록시",
+      "API",
+      "Python"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/algorithmicsuperintelligence/optillm",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T22:04:00.625Z",
+    "requirements": [
+      "Python 3.10+ 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 패키지 설치",
+        "command": "pip install optillm",
+        "note": "파이썬 환경에서 pip 명령어로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하거나 Docker 컨테이너를 실행합니다.",
+      "optillm 서버를 백그라운드에 구동합니다.",
+      "기존 OpenAI API 호출 주소를 로컬 프록시 서버로 변경하여 요청을 보냅니다."
+    ],
+    "examplePrompt": "복잡한 수학 문제 해결을 위해 MCTS 접근법을 적용해 줘.",
+    "usageNote": "",
+    "stars": 4318,
+    "forks": 394,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
     "id": "dummyjson",
     "name": "DummyJSON",
     "github": "https://github.com/Ovi/DummyJSON",
