@@ -1,5 +1,747 @@
 [
   {
+    "id": "recordly",
+    "name": "Recordly",
+    "github": "https://github.com/webadderallorg/Recordly",
+    "description": "동영상 편집 기술 없이도 세련된 데모 및 제품 소개 영상을 제작할 수 있는 오픈소스 화면 녹화 도구입니다.",
+    "longDescription": "화면 녹화와 동시에 줌, 커서 보정, 스타일리시한 배경 적용 등의 모션 기반 프레젠테이션 편집 기능을 제공하는 데스크톱 애플리케이션입니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "화면 녹화",
+      "데모 영상",
+      "Electron",
+      "TypeScript",
+      "오픈소스"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://recordly.dev",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Arch Linux 설치 (AUR)",
+        "command": "yay -S recordly-bin",
+        "note": "AUR을 통해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "릴리즈 페이지에서 설치 파일을 다운로드하거나 패키지 관리자를 통해 설치합니다.",
+      "앱을 실행하여 화면 녹화를 시작합니다.",
+      "내장된 편집 기능을 통해 줌과 배경 효과를 추가하고 영상을 내보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 33785,
+    "forks": 2736,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "cc-switch",
+    "name": "CC Switch",
+    "github": "https://github.com/farion1231/cc-switch",
+    "description": "Claude Code, Codex, OpenCode, Hermes Agent 등 다양한 AI 도구의 API 제공자와 설정을 한 번에 관리하는 데스크톱 유틸리티입니다.",
+    "longDescription": "여러 AI 코딩 어시스턴트와 에이전트의 API 제공자 전환, MCP(Model Context Protocol), 스킬, 프롬프트를 통합 관리할 수 있는 크로스플랫폼 데스크톱 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 도구",
+      "Claude Code",
+      "MCP",
+      "데스크톱 앱",
+      "Rust"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ccswitch.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "Hermes Agent"
+    ],
+    "install": [],
+    "usageSteps": [
+      "릴리즈 페이지에서 운영체제에 맞는 버전을 다운로드합니다.",
+      "앱을 실행하여 연동할 AI 도구와 API 제공자를 선택합니다.",
+      "원클릭으로 설정을 전환하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 144279,
+    "forks": 9570,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "openmontage",
+    "name": "OpenMontage",
+    "github": "https://github.com/calesthio/OpenMontage",
+    "description": "AI 코딩 어시스턴트를 활용하여 동영상 제작을 자동화하는 오픈소스 에이전틱 비디오 프로덕션 시스템입니다.",
+    "longDescription": "다양한 파이프라인과 에이전트 스킬을 통해 AI 어시스턴트를 강력한 영상 제작 스튜디오로 탈바꿈시켜 주는 시스템입니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "AI",
+      "비디오 생성",
+      "FFmpeg",
+      "Python",
+      "오픈소스"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://www.openmontage.video/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Python 3.10+",
+      "FFmpeg",
+      "Node.js 18+"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Cursor",
+      "GitHub Copilot"
+    ],
+    "install": [
+      {
+        "title": "설정 및 실행",
+        "command": "git clone https://github.com/calesthio/OpenMontage.git && cd OpenMontage && make setup",
+        "note": "프로젝트를 복제한 후 설정 스크립트를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 복제하고 필수 요구사항을 설치합니다.",
+      "make setup 명령어로 초기 환경을 설정합니다.",
+      "AI 코딩 어시스턴트를 열어 비디오 제작 파이프라인을 실행합니다."
+    ],
+    "examplePrompt": "Create a product walkthrough video based on this script.",
+    "usageNote": "Python 3.10 이상과 FFmpeg 및 Node.js가 필요합니다.",
+    "stars": 68282,
+    "forks": 8755,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "puter",
+    "name": "Puter",
+    "github": "https://github.com/HeyPuter/puter",
+    "description": "웹 브라우저에서 실행되는 강력하고 확장 가능한 오픈소스 인터넷 컴퓨터(웹 OS)입니다.",
+    "longDescription": "웹 환경에서 파일 관리, 메모장, 음성 녹음기, 스프레드시트 등 다양한 애플리케이션을 이용할 수 있으며, 개발자가 웹 기반 앱을 빌드하고 배포할 수 있는 통합 환경을 제공합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "클라우드 OS",
+      "웹 데스크톱",
+      "TypeScript",
+      "JavaScript",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://puter.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Node.js",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 개발 환경 설정",
+        "command": "git clone https://github.com/HeyPuter/puter && cd puter && npm install && npm start",
+        "note": "저장소를 복제하고 의존성을 설치한 후 로컬 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 로컬에 복제합니다.",
+      "npm install을 실행하여 패키지를 설치합니다.",
+      "npm start로 서버를 실행하고 브라우저에서 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 43701,
+    "forks": 4084,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "copilotkit",
+    "name": "CopilotKit",
+    "github": "https://github.com/CopilotKit/CopilotKit",
+    "description": "에이전트 및 제너레이티브 UI를 구축하기 위한 오픈소스 프론트엔드 스택입니다.",
+    "longDescription": "React, Angular, Vue 등 다양한 프레임워크에서 AI 코파일럿, 채팅 UI, 제너레이티브 UI, 공유 상태 관리 기능을 쉽게 구현할 수 있도록 지원하는 프레임워크입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI",
+      "React",
+      "TypeScript",
+      "LLM",
+      "코파일럿"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.copilotkit.ai",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "새 프로젝트 생성",
+        "command": "npx copilotkit@latest create",
+        "note": "CopilotKit이 적용된 새로운 프로젝트를 스캐폴딩합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 스캐폴딩 명령어를 실행합니다.",
+      "React 또는 지원되는 프레임워크에 컴포넌트를 통합합니다.",
+      "채팅 UI 및 AI 에이전트 기능을 연결하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 38013,
+    "forks": 4733,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "adguardhome",
+    "name": "AdGuardHome",
+    "github": "https://github.com/AdguardTeam/AdGuardHome",
+    "description": "네트워크 전체의 광고와 추적기를 차단해주는 강력한 오픈소스 DNS 서버입니다.",
+    "longDescription": "홈 네트워크의 모든 기기에서 광고와 트래커를 원천 차단하며, 별도의 클라이언트 소프트웨어 설치 없이 DNS 레벨에서 원치 않는 연결을 블랙홀로 우회시킵니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "DNS",
+      "광고 차단",
+      "프라이버시",
+      "Go",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://adguard.com/adguard-home/overview.html",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 Docker 이미지 또는 수동 설치 가이드에 따라 서버를 설치합니다.",
+      "라우터 또는 기기의 DNS 설정을 AdGuard Home 서버 주소로 변경합니다.",
+      "웹 관리 대시보드에서 차단 로그를 확인하고 필터를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 37431,
+    "forks": 2546,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "postiz-app",
+    "name": "Postiz",
+    "github": "https://github.com/gitroomhq/postiz-app",
+    "description": "AI 에이전트 기반으로 소셜 미디어를 예약, 자동화, 분석할 수 있는 오픈소스 플랫폼입니다.",
+    "longDescription": "다양한 소셜 미디어 플랫폼에 콘텐츠를 간편하게 예약하고 게시할 수 있으며, AI 에이전트와 연동하여 콘텐츠 관리를 자동화할 수 있는 솔루션입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "소셜미디어",
+      "예약",
+      "Next.js",
+      "TypeScript",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://postiz.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Node.js",
+      "PostgreSQL",
+      "Redis"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 빠른 시작 가이드에 따라 프로젝트를 로컬 또는 서버에 배포합니다.",
+      "소셜 미디어 계정을 연동합니다.",
+      "AI 에이전트를 활용하여 게시물을 작성하고 일정을 예약합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "PostgreSQL과 Redis 환경이 필요합니다.",
+    "stars": 37198,
+    "forks": 7223,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "kotaemon",
+    "name": "Kotaemon",
+    "github": "https://github.com/Cinnamon/kotaemon",
+    "description": "문서와 대화할 수 있는 깔끔하고 커스텀 가능한 오픈소스 RAG 기반 툴입니다.",
+    "longDescription": "최종 사용자 인터페이스와 개발자를 위한 RAG 파이프라인 구축 도구를 동시에 제공하며, 다양한 LLM API 및 로컬 LLM(Ollama 등)과 손쉽게 연동할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RAG",
+      "챗봇",
+      "LLM",
+      "Python",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cinnamon.github.io/kotaemon/",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 파이썬 환경을 설정합니다.",
+      "필요한 의존성 패키지를 설치하고 애플리케이션을 실행합니다.",
+      "웹 인터페이스에 문서를 업로드하고 대화를 시작합니다."
+    ],
+    "examplePrompt": "Summarize the key points from the uploaded PDF document.",
+    "usageNote": "",
+    "stars": 25807,
+    "forks": 2164,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "godot",
+    "name": "Godot Engine",
+    "github": "https://github.com/godotengine/godot",
+    "description": "통합 인터페이스를 제공하는 다중 플랫폼 2D 및 3D 오픈소스 게임 엔진",
+    "longDescription": "다양한 도구가 포함된 단일 인터페이스를 통해 2D 및 3D 게임을 개발하고 데스크톱, 모바일, 웹 등의 플랫폼으로 원클릭 내보내기가 가능한 오픈소스 게임 엔진입니다.",
+    "category": "3D·CAD",
+    "tags": [
+      "게임엔진",
+      "C++",
+      "오픈소스",
+      "멀티플랫폼"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://godotengine.org",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트에서 Godot Editor 다운로드 및 실행",
+      "새 프로젝트 생성 및 2D 또는 3D 씬 구성",
+      "스크립트 작성 및 게임 로직 구현",
+      "원하는 플랫폼으로 프로젝트 내보내기"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 118408,
+    "forks": 27061,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "docusaurus",
+    "name": "Docusaurus",
+    "github": "https://github.com/facebook/docusaurus",
+    "description": "오픈소스 프로젝트 및 기술 문서를 쉽고 빠르게 구축하고 유지보수할 수 있는 정적 사이트 생성기",
+    "longDescription": "React 기반으로 제작되어 문서 작성, 현지화, 커스터마이징이 용이하며, 오픈소스 프로젝트나 개인 블로그용 웹사이트를 간편하게 배포할 수 있습니다.",
+    "category": "문서",
+    "tags": [
+      "문서화",
+      "React",
+      "TypeScript",
+      "웹사이트"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docusaurus.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "docusaurus.new 방문 또는 템플릿 프로젝트 생성",
+      "Markdown 파일로 문서 작성",
+      "로컬 개발 서버 실행하여 미리보기",
+      "정적 파일 빌드 및 배포"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 66489,
+    "forks": 10083,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "bevy",
+    "name": "Bevy",
+    "github": "https://github.com/bevyengine/bevy",
+    "description": "Rust 언어로 작성된 직관적이고 가벼운 데이터 중심 게임 엔진",
+    "longDescription": "ECS(Entity Component System) 아키텍처를 기반으로 설계되어 모듈화가 쉽고 빠른 성능을 제공하는 오픈소스 게임 엔진입니다.",
+    "category": "3D·CAD",
+    "tags": [
+      "게임개발",
+      "Rust",
+      "ECS",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://bevy.org",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Cargo 프로젝트 생성",
+      "Cargo.toml에 bevy 패키지 추가",
+      "main.rs에 기본 플러그인과 윈도우 설정 작성",
+      "cargo run 명령어로 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 49008,
+    "forks": 4934,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "spacedrive",
+    "name": "Spacedrive",
+    "github": "https://github.com/spacedriveapp/spacedrive",
+    "description": "Rust로 작성된 가상 분산 파일 시스템 기반의 크로스플랫폼 파일 탐색기",
+    "longDescription": "여러 기기의 저장소를 연결하여 하나의 통합된 파일 라이브러리로 관리할 수 있게 해주는 오픈소스 파일 관리 애플리케이션입니다.",
+    "category": "개인 도구",
+    "tags": [
+      "파일관리자",
+      "Rust",
+      "분산시스템",
+      "스토리지"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://spacedrive.com",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 홈페이지 또는 릴리즈 페이지에서 설치 파일 다운로드",
+      "애플리케이션 실행 및 로컬 디렉토리 연결",
+      "가상 분산 파일 시스템 설정 및 파일 관리"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 39176,
+    "forks": 1359,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "airllm",
+    "name": "AirLLM",
+    "github": "https://github.com/lyogavin/airllm",
+    "description": "단일 4GB VRAM GPU에서도 대형 언어 모델을 실행할 수 있도록 메모리 사용량을 대폭 줄여주는 추론 도구",
+    "longDescription": "양자화나 프루닝 없이도 70B 이상의 거대한 대형 언어 모델을 저사양 그래픽카드 환경에서 실행할 수 있게 지원합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "LLM",
+      "인공지능",
+      "Python",
+      "GPU"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/lyogavin/airllm",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "파이썬 환경 및 PyTorch 설치",
+      "AirLLM 패키지 및 관련 의존성 라이브러리 설치",
+      "파이썬 스크립트에서 모델 로드 및 프롬프트 실행"
+    ],
+    "examplePrompt": "Hugging Face의 대형 언어 모델을 저사양 GPU 환경에서 로드하고 실행하는 파이썬 코드를 작성해 줘",
+    "usageNote": "",
+    "stars": 38693,
+    "forks": 3945,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "firecracker",
+    "name": "Firecracker",
+    "github": "https://github.com/firecracker-microvm/firecracker",
+    "description": "서버리스 컴퓨팅을 위해 보안성과 속도를 최적화한 가벼운 가상 머신(microVM) 모니터",
+    "longDescription": "컨테이너 및 함수 기반 서비스를 안전하고 빠르게 격리하여 멀티테넌트 환경을 구축할 수 있도록 Rust로 작성된 가상화 기술입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "가상화",
+      "Rust",
+      "서버리스",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://firecracker-microvm.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Docker",
+      "Bash",
+      "Linux"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드",
+        "command": "git clone https://github.com/firecracker-microvm/firecracker && cd firecracker && tools/devtool build toolchain=\"$(uname -m)-unknown-linux-musl\"",
+        "note": "도커 환경을 사용하여 파이어크래커 바이너리를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소 클론 및 devtool을 통한 빌드 수행",
+      "생성된 바이너리를 통해 microVM 설정 파일 구성",
+      "API를 통한 microVM 인스턴스 시작 및 관리"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 37382,
+    "forks": 2677,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "uppy",
+    "name": "Uppy",
+    "github": "https://github.com/transloadit/uppy",
+    "description": "다양한 소스에서 파일을 가져와 업로드할 수 있는 모듈식 JavaScript 파일 업로더",
+    "longDescription": "로컬 디스크뿐만 아니라 클라우드 스토리지, 웹 URL, 웹캠 등 다양한 경로에서 파일을 선택하고 미리보기 및 업로드 기능을 제공하는 프론트엔드 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "파일업로더",
+      "JavaScript",
+      "TypeScript",
+      "웹"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://uppy.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm install @uppy/core @uppy/dashboard @uppy/tus",
+        "note": "npm을 사용하여 Uppy 코어 및 대시보드 플러그인을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Uppy 코어 및 UI 플러그인 설치",
+      "HTML 또는 JS 파일에 Uppy 인스턴스 초기화 코드 작성",
+      "업로드 대상 엔드포인트 설정 및 UI 컴포넌트 연결"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 31026,
+    "forks": 2109,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "swagger-ui",
+    "name": "Swagger UI",
+    "github": "https://github.com/swagger-api/swagger-ui",
+    "description": "OpenAPI 사양을 기반으로 대화형 API 문서와 사용자 인터페이스를 동적으로 생성하는 도구",
+    "longDescription": "RESTful API를 시각적으로 테스트하고 문서화할 수 있도록 HTML, JavaScript, CSS 자산을 제공하여 개발자가 API와 쉽게 상호작용할 수 있게 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API",
+      "OpenAPI",
+      "JavaScript",
+      "문서화"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://swagger.io",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "OpenAPI 스펙 파일 준비 (JSON 또는 YAML)",
+      "Swagger UI를 프로젝트에 포함하거나 호스팅된 버전 사용",
+      "API 정의 파일 경로를 지정하여 UI 실행 및 테스트"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 29034,
+    "forks": 9250,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
+    "id": "claude-seo",
+    "name": "Claude SEO",
+    "github": "https://github.com/AgriciDaniel/claude-seo",
+    "description": "기술적 SEO, E-E-A-T, 스키마 및 AI 검색 최적화를 수행하는 Claude Code용 범용 SEO 분석 도구",
+    "longDescription": "다수의 서브 스킬과 전문 에이전트를 병렬로 실행하여 웹사이트의 SEO 상태를 진단하고 구글 가이드라인에 기반한 개선 조치 계획을 도출합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "SEO",
+      "Claude Code",
+      "인공지능",
+      "마케팅자동화"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://claude-seo.md",
+    "featured": 9,
+    "added": "2026-10-15",
+    "addedAt": "2026-10-15T01:04:01.536Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Claude Code 환경에 SEO 스킬 플러그인 설치",
+      "분석할 대상 웹사이트나 페이지 지정",
+      "명령어를 입력하여 SEO 감사 및 보고서 생성 실행"
+    ],
+    "examplePrompt": "/seo audit 명령어를 실행하여 현재 웹사이트의 기술적 SEO와 스키마 마크업을 점검해 줘",
+    "usageNote": "",
+    "stars": 18943,
+    "forks": 2764,
+    "starsUpdatedAt": "2026-10-15"
+  },
+  {
     "id": "chrono",
     "name": "chrono",
     "github": "https://github.com/chronotope/chrono",
