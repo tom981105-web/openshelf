@@ -1,5 +1,831 @@
 [
   {
+    "id": "thefuck",
+    "name": "thefuck",
+    "github": "https://github.com/nvbn/thefuck",
+    "description": "이전에 입력한 콘솔 명령어의 오류를 자동으로 감지하고 수정해주는 명령어 교정 도구입니다.",
+    "longDescription": "사용자가 잘못 입력한 터미널 명령어를 분석하여 올바른 구문으로 수정해주는 파이썬 기반 애플리케이션입니다. 실수로 오타를 냈거나 권한이 부족할 때 이전 명령어를 빠르게 바로잡을 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "터미널",
+      "명령어",
+      "Python",
+      "개발 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/nvbn/thefuck",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "명령어 입력 후 오류 발생 시 'fuck' 입력",
+      "자동으로 교정된 명령어를 확인하고 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 97909,
+    "forks": 3958,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "mole",
+    "name": "Mole",
+    "github": "https://github.com/tw93/Mole",
+    "description": "맥과 윈도우 환경을 깨끗하게 정리하고 앱을 삭제하며 디스크를 분석해주는 오픈소스 CLI 및 네이티브 앱입니다.",
+    "longDescription": "CleanMyMac, AppCleaner, DaisyDisk 등의 기능을 하나의 도구로 결합한 종합 시스템 관리 CLI 툴킷입니다. 불필요한 파일과 앱 잔여물을 깔끔하게 정리하여 시스템을 최적화합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "CLI",
+      "시스템 관리",
+      "디스크 정리",
+      "macOS",
+      "Windows"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://mole.fit",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew로 CLI 설치",
+        "command": "brew install mole",
+        "note": "macOS 또는 Linux 환경에서 터미널을 통해 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 mole 명령어 또는 네이티브 앱 실행",
+      "디스크 분석 및 불필요한 파일 정리 기능 선택",
+      "삭제 전 검토 후 시스템 최적화 진행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 70652,
+    "forks": 2501,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "acme-sh",
+    "name": "acme.sh",
+    "github": "https://github.com/acmesh-official/acme.sh",
+    "description": "순수 유닉스 셸 스크립트로 작성된 가볍고 강력한 SSL/TLS 인증서 자동화 클라이언트입니다.",
+    "longDescription": "파이썬 등의 무거운 의존성 없이 순수 셸 스크립트만으로 ACME 프로토콜을 구현하여 인증서 발급, 갱신, 설치를 자동으로 처리합니다. 루트 권한 없이도 손쉽게 사용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "SSL",
+      "TLS",
+      "인증서",
+      "Bash",
+      "보안"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://acme.sh",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "cURL을 이용한 설치",
+        "command": "curl https://get.acme.sh | sh -s email=my@example.com",
+        "note": "이메일 주소를 지정하여 셸 스크립트를 즉시 다운로드하고 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 acme.sh 환경 구성",
+      "웹서버 플러그인 또는 DNS API를 연동하여 인증서 발급",
+      "자동 갱신 크론잡 설정 확인"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 47826,
+    "forks": 5690,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "atuin",
+    "name": "atuin",
+    "github": "https://github.com/atuinsh/atuin",
+    "description": "기존 셸 히스토리를 SQLite 데이터베이스로 대체하고 암호화된 동기화 기능을 제공하는 스마트 검색 도구입니다.",
+    "longDescription": "단순 텍스트 기반의 터미널 명령어 기록을 강력한 데이터베이스 검색으로 업그레이드합니다. 실행 시간, 종료 코드, 작업 디렉토리 등 풍부한 문맥 정보를 함께 기록하고 안전하게 동기화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Shell",
+      "히스토리",
+      "Rust",
+      "SQLite",
+      "검색"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://atuin.sh",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew로 설치",
+        "command": "brew install atuin",
+        "note": "맥 또는 리눅스 환경에서 홈브루를 통해 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "셸 초기화 설정 추가 (eval \"$(atuin init shell)\")",
+      "Ctrl+R 또는 단축키를 눌러 향상된 히스토리 검색 UI 실행",
+      "조건에 맞는 명령어 필터링 및 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 32009,
+    "forks": 1005,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "cmder",
+    "name": "Cmder",
+    "github": "https://github.com/cmderdev/cmder",
+    "description": "윈도우 환경에서 뛰어난 가독성과 단축키를 지원하는 깔끔한 오픈소스 콘솔 에뮬레이터 패키지입니다.",
+    "longDescription": "윈도우의 기본 콘솔 환경에 불만을 가진 개발자들을 위해 ConEmu를 기반으로 제작되었으며, 모노키 컬러 테마와 풍부한 단축키 설정, 편리한 탭 기능을 기본 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Windows",
+      "터미널",
+      "콘솔",
+      "PowerShell",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://cmder.app",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Windows"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스 페이지에서 포터블 아카이브 다운로드",
+      "일반 권한의 폴더에 압축 해제",
+      "Cmder.exe 실행하여 사용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "관리자 권한이 필요한 System32 등의 경로에 설치하지 않는 것을 권장합니다.",
+    "stars": 27006,
+    "forks": 2075,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "gum",
+    "name": "gum",
+    "github": "https://github.com/charmbracelet/gum",
+    "description": "셸 스크립트에서 매력적인 대화형 UI 컴포넌트를 손쉽게 구현할 수 있게 해주는 유틸리티입니다.",
+    "longDescription": "복잡한 고 코드 작성 없이도 셸 스크립트 안에서 선택 메뉴, 입력 필드, 확인 창, 스피너 등 시각적으로 뛰어난 터미널 요소를 조합할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "Shell",
+      "UI",
+      "Go",
+      "개발 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/charmbracelet/gum",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew로 설치",
+        "command": "brew install gum",
+        "note": "macOS 또는 Linux 환경에서 패키지 매니저로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "셸 스크립트 작성 시 gum 명령어 조합 (예: gum choose)",
+      "터미널에서 대화형 인터페이스 실행",
+      "사용자 입력 결과 받아오기"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 24512,
+    "forks": 557,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "qinglong",
+    "name": "qinglong",
+    "github": "https://github.com/whyour/qinglong",
+    "description": "Python3, JavaScript, Shell, TypeScript 등을 지원하는 웹 기반의 종합 타이머 작업 관리 플랫폼입니다.",
+    "longDescription": "서버에서 주기적으로 실행되어야 하는 다양한 스크립트와 작업을 웹 인터페이스를 통해 편리하게 등록하고 관리할 수 있습니다. 원격 CLI와 OpenAPI를 지원하여 자동화 및 연동이 용이합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "자동화",
+      "타이머",
+      "Docker",
+      "Node.js",
+      "Python"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://qinglong.online",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker를 이용해 청룡 패널 컨테이너 배포",
+      "웹 대시보드 접속 후 계정 설정",
+      "cron 형식의 주기와 함께 스크립트 등록"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 19973,
+    "forks": 3220,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "forgecode",
+    "name": "Forge",
+    "github": "https://github.com/tailcallhq/forgecode",
+    "description": "개발 환경과 통합되어 다양한 최신 LLM 모델을 활용할 수 있는 AI 기반 터미널 페어 프로그래밍 도구입니다.",
+    "longDescription": "터미널 환경에서 인공지능의 도움을 받아 코드를 작성하고 검토할 수 있는 개발 보조 에이전트입니다. Claude, GPT, DeepSeek 등 300개 이상의 모델과 연동하여 강력한 코딩 워크플로우를 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI",
+      "페어 프로그래밍",
+      "CLI",
+      "코드 생성",
+      "Rust"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://forgecode.dev",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude",
+      "OpenAI",
+      "Grok",
+      "DeepSeek",
+      "Gemini"
+    ],
+    "install": [
+      {
+        "title": "cURL로 CLI 설치",
+        "command": "curl -fsSL https://forgecode.dev/cli | sh",
+        "note": "원격 설치 스크립트를 실행하여 개발 환경에 Forge를 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 forge 명령어 실행",
+      "필요한 AI 모델 API 키 연동",
+      "자연어로 코딩 요구사항을 입력하여 페어 프로그래밍 수행"
+    ],
+    "examplePrompt": "현재 디렉토리의 버그를 분석하고 수정안을 작성해줘",
+    "usageNote": "",
+    "stars": 7637,
+    "forks": 1469,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "nvm",
+    "name": "nvm",
+    "github": "https://github.com/nvm-sh/nvm",
+    "description": "다양한 활성 Node.js 버전을 관리하기 위한 POSIX 호환 Bash 스크립트입니다.",
+    "longDescription": "사용자별로 여러 Node.js 버전을 쉽게 설치하고 전환할 수 있는 버전 관리 도구입니다. CI/CD 작업 환경이나 Docker 컨테이너 내에서도 간편하게 활용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Node.js",
+      "버전 관리",
+      "Bash",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/nvm-sh/nvm",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Bash",
+      "curl 또는 wget"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.8/install.sh | bash",
+        "note": "공식 설치 스크립트를 다운로드하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 nvm을 설치합니다.",
+      "터미널을 재시작하거나 프로파일 소스를 다시 로드합니다.",
+      "nvm install 버전 명령으로 원하는 Node.js 버전을 설치합니다.",
+      "nvm use 버전 명령으로 사용할 버전을 전환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 95560,
+    "forks": 10536,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "pyenv",
+    "name": "pyenv",
+    "github": "https://github.com/pyenv/pyenv",
+    "description": "여러 Python 버전을 간편하게 관리하고 전환할 수 있는 도구입니다.",
+    "longDescription": "UNIX 철학에 따라 단일 목적에 충실하게 설계된 Python 버전 관리 도구입니다. 전역 및 프로젝트별 Python 버전을 유연하게 변경할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "버전 관리",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/pyenv/pyenv",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Git",
+      "컴파일 빌드 의존성 패키지"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "자동 설치 스크립트",
+        "command": "curl https://pyenv.run | bash",
+        "note": "pyenv와 관련 플러그인을 함께 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행해 pyenv를 설치합니다.",
+      "셸 설정 파일(~/.bashrc 등)에 환경 변수를 등록합니다.",
+      "pyenv install 버전으로 필요한 Python 버전을 설치합니다.",
+      "pyenv global 버전 또는 local 명령으로 버전을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 45147,
+    "forks": 3271,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "nushell",
+    "name": "nushell",
+    "github": "https://github.com/nushell/nushell",
+    "description": "구조화된 데이터를 다루는 새로운 패러다임의 현대적인 셸입니다.",
+    "longDescription": "텍스트 스트림 대신 구조화된 데이터를 파이프라인으로 처리할 수 있는 강력한 크로스플랫폼 셸입니다. 내장된 풍부한 데이터 조작 명령어를 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "셸",
+      "CLI",
+      "Rust",
+      "터미널"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.nushell.sh/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo로 설치",
+        "command": "cargo install nu",
+        "note": "Rust 패키지 매니저를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Nushell을 설치하고 실행합니다.",
+      "ls 등의 명령을 실행하여 구조화된 테이블 형태로 출력되는 결과를 확인합니다.",
+      "where 또는 select 등의 필터 명령어를 파이프라인으로 연결하여 데이터를 조회합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 40672,
+    "forks": 2303,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "zsh-autosuggestions",
+    "name": "zsh-autosuggestions",
+    "github": "https://github.com/zsh-users/zsh-autosuggestions",
+    "description": "Zsh에서 명령어 이력과 자동완성을 기반으로 Fish 셸처럼 실시간 자동 추천을 제공합니다.",
+    "longDescription": "사용자가 입력하는 동안 이력과 완성 기능을 바탕으로 다음에 올 명령어를 회색 텍스트로 미리 보여줍니다. 우측 방향키나 End 키를 눌러 쉽게 완성할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Zsh",
+      "자동완성",
+      "터미널",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/zsh-users/zsh-autosuggestions",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Zsh v4.3.11 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Git 클론을 통한 설치",
+        "command": "git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions",
+        "note": "Oh My Zsh 커스텀 플러그인 디렉토리에 클론합니다."
+      }
+    ],
+    "usageSteps": [
+      "플러그인 저장소를 클론하거나 플러그인 매니저에 등록합니다.",
+      ".zshrc 파일의 plugins 목록에 zsh-autosuggestions를 추가합니다.",
+      "터미널을 재시작하거나 소스 파일을 다시 불러옵니다.",
+      "명령어 입력 시 나타나는 추천을 우측 화살표로 수락합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 36130,
+    "forks": 1940,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "zsh-syntax-highlighting",
+    "name": "zsh-syntax-highlighting",
+    "github": "https://github.com/zsh-users/zsh-syntax-highlighting",
+    "description": "Zsh 대화형 터미널에서 입력 중인 명령어에 구문 강조 기능을 제공합니다.",
+    "longDescription": "프롬프트에 명령어를 입력하는 동안 실시간으로 구문을 분석하여 올바른 명령어와 인자 색상을 다르게 표시해 줍니다. 문법 오류를 사전에 확인하는 데 유용합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Zsh",
+      "구문 강조",
+      "터미널",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "github.com/zsh-users/zsh-syntax-highlighting",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Zsh 4.3.11 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Git 클론 설치",
+        "command": "git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting",
+        "note": "Oh My Zsh 커스텀 플러그인 폴더에 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 적절한 플러그인 디렉토리에 복제합니다.",
+      ".zshrc 파일의 plugins 항목에 zsh-syntax-highlighting을 추가합니다.",
+      ".zshrc 파일의 맨 마지막 줄에 플러그인 소스 구문을 추가합니다.",
+      "터미널을 재시작하여 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "반드시 .zshrc 파일의 가장 마지막에 소스 코드를 불러와야 정상 동작합니다.",
+    "stars": 23030,
+    "forks": 1374,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "spaceship-prompt",
+    "name": "spaceship-prompt",
+    "github": "https://github.com/spaceship-prompt/spaceship-prompt",
+    "description": "Zsh을 위한 미니멀하고 강력하며 확장 가능한 테마 프롬프트입니다.",
+    "longDescription": "Git 상태, 패키지 버전, 실행 시간 등 개발에 유용한 다양한 정보를 깔끔하고 직관적인 인터페이스로 표시해 주는 Zsh 프롬프트 테마입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Zsh",
+      "프롬프트",
+      "테마",
+      "터미널"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://spaceship-prompt.sh",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Zsh",
+      "Git 2.13 이상",
+      "Nerd Fonts 지원 폰트"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm을 이용한 글로벌 설치",
+        "command": "npm install --global space-prompt",
+        "note": "npm을 통해 프롬프트를 전역 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "테마 저장소를 클론하거나 패키지 매니저로 설치합니다.",
+      "Zsh 테마 설정을 spaceship으로 변경합니다.",
+      "터미널을 재시작하여 적용된 프롬프트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 20590,
+    "forks": 968,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "rbenv",
+    "name": "rbenv",
+    "github": "https://github.com/rbenv/rbenv",
+    "description": "유닉스 계열 시스템에서 애플리케이션의 Ruby 환경을 매끄럽게 관리합니다.",
+    "longDescription": "동일한 시스템 내에서 여러 Ruby 버전을 쉽게 전환할 수 있게 해주며, 프로젝트별로 올바른 Ruby 버전을 보장하는 버전 관리 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Ruby",
+      "버전 관리",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://rbenv.org/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Git",
+      "컴파일 빌드 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew로 설치 (macOS)",
+        "command": "brew install rbenv ruby-build",
+        "note": "Homebrew를 통해 rbenv와 빌드 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "rbenv와 ruby-build를 설치합니다.",
+      "셸 환경에 rbenv init 설정을 추가합니다.",
+      "rbenv install 명령으로 필요한 Ruby 버전을 설치합니다.",
+      "rbenv local 명령으로 프로젝트 디렉토리의 Ruby 버전을 지정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16735,
+    "forks": 1423,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "terminalizer",
+    "name": "terminalizer",
+    "github": "https://github.com/faressoft/terminalizer",
+    "description": "터미널 세션을 녹화하여 애니메이션 GIF 이미지로 변환하거나 웹 플레이어로 공유합니다.",
+    "longDescription": "터미널 상의 명령어 입력 및 출력 과정을 정교하게 녹화하고 커스텀 테마나 폰트를 적용해 고화질 GIF나 웹 플레이어 링크로 생성해 주는 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "녹화",
+      "GIF",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://terminalizer.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm을 이용한 전역 설치",
+        "command": "npm install -g terminalizer",
+        "note": "Node.js 패키지 매니저로 전역 설치를 진행합니다."
+      }
+    ],
+    "usageSteps": [
+      "terminalizer init 명령으로 기본 설정 파일을 생성합니다.",
+      "terminalizer record 녹화이름 명령으로 터미널 조작을 녹화합니다.",
+      "terminalizer render 녹화이름 명령으로 GIF 파일로 변환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16169,
+    "forks": 522,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "direnv",
+    "name": "direnv",
+    "github": "https://github.com/direnv/direnv",
+    "description": "현재 디렉토리에 따라 환경 변수를 자동으로 로드하고 해제하는 셸 확장 프로그램입니다.",
+    "longDescription": "프로젝트 디렉토리에 진입할 때 자동으로 특정 환경 변수를 활성화하고, 디렉토리를 벗어나면 원래 상태로 복원하여 `.profile` 파일을 깔끔하게 유지해 줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "환경 변수",
+      "셸",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://direnv.net",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "지원되는 셸 (Bash, Zsh, Fish 등)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew로 설치",
+        "command": "brew install direnv",
+        "note": "macOS 환경에서 Homebrew로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "direnv 패키지를 설치합니다.",
+      "사용 중인 셸에 direnv 훅을 추가합니다.",
+      "프로젝트 폴더에 .envrc 파일을 생성하고 필요한 환경 변수를 작성합니다.",
+      "direnv allow 명령으로 해당 설정을 승인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15506,
+    "forks": 828,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "sandbox",
+    "name": "sandbox",
+    "github": "https://github.com/agent-infra/sandbox",
+    "description": "브라우저, 셸, 파일시스템, MCP 및 VSCode 서버를 단일 Docker 컨테이너에 통합한 AI 에이전트용 샌드박스입니다.",
+    "longDescription": "AI 에이전트가 안전하게 코드를 실행하고 웹을 탐색하며 파일을 조작할 수 있도록 다양한 개발 도구와 프로토콜을 하나의 Docker 환경에 담아 제공하는 통합 샌드박스입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "샌드박스",
+      "Docker",
+      "AI 에이전트",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://sandbox.agent-infra.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T20:04:00.063Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run --security-opt seccomp=unconfined -p 8080:8080 agentinfra/sandbox:latest",
+        "note": "도커 컨테이너를 실행하여 샌드박스 환경을 시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker를 통해 샌드박스 이미지를 실행합니다.",
+      "Python 또는 TypeScript SDK를 프로젝트에 설치합니다.",
+      "API 클라이언트를 초기화하여 샌드박스 내부의 셸 및 파일 시스템과 상호작용합니다."
+    ],
+    "examplePrompt": "샌드박스 내부에서 Python 스크립트를 실행하고 결과를 반환해 주세요.",
+    "usageNote": "",
+    "stars": 6177,
+    "forks": 559,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
     "id": "monogame",
     "name": "MonoGame",
     "github": "https://github.com/MonoGame/MonoGame",
