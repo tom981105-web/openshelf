@@ -1,5 +1,805 @@
 [
   {
+    "id": "locust",
+    "name": "locust",
+    "github": "https://github.com/locustio/locust",
+    "description": "파이썬 코드로 작성 가능한 확장 가능한 오픈소스 부하 테스트 도구입니다.",
+    "longDescription": "사용자 테스트 시나리오를 일반 파이썬 코드로 작성할 수 있으며, 가벼운 코루틴 기반으로 동작하여 대규모 동시 접속 상황을 시뮬레이션할 수 있습니다. 웹 기반 사용자 인터페이스를 통해 실시간 성능 지표를 모니터링할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "부하 테스트",
+      "성능 측정",
+      "파이썬",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://locust.cloud",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI를 통한 설치",
+        "command": "pip install locust",
+        "note": "파이썬 패키지 관리자를 사용하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "locustfile.py 파일에 사용자 행동 시나리오를 작성합니다.",
+      "명령어 창에서 locust 명령어를 실행합니다.",
+      "웹 브라우저에서 제어 화면에 접속하여 테스트를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 28212,
+    "forks": 3256,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "vegeta",
+    "name": "vegeta",
+    "github": "https://github.com/tsenart/vegeta",
+    "description": "Go 언어로 작성된 다목적 HTTP 부하 테스트 도구 및 라이브러리입니다.",
+    "longDescription": "HTTP 서비스의 성능을 한계까지 테스트하기 위해 설계된 다목적 부하 테스트 도구입니다. 명령줄 인터페이스와 Go 라이브러리를 모두 제공하며, 대규모 분산 환경에서도 안정적으로 부하를 생성할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "부하 테스트",
+      "HTTP",
+      "Go",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://godoc.org/github.com/tsenart/vegeta/lib",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew를 통한 설치",
+        "command": "brew update && brew install vegeta",
+        "note": "macOS 환경에서 홈브루를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "테스트 대상 URL과 요청 설정을 준비합니다.",
+      "vegeta attack 명령어로 부하를 발생시킵니다.",
+      "결과를 report 명령어로 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 25222,
+    "forks": 1426,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "ali",
+    "name": "ali",
+    "github": "https://github.com/nakabonne/ali",
+    "description": "실시간 터미널 인터페이스를 제공하는 Go 기반 HTTP 부하 테스트 도구입니다.",
+    "longDescription": "vegeta에서 영감을 받아 개발된 실시간 분석 지원 부하 테스트 도구입니다. 터미널 내에서 그래프와 성능 지표를 실시간으로 시각화하여 보여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "부하 테스트",
+      "TUI",
+      "실시간 모니터링",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/nakabonne/ali",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew를 통한 설치",
+        "command": "brew install nakabonne/ali/ali",
+        "note": "macOS에서 홈브루를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "대상 URL과 함께 ali 명령어를 실행합니다.",
+      "터미널 UI에서 실시간으로 지표 변화를 확인합니다.",
+      "테스트 완료 후 요약 리포트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3936,
+    "forks": 152,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "mangohud",
+    "name": "MangoHud",
+    "github": "https://github.com/flightlessmango/MangoHud",
+    "description": "Vulkan 및 OpenGL 게임에서 FPS, 온도, 자원 사용량을 모니터링하는 오버레이입니다.",
+    "longDescription": "리눅스 환경에서 Vulkan 및 OpenGL 기반 애플리케이션 실행 시 화면에 프레임 레이트, CPU 및 GPU 사용량, 온도 등의 성능 지표를 실시간으로 띄워주는 오버레이 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "성능 모니터링",
+      "게임",
+      "리눅스",
+      "오버레이"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://discordapp.com/invite/Gj5YmBb",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Vulkan 또는 OpenGL 지원 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "패키지 관리자나 소스코드를 통해 MangoHud를 설치합니다.",
+      "게임 실행 시 실행 앞에 mangohud 명령어를 붙여 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9135,
+    "forks": 436,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "kdiskmark",
+    "name": "KDiskMark",
+    "github": "https://github.com/JonMagon/KDiskMark",
+    "description": "리눅스 환경을 위한 CrystalDiskMark 스타일의 그래픽 디스크 성능 측정 도구입니다.",
+    "longDescription": "Flexible I/O Tester(fio) 백엔드를 활용하여 HDD 및 SSD의 읽기/쓰기 성능을 측정하고 직관적인 그래픽 인터페이스로 결과를 보여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "디스크 벤치마크",
+      "SSD",
+      "HDD",
+      "GUI"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/JonMagon/KDiskMark",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Flexible I/O Tester (fio)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Flathub을 통한 설치",
+        "command": "flatpak install flathub io.github.jonmagon.kdiskmark",
+        "note": "플랫허브를 통해 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "KDiskMark를 실행합니다.",
+      "테스트할 드라이브와 크기, 횟수를 선택합니다.",
+      "Start 버튼을 눌러 벤치마크를 수행하고 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1716,
+    "forks": 66,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "goben",
+    "name": "goben",
+    "github": "https://github.com/udhos/goben",
+    "description": "호스트 간 TCP 및 UDP 전송 계층 처리량을 측정하는 Go 도구입니다.",
+    "longDescription": "네트워크 성능을 측정하기 위해 서버와 클라이언트 모드를 지원하며, TCP와 UDP 트래픽의 처리량을 정밀하게 측정할 수 있는 Go 기반 유틸리티입니다.",
+    "category": "네트워크",
+    "tags": [
+      "네트워크",
+      "처리량",
+      "TCP",
+      "UDP",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/udhos/goben",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 모듈을 통한 설치",
+        "command": "go install github.com/udhos/goben@latest",
+        "note": "Go 환경에서 직접 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 측에서 goben을 서버 모드로 실행합니다.",
+      "클라이언트 측에서 서버 주소를 지정하여 goben을 실행합니다.",
+      "측정된 처리량 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 575,
+    "forks": 54,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "hammerdb",
+    "name": "HammerDB",
+    "github": "https://github.com/TPC-Council/HammerDB",
+    "description": "주요 데이터베이스를 지원하는 업계 표준 오픈소스 데이터베이스 벤치마크 도구입니다.",
+    "longDescription": "Oracle, SQL Server, PostgreSQL, MySQL, MariaDB 등 다양한 상용 및 오픈소스 데이터베이스의 OLTP 및 OLAP 성능을 측정할 수 있는 표준 벤치마크 프레임워크입니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "데이터베이스",
+      "벤치마크",
+      "OLTP",
+      "성능 측정"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "http://www.hammerdb.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 사이트 또는 저장소에서 HammerDB를 다운로드합니다.",
+      "측정할 데이터베이스 유형을 선택합니다.",
+      "테스트 스키마를 생성하고 트랜잭션 워크로드를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 797,
+    "forks": 160,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "tsbs",
+    "name": "tsbs",
+    "github": "https://github.com/timescale/tsbs",
+    "description": "시계열 데이터베이스의 성능 비교 및 평가를 위한 벤치마크 모음입니다.",
+    "longDescription": "TimescaleDB, InfluxDB, MongoDB 등 다양한 시계열 데이터베이스를 동일한 데이터와 쿼리로 공정하게 성능 비교할 수 있도록 도와주는 Go 기반 도구 모음입니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "시계열",
+      "데이터베이스",
+      "벤치마크",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/timescale/tsbs",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드 설치",
+        "command": "go get github.com/timescale/tsbs",
+        "note": "Go를 이용해 소스를 가져와 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "데이터 생성기를 통해 테스트 데이터를 생성합니다.",
+      "각 데이터베이스에 데이터를 적재합니다.",
+      "쿼리 테스트를 수행하여 성능을 비교합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1451,
+    "forks": 354,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "noisia",
+    "name": "noisia",
+    "github": "https://github.com/lesovsky/noisia",
+    "description": "PostgreSQL 데이터베이스를 위한 유해 워크로드 및 부하 생성기입니다.",
+    "longDescription": "유휴 트랜잭션, 롤백 유발, 잠금 경합 등 PostgreSQL 환경에서 장애 상황이나 과부하를 시뮬레이션하기 위한 다양한 악성 워크로드를 생성하는 도구입니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "PostgreSQL",
+      "부하 테스트",
+      "장애 주입",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/lesovsky/noisia",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker를 이용한 실행",
+        "command": "docker run --rm -ti lesovsky/noisia:latest noisia --help",
+        "note": "도커 이미지를 통해 간편하게 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "대상 PostgreSQL 연결 정보를 설정합니다.",
+      "생성할 워크로드 유형을 선택하여 실행합니다.",
+      "데이터베이스 반응 및 리소스 고갈 상황을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실제 운영 환경이 아닌 테스트 및 스테이징 환경에서만 사용해야 합니다.",
+    "stars": 800,
+    "forks": 23,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "benchmarkdotnet",
+    "name": "BenchmarkDotNet",
+    "github": "https://github.com/dotnet/BenchmarkDotNet",
+    "description": ".NET 메서드를 쉽게 벤치마크로 변환하고 성능을 측정·추적할 수 있는 강력한 라이브러리입니다.",
+    "longDescription": "단위 테스트를 작성하듯 간단하게 메서드 성능을 측정할 수 있으며, 신뢰성 있고 정밀한 결과를 보장하기 위한 자동화된 벤치마킹 기능을 제공합니다. 성능 측정 결과를 다양한 형식으로 리포트하고 팀과 공유할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C#",
+      ".NET",
+      "벤치마크",
+      "성능",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://benchmarkdotnet.org",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      ".NET SDK"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NuGet 패키지 설치",
+        "command": "dotnet add package BenchmarkDotNet",
+        "note": "프로젝트에 BenchmarkDotNet 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 BenchmarkDotNet NuGet 패키지를 추가합니다.",
+      "벤치마크할 메서드에 [Benchmark] 어트리뷰트를 지정합니다.",
+      "BenchmarkRunner.RunT()를 호출하여 벤치마크를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11508,
+    "forks": 1076,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "phoronix-test-suite",
+    "name": "phoronix-test-suite",
+    "github": "https://github.com/phoronix-test-suite/phoronix-test-suite",
+    "description": "Linux, macOS, Windows 등 다양한 운영체제를 지원하는 종합 자동화 테스트 및 벤치마킹 플랫폼입니다.",
+    "longDescription": "테스트 설치부터 실행, 결과 리포팅까지 완전 자동화된 방식으로 수행할 수 있는 오픈소스 벤치마킹 도구입니다. 하드웨어 및 시스템 성능을 일관되게 평가하고 비교하는 데 널리 사용됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PHP",
+      "벤치마크",
+      "성능",
+      "테스트",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.phoronix-test-suite.com/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "PHP"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 저장소에서 Phoronix Test Suite를 다운로드하거나 설치합니다.",
+      "명령줄 인터페이스를 통해 사용 가능한 테스트 모음을 검색합니다.",
+      "원하는 테스트를 선택하여 자동 실행하고 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3153,
+    "forks": 437,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "tsung",
+    "name": "tsung",
+    "github": "https://github.com/processone/tsung",
+    "description": "HTTP, XMPP, MQTT, PostgreSQL 등 다양한 프로토콜을 지원하는 고성능 분산 부하 테스트 프레임워크입니다.",
+    "longDescription": "클라이언트/서버 애플리케이션의 확장성과 성능을 테스트하기 위한 멀티 프로토콜 분산 부하 테스트 도구입니다. 대규모 동시 접속 상황을 시뮬레이션하여 병목 구간을 분석할 수 있습니다.",
+    "category": "테스트·품질",
+    "tags": [
+      "Erlang",
+      "부하 테스트",
+      "성능",
+      "HTTP",
+      "MQTT"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "http://www.process-one.net/en/tsung/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Erlang"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Erlang 환경 및 Tsung 패키지를 설치합니다.",
+      "XML 설정 파일을 통해 테스트 시나리오 및 프로토콜을 정의합니다.",
+      "tsung 명령어와 설정 파일을 사용하여 부하 테스트를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2627,
+    "forks": 403,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "phpbench",
+    "name": "phpbench",
+    "github": "https://github.com/phpbench/phpbench",
+    "description": "PHP 애플리케이션의 코드 성능을 측정하고 분석하기 위한 벤치마킹 프레임워크입니다.",
+    "longDescription": "PHP 프로젝트에서 마이크로 벤치마크를 수행하고 실행 시간을 추적하여 성능 저하를 감지할 수 있도록 돕습니다. Composer를 통해 쉽게 프로젝트에 통합할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PHP",
+      "벤치마크",
+      "성능",
+      "Composer"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/phpbench/phpbench",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "PHP",
+      "Composer"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Composer 설치",
+        "command": "composer require phpbench/phpbench --dev",
+        "note": "개발 의존성으로 PHPBench를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Composer를 사용하여 프로젝트에 phpbench를 설치합니다.",
+      "벤치마크 대상 클래스와 메서드를 작성합니다.",
+      "명령줄에서 phpbench를 실행하여 성능 리포트를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2027,
+    "forks": 133,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "likwid",
+    "name": "likwid",
+    "github": "https://github.com/RRZE-HPC/likwid",
+    "description": "하드웨어 성능 카운터와 프로파일링을 지원하는 리눅스용 성능 모니터링 및 벤치마킹 도구 모음입니다.",
+    "longDescription": "Intel, AMD, ARM 등 다양한 프로세서 아키텍처에서 하드웨어 성능을 분석하고 최적화할 수 있도록 지원하는 명령줄 도구 및 라이브러리입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "C",
+      "하드웨어",
+      "프로파일링",
+      "성능 분석",
+      "Linux"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://hpc.fau.de/research/tools/likwid/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "GCC",
+      "Make"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드 및 설치",
+        "command": "wget http://ftp.fau.de/pub/likwid/likwid-stable.tar.gz && tar -xaf likwid-stable.tar.gz",
+        "note": "소스 코드를 다운로드하고 압축을 해제합니다."
+      }
+    ],
+    "usageSteps": [
+      "소스 코드를 다운로드하고 config.mk 파일을 환경에 맞게 수정합니다.",
+      "make 및 sudo make install 명령어로 빌드하고 설치합니다.",
+      "likwid-perfctr 등의 명령어로 성능 측정 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1951,
+    "forks": 274,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "inferencex",
+    "name": "InferenceX",
+    "github": "https://github.com/SemiAnalysisAI/InferenceX",
+    "description": "AI 모델의 추론 성능과 인프라를 연구·벤치마킹하기 위한 오픈소스 가속 플랫폼입니다.",
+    "longDescription": "대규모 언어 모델(LLM) 추론 서버 및 가속기 성능을 측정하고 비교하기 위한 종합적인 벤치마크 스위트와 도구를 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "LLM 추론",
+      "벤치마크",
+      "GPU"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://inferencex.com/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 파이썬 의존성을 설치합니다.",
+      "테스트할 대상 모델 및 백엔드 환경을 설정합니다.",
+      "제공되는 벤치마크 스크립트를 실행하여 추론 성능을 측정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1859,
+    "forks": 327,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "basicts",
+    "name": "BasicTS",
+    "github": "https://github.com/GestaltCogTeam/BasicTS",
+    "description": "시계열 예측 모델의 공정하고 확장 가능한 비교를 위한 파이토치 기반 벤치마크 및 툴킷입니다.",
+    "longDescription": "다양한 시계열 예측 및 공간-시간 예측 모델들을 통일된 인터페이스로 구현하고 학습할 수 있도록 지원하여 연구와 실험을 돕습니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "시계열 예측",
+      "머신러닝",
+      "벤치마크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://ieeexplore.ieee.org/document/10726722/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 파이토치 및 관련 의존성을 설치합니다.",
+      "설정 파일을 통해 데이터셋과 모델을 지정합니다.",
+      "훈련 및 평가 스크립트를 실행하여 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1826,
+    "forks": 218,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "tfb",
+    "name": "TFB",
+    "github": "https://github.com/decisionintelligence/TFB",
+    "description": "시계열 예측 방법론들을 포괄적이고 공정하게 비교 평가할 수 있는 딥러닝 벤치마크 프레임워크입니다.",
+    "longDescription": "다양한 시계열 예측 모델들의 성능을 표준화된 환경에서 실험하고 검증할 수 있도록 데이터셋과 스크립트를 통합 제공합니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "Python",
+      "PyTorch",
+      "시계열",
+      "딥러닝",
+      "벤치마크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.vldb.org/pvldb/vol17/p2363-hu.pdf",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Python 3.8+",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 패키지 설치",
+        "command": "pip install -r requirements.txt",
+        "note": "필요한 파이썬 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경을 준비하고 요구사항 패키지를 설치합니다.",
+      "스크립트 디렉토리에서 원하는 모델과 데이터셋 설정을 확인합니다.",
+      "벤치마크 실행 스크립트를 통해 평가를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1753,
+    "forks": 124,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "benchee",
+    "name": "benchee",
+    "github": "https://github.com/bencheeorg/benchee",
+    "description": "풍부한 통계 지표와 함께 엘릭서(Elixir) 코드의 성능을 쉽고 확장성 있게 측정하는 벤치마킹 도구입니다.",
+    "longDescription": "실행 시간, 메모리 소비량 등을 상세히 측정하고 다양한 포맷으로 결과를 시각화할 수 있는 Elixir 생태계의 대표적인 벤치마크 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Elixir",
+      "벤치마크",
+      "성능 측정",
+      "통계",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/bencheeorg/benchee",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T06:03:59.901Z",
+    "requirements": [
+      "Elixir"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "mix.exs 파일의 dependencies에 benchee를 추가합니다.",
+      "mix deps.get 명령어로 패키지를 가져옵니다.",
+      "스크립트 파일에서 Benchee.run을 호출하여 벤치마크를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1519,
+    "forks": 71,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
     "id": "sniffnet",
     "name": "sniffnet",
     "github": "https://github.com/GyulyVGC/sniffnet",
