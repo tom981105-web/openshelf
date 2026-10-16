@@ -1,5 +1,735 @@
 [
   {
+    "id": "frigate",
+    "name": "Frigate",
+    "github": "https://github.com/blakeblackshear/frigate",
+    "description": "실시간 로컬 객체 감지를 지원하는 IP 카메라용 NVR 시스템입니다.",
+    "longDescription": "OpenCV와 TensorFlow를 활용하여 IP 카메라 영상에서 실시간으로 객체를 로컬에서 탐지하며, Home Assistant와 원활하게 연동됩니다. GPU나 AI 가속기를 사용하여 CPU 부하를 최소화하면서 고성능 객체 감지를 수행할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "AI",
+      "NVR",
+      "홈오토메이션",
+      "카메라",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://frigate.video",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Docker",
+      "AI 가속기 또는 GPU 권장"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 설치",
+        "command": "docker compose up -d",
+        "note": "도커 컴포즈를 사용하여 Frigate를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "docker-compose.yml 파일에 설정 및 카메라 RTSP 주소를 입력합니다.",
+      "docker compose up -d 명령어로 컨테이너를 실행합니다.",
+      "웹 브라우저를 통해 Frigate 대시보드에 접속하여 실시간 스트림과 감지 이벤트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "AI 객체 감지 성능을 위해 Google Coral 같은 AI 가속기 사용을 권장합니다.",
+    "stars": 36651,
+    "forks": 3711,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "evcc",
+    "name": "evcc",
+    "github": "https://github.com/evcc-io/evcc",
+    "description": "태양광 발전과 연동하여 전기차를 충전하는 스마트 에너지 제어 도구입니다.",
+    "longDescription": "태양광 잉여 전력이나 저렴한 요금 시간대에 맞춰 전기차 충전기를 자동으로 제어하는 Go 기반의 오픈소스 솔루션입니다. 다양한 월박스 및 인버터 제조사와 연동되어 에너지 비용을 절감할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "전기차",
+      "태양광",
+      "에너지",
+      "Go",
+      "스마트홈"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://evcc.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Go",
+      "지원되는 월박스 또는 인버터"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d --name evcc -v evcc:/etc/evcc evcc/evcc",
+        "note": "도커를 이용해 evcc를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "evcc.yaml 설정 파일을 생성하여 충전기 및 미터기 정보를 입력합니다.",
+      "애플리케이션을 실행하고 웹 UI에 접속합니다.",
+      "태양광 연동 모드나 수동 충전 모드를 선택하여 충전을 제어합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "지원되는 하드웨어 목록을 공식 문서를 통해 사전 확인이 필요합니다.",
+    "stars": 7380,
+    "forks": 1555,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "ha-mcp",
+    "name": "Home Assistant MCP Server",
+    "github": "https://github.com/homeassistant-ai/ha-mcp",
+    "description": "AI 어시스턴트가 자연어로 스마트홈을 제어할 수 있게 해주는 Model Context Protocol 서버입니다.",
+    "longDescription": "Home Assistant와 LLM을 연결해주는 비공식 MCP 서버로, 자연어를 통해 스마트홈 기기를 제어하고 상태를 조회하며 자동화를 관리할 수 있습니다. HACS를 통해 인프로세스로 간편하게 설치할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "MCP",
+      "AI",
+      "Claude",
+      "홈오토메이션",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://homeassistant-ai.github.io/ha-mcp/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Home Assistant",
+      "HACS"
+    ],
+    "supportedAgents": [
+      "Claude Desktop"
+    ],
+    "install": [
+      {
+        "title": "HACS를 통한 설치",
+        "command": "HACS를 통해 Home Assistant에 저장소 추가",
+        "note": "HACS 커스텀 리포지토리를 통해 손쉽게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Home Assistant에 HACS를 통해 MCP 서버를 추가합니다.",
+      "Claude Desktop 등의 AI 클라이언트 설정에 MCP 서버를 연동합니다.",
+      "자연어로 스마트홈 기기 제어 명령을 입력합니다."
+    ],
+    "examplePrompt": "거실 불을 켜고 현재 실내 온도를 알려줘.",
+    "usageNote": "버전 업데이트에 따른 설정 변경 사항을 주의하세요.",
+    "stars": 5093,
+    "forks": 239,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "python-miio",
+    "name": "python-miio",
+    "github": "https://github.com/rytilahti/python-miio",
+    "description": "샤오미 스마트 가전제품을 제어하기 위한 Python 라이브러리 및 콘솔 도구입니다.",
+    "longDescription": "공기청정기, 로봇청소기 등 다양한 샤오미 및 MIoT 지원 가전제품을 프로그래밍 방식으로 제어하고 상태를 모니터링할 수 있는 파이썬 라이브러리입니다. CLI를 통한 직접 제어도 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "샤오미",
+      "IoT",
+      "CLI",
+      "스마트홈"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://python-miio.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Python 3.x"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install python-miio",
+        "note": "파이썬 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 패키지를 설치합니다.",
+      "miiocli 명령어나 파이썬 스크립트를 통해 기기 IP와 토큰을 설정합니다.",
+      "기기 상태 조회 및 제어 명령을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "기기 제어를 위해 로컬 네트워크 내 기기 토큰(Token) 정보가 필요합니다.",
+    "stars": 4318,
+    "forks": 598,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "openmqttgateway",
+    "name": "OpenMQTTGateway",
+    "github": "https://github.com/1technophile/OpenMQTTGateway",
+    "description": "ESP8266 및 ESP32를 활용해 다양한 무선 프로토콜을 MQTT로 통합하는 게이트웨이 펌웨어입니다.",
+    "longDescription": "433MHz, 적외선, 블루투스(BLE), LoRa 등 다양한 IoT 통신 프로토콜을 단일 MQTT 브로커 환경으로 통합해주는 오픈소스 펌웨어입니다. 다양한 스마트홈 플랫폼과 원활하게 연동됩니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "ESP32",
+      "MQTT",
+      "IoT",
+      "C++",
+      "아두이노"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://docs.openmqttgateway.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "ESP32 또는 ESP8266 보드",
+      "PlatformIO"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "웹 업로드 설치",
+        "command": "웹 브라우저를 통한 온라인 펌웨어 업로드",
+        "note": "별도의 소프트웨어 없이 웹 인터페이스로 직접 업로드할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 ESP32 또는 ESP8266 보드를 PC에 연결합니다.",
+      "웹 플래셔 또는 PlatformIO를 사용하여 펌웨어를 빌드하고 업로드합니다.",
+      "MQTT 브로커 주소를 설정하여 센서 데이터를 수신합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "사용하려는 무선 주파수 모듈에 맞는 펌웨어 빌드가 필요합니다.",
+    "stars": 4106,
+    "forks": 911,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "irremoteesp8266",
+    "name": "IRremoteESP8266",
+    "github": "https://github.com/crankyoldgit/IRremoteESP8266",
+    "description": "ESP8266 및 ESP32용 적외선(IR) 리모컨 송수신 라이브러리입니다.",
+    "longDescription": "다양한 에어컨, TV 등 가전제품의 적외선 프로토콜을 지원하여 ESP 기반 보드로 리모컨 신호를 송수신할 수 있게 해주는 아두이노 라이브러리입니다. 스마트홈 자작에 유용합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "ESP32",
+      "적외선",
+      "아두이노",
+      "C++",
+      "IoT"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-2.1",
+    "website": "https://github.com/crankyoldgit/IRremoteESP8266",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Arduino IDE",
+      "ESP32 또는 ESP8266 보드"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "아두이노 라이브러리 매니저",
+        "command": "IRremoteESP8266 검색 후 설치",
+        "note": "Arduino IDE의 라이브러리 관리자에서 직접 설치할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "Arduino IDE를 실행하고 라이브러리 매니저에서 IRremoteESP8266을 검색하여 설치합니다.",
+      "제공되는 예제 스케치를 참고하여 IR 수광/송신 핀을 연결합니다.",
+      "코드를 컴파일하여 ESP 보드에 업로드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "가전제품 모델에 따라 지원되는 IR 프로토콜이 다를 수 있습니다.",
+    "stars": 3632,
+    "forks": 941,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "willow",
+    "name": "Willow",
+    "github": "https://github.com/HeyWillow/willow",
+    "description": "프라이버시를 보호하며 자체 호스팅이 가능한 오픈소스 음성 어시스턴트 대안입니다.",
+    "longDescription": "Amazon Echo나 Google Home의 대안으로 설계된 로컬 음성 어시스턴트입니다. ESP32 기반 하드웨어를 활용하며, 자체 추론 서버와 연동하여 빠르고 안전하게 음성 인식을 수행합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "음성인식",
+      "프라이버시",
+      "ESP32",
+      "C",
+      "스마트홈"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://heywillow.org/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "ESP32-BOX 등 지원 하드웨어",
+      "Willow Inference Server"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "펌웨어 플래시",
+        "command": "웹 기반 인스톨러를 통한 펌웨어 flashed",
+        "note": "공식 웹 인스톨러를 통해 ESP32 기기에 펌웨어를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 ESP32 하드웨어를 PC에 연결합니다.",
+      "웹 인스톨러를 통해 Willow 펌웨어를 기기에 설치합니다.",
+      "Wi-Fi 설정 및 Willow Inference Server 주소를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "원활한 음성 인식을 위해 전용 추론 서버 구동이 권장됩니다.",
+    "stars": 3127,
+    "forks": 128,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "homespan",
+    "name": "HomeSpan",
+    "github": "https://github.com/HomeSpan/HomeSpan",
+    "description": "Arduino IDE 내에서 ESP32로 Apple HomeKit 기기를 직접 만들 수 있는 라이브러리입니다.",
+    "longDescription": "Espressif ESP32 마이크로컨트롤러를 위한 견고하고 사용하기 쉬운 애플 홈킷(HomeKit) 라이브러리입니다. 외부 브리지 없이 Wi-Fi를 통해 직접 홈앱과 페어링하여 커스텀 IoT 기기를 제작할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "HomeKit",
+      "ESP32",
+      "아두이노",
+      "C++",
+      "스마트홈"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/HomeSpan/HomeSpan",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Arduino IDE",
+      "ESP32 보드"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "라이브러리 매니저 설치",
+        "command": "Arduino IDE 라이브러리에서 HomeSpan 추가",
+        "note": "아두이노 라이브러리 관리자에서 HomeSpan을 검색하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Arduino IDE에 ESP32 보드 지원 패키지를 설치합니다.",
+      "라이브러리 매니저를 통해 HomeSpan을 설치합니다.",
+      "제공되는 튜토리얼 스케치를 바탕으로 GPIO 제어 코드를 작성하고 업로드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "애플 기기의 Apple Home 앱과 직접 연동됩니다.",
+    "stars": 2189,
+    "forks": 202,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "homeassistant-tapo-control",
+    "name": "HomeAssistant-Tapo-Control",
+    "github": "https://github.com/JurajNyiri/HomeAssistant-Tapo-Control",
+    "description": "TP-Link Tapo 카메라를 Home Assistant에 통합하여 실시간 제어하는 커스텀 컴포넌트입니다.",
+    "longDescription": "Tapo 스마트 카메라의 PTZ(팬/틸트/줌) 제어, 스트리밍, 모션 감지 센서 등을 Home Assistant 환경에서 완벽하게 활용할 수 있도록 지원하는 고성능 커스텀 통합 기능입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "카메라",
+      "Home Assistant",
+      "HACS",
+      "Python",
+      "IoT"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/JurajNyiri/HomeAssistant-Tapo-Control",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Home Assistant",
+      "HACS",
+      "TP-Link Tapo 카메라"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "HACS 설치",
+        "command": "HACS를 통한 통합 구성요소 추가",
+        "note": "HACS 스토어에서 Tapo: Cameras Control을 검색하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "HACS를 통해 Home Assistant에 본 저장소를 추가합니다.",
+      "Home Assistant 설정을 재시작하고 통합 구성요소에서 Tapo를 검색합니다.",
+      "카메라의 IP 주소와 계정 정보를 입력하여 연동을 완료합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "로컬 네트워크 환경에서 카메라의 RTSP 스트림 접근 권한이 필요합니다.",
+    "stars": 2020,
+    "forks": 164,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "espresense",
+    "name": "ESPresense",
+    "github": "https://github.com/ESPresense/ESPresense",
+    "description": "ESP32를 활용해 실내 위치를 정밀하게 추적하고 MQTT로 전송하는 노드 소프트웨어입니다.",
+    "longDescription": "블루투스 비콘이나 스마트폰의 BLE 신호를 감지하여 실내 특정 구역(Room-level)에서의 위치를 파악하고, 이를 MQTT를 통해 Home Assistant 등과 연동할 수 있는 ESP32용 펌웨어입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "ESP32",
+      "실내위치",
+      "블루투스",
+      "MQTT",
+      "IoT"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://espresense.com/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "ESP32 보드"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "웹 인스톨러 플래시",
+        "command": "웹 브라우저를 통한 ESPresense 펌웨어 설치",
+        "note": "공식 웹 기반 플래셔를 사용하여 ESP32에 펌웨어를 쉽게 올립니다."
+      }
+    ],
+    "usageSteps": [
+      "ESP32 보드를 PC에 연결하고 웹 인스톨러 페이지에 접속합니다.",
+      "기기에 맞는 펌웨어를 선택하여 플래시합니다.",
+      "Wi-Fi 및 MQTT 브로커 정보를 설정하여 실내 위치 추적을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정밀한 위치 측정을 위해 집안 여러 곳에 ESP32 노드 설치가 필요합니다.",
+    "stars": 1493,
+    "forks": 187,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "domoticz",
+    "name": "Domoticz",
+    "github": "https://github.com/domoticz/domoticz",
+    "description": "다양한 스마트홈 기기와 센서를 모니터링하고 제어할 수 있는 오픈소스 홈 자동화 시스템입니다.",
+    "longDescription": "조명, 스위치, 온도, 에너지 소비량 등 150종 이상의 하드웨어 장치를 지원합니다. HTML5 기반의 반응형 웹 인터페이스를 통해 데스크톱과 모바일에서 모두 간편하게 이용할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "C++",
+      "스마트홈",
+      "IoT",
+      "Z-Wave",
+      "Zigbee"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.domoticz.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 홈페이지에서 지원하는 플랫폼용 패키지를 다운로드합니다.",
+      "프로그램을 실행하고 웹 브라우저를 통해 관리 대시보드에 접속합니다.",
+      "사용 중인 스마트 디바이스(Z-Wave, Zigbee 등)를 연동하고 자동화 규칙을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3822,
+    "forks": 1163,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "button-card",
+    "name": "Lovelace Button Card",
+    "github": "https://github.com/custom-cards/button-card",
+    "description": "홈 어시스턴트를 위한 고도로 커스터마이징 가능한 로블레이스 버튼 카드입니다.",
+    "longDescription": "기본 버튼보다 강력한 조건부 스타일링, 애니메이션, 자바스크립트 템플릿 기능을 제공하여 홈 어시스턴트 대시보드를 풍부하게 꾸밀 수 있습니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Home Assistant",
+      "대시보드",
+      "TypeScript",
+      "UI"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/custom-cards/button-card",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Home Assistant",
+      "HACS"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "HACS를 통해 'button-card' 리포지토리를 설치합니다.",
+      "홈 어시스턴트 대시보드 YAML 설정에 커스텀 카드 구성을 추가합니다.",
+      "엔티티 상태에 따른 아이콘, 색상, 클릭 액션 등을 커스터마이징합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2512,
+    "forks": 285,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "openccu",
+    "name": "OpenCCU",
+    "github": "https://github.com/OpenCCU/OpenCCU",
+    "description": "Homematic IP 기기를 위한 클라우드 프리 빌드루트 기반 스마트홈 플랫폼입니다.",
+    "longDescription": "라즈베리 파이, x86 하드웨어뿐만 아니라 Proxmox, Docker, Kubernetes 등의 가상화 환경에서도 가상 어플라이언스로 실행할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Homematic IP",
+      "스마트홈",
+      "Docker",
+      "Kubernetes"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://openccu.de",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Docker 또는 호환 하드웨어"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "사용할 환경(라즈베리 파이 또는 가상화 플랫폼)에 맞는 이미지나 팩키지를 다운로드합니다.",
+      "기기를 부팅하거나 컨테이너를 실행하여 초기화 과정을 거칩니다.",
+      "웹 브라우저를 통해 관리자 인터페이스에 접속하여 Homematic RF 모듈과 기기를 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1844,
+    "forks": 224,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "spook",
+    "name": "Spook",
+    "github": "https://github.com/frenck/spook",
+    "description": "홈 어시스턴트의 숨겨진 기능을 깨워주고 다양한 유지보수 도구를 제공하는 강력한 도구 모음입니다.",
+    "longDescription": "홈 어시스턴트 환경 내에서 발생할 수 있는 문제점들을 진단하고, 에이전트나 사용자가 쉽게 조회할 수 있는 추가적인 진단 및 수리 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Home Assistant",
+      "도구상자",
+      "자동화",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://spook.boo",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Home Assistant",
+      "HACS"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 추가",
+        "command": "/plugin marketplace add frenck/spook",
+        "note": "Claude Code 마켓플레이스에 Spook 플러그인을 추가합니다."
+      },
+      {
+        "title": "플러그인 설치",
+        "command": "/plugin install spook@spook",
+        "note": "Spook 플러그인을 활성화합니다."
+      }
+    ],
+    "usageSteps": [
+      "HACS를 통해 Spook 커스텀 통합을 홈 어시스턴트에 설치합니다.",
+      "홈 어시스턴트 설정 및 수리 메뉴에서 추가된 도구들을 확인합니다.",
+      "필요에 따라 AI 에이전트와 연동하여 홈 어시스턴트 진단 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1696,
+    "forks": 101,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "better-thermostat",
+    "name": "Better Thermostat",
+    "github": "https://github.com/KartoffelToby/better_thermostat",
+    "description": "홈 어시스턴트에서 온도 조절기(TRV)의 기능을 향상시켜 주는 커스텀 통합 구성요소입니다.",
+    "longDescription": "외부 온도 센서, 창문 개폐 센서, 날씨 예보 등을 조합하여 난방 제어의 정밀도를 높이고, 라디에이터 주변의 부정확한 온도 측정을 보정합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Home Assistant",
+      "스마트홈",
+      "온도조절기",
+      "에너지 효율"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://better-thermostat.org",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Home Assistant",
+      "HACS"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "HACS를 통해 Better Thermostat을 홈 어시스턴트에 설치합니다.",
+      "홈 어시스턴트를 재시작한 후 통합 구성요소를 추가합니다.",
+      "대상 TRV와 방 온도 센서, 창문 센서를 연결하여 설정을 완료합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1509,
+    "forks": 182,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "double-take",
+    "name": "Double Take",
+    "github": "https://github.com/jakowenko/double-take",
+    "description": "얼굴 인식 처리와 학습을 위한 통합 사용자 인터페이스 및 API 서비스입니다.",
+    "longDescription": "Frigate 등의 NVR과 연동하여 감지된 이미지 스트림을 다양한 오픈소스 얼굴 인식 엔진으로 전달하고, 일치하는 결과를 통합 관리할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "얼굴인식",
+      "Frigate",
+      "Docker",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hub.docker.com/r/jakowenko/double-take",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T11:04:00.908Z",
+    "requirements": [
+      "Docker",
+      "Frigate 등 NVR 시스템"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker를 사용하여 Double Take 컨테이너를 실행합니다.",
+      "설정 파일에 연동할 카메라 소스 및 얼굴 인식 엔진(예: CompreFace 등)의 정보를 입력합니다.",
+      "웹 UI에 접속하여 얼굴 이미지를 등록하고 인식 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1444,
+    "forks": 147,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
     "id": "docxtemplater",
     "name": "docxtemplater",
     "github": "https://github.com/open-xml-templating/docxtemplater",
