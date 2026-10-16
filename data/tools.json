@@ -1,5 +1,754 @@
 [
   {
+    "id": "langflow",
+    "name": "langflow",
+    "github": "https://github.com/langflow-ai/langflow",
+    "description": "생성형 AI 에이전트와 워크플로우를 시각적으로 구축하고 배포할 수 있는 강력한 오픈소스 플랫폼입니다.",
+    "longDescription": "노코드 및 로코드 방식으로 대형 언어 모델 기반 에이전트 파이프라인을 구성할 수 있는 파이썬 기반 오픈소스 도구입니다. 리액트 플로우 기반의 드래그 앤 드롭 인터페이스를 제공하여 다양한 LLM 컴포넌트를 연결하고 테스트하기 용이합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "워크플로우",
+      "LLM",
+      "파이썬",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://www.langflow.org",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Python 3.10–3.14",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "uv pip install langflow -U",
+        "note": "파이썬 환경에서 uv 패키지 매니저를 사용하여 최신 랭플로우를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "빈 디렉토리에서 uv 패키지 매니저를 이용해 langflow를 설치합니다.",
+      "명령어 인터페이스를 통해 랭플로우 서버를 실행합니다.",
+      "웹 브라우저 대시보드에 접속하여 노드 기반 컴포넌트를 배치합니다.",
+      "AI 모델과 프롬프트 체인을 연결하고 워크플로우를 테스트합니다."
+    ],
+    "examplePrompt": "주어진 문서를 요약하고 핵심 키워드를 추출하는 멀티 에이전트 워크플로우를 만들어줘.",
+    "usageNote": "로컬 실행 시 호환되는 파이썬 버전과 uv 패키지 매니저가 사전 설치되어 있어야 합니다.",
+    "stars": 155745,
+    "forks": 10235,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "open-generative-ai",
+    "name": "Open-Generative-AI",
+    "github": "https://github.com/Anil-matcha/Open-Generative-AI",
+    "description": "600개 이상의 최신 모델을 지원하는 콘텐츠 필터 없는 셀프 호스팅형 오픈소스 AI 이미지 및 비디오 생성 스튜디오입니다.",
+    "longDescription": "Flux, Midjourney, Kling, Sora 등 수백 가지의 이미지 및 비디오 생성 모델을 사용자의 로컬 환경이나 서버에 직접 구축하여 제한 없이 활용할 수 있도록 돕는 오픈소스 크리에이티브 스튜디오입니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "AI 이미지",
+      "AI 비디오",
+      "생성형 AI",
+      "오픈소스",
+      "크리에이티브"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://muapi.ai/open-generative-ai?utm_source=github&utm_medium=about&utm_campaign=open-generative-ai",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "MuAPI"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS xattr 격리 해제",
+        "command": "xattr -cr \"/Applications/Open Generative AI.app\"",
+        "note": "macOS에서 서명되지 않은 앱 실행 시 터미널을 통해 게이트키퍼 차단을 해제합니다."
+      }
+    ],
+    "usageSteps": [
+      "릴리스 페이지 또는 DMG 파일을 통해 애플리케이션을 다운로드하여 설치합니다.",
+      "필요한 경우 macOS에서 터미널 명령어를 통해 앱 실행 권한 및 격리 설정을 조정합니다.",
+      "애플리케이션을 실행하고 600개 이상의 AI 모델 중 원하는 모델을 선택합니다.",
+      "텍스트 프롬프트를 입력하여 고품질의 이미지와 비디오 콘텐츠를 생성합니다."
+    ],
+    "examplePrompt": "사이버펑크 도시를 배경으로 비가 내리는 네온사인 거리를 시네마틱 스타일의 4K 비디오로 생성해줘.",
+    "usageNote": "애플 서명 미적용 앱의 경우 최초 실행 시 운영체제 보안 설정을 우회해야 할 수 있습니다.",
+    "stars": 30523,
+    "forks": 5617,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "a2a",
+    "name": "A2A",
+    "github": "https://github.com/a2aproject/A2A",
+    "description": "서로 다른 프레임워크로 구축된 에이전트 애플리케이션 간의 통신과 상호운용성을 지원하는 오픈 프로토콜입니다.",
+    "longDescription": "다양한 개발 환경과 프레임워크로 파편화된 AI 에이전트들이 표준화된 방식으로 소통하고 작업을 위임할 수 있도록 설계된 개방형 프로토콜 및 다국어 SDK 모음입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "A2A",
+      "프로토콜",
+      "AI 에이전트",
+      "상호운용성",
+      "SDK"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://a2a-protocol.org/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Python",
+      "Go",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Python SDK 설치",
+        "command": "pip install a2a-sdk",
+        "note": "파이썬 환경에서 A2A 프로토콜 연동을 위한 SDK를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "개발 환경에 맞는 A2A SDK를 패키지 관리자를 통해 설치합니다.",
+      "프로토콜 사양에 따라 에이전트 간 통신 엔드포인트와 메시지 포맷을 정의합니다.",
+      "서로 다른 에이전트 애플리케이션을 연결하여 유기적인 멀티 에이전트 협업을 수행합니다."
+    ],
+    "examplePrompt": "코드 리뷰 에이전트와 테스트 코드 생성 에이전트를 A2A 프로토콜로 연결해줘.",
+    "usageNote": "서로 다른 프레임워크를 사용하는 에이전트 간 협업 시 통신 규격을 준수해야 합니다.",
+    "stars": 26179,
+    "forks": 2676,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "openui",
+    "name": "openui",
+    "github": "https://github.com/wandb/openui",
+    "description": "상상 속의 UI를 설명하면 실시간으로 렌더링하고 다양한 프레임워크 코드로 변환해주는 오픈소스 도구입니다.",
+    "longDescription": "사용자의 텍스트 설명이나 아이디어를 기반으로 사용자 인터페이스를 실시간 생성하며, 생성된 HTML 코드를 React, Svelte, Web Components 등으로 변환할 수 있는 프론트엔드 프로토타이핑 도구입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "UI 생성",
+      "Generative UI",
+      "프론트엔드",
+      "React",
+      "TailwindCSS"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://openui.fly.dev",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Node.js",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker pull ghcr.io/miurla/morphic:latest",
+        "note": "유사한 오픈소스 웹 서비스를 컨테이너 환경으로 실행할 때 참고할 수 있는 도커 풀 명령어입니다."
+      }
+    ],
+    "usageSteps": [
+      "웹 데모에 접속하거나 로컬 환경에 프로젝트를 클론하여 실행합니다.",
+      "LLM API 키 또는 로컬 인공지능 모델(Ollama 등)을 연동합니다.",
+      "채팅창에 원하는 UI 컴포넌트의 형태와 기능을 자연어로 설명합니다.",
+      "실시간으로 렌더링된 결과를 확인하고 필요한 프레임워크 코드로 내보냅니다."
+    ],
+    "examplePrompt": "사용자 프로필 카드와 다크모드 토글 스위치가 포함된 모던한 대시보드 헤더 UI를 만들어줘.",
+    "usageNote": "원활한 UI 생성을 위해 OpenAI, Anthropic 또는 로컬 LLM(Ollama) 백엔드 설정이 필요합니다.",
+    "stars": 22610,
+    "forks": 2058,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "openvino",
+    "name": "openvino",
+    "github": "https://github.com/openvinotoolkit/openvino",
+    "description": "다양한 하드웨어 장치에서 AI 추론 성능을 최적화하고 배포하기 위한 오픈소스 툴킷입니다.",
+    "longDescription": "인텔 및 기타 하드웨어 플랫폼에서 딥러닝 및 생성형 AI 모델의 실행 속도를 극대화하고 메모리 사용량을 최적화하여 상용 서비스 배포를 용이하게 만들어주는 고성능 추론 엔진입니다.",
+    "category": "AI 모델",
+    "tags": [
+      "인공지능",
+      "딥러닝",
+      "추론 최적화",
+      "C++",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.openvino.ai",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "OpenVINO 설치",
+        "command": "pip install -U openvino",
+        "note": "파이썬 환경에서 최신 OpenVINO 툴킷을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리자를 통해 openvino 라이브러리를 설치합니다.",
+      "파이썬 스크립트에서 오픈비노 버전을 확인하여 설치가 정상적으로 완료되었는지 검증합니다.",
+      "학습된 딥러닝 모델을 오픈비노 IR 포맷으로 변환하거나 최적화 파이프라인을 적용합니다.",
+      "타겟 하드웨어 디바이스에서 고속 추론을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "하드웨어 가속기(GPU, NPU 등) 활용 시 별도의 드라이버 및 런타임 설정이 필요할 수 있습니다.",
+    "stars": 11010,
+    "forks": 3459,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "krita-ai-diffusion",
+    "name": "Krita AI Diffusion",
+    "github": "https://github.com/Acly/krita-ai-diffusion",
+    "description": "오픈소스 페인팅 프로그램 Krita 내부에서 스테이블 디퓨전 등 생성형 AI를 활용할 수 있는 간편한 플러그인입니다.",
+    "longDescription": "디지털 페인팅 소프트웨어인 Krita 안에서 직접 인페인팅, 아웃페인팅 및 텍스트 기반 이미지 생성을 수행할 수 있도록 세련된 인터페이스를 제공하는 오픈소스 플러그인입니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "Krita",
+      "스테이블 디퓨전",
+      "생성형 AI",
+      "이미지 편집",
+      "플러그인"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.interstice.cloud",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Krita",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Krita 프로그램을 실행하고 공식 가이드에 따라 본 플러그인을 설치합니다.",
+      "로컬 또는 원격에 스테이블 디퓨전 백엔드(AUTOMATIC1111, ComfyUI 등)를 연결합니다.",
+      "Krita 캔버스에서 편집할 영역을 지정하고 프롬프트를 입력합니다.",
+      "인페인팅이나 생성 기능을 실행하여 실시간으로 이미지를 수정하고 완성합니다."
+    ],
+    "examplePrompt": "선택한 영역의 배경을 울창한 판타지 숲 풍경으로 자연스럽게 채워줘.",
+    "usageNote": "정상적인 이미지 생성을 위해서는 별도의 AI 백엔드 서버(예: ComfyUI)가 실행 중이어야 합니다.",
+    "stars": 10726,
+    "forks": 642,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "vtracer",
+    "name": "vtracer",
+    "github": "https://github.com/visioncortex/vtracer",
+    "description": "JPG 및 PNG 같은 래스터 이미지를 깔끔하고 고품질의 벡터 그래픽(SVG)으로 변환해주는 오픈소스 도구입니다.",
+    "longDescription": "고속 라인 기반 파이프라인을 활용하여 컬러 사진과 그래픽의 곡선을 정밀하게 추적하며, 복잡한 구멍 생성 없이 압축률 높은 SVG 파일을 출력해 주는 러스트 기반 변환기입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "벡터라이저",
+      "SVG 변환",
+      "이미지 처리",
+      "Rust",
+      "그래픽 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.visioncortex.org/vtracer/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Cargo"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI 도구 설치",
+        "command": "cargo install vtracer-cli",
+        "note": "러스트 패키지 매니저를 사용하여 vtracer 명령줄 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Cargo를 이용해 vtracer-cli를 설치하거나 사전 빌드된 바이너리를 다운로드합니다.",
+      "터미널에서 입력 이미지 파일 경로와 출력 SVG 파일 경로를 지정합니다.",
+      "필요에 따라 프리셋(--preset bw)이나 클러스터링 옵션을 추가하여 변환 품질을 조정합니다.",
+      "생성된 SVG 벡터 파일을 디자인 편집기에서 열어 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "소스 코드에서 직접 설치하려면 시스템에 Rust 및 Cargo가 설치되어 있어야 합니다.",
+    "stars": 7310,
+    "forks": 506,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "plano",
+    "name": "plano",
+    "github": "https://github.com/katanemo/plano",
+    "description": "에이전트 애플리케이션을 위한 스마트 LLM 라우팅, 관측성, 가드레일을 제공하는 AI 네이티브 프록시 서버입니다.",
+    "longDescription": "에이전트 아키텍처에서 반복적으로 구현해야 하는 모델 라우팅, 실행 추적, 보안 가드레일 필터링 등의 인프라 로직을 중앙집중화하여 개발자가 핵심 비즈니스 로직에 집중할 수 있게 돕는 데이터 플레인 서버입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "AI 프록시",
+      "LLM 게이트웨이",
+      "라우팅",
+      "가드레일",
+      "Rust"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://planoai.dev",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Plano 실행",
+        "command": "planoai up config.yaml",
+        "note": "설정 파일을 바탕으로 Plano AI 프록시 서버를 시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "공식 가이드에 따라 Plano 및 환경 설정을 구성합니다.",
+      "라우팅 규칙과 가드레일 정책이 포함된 설정 파일(config.yaml)을 작성합니다.",
+      "명령어를 통해 Plano 프록시 서버를 백그라운드 또는 포그라운드로 실행합니다.",
+      "애플리케이션의 LLM 요청을 Plano 엔드포인트로 전송하여 스마트 라우팅 및 모니터링을 적용합니다."
+    ],
+    "examplePrompt": "사용자 요청의 복잡도에 따라 GPT-4o와 경량 모델 사이의 라우팅을 자동으로 최적화해줘.",
+    "usageNote": "프록시 서버 구동 전 올바른 API 키와 라우팅 대상 모델 설정이 사전 정의되어야 합니다.",
+    "stars": 7091,
+    "forks": 489,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "ui",
+    "name": "ui",
+    "github": "https://github.com/shadcn-ui/ui",
+    "description": "재사용하고 수정하기 쉬운 아름다운 디자인의 컴포넌트 모음입니다.",
+    "longDescription": "Tailwind CSS와 Radix UI 기반으로 직접 소스 코드를 가져와 확장할 수 있는 컴포넌트 라이브러리입니다. 나만의 디자인 시스템을 구축할 때 유용하게 활용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "UI 컴포넌트"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ui.shadcn.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 의존성 패키지를 설치합니다.",
+      "필요한 컴포넌트 코드를 직접 프로젝트에 복사합니다.",
+      "요구사항에 맞게 스타일과 로직을 커스텀하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 125740,
+    "forks": 13410,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "outlines",
+    "name": "outlines",
+    "github": "https://github.com/dottxt-ai/outlines",
+    "description": "언어 모델(LLM)이 정형화된 구조의 출력을 생성하도록 제어하는 파이썬 라이브러리입니다.",
+    "longDescription": "JSON 스키마나 정규표현식 등을 활용하여 LLM의 출력을 엄격하게 제어할 수 있게 도와주며, 다양한 오픈소스 모델과 연동됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "LLM",
+      "Python",
+      "JSON",
+      "Structured Generation"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://dottxt-ai.github.io/outlines/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Outlines 설치",
+        "command": "pip install outlines",
+        "note": "PyPI를 통해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 outlines 패키지를 설치합니다.",
+      "transformers 등을 이용해 선호하는 모델을 로드합니다.",
+      "Pydantic 모델이나 정규표현식으로 출력 형식을 지정하여 텍스트 생성을 요청합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15942,
+    "forks": 907,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "gateway",
+    "name": "gateway",
+    "github": "https://github.com/Portkey-AI/gateway",
+    "description": "다양한 LLM API를 단일 인터페이스로 라우팅하고 보안 가드레일을 제공하는 고성능 AI 게이트웨이입니다.",
+    "longDescription": "1,600개 이상의 언어 모델과 연동되며 속도 제한, 부하 분산, 비용 추적 및 가드레일 기능을 간편하게 적용할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "AI Gateway",
+      "LLMOps",
+      "LLM",
+      "TypeScript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://portkey.ai/features/ai-gateway",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "클라이언트 SDK를 설치합니다.",
+      "제공자 API 키와 함께 포트키 클라이언트를 초기화합니다.",
+      "챗 컴플리션 API 요청을 게이트웨이를 통해 전송합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13198,
+    "forks": 1371,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "morphic",
+    "name": "morphic",
+    "github": "https://github.com/miurla/morphic",
+    "description": "생성형 UI와 검색 엔진을 결합하여 실시간으로 답변을 제공하는 AI 검색 어플리케이션입니다.",
+    "longDescription": "웹 검색 결과와 대규모 언어 모델을 조합해 사용자의 질문에 대한 심층적인 답변을 생성형 UI 컴포넌트로 시각화하여 보여줍니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "AI Search"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://chat.morphic.sh",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Docker",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 이미지 가져오기",
+        "command": "docker pull ghcr.io/miurla/morphic:latest",
+        "note": "최신 도커 이미지를 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 환경 설정 파일을 복사합니다.",
+      "환경 변수 파일에 AI 제공자 API 키를 설정합니다.",
+      "Docker Compose를 이용해 서비스를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9175,
+    "forks": 2349,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "transformer-explainer",
+    "name": "transformer-explainer",
+    "github": "https://github.com/poloclub/transformer-explainer",
+    "description": "브라우저에서 직접 GPT 모델의 내부 작동 원리를 시각적으로 탐색할 수 있는 교육용 도구입니다.",
+    "longDescription": "사용자가 직접 텍스트를 입력하고 트랜스포머 아키텍처의 내부 구성 요소와 연산 과정을 실시간으로 관찰하며 LLM 원리를 배울 수 있습니다.",
+    "category": "교육·학습",
+    "tags": [
+      "JavaScript",
+      "LLM",
+      "Deep Learning",
+      "Visualization"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://poloclub.github.io/transformer-explainer/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Node.js",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 패키지 설치",
+        "command": "git clone https://github.com/poloclub/transformer-explainer.git && cd transformer-explainer && npm install",
+        "note": "소스 코드를 받고 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "개발 서버를 실행합니다 (`npm run dev`).",
+      "웹 브라우저로 로컬 주소에 접속하여 시각화 화면을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8991,
+    "forks": 1028,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "bentoml",
+    "name": "BentoML",
+    "github": "https://github.com/bentoml/BentoML",
+    "description": "파이썬 환경에서 AI 모델과 애플리케이션을 쉽게 서빙하고 API를 구축할 수 있는 프레임워크입니다.",
+    "longDescription": "다양한 오픈소스 및 커스텀 인공지능 모델을 통합하여 프로덕션 환경에 적합한 추론 서비스와 멀티모달 파이프라인을 구축할 수 있습니다.",
+    "category": "개발 운영",
+    "tags": [
+      "Model Serving",
+      "Python",
+      "LLM",
+      "MLOps"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://bentoml.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Python 3.9 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "BentoML 설치",
+        "command": "pip install -U bentoml",
+        "note": "최신 BentoML 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 BentoML을 설치합니다.",
+      "서비스 정의 파일을 작성하여 모델 추론 로직을 구현합니다.",
+      "컨테이너화 또는 로컬 서버 실행을 통해 모델을 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8905,
+    "forks": 1044,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "evidently",
+    "name": "evidently",
+    "github": "https://github.com/evidentlyai/evidently",
+    "description": "머신러닝 및 LLM 기반 시스템의 성능을 평가, 테스트, 모니터링하는 오픈소스 파이썬 프레임워크입니다.",
+    "longDescription": "데이터 드리프트 감지부터 텍스트 및 RAG 평가까지 100개 이상의 내장 지표를 제공하여 AI 시스템의 신뢰성을 검증할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "MLOps",
+      "Python",
+      "Model Monitoring",
+      "Data Quality"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://discord.gg/xZjKRaNp8b",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI를 통한 설치",
+        "command": "pip install evidently",
+        "note": "evidently 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "파이썬 코드에서 데이터와 지표를 불러옵니다.",
+      "리포트나 테스트 스위트를 실행하여 모델 상태를 평가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7991,
+    "forks": 950,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "openllmetry",
+    "name": "openllmetry",
+    "github": "https://github.com/traceloop/openllmetry",
+    "description": "OpenTelemetry 기반으로 생성형 AI 및 LLM 애플리케이션의 모니터링과 추적을 제공하는 도구입니다.",
+    "longDescription": "코드에 간단한 초기화 코드를 추가하는 것만으로 LLM 호출, 프롬프트, 비용 및 응답 시간을 기존 모니터링 시스템과 연동해 추적할 수 있습니다.",
+    "category": "개발 운영",
+    "tags": [
+      "OpenTelemetry",
+      "LLMOps",
+      "Observability",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.traceloop.com/openllmetry",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T13:03:58.946Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "SDK 설치",
+        "command": "pip install traceloop-sdk",
+        "note": "트레이스 수집을 위한 SDK를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip으로 traceloop-sdk를 설치합니다.",
+      "코드 상단에 초기화 코드를 추가합니다.",
+      "애플리케이션을 실행하여 LLM 호출 트레이스를 수집합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7501,
+    "forks": 1159,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
     "id": "xcpretty",
     "name": "xcpretty",
     "github": "https://github.com/xcpretty/xcpretty",
