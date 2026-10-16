@@ -1,5 +1,972 @@
 [
   {
+    "id": "whisper-cpp",
+    "name": "whisper.cpp",
+    "github": "https://github.com/ggml-org/whisper.cpp",
+    "description": "OpenAI Whisper 모델을 C/C++로 고성능 포팅하여 가볍고 빠르게 음성 인식을 실행하는 툴입니다.",
+    "longDescription": "OpenAI의 Whisper 음성 인식 모델을 C 및 C++로 재구현하여 외부 의존성 없이 로컬 환경에서 매우 빠른 속도로 음성을 텍스트로 변환합니다. 다양한 하드웨어 가속을 지원하여 리소스가 제한된 환경에서도 효율적으로 동작합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "C++",
+      "추론",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/ggml-org/whisper.cpp",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "C++ 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 복제 및 빌드",
+        "command": "git clone https://github.com/ggml-org/whisper.cpp.git && cd whisper.cpp && make",
+        "note": "저장소를 클론한 후 make 명령어로 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 빌드합니다.",
+      "원하는 Whisper 모델 가중치 파일을 다운로드합니다.",
+      "명령줄에서 오디오 파일을 입력하여 텍스트 변환을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정확한 실행을 위해 모델 파일이 필요합니다.",
+    "stars": 54438,
+    "forks": 6262,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "faster-whisper",
+    "name": "faster-whisper",
+    "github": "https://github.com/SYSTRAN/faster-whisper",
+    "description": "CTranslate2 엔진을 활용하여 기존 Whisper 대비 최대 4배 빠른 속도와 적은 메모리로 동작하는 음성 인식 라이브러리입니다.",
+    "longDescription": "OpenAI Whisper 모델을 CTranslate2 고속 추론 엔진으로 재구현한 라이브러리로, 동일한 정확도를 유지하면서도 처리 속도가 훨씬 빠릅니다. 8비트 양자화를 지원하여 메모리 사용량을 크게 줄여줍니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "Python",
+      "CTranslate2",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/SYSTRAN/faster-whisper",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python 3.8+",
+      "CUDA (선택 사항)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install faster-whisper",
+        "note": "파이썬 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 faster-whisper를 설치합니다.",
+      "파이썬 스크립트에서 WhisperModel 클래스를 불러옵니다.",
+      "오디오 경로를 입력하여 트랜스크립션을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "GPU 가속을 활용하려면 CUDA 환경 설정이 권장됩니다.",
+    "stars": 25900,
+    "forks": 2141,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "whisperx",
+    "name": "whisperX",
+    "github": "https://github.com/m-bain/whisperX",
+    "description": "단어 단위 타임스탬프와 화자 분리(Diarization) 기능이 강화된 고속 Whisper 음성 인식 툴입니다.",
+    "longDescription": "Whisper 모델의 타임스탬프 정확도를 음소 정렬과 VAD 기반 배치 처리를 통해 대폭 개선했습니다. 화자 분리 기능을 결합하여 회의록 작성이나 미디어 자막 제작에 유용합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "화자분리",
+      "자막",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://github.com/m-bain/whisperX",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "FFmpeg",
+      "CUDA 12.8 (GPU 사용 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install whisperx",
+        "note": "파이썬을 통해 whisperx를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "FFmpeg 및 필수 의존성을 설치합니다.",
+      "pip로 whisperx를 설치합니다.",
+      "명령어나 파이썬 코드를 통해 오디오 파일의 타임스탬프와 화자를 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "화자 분리를 위해 Hugging Face 토큰이 필요할 수 있습니다.",
+    "stars": 24613,
+    "forks": 2486,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "voice-pro",
+    "name": "voice-pro",
+    "github": "https://github.com/abus-aikorea/voice-pro",
+    "description": "음성 인식, 번역, 음성 합성 및 보컬 분리 기능을 제공하는 올인원 그라디오(Gradio) 웹 UI 애플리케이션입니다.",
+    "longDescription": "크리에이터와 개발자를 위한 다국어 음성 처리 웹 애플리케이션으로, Whisper 음성 인식, F5-TTS 및 CosyVoice 음성 복제, Demucs 보컬 분리 등을 하나의 통합된 인터페이스에서 제공합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Gradio",
+      "음성합성",
+      "음성인식",
+      "음성복제",
+      "웹UI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.wctokyoseoul.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "NVIDIA GPU (권장)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/abus-aikorea/voice-pro.git",
+        "note": "프로젝트 소스 코드를 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 환경을 설정합니다.",
+      "제공되는 스크립트(configure 및 start)를 실행합니다.",
+      "브라우저에서 웹 UI에 접속하여 음성 변환 및 자막 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "고성능 처리를 위해 8GB 이상의 VRAM을 갖춘 GPU가 권장됩니다.",
+    "stars": 13019,
+    "forks": 1865,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "sensevoice",
+    "name": "SenseVoice",
+    "github": "https://github.com/QwenAudio/SenseVoice",
+    "description": "다국어 음성 인식, 언어 식별, 감정 인식, 오디오 이벤트 감지를 지원하는 고성능 음성 이해 모델입니다.",
+    "longDescription": "알리바바 FunAudioLLM 팀이 공개한 음성 기초 모델로, 빠른 처리 속도와 뛰어난 다국어(한국어 포함) 음성 인식 능력을 자랑합니다. ASR뿐만 아니라 음성의 감정 상태와 배경 오디오 이벤트까지 감지할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "감정인식",
+      "다국어",
+      "PyTorch"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://huggingface.co/spaces/FunAudioLLM/SenseVoice",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "웹UI 실행",
+        "command": "python webui.py",
+        "note": "웹 인터페이스 스크립트를 실행하여 로컬에서 사용합니다."
+      }
+    ],
+    "usageSteps": [
+      "모델 저장소를 클론하고 의존성을 설치합니다.",
+      "제공된 웹UI 스크립트를 실행합니다.",
+      "웹 브라우저를 통해 오디오 파일을 업로드하고 분석 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9518,
+    "forks": 839,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "funclip",
+    "name": "FunClip",
+    "github": "https://github.com/modelscope/FunClip",
+    "description": "FunASR 기반의 자동 동영상 자막 생성 및 대형 언어 모델 보조 클리핑 툴입니다.",
+    "longDescription": "로컬 환경에서 실행 가능한 완전 오픈소스 동영상 편집 및 자막 추출 도구입니다. 음성 인식을 통해 자동으로 SRT 자막을 생성하고, 사용자가 특정 텍스트나 화자를 선택하여 원하는 구간만 쉽게 클립할 수 있습니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "동영상편집",
+      "자막생성",
+      "음성인식",
+      "Gradio"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://huggingface.co/spaces/FunAudioLLM/FunClip",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "FFmpeg"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/modelscope/FunClip.git",
+        "note": "프로젝트 소스 코드를 로컬에 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필수 패키지를 설치합니다.",
+      "로컬 웹 UI를 실행합니다.",
+      "영상을 업로드하고 텍스트 구간을 선택하여 자막 및 클립 영상을 추출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6400,
+    "forks": 759,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "whisper-diarization",
+    "name": "whisper-diarization",
+    "github": "https://github.com/MahmoudAshraf97/whisper-diarization",
+    "description": "OpenAI Whisper와 음성 활동 감지(VAD), 화자 임베딩을 결합하여 화자별 자막을 생성하는 파이프라인입니다.",
+    "longDescription": "오디오에서 보컬을 분리한 뒤 Whisper로 텍스트를 추출하고, VAD와 화자 식별 기술을 적용하여 대화 참여자별로 발화 내용을 정확하게 나누어 기록해 주는 도구입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "화자분리",
+      "음성인식",
+      "Python",
+      "Jupyter"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://github.com/MahmoudAshraf97/whisper-diarization",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python 3.10+",
+      "FFmpeg",
+      "Cython"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cython 설치",
+        "command": "pip install cython",
+        "note": "의존성 설치를 위해 Cython을 먼저 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "필수 시스템 패키지(FFmpeg 등)를 설치합니다.",
+      "파이썬 요구사항 패키지를 설치합니다.",
+      "스크립트를 실행하여 오디오 파일의 화자 분리 및 텍스트 변환을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5664,
+    "forks": 504,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "stt",
+    "name": "stt",
+    "github": "https://github.com/jianchang512/stt",
+    "description": "로컬 환경에서 오프라인으로 실행되며 JSON, SRT 자막, 텍스트를 출력하는 음성 인식 변환 도구입니다.",
+    "longDescription": "Fast-Whisper 모델을 기반으로 제작된 오프라인 음성 인식 도구로, 인터넷 연결 없이 동영상이나 오디오의 음성을 텍스트로 변환합니다. 웹 API를 대체하여 로컬에서 안전하고 정확하게 자막을 생성할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "자막추출",
+      "오프라인",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://pyvideotrans.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "FFmpeg"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "pip install -r requirements.txt",
+        "note": "필요한 파이썬 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 다운로드하고 파이썬 가상 환경을 설정합니다.",
+      "요구사항 패키지와 FFmpeg를 설치합니다.",
+      "프로그램을 실행하여 오디오/비디오 파일을 자막 파일로 변환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4826,
+    "forks": 509,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "distil-whisper",
+    "name": "distil-whisper",
+    "github": "https://github.com/huggingface/distil-whisper",
+    "description": "OpenAI Whisper의 증류(Distilled) 버전을 통해 6배 빠른 속도와 절반의 용량으로 음성 인식을 수행하는 모델입니다.",
+    "longDescription": "Hugging Face 트랜스포머 라이브러리와 완벽하게 호환되며, 원본 Whisper 모델의 정확도를 유지하면서도 속도가 대폭 향상되어 대규모 음성 처리 작업에 매우 적합합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "HuggingFace",
+      "Transformer",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/huggingface/distil-whisper",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "Transformers 4.35+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "라이브러리 업그레이드 및 설치",
+        "command": "pip install --upgrade transformers accelerate datasets[audio]",
+        "note": "최신 트랜스포머 및 관련 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "최신 버전의 Transformers 및 관련 패키지를 설치합니다.",
+      "파이썬 코드에서 Distil-Whisper 파이프라인을 불러옵니다.",
+      "오디오 데이터를 입력하여 고속으로 텍스트를 추출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4119,
+    "forks": 357,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "whishper",
+    "name": "whishper",
+    "github": "https://github.com/pluja/whishper",
+    "description": "웹 UI를 통해 오디오 파일을 100% 로컬에서 텍스트로 변환하고 자막을 편집할 수 있는 웹 애플리케이션입니다.",
+    "longDescription": "Whisper 모델 기반의 자체 호스팅 가능한 자막 생성 및 번역 도구입니다. 직관적인 웹 인터페이스를 제공하여 사용자가 로컬 서버에서 직접 음성을 인식시키고 생성된 자막을 편리하게 수정할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "웹앱",
+      "음성인식",
+      "자막편집",
+      "Svelte"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://whishper-docs.pages.dev/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose (Docker 사용 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d -p 8080:8080 pluja/whishper",
+        "note": "Docker를 통해 간편하게 서비스를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker를 사용하여 컨테이너를 실행합니다.",
+      "웹 브라우저를 통해 로컬 서버에 접속합니다.",
+      "오디오 또는 비디오 파일을 업로드하고 자막 생성 및 편집 작업을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3092,
+    "forks": 183,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "dapr",
+    "name": "dapr",
+    "github": "https://github.com/dapr/dapr",
+    "description": "클라우드 및 엣지 환경에서 분산 애플리케이션을 구축하기 위한 휴대용 런타임입니다.",
+    "longDescription": "이벤트 기반 아키텍처와 워크플로 오케스트레이션을 결합하여 서비스 간 안정적인 통신을 지원하는 오픈소스 런타임입니다. 인프라 종속성을 줄이고 마이크로서비스 아키텍처 구현을 단순화합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "마이크로서비스",
+      "워크플로",
+      "Go",
+      "서버리스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://dapr.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Go",
+      "Docker",
+      "Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 문서 참조",
+        "command": "https://docs.dapr.io/getting-started/",
+        "note": "공식 시작 가이드를 따르세요."
+      }
+    ],
+    "usageSteps": [
+      "Dapr CLI를 설치합니다.",
+      "로컬 환경에 Dapr 런타임을 초기화합니다.",
+      "애플리케이션에 Dapr 사이드카를 구성하여 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경에서는 Kubernetes 연동을 권장합니다.",
+    "stars": 26149,
+    "forks": 2164,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "paddlespeech",
+    "name": "PaddleSpeech",
+    "github": "https://github.com/PaddlePaddle/PaddleSpeech",
+    "description": "음성 인식, 음성 합성 등을 지원하는 사용하기 쉬운 음성 처리 툴킷입니다.",
+    "longDescription": "PaddlePaddle 플랫폼 기반의 오픈소스 음성 툴킷으로 자동 음성 인식(ASR), 스트리밍 TTS, 화자 인증 등 다양한 오디오 태스크를 제공합니다. NAACL Best Demo상을 수상한 바 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "ASR",
+      "TTS",
+      "Python",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://paddlespeech.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python = 3.8",
+      "PaddlePaddle",
+      "gcc = 4.8.5"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install paddlespeech",
+        "note": "PyPI를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 환경을 확인하고 PaddlePaddle을 설치합니다.",
+      "PaddleSpeech 패키지를 설치합니다.",
+      "CLI 또는 Python API를 통해 음성 인식 및 합성 기능을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Linux 환경 설치를 강력히 권장합니다.",
+    "stars": 12694,
+    "forks": 1957,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "espnet",
+    "name": "espnet",
+    "github": "https://github.com/espnet/espnet",
+    "description": "PyTorch 기반의 엔드투엔드 음성 처리 툴킷입니다.",
+    "longDescription": "음성 인식, 음성 합성, 음성 번역, 화자 분할 등 다양한 음성 신호 처리 기능을 통합 제공하는 프레임워크입니다. 연구 및 프로덕션 환경 모두에서 널리 활용됩니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "PyTorch",
+      "음성합성",
+      "딥러닝",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://espnet.github.io/espnet/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install espnet",
+        "note": "PyPI를 통해 최신 버전을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "PyTorch 및 필수 라이브러리를 설치합니다.",
+      "pip을 통해 espnet을 설치합니다.",
+      "제공되는 레시피 및 모델을 활용해 학습 또는 추론을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "상세한 레시피 구성은 공식 문서를 참고하세요.",
+    "stars": 9986,
+    "forks": 2445,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "speech-recognition",
+    "name": "speech_recognition",
+    "github": "https://github.com/Uberi/speech_recognition",
+    "description": "온·오프라인 다양한 엔진과 API를 지원하는 파이썬 음성 인식 모듈입니다.",
+    "longDescription": "Google Speech API, Sphinx, Wit.ai 등 여러 음성 인식 엔진을 일관된 인터페이스로 사용할 수 있도록 돕는 파이썬 라이브러리입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "Python",
+      "오디오",
+      "STT"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://pypi.python.org/pypi/SpeechRecognition/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "PyAudio (선택)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install SpeechRecognition",
+        "note": "오디오 마이크 입력 지원을 원하면 [audio] 옵션을 추가하세요."
+      }
+    ],
+    "usageSteps": [
+      "pip을 사용하여 라이브러리를 설치합니다.",
+      "AudioFile 또는 Microphone 객체를 통해 오디오 소스를 불러옵니다.",
+      "recognize_* 메서드를 호출하여 텍스트로 변환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "마이크 입력 사용 시 시스템에 PyAudio 설치가 필요합니다.",
+    "stars": 8997,
+    "forks": 2419,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "mlx-audio",
+    "name": "mlx-audio",
+    "github": "https://github.com/Blaizzy/mlx-audio",
+    "description": "Apple Silicon 환경에 최적화된 음성 분석 및 변환 라이브러리입니다.",
+    "longDescription": "Apple의 MLX 프레임워크를 기반으로 구축되어 텍스트 음성 변환(TTS), 음성 인식(STT), 음성 간 변환(STS) 등을 고성능으로 처리합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Apple Silicon",
+      "MLX",
+      "음성인식",
+      "TTS",
+      "Python"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://blaizzy.github.io/mlx-audio/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "Apple Silicon Mac"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install mlx-audio",
+        "note": "PyPI를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Apple Silicon Mac 환경에서 Python 가상환경을 생성합니다.",
+      "pip을 통해 mlx-audio를 설치합니다.",
+      "지원되는 모델을 로드하여 음성 분석 및 변환 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Apple Silicon 하드웨어 가속이 필수적입니다.",
+    "stars": 8054,
+    "forks": 756,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "annyang",
+    "name": "annyang",
+    "github": "https://github.com/TalAter/annyang",
+    "description": "웹사이트에서 음성 명령으로 사용자와 상호작용할 수 있게 해주는 가벼운 자바스크립트 라이브러리입니다.",
+    "longDescription": "의존성이 없고 용량이 매우 작은 JavaScript 음성 인식 라이브러리로, 웹 브라우저 내에서 음성 명령어를 정의하고 실행할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "JavaScript",
+      "음성인식",
+      "웹",
+      "프론트엔드"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.talater.com/annyang/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Node.js",
+      "웹 브라우저 음성 인식 API 지원"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM 설치",
+        "command": "npm install annyang",
+        "note": "프로젝트에 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm을 통해 annyang을 설치합니다.",
+      "JavaScript 코드에서 annyang을 임포트합니다.",
+      "실행할 음성 명령어와 콜백 함수를 정의하고 인식을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "마이크 권한이 허용된 현대적 웹 브라우저가 필요합니다.",
+    "stars": 6818,
+    "forks": 1045,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "argmax-oss-swift",
+    "name": "argmax-oss-swift",
+    "github": "https://github.com/argmaxinc/argmax-oss-swift",
+    "description": "Apple Silicon 기기에서 온디바이스로 동작하는 음성 AI SDK입니다.",
+    "longDescription": "WhisperKit 및 각종 음성 인식·합성 모델을 Swift 환경에서 고성능으로 실행할 수 있도록 지원하는 오픈소스 SDK입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Swift",
+      "iOS",
+      "macOS",
+      "WhisperKit",
+      "음성인식"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/argmaxinc/argmax-oss-swift",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Xcode",
+      "Swift Package Manager"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Swift Package Manager 추가",
+        "command": "https://github.com/argmaxinc/argmax-oss-swift",
+        "note": "Xcode 패키지 종속성으로 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Xcode 프로젝트를 엽니다.",
+      "Swift Package Manager를 통해 저장소 URL을 추가합니다.",
+      "코드에서 SDK를 임포트하여 온디바이스 음성 모델을 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Apple 플랫폼 전용입니다.",
+    "stars": 6405,
+    "forks": 623,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "paddlex",
+    "name": "PaddleX",
+    "github": "https://github.com/PaddlePaddle/PaddleX",
+    "description": "다양한 사전 훈련 모델을 통합하여 제공하는 저코드 AI 개발 도구입니다.",
+    "longDescription": "텍스트, 이미지 분석, OCR, 객체 검출 등 여러 컴퓨터 비전 및 AI 파이프라인을 단일 명령어나 파이썬 API로 간편하게 활용할 수 있는 개발 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PaddlePaddle",
+      "저코드",
+      "OCR",
+      "컴퓨터비전",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://paddlepaddle.github.io/PaddleX/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python",
+      "PaddlePaddle"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "기본 설치",
+        "command": "pip install \"paddlex[base]\"",
+        "note": "기본 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 PaddleX 기본 패키지를 설치합니다.",
+      "CLI 명령어를 통해 필요한 파이프라인과 입력 파일을 지정합니다.",
+      "결과를 확인하고 필요에 따라 모델을 파인튜닝합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "하드웨어 가속기(GPU, NPU 등) 환경에 맞춰 추가 설정이 필요할 수 있습니다.",
+    "stars": 6274,
+    "forks": 1221,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "porcupine",
+    "name": "porcupine",
+    "github": "https://github.com/Picovoice/porcupine",
+    "description": "딥러닝 기반의 고성능 온디바이스 호출어(Wake Word) 감지 엔진입니다.",
+    "longDescription": "인터넷 연결 없이 로컬 기기에서 특정 호출어나 키워드를 실시간으로 정확하게 감지할 수 있는 음성 인식 유틸리티입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "호출어감지",
+      "온디바이스",
+      "음성인식",
+      "Python",
+      "음성명령"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://picovoice.ai/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Python 3",
+      "Access Key"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "데모 패키지 설치",
+        "command": "sudo pip3 install pvporcupinedemo",
+        "note": "파이썬 데모 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Picovoice 콘솔에서 무료 Access Key를 발급받습니다.",
+      "pip을 통해 데모 패키지를 설치합니다.",
+      "마이크 입력과 함께 키워드를 지정하여 감지 테스트를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "사용을 위해 Picovoice 계정 및 키가 필요합니다.",
+    "stars": 4951,
+    "forks": 583,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "whisper-asr-webservice",
+    "name": "whisper-asr-webservice",
+    "github": "https://github.com/ahmetoner/whisper-asr-webservice",
+    "description": "OpenAI Whisper 모델을 활용한 범용 음성 인식 웹 서비스 API입니다.",
+    "longDescription": "Docker와 FastAPI 등을 기반으로 OpenAI Whisper ASR 모델을 REST API 형태로 간편하게 배포하고 사용할 수 있는 서비스입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Whisper",
+      "ASR",
+      "Docker",
+      "REST API",
+      "음성인식"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ahmetoner.github.io/whisper-asr-webservice",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T18:04:01.725Z",
+    "requirements": [
+      "Docker",
+      "Poetry (로컬 개발 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Poetry를 이용한 CPU 환경 설치",
+        "command": "poetry install --extras cpu",
+        "note": "CPU용 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Poetry 또는 Docker를 통해 프로젝트 환경을 준비합니다.",
+      "서버 애플리케이션을 실행합니다.",
+      "웹 브라우저에서 Swagger UI에 접속하거나 API를 호출해 음성을 텍스트로 변환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "GPU 환경에서는 --extras cuda 옵션을 사용하세요.",
+    "stars": 3356,
+    "forks": 583,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
     "id": "appflowy",
     "name": "AppFlowy",
     "github": "https://github.com/AppFlowy-IO/AppFlowy",
