@@ -1,5 +1,783 @@
 [
   {
+    "id": "ultralytics",
+    "name": "Ultralytics YOLO",
+    "github": "https://github.com/ultralytics/ultralytics",
+    "description": "객체 검출, 이미지 분류 및 세그먼트를 위한 최첨단 컴퓨터 Vision AI 프레임워크입니다.",
+    "longDescription": "다양한 컴퓨터 비전 태스크(객체 탐지, 인스턴스 분할, 포즈 추정 등)를 고성능으로 수행할 수 있는 YOLO 모델들을 제공합니다. PyTorch 기반으로 구현되어 있어 학습부터 배포까지 손쉽게 확장할 수 있습니다.",
+    "category": "AI 모델",
+    "tags": [
+      "컴퓨터비전",
+      "DeepLearning",
+      "YOLO",
+      "PyTorch",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://platform.ultralytics.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python = 3.8",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 패키지 설치",
+        "command": "pip install ultralytics",
+        "note": "Python 환경에서 pip를 사용하여 최신 ultralytics 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 가상환경에 ultralytics 패키지를 설치합니다.",
+      "파이썬 스크립트나 CLI를 통해 YOLO 모델을 불러옵니다.",
+      "지정한 이미지 또는 비디오 파일에 대해 예측 및 학습을 실행합니다."
+    ],
+    "examplePrompt": "yolo predict model=yolov8n.pt source='https://ultralytics.com/images/bus.jpg'",
+    "usageNote": "상업적 이용 시 라이선스 정책(AGPL-3.0)을 확인해야 합니다.",
+    "stars": 62571,
+    "forks": 11865,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "gradio",
+    "name": "G gradio",
+    "github": "https://github.com/gradio-app/gradio",
+    "description": "파이썬 코딩 몇 줄만으로 머신러닝 모델의 웹 기반 UI 데모를 손쉽게 만들고 공유하는 도구입니다.",
+    "longDescription": "복잡한 웹 프론트엔드 지식 없이도 파이썬 함수와 모델을 대화형 웹 인터페이스로 변환할 수 있습니다. Hugging Face Spaces 등과 연동하여 다른 사람들과 결과물을 간편하게 공유할 수 있습니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "UI",
+      "머신러닝",
+      "Python",
+      "웹앱",
+      "데이터시각화"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://www.gradio.app",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gradio 설치",
+        "command": "pip install --upgrade gradio",
+        "note": "가상환경에서 pip를 사용하여 Gradio 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "가상환경을 생성하고 Gradio를 설치합니다.",
+      "파이썬 코드에서 gr.Interface 블록을 작성합니다.",
+      "스크립트를 실행하여 로컬 서버나 퍼블릭 링크를 통해 UI를 확인합니다."
+    ],
+    "examplePrompt": "import gradio as gr\ndef greet(name): return \"Hello \" + name + \"!\"\ndemo = gr.Interface(fn=greet, inputs=\"text\", outputs=\"text\")\ndemo.launch()",
+    "usageNote": "프로덕션 환경 배포 시 보안 설정을 검토해야 합니다.",
+    "stars": 43778,
+    "forks": 3634,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "netron",
+    "name": "Netron",
+    "github": "https://github.com/lutzroeder/netron",
+    "description": "신경망, 딥러닝 및 머신러닝 모델 구조를 시각화해 주는 뷰어 도구입니다.",
+    "longDescription": "ONNX, TensorFlow Lite, PyTorch, Keras 등 다양한 형식의 머신러닝 모델 파일을 불러와 내부 레이어와 텐서 구조를 직관적인 그래픽으로 보여줍니다. 브라우저 버전과 데스크톱 앱을 모두 지원합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "시각화",
+      "딥러닝",
+      "머신러닝",
+      "ONNX",
+      "PyTorch"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://netron.app",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS 홈브루 설치",
+        "command": "brew install --cask netron",
+        "note": "macOS 환경에서 Homebrew를 통해 Netron 데스크톱 앱을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "웹 버전(netron.app)에 접속하거나 데스크톱 앱을 설치합니다.",
+      "시각화하고자 하는 머신러닝 모델 파일(.onnx, .pt, .h5 등)을 드래그 앤 드롭합니다.",
+      "그래프 형태로 표현된 레이어 구조와 파라미터를 검토합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대용량 모델 파일의 경우 브라우저 메모리 상황에 따라 로딩 시간이 소요될 수 있습니다.",
+    "stars": 33577,
+    "forks": 3189,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "face-recognition",
+    "name": "face_recognition",
+    "github": "https://github.com/ageitgey/face_recognition",
+    "description": "파이썬과 명령줄에서 가장 쉽고 간편하게 얼굴 인식 및 조작을 수행할 수 있는 라이브러리입니다.",
+    "longDescription": "dlib의 최신 딥러닝 얼굴 인식 알고리즘을 기반으로 구축되었으며, LFW 벤치마크에서 높은 정확도를 기록합니다. 이미지 속 얼굴을 감지하고 식별하는 작업을 몇 줄의 코드로 처리할 수 있습니다.",
+    "category": "AI 모델",
+    "tags": [
+      "얼굴인식",
+      "ComputerVision",
+      "Python",
+      "딥러닝",
+      "dlib"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/ageitgey/face_recognition",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python 3.3+",
+      "dlib"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 패키지 설치",
+        "command": "pip install face_recognition",
+        "note": "사전에 dlib이 설치된 환경에서 face_recognition 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "C++ 컴파일러와 dlib 의존성을 준비합니다.",
+      "pip를 통해 face_recognition 패키지를 설치합니다.",
+      "파이썬 코드에서 얼굴 감지 및 비교 기능을 호출합니다."
+    ],
+    "examplePrompt": "import face_recognition\nimage = face_recognition.load_image_file(\"your_file.jpg\")\nface_locations = face_recognition.face_locations(image)",
+    "usageNote": "설치 시 dlib 컴파일 과정에서 운영체제별 빌드 도구가 필요할 수 있습니다.",
+    "stars": 56827,
+    "forks": 13676,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "tesseract",
+    "name": "Tesseract OCR",
+    "github": "https://github.com/tesseract-ocr/tesseract",
+    "description": "다양한 운영체제에서 동작하는 오픈소스 광학 문자 인식(OCR) 엔진입니다.",
+    "longDescription": "이미지 속 텍스트를 인식하여 기계가 읽을 수 있는 텍스트로 변환해 주는 강력한 OCR 엔진입니다. LSTM 기반의 인식 기능을 지원하며, 명령줄 인터페이스 및 프로그래밍 라이브러리로 활용됩니다.",
+    "category": "문서",
+    "tags": [
+      "OCR",
+      "문자인식",
+      "C++",
+      "CLI",
+      "텍스트추출"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://tesseract-ocr.github.io/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "C++ Compiler"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "바이너리 패키지 설치 참조",
+        "command": "tesseract --version",
+        "note": "공식 가이드에 따라 운영체제별 사전 빌드된 바이너리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "운영체제에 맞는 Tesseract 패키지를 설치합니다.",
+      "명령줄에서 이미지 파일과 출력 파일명을 지정하여 실행합니다.",
+      "추출된 텍스트 결과를 확인합니다."
+    ],
+    "examplePrompt": "tesseract image.png output -l kor",
+    "usageNote": "한국어 등 다국어 인식을 위해 추가 언어 데이터(traineddata) 다운로드가 필요합니다.",
+    "stars": 77027,
+    "forks": 10845,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "ray",
+    "name": "Ray",
+    "github": "https://github.com/ray-project/ray",
+    "description": "AI 및 머신러닝 워크로드 분산 처리를 가속화하기 위한 통합 컴퓨팅 엔진입니다.",
+    "longDescription": "분산 런타임과 머신러닝 라이브러리(Train, Tune, RLlib, Serve 등)를 제공하여 대규모 데이터 처리, 하이퍼파라미터 튜닝, LLM 서빙 등을 효율적으로 확장하고 실행할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "분산처리",
+      "AI",
+      "머신러닝",
+      "Python",
+      "병렬처리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://ray.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip를 이용한 설치",
+        "command": "pip install ray",
+        "note": "파이썬 환경에서 ray 코어 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 ray를 설치합니다.",
+      "파이썬 코드에서 @ray.remote 데코레이터를 사용하여 분산 함수를 정의합니다.",
+      "ray.init()을 호출하여 클러스터를 시작하고 작업을 실행합니다."
+    ],
+    "examplePrompt": "import ray\nray.init()\n@ray.remote\ndef f(x): return x * x\nf.remote(4)",
+    "usageNote": "대규모 클러스터 구성 시 네트워크 및 자원 관리가 중요합니다.",
+    "stars": 44045,
+    "forks": 8162,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "deepspeed",
+    "name": "DeepSpeed",
+    "github": "https://github.com/deepspeedai/DeepSpeed",
+    "description": "대규모 언어 모델과 딥러닝 모델의 분산 학습 및 추론을 극대화하는 최적화 라이브러리입니다.",
+    "longDescription": "Microsoft에서 개발한 DeepSpeed는 ZeRO 기술 등을 활용하여 메모리 효율성을 높이고, 수십억~수조 개의 파라미터를 가진 모델을 여러 GPU 환경에서 빠르고 효율적으로 학습·추론할 수 있도록 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "딥러닝",
+      "분산학습",
+      "PyTorch",
+      "GPU",
+      "최적화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.deepspeed.ai/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "CUDA GPU"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip를 통한 설치",
+        "command": "pip install deepspeed",
+        "note": "파이썬 환경에서 DeepSpeed 및 최신 연산 확장 기능을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "PyTorch와 CUDA가 준비된 환경에서 pip로 deepspeed를 설치합니다.",
+      "학습 스크립트에 DeepSpeed 설정 파일(ds_config.json)을 연동합니다.",
+      "deepspeed 명령어 또는 분산 런처를 통해 모델 학습을 실행합니다."
+    ],
+    "examplePrompt": "deepspeed --num_gpus=4 train.py --deepspeed_config ds_config.json",
+    "usageNote": "적절한 CUDA 버전과 C++/CUDA 컴파일러 환경이 권장됩니다.",
+    "stars": 43237,
+    "forks": 5040,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "nautilus-trader",
+    "name": "NautilusTrader",
+    "github": "https://github.com/nautechsystems/nautilus_trader",
+    "description": "고성능 이벤트 기반 아키텍처를 갖춘 프로덕션 등급의 Rust 기반 트레이딩 엔진입니다.",
+    "longDescription": "Rust 언어로 작성되어 극도로 빠른 속도와 결정론적(deterministic) 이벤트 처리를 보장하는 알고리즘 트레이딩 플랫폼입니다. 파이썬과 Rust를 모두 지원하여 퀀트 전략 백테스팅 및 라이브 거래에 활용됩니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "트레이딩",
+      "Rust",
+      "Python",
+      "금융",
+      "알고리즘"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-3.0",
+    "website": "https://nautilustrader.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Rust",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo 기능 플래그 설정",
+        "command": "cargo add nautilus-model --features high-precision",
+        "note": "Rust 프로젝트의 Cargo.toml에 고정밀 모드 플래그를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Rust 및 Python 개발 환경을 준비합니다.",
+      "Cargo 또는 pip를 통해 NautilusTrader 관련 패키지를 설치합니다.",
+      "트레이딩 전략 스크립트를 작성하고 백테스팅 또는 실시간 거래소 연결을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실거래 연동 시 각 거래소의 API 정책과 위험 관리를 철저히 확인해야 합니다.",
+    "stars": 30177,
+    "forks": 4051,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "tensorflow",
+    "name": "TensorFlow",
+    "github": "https://github.com/tensorflow/tensorflow",
+    "description": "모두를 위한 오픈소스 머신러닝 프레임워크입니다.",
+    "longDescription": "텐서플로우는 딥러닝과 머신러닝 모델을 구축하고 학습하기 위한 강력한 오픈소스 프레임워크입니다. 파이썬 및 다양한 언어를 지원하며 분산 학습과 GPU 가속을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "딥러닝",
+      "머신러닝",
+      "파이썬",
+      "C++",
+      "인공지능"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://tensorflow.org",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install tensorflow",
+        "note": "파이썬 패키지 관리자를 통한 기본 설치"
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경에 텐서플로우를 설치합니다.",
+      "데이터셋을 로드하고 전처리합니다.",
+      "신경망 모델을 정의하고 컴파일합니다.",
+      "모델을 학습시키고 평가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 201066,
+    "forks": 79601,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "llm-course",
+    "name": "LLM Course",
+    "github": "https://github.com/mlabonne/llm-course",
+    "description": "대형언어모델(LLM)의 기초부터 응용까지 다루는 종합 로드맵 및 코스입니다.",
+    "longDescription": "수학, 파이썬 기초부터 최신 LLM 모델 학습 및 MLOps 엔지니어링까지 포괄하는 실습 중심의 코스입니다. Google Colab 노트북과 상세한 가이드를 제공합니다.",
+    "category": "교육·학습",
+    "tags": [
+      "LLM",
+      "머신러닝",
+      "인공지능",
+      "코스",
+      "파이썬"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://mlabonne.github.io/blog/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Jupyter",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소의 로드맵을 확인하고 학습할 주제를 선택합니다.",
+      "제공되는 Google Colab 노트북을 엽니다.",
+      "코드를 직접 실행하며 LLM 개념을 학습합니다.",
+      "실제 파이프라인 구축 프로젝트에 적용해 봅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 83635,
+    "forks": 9742,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "scikit-learn",
+    "name": "scikit-learn",
+    "github": "https://github.com/scikit-learn/scikit-learn",
+    "description": "파이썬을 위한 쉽고 효율적인 머신러닝 라이브러리입니다.",
+    "longDescription": "데이터 분석과 머신러닝을 위한 다양한 분류, 회귀, 군집 알고리즘을 제공합니다. NumPy, SciPy 등과 원활하게 연동됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "데이터 분석",
+      "머신러닝",
+      "파이썬",
+      "통계",
+      "데이터 과학"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://scikit-learn.org",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python",
+      "NumPy",
+      "SciPy"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "scikit-learn 설치",
+        "command": "pip install scikit-learn",
+        "note": "파이프를 통한 기본 설치"
+      }
+    ],
+    "usageSteps": [
+      "데이터셋을 불러오고 전처리합니다.",
+      "적절한 머신러닝 모델 객체를 생성합니다.",
+      "fit 메서드로 모델을 학습시킵니다.",
+      "predict 메서드로 결과를 예측하고 평가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 67724,
+    "forks": 27532,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "keras",
+    "name": "Keras 3",
+    "github": "https://github.com/keras-team/keras",
+    "description": "다양한 백엔드를 지원하는 인간 중심의 고수준 딥러닝 프레임워크입니다.",
+    "longDescription": "JAX, TensorFlow, PyTorch를 백엔드로 유연하게 선택하여 사용할 수 있는 멀티 백엔드 딥러닝 프레임워크입니다. 빠르고 간편하게 모델을 구축할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "딥러닝",
+      "파이썬",
+      "TensorFlow",
+      "PyTorch",
+      "JAX"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://keras.io/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python",
+      "TensorFlow 또는 PyTorch 또는 JAX"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Keras 설치",
+        "command": "pip install keras --upgrade",
+        "note": "최신 케라스 3 설치"
+      }
+    ],
+    "usageSteps": [
+      "Keras 3와 사용할 백엔드 패키지를 설치합니다.",
+      "원하는 백엔드를 환경 변수나 설정으로 지정합니다.",
+      "Keras API를 사용하여 신경망 구조를 정의합니다.",
+      "모델을 컴파일하고 학습을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 64375,
+    "forks": 19799,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "faceswap",
+    "name": "FaceSwap",
+    "github": "https://github.com/deepfakes/faceswap",
+    "description": "딥러닝을 이용해 사진과 영상 속 얼굴을 인식하고 교체하는 오픈소스 도구입니다.",
+    "longDescription": "최신 딥러닝 기술을 활용하여 얼굴을 추출하고, 모델을 학습시킨 뒤 비디오나 이미지에서 얼굴을 자연스럽게 바꿔주는 파이프라인을 제공합니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "딥러닝",
+      "얼굴 교체",
+      "컴퓨터 비전",
+      "파이썬",
+      "인공지능"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.faceswap.dev",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python",
+      "CUDA 지원 GPU"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/deepfakes/faceswap.git",
+        "note": "소스 코드 클론"
+      }
+    ],
+    "usageSteps": [
+      "소스 코드를 클론하고 필요한 의존성을 설치합니다.",
+      "원본 미디어에서 대상 얼굴을 추출합니다.",
+      "추출된 데이터로 얼굴 변환 모델을 학습시킵니다.",
+      "학습된 모델을 사용하여 새로운 영상에 얼굴을 합성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현실감 있는 결과를 위해 GPU 사용이 권장됩니다.",
+    "stars": 57571,
+    "forks": 13448,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "made-with-ml",
+    "name": "Made With ML",
+    "github": "https://github.com/GokuMohandas/Made-With-ML",
+    "description": "프로덕션 수준의 머신러닝 애플리케이션 개발, 배포, 반복 개선 과정을 배우는 코스입니다.",
+    "longDescription": "실험 단계부터 프로덕션 배포 및 유지보수까지 신뢰할 수 있는 머신러닝 시스템을 구축하는 전 과정을 소프트웨어 공학 관점에서 다룹니다.",
+    "category": "교육·학습",
+    "tags": [
+      "MLOps",
+      "머신러닝",
+      "파이썬",
+      "PyTorch",
+      "프로덕션"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://madewithml.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python 3.10"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "가상환경 설정 및 의존성 설치",
+        "command": "python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+        "note": "파이썬 가상환경 생성 후 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 가상환경을 활성화합니다.",
+      "필요한 요구사항 패키지를 설치합니다.",
+      "웹사이트 및 가이드를 따라 실습을 진행합니다.",
+      "프로덕션 파이프라인 코드를 실행하고 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 49750,
+    "forks": 7805,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "resume-matcher",
+    "name": "Resume Matcher",
+    "github": "https://github.com/srbhr/Resume-Matcher",
+    "description": "오픈소스 이력서 빌더이자 구직 공고 매칭을 위한 AI 도구입니다.",
+    "longDescription": "로컬 환경에서 100개 이상의 LLM을 지원하며, 지원자의 이력서를 구직 공고(JD)에 맞게 최적화하고 분석해 주는 자체 호스팅 AI 하니스입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "이력서",
+      "ATS",
+      "LLM",
+      "자연어 처리",
+      "파이썬"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://resumematcher.fyi/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python",
+      "Next.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 문서 확인",
+        "command": "git clone https://github.com/srbhr/Resume-Matcher.git",
+        "note": "프로젝트 클론 후 가이드에 따라 설치"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 환경 설정을 마칩니다.",
+      "이력서와 구직 공고 텍스트를 입력합니다.",
+      "AI 모델을 통해 유사도 분석 및 매칭 점수를 확인합니다.",
+      "피드백에 맞춰 이력서를 수정하고 최적화합니다."
+    ],
+    "examplePrompt": "이 이력서를 지정된 구직 공고에 맞게 최적화해 주세요.",
+    "usageNote": "로컬 LLM 활용 시 적절한 API 키나 모델 설정이 필요합니다.",
+    "stars": 28692,
+    "forks": 5074,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "xgboost",
+    "name": "XGBoost",
+    "github": "https://github.com/dmlc/xgboost",
+    "description": "확장 가능하고 빠른 성능을 제공하는 그라디언트 부스팅(GBDT) 라이브러리입니다.",
+    "longDescription": "분류 및 회귀 문제에서 뛰어난 성능을 발휘하는 머신러닝 라이브러리입니다. 단일 기계뿐만 아니라 분산 컴퓨팅 환경에서도 원활하게 동작합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "머신러닝",
+      "GBDT",
+      "C++",
+      "파이썬",
+      "분산 시스템"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://xgboost.readthedocs.io/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T15:04:01.820Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install xgboost",
+        "note": "파이썬 패키지를 이용한 간편 설치"
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리자를 통해 XGBoost를 설치합니다.",
+      "학습 데이터와 레이블을 준비합니다.",
+      "XGBoost 모델 객체를 초기화하고 학습을 진행합니다.",
+      "테스트 데이터로 예측을 수행하고 성능을 평가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 28881,
+    "forks": 8947,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
     "id": "yjs",
     "name": "Yjs",
     "github": "https://github.com/yjs/yjs",
