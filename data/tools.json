@@ -1,5 +1,719 @@
 [
   {
+    "id": "openreplay",
+    "name": "OpenReplay",
+    "github": "https://github.com/openreplay/openreplay",
+    "description": "사용자 세션 리플레이, 코브라우징, 제품 분석을 직접 호스팅할 수 있는 오픈소스 경험 플랫폼입니다.",
+    "longDescription": "OpenReplay는 사용자의 웹 애플리케이션 사용 세션을 녹화 및 재생하고, 기술적 맥락과 함께 디버깅하며, 실시간으로 사용자 화면을 공유(코브라우징)할 수 있는 자체 호스팅 기반 분석 플랫폼입니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "세션 리플레이",
+      "디버깅",
+      "제품 분석",
+      "실시간",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://openreplay.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "vCPUs 2개 이상",
+      "RAM 8GB 이상",
+      "디스크 50GB 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Getting Started 가이드 참고",
+        "command": "curl -s https://init.openreplay.com | bash",
+        "note": "단일 가상 머신 환경에 OpenReplay를 자동으로 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "권장 사양의 가상 머신을 준비합니다.",
+      "제공되는 설치 스크립트를 실행하여 인프라를 구축합니다.",
+      "애플리케이션에 추적 트래커 SDK를 연동합니다.",
+      "대시보드에서 세션 녹화 영상을 재생하며 버그를 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "데이터가 외부로 유출되지 않고 자사 인프라에 안전하게 저장됩니다.",
+    "stars": 12988,
+    "forks": 868,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "duckdb",
+    "name": "DuckDB",
+    "github": "https://github.com/duckdb/duckdb",
+    "description": "대용량 데이터 분석에 최적화된 고성능 인프로세스 분석용 SQL 데이터베이스 관리 시스템입니다.",
+    "longDescription": "가볍고 빠르게 복잡한 OLAP 쿼리를 처리할 수 있도록 설계된 임베디드 SQL 데이터베이스입니다. 파이썬, R, C++ 등 다양한 언어 환경에서 별도의 서버 구축 없이 인메모리 또는 파일 기반으로 실행할 수 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "SQL",
+      "데이터베이스",
+      "OLAP",
+      "분석",
+      "임베디드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://www.duckdb.org",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "C++ 컴파일러 또는 각 언어별 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "사용 중인 환경에 맞는 DuckDB 클라이언트나 CLI를 설치합니다.",
+      "CSV 또는 Parquet 파일을 SQL 문으로 직접 로드합니다.",
+      "표준 SQL을 사용하여 고성능 분석 쿼리를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 42188,
+    "forks": 3943,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "umami",
+    "name": "Umami",
+    "github": "https://github.com/umami-software/umami",
+    "description": "쿠키를 사용하지 않고 개인정보를 보호하며 웹사이트 트래픽을 분석할 수 있는 오픈소스 플랫폼입니다.",
+    "longDescription": "구글 애널리틱스의 대안으로 가볍고 직관적인 웹 분석 기능을 제공합니다. 사용자의 프라이버시를 존중하며, 수집된 데이터를 자사 서버에 안전하게 보관하고 빠른 대시보드로 조회할 수 있습니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "웹 분석",
+      "개인정보 보호",
+      "통계",
+      "대시보드"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://umami.is",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Node.js 18.18+",
+      "PostgreSQL"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 코드 클론 및 패키지 설치",
+        "command": "git clone https://github.com/umami-software/umami.git && cd umami && pnpm install",
+        "note": "저장소 복제 후 pnpm으로 의존성 설치"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "PostgreSQL 데이터베이스 연결 정보를 `.env` 파일에 설정합니다.",
+      "애플리케이션을 빌드하고 실행하여 웹사이트 추적 코드를 삽입합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 39401,
+    "forks": 8321,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "excelize",
+    "name": "Excelize",
+    "github": "https://github.com/qax-os/excelize",
+    "description": "Go 언어로 마이크로소프트 Excel 스프레드시트 파일을 읽고 쓸 수 있는 고성능 라이브러리입니다.",
+    "longDescription": "다양한 오피스 문서 포맷(XLSX, XLSM 등)을 지원하며 복잡한 차트, 수식, 대용량 데이터 스트리밍 처리를 순수 Go 코드로 구현할 수 있게 해주는 개발 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Excel",
+      "스프레드시트",
+      "Go",
+      "문서 처리",
+      "라이브러리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://xuri.me/excelize",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Go 1.26.0+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 모듈 설치",
+        "command": "go get github.com/xuri/excelize/v2",
+        "note": "프로젝트에 Excelize v2 라이브러리 추가"
+      }
+    ],
+    "usageSteps": [
+      "Go 모듈 환경에서 라이브러리를 설치합니다.",
+      "코드 내에서 패키지를 임포트하여 새로운 스프레드시트를 생성하거나 기존 파일을 엽니다.",
+      "셀 데이터 읽기 및 쓰기, 수식 추가, 차트 생성 작업을 수행합니다.",
+      "파일로 저장합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 20995,
+    "forks": 1969,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "opensearch",
+    "name": "OpenSearch",
+    "github": "https://github.com/opensearch-project/OpenSearch",
+    "description": "확장성이 뛰어난 오픈소스 분산형 RESTful 실시간 검색 및 분석 엔진입니다.",
+    "longDescription": "대규모 로그 분석, 전문 검색(Full-text Search), 애플리케이션 모니터링 등 다양한 데이터 집약적 작업을 처리할 수 있는 고성능 분산 검색 엔진입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "검색 엔진",
+      "분산 시스템",
+      "로그 분석",
+      "Java",
+      "RESTful"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://opensearch.org/docs/latest/opensearch/index/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "서버 환경 또는 도커를 통해 OpenSearch를 다운로드하고 실행합니다.",
+      "REST API를 통해 인덱스를 생성하고 데이터를 등록합니다.",
+      "검색 쿼리 및 분석 요청을 전송하여 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13873,
+    "forks": 3001,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "paradedb",
+    "name": "ParadeDB",
+    "github": "https://github.com/paradedb/paradedb",
+    "description": "PostgreSQL을 기반으로 전문 검색, 벡터 검색 및 고성능 집계 기능을 통합 제공하는 확장 솔루션입니다.",
+    "longDescription": "관계형 데이터베이스인 Postgres에 강력한 검색 엔진 기능을 결합하여 하나의 시스템에서 애플리케이션 데이터 저장과 시맨틱 검색, 전문 검색을 동시에 처리할 수 있도록 돕습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "PostgreSQL",
+      "전문 검색",
+      "벡터 검색",
+      "RUST",
+      "데이터베이스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://paradedb.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker로 로컬 실행",
+        "command": "curl -sSL https://paradedb.com/install.sh | sh",
+        "note": "설치 스크립트를 이용한 로컬 실행 및 psql 접속"
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 ParadeDB 환경을 구성합니다.",
+      "psql 세션을 통해 데이터베이스에 접속합니다.",
+      "표준 SQL 및 확장 인덱스를 사용하여 텍스트 검색 및 벡터 검색 쿼리를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9402,
+    "forks": 478,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "claude-code-usage-monitor",
+    "name": "Claude-Code-Usage-Monitor",
+    "github": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor",
+    "description": "Claude Code 사용량을 실시간으로 모니터링하고 경고 및 예측 기능을 제공하는 터미널 도구입니다.",
+    "longDescription": "개발 작업 시 Claude Code의 API 사용량과 토큰 소비를 추적하고 한도 초과를 미리 방지할 수 있도록 돕는 실시간 터미널 모니터링 유틸리티입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Claude",
+      "모니터링",
+      "CLI",
+      "터미널",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Maciek-roboblog/Claude-Code-Usage-Monitor",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Python 3.9+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip을 이용한 설치",
+        "command": "pip install claude-monitor",
+        "note": "파이썬 패키지 매니저로 모니터 도구 설치"
+      }
+    ],
+    "usageSteps": [
+      "파이썬 패키지 매니저를 사용하여 도구를 설치합니다.",
+      "터미널에서 명령어 실행을 통해 사용량 모니터링 대시보드를 엽니다.",
+      "설정된 임계값에 따른 경고 및 사용량 예측 통계를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8744,
+    "forks": 462,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "redash",
+    "name": "Redash",
+    "github": "https://github.com/getredash/redash",
+    "description": "다양한 데이터 소스에 연결하여 손쉽게 데이터를 시각화하고 대시보드를 공유할 수 있는 비즈니스 인텔리전스 도구입니다.",
+    "longDescription": "Redash는 사용자의 기술 숙련도와 관계없이 데이터를 탐색, 쿼리, 시각화 및 공유할 수 있도록 설계된 오픈소스 플랫폼입니다. 35개 이상의 SQL 및 NoSQL 데이터 소스를 지원하며, 팀 내에서 데이터 기반의 의사결정을 내릴 수 있도록 돕습니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "비즈니스 인텔리전스",
+      "대시보드",
+      "데이터 시각화",
+      "SQL",
+      "분석"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "http://redash.io/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Python",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 설치",
+        "command": "docker compose up -d",
+        "note": "도커 컴포즈를 사용하여 로컬에 Redash 인스턴스를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Redash 인스턴스를 설정하고 웹 UI에 접속합니다.",
+      "지원되는 데이터베이스 또는 API 소스를 데이터 소스로 등록합니다.",
+      "SQL 쿼리를 작성하여 데이터를 조회하고 원하는 시각화 차트를 생성합니다.",
+      "차트들을 모아 대시보드를 구성하고 팀원들과 공유합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "다양한 데이터베이스 드라이버와 연결 설정이 필요할 수 있습니다.",
+    "stars": 28833,
+    "forks": 4635,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "trino",
+    "name": "Trino",
+    "github": "https://github.com/trinodb/trino",
+    "description": "빅데이터 분석을 위해 설계된 빠르고 분산된 SQL 쿼리 엔진입니다.",
+    "longDescription": "Trino는 대규모 분산 데이터 저장소 및 데이터 레이크를 대상으로 복잡한 SQL 쿼리를 고속으로 수행할 수 있는 오픈소스 분산 쿼리 엔진입니다. 다양한 데이터 소스에 분산된 데이터를 단일 인터페이스로 조회할 수 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "SQL",
+      "분산 데이터베이스",
+      "빅데이터",
+      "데이터 레이크",
+      "쿼리 엔진"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://trino.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Java 25.0.1+",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Maven 빌드",
+        "command": "./mvnw clean install -DskipTests",
+        "note": "프로젝트 루트 디렉토리에서 Maven을 통해 Trino를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "Java 및 필수 빌드 도구를 설치합니다.",
+      "소스 코드를 클론하고 Maven 명령어로 빌드합니다.",
+      "설정 파일을 수정하여 데이터 소스 카탈로그를 연결합니다.",
+      "CLI 또는 JDBC를 통해 SQL 쿼리를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대규모 클러스터 환경에서는 적절한 메모리 및 노드 구성이 필수적입니다.",
+    "stars": 13337,
+    "forks": 3826,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "rybbit",
+    "name": "Rybbit",
+    "github": "https://github.com/rybbit-io/rybbit",
+    "description": "구글 애널리틱스의 대안으로 프라이버시를 보호하며 직관적으로 사용할 수 있는 오픈소스 웹 분석 도구입니다.",
+    "longDescription": "Rybbit은 쿠키를 사용하지 않고 사용자의 프라이버시를 보호하면서 웹사이트 방문자 통계, 세션 리플레이, 사용자 여정 등을 추적할 수 있는 현대적인 웹 및 제품 분석 플랫폼입니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "웹 분석",
+      "프라이버시",
+      "구글 애널리틱스 대안",
+      "세션 리플레이",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://rybbit.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 개발 환경 설정",
+        "command": "pnpm install",
+        "note": "pnpm 워크스페이스를 사용하여 클라이언트와 백엔드 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "호스팅 서비스를 이용하거나 VPS에 자체 호스팅으로 배포합니다.",
+      "웹사이트에 분석 스크립트를 삽입합니다.",
+      "대시보드에서 세션 수, 고유 사용자, 이탈률 등의 지표를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "AGPL-3.0 라이선스를 따르므로 상업적 사용 시 라이선스 조건을 확인하세요.",
+    "stars": 13121,
+    "forks": 756,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "starrocks",
+    "name": "StarRocks",
+    "github": "https://github.com/StarRocks/starrocks",
+    "description": "데이터 레이크하우스 및 실시간 분석을 위해 고성능을 제공하는 분산 SQL 쿼리 엔진입니다.",
+    "longDescription": "StarRocks는 서브 세션 단위의 빠른 분석과 애드혹 쿼리를 지원하는 세계에서 가장 빠른 오픈소스 쿼리 엔진 중 하나입니다. 다차원 분석 및 실시간 데이터 업데이트를 효율적으로 처리할 수 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "OLAP",
+      "실시간 분석",
+      "데이터 레이크하우스",
+      "SQL",
+      "분산 데이터베이스"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://starrocks.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Linux OS",
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 실행",
+        "command": "docker run -p 9030:9030 -p 8030:8030 starrocks/allin1-ubuntu",
+        "note": "도커를 이용해 StarRocks 단일 노드 환경을 빠르게 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 또는 바이너리를 통해 StarRocks를 설치하고 실행합니다.",
+      "MySQL 클라이언트 등을 통해 StarRocks 서버에 접속합니다.",
+      "데이터베이스와 테이블을 생성하고 데이터를 적재합니다.",
+      "고성능 SQL 쿼리를 실행하여 실시간 분석을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대규모 분산 클러스터 구성 시 FE(Frontend)와 BE(Backend) 노드 분리가 필요합니다.",
+    "stars": 12179,
+    "forks": 2619,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "modin",
+    "name": "Modin",
+    "github": "https://github.com/modin-project/modin",
+    "description": "단 한 줄의 코드 변경으로 Pandas 워크플로우를 분산 처리하여 속도를 높여주는 라이브러리입니다.",
+    "longDescription": "Modin은 기존 Pandas의 드롭인 대체재로 작동하며, 멀티코어 및 분산 처리 엔진(Ray, Dask)을 활용하여 대용량 데이터프레임 연산 속도를 대폭 향상시켜 주는 Python 데이터 분석 도구입니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "Pandas",
+      "데이터프레임",
+      "분산 처리",
+      "Python",
+      "데이터 과학"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://modin.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Python",
+      "Ray 또는 Dask"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install \"modin[all]\"",
+        "note": "Ray 및 Dask 엔진을 포함하여 Modin을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어를 통해 Modin과 백엔드 엔진을 설치합니다.",
+      "Python 코드에서 `import pandas as pd` 대신 `import modin.pandas as pd`로 변경합니다.",
+      "기존과 동일한 Pandas API를 사용하여 대용량 데이터를 고속으로 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "데이터 크기와 클러스터 환경에 따라 적절한 백엔드(Ray/Dask)를 선택해야 합니다.",
+    "stars": 10391,
+    "forks": 679,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "oceanbase",
+    "name": "OceanBase",
+    "github": "https://github.com/oceanbase/oceanbase",
+    "description": "AI 시대에 발맞추어 고가용성과 선형 확장성을 제공하는 통합 분산형 관계형 데이터베이스입니다.",
+    "longDescription": "OceanBase는 대규모 데이터 처리와 트랜잭션, 분석 작업을 동시에 처리(HTAP)할 수 있도록 설계된 분산형 관계형 데이터베이스입니다. Paxos 프로토콜을 기반으로 높은 신뢰성과 비용 효율성을 제공합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "분산 데이터베이스",
+      "HTAP",
+      "MySQL 호환",
+      "고가용성",
+      "벡터 검색"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://en.oceanbase.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Linux OS",
+      "Bash"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "올인원 패키지 설치",
+        "command": "bash -c \"$(curl -s https://obbusiness-private.oss-cn-shanghai.aliyuncs.com/download-center/opensource/oceanbase-all-in-one/installer.sh)\"",
+        "note": "OceanBase 올인원 패키지를 다운로드하고 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 환경을 구성합니다.",
+      "환경 변수를 로드한 후 `obd demo` 명령어로 데모 인스턴스를 실행합니다.",
+      "MySQL 클라이언트나 호환 도구를 사용하여 데이터베이스에 연결합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 리눅스 환경에서의 실행을 공식 지원합니다.",
+    "stars": 10335,
+    "forks": 1925,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "sink",
+    "name": "Sink",
+    "github": "https://github.com/miantiao-me/Sink",
+    "description": "Cloudflare 기반으로 동작하는 빠르고 안전한 서버리스 단축 URL 및 분석 서비스입니다.",
+    "longDescription": "Sink는 Cloudflare Workers 등 서버리스 인프라 위에서 실행되며, 링크 단축 기능과 상세한 방문자 분석 통계를 제공하는 가볍고 빠른 오픈소스 URL 단축기입니다.",
+    "category": "생산성",
+    "tags": [
+      "URL 단축기",
+      "서버리스",
+      "Cloudflare",
+      "웹 분석",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://Sink.Cool",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Cloudflare 계정",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "AI Skills 추가",
+        "command": "npx skills add miantiao-me/sink",
+        "note": "AI 코딩 보조 도구에 Sink 관련 스킬을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Cloudflare 환경에 프로젝트를 배포합니다.",
+      "관리자 패널에 로그인하여 긴 URL을 단축 링크로 변환합니다.",
+      "대시보드를 통해 클릭 수 및 유입 경로 등의 분석 통계를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Cloudflare 에지 네트워크를 활용하므로 글로벌 환경에서 빠른 응답 속도를 보장합니다.",
+    "stars": 7213,
+    "forks": 5354,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "openpanel",
+    "name": "OpenPanel",
+    "github": "https://github.com/Openpanel-dev/openpanel",
+    "description": "Mixpanel의 대안으로 활용할 수 있는 프라이버시 친화적인 오픈소스 웹 및 제품 분석 플랫폼입니다.",
+    "longDescription": "OpenPanel은 고급 분석(퍼널, 코호트, 사용자 프로필), 실시간 대시보드, 세션 리플레이 및 A/B 테스트 기능을 제공하는 오픈소스 분석 플랫폼으로, 자체 호스팅이 가능합니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "제품 분석",
+      "웹 분석",
+      "세션 리플레이",
+      "믹스패널 대안",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://openpanel.dev",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T01:03:58.857Z",
+    "requirements": [
+      "Node.js",
+      "TypeScript"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 클론 및 실행",
+        "command": "git clone https://github.com/Openpanel-dev/openpanel.git",
+        "note": "저장소를 복제하여 로컬 또는 서버에 직접 배포를 준비합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 환경에 OpenPanel을 자체 호스팅 방식으로 배포합니다.",
+      "추적 스크립트를 웹 애플리케이션에 삽입합니다.",
+      "대시보드에서 실시간 방문자 데이터, 퍼널 분석 및 세션 리플레이를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "서버측 추적 기능과 MCP 서버 연동을 통해 AI 클라이언트에서도 사용자 데이터를 조회할 수 있습니다.",
+    "stars": 7144,
+    "forks": 516,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
     "id": "deep-live-cam",
     "name": "Deep-Live-Cam",
     "github": "https://github.com/hacksider/Deep-Live-Cam",
