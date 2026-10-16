@@ -1,5 +1,481 @@
 [
   {
+    "id": "migrate",
+    "name": "Golang Migrate",
+    "github": "https://github.com/golang-migrate/migrate",
+    "description": "CLI와 Go 라이브러리를 제공하는 유연한 데이터베이스 마이그레이션 도구입니다.",
+    "longDescription": "다양한 데이터베이스 드라이버를 지원하는 마이그레이션 도구로, 파일 기반의 SQL 스크립트를 순서대로 적용하거나 롤백할 수 있습니다. CLI 및 도커 환경에서 손쉽게 사용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "마이그레이션",
+      "데이터베이스",
+      "Go",
+      "CLI",
+      "SQL"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/golang-migrate/migrate",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "Go 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -v {{ migration dir }}:/migrations --network host migrate/migrate -path=/migrations/ -database postgres://localhost:5432/database up 2",
+        "note": "도커를 이용해 마이그레이션을 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "마이그레이션 파일 디렉터리를 준비합니다.",
+      "데이터베이스 연결 문자열과 함께 migrate 명령어를 실행합니다.",
+      "데이터베이스 스키마 버전을 최신 상태로 업그레이드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 18974,
+    "forks": 1623,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "supabase",
+    "name": "Supabase",
+    "github": "https://github.com/supabase/supabase",
+    "description": "파이어베이스를 대체하는 오픈소스 Postgres 개발 플랫폼입니다.",
+    "longDescription": "Postgres 데이터베이스를 기반으로 인증, 자동 생성 API, 실시간 구독, 데이터베이스 함수 및 에지 함수 기능을 제공하는 오픈소스 개발 플랫폼입니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "PostgreSQL",
+      "데이터베이스",
+      "백엔드",
+      "API",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://supabase.com",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Supabase 대시보드에 가입하거나 로컬 환경에서 개발을 시작합니다.",
+      "Postgres 데이터베이스를 생성하고 테이블 및 스키마를 구성합니다.",
+      "자동 생성된 REST 및 GraphQL API를 통해 애플리케이션과 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "클라우드 호스팅 서비스 이용 외에도 자체 호스팅 및 로컬 개발이 가능합니다.",
+    "stars": 111649,
+    "forks": 17036,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "dbeaver",
+    "name": "DBeaver",
+    "github": "https://github.com/dbeaver/dbeaver",
+    "description": "다양한 데이터베이스를 지원하는 무료 범용 데이터베이스 관리 툴 및 SQL 클라이언트입니다.",
+    "longDescription": "개발자, DBA, 데이터 분석가를 위해 수십 가지의 데이터베이스를 지원하며, SQL 편집, 데이터 시각화, ERD 생성 기능을 제공하는 데스크톱 클라이언트입니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "SQL",
+      "데이터베이스",
+      "GUI",
+      "Java",
+      "JDBC"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://dbeaver.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 홈페이지에서 운영체제에 맞는 설치 파일을 다운로드하여 설치합니다.",
+      "원하는 데이터베이스(MySQL, PostgreSQL 등)의 접속 정보를 입력해 연결합니다.",
+      "SQL 편집기에서 쿼리를 작성하고 실행하여 데이터를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 52085,
+    "forks": 4412,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "drawdb",
+    "name": "drawDB",
+    "github": "https://github.com/drawdb-io/drawdb",
+    "description": "브라우저에서 바로 사용할 수 있는 무료 직관적 데이터베이스 다이어그램 에디터 및 SQL 생성기입니다.",
+    "longDescription": "계정을 만들지 않고도 몇 번의 클릭만으로 개체 관계 다이어그램(ERD)을 그리고, SQL 스크립트를 내보내거나 가져오며 마이그레이션을 생성할 수 있는 웹 기반 툴입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "ERD",
+      "데이터베이스",
+      "다이어그램",
+      "SQL",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://drawdb.app",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 개발 설치",
+        "command": "git clone https://github.com/drawdb-io/drawdb && cd drawdb && npm install && npm run dev",
+        "note": "소스 코드를 복제하고 로컬 개발 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "웹 브라우저에서 에디터에 접속하거나 로컬에서 개발 서버를 실행합니다.",
+      "테이블과 관계를 시각적으로 추가하여 데이터베이스 스키마를 설계합니다.",
+      "필요한 SQL 스크립트나 다이어그램 파일을 내보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 40042,
+    "forks": 3314,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "chartdb",
+    "name": "ChartDB",
+    "github": "https://github.com/chartdb/chartdb",
+    "description": "단 한 번의 스마트 쿼리로 데이터베이스 스키마를 시각화하고 설계하는 오픈소스 다이어그램 에디터입니다.",
+    "longDescription": "계정 생성이나 복잡한 설치 없이 브라우저에서 데이터베이스 스키마를 즉시 가져와 다이어그램으로 시각화하고 SQL 스크립트를 내보낼 수 있는 툴입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "데이터베이스",
+      "ERD",
+      "시각화",
+      "React",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://chartdb.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹 에디터에 접속하거나 프로젝트를 로컬 환경에 구성합니다.",
+      "스마트 쿼리를 실행하여 데이터베이스 스키마를 불러옵니다.",
+      "생성된 다이어그램을 확인하고 필요에 따라 수정하거나 SQL을 내보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 23000,
+    "forks": 1505,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "etcd",
+    "name": "etcd",
+    "github": "https://github.com/etcd-io/etcd",
+    "description": "분산 시스템의 핵심 데이터를 안전하게 저장하기 위한 분산 키-값 저장소입니다.",
+    "longDescription": "etcd는 분산 시스템 및 Kubernetes의 메타데이터와 상태를 일관성 있게 관리하기 위해 설계된 안정적인 고성능 키-값 저장소입니다. Raft 합의 알고리즘을 사용하여 강력한 일관성을 보장합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "분산시스템",
+      "Kubernetes",
+      "키값저장소",
+      "Go",
+      "Raft"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://etcd.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리즈 페이지에서 사전 빌드된 바이너리를 다운로드합니다.",
+      "단일 멤버 클러스터 모드로 etcd를 실행합니다.",
+      "API를 통해 키-값 데이터를 읽고 씁니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 52367,
+    "forks": 10537,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "orm",
+    "name": "Prisma ORM",
+    "github": "https://github.com/prisma/orm",
+    "description": "Node.js와 TypeScript를 위한 차세대 ORM입니다.",
+    "longDescription": "Prisma는 직관적인 데이터 모델링과 타입 안정성을 제공하는 현대적인 ORM입니다. PostgreSQL, MySQL, SQLite, MongoDB 등 다양한 데이터베이스와 쉽게 연동됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "ORM",
+      "TypeScript",
+      "Node.js",
+      "데이터베이스",
+      "SQL"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.prisma.io",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "프로젝트 생성",
+        "command": "npm create prisma",
+        "note": "Prisma가 설정된 새 프로젝트를 생성합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Prisma를 설치합니다.",
+      "schema.prisma 파일에 데이터 모델을 정의합니다.",
+      "마이그레이션을 실행하고 Prisma Client를 통해 데이터를 조작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 47695,
+    "forks": 2550,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "sheetjs",
+    "name": "SheetJS",
+    "github": "https://github.com/SheetJS/sheetjs",
+    "description": "다양한 자바스크립트 런타임에서 스프레드시트 데이터를 읽고 쓸 수 있는 툴킷입니다.",
+    "longDescription": "SheetJS는 Excel 및 다양한 스프레드시트 파일 포맷을 웹 브라우저와 Node.js 환경에서 손쉽게 파싱하고 생성할 수 있도록 지원하는 고성능 데이터 툴킷입니다.",
+    "category": "문서",
+    "tags": [
+      "Excel",
+      "스프레드시트",
+      "JavaScript",
+      "데이터",
+      "Node.js"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://sheetjs.com/",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "JavaScript 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 SheetJS 라이브러리를 포함합니다.",
+      "엑셀 파일을 읽어와 자바스크립트 객체로 변환합니다.",
+      "데이터를 조작한 후 다시 스프레드시트 파일로 내보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 36344,
+    "forks": 7904,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "neon",
+    "name": "Neon",
+    "github": "https://github.com/neondatabase/neon",
+    "description": "스토리지와 컴퓨팅을 분리하여 자동 확장과 브랜칭을 지원하는 서버리스 Postgres 데이터베이스입니다.",
+    "longDescription": "Neon은 클라우드 환경에 최적화된 오픈소스 서버리스 Postgres입니다. Git처럼 데이터베이스를 브랜치(Branching)하여 개발할 수 있으며 트래픽에 따라 자동으로 확장됩니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "Postgres",
+      "서버리스",
+      "Rust",
+      "클라우드",
+      "데이터베이스"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://neon.tech",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Neon 무료 티어 계정을 생성합니다.",
+      "서버리스 Postgres 인스턴스를 생성합니다.",
+      "선호하는 Postgres 클라이언트나 SQL 에디터로 연결하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 23213,
+    "forks": 1114,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "lowdb",
+    "name": "Lowdb",
+    "github": "https://github.com/typicode/lowdb",
+    "description": "자바스크립트 및 타입스크립트를 위한 간단하고 빠른 로컬 JSON 데이터베이스입니다.",
+    "longDescription": "Lowdb는 파일 기반으로 동작하는 초경량 로컬 JSON 데이터베이스입니다. Lodash 등의 유틸리티와 결합하여 간단한 애플리케이션이나 테스트 환경에서 데이터를 쉽게 영구 저장할 수 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "JSON",
+      "데이터베이스",
+      "Node.js",
+      "TypeScript",
+      "임베디드"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/typicode/lowdb",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm install lowdb",
+        "note": "npm을 통해 lowdb를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "lowdb 패키지를 프로젝트에 설치합니다.",
+      "초기 데이터와 함께 JSON 파일 프리셋을 설정합니다.",
+      "자바스크립트 문법으로 데이터를 읽고 수정하여 저장합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22584,
+    "forks": 963,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
+    "id": "pglite",
+    "name": "PGlite",
+    "github": "https://github.com/electric-sql/pglite",
+    "description": "웹 브라우저와 Node.js 환경에서 별도의 설치 없이 실행 가능한 WebAssembly 기반의 Postgres입니다.",
+    "longDescription": "PGlite는 WASM으로 빌드된 임베디드 Postgres 클라이언트 라이브러리입니다. 브라우저, Node.js, Bun 등에서 추가 의존성 없이 로컬 퍼스트 애플리케이션을 구축할 수 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "Postgres",
+      "WASM",
+      "TypeScript",
+      "로컬퍼스트",
+      "데이터베이스"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://pglite.dev",
+    "featured": 9,
+    "added": "2026-10-16",
+    "addedAt": "2026-10-16T16:03:59.604Z",
+    "requirements": [
+      "TypeScript 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "@electric-sql/pglite 패키지를 설치합니다.",
+      "코드 내에서 PGlite 인스턴스를 생성합니다.",
+      "SQL 쿼리를 실행하여 브라우저나 로컬 환경에서 데이터를 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16157,
+    "forks": 457,
+    "starsUpdatedAt": "2026-10-16"
+  },
+  {
     "id": "ultralytics",
     "name": "Ultralytics YOLO",
     "github": "https://github.com/ultralytics/ultralytics",
