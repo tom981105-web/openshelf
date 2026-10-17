@@ -1,5 +1,599 @@
 [
   {
+    "id": "docker-mailserver",
+    "name": "Docker Mailserver",
+    "github": "https://github.com/docker-mailserver/docker-mailserver",
+    "description": "컨테이너 환경에서 간편하게 실행할 수 있는 프로덕션 급 메일 서버입니다.",
+    "longDescription": "SMTP, IMAP, LDAP, 안티스팸, 안티바이러스 등의 기능을 갖춘 완전한 풀스택 메일 서버를 Docker 컨테이너 하나로 구축할 수 있도록 지원합니다. 복잡한 메일 서버 설정을 간소화하여 제공합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Docker",
+      "SMTP",
+      "IMAP",
+      "메일서버",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docker-mailserver.github.io/docker-mailserver/latest/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "환경 변수 설정 파일 준비",
+      "Docker 컨테이너 실행 및 포트 바인딩",
+      "클라이언트에서 IMAP/SMTP 접속 확인"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 19604,
+    "forks": 2119,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "podman-desktop",
+    "name": "Podman Desktop",
+    "github": "https://github.com/podman-desktop/podman-desktop",
+    "description": "컨테이너와 Kubernetes를 관리할 수 있는 직관적인 오픈소스 데스크톱 GUI 도구입니다.",
+    "longDescription": "개발자가 데스크톱 환경에서 손쉽게 컨테이너를 빌드, 실행, 관리하고 Kubernetes 클러스터와 상호작용할 수 있도록 돕는 무료 도구입니다. 확장 프로그램을 통한 기능 확장을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Podman",
+      "Kubernetes",
+      "Docker",
+      "GUI",
+      "데스크톱"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://podman-desktop.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "개발 환경 설치 및 실행",
+        "command": "pnpm install && pnpm watch",
+        "note": "소스코드 빌드 및 감시 모드 실행"
+      }
+    ],
+    "usageSteps": [
+      "공식 홈페이지에서 설치 파일 다운로드 및 실행",
+      "Podman 또는 Docker 엔진 연결",
+      "UI를 통해 컨테이너 및 이미지 관리"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8082,
+    "forks": 578,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "kubeedge",
+    "name": "KubeEdge",
+    "github": "https://github.com/kubeedge/kubeedge",
+    "description": "Kubernetes를 엣지 컴퓨팅 환경으로 확장하는 CNCF 오픈소스 프레임워크입니다.",
+    "longDescription": "클라우드 네이티브 컨테이너 오케스트레이션과 장치 관리를 엣지 장치까지 확장하여 원격 관리와 데이터 동기화를 지원합니다. IoT 및 엣지 컴퓨팅 시나리오에 최적화되어 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "엣지컴퓨팅",
+      "IoT",
+      "CNCF",
+      "Golang"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kubeedge.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "클라우드 노드에 KubeEdge 컨트롤 plane 설치",
+      "엣지 장치에 edgecore 에이전트 등록",
+      "Kubernetes 매니페스트를 통한 엣지 앱 배포"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7604,
+    "forks": 2022,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "olivetin",
+    "name": "OliveTin",
+    "github": "https://github.com/OliveTin/OliveTin",
+    "description": "사전 정의된 쉘 명령어를 웹 인터페이스를 통해 안전하고 간단하게 실행할 수 있는 도구입니다.",
+    "longDescription": "시스템 관리자나 홈 오토메이션 사용자들을 위해 복잡한 터미널 명령어를 웹 버튼으로 변환하여 안전하게 실행할 수 있도록 돕습니다. 권한이 제한된 사용자에게 특정 스크립트 실행 권한을 부여할 때 유용합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "웹인터페이스",
+      "쉘",
+      "자동화",
+      "시스템관리",
+      "Golang"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://olivetin.app",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Docker 또는 Go 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "YAML 설정 파일에 허용할 쉘 명령어 정의",
+      "OliveTin 서비스 실행",
+      "웹 브라우저로 접속하여 버튼 클릭으로 명령 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3832,
+    "forks": 143,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "casos",
+    "name": "CasOS",
+    "github": "https://github.com/casosorg/casos",
+    "description": "단일 파일 다운로드로 로컬 PC나 서버에 Kubernetes 클러스터를 구축해주는 클라우드 운영 체제입니다.",
+    "longDescription": "YAML 설정 없이 파일 하나로 실제 Kubernetes 클러스터, 웹 UI, 앱 스토어를 제공합니다. 애플리케이션, AI 모델, AI 에이전트를 손쉽게 로컬 환경에서 실행하고 관리할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "클라우드",
+      "컨테이너",
+      "AI에이전트",
+      "Golang"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://casos.net",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "CasOS 바이너리 파일 다운로드",
+      "파일 실행을 통해 로컬 Kubernetes 클러스터 구동",
+      "웹 UI에 접속하여 앱 및 AI 모델 배포"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1382,
+    "forks": 103,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "buildah",
+    "name": "Buildah",
+    "github": "https://github.com/podman-container-tools/buildah",
+    "description": "OCI 표준 컨테이너 이미지를 쉽게 빌드할 수 있는 명령줄 도구입니다.",
+    "longDescription": "Buildah는 OCI(Open Container Initiative) 호환 컨테이너 이미지를 생성하고 관리하기 위한 가볍고 유용한 도구입니다. 기존 Docker 데몬에 의존하지 않고도 로컬에서 작동하는 컨테이너를 생성할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "CLI",
+      "컨테이너",
+      "Docker",
+      "OCI"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://buildah.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Linux 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "작업 컨테이너를 생성합니다.",
+      "컨테이너 내부에서 필요한 패키지를 설치하거나 파일을 복사합니다.",
+      "변경 사항을 OCI 이미지로 커밋합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9126,
+    "forks": 932,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "ko",
+    "name": "ko",
+    "github": "https://github.com/ko-build/ko",
+    "description": "Go 애플리케이션을 위한 빠르고 간편한 컨테이너 이미지 빌더 및 배포 도구입니다.",
+    "longDescription": "ko는 Docker를 설치할 필요 없이 로컬 기기에서 직접 Go 애플리케이션을 빌드하고 컨테이너 이미지로 패키징할 수 있도록 지원합니다. 가벼운 CI/CD 파이프라인 및 Kubernetes 애플리케이션 배포에 유용합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "Kubernetes",
+      "컨테이너",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://ko.build",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Go 언어 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 ko를 설치하고 설정을 구성합니다.",
+      "ko build 명령어를 실행하여 Go 소스 코드를 컨테이너 이미지로 빌드합니다.",
+      "생성된 이미지를 Kubernetes 등에 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8568,
+    "forks": 454,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "kraken",
+    "name": "Kraken",
+    "github": "https://github.com/uber/kraken",
+    "description": "대규모 클라우드 환경을 위한 P2P 기반의 고성능 Docker 레지스트리입니다.",
+    "longDescription": "Kraken은 Uber에서 개발한 P2P(Peer-to-Peer) 기반의 컨테이너 이미지 분산 레지스트리입니다. 대규모 분산 환경에서 막대한 양의 데이터를 몇 초 만에 안정적으로 배포할 수 있도록 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Docker",
+      "P2P",
+      "Kubernetes",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/uber/kraken",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Kubernetes",
+      "Helm 3.x"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm을 이용한 설치",
+        "command": "helm install kraken-demo ./helm",
+        "note": "쿠버네티스 클러스터에 Kraken 데모를 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "Helm 3.x가 설치된 쿠버네티스 클러스터를 준비합니다.",
+      "제공된 차트를 이용해 Kraken을 클러스터에 배포합니다.",
+      "도커 클라이언트를 통해 P2P 기반 이미지를 푸시하고 풀합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6765,
+    "forks": 499,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "tsyringe",
+    "name": "TSyringe",
+    "github": "https://github.com/microsoft/tsyringe",
+    "description": "TypeScript 및 JavaScript 환경을 위한 가벼운 의존성 주입(DI) 컨테이너입니다.",
+    "longDescription": "TSyringe는 생성자 주입 패턴을 지원하는 가볍고 직관적인 의존성 주입(DI) 라이브러리입니다. 데코레이터 기반 설정을 통해 TypeScript 및 JavaScript 프로젝트에서 객체 간의 결합도를 낮출 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "JavaScript",
+      "의존성 주입",
+      "DI"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/microsoft/tsyringe",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Node.js",
+      "TypeScript"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 TSyringe를 설치합니다.",
+      "클래스에 @injectable() 데코레이터를 추가합니다.",
+      "컨테이너를 통해 필요한 의존성을 주입받아 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6009,
+    "forks": 184,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "automaxprocs",
+    "name": "automaxprocs",
+    "github": "https://github.com/uber-go/automaxprocs",
+    "description": "Linux 컨테이너의 CPU 할당량에 맞춰 GOMAXPROCS를 자동으로 설정해 주는 라이브러리입니다.",
+    "longDescription": "automaxprocs는 Go 언어로 작성된 애플리케이션이 Docker나 Kubernetes 같은 컨테이너 환경에서 실행될 때, cgroups CPU 쿼타를 감지하여 GOMAXPROCS 값을 최적화합니다. 이를 통해 불필요한 스레드 경쟁을 막고 성능을 향상시킵니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "컨테이너",
+      "성능",
+      "CPU"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://godoc.org/go.uber.org/automaxprocs",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Go 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "go get -u go.uber.org/automaxprocs",
+        "note": "Go 패키지를 프로젝트에 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "애플리케이션의 main 패키지에 automaxprocs를 빈 임포트합니다.",
+      "import _ \"go.uber.org/automaxprocs\"",
+      "컨테이너 환경에서 애플리케이션을 실행하면 자동으로 CPU 쿼타가 설정됩니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4851,
+    "forks": 175,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "go-containerregistry",
+    "name": "go-containerregistry",
+    "github": "https://github.com/google/go-containerregistry",
+    "description": "컨테이너 레지스트리와 상호작용하기 위한 Go 언어 라이브러리 및 CLI 도구 모음입니다.",
+    "longDescription": "go-containerregistry는 OCI 이미지 및 컨테이너 레지스트리를 프로그래밍 방식으로 조작할 수 있는 강력한 Go 라이브러리입니다. 관련 CLI 도구를 함께 제공하여 이미지 검사, 푸시, 풀 작업을 쉽게 자동화할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "Docker",
+      "CLI",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/google/go-containerregistry",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Go 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Go 프로젝트에서 라이브러리를 임포트합니다.",
+      "원하는 레지스트리 API 엔드포인트와 통신하는 코드를 작성합니다.",
+      "제공된 CLI 명령어를 활용해 이미지를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4088,
+    "forks": 697,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "do",
+    "name": "do",
+    "github": "https://github.com/samber/do",
+    "description": "Go 1.18+ 제네릭을 활용한 가볍고 타입 안정성이 보장되는 의존성 주입 도구입니다.",
+    "longDescription": "samber/do는 Go 언어의 제네릭 기능을 기반으로 구축된 의존성 주입(DI) 툴킷입니다. 코드 생성 없이 타입 안전한 API를 제공하며, 라이프사이클 관리와 헬스체크 기능을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "의존성 주입",
+      "제네릭",
+      "DI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://do.samber.dev",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Go 1.18 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "v2 최신 버전 설치",
+        "command": "go get github.com/samber/do/v2@latest",
+        "note": "프로젝트에 samber/do 라이브러리를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "DI 인스턴스를 생성합니다.",
+      "제공된 함수를 통해 서비스와 의존성을 등록합니다.",
+      "인자나 타입을 안전하게 호출하여 서비스를 가져옵니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2821,
+    "forks": 112,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "cup",
+    "name": "Cup",
+    "github": "https://github.com/sergi0g/cup",
+    "description": "Docker 컨테이너 이미지 업데이트 여부를 쉽게 확인할 수 있는 CLI 및 웹 도구입니다.",
+    "longDescription": "Cup은 실행 중인 Docker 컨테이너의 최신 이미지 업데이트가 있는지 빠르고 간편하게 확인할 수 있도록 돕는 도구입니다. 가벼운 바이너리로 제공되며 터미널 인터페이스와 웹 인터페이스를 모두 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "CLI",
+      "Docker",
+      "컨테이너",
+      "업데이트"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://cup.sergi0g.dev",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Docker 데몬 또는 소켓 접근 권한"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Cup 바이너리를 다운로드하거나 실행합니다.",
+      "CLI 또는 웹 대시보드에 접속합니다.",
+      "현재 실행 중인 컨테이너들의 최신 이미지 업데이트 상태를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1354,
+    "forks": 28,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "chhoto-url",
+    "name": "chhoto-url",
+    "github": "https://github.com/SinTan1729/chhoto-url",
+    "description": "Rust로 작성된 불필요한 기능 없이 빠르고 가벼운 자체 호스팅 URL 단축기입니다.",
+    "longDescription": "chhoto-url은 Actix-web 기반으로 제작된 매우 빠른 자체 호스팅 URL 단축 서비스입니다. Docker 및 Podman을 지원하여 개인 서버나 클라우드에 쉽게 배포하고 관리할 수 있습니다.",
+    "category": "네트워크",
+    "tags": [
+      "Rust",
+      "단축URL",
+      "Docker",
+      "웹앱"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://chhoto.link",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T06:03:58.454Z",
+    "requirements": [
+      "Docker 또는 Podman"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker Compose 또는 컨테이너 이미지를 준비합니다.",
+      "환경 변수를 설정하고 서비스를 실행합니다.",
+      "웹 인터페이스를 통해 긴 URL을 단축하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 987,
+    "forks": 97,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
     "id": "erpnext",
     "name": "ERPNext",
     "github": "https://github.com/frappe/erpnext",
