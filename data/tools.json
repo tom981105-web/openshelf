@@ -1,5 +1,775 @@
 [
   {
+    "id": "kubernetes",
+    "name": "Kubernetes",
+    "github": "https://github.com/kubernetes/kubernetes",
+    "description": "프로덕션 등급의 컨테이너 오케스트레이션 및 관리 시스템",
+    "longDescription": "컨테이너화된 애플리케이션의 배포, 유지보수, 확장 자동화를 위한 오픈소스 시스템입니다. 구글의 Borg 운영 경험을 바탕으로 개발되었으며, 대규모 클라우드 네이브 환경의 표준으로 널리 사용됩니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "K8s",
+      "Docker",
+      "Go",
+      "CNCF"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kubernetes.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Docker environment",
+      "Go environment"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "지원 환경에 쿠버네티스 클러스터 구성",
+      "kubectl CLI 도구 설치 및 설정",
+      "매니페스트 파일을 통한 애플리케이션 배포 및 관리"
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경에서는 고가용성 구성과 보안 설정이 권장됩니다.",
+    "stars": 128312,
+    "forks": 47287,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "k9s",
+    "name": "K9s",
+    "github": "https://github.com/derailed/k9s",
+    "description": "터미널에서 스타일리시하게 쿠버네티스 클러스터를 관리하는 CLI 도구",
+    "longDescription": "쿠버네티스 클러스터의 리소스를 실시간으로 모니터링하고 탐색하며 관리할 수 있는 터미널 사용자 인터페이스(TUI)를 제공합니다. 복잡한 클러스터 상태를 직관적으로 파악하고 빠르게 대응할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "CLI",
+      "Go",
+      "TUI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://k9scli.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Kubernetes cluster",
+      "kubectl"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "패키지 매니저를 통해 k9s 설치",
+      "터미널에서 k9s 명령어 실행",
+      "단축키를 활용하여 파드 및 클러스터 리소스 모니터링 및 제어"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 34825,
+    "forks": 2322,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "seaweedfs",
+    "name": "SeaweedFS",
+    "github": "https://github.com/seaweedfs/seaweedfs",
+    "description": "수십억 개의 파일을 처리하도록 설계된 초고속 분산 파일 및 객체 스토리지 시스템",
+    "longDescription": "O(1) 디스크 접근과 원활한 수평적 확장을 지원하는 고성능 분산 스토리지 시스템입니다. S3 호환 객체 스토리지, 파일 시스템, Iceberg 테이블 등을 지원하여 대규모 데이터 저장에 적합합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "S3",
+      "Storage",
+      "Go",
+      "Kubernetes"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://seaweedfs.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Go environment"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl -fsSL https://raw.githubusercontent.com/seaweedfs/seaweedfs/master/install.sh | bash",
+        "note": "시스템에 weed 바이너리를 설치합니다."
+      },
+      {
+        "title": "S3 미니 스토어 실행",
+        "command": "AWS_ACCESS_KEY_ID=admin AWS_SECRET_ACCESS_KEY=secret S3_BUCKET=my-bucket ./weed mini -dir=./data",
+        "note": "로컬에서 S3 호환 객체 스토리지를 즉시 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "릴리스 페이지 또는 설치 스크립트로 바이너리 다운로드",
+      "weed mini 명령어로 S3 서버 구동",
+      "http://localhost:8333 엔드포인트를 통해 파일 저장 및 조회"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 35531,
+    "forks": 3073,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "istio",
+    "name": "Istio",
+    "github": "https://github.com/istio/istio",
+    "description": "분산 애플리케이션을 안전하게 연결하고 제어하는 오픈소스 서비스 메시",
+    "longDescription": "기존 분산 애플리케이션에 투명하게 통합되어 서비스 간 통신 보안, 트래픽 라우팅, 로드 밸런싱, 모니터링 기능을 제공합니다. 마이크로서비스 아키텍처의 복잡성을 효과적으로 관리할 수 있습니다.",
+    "category": "네트워크",
+    "tags": [
+      "Service Mesh",
+      "Kubernetes",
+      "Go",
+      "Envoy"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://istio.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Kubernetes cluster"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "istioctl 도구 다운로드 및 설치",
+      "쿠버네티스 클러스터에 Istio 제어 플레인 배포",
+      "애플리케이션 파드에 사이드카 프록시 주입 및 트래픽 관리 설정"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 38442,
+    "forks": 8396,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "authelia",
+    "name": "Authelia",
+    "github": "https://github.com/authelia/authelia",
+    "description": "웹 애플리케이션을 위한 2단계 인증 및 싱글 사인온(SSO) 포털",
+    "longDescription": "역방향 프록시와 연동하여 웹 애플리케이션에 대한 접근 제어, 다중 인증(MFA), 싱글 사인온(SSO) 기능을 제공하는 인증 및 권한 부여 서버입니다. 높은 보안성과 확장성을 지원합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "SSO",
+      "Authentication",
+      "Go",
+      "Security",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.authelia.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Docker or static binary environment"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker Compose 또는 정적 바이너리를 통해 Authelia 서비스 배치",
+      "구성 파일(configuration.yml)에서 사용자 데이터베이스 및 인증 방식 설정",
+      "Nginx 등 리버스 프록시와 연동하여 인증 가드 설정"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 29286,
+    "forks": 1514,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "pulumi",
+    "name": "Pulumi",
+    "github": "https://github.com/pulumi/pulumi",
+    "description": "일반 프로그래밍 언어를 사용하여 인프라를 코드로 정의하고 배포하는 IaC 도구",
+    "longDescription": "TypeScript, Python, Go, C# 등 익숙한 프로그래밍 언어로 클라우드 인프라를 구축하고 관리할 수 있게 해주는 최신 IaC(Infrastructure as Code) 플랫폼입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "IaC",
+      "Cloud",
+      "TypeScript",
+      "Python",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.pulumi.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pulumi 설치",
+        "command": "curl -fsSL https://get.pulumi.com/ | sh",
+        "note": "최신 Pulumi CLI를 다운로드하고 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "CLI를 통한 Pulumi 설치",
+      "pulumi new 명령어로 새 프로젝트 템플릿 생성",
+      "원하는 언어로 인프라 코드를 작성하고 pulumi up으로 배포"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 25791,
+    "forks": 1457,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "verdaccio",
+    "name": "Verdaccio",
+    "github": "https://github.com/verdaccio/verdaccio",
+    "description": "설정이 거의 필요 없는 가벼운 Node.js 사내 프라이빗 패키지 레지스트리",
+    "longDescription": "제로피에 가까운 간단한 설정으로 로컬 또는 사내에서 운영할 수 있는 npm 프라이빗 패키지 프록시 레지스트리입니다. 외부 패키지를 캐싱하고 내부 패키지를 안전하게 공유할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "npm",
+      "Node.js",
+      "TypeScript",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.verdaccio.org/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Node.js v22 or higher"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm을 통한 글로벌 설치",
+        "command": "npm install -g verdaccio@next-9",
+        "note": "Node.js 환경에서 전역으로 Verdaccio를 설치합니다."
+      },
+      {
+        "title": "Docker를 이용한 실행",
+        "command": "docker pull verdaccio/verdaccio:nightly-master",
+        "note": "도커 이미지를 다운로드하여 컨테이너로 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js 또는 Docker를 이용해 Verdaccio 서버 구동",
+      "npm 레지스트리 설정을 로컬 서버 주소로 변경",
+      "npm publish를 통해 패키지 배포 및 다운로드"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17917,
+    "forks": 1479,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "opensandbox",
+    "name": "OpenSandbox",
+    "github": "https://github.com/opensandbox-group/OpenSandbox",
+    "description": "AI 에이전트를 위한 안전하고 빠른 확장형 샌드박스 런타임",
+    "longDescription": "AI 애플리케이션과 코딩 에이전트가 코드를 실행하고, 명령어를 제어하며, 브라우저나 데스크톱을 안전하게 조작할 수 있도록 격리된 실행 환경을 제공하는 고성능 샌드박스입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI Agent",
+      "Sandbox",
+      "Kubernetes",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://open-sandbox.ai",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Docker or Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "로컬 환경에서는 Docker 기반으로 샌드박스 환경 준비",
+      "프로덕션 환경에서는 쿠버네티스에 통합 배포",
+      "Unified Sandbox API 및 SDK를 통해 AI 에이전트 작업 연동"
+    ],
+    "examplePrompt": "샌드박스 환경 내에서 파이썬 코드를 안전하게 실행하고 결과를 반환해 주세요.",
+    "usageNote": "AI 에이전트의 자율 실행 시 보안 격리를 위해 필수적인 인프라 도구입니다.",
+    "stars": 15908,
+    "forks": 1474,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "k3s",
+    "name": "K3s",
+    "github": "https://github.com/k3s-io/k3s",
+    "description": "리소스 사용량을 대폭 줄인 가벼운 쿠버네티스(Kubernetes) 배포판입니다.",
+    "longDescription": "K3s는 IoT 및 에지(Edge) 환경, 소규모 클러스터에 최적화된 경량 쿠버네티스 배포판입니다. 메모리 사용량을 절반 수준으로 줄였으며 단일 바이너리 형태로 쉽게 설치하고 운영할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "컨테이너",
+      "에지컴퓨팅",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://k3s.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Linux 환경",
+      "Docker 또는 지원되는 컨테이너 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "기본 설치",
+        "command": "curl -sfL https://get.k3s.io | sh -",
+        "note": "가장 간단한 원라인 설치 스크립트 실행"
+      }
+    ],
+    "usageSteps": [
+      "스크립트를 통해 K3s 서버를 설치합니다.",
+      "kubectl 명령어를 통해 클러스터 상태를 확인합니다.",
+      "필요에 따라 에지 노드를 클러스터에 조인시킵니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경에서는 고가용성(HA) 구성 지침을 참고하세요.",
+    "stars": 34204,
+    "forks": 2760,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "podman",
+    "name": "Podman",
+    "github": "https://github.com/podman-container-tools/podman",
+    "description": "루트리스(Rootless) 실행을 지원하는 OCI 호환 컨테이너 및 팟(Pod) 관리 도구입니다.",
+    "longDescription": "Podman은 도커(Docker) CLI와 유사한 사용법을 제공하면서도 데몬(Daemon) 없이 동작하는 OCI 컨테이너 관리 엔진입니다. 보안성이 뛰어난 루트리스 모드를 기본 지원하며 쿠버네티스 팟 개념을 직접 다룰 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "컨테이너",
+      "Docker 호환",
+      "CLI",
+      "보안"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://podman.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Linux 또는 가상화 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Fedora 설치",
+        "command": "sudo dnf install podman",
+        "note": "패키지 관리자를 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리자로 Podman을 설치합니다.",
+      "podman run 명령어로 컨테이너를 실행합니다.",
+      "podman ps로 실행 중인 컨테이너를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "루트리스 사용 전 사용자 권한 설정을 확인하세요.",
+    "stars": 33056,
+    "forks": 3410,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "minikube",
+    "name": "Minikube",
+    "github": "https://github.com/kubernetes/minikube",
+    "description": "로컬 환경에서 손쉽게 쿠버네티스 클러스터를 실행하고 테스트할 수 있는 도구입니다.",
+    "longDescription": "Minikube는 개발자의 노트북이나 개인 PC에서 로컬 쿠버네티스 클러스터를 빠르게 구축할 수 있도록 돕습니다. 단일 노드 클러스터를 지원하며 다양한 애드온과 컨테이너 런타임을 연동할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "로컬 개발",
+      "테스트",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://minikube.sigs.k8s.io/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "가상화 지원 CPU",
+      "Docker 또는 KVM 등 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS Homebrew 설치",
+        "command": "brew install minikube",
+        "note": "Homebrew를 이용한 간편 설치"
+      }
+    ],
+    "usageSteps": [
+      "minikube start 명령어로 로컬 클러스터를 생성합니다.",
+      "kubectl 명령어를 통해 클러스터 리소스를 관리합니다.",
+      "minikube dashboard로 웹 UI를 실행해 시각적으로 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "충분한 메모리(2GB 이상)가 할당된 가상환경이 필요합니다.",
+    "stars": 32190,
+    "forks": 5351,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "helm",
+    "name": "Helm",
+    "github": "https://github.com/helm/helm",
+    "description": "쿠버네티스 애플리케이션의 패키지를 관리하고 배포를 자동화하는 패키지 매니저입니다.",
+    "longDescription": "Helm은 복잡한 쿠버네티스 자원들을 템플릿화된 '차트(Chart)' 형태로 묶어 버전 관리 및 배포를 쉽게 만들어 줍니다. 애플리케이션의 설치, 업그레이드, 롤백 과정을 일관되게 관리할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "패키지 매니저",
+      "Chart",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://helm.sh",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install helm",
+        "note": "macOS 환경 설치"
+      }
+    ],
+    "usageSteps": [
+      "helm repo add 명령어로 차트 저장소를 추가합니다.",
+      "helm install 명령어로 원하는 애플리케이션을 배포합니다.",
+      "helm upgrade로 설정을 변경하거나 버전을 업그레이드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "타겟 쿠버네티스 클러스터의 권한 설정이 선행되어야 합니다.",
+    "stars": 30329,
+    "forks": 7833,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "kubectx",
+    "name": "kubectx and kubens",
+    "github": "https://github.com/ahmetb/kubectx",
+    "description": "kubectl 컨텍스트와 네임스페이스를 빠르게 전환할 수 있는 터미널 유틸리티입니다.",
+    "longDescription": "kubectx와 kubens는 다수의 쿠버네티스 클러스터와 네임스페이스를 다루는 운영자를 위한 도구입니다. 복잡한 명령어 입력 없이 간단한 키 입력만으로 대상을 전환하여 작업 속도를 크게 높여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "kubectl",
+      "CLI",
+      "생산성"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kubectx.dev",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "kubectl 설치됨"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install kubectx",
+        "note": "macOS 환경 설치"
+      }
+    ],
+    "usageSteps": [
+      "kubectx 명령어로 전환 가능한 클러스터 목록을 확인합니다.",
+      "원하는 클러스터 이름을 선택해 컨텍스트를 바꿉니다.",
+      "kubens 명령어로 네임스페이스를 간편하게 전환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정상적인 kubectl 설정 파일(kubeconfig)이 존재해야 합니다.",
+    "stars": 20047,
+    "forks": 1387,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "kind",
+    "name": "kind (Kubernetes IN Docker)",
+    "github": "https://github.com/kubernetes-sigs/kind",
+    "description": "도커 컨테이너를 노드로 사용하여 로컬 쿠버네티스 클러스터를 구동하는 도구입니다.",
+    "longDescription": "kind는 도커 컨테이너를 가상 머신 대신 노드로 활용하여 쿠버네티스 클러스터를 생성합니다. 주로 쿠버네티스 자체 테스트용으로 설계되었으나 로컬 개발 및 CI 파이프라인에서도 널리 쓰입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "Docker",
+      "테스트",
+      "CI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kind.sigs.k8s.io/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Docker",
+      "Go (선택 사항)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go를 이용한 설치",
+        "command": "go install sigs.k8s.io/kind@v0.33.0",
+        "note": "Go 환경에서의 설치 명령어"
+      }
+    ],
+    "usageSteps": [
+      "kind create cluster 명령어로 로컬 클러스터를 생성합니다.",
+      "kubectl을 이용해 생성된 클러스터와 상호작용합니다.",
+      "작업이 끝나면 kind delete cluster로 정리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "시스템에 Docker 데몬이 실행 중이어야 합니다.",
+    "stars": 15553,
+    "forks": 1821,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "crowdsec",
+    "name": "CrowdSec",
+    "github": "https://github.com/crowdsecurity/crowdsec",
+    "description": "위협 인텔리전스를 공유하는 오픈소스 기반의 모던 IDS/IPS 및 WAF 보안 솔루션입니다.",
+    "longDescription": "CrowdSec은 로그 분석과 행동 패턴을 기반으로 악성 행위를 탐지하고 차단하는 협업형 보안 엔진입니다. 리눅스, 윈도우, 도커, 쿠버네티스 등 다양한 환경에서 웹 공격과 침입을 방어합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "WAF",
+      "방화벽",
+      "위협탐지"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.crowdsec.net",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "로그 소스 및 방화벽 연동 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 가이드를 참고하여 CrowdSec 보안 엔진을 설치합니다.",
+      "로그 파서 및 차단용 바운스(Bouncer)를 설정합니다.",
+      "콘솔이나 CLI를 통해 탐지된 위협을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정확한 차단을 위해 적절한 Bouncer 컴포넌트가 함께 구성되어야 합니다.",
+    "stars": 15199,
+    "forks": 742,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "jib",
+    "name": "Jib",
+    "github": "https://github.com/GoogleContainerTools/jib",
+    "description": "도커 데몬 없이 자바 애플리케이션의 OCI 및 도커 이미지를 빌드하는 플러그인입니다.",
+    "longDescription": "Jib는 Maven 및 Gradle과 연동되어 별도의 Dockerfile 작성이나 도커 데몬 없이도 최적화된 자바 컨테이너 이미지를 빌드해 줍니다. 레이어 기반 캐싱을 활용해 빌드 속도가 매우 빠릅니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "Docker",
+      "Maven",
+      "Gradle"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/GoogleContainerTools/jib",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Java 8 이상",
+      "Maven 또는 Gradle"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트의 빌드 파일(pom.xml 또는 build.gradle)에 Jib 플러그인을 추가합니다.",
+      "mvn compile jib:build 또는 gradle jib 명령어를 실행합니다.",
+      "레지스트리에 업로드된 이미지를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "원격 레지스트리 인증 정보가 미리 설정되어 있어야 합니다.",
+    "stars": 14456,
+    "forks": 1482,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "cert-manager",
+    "name": "cert-manager",
+    "github": "https://github.com/cert-manager/cert-manager",
+    "description": "쿠버네티스 클러스터 내에서 TLS 인증서 발급과 갱신을 자동화하는 관리 도구입니다.",
+    "longDescription": "cert-manager는 쿠버네티스 환경에 인증서와 발급자 리소스를 추가하여 Let's Encrypt나 HashiCorp Vault 등 다양한 소스에서 TLS 인증서를 자동으로 발급받고 만기 전 갱신을 처리해 줍니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "TLS",
+      "인증서",
+      "Let's Encrypt"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cert-manager.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T03:03:58.237Z",
+    "requirements": [
+      "Kubernetes 클러스터",
+      "kubectl"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm을 이용한 설치",
+        "command": "helm repo add jetstack https://charts.jetstack.io && helm install cert-manager jetstack/cert-manager --namespace cert-manager --create-namespace --set crds.enabled=true",
+        "note": "Helm 차트를 통한 표준 설치"
+      }
+    ],
+    "usageSteps": [
+      "Helm을 통해 cert-manager를 클러스터에 배포합니다.",
+      "Issuer 또는 ClusterIssuer 리소스를 생성하여 인증서 발급처를 지정합니다.",
+      "Ingress 등에 주석을 추가하여 인증서 자동 발급을 활성화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "인증서 발급을 위해 외부 네트워크 통신 및 DNS 설정이 필요할 수 있습니다.",
+    "stars": 14116,
+    "forks": 2468,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
     "id": "openpilot",
     "name": "openpilot",
     "github": "https://github.com/commaai/openpilot",
