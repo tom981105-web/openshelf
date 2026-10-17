@@ -1,5 +1,841 @@
 [
   {
+    "id": "failproofai",
+    "name": "FailproofAI",
+    "github": "https://github.com/FailproofAI/failproofai",
+    "description": "AI 에이전트 하네스를 위한 관측 가능성 및 런타임 신뢰성 정책 집행 도구입니다.",
+    "longDescription": "AI 에이전트의 모든 실행을 추적하고 런타임 신뢰성을 보장하기 위한 정책을 집행하며, 로컬 대시보드를 통해 에이전트 동작을 모니터링할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "AI 에이전트",
+      "관측 가능성",
+      "가드레일",
+      "신뢰성",
+      "CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://befailproof.ai",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "전역 설치",
+        "command": "npm install -g failproofai",
+        "note": "npm을 통해 FailproofAI CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "failproofai config 명령어로 에이전트와 데몬을 연결합니다.",
+      "failproofai policies add 명령어로 정책을 추가합니다.",
+      "failproofai 명령어로 대시보드를 실행하여 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5697,
+    "forks": 503,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "skywalking",
+    "name": "SkyWalking",
+    "github": "https://github.com/apache/skywalking",
+    "description": "마이크로서비스 및 클라우드 네이티브 아키텍처를 위한 오픈소스 APM 및 분산 추적 시스템입니다.",
+    "longDescription": "분산 시스템의 성능 모니터링, 추적, 진단 기능을 제공하며 컨테이너 기반 및 클라우드 환경에 최적화되어 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "APM",
+      "분산 추적",
+      "모니터링",
+      "마이크로서비스",
+      "Java"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://skywalking.apache.org/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 문서에서 최신 바이너리를 다운로드합니다.",
+      "설정 파일을 수정하여 수집할 메트릭과 백엔드를 지정합니다.",
+      "서버를 실행하고 애플리케이션에 에이전트를 부착합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 24970,
+    "forks": 6631,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "jaeger",
+    "name": "Jaeger",
+    "github": "https://github.com/jaegertracing/jaeger",
+    "description": "복잡한 분산 애플리케이션의 트랜잭션 추적과 지연 시간 문제 해결을 지원하는 CNCF 분산 추적 플랫폼입니다.",
+    "longDescription": "마이크로서비스 기반 아키텍처에서 분산 컨텍스트 전파, 비정상 트랜잭션 추적 및 성능 최적화를 위한 모니터링 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "분산 추적",
+      "CNCF",
+      "모니터링",
+      "Observability",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.jaegertracing.io/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 또는 Kubernetes를 통해 Jaeger 백엔드를 배포합니다.",
+      "애플리케이션에 Jaeger 클라이언트 라이브러리를 통합합니다.",
+      "웹 UI에 접속하여 분산 트레이스 데이터를 시각적으로 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 23303,
+    "forks": 3173,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "zipkin",
+    "name": "Zipkin",
+    "github": "https://github.com/openzipkin/zipkin",
+    "description": "서비스 아키텍처의 지연 시간 문제를 해결하기 위한 타이밍 데이터를 수집하는 분산 추적 시스템입니다.",
+    "longDescription": "마이크로서비스 환경에서 각 요청의 소요 시간을 수집하고 시각화하여 병목 현상과 지연 원인을 진단할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "분산 추적",
+      "Java",
+      "모니터링",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://zipkin.io/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d -p 9411:9411 openzipkin/zipkin-slim",
+        "note": "도커를 이용해 간단하게 Zipkin 서버를 실행합니다."
+      },
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install zipkin",
+        "note": "macOS 환경에서 홈브루를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Zipkin 서버를 Docker 또는 Homebrew로 실행합니다.",
+      "애플리케이션에 Zipkin 추적 라이브러리를 추가합니다.",
+      "웹 브라우저에서 9411 포트에 접속하여 트레이스 데이터를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17467,
+    "forks": 3095,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "ecapture",
+    "name": "eCapture",
+    "github": "https://github.com/gojue/ecapture",
+    "description": "eBPF 기술을 활용하여 MITM 프록시나 사용자 정의 CA 인증서 없이 SSL/TLS 평문 트래픽을 캡처하는 도구입니다.",
+    "longDescription": "루트 권한 또는 특정 권한 하에서 리눅스 및 안드로이드 환경의 암호화된 통신 내용을 안전하게 감청하고 분석할 수 있습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "eBPF",
+      "보안 감사",
+      "네트워크 분석",
+      "SSL/TLS",
+      "C"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://ecapture.cc",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Linux kernel 4.18+",
+      "Root privilege"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "호환되는 리눅스 커널 버전을 확인합니다.",
+      "릴리즈 페이지에서 바이너리를 다운로드하거나 도커 이미지를 가져옵니다.",
+      "루트 권한으로 eCapture를 실행하여 대상 프로세스의 TLS 트래픽을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15510,
+    "forks": 1650,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "thanos",
+    "name": "Thanos",
+    "github": "https://github.com/thanos-io/thanos",
+    "description": "프로메테우스(Prometheus) 모니터링 시스템에 고가용성과 장기 스토리지 기능을 추가해주는 오픈소스 플랫폼입니다.",
+    "longDescription": "여러 프로메테우스 인스턴스의 메트릭을 글로벌하게 조회할 수 있으며, 오브젝트 스토리지를 활용해 무제한 데이터 보존을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Prometheus",
+      "모니터링",
+      "고가용성",
+      "스토리지",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://thanos.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Prometheus"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Thanos 컴포넌트(Sidecar, Querier 등)를 클러스터에 배포합니다.",
+      "오브젝트 스토리지 자격 증명을 설정합니다.",
+      "Grafana 등과 연동하여 통합 메트릭 대시보드를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 14238,
+    "forks": 2390,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "opensre",
+    "name": "OpenSRE",
+    "github": "https://github.com/Tracer-Cloud/opensre",
+    "description": "나만의 AI SRE 에이전트를 구축할 수 있는 오픈소스 프레임워크 및 툴킷입니다.",
+    "longDescription": "기존에 운영 중인 다양한 모니터링 및 운영 도구와 연동하여 장애 대응 자동화와 인프라 질의응답 워크플로우를 정의할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI SRE",
+      "인프라",
+      "장애 대응",
+      "Python",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://discord.com/invite/opensre",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS/Linux 설치",
+        "command": "curl -fsSL https://install.opensre.com | bash -s -- -gh",
+        "note": "원격 스크립트를 통해 OpenSRE CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 OpenSRE CLI를 설치합니다.",
+      "명령어 창에서 `opensre`를 실행하여 초기 설정 및 에이전트를 구성합니다.",
+      "사내 운영 도구와 연동하여 AI 기반 장애 진단을 시작합니다."
+    ],
+    "examplePrompt": "현재 발생 중인 서버 인스턴스의 CPU 스파이크 원인을 분석해줘.",
+    "usageNote": "알파 단계 프로젝트이므로 프로덕션 적용 시 주의가 필요합니다.",
+    "stars": 12060,
+    "forks": 1768,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "openstatus",
+    "name": "OpenStatus",
+    "github": "https://github.com/openstatusHQ/openstatus",
+    "description": "인프라를 코드로 관리할 수 있는 오픈소스 상태 페이지 및 가동 시간 모니터링 플랫폼입니다.",
+    "longDescription": "YAML 또는 Terraform으로 모니터와 상태 페이지를 정의하고, Slack이나 AI 에이전트와 연동하여 인시던트를 효율적으로 관리합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "상태 페이지",
+      "모니터링",
+      "SRE",
+      "TypeScript",
+      "MCP"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://openstatus.dev",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "ChatGPT",
+      "Cursor"
+    ],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "pnpm install",
+        "note": "프로젝트 루트에서 패키지 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소 코드를 클론하고 의존성을 설치합니다.",
+      "YAML 또는 Terraform을 통해 모니터링 대상을 정의합니다.",
+      "대시보드를 실행하여 가동 시간 및 인시던트 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "현재 서비스 가동 상태를 확인하고 장애 발생 시 상태 페이지를 업데이트해줘.",
+    "usageNote": "",
+    "stars": 9190,
+    "forks": 794,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "coroot",
+    "name": "Coroot",
+    "github": "https://github.com/coroot/coroot",
+    "description": "AI 기반 근본 원인 분석(RCA) 기능을 갖춘 오픈소스 관측성 및 APM 도구입니다.",
+    "longDescription": "메트릭, 로그, 트레이스, 프로파일링 데이터를 결합하여 미리 정의된 대시보드를 통해 마이크로서비스의 상태를 자동으로 진단합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "APM",
+      "관측성",
+      "근본 원인 분석",
+      "SLO",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://coroot.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Prometheus"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 또는 Kubernetes를 사용하여 Coroot를 배포합니다.",
+      "모니터링할 대상 클러스터에 Coroot 노드 에이전트를 설치합니다.",
+      "웹 UI에 접속하여 애플리케이션 서비스 맵과 성능 지표를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7975,
+    "forks": 408,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "agent-starter-pack",
+    "name": "Agent Starter Pack",
+    "github": "https://github.com/GoogleCloudPlatform/agent-starter-pack",
+    "description": "Google Cloud용 AI 에이전트를 몇 분 만에 배포할 수 있는 프로덕션 준비 템플릿입니다.",
+    "longDescription": "CI/CD, 평가, 관측 가능성이 내장된 프로덕션 수준의 AI 에이전트 프로젝트 템플릿을 빠르게 생성하고 구글 클라우드에 배포할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 에이전트",
+      "템플릿",
+      "GCP",
+      "CI/CD",
+      "개발 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://goo.gle/agents-cli",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "에이전트 생성",
+        "command": "uvx agent-starter-pack create",
+        "note": "uv를 사용하여 새 에이전트 프로젝트를 즉시 생성합니다."
+      }
+    ],
+    "usageSteps": [
+      "명령어를 실행하여 새 에이전트 프로젝트를 생성합니다.",
+      "생성된 프로젝트 디렉터리로 이동합니다.",
+      "필요한 설정 후 Google Cloud에 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6567,
+    "forks": 1500,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "cost-xray",
+    "name": "Cost Xray",
+    "github": "https://github.com/tigerless-labs/cost-xray",
+    "description": "AI 코딩 에이전트가 API로 전송하는 실제 트래픽과 비용을 세부적으로 추적하는 도구입니다.",
+    "longDescription": "시스템 프롬프트, 도구 스키마, MCP 블록, 캐시 읽기/쓰기 등 코딩 에이전트의 로컬 API 트래픽을 가로채어 토큰과 비용을 소스별로 분석합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "토큰 비용",
+      "프록시",
+      "추적",
+      "AI 코딩",
+      "개발 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/tigerless-labs/cost-xray",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl -fsSL https://raw.githubusercontent.com/tigerless-labs/cost-xray/master/install.sh | bash",
+        "note": "원격 스크립트를 다운로드하여 에이전트 트래픽 캡처 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 캡처할 에이전트를 선택합니다.",
+      "새 터미널 창을 열고 에이전트를 실행합니다.",
+      "대시보드에서 세션별 토큰 사용량과 비용을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5482,
+    "forks": 352,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "kener",
+    "name": "Kener",
+    "github": "https://github.com/rajnandan1/kener",
+    "description": "아름다운 디자인과 다양한 기능을 갖춘 자체 호스팅 상태 페이지(Status Page) 솔루션입니다.",
+    "longDescription": "Docker와 Node.js 기반으로 쉽게 배포할 수 있으며, 시스템 가동 상태와 인시던트를 실시간으로 모니터링하고 사용자에게 공개할 수 있는 상태 페이지를 제공합니다.",
+    "category": "협업·소통",
+    "tags": [
+      "상태 페이지",
+      "모니터링",
+      "Node.js",
+      "Docker",
+      "SvelteKit"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://kener.ing/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Node.js",
+      "Redis"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 설치",
+        "command": "git clone https://github.com/rajnandan1/kener.git && cd kener && npm install",
+        "note": "소스 코드를 클론한 후 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Redis 인스턴스를 실행합니다.",
+      ".env 파일을 생성하여 기본 설정을 구성합니다.",
+      "npm run build 및 npm run start로 서버를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5209,
+    "forks": 306,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "logfire",
+    "name": "Logfire",
+    "github": "https://github.com/pydantic/logfire",
+    "description": "프로덕션 환경의 LLM 및 에이전트 시스템을 위한 파이썬 중심 AI 관측 가능성 플랫폼입니다.",
+    "longDescription": "Pydantic 팀이 개발한 관측 플랫폼으로, 파이썬 객체, 이벤트 루프, 데이터베이스 쿼리 및 LLM 호출을 직관적인 대시보드와 SQL을 통해 분석할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "LLM",
+      "관측 가능성",
+      "파이썬",
+      "로깅",
+      "OpenTelemetry"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pydantic.dev/logfire/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "파이썬 패키지 설치",
+        "command": "pip install logfire",
+        "note": "pip을 사용하여 Logfire SDK 및 CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 logfire 패키지를 설치합니다.",
+      "logfire auth 명령어로 계정 인증을 진행합니다.",
+      "애플리케이션 코드에 Logfire 계측을 추가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4516,
+    "forks": 322,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "cpa-manager-plus",
+    "name": "CPA Manager Plus",
+    "github": "https://github.com/seakee/CPA-Manager-Plus",
+    "description": "클라우드 AI 게이트웨이 및 CLIProxyAPI 요청, 비용, 할당량을 모니터링하는 자체 호스팅 관리 패널입니다.",
+    "longDescription": "실패한 요청의 원인 분석, 모델 및 제공자별 토큰 비용 추적, 계정 및 할당량 상태를 통합적으로 모니터링할 수 있는 대시보드 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 게이트웨이",
+      "비용 추적",
+      "모니터링",
+      "대시보드",
+      "Go"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://seakee.github.io/CPA-Manager-Plus/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 이미지 실행",
+        "command": "docker run -d --name cpa-manager-plus -p 8080:8080 seakee/cpa-manager-plus",
+        "note": "Docker를 통해 관리 패널 컨테이너를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 명령어로 컨테이너를 실행합니다.",
+      "웹 브라우저로 지정된 포트에 접속합니다.",
+      "AI API 사용량 및 비용 대시보드를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3866,
+    "forks": 413,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "odigos",
+    "name": "Odigos",
+    "github": "https://github.com/odigos-io/odigos",
+    "description": "코드 수정 없이 eBPF를 활용해 쿠버네티스 환경의 모든 애플리케이션을 자동으로 추적하는 분산 모니터링 도구입니다.",
+    "longDescription": "소스 코드 변경 없이 eBPF 기술을 이용해 다양한 언어로 작성된 애플리케이션의 분산 추적 데이터를 수집하고 OpenTelemetry 백엔드로 전송합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "eBPF",
+      "쿠버네티스",
+      "분산 추적",
+      "OpenTelemetry",
+      "모니터링"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://odigos.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Kubernetes",
+      "Odigos CLI"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Odigos CLI 설치 및 적용",
+        "command": "odigos install",
+        "note": "Odigos CLI를 다운로드한 후 클러스터에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "쿠버네티스 클러스터에 Odigos CLI를 설치합니다.",
+      "웹 UI 또는 CLI를 통해 모니터링할 네임스페이스와 애플리케이션을 선택합니다.",
+      "수집된 분산 추적 데이터를 대시보드에서 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3674,
+    "forks": 256,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "holmesgpt",
+    "name": "HolmesGPT",
+    "github": "https://github.com/HolmesGPT/holmesgpt",
+    "description": "쿠버네티스 및 클라우드 인프라의 프로덕션 장애를 조사하고 원인을 진단하는 오픈소스 SRE AI 에이전트입니다.",
+    "longDescription": "CNCF 샌드박스 프로젝트로, 쿠버네티스, VM, 데이터베이스 등 다양한 인프라 환경에서 발생한 인시던트를 백그라운드에서 24시간 감시하고 원인을 분석합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "SRE",
+      "AI 에이전트",
+      "장애 진단",
+      "쿠버네티스",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://holmesgpt.dev/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install holmesgpt",
+        "note": "pip을 통해 HolmesGPT SRE 에이전트를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 패키지를 설치합니다.",
+      "모니터링할 인프라 및 LLM 백엔드 자격 증명을 설정합니다.",
+      "장애 발생 시 에이전트를 실행하여 근본 원인 조사를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3617,
+    "forks": 536,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "openlit",
+    "name": "OpenLIT",
+    "github": "https://github.com/openlit/openlit",
+    "description": "OpenTelemetry 기반으로 AI 에이전트 및 코딩 에이전트의 추적, 평가, 가드레일을 통합 지원하는 엔지니어링 플랫폼입니다.",
+    "longDescription": "AI 에이전트 세션의 프롬프트, LLM 호출, 파일 읽기/편집, 셸 명령어 등 다양한 도구 활동과 토큰 사용량을 OpenTelemetry 표준으로 추적하고 관리합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 에이전트",
+      "OpenTelemetry",
+      "LLM",
+      "관측 가능성",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.openlit.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "코딩 에이전트 연동 설치",
+        "command": "openlit coding install --vendor=claude-code",
+        "note": "Claude Code 에이전트용 OpenLIT 연동을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "CLI를 통해 코딩 에이전트 연동을 설치합니다.",
+      "openlit doctor 명령어로 설치 상태를 진단합니다.",
+      "에이전트 세션의 도구 호출 및 토큰 사용량을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2855,
+    "forks": 438,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "oryx",
+    "name": "Oryx",
+    "github": "https://github.com/pythops/oryx",
+    "description": "eBPF 기술을 활용하여 리눅스 네트워크 트래픽을 실시간으로 스니핑하고 분석하는 TUI 도구입니다.",
+    "longDescription": "리눅스 커널의 eBPF를 기반으로 전송, 네트워크, 링크 계층의 트래픽을 실시간으로 검사하고 통계 제공 및 방화벽 기능을 수행하는 터미널 사용자 인터페이스(TUI) 애플리케이션입니다.",
+    "category": "네트워크",
+    "tags": [
+      "eBPF",
+      "네트워크",
+      "트래픽 분석",
+      "TUI",
+      "Rust"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/pythops/oryx",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T22:03:59.332Z",
+    "requirements": [
+      "Linux Kernel 6.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Arch Linux 패키지 설치",
+        "command": "pacman -S oryx",
+        "note": "Arch Linux 공식 저장소를 통해 Oryx를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 리눅스 환경에서 패키지를 설치합니다.",
+      "터미널에서 oryx 명령어를 실행합니다.",
+      "실시간으로 수집되는 네트워크 트래픽 통계와 패킷을 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2594,
+    "forks": 75,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
     "id": "router7",
     "name": "router7",
     "github": "https://github.com/rtr7/router7",
