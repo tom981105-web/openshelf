@@ -1,5 +1,627 @@
 [
   {
+    "id": "openpilot",
+    "name": "openpilot",
+    "github": "https://github.com/commaai/openpilot",
+    "description": "300종 이상의 차량을 지원하는 오픈소스 운전자 보조 시스템 운영체제입니다.",
+    "longDescription": "로보틱스를 위한 운영체제로, 다양한 차량에서 첨단 운전자 보조 시스템(ADAS) 기능을 업그레이드하고 활용할 수 있도록 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "운전자보조",
+      "로보틱스",
+      "오픈소스",
+      "운영체제"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://comma.ai/openpilot",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "지원되는 하드웨어(comma four 등)",
+      "지원되는 차량 및 하네스"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 URL 설정",
+        "command": "openpilot.comma.ai",
+        "note": "커스텀 소프트웨어 설치 URL로 지정"
+      }
+    ],
+    "usageSteps": [
+      "지원되는 장비를 차량에 연결합니다.",
+      "설정 과정에서 openpilot.comma.ai URL을 입력합니다.",
+      "지원 차량 및 전용 하네스를 연동하여 구동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "호환되는 하드웨어 및 차량 모델 확인이 필수적입니다.",
+    "stars": 63914,
+    "forks": 11325,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "questdb",
+    "name": "questdb",
+    "github": "https://github.com/questdb/questdb",
+    "description": "대규모 시계열 데이터를 고속으로 처리하는 오픈소스 시계열 데이터베이스입니다.",
+    "longDescription": "초당 수백만 건의 이벤트를 수집하고 실시간 데이터 연산을 수행하며, 메모리 맵핑과 열 기반 저장소를 활용해 지연 시간을 최소화합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "시계열",
+      "데이터베이스",
+      "SQL",
+      "실시간분석"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://questdb.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "Java 런타임 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -p 9000:9000 -p 8812:8812 questdb/questdb",
+        "note": "Docker를 통한 빠른 실행"
+      },
+      {
+        "title": "Homebrew 설치 (macOS)",
+        "command": "brew install questdb",
+        "note": "Apple Silicon 사용자 대상"
+      }
+    ],
+    "usageSteps": [
+      "Docker 또는 Homebrew를 통해 QuestDB를 설치하고 실행합니다.",
+      "웹 콘솔에 접속하여 대시보드나 SQL 쿼리 인터페이스를 엽니다.",
+      "시계열 데이터를 대량으로 수집하고 실시간 쿼리를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17447,
+    "forks": 1672,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "mujoco",
+    "name": "mujoco",
+    "github": "https://github.com/google-deepmind/mujoco",
+    "description": "로보틱스와 생체 역학 연구를 위한 범용 고성능 물리 시뮬레이터입니다.",
+    "longDescription": "빠르고 정확한 다물체 동역학과 접촉(Contact) 시뮬레이션을 제공하며, Google DeepMind에서 유지보수하는 C API 기반 엔진입니다.",
+    "category": "과학·연구",
+    "tags": [
+      "물리시뮬레이터",
+      "로보틱스",
+      "시뮬레이션",
+      "C API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://mujoco.org",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "컴파일러 또는 사전 빌드된 바이너리"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 릴리스 페이지에서 사전 빌드된 바이너리를 다운로드합니다.",
+      "XML 설정 파일을 작성하여 시뮬레이션 환경을 구성합니다.",
+      "C API 또는 관련 파이썬 바인딩을 통해 시뮬레이션을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15719,
+    "forks": 1852,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "stable-baselines3",
+    "name": "stable-baselines3",
+    "github": "https://github.com/DLR-RM/stable-baselines3",
+    "description": "PyTorch 기반의 신뢰할 수 있는 강화학습 알고리즘 구현 모음입니다.",
+    "longDescription": "오픈AI Baselines의 PyTorch 버전으로, 검증된 강화학습 알고리즘들을 일관된 인터페이스와 사용하기 쉬운 구조로 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "강화학습",
+      "PyTorch",
+      "머신러닝",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://stable-baselines3.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "Python 3.10+",
+      "PyTorch = 2.8"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install stable-baselines3[extra]",
+        "note": "추가 기능과 함께 설치"
+      }
+    ],
+    "usageSteps": [
+      "가상환경에 Python 및 PyTorch를 준비합니다.",
+      "pip를 통해 stable-baselines3를 설치합니다.",
+      "Gym 호환 환경을 불러와 강화학습 에이전트를 학습시킵니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13901,
+    "forks": 2177,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "rerun",
+    "name": "rerun",
+    "github": "https://github.com/rerun-io/rerun",
+    "description": "멀티모달 로보틱스 및 물리 AI 데이터를 실시간으로 시각화하고 스트리밍하는 도구입니다.",
+    "longDescription": "이미지, 포인트 클라우드, 시계열 데이터 등 다양한 멀티모달 센서 데이터를 동기화하여 고성능으로 기록하고 실시간 탐색할 수 있는 시각화 레이어입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "시각화",
+      "로보틱스",
+      "멀티모달",
+      "컴퓨터비전"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://rerun.io/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "Python 또는 Rust 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "파이썬 SDK 설치",
+        "command": "pip install rerun-sdk",
+        "note": "파이썬 환경에서 빠르게 시작"
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 rerun-sdk를 설치합니다.",
+      "코드 내에서 멀티모달 로그 데이터를 기록합니다.",
+      "Rerun 뷰어를 통해 데이터를 실시간으로 시각화하고 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11604,
+    "forks": 873,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "kornia",
+    "name": "kornia",
+    "github": "https://github.com/kornia/kornia",
+    "description": "PyTorch를 백엔드로 사용하는 미분 가능 기하학적 컴퓨터 비전 라이브러리입니다.",
+    "longDescription": "딥러닝 파이프라인 내에서 이미지 처리, 변환, 기하학적 연산을 미분 가능한 형태로 수행할 수 있도록 지원하는 공간 AI 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "컴퓨터비전",
+      "PyTorch",
+      "이미지처리",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kornia.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "PyTorch 2.5.1+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install kornia",
+        "note": "기본 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "PyTorch가 설치된 환경에서 pip로 kornia를 설치합니다.",
+      "텐서 기반 이미지 처리 연산을 신경망 모델에 통합합니다.",
+      "미분 가능한 기하학적 변환을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11432,
+    "forks": 1399,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "newton",
+    "name": "newton",
+    "github": "https://github.com/newton-physics/newton",
+    "description": "NVIDIA Warp 기반으로 구축된 로보틱스 연구용 GPU 가속 물리 시뮬레이션 엔진입니다.",
+    "longDescription": "로봇 공학자와 시뮬레이션 연구원을 위해 GPU 가속을 활용하여 고성능 물리 연산을 수행할 수 있도록 설계된 오픈소스 엔진입니다.",
+    "category": "과학·연구",
+    "tags": [
+      "물리시뮬레이션",
+      "GPU가속",
+      "NVIDIA Warp",
+      "로보틱스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://newton-physics.github.io/newton/stable/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "CUDA 지원 GPU 및 드라이버 (macOS는 CPU)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "시스템 환경에 맞는 NVIDIA Warp 및 호환 드라이버를 구성합니다.",
+      "newton 패키지를 설치하고 시뮬레이션 환경을 불러옵니다.",
+      "GPU 가속 기반의 로봇 물리 연산을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5794,
+    "forks": 729,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "behaviortree-cpp",
+    "name": "BehaviorTree.CPP",
+    "github": "https://github.com/BehaviorTree/BehaviorTree.CPP",
+    "description": "로보틱스 및 게임 조율을 위한 C++ 기반 행동 트리 라이브러리입니다.",
+    "longDescription": "복잡한 제어 흐름과 에이전트 행동을 모듈화하고 관리할 수 있도록 다양한 기능을 포함한 고성능 C++ 행동 트리 프레임워크입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "행동트리",
+      "C++",
+      "로보틱스",
+      "조율"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://behaviortree.dev",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "CMake 3.23+ 또는 Conan"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Conan 빌드",
+        "command": "conan install . -s build_type=Release --build=missing",
+        "note": "의존성 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "저장소 루트 디렉토리에서 Conan 또는 CMake를 설정합니다.",
+      "빌드 명령어를 실행하여 라이브러리를 컴파일합니다.",
+      "프로젝트에 행동 트리를 통합하여 로봇 및 에이전트 동작을 제어합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4248,
+    "forks": 864,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "webots",
+    "name": "webots",
+    "github": "https://github.com/cyberbotics/webots",
+    "description": "다양한 로봇 시뮬레이션을 지원하는 사용하기 쉬운 오픈소스 로봇 시뮬레이터입니다.",
+    "longDescription": "모바일 로봇, 로봇 팔, 자율주행차량 등 다양한 로봇을 3D 환경에서 가상으로 구현하고 ROS/ROS 2와 연동하여 제어할 수 있는 시뮬레이터입니다.",
+    "category": "과학·연구",
+    "tags": [
+      "로봇시뮬레이터",
+      "3D엔진",
+      "ROS",
+      "자율주행"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cyberbotics.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "지원되는 운영체제 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 릴리스 페이지에서 Webots 설치 파일을 내려받아 설치합니다.",
+      "시뮬레이션 세계(World) 파일을 불러오거나 새로 생성합니다.",
+      "컨트롤러 프로그램을 작성하여 로봇의 동작을 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4712,
+    "forks": 2079,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "ardupilot",
+    "name": "ArduPilot",
+    "github": "https://github.com/ArduPilot/ardupilot",
+    "description": "다양한 무인 항공기, 로봇 및 탈것을 위한 오픈소스 자동 조종 장치 소프트웨어",
+    "longDescription": "ArduPlane, ArduCopter, ArduRover, ArduSub 등 다양한 자율주행 로봇과 탈것을 제어하기 위한 오픈소스 기반의 신뢰성 높은 자동 조종 소프트웨어 프레임워크입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "드론",
+      "자동조종",
+      "로봇공학",
+      "C++",
+      "MAVLink"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "http://ardupilot.org/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "C++ 컴파일러",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "하드웨어 플랫폼에 맞는 펌웨어를 빌드합니다.",
+      "차량 및 기체에 업로드하여 테스트를 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16081,
+    "forks": 21581,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "jetson-inference",
+    "name": "jetson-inference",
+    "github": "https://github.com/dusty-nv/jetson-inference",
+    "description": "TensorRT와 NVIDIA Jetson을 활용한 딥러닝 추론 및 실시간 비전 가이드",
+    "longDescription": "NVIDIA Jetson 기기에서 TensorRT를 사용하여 고성능 딥러닝 추론 네트워크와 실시간 컴퓨터 비전 작업을 수행할 수 있도록 지원하는 교육 및 배포 가이드 프로젝트입니다.",
+    "category": "AI 모델",
+    "tags": [
+      "딥러닝",
+      "TensorRT",
+      "컴퓨터비전",
+      "NVIDIA",
+      "C++"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://developer.nvidia.com/embedded/twodaystoademo",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "NVIDIA Jetson",
+      "JetPack",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Jetson 기기에 JetPack을 설정합니다.",
+      "도커 컨테이너를 실행하거나 소스를 빌드합니다.",
+      "제공되는 예제 모델을 통해 추론을 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9014,
+    "forks": 3116,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "opencat-quadruped-robot",
+    "name": "OpenCat",
+    "github": "https://github.com/PetoiCamp/OpenCat-Quadruped-Robot",
+    "description": "보스턴 다이내믹스 스타일의 4족 보행 로봇 개발을 위한 오픈소스 프레임워크",
+    "longDescription": "STEM 교육, 코딩 교육, 로보틱스 연구 및 DIY 로봇 키트 개발에 적합한 4족 보행 로봇 반려동물 플랫폼 개발용 오픈소스 프레임워크입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "4족보행",
+      "로봇",
+      "아두이노",
+      "STEM",
+      "C++"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.petoi.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "Arduino IDE",
+      "NyBoard 하드웨어"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "하드웨어 조립 및 USB 업로더를 연결합니다.",
+      "Arduino IDE를 사용하여 소스 코드를 업로드합니다.",
+      "시리얼 모니터를 통해 관절 오프셋 및 IMU를 캘리브레이션합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5459,
+    "forks": 644,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "diffusion-policy",
+    "name": "Diffusion Policy",
+    "github": "https://github.com/real-stanford/diffusion_policy",
+    "description": "행동 확산 모델을 활용한 시각-운동 정책 학습 연구 프레임워크",
+    "longDescription": "로봇 조작 및 제어를 위해 확산 모델(Diffusion Model)을 기반으로 시각-운동 정책을 학습하고 시뮬레이션 및 실물 환경에서 검증할 수 있는 오픈소스 프로젝트입니다.",
+    "category": "AI 모델",
+    "tags": [
+      "확산모델",
+      "로보틱스",
+      "모방학습",
+      "Python",
+      "PyTorch"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://diffusion-policy.cs.columbia.edu/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "Python",
+      "NVIDIA GPU",
+      "Conda"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Conda 환경을 생성하고 필요한 종속 패키지를 설치합니다.",
+      "시뮬레이션 벤치마크 데이터를 다운로드합니다.",
+      "정책 학습 및 평가 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4650,
+    "forks": 853,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "dora",
+    "name": "Dora",
+    "github": "https://github.com/dora-rs/dora",
+    "description": "저지연, 분산형 데이터플로우 아키텍처를 제공하는 AI 기반 로보틱스 미들웨어",
+    "longDescription": "실시간 로봇 및 AI 애플리케이션 구축을 위해 설계된 100% Rust 기반의 고성능 데이터플로우 미들웨어로, ROS2 대비 빠른 처리 속도와 모듈화된 파이프라인을 제공합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Rust",
+      "데이터플로우",
+      "로보틱스",
+      "실시간",
+      "미들웨어"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://dora-rs.ai",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T02:04:00.363Z",
+    "requirements": [
+      "Rust 툴체인"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Rust 환경을 구축하고 Dora를 설치합니다.",
+      "지향성 그래프 형태로 파이프라인 구성 파일을 작성합니다.",
+      "명령줄 인터페이스(CLI)를 통해 데이터플로우 애플리케이션을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4013,
+    "forks": 460,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
     "id": "scrapy",
     "name": "Scrapy",
     "github": "https://github.com/scrapy/scrapy",
