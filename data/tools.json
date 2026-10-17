@@ -1,5 +1,778 @@
 [
   {
+    "id": "litellm",
+    "name": "LiteLLM",
+    "github": "https://github.com/BerriAI/litellm",
+    "description": "100개 이상의 대형 언어 모델 API를 OpenAI 표준 형식으로 단일화하여 호출할 수 있게 해주는 고성능 AI 게이트웨이입니다.",
+    "longDescription": "LiteLLM은 OpenAI, Anthropic, Gemini, Bedrock 등 다양한 LLM 제공자의 API를 통합된 규격으로 호출할 수 있는 파이썬 SDK 및 프록시 서버입니다. 비용 추적, 가드레일, 로드 밸런싱 등의 엔터프라이즈 기능을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API",
+      "게이트웨이",
+      "프록시",
+      "LLMOps",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.litellm.ai/docs/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "파이썬 라이브러리 활용",
+        "command": "pip install litellm",
+        "note": "파이썬 환경에서 LiteLLM 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 환경변수에 사용할 모델의 API Key를 등록합니다.",
+      "파이썬 코드에서 `completion` 함수를 임포트합니다.",
+      "원하는 모델 이름을 지정하여 표준화된 방식으로 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 61434,
+    "forks": 12425,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "ollama",
+    "name": "Ollama",
+    "github": "https://github.com/ollama/ollama",
+    "description": "로컬 환경에서 대형 언어 모델(LLM)을 손쉽게 실행하고 관리할 수 있는 도구입니다.",
+    "longDescription": "Ollama는 사용자의 컴퓨터에서 DeepSeek, Qwen, Gemma 등 다양한 오픈소스 대형 언어 모델을 간편하게 다운로드하고 실행할 수 있는 경량 런타임입니다. 완전한 프라이버시를 보장하며 클라우드 및 로컬 환경에서 모두 활용할 수 있습니다.",
+    "category": "AI 모델",
+    "tags": [
+      "LLM",
+      "CLI",
+      "Docker",
+      "오픈소스"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ollama.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS / Linux 설치",
+        "command": "curl -fsSL https://ollama.com/install.sh | sh",
+        "note": "유닉스 계열 운영체제용 설치 스크립트 실행"
+      }
+    ],
+    "usageSteps": [
+      "공식 웹사이트 또는 설치 명령어로 Ollama를 설치합니다.",
+      "터미널에서 `ollama run llama3` 등의 명령어로 모델을 실행합니다.",
+      "CLI 환경에서 실시간으로 AI와 대화하거나 API를 통해 연동합니다."
+    ],
+    "examplePrompt": "ollama run qwen:7b",
+    "usageNote": "",
+    "stars": 183581,
+    "forks": 18351,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "moneyprinterturbo",
+    "name": "MoneyPrinterTurbo",
+    "github": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "description": "AI 대형 언어 모델과 자동화 워크플로우를 활용해 키워드 기반으로 고화질 숏폼 영상을 제작하는 도구입니다.",
+    "longDescription": "사용자가 입력한 주제나 키워드에 맞춰 자동으로 비디오 스크립트를 작성하고, 적절한 시각 자료, 자막, 배경음을 매칭하여 고해상도 숏폼 영상을 완성해 주는 올인원 콘텐츠 제작 솔루션입니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "AI",
+      "숏폼",
+      "FFmpeg",
+      "자동화",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/harry0703/MoneyPrinterTurbo",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.11+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치 및 웹UI 구동",
+        "command": "python -m pip install mpt && mpt webui",
+        "note": "Python 가상환경 생성 후 패키지 설치 및 웹 인터페이스 실행"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 파이썬 가상환경을 활성화합니다.",
+      "필요한 패키지를 설치하고 웹UI를 실행합니다.",
+      "기본 설정에서 API Key를 입력한 뒤 원하는 주제나 키워드로 영상을 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "외부 AI 모델 및 음성 서비스 이용 시 각 플랫폼의 API Key가 필요합니다.",
+    "stars": 132277,
+    "forks": 20849,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "vllm",
+    "name": "vLLM",
+    "github": "https://github.com/vllm-project/vllm",
+    "description": "대형 언어 모델을 위한 고성능·고효율 추론 및 서빙 엔진입니다.",
+    "longDescription": "vLLM은 PagedAttention 기술을 도입하여 메모리 사용량을 획기적으로 줄이고, 높은 처리량(Throughput)으로 LLM 서비스를 제공할 수 있는 오픈소스 엔진입니다. 다양한 최신 오픈소스 모델과 OpenAI 호환 API를 지원합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "LLM",
+      "추론",
+      "GPU",
+      "API",
+      "PyTorch"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://vllm.ai",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.8+",
+      "CUDA 지원 GPU 권장"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install vllm",
+        "note": "파이썬 환경에서 vLLM 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "지원되는 파이썬 및 CUDA 환경에 vLLM을 설치합니다.",
+      "파이썬 코드나 서빙 명령어를 통해 모델을 로드합니다.",
+      "OpenAI 호환 API 엔드포인트를 열어 클라이언트 요청을 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 93984,
+    "forks": 23490,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "metagpt",
+    "name": "MetaGPT",
+    "github": "https://github.com/FoundationAgents/MetaGPT",
+    "description": "서로 다른 역할을 부여된 에이전트들이 협업하여 복잡한 소프트웨어 개발 작업을 수행하는 멀티 에이전트 프레임워크입니다.",
+    "longDescription": "MetaGPT는 제품 관리자, 아키텍트, 엔지니어 등 다양한 역할의 GPT 에이전트를 가상 조직으로 묶어, 자연어 입력만으로 요구사항 분석부터 디자인, 코드 작성까지 수행하는 최초의 멀티 에이전트 소프트웨어 개발 프레임워크입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "멀티에이전트",
+      "소프트웨어",
+      "LLM",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://atoms.dev/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.9 이상 3.12 미만"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 업그레이드 설치",
+        "command": "pip install --upgrade metagpt",
+        "note": "파이썬 환경에서 MetaGPT 패키지 최신 버전 설치"
+      }
+    ],
+    "usageSteps": [
+      "지원되는 Python 버전 환경에서 패키지를 설치합니다.",
+      "설정 파일에 LLM API Key를 구성합니다.",
+      "명령어 도구를 통해 가상 회사의 역할에 맞는 프로젝트 생성을 지시합니다."
+    ],
+    "examplePrompt": "metagpt \"Write a CLI tool that takes a stock ticker and returns price\"",
+    "usageNote": "",
+    "stars": 70892,
+    "forks": 9020,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "daily-stock-analysis",
+    "name": "daily_stock_analysis",
+    "github": "https://github.com/ZhuLinsen/daily_stock_analysis",
+    "description": "대형 언어 모델 기반으로 다수 시장의 주식 데이터를 수집하고 실시간 분석 리포트를 제공하는 지능형 시스템입니다.",
+    "longDescription": "다양한 소스의 주가 데이터와 실시간 뉴스를 결합하여 LLM이 심층 분석을 수행하고, 투자 의사결정 대시보드와 자동 알림을 제공하는 퀀트 투자 분석 솔루션입니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "금융",
+      "주식",
+      "AI",
+      "자동화",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://dsa.zhulinsen.tech",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 의존성 설치",
+        "command": "git clone https://github.com/ZhuLinsen/daily_stock_analysis.git && cd daily_stock_analysis && pip install -r requirements.txt",
+        "note": "소스코드 클론 후 필수 파이썬 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론하고 의존성 패키지를 설치합니다.",
+      "환경변수 설정 파일(.env)에 필요한 API 키 및 설정을 입력합니다.",
+      "분석 스크립트를 실행하여 리포트를 생성하고 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 66549,
+    "forks": 55342,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "omlx",
+    "name": "oMLX",
+    "github": "https://github.com/jundot/omlx",
+    "description": "Apple Silicon 환경에 최적화되어 연속 배치 처리와 SSD 캐싱을 지원하는 macOS 메뉴바 관리형 LLM 추론 서버입니다.",
+    "longDescription": "oMLX는 맥(Mac) 환경에서 로컬 LLM을 더욱 실용적으로 활용할 수 있도록 돕는 추론 서버입니다. 인메모리와 SSD 간의 계층형 KV 캐시 관리를 통해 대화 도중 문맥이 바뀌어도 이전 상태를 효율적으로 재사용하며, macOS 메뉴바에서 간편하게 제어할 수 있습니다.",
+    "category": "AI 모델",
+    "tags": [
+      "AppleSilicon",
+      "macOS",
+      "MLX",
+      "추론",
+      "Python"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://omlx.ai",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Apple Silicon 기반 Mac 기기"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "공식 웹사이트 및 릴리즈 안내 참고",
+        "command": "open https://omlx.ai",
+        "note": "macOS 메뉴바 애플리케이션 다운로드 및 설치"
+      }
+    ],
+    "usageSteps": [
+      "macOS용 애플리케이션을 다운로드하여 실행합니다.",
+      "메뉴바 인터페이스를 통해 일상적으로 사용할 모델을 메모리에 고정하거나 관리합니다.",
+      "원하는 설정과 컨텍스트 제한을 지정하여 로컬 LLM 서버를 가동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 22880,
+    "forks": 2093,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "learn-claude-code",
+    "name": "Learn Claude Code",
+    "github": "https://github.com/shareAI-lab/learn-claude-code",
+    "description": "Claude Code와 유사한 에이전트 하네스 구조를 바닥부터 직접 구현하며 학습하는 교육용 파이썬 프로젝트입니다.",
+    "longDescription": "모델의 에이전시와 외부 코드 오케스트레이션(하네스)의 역할을 이해할 수 있도록 구성된 17개의 단계별 레슨을 제공합니다. 간단한 루프와 Bash 실행부터 컨텍스트 관리, 목표 지향적 에이전트 루프까지 코드로 직접 구현해 볼 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "Claude",
+      "Python",
+      "튜토리얼",
+      "LLM"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://learn.shareai.run",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.10+",
+      "Anthropic API Key"
+    ],
+    "supportedAgents": [
+      "Claude"
+    ],
+    "install": [
+      {
+        "title": "저장소 클론 및 패키지 설치",
+        "command": "git clone https://github.com/shareAI-lab/learn-claude-code && cd learn-claude-code && pip install -r requirements.txt",
+        "note": "프로젝트 코드를 받고 필요한 파이썬 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필수 패키지를 설치합니다.",
+      ".env 파일을 복사하여 ANTHROPIC_API_KEY를 설정합니다.",
+      "각 레슨 폴더의 파이썬 스크립트를 실행하여 에이전트 동작 방식을 학습합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 78740,
+    "forks": 12595,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "llamafactory",
+    "name": "LlamaFactory",
+    "github": "https://github.com/hiyouga/LlamaFactory",
+    "description": "100개 이상의 대형 언어 모델(LLM)과 비전 언어 모델(VLM)을 위한 통합 고효율 파인튜닝 프레임워크입니다.",
+    "longDescription": "LoRA, QLoRA 등 최신 파라미터 효율적 미세조정 기법을 지원하며, 웹 기반 UI(Gradio)를 통해 코드 작성 없이도 손쉽게 모델을 학습시키고 평가할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "LLM",
+      "파인튜닝",
+      "PyTorch",
+      "Gradio",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://llamafactory.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.8+",
+      "PyTorch 2.0+",
+      "CUDA 지원 GPU 권장"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 설치",
+        "command": "git clone https://github.com/hiyouga/LlamaFactory.git && cd LlamaFactory && pip install -e \".[torch,metrics]\"",
+        "note": "소스 코드를 가져와서 개발 모드로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "LlamaFactory 저장소를 클론합니다.",
+      "pip을 통해 필수 라이브러리와 의존성을 설치합니다.",
+      "웹 UI를 실행하거나 설정 파일을 수정하여 데이터셋과 모델을 지정합니다.",
+      "명령어나 인터페이스를 통해 파인튜닝을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 75535,
+    "forks": 9257,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "chattts",
+    "name": "ChatTTS",
+    "github": "https://github.com/2noise/ChatTTS",
+    "description": "대화형 시나리오에 특화된 고품질 생성형 음성 합성(TTS) 모델입니다.",
+    "longDescription": "자연스러운 대화 톤과 웃음소리, 추임새 등 구어체 특성을 잘 살려내는 음성 생성 모델로, 파이썬을 통해 로컬 환경에서 간편하게 텍스트를 음성으로 변환할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "TTS",
+      "음성합성",
+      "Python",
+      "딥러닝",
+      "PyTorch"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://2noise.com",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "Torchaudio"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install ChatTTS",
+        "note": "파이썬 패키지 관리자를 통해 ChatTTS를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경에서 pip 명령어로 ChatTTS를 설치합니다.",
+      "스크립트 내에서 모델을 로드합니다.",
+      "변환할 텍스트를 입력하고 음성 데이터로 합성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 39913,
+    "forks": 4253,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "langextract",
+    "name": "LangExtract",
+    "github": "https://github.com/google/langextract",
+    "description": "대형 언어 모델을 활용해 비정형 텍스트에서 정형화된 정보를 추출하고 소스 근거를 시각화하는 파이썬 라이브러리입니다.",
+    "longDescription": "텍스트 데이터로부터 정확한 출처 기반의 구조화된 정보를 추출하며, 제미나이(Gemini), OpenAI, 오마마(Ollama) 등 다양한 백엔드 모델과 연동하여 대화형 및 배치 처리가 가능합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "정보추출",
+      "LLM",
+      "Gemini",
+      "Python",
+      "NLP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://pypi.org/project/langextract/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install langextract",
+        "note": "파이썬 패키지 매니저를 통해 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 langextract 패키지를 설치합니다.",
+      "사용할 LLM 제공자의 API 키를 설정합니다.",
+      "추출 규칙 및 프롬프트를 정의하고 비정형 텍스트를 전달하여 구조화된 데이터를 얻습니다."
+    ],
+    "examplePrompt": "다음 뉴스 기사 내용에서 주요 인물, 날짜, 사건을 추출해서 JSON 형태로 반환해줘.",
+    "usageNote": "",
+    "stars": 38964,
+    "forks": 2716,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "llmfit",
+    "name": "llmfit",
+    "github": "https://github.com/AlexsJones/llmfit",
+    "description": "사용자의 하드웨어 사양(CPU, RAM, GPU, VRAM)을 분석하여 원활하게 구동할 수 있는 오픈소스 LLM을 찾아주는 CLI 도구입니다.",
+    "longDescription": "시스템 환경을 정밀하게 진단하여 적절한 양자화 모델을 추천해주며, 사용자가 직접 벤치마크를 측정한 뒤 결과를 공유하여 커뮤니티 데이터의 정확도를 높일 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "LLM",
+      "하드웨어",
+      "Rust",
+      "CLI",
+      "로컬AI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/AlexsJones/llmfit",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치 (macOS/Linux)",
+        "command": "brew install AlexsJones/llmfit/llmfit",
+        "note": "Homebrew 패키지 관리자를 사용하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 패키지 관리자 또는 바이너리를 통해 llmfit을 설치합니다.",
+      "터미널에서 명령어를 실행하여 현재 시스템의 하드웨어 리소스를 스캔합니다.",
+      "내 장치에서 실행 가능한 최적의 오픈소스 대형 언어 모델 목록과 양자화 버전을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 38016,
+    "forks": 2443,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "sglang",
+    "name": "SGLang",
+    "github": "https://github.com/sgl-project/sglang",
+    "description": "대형 언어 모델, 비전 언어 모델, 확산 모델을 위한 고성능 서빙 및 추론 프레임워크입니다.",
+    "longDescription": "에이전트 워크로드, 대규모 서빙, 강화학습 롤아웃 등에 최적화되어 있으며, 효율적인 어텐션 메커니즘과 자체 내장된 이미지·비디오 생성 엔진을 제공합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "LLM",
+      "추론",
+      "서빙",
+      "Python",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://sglang.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python",
+      "CUDA 지원 환경 권장"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker pull lmsysorg/sglang:latest",
+        "note": "공식 도커 이미지를 다운로드하여 실행 환경을 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 이미지 또는 pip을 통해 SGLang 환경을 준비합니다.",
+      "서빙할 LLM 또는 멀티모달 모델을 지정하여 서버 프로세스를 구동합니다.",
+      "API 인터페이스를 통해 고속으로 모델 추론 요청을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 37242,
+    "forks": 9645,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "heretic",
+    "name": "Heretic",
+    "github": "https://github.com/p-e-w/heretic",
+    "description": "언어 모델의 검열을 완전 자동으로 제거(디센서링)해주는 파이썬 라이브러리입니다.",
+    "longDescription": "PyTorch 기반 환경에서 작동하며, 사전 학습된 언어 모델의 가중치를 분석하고 조정하여 원치 않는 제한이나 검열 성향을 자동으로 해제합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "LLM",
+      "디센서링",
+      "PyTorch",
+      "Python",
+      "AI보안"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://heretic-project.org",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.10+",
+      "PyTorch 2.2+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install -U heretic-llm heretic",
+        "note": "파이썬 패키지 매니저를 통해 관련 패키지를 최신 버전으로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 3.10+ 및 PyTorch 2.2+ 환경을 구축합니다.",
+      "pip을 통해 heretic 패키지를 설치합니다.",
+      "명령어를 통해 대상 모델 경로를 지정하여 검열 제거 프로세스를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "개발 및 연구 목적으로만 사용해야 합니다.",
+    "stars": 35593,
+    "forks": 4035,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "sillytavern",
+    "name": "SillyTavern",
+    "github": "https://github.com/SillyTavern/SillyTavern",
+    "description": "파워 유저를 위한 고급 기능 중심의 LLM 웹 프론트엔드 인터페이스입니다.",
+    "longDescription": "다양한 대화형 AI 백엔드와 연동하여 캐릭터 설정, 월드 인포, 확장 기능, 맞춤형 프롬프트 관리 등을 정밀하게 제어할 수 있는 풍부한 기능을 제공합니다.",
+    "category": "협업·소통",
+    "tags": [
+      "프론트엔드",
+      "챗봇",
+      "LLM",
+      "JavaScript",
+      "웹인터페이스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://sillytavern.app",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설정 문서 참조",
+        "command": "git clone https://github.com/SillyTavern/SillyTavern.git",
+        "note": "저장소를 복제한 뒤 운영체제별 공식 가이드에 따라 의존성을 설치하고 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js 환경을 준비하고 저장소를 클론합니다.",
+      "의존성을 설치하고 어플리케이션을 실행합니다.",
+      "브라우저에서 접속하여 OpenAI, Claude, 또는 로컬 LLM API 키를 연결합니다.",
+      "캐릭터와 대화 설정을 구성하여 챗봇 인터페이스를 이용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 34581,
+    "forks": 6479,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "openai-agents-python",
+    "name": "OpenAI Agents SDK",
+    "github": "https://github.com/openai/openai-agents-python",
+    "description": "다중 에이전트 워크플로우를 구축하기 위한 가볍고 강력한 파이썬 프레임워크입니다.",
+    "longDescription": "공급자에 구애받지 않고 OpenAI 응답 API, 채팅 완성 API는 물론 100개 이상의 다른 LLM을 지원하며, 에이전트 간의 핸드오프, 가드레일, 도구 연동을 손쉽게 구현할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "Python",
+      "프레임워크",
+      "LLM",
+      "OpenAI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://openai.github.io/openai-agents-python/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T14:04:01.839Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [
+      "OpenAI",
+      "기타 100+ LLM"
+    ],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install openai-agents",
+        "note": "파이썬 가상환경에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 3.10 이상의 가상 환경을 활성화합니다.",
+      "pip을 통해 openai-agents 패키지를 설치합니다.",
+      "스크립트에서 에이전트의 지시사항, 도구 및 가드레일을 설정하고 멀티 에이전트 루프를 실행합니다."
+    ],
+    "examplePrompt": "웹 검색 도구와 파일 저장 도구를 가진 두 개의 에이전트를 협력시켜 리서치 보고서를 작성해줘.",
+    "usageNote": "",
+    "stars": 30099,
+    "forks": 4959,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
     "id": "rsshub",
     "name": "RSSHub",
     "github": "https://github.com/DIYgod/RSSHub",
