@@ -1,5 +1,834 @@
 [
   {
+    "id": "rsshub",
+    "name": "RSSHub",
+    "github": "https://github.com/DIYgod/RSSHub",
+    "description": "다양한 웹사이트와 소셜 미디어 플랫폼의 콘텐츠를 RSS 피드로 변환해 주는 오픈소스 생성기입니다.",
+    "longDescription": "웹사이트가 자체적으로 제공하지 않는 경우에도 트위터, 유튜브, 빌리빌리 등의 방대한 플랫폼 데이터를 실시간 RSS 피드로 변환해 줍니다. 사용자가 선호하는 리더기로 정보를 놓치지 않고 수집할 수 있도록 돕습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RSS",
+      "TypeScript",
+      "Docker",
+      "API"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://docs.rsshub.app",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Node.js 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d --name rsshub -p 1200:1200 diygod/rsshub",
+        "note": "Docker를 이용해 RSSHub를 로컬에 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "RSSHub 서버를 배포하거나 공인 인스턴스를 확인합니다.",
+      "지원되는 플랫폼의 라우팅 규칙을 확인합니다.",
+      "RSS 리더기에 해당 URL을 등록하여 구독합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "일부 플랫폼은 IP 차단이나 속도 제한이 발생할 수 있습니다.",
+    "stars": 46551,
+    "forks": 10273,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "folo",
+    "name": "Folo",
+    "github": "https://github.com/RSSNext/Folo",
+    "description": "블로그, 뉴스, 팟캐스트, 소셜 피드를 하나의 타임라인에서 모아보고 AI로 요약하는 오픈소스 RSS 리더입니다.",
+    "longDescription": "여러 플랫폼의 구독 데이터를 깔끔하게 정리하여 보여주며, AI 기반의 요약 및 번역 기능을 통해 정보 소비의 효율을 극대화합니다. 브라우저뿐만 아니라 다양한 데스크톱 및 모바일 플랫폼을 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RSS",
+      "TypeScript",
+      "AI",
+      "앱"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://app.folo.is",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트 또는 앱스토어에서 클라이언트를 설치합니다.",
+      "기존 RSS 구독 목록(OPML)을 임포트합니다.",
+      "AI 요약 및 번역 기능을 활용하여 피드를 구독합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 39108,
+    "forks": 2134,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "v2",
+    "name": "Miniflux",
+    "github": "https://github.com/miniflux/v2",
+    "description": "설치가 간편하고 속도가 빠른 미니멀리즘 성향의 오픈소스 피드 리더입니다.",
+    "longDescription": "PostgreSQL 데이터베이스를 기반으로 작동하며, 불필요한 기능을 배제하고 빠르고 가벼운 RSS 독서 환경을 제공합니다. 전체 텍스트 검색 및 다양한 피드 포맷을 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Go",
+      "RSS",
+      "PostgreSQL",
+      "Atom"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://miniflux.app",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "PostgreSQL",
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "PostgreSQL 데이터베이스를 준비합니다.",
+      "Miniflux 바이너리 또는 Docker를 통해 서비스를 구동합니다.",
+      "웹 인터페이스에 접속하여 RSS 주소를 추가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9804,
+    "forks": 948,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "fluent-reader",
+    "name": "Fluent Reader",
+    "github": "https://github.com/yang991178/fluent-reader",
+    "description": "Electron과 React를 기반으로 제작된 모던한 데스크톱 RSS 리더입니다.",
+    "longDescription": "Windows 및 macOS의 최신 디자인 가이드를 반영하여 깔끔한 인터페이스를 제공하며, 다수의 피드를 효율적으로 관리할 수 있습니다. 로컬 중심의 빠른 동작과 세련된 UI가 특징입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Electron",
+      "React",
+      "TypeScript",
+      "RSS"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://hyliu.me/fluent-reader/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Microsoft Store, Mac App Store 또는 GitHub에서 설치 파일을 다운로드합니다.",
+      "애플리케이션을 실행하고 OPML 파일을 가져오거나 개별 RSS를 추가합니다.",
+      "모던한 UI를 통해 기사를 읽고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9721,
+    "forks": 544,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "rss-bridge",
+    "name": "rss-bridge",
+    "github": "https://github.com/RSS-Bridge/rss-bridge",
+    "description": "RSS 피드가 지원되지 않는 웹사이트를 위해 피드를 생성해 주는 PHP 웹 애플리케이션입니다.",
+    "longDescription": "다양한 인기 웹사이트와 포털의 고유 콘텐츠를 파싱하여 표준 RSS 및 Atom 피드로 변환합니다. 자체 서버에 구축하여 자유롭게 브릿지(Bridge)를 확장할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "PHP",
+      "RSS",
+      "Atom",
+      "웹"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Unlicense",
+    "website": "https://rss-bridge.org/bridge01/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "PHP 7.4 이상",
+      "Nginx 또는 Caddy"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Composer 설치",
+        "command": "composer create-project -v --no-dev --no-scripts rss-bridge/rss-bridge",
+        "note": "Composer를 이용해 프로젝트 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "PHP 및 웹 서버 환경에 프로젝트를 클론하거나 설치합니다.",
+      "웹 인터페이스에 접속하여 원하는 플랫폼의 브릿지를 활성화합니다.",
+      "생성된 RSS 링크를 개인 리더기에 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9290,
+    "forks": 1255,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "rsshub-radar",
+    "name": "RSSHub-Radar",
+    "github": "https://github.com/DIYgod/RSSHub-Radar",
+    "description": "현재 보고 있는 웹페이지에서 RSS 및 RSSHub 피드를 자동으로 감지하고 구독을 돕는 브라우저 확장 프로그램입니다.",
+    "longDescription": "웹서핑 중 해당 사이트가 RSS나 RSSHub 라우트를 지원하는지 감지하여 아이콘으로 알려줍니다. 사용자는 클릭 한 번으로 간편하게 리더기에 구독을 추가할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "TypeScript",
+      "Chrome",
+      "Browser Extension",
+      "RSS"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://chrome.google.com/webstore/detail/kefjpfngnndepjbopdmoebkipbgkggaa",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "크롬 또는 파이어폭스 등 웹 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "브라우저 확장프로그램 스토어에서 확장 프로그램을 설치합니다.",
+      "웹사이트를 방문하여 상단 확장 프로그램 아이콘을 확인합니다.",
+      "감지된 RSS 링크를 클릭하여 구독을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7371,
+    "forks": 417,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "mrrss",
+    "name": "MrRSS",
+    "github": "https://github.com/DevXDojo/MrRSS",
+    "description": "Wails와 Vue.js를 기반으로 제작된 모던하고 크로스플랫폼을 지원하는 무료 AI RSS 리더입니다.",
+    "longDescription": "기사 내용의 자동 번역 및 요약 기능을 내장하여 정보를 빠르게 파악할 수 있도록 돕습니다. Wails 프레임워크를 활용해 가볍고 빠르게 동작하는 데스크톱 환경을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Go",
+      "Wails",
+      "Vue.js",
+      "AI",
+      "RSS"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://mrrss.ch3nyang.top/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Go 1.27+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Releases 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+      "프로그램을 실행하고 RSS 피드를 추가합니다.",
+      "AI 기능을 활용하여 기사 요약 및 번역을 이용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2594,
+    "forks": 131,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "fusion",
+    "name": "fusion",
+    "github": "https://github.com/0x2E/fusion",
+    "description": "단일 바이너리 또는 Docker로 쉽게 배포할 수 있는 가벼운 자체 호스팅형 RSS 리더입니다.",
+    "longDescription": "읽지 않은 항목 추적, 단축키 지원, 피드 그룹 관리 등 구글 리더 스타일의 빠르고 직관적인 독서 워크플로우를 제공합니다. AI 기능이 없어 방해받지 않는 독서에 집중할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "TypeScript",
+      "RSS",
+      "셀프호스팅",
+      "Docker"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/0x2E/fusion",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "바이너리 실행",
+        "command": "chmod +x fusion && FUSION_PASSWORD=\"fusion\" ./fusion",
+        "note": "다운로드한 바이너리에 권한을 부여하고 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "플랫폼에 맞는 바이너리를 다운로드하거나 Docker로 실행합니다.",
+      "설정된 비밀번호로 웹 인터페이스에 로그인합니다.",
+      "구독할 RSS 피드를 등록하고 이용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2192,
+    "forks": 93,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "lettura",
+    "name": "Lettura",
+    "github": "https://github.com/zhanglun/lettura",
+    "description": "Tauri와 Rust 기술을 기반으로 제작된 빠르고 미려한 오픈소스 데스크톱 RSS 리더입니다.",
+    "longDescription": "shadcn/ui 기반의 세련된 인터페이스와 Rust 백엔드의 빠른 성능을 결합하여 쾌적한 피드 구독 환경을 제공합니다. 여러 운영체제에서 끊김 없는 독서 경험을 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Rust",
+      "Tauri",
+      "TypeScript",
+      "RSS"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://zhanglun.github.io/lettura/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Node.js",
+      "pnpm",
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "개발 모드 실행",
+        "command": "pnpm tauri dev",
+        "note": "데스크톱 앱 개발 모드를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js, pnpm 및 Rust 환경을 설치합니다.",
+      "저장소를 클론한 후 의존성을 설치합니다.",
+      "Tauri 명령어를 통해 앱을 빌드하거나 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1811,
+    "forks": 72,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "zenfeed",
+    "name": "zenfeed",
+    "github": "https://github.com/glidea/zenfeed",
+    "description": "AI 기반 데이터 분석과 요약을 결합한 지능형 정보 중추 및 RSS 리더입니다.",
+    "longDescription": "정보의 홍수 속에서 사용자가 원하는 특정 이벤트를 모니터링하고 분석 보고서를 생성하는 개인 비서 역할을 수행합니다. 실시간 뉴스 지식베이스로서의 기능을 함께 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Go",
+      "AI",
+      "RSS",
+      "MCP"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://zenfeed.xyz",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "zenfeed 서비스를 배포하거나 온라인 플랫폼에 접속합니다.",
+      "모니터링할 피드 및 주제를 설정합니다.",
+      "AI 분석 보고서를 확인하고 정보를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1715,
+    "forks": 117,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "jackett",
+    "name": "Jackett",
+    "github": "https://github.com/Jackett/Jackett",
+    "description": "다양한 토렌트 트래커를 API로 통합하여 검색할 수 있도록 지원하는 프록시 서버입니다.",
+    "longDescription": "Jackett은 선호하는 토렌트 트래커들을 API 엔드포인트로 변환하여 Sonarr, Radarr 등 미디어 관리 도구와 연동할 수 있게 해주는 중계 유틸리티입니다. 다양한 퍼블릭 및 프라이빗 트래커를 지원하며 크로스 플랫폼으로 실행할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API",
+      "토렌트",
+      "프록시",
+      "RSS"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://github.com/Jackett/Jackett",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스 페이지에서 운영체제에 맞는 패키지를 다운로드하거나 Docker로 실행합니다.",
+      "웹 UI에 접속하여 관리자 계정을 설정합니다.",
+      "사용하려는 토렌트 트래커를 추가하고 API 키를 확인합니다.",
+      "Sonarr, Radarr 등의 미디어 애플리케이션에 Jackett API 설정을 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16209,
+    "forks": 1588,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "stringer",
+    "name": "Stringer",
+    "github": "https://github.com/stringer-rss/stringer",
+    "description": "외부 종속성이 없고 소셜 기능이 없는 자체 호스팅형 미니멀 RSS 리더입니다.",
+    "longDescription": "Stringer는 Ruby on Rails와 PostgreSQL을 기반으로 구축된 가볍고 사생활 보호 중심의 셀프 호스팅 RSS 리더입니다. 불필요한 소셜 추천 기능이나 외부 추적기 없이 순수하게 피드 구독과 독서에 집중할 수 있도록 설계되었습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RSS",
+      "Ruby",
+      "자체호스팅",
+      "피드리더"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/stringer-rss/stringer",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Ruby",
+      "PostgreSQL"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하거나 Heroku 등의 플랫폼에 배포합니다.",
+      "데이터베이스 설정을 완료하고 애플리케이션을 실행합니다.",
+      "OPML 파일을 임포트하거나 개별 RSS 피드를 추가합니다.",
+      "웹 인터페이스를 통해 피드 기사를 읽고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4128,
+    "forks": 388,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "dailyhotapi",
+    "name": "DailyHotApi",
+    "github": "https://github.com/imsyy/DailyHotApi",
+    "description": "다양한 플랫폼의 핫한 트렌드 데이터를 집계하여 API 및 RSS 형식으로 제공하는 서비스입니다.",
+    "longDescription": "DailyHotApi는 여러 인기 웹사이트와 소셜 플랫폼의 실시간 핫토픽 데이터를 수집하고 정제하여 통합 API로 제공합니다. Vercel 배포와 RSS 모드를 지원하며 빠르고 간편하게 자체 트렌드 페이지를 구축할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "API",
+      "TypeScript",
+      "RSS",
+      "Vercel"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/imsyy/DailyHotApi",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 의존성 설치",
+        "command": "git clone https://github.com/imsyy/DailyHotApi.git\ncd DailyHotApi\nnpm install",
+        "note": "소스코드를 클론하고 필요한 모듈을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론하고 의존성을 설치합니다.",
+      "환경변수 설정 파일(.env)을 구성합니다.",
+      "npm run dev 명령어로 로컬 개발 서버를 실행합니다.",
+      "API 엔드포인트를 호출하여 수집된 데이터를 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4088,
+    "forks": 1351,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "ani-rss",
+    "name": "ani-rss",
+    "github": "https://github.com/wushuo894/ani-rss",
+    "description": "RSS 피드를 기반으로 애니메이션 검색, 자동 구독, 다운로드 및 메타데이터 정리를 수행하는 도구입니다.",
+    "longDescription": "ANI-RSS는 애니메이션 팬을 위한 자동화 도구로, RSS 피드를 모니터링하여 새로운 에피소드를 자동으로 감지하고 다운로드 클라이언트(qBittorrent 등)로 전달합니다. 메타데이터 긁어오기 및 파일 정리 기능을 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Java",
+      "Docker",
+      "RSS",
+      "자동화"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://docs.wushuo.top",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Java",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 또는 Java 환경을 준비합니다.",
+      "설정 파일을 수정하여 RSS 피드 및 qBittorrent 연동 정보를 입력합니다.",
+      "컨테이너 또는 애플리케이션을 실행합니다.",
+      "웹 인터페이스에서 애니메이션 구독 규칙을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3565,
+    "forks": 202,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "feeder",
+    "name": "Feeder",
+    "github": "https://github.com/spacecowboy/Feeder",
+    "description": "계정 동기화 없이 로컬에서 안전하게 작동하는 안드로이드 오픈소스 RSS/Atom/JSONFeed 리더 앱입니다.",
+    "longDescription": "Feeder는 안드로이드 기기에서 원격 백엔드 서버 동기화 없이 완전히 독립적으로 작동하는 프라이버시 중심의 피드 리더입니다. Material Design을 적용하였으며 OPML 가져오기/내보내기 및 오프라인 읽기를 지원합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "Kotlin",
+      "Android",
+      "RSS",
+      "Jetpack Compose"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/spacecowboy/Feeder",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Android"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스코드 클론",
+        "command": "git clone https://github.com/spacecowboy/Feeder.git",
+        "note": "프로젝트 소스코드를 로컬에 클론합니다."
+      }
+    ],
+    "usageSteps": [
+      "F-Droid 또는 GitHub에서 앱을 다운로드하거나 소스코드를 빌드합니다.",
+      "앱을 실행한 뒤 즐겨찾는 웹사이트의 RSS 링크를 추가하거나 OPML 파일을 가져옵니다.",
+      "오프라인 상태에서도 최신 기사 콘텐츠를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3075,
+    "forks": 215,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "rssguard",
+    "name": "RSS Guard",
+    "github": "https://github.com/martinrotter/rssguard",
+    "description": "RSS, ATOM, JSON 피드뿐만 아니라 팟캐스트, XMPP, Gemini 프로토콜까지 지원하는 데스크톱 피드 리더입니다.",
+    "longDescription": "RSS Guard는 C++과 Qt 프레임워크 기반으로 만들어진 빠르고 가벼운 크로스플랫폼 피드 리더입니다. 다양한 웹 기반 피드 서비스(Tiny Tiny RSS, Nextcloud News 등)와 연동할 수 있으며 팟캐스트 재생 기능도 포함하고 있습니다.",
+    "category": "개인 도구",
+    "tags": [
+      "C++",
+      "Qt",
+      "RSS",
+      "팟캐스트"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/martinrotter/rssguard",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 홈페이지 또는 저장소에서 운영체제별 설치 파일을 다운로드합니다.",
+      "프로그램을 실행하고 새로운 피드나 외부 계정을 추가합니다.",
+      "카테고리별로 뉴스와 블로그 글을 분류하여 구독합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2804,
+    "forks": 169,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "huntly",
+    "name": "Huntly",
+    "github": "https://github.com/lcomplete/huntly",
+    "description": "브라우저 확장 프로그램과 AI를 결합하여 웹 콘텐츠를 수집하고 지식화하는 개인 정보 허브입니다.",
+    "longDescription": "Huntly는 강력한 브라우저 확장 프로그램과 자체 호스팅 서버를 연동하여 웹 브라우징 중 마주한 콘텐츠를 자동으로 수집, 정리 및 색인화해주는 AI 기반 정보 관리 플랫폼입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "TypeScript",
+      "Docker",
+      "Chrome확장프로그램",
+      "AI"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://chrome.google.com/webstore/detail/huntly/cphlcmmpbdkadofgcedjgfblmiklbokm",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 실행",
+        "command": "docker-compose up -d",
+        "note": "도커 컴포즈를 사용하여 백그라운드에서 서비스를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker Compose를 이용해 Huntly 서버를 실행합니다.",
+      "브라우저 확장 프로그램을 설치하고 서버와 연결합니다.",
+      "웹 서핑 중 저장하고 싶은 페이지나 기사를 수집합니다.",
+      "대시보드에서 수집된 콘텐츠를 검색하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2347,
+    "forks": 196,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "rss-to-telegram-bot",
+    "name": "RSS-to-Telegram-Bot",
+    "github": "https://github.com/Rongronggg9/RSS-to-Telegram-Bot",
+    "description": "사용자의 가독성과 멀티유저 환경을 고려하여 제작된 텔레그램 전용 RSS 봇입니다.",
+    "longDescription": "RSS-to-Telegram-Bot은 RSS/Atom 피드 업데이트를 모니터링하여 텔레그램 채팅으로 깔끔하게 전달해주는 봇입니다. 다중 사용자, OPML 내보내기/가져오기, 풍부한 서식 지원 등 강력한 기능을 제공합니다.",
+    "category": "협업·소통",
+    "tags": [
+      "Python",
+      "텔레그램봇",
+      "RSS",
+      "자체호스팅"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://t.me/RSStT_Bot",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Python",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "텔레그램 BotFather를 통해 새 봇 토큰을 발급받습니다.",
+      "Docker 또는 Python 환경을 통해 봇 소스코드를 배포합니다.",
+      "텔레그램에서 봇에게 /sub 명령어로 RSS 피드를 구독합니다.",
+      "새로운 글이 올라올 때마다 텔레그램 메시지로 알림을 받습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2172,
+    "forks": 364,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "rssbot",
+    "name": "rssbot",
+    "github": "https://github.com/iovxw/rssbot",
+    "description": "Rust 언어로 작성되어 가볍고 빠르게 동작하는 텔레그램 RSS 알림 봇입니다.",
+    "longDescription": "rssbot은 RSS 및 Atom 피드를 구독하고 업데이트를 감지하여 텔레그램 채널이나 개인 채팅으로 전송해주는 미니멀한 알림 봇입니다. 자원 소모가 적어 소규모 서버나 라즈베리파이 등에서도 원활히 구동됩니다.",
+    "category": "협업·소통",
+    "tags": [
+      "Rust",
+      "텔레그램봇",
+      "RSS",
+      "경량화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Unlicense",
+    "website": "http://t.me/RustRssBot",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T13:03:58.385Z",
+    "requirements": [
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "릴리스 빌드",
+        "command": "cargo build --release",
+        "note": "Cargo를 사용하여 릴리스 모드로 바이너리를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "Rust 환경에서 프로젝트를 클론하고 빌드합니다.",
+      "텔레그램 봇 토큰 및 설정을 지정하여 실행합니다.",
+      "텔레그램에서 /sub 명령어를 이용해 원하는 RSS 주소를 등록합니다.",
+      "피드 업데이트 시 자동으로 수신되는 메시지를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1696,
+    "forks": 197,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
     "id": "hyperframes",
     "name": "HyperFrames",
     "github": "https://github.com/heygen-com/hyperframes",
