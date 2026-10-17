@@ -1,5 +1,789 @@
 [
   {
+    "id": "infer",
+    "name": "Infer",
+    "github": "https://github.com/facebook/infer",
+    "description": "Java, C, C++, Objective-C 언어를 지원하는 정적 분석 도구입니다.",
+    "longDescription": "메모리 누수나 널 포인터 역참조 같은 잠재적 버그를 사전에 탐지하기 위해 소스 코드를 분석하는 강력한 정적 분석 엔진입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "정적 분석",
+      "코드 품질",
+      "C/C++",
+      "Java",
+      "Linter"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://fbinfer.com/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "OCaml"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드 설치",
+        "command": "INSTALL.md 참조",
+        "note": "상세한 빌드 및 설치 문서를 확인하세요."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 루트 디렉토리에서 분석 도구를 준비합니다.",
+      "빌드 명령어와 함께 infer를 실행하여 소스코드를 분석합니다.",
+      "출력된 버그 리포트를 확인하고 코드를 수정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Java 지원 활성화 시 별도의 컴포넌트 다운로드가 필요할 수 있습니다.",
+    "stars": 15725,
+    "forks": 2099,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "super-linter",
+    "name": "Super-Linter",
+    "github": "https://github.com/super-linter/super-linter",
+    "description": "다양한 프로그래밍 언어와 파일 포맷을 한 번에 검사하는 통합 린터 모음입니다.",
+    "longDescription": "GitHub Actions나 로컬 환경에서 실행 가능하며, 여러 정적 분석 도구를 결합하여 일관된 코드 스타일과 모범 사례 준수를 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Linter",
+      "CI/CD",
+      "코드 품질",
+      "GitHub Actions",
+      "자동화"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/super-linter/super-linter",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "GitHub Action 설정",
+        "command": "uses: super-linter/super-linter@v4",
+        "note": "워크플로우 파일에 액션을 추가하여 사용합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 GitHub Actions 워크플로우 파일을 생성합니다.",
+      "Super-Linter 액션을 파이프라인에 포함합니다.",
+      "코드 푸시 시 자동으로 실행되는 린트 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10626,
+    "forks": 1080,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "pyrefly",
+    "name": "Pyrefly",
+    "github": "https://github.com/facebook/pyrefly",
+    "description": "파이썬 코드를 위한 빠른 타입 체커 및 언어 서버입니다.",
+    "longDescription": "강력한 IDE 기능을 제공하며, 타입 힌트 검증, 코드 자동 완성, 의미론적 하이라이팅을 통해 파이썬 개발 생산성을 높여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "LSP",
+      "타입 체커",
+      "IDE",
+      "Rust"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://pyrefly.org/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Python 3"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI 설치",
+        "command": "pip install pyrefly",
+        "note": "파이썬 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "명령어 또는 에디터 확장 프로그램을 통해 설치합니다.",
+      "VSCode, Neovim 등의 편집기에서 플러그인을 활성화합니다.",
+      "코드를 작성하면서 실시간으로 타입 오류와 완성 기능을 이용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7099,
+    "forks": 557,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "detekt",
+    "name": "detekt",
+    "github": "https://github.com/detekt/detekt",
+    "description": "코틀린(Kotlin) 언어를 위한 정적 코드 분석 및 코드 냄새 탐지 도구입니다.",
+    "longDescription": "고도로 설정 가능한 규칙 집합을 제공하며, 레거시 프로젝트 관리를 위한 베이스라인 생성 기능과 그레이들 플러그인을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kotlin",
+      "Linter",
+      "정적 분석",
+      "Gradle",
+      "코드 품질"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://detekt.dev",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gradle 플러그인 추가",
+        "command": "plugins { id(\"io.gitlab.arturbosch.detekt\") version \"...\" }",
+        "note": "build.gradle.kts 파일에 플러그인을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 detekt 플러그인을 추가합니다.",
+      "필요에 따라 설정 파일을 구성합니다.",
+      "빌드 시 detekt 작업을 실행하여 코드 품질을 검사합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7094,
+    "forks": 882,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "pylint",
+    "name": "Pylint",
+    "github": "https://github.com/pylint-dev/pylint",
+    "description": "파이썬 코드의 오류를 검사하고 코딩 표준 준수를 돕는 널리 쓰이는 린터입니다.",
+    "longDescription": "PEP 8 가이드라인 준수 여부를 확인하고, 코드의 리팩토링 제안 및 다양한 코드 스멜을 감지하여 코드 품질을 향상시킵니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "Linter",
+      "PEP8",
+      "정적 분석",
+      "코드 품질"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://pylint.readthedocs.io/en/latest/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install pylint",
+        "note": "명령줄에서 간편하게 설치할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 패키지를 설치합니다.",
+      "분석할 파이썬 파일이나 디렉토리를 대상으로 pylint를 실행합니다.",
+      "출력된 점수와 위반 사항을 바탕으로 코드를 개선합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5739,
+    "forks": 1394,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "typos",
+    "name": "Typos",
+    "github": "https://github.com/crate-ci/typos",
+    "description": "대규모 소스 코드 저장소에서도 빠르게 동작하는 소스 코드 맞춤법 검사기입니다.",
+    "longDescription": "오탐율이 낮아 풀 리퀘스트 단계에서도 유용하게 실행할 수 있으며, 소스 코드 내의 오타를 찾아 교정해 줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "맞춤법",
+      "CLI",
+      "Rust",
+      "코드 품질",
+      "자동화"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/crate-ci/typos",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo 설치",
+        "command": "cargo install typos-cli",
+        "note": "러스트 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 루트 디렉토리에서 도구를 실행합니다.",
+      "검출된 오타 리스트를 확인합니다.",
+      "필요시 설정 파일을 통해 예외 단어를 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4191,
+    "forks": 188,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "cyberstrike",
+    "name": "CyberStrike",
+    "github": "https://github.com/CyberStrikeus/CyberStrike",
+    "description": "오픈소스 기반의 AI 에이전트 연동 자동화 침투 테스트 및 공격 보안 도구입니다.",
+    "longDescription": "터미널 환경에서 LLM과 연동하여 정찰, 취약점 발견, 익스플로잇, 리포팅까지 자율적인 레드팀 에이전트 작업을 수행합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "침투 테스트",
+      "AI 에이전트",
+      "취약점 스캔",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://cyberstrike.io",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Node.js",
+      "LLM API 키"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "GPT",
+      "Custom LLM"
+    ],
+    "install": [
+      {
+        "title": "NPM 전역 설치",
+        "command": "npm i -g @cyberstrike-io/cyberstrike@latest && cyberstrike",
+        "note": "터미널에서 바로 실행 가능한 TUI 인터페이스를 제공합니다."
+      }
+    ],
+    "usageSteps": [
+      "도구를 전역으로 설치하고 실행합니다.",
+      "첫 실행 시 사용할 LLM 제공자와 API 키를 입력합니다.",
+      "테스트할 대상과 범위를 지정하여 자동 침투 테스트를 시작합니다."
+    ],
+    "examplePrompt": "웹 애플리케이션 대상 취약점 스캔 및 모의 해킹을 수행해줘",
+    "usageNote": "보안 교육 및 합법적인 모의 해킹(Pentesting) 목적으로만 사용해야 합니다.",
+    "stars": 3181,
+    "forks": 522,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "shippie",
+    "name": "Shippie",
+    "github": "https://github.com/mattzcarey/shippie",
+    "description": "실제 개발자 도구를 활용해 코드 디프를 검토하고 피드백을 제공하는 확장 가능한 코드 리뷰 에이전트입니다.",
+    "longDescription": "노출된 비밀 정보, 비효율적인 코드, 잠재적 버그 등을 스스로 탐지하여 휴먼 리뷰어처럼 집중적인 리뷰 코멘트를 남깁니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "코드 리뷰",
+      "AI 에이전트",
+      "자동화",
+      "TypeScript",
+      "MCP"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://shippie.dev",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Node.js",
+      "API 키"
+    ],
+    "supportedAgents": [
+      "OpenAI",
+      "Anthropic",
+      "OpenRouter"
+    ],
+    "install": [
+      {
+        "title": "저장소 복제 및 의존성 설치",
+        "command": "git clone https://github.com/mattzcarey/shippie.git && cd shippie && npm install",
+        "note": "프로젝트를 클론한 뒤 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "환경 변수 파일에 사용할 LLM 제공자의 API 키를 설정합니다.",
+      "리뷰 워크플로우 실행 명령어를 입력합니다.",
+      "생성된 코드 리뷰 결과와 피드백을 확인합니다."
+    ],
+    "examplePrompt": "최근 변경된 코드 디프를 분석하고 보안 및 성능 이슈를 리뷰해줘",
+    "usageNote": "",
+    "stars": 2509,
+    "forks": 243,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "static-analysis",
+    "name": "static-analysis",
+    "github": "https://github.com/analysis-tools-dev/static-analysis",
+    "description": "모든 프로그래밍 언어와 설정 파일을 위한 정적 분석(SAST) 도구 및 린터 모음입니다.",
+    "longDescription": "코드 품질을 향상하기 위한 린터, 포매터, 정적 분석 도구들을 언어별로 정리하여 제공합니다.공식 웹사이트와 연계되어 사용자 리뷰와 순위 정보를 함께 확인할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "정적분석",
+      "SAST",
+      "린터",
+      "코드품질",
+      "개발도구"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://analysis-tools.dev",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹사이트 또는 저장소에서 원하는 언어의 정적 분석 도구를 찾습니다.",
+      "각 도구의 안내에 따라 프로젝트에 통합합니다.",
+      "코드 품질 검사 및 포맷팅을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 14843,
+    "forks": 1521,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "megalinter",
+    "name": "megalinter",
+    "github": "https://github.com/oxsecurity/megalinter",
+    "description": "50개 이상의 언어와 포맷을 분석하여 코드 품질, 보안 이슈, 철자 오류를 검사하는 종합 린터입니다.",
+    "longDescription": "GitHub Action, GitLab CI 등 다양한 CI/CD 파이프라인이나 로컬 환경에서 실행할 수 있는 올인원 코드 품질 분석 도구입니다. 복사-붙여넣기 탐지, 보안 취약점 점검, 자동 포맷팅 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "메가린터",
+      "CI",
+      "코드품질",
+      "보안",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "http://megalinter.io/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker를 이용한 실행",
+        "command": "docker run -v $(pwd):/tmp/lint oxsecurity/megalinter",
+        "note": "로컬 환경에서 Docker를 통해 직접 실행"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 루트에 설정 파일을 추가합니다.",
+      "CI/CD 파이프라인에 MegaLinter 액션을 통합하거나 로컬에서 실행합니다.",
+      "생성된 SARIF 또는 HTML 리포트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2614,
+    "forks": 315,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "piranha",
+    "name": "piranha",
+    "github": "https://github.com/uber/piranha",
+    "description": "사용이 끝난 피처 플래그와 관련된 코드를 대규모로 자동 리팩토링하는 도구입니다.",
+    "longDescription": "코드베이스에 남아 있는 낡은 피처 플래그 API와 불필요한 조건문을 AST 기반으로 안전하게 탐지하고 제거합니다. 우버에서 대규모 코드 정리 작업을 자동화하기 위해 개발되었습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "리팩토링",
+      "피처플래그",
+      "코드관리",
+      "AST",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/uber/piranha",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Python 또는 Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Python 패키지 설치",
+        "command": "pip install polyglot-piranha",
+        "note": "파이썬 라이브러리로 설치"
+      }
+    ],
+    "usageSteps": [
+      "Piranha를 설치하고 규칙 설정 파일을 작성합니다.",
+      "제거할 피처 플래그 이름과 대상을 지정합니다.",
+      "명령어를 실행하여 코드를 자동으로 정리하고 풀 리퀘스트를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2495,
+    "forks": 212,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "sourcery",
+    "name": "sourcery",
+    "github": "https://github.com/sourcery-ai/sourcery",
+    "description": "풀 리퀘스트에 대해 실시간 AI 기반 코드 리뷰와 개선 제안을 제공하는 도구입니다.",
+    "longDescription": "자동화된 코드 리뷰어로 동작하며, 변경 사항에 대한 요약, 고수준 피드백, 줄 단위의 리팩토링 제안을 제공합니다. 개발 속도를 높이고 코드 품질을 일관되게 유지하도록 돕습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI코드리뷰",
+      "코드품질",
+      "리팩토링",
+      "자동화",
+      "GitHub"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://sourcery.ai",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [],
+    "supportedAgents": [
+      "GitHub Copilot",
+      "Claude Code"
+    ],
+    "install": [],
+    "usageSteps": [
+      "GitHub 저장소에 Sourcery 앱을 연동합니다.",
+      "새로운 풀 리퀘스트를 생성합니다.",
+      "Sourcery가 자동으로 작성한 리뷰 의견과 제안을 검토합니다."
+    ],
+    "examplePrompt": "코드의 가독성을 높이고 중복을 제거하도록 리팩토링해줘.",
+    "usageNote": "퍼블릭 저장소는 무료이며, 프라이빗 저장소는 제한적 무료 체험 후 유료 플랜이 필요합니다.",
+    "stars": 1877,
+    "forks": 101,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "moai-adk",
+    "name": "moai-adk",
+    "github": "https://github.com/modu-ai/moai-adk",
+    "description": "Claude Code 등을 위한 명세(SPEC) 기반 검증 중심의 AI 에이전트 오케스트레이션 하니스입니다.",
+    "longDescription": "계획, 실행, 동기화로 이어지는 파이프라인과 신뢰성 검증 게이트를 제공하여 LLM 기반 코딩 에이전트의 컨텍스트 손실을 방지합니다. 다중 모델 비용 제어와 안정적인 에이전트 협업을 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "ClaudeCode",
+      "TDD",
+      "개발도구",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://adk.mo.ai.kr",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 MoAI-ADK를 초기화합니다.",
+      "개발할 기능의 명세(SPEC)를 작성합니다.",
+      "에이전트 하니스를 통해 계획 수립 및 자동 실행 루프를 구동합니다."
+    ],
+    "examplePrompt": "요구사항 명세서를 바탕으로 TDD 방식으로 코드를 작성하고 테스트를 통과시켜줘.",
+    "usageNote": "",
+    "stars": 1236,
+    "forks": 226,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "meziantou-analyzer",
+    "name": "Meziantou.Analyzer",
+    "github": "https://github.com/meziantou/Meziantou.Analyzer",
+    "description": "버그를 탐지하고 보안 취약점을 찾아내며 모범 사례를 강제하는 강력한 C# Roslyn 분석기입니다.",
+    "longDescription": "작성 중인 C# 코드를 실시간으로 분석하여 잠재적 문제를 사전에 발견하고, 가능한 경우 자동 수정 기능을 제공합니다. 개발자와 AI가 신뢰할 수 있고 일관된 코드를 작성하도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Roslyn",
+      "C#",
+      "정적분석",
+      "코드품질",
+      "NuGet"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.meziantou.net/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      ".NET SDK"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NuGet 패키지 추가",
+        "command": "dotnet add package Meziantou.Analyzer",
+        "note": "프로젝트에 분석기 패키지 추가"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 NuGet 패키지를 추가합니다.",
+      "Visual Studio나 `dotnet build`를 통해 빌드합니다.",
+      "경고 및 오류로 표시되는 코드 품질 진단 결과를 확인하고 수정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1212,
+    "forks": 72,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "data-prep-kit",
+    "name": "data-prep-kit",
+    "github": "https://github.com/data-prep-kit/data-prep-kit",
+    "description": "생성형 AI(GenAI) 애플리케이션을 위한 대규모 데이터 준비 및 전처리 오픈소스 키트입니다.",
+    "longDescription": "LLM 학습 및 파인튜닝을 위한 데이터 정제, 중복 제거, 필터링 등 다양한 전처리 파이프라인을 구축할 수 있습니다. Ray와 Spark 등을 활용하여 대규모 데이터셋을 효율적으로 처리합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "데이터전처리",
+      "GenAI",
+      "LLM",
+      "파인튜닝",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://data-prep-kit.github.io/data-prep-kit/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "전체 변환기 설치",
+        "command": "pip install uv && uv pip install 'data-prep-toolkit-transforms[all]'",
+        "note": "uv를 이용하여 모든 전처리 모듈 설치"
+      }
+    ],
+    "usageSteps": [
+      "가상환경을 생성하고 패키지를 설치합니다.",
+      "원하는 데이터 변환 파이프라인 스크립트를 작성합니다.",
+      "대규모 데이터셋에 대해 전처리 작업을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 967,
+    "forks": 257,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "complexipy",
+    "name": "complexipy",
+    "github": "https://github.com/rohaquinlop/complexipy",
+    "description": "Rust로 작성되어 파이썬 코드를 대상으로 초고속 인지 복잡도(Cognitive Complexity) 분석을 수행하는 도구입니다.",
+    "longDescription": "단순한 순환 복잡도와 달리 인간이 코드를 이해하기 얼마나 어려운지를 측정하는 인지 복잡도를 분석합니다. 중첩 깊이와 제어 흐름 패턴을 평가하여 코드의 유지보수성을 향상시킵니다.",
+    "category": "개발 도구",
+    "tags": [
+      "복잡도분석",
+      "코드품질",
+      "Python",
+      "Rust",
+      "클린코드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://complexipy.com/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "complexipy를 설치합니다.",
+      "분석할 파이썬 파일 또는 디렉터리 경로를 지정하여 실행합니다.",
+      "출력되는 인지 복잡도 점수를 확인하고 복잡한 함수를 리팩토링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 891,
+    "forks": 26,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
+    "id": "skylos",
+    "name": "skylos",
+    "github": "https://github.com/duriantaco/skylos",
+    "description": "죽은 코드, 보안 버그, 하드코딩된 비밀정보, 품질 저하를 로컬에서 검사하는 오픈소스 PR 스캐너입니다.",
+    "longDescription": "계정 없이 로컬 환경에서 실행할 수 있으며, 특히 Claude Code 등 AI 코딩 에이전트가 작성한 코드의 결함과 테스트 누락 여부를 검사하는 데 유용합니다. 머지 전 브랜치의 준비 상태를 빠르게 진단합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "코드검사",
+      "데드코드",
+      "보안스캔",
+      "AI코드리뷰",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://skylos.dev/",
+    "featured": 9,
+    "added": "2026-10-17",
+    "addedAt": "2026-10-17T23:04:04.678Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소 루트 디렉터리로 이동합니다.",
+      "`skylos . -a` 명령어를 실행하여 보안, 품질, AI 결함 검사를 수행합니다.",
+      "진단 결과를 확인하고 브랜치가 머지 가능한 상태인지 검증합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 847,
+    "forks": 57,
+    "starsUpdatedAt": "2026-10-17"
+  },
+  {
     "id": "failproofai",
     "name": "FailproofAI",
     "github": "https://github.com/FailproofAI/failproofai",
