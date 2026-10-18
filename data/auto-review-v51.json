@@ -1,7 +1,633 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-18T09:06:02.980Z",
+  "updatedAt": "2026-10-18T10:06:14.617Z",
   "items": [
+    {
+      "id": "borg",
+      "name": "BorgBackup",
+      "github": "https://github.com/borgbackup/borg",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19",
+      "tool": {
+        "id": "borg",
+        "name": "BorgBackup",
+        "github": "https://github.com/borgbackup/borg",
+        "description": "중복 제거, 압축, 인증된 암호화를 지원하는 백업 프로그램",
+        "longDescription": "콘텐츠 기반 청크 분할을 통한 공간 효율적인 저장과 강력한 암호화를 제공하여 신뢰할 수 없는 원격 대상에도 안전하게 백업할 수 있습니다. Python으로 작성되었으며 다양한 환경에서 활용됩니다.",
+        "category": "개발 도구",
+        "tags": [
+          "백업",
+          "중복제거",
+          "암호화"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.borgbackup.org/",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T10:04:02.099Z",
+        "requirements": [
+          "Python 3"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "설치 매뉴얼 참고",
+            "command": "pip install borgbackup",
+            "note": "공식 문서의 설치 매뉴얼을 참고하여 환경에 맞게 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "새로운 백업 레포지토리를 초기화합니다.",
+          "지정된 디렉토리와 파일을 레포지토리에 아카이브로 백업합니다.",
+          "백업된 아카이브 리스트를 확인하거나 필요한 파일을 복원합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "Borg2 버전은 현재 베타 테스트 중이므로 프로덕션 환경에서는 주의가 필요합니다.",
+        "stars": 13856,
+        "forks": 883,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T10:06:05.228Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T10:06:07.322Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T10:06:11.601Z"
+    },
+    {
+      "id": "wal-g",
+      "name": "WAL-G",
+      "github": "https://github.com/wal-g/wal-g",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19",
+      "tool": {
+        "id": "wal-g",
+        "name": "WAL-G",
+        "github": "https://github.com/wal-g/wal-g",
+        "description": "클라우드 환경의 데이터베이스를 위한 고속 아카이빙 및 복원 도구입니다.",
+        "longDescription": "PostgreSQL, MySQL, MariaDB, MS SQL Server 등의 데이터베이스를 위해 지속적인 아카이빙과 빠른 백업 및 복원을 지원하는 WAL-E의 차세대 후속작입니다. 다양한 클라우드 스토리지와 연동하여 안정적인 데이터 관리 기능을 제공합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "백업",
+          "데이터베이스",
+          "클라우드"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/wal-g/wal-g",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T10:04:02.099Z",
+        "requirements": [
+          "Go",
+          "클라우드 스토리지 계정"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "데이터베이스 환경에 맞춰 WAL-G 바이너리를 다운로드하고 설정합니다.",
+          "설정 파일을 통해 S3 등 클라우드 스토리지 자격 증명을 구성합니다.",
+          "백업 푸시 및 페치 명령어를 통해 데이터베이스를 아카이빙하고 복원합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4311,
+        "forks": 597,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T10:06:05.462Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T10:06:08.053Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T10:06:12.353Z"
+    },
+    {
+      "id": "libarchive",
+      "name": "libarchive",
+      "github": "https://github.com/libarchive/libarchive",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19",
+      "tool": {
+        "id": "libarchive",
+        "name": "libarchive",
+        "github": "https://github.com/libarchive/libarchive",
+        "description": "다양한 아카이브 및 압축 형식을 읽고 쓸 수 있는 이식성 높은 C 라이브러리",
+        "longDescription": "tar, cpio, zip, 7zip 등 다양한 스트리밍 아카이브 포맷을 지원하며, 관련 명령줄 도구도 함께 제공합니다. 이식성이 높아 다양한 환경에서 압축 및 해제 기능을 구현할 때 유용하게 사용됩니다.",
+        "category": "개발 도구",
+        "tags": [
+          "압축",
+          "아카이브",
+          "C언어"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.libarchive.org",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T10:04:02.099Z",
+        "requirements": [
+          "CMake 또는 C 컴파일러"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "CMake 빌드",
+            "command": "cmake . && make",
+            "note": "CMake를 사용하여 소스 코드를 빌드합니다."
+          }
+        ],
+        "usageSteps": [
+          "소스 코드를 클론하고 CMake를 통해 빌드 환경을 구성합니다.",
+          "라이브러리를 컴파일하고 시스템에 설치합니다.",
+          "사용자 애플리케이션에서 libarchive API를 호출하여 아카이브 파일을 처리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3642,
+        "forks": 1038,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T10:06:05.684Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T10:06:08.760Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T10:06:13.231Z"
+    },
+    {
+      "id": "oxidized",
+      "name": "Oxidized",
+      "github": "https://github.com/ytti/oxidized",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "rsync-time-backup",
+      "name": "Rsync Time Backup",
+      "github": "https://github.com/laurent22/rsync-time-backup",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19",
+      "tool": {
+        "id": "rsync-time-backup",
+        "name": "Rsync Time Backup",
+        "github": "https://github.com/laurent22/rsync-time-backup",
+        "description": "rsync를 활용해 macOS의 Time Machine과 유사한 증분 백업을 수행하는 스크립트입니다.",
+        "longDescription": "Linux, macOS, Windows 환경에서 동작하며 임의의 파일 시스템과 저장소 간 시점별 파일 복원이 가능한 증분 백업을 제공합니다. rsync 기반의 안정적인 백업 솔루션을 찾는 사용자에게 적합합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "백업",
+          "rsync",
+          "쉘스크립트"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/laurent22/rsync-time-backup",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T10:04:02.099Z",
+        "requirements": [
+          "rsync",
+          "Bash"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 복제",
+            "command": "git clone https://github.com/laurent22/rsync-time-backup",
+            "note": "GitHub에서 스크립트 저장소를 클론합니다."
+          }
+        ],
+        "usageSteps": [
+          "스크립트 저장소를 로컬에 다운로드합니다.",
+          "백업 원본 경로와 대상 저장소 경로를 확인합니다.",
+          "명령어 실행을 통해 정해진 규칙에 따라 백업을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3608,
+        "forks": 476,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T10:06:05.896Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T10:06:09.382Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T10:06:13.872Z"
+    },
+    {
+      "id": "barman",
+      "name": "Barman",
+      "github": "https://github.com/EnterpriseDB/barman",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "dbatools",
+      "name": "dbatools",
+      "github": "https://github.com/dataplat/dbatools",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "slackdump",
+      "name": "Slackdump",
+      "github": "https://github.com/rusq/slackdump",
+      "license": "AGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "backintime",
+      "name": "Back In Time",
+      "github": "https://github.com/bit-team/backintime",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19",
+      "tool": {
+        "id": "backintime",
+        "name": "Back In Time",
+        "github": "https://github.com/bit-team/backintime",
+        "description": "rsync와 하드 링크를 활용한 리눅스용 증분 백업 그래픽 도구입니다.",
+        "longDescription": "Linux 환경에서 수정된 파일만 전송하고 변경되지 않은 파일은 하드 링크로 연결하여 저장 공간을 절약하며 효율적인 백업과 복원을 수행합니다. rsync 기반의 백업 작업을 그래픽 인터페이스로 손쉽게 관리할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "백업",
+          "rsync",
+          "Linux"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://backintime.readthedocs.io",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T10:04:02.099Z",
+        "requirements": [
+          "Python",
+          "rsync",
+          "Qt"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "패키지 관리자를 통해 Back In Time을 설치합니다.",
+          "그래픽 인터페이스를 실행하여 백업할 소스 디렉토리와 대상 저장소를 지정합니다.",
+          "백업 주기를 설정하거나 수동으로 백업을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2675,
+        "forks": 300,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T10:06:06.226Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T10:06:10.052Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T10:06:14.617Z"
+    },
+    {
+      "id": "databasement",
+      "name": "Databasement",
+      "github": "https://github.com/David-Crty/databasement",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "android-databackup",
+      "name": "Android-DataBackup",
+      "github": "https://github.com/XayahSuSuSu/Android-DataBackup",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "espconnect",
+      "name": "ESPConnect",
+      "github": "https://github.com/thelastoutpostworkshop/ESPConnect",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "mail-archiver",
+      "name": "mail-archiver",
+      "github": "https://github.com/s1t5/mail-archiver",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "qzoneexport",
+      "name": "QZoneExport",
+      "github": "https://github.com/ShunCai/QZoneExport",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "autorestic",
+      "name": "autorestic",
+      "github": "https://github.com/cupcakearmy/autorestic",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "portabase",
+      "name": "Portabase",
+      "github": "https://github.com/Portabase/portabase",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "greenmask",
+      "name": "greenmask",
+      "github": "https://github.com/GreenmaskIO/greenmask",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "evernote-backup",
+      "name": "evernote-backup",
+      "github": "https://github.com/vzhd1701/evernote-backup",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "gitea-mirror",
+      "name": "gitea-mirror",
+      "github": "https://github.com/RayLabsHQ/gitea-mirror",
+      "license": "AGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19"
+    },
+    {
+      "id": "hoodik",
+      "name": "hoodik",
+      "github": "https://github.com/hudikhq/hoodik",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T10:06:04.633Z",
+      "sourceRun": "2026-10-18T19",
+      "tool": {
+        "id": "hoodik",
+        "name": "hoodik",
+        "github": "https://github.com/hudikhq/hoodik",
+        "description": "브라우저에서 직접 암호화가 이루어져 서버가 원본 데이터를 볼 수 없는 자체 호스팅형 종단간 암호화(E2EE) 클라우드 스토리지 서버입니다.",
+        "longDescription": "Rust(Actix-web) 백엔드와 Vue 3 프론트엔드로 구축된 경량 클라우드 스토리지 솔루션입니다. 모든 암호화 및 복호화가 사용자 브라우저에서 수행되어 강력한 프라이버시를 보장합니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "클라우드",
+          "보안",
+          "E2EE",
+          "Rust",
+          "Docker"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://hoodik.io",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T10:04:02.099Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Quickstart",
+            "command": "docker run --name hoodik -d \\\n  -e DATA_DIR='/data' \\\n  -e APP_URL='https://my-app.example.com' \\\n  --volume \"$(pwd)/data:/data\" \\\n  -p 5443:5443 \\\n  hudik/hoodik:latest",
+            "note": "도커를 이용해 후딕 서버를 즉시 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "도커 명령어를 통해 후딕 서버 컨테이너를 실행합니다.",
+          "웹 브라우저를 통해 설정된 URL로 접속합니다.",
+          "계정을 생성하고 파일을 업로드하여 브라우저 암호화 기반 스토리지를 이용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프로덕션 환경에서는 유효한 TLS 인증서 설정이 권장됩니다.",
+        "stars": 1529,
+        "forks": 73,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T10:06:06.443Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T10:06:10.599Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
     {
       "id": "swiper",
       "name": "Swiper",
@@ -36254,81 +36880,6 @@
       "reasons": [],
       "checkedAt": "2026-10-14T15:07:48.957Z",
       "sourceRun": "2026-10-15T00"
-    },
-    {
-      "id": "borg",
-      "name": "BorgBackup",
-      "github": "https://github.com/borgbackup/borg",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-14T15:07:48.957Z",
-      "sourceRun": "2026-10-15T00",
-      "tool": {
-        "id": "borg",
-        "name": "BorgBackup",
-        "github": "https://github.com/borgbackup/borg",
-        "description": "압축과 인증된 암호화를 지원하는 중복 제거 아카이버 백업 프로그램",
-        "longDescription": "콘텐츠 기반 청크 분할을 통한 공간 효율적인 중복 제거 백업을 수행합니다. 인증된 암호화 기술을 지원하여 신뢰할 수 없는 대상 서버에도 안전하게 백업할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "백업",
-          "암호화",
-          "압축"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.borgbackup.org/",
-        "featured": 9,
-        "added": "2026-10-14",
-        "addedAt": "2026-10-14T15:03:59.591Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "설치 매뉴얼을 참고하여 시스템에 Borg를 설치합니다.",
-          "borg init 명령어로 로컬 또는 원격 백업 저장소를 생성합니다.",
-          "borg create 명령어로 데이터를 압축 및 암호화하여 아카이브에 추가합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "현재 master 브랜치 기반의 Borg2는 베타 버전이므로 프로덕션 환경 사용 시 주의가 필요합니다.",
-        "stars": 13837,
-        "forks": 883,
-        "starsUpdatedAt": "2026-10-14"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-14T15:07:49.734Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-14T15:07:51.066Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-14T16:07:26.302Z"
     },
     {
       "id": "all-in-one",
