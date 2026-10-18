@@ -1,5 +1,715 @@
 [
   {
+    "id": "keepalived",
+    "name": "Keepalived",
+    "github": "https://github.com/acassen/keepalived",
+    "description": "Linux 시스템을 위한 로드 밸런싱 및 고가용성(HA) 데몬입니다.",
+    "longDescription": "VRRP(Virtual Router Redundancy Protocol) 등을 활용하여 리눅스 서버 환경에서 페일오버 및 고가용성을 구현하는 가볍고 강력한 인프라 툴입니다.",
+    "category": "네트워크",
+    "tags": [
+      "C",
+      "Linux",
+      "고가용성",
+      "로드밸런싱",
+      "VRRP"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://www.keepalived.org",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Linux kernel",
+      "IPVS"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Snap 패키지 설치",
+        "command": "sudo snap install keepalived",
+        "note": "스냅 패키지를 통해 간편하게 설치할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "설정 파일(keepalived.conf)을 작성합니다.",
+      "VRRP 가상 IP 및 라우터 ID를 구성합니다.",
+      "Keepalived 데몬을 백그라운드 서비스로 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4726,
+    "forks": 788,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "fleetbase",
+    "name": "Fleetbase",
+    "github": "https://github.com/fleetbase/fleetbase",
+    "description": "물류 및 공급망 관리를 위한 모듈형 오픈소스 운영 체제입니다.",
+    "longDescription": "배차, 차량 관제, 실시간 추적, 창고 관리 기능을 통합 제공하는 물류 플랫폼으로 REST API와 확장 시스템을 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "JavaScript",
+      "API",
+      "물류",
+      "공급망",
+      "Docker"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://fleetbase.io",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Node.js",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 실행",
+        "command": "git clone https://github.com/fleetbase/fleetbase.git",
+        "note": "저장소를 클론한 뒤 공식 가이드에 따라 로컬 환경을 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "시스템 요구사항을 확인하고 의존성을 설치합니다.",
+      "데이터베이스 및 환경 변수를 설정합니다.",
+      "서버를 실행하고 대시보드에 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4357,
+    "forks": 1138,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "cloudstack",
+    "name": "Apache CloudStack",
+    "github": "https://github.com/apache/cloudstack",
+    "description": "오픈소스 IaaS(Infrastructure as a Service) 클라우드 컴퓨팅 플랫폼입니다.",
+    "longDescription": "대규모 가상 머신 네트워크를 관리하고 구축하기 위한 엔터프라이즈 급 오픈소스 클라우드 오케스트레이션 플랫폼입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Java",
+      "Cloud",
+      "IaaS",
+      "Kubernetes",
+      "Virtualization"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cloudstack.apache.org/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Java",
+      "KVM/XenServer/VMware"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드",
+        "command": "git clone https://github.com/apache/cloudstack.git",
+        "note": "공식 소스 코드를 클론하여 빌드 지침에 따라 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 가상화 하이퍼바이저를 준비합니다.",
+      "소스 코드를 빌드하거나 공식 릴리스 버전을 다운로드합니다.",
+      "관리 서버를 설정하고 클라우드 인프라 노드를 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3106,
+    "forks": 1404,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "foreman",
+    "name": "Foreman",
+    "github": "https://github.com/theforeman/foreman",
+    "description": "물리 및 가상 서버의 수명 주기를 자동화하는 오픈소스 관리 애플리케이션입니다.",
+    "longDescription": "서버 프로비저닝, 구성 관리, 모니터링을 통합하여 하이브리드 클라우드 인프라를 효율적으로 제어할 수 있게 돕습니다.",
+    "category": "개발 운영",
+    "tags": [
+      "Ruby",
+      "Puppet",
+      "Rails",
+      "Provisioning",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://theforeman.org",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Ruby",
+      "Rails"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "퀵스타트 가이드 참조",
+        "command": "https://theforeman.org/manuals/latest/quickstart_guide.html",
+        "note": "공식 매뉴얼의 빠른 시작 가이드를 따릅니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 환경에 맞는 패키지 저장소를 설정합니다.",
+      "Foreman 인스톨러를 실행하여 구성 요소를 설치합니다.",
+      "웹 UI에 접속하여 호스트 및 프로비저닝 규칙을 정의합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2989,
+    "forks": 1057,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "itamae",
+    "name": "Itamae",
+    "github": "https://github.com/itamae-kitchen/itamae",
+    "description": "Chef에서 영감을 받은 가볍고 단순한 Ruby 기반 구성 관리 도구입니다.",
+    "longDescription": "복잡한 서버 설정 없이 레시피 파일만을 사용해 멱등성(Idempotency)을 갖춘 서버 구성을 빠르고 간편하게 적용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Ruby",
+      "Chef",
+      "Infrastructure as Code",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://itamae.kitchen/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Ruby"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gem 설치",
+        "command": "gem install itamae",
+        "note": "루비 젬을 통해 전역으로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "recipe.rb 파일을 생성하고 원하는 패키지 및 서비스 설치 코드를 작성합니다.",
+      "itamae local recipe.rb 명령어를 실행합니다.",
+      "서버 상태가 레시피에 맞게 자동 구성되는 것을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1134,
+    "forks": 118,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "golive-skill",
+    "name": "GoLive",
+    "github": "https://github.com/mikehasa/golive-skill",
+    "description": "에이전트가 구축한 앱을 호스팅, 데이터베이스, 도메인 등에 실제로 배포해주는 AI 에이전트 스킬입니다.",
+    "longDescription": "코드 작성 이후 실제 사용자를 만나기 위해 필요한 호스팅, 데이터베이스, 인증, 도메인 연결 등의 작업을 감지하고 계획하여 실행하는 오픈소스 에이전트 스킬입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "TypeScript",
+      "AI Agents",
+      "Cloudflare",
+      "Supabase",
+      "Vercel"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mikehasa/golive-skill",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Node.js 20+"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Node.js 환경 확인",
+        "command": "node -v",
+        "note": "Node.js 20 버전 이상이 설치되어 있어야 합니다."
+      }
+    ],
+    "usageSteps": [
+      "에이전트 환경에 GoLive 스킬을 설치합니다.",
+      "프로젝트 루트에서 실행하여 앱이 필요로 하는 인프라를 감지합니다.",
+      "생성된 배포 계획을 검토하고 승인하여 실제 계정에 반영합니다."
+    ],
+    "examplePrompt": "Take this project live by configuring a database, hosting, and custom domain.",
+    "usageNote": "",
+    "stars": 1302,
+    "forks": 98,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "mcpjungle",
+    "name": "MCPJungle",
+    "github": "https://github.com/mcpjungle/MCPJungle",
+    "description": "여러 MCP(Model Context Protocol) 서버를 하나의 엔드포인트로 관리하고 연결하는 게이트웨이입니다.",
+    "longDescription": "분산된 AI 클라이언트 설정을 중앙화하고, 팀 단위나 로컬 환경에서 다양한 MCP 서버를 손쉽게 통합 관리할 수 있는 셀프 호스팅 게이트웨이입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "Go",
+      "AI Agents",
+      "MCP",
+      "Docker",
+      "API"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MPL-2.0",
+    "website": "https://docs.mcpjungle.com",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Cursor",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d -p 8080:8080 mcpjungle/mcpjungle",
+        "note": "도커를 이용해 MCPJungle 서버를 간편하게 띄울 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "MCPJungle 서버를 로컬 또는 서버 환경에 실행합니다.",
+      "관리하고자 하는 개별 MCP 서버들을 등록합니다.",
+      "AI 클라이언트(Claude, Cursor 등)를 단일 MCPJungle 엔드포인트에 연결합니다."
+    ],
+    "examplePrompt": "Connect my AI client to the MCPJungle gateway endpoint.",
+    "usageNote": "",
+    "stars": 1301,
+    "forks": 166,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "sensu-go",
+    "name": "Sensu Go",
+    "github": "https://github.com/sensu/sensu-go",
+    "description": "클라우드 및 분산 환경을 위한 확장 가능한 오픈소스 모니터링 도구입니다.",
+    "longDescription": "자동 감지 기능과 서비스 체크를 통해 에프머럴(Ephemeral) 인프라와 분산 애플리케이션의 상태를 모니터링하고 알림을 라우팅하는 시스템입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Go",
+      "Monitoring",
+      "DevOps",
+      "Cloud",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://sensu.io",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 이미지 실행",
+        "command": "docker run -d --name sensu-backend sensu/sensu:latest",
+        "note": "공식 Docker 이미지를 사용하여 빠르게 시작할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "Sensu 백엔드 서비스를 Docker 등으로 실행합니다.",
+      "모니터링할 대상 서버에 Sensu 에이전트를 설치합니다.",
+      "웹 대시보드나 API를 통해 서비스 상태 및 텔레메트리 데이터를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1114,
+    "forks": 181,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "sacred",
+    "name": "Sacred",
+    "github": "https://github.com/IDSIA/sacred",
+    "description": "머신러닝 실험을 설정, 구성, 로깅 및 재현할 수 있도록 돕는 파이썬 도구입니다.",
+    "longDescription": "실험 매개변수 추적, 다양한 설정으로 실험 실행, 결과 데이터베이스 저장 및 결과 재현 등 머신러닝 연구에서 반복되는 지루한 작업을 자동화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "머신러닝",
+      "실험재현",
+      "데이터베이스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/IDSIA/sacred",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 Sacred 라이브러리를 임포트합니다.",
+      "Experiment 객체를 생성하고 설정 스코프를 정의합니다.",
+      "실험 실행 및 로깅을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4382,
+    "forks": 393,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "catalyst",
+    "name": "Catalyst",
+    "github": "https://github.com/catalyst-team/catalyst",
+    "description": "PyTorch 기반의 가속화된 딥러닝 연구개발(R&D) 프레임워크입니다.",
+    "longDescription": "재현성, 신속한 프로토타이핑, 코드 재사용성에 중점을 둔 PyTorch용 고성능 딥러닝 라이브러리로, 복잡한 학습 루프와 분산 학습을 간소화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PyTorch",
+      "딥러닝",
+      "파이썬",
+      "머신러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://catalyst-team.com",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "PyTorch 모델 및 데이터로더를 준비합니다.",
+      "Catalyst Runner를 사용하여 학습을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3388,
+    "forks": 397,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "mitogen",
+    "name": "Mitogen",
+    "github": "https://github.com/mitogen-hq/mitogen",
+    "description": "파이썬 기반의 고성능 분산 프로그램 및 원격 실행 라이브러리입니다.",
+    "longDescription": "Ansible 등의 도구와 연동하여 원격 머신에서 파이썬 코드를 빠르고 효율적으로 실행할 수 있도록 지원하는 분산 자동화 엔진입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Python",
+      "Ansible",
+      "자동화",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://mitogen.networkgenomics.com/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Mitogen을 다운로드하거나 패키지를 설치합니다.",
+      "Ansible 설정 등과 통합하여 원격 실행 성능을 가속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2543,
+    "forks": 212,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "ansible-role-docker",
+    "name": "Ansible Role Docker",
+    "github": "https://github.com/geerlingguy/ansible-role-docker",
+    "description": "Linux 환경에 Docker를 자동으로 설치하고 설정하는 앤서블(Ansible) 역할입니다.",
+    "longDescription": "다양한 리눅스 배포판에서 Docker Community 또는 Enterprise Edition을 손쉽게 배포하고 서비스 상태를 관리할 수 있는 표준 Ansible 롤입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Ansible",
+      "Docker",
+      "DevOps",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://galaxy.ansible.com/geerlingguy/docker/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Ansible",
+      "Linux"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Ansible 롤을 프로젝트에 추가합니다.",
+      "플레이북에 해당 역할을 포함시킵니다.",
+      "플레이북을 실행하여 Docker를 설치합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2296,
+    "forks": 898,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "zsvirt",
+    "name": "ZSvirt",
+    "github": "https://github.com/ZSvirt/zsvirt",
+    "description": "오픈소스 가상화 인프라 및 핵심 IaaS 엔진 플랫폼입니다.",
+    "longDescription": "기업용 가상화 환경을 구축하기 위한 커뮤니티 기반의 오픈소스 솔루션으로, KVM 및 다양한 하이퍼바이저 기반 가상머신 관리를 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "KVM",
+      "가상화",
+      "클라우드",
+      "IaaS"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://zsvirt.io/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "KVM 또는 가상화 지원 호스트"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "qcow2 또는 OVA 이미지를 다운로드합니다.",
+      "가상머신으로 부팅하여 IP를 설정합니다.",
+      "웹 관리 노드에 접속하여 가상 인프라를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1974,
+    "forks": 341,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "kubicorn",
+    "name": "kubicorn",
+    "github": "https://github.com/kubicorn/kubicorn",
+    "description": "공개 클라우드에서 쿠버네티스 인프라를 생성, 관리, 확장하는 도구입니다.",
+    "longDescription": "클라우드 네이티브 환경에서 쿠버네티스 클러스터 인프라 구축을 단순화하고 Go 라이브러리를 통해 인프라를 프로그래밍 방식으로 제어할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Go",
+      "Kubernetes",
+      "클라우드",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://kubicorn.io",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go를 이용한 설치",
+        "command": "go get github.com/kubicorn/kubicorn",
+        "note": "Go 명령어로 툴을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "kubicorn을 설치합니다.",
+      "클러스터 설정 파일을 작성합니다.",
+      "클라우드 프로바이더에 쿠버네티스 클러스터를 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1681,
+    "forks": 190,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "vectordb",
+    "name": "Epsilla Vector DB",
+    "github": "https://github.com/epsilla-cloud/vectordb",
+    "description": "병렬 그래프 컴퓨팅을 활용한 고성능 벡터 데이터베이스입니다.",
+    "longDescription": "대형 언어 모델(LLM)의 정보 검색과 메모리 유지 간의 격차를 해소하기 위해 설계된 확장 가능하고 비용 효율적인 오픈소스 벡터 검색 엔진입니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "C++",
+      "벡터데이터베이스",
+      "RAG",
+      "LLM"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://epsilla.com",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker로 실행",
+        "command": "docker run --pull=always -d -p 8888:8888 -v /data:/data epsilla/vectordb",
+        "note": "도커를 이용해 벡터 데이터베이스 백엔드를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker를 통해 백엔드를 실행합니다.",
+      "파이썬 클라이언트(pyepsilla)를 설치합니다.",
+      "데이터베이스에 접속하여 테이블 생성 및 벡터 검색을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 873,
+    "forks": 45,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "suzieq",
+    "name": "Suzieq",
+    "github": "https://github.com/netenglabs/suzieq",
+    "description": "네트워크 관측 가능성을 활용하여 네트워크 상태를 분석하고 검증하는 도구입니다.",
+    "longDescription": "데이터센터 및 기업 네트워크의 상태를 지속적으로 모니터링하고 분석하여 네트워크 엔지니어가 장애를 예방하고 구조를 개선하도록 돕습니다.",
+    "category": "네트워크",
+    "tags": [
+      "Python",
+      "네트워크모니터링",
+      "네트워크분석",
+      "데이터센터"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.stardustsystems.net/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T17:04:00.490Z",
+    "requirements": [
+      "Python 3.7+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "가상 환경을 생성하고 Python 패키지를 설치합니다.",
+      "모니터링할 네트워크 장비 정보를 설정합니다.",
+      "Suzieq 명령어를 통해 네트워크 상태 데이터를 수집 및 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 906,
+    "forks": 120,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
     "id": "guilite",
     "name": "GuiLite",
     "github": "https://github.com/idea4good/GuiLite",
