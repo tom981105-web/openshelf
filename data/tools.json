@@ -1,5 +1,810 @@
 [
   {
+    "id": "nautilus-compass",
+    "name": "nautilus-compass",
+    "github": "https://github.com/chunxiaoxx/nautilus-compass",
+    "description": "AI 에이전트를 위한 오픈소스 장기 기억 및 신뢰성 레이어이자 독립적인 검증 도구입니다.",
+    "longDescription": "로컬 환경에서 작동하며 기존 메모리 레이어보다 뛰어난 성능을 보이는 AI 에이전트용 장기 기억 장치입니다. 표류(drift) 감지 및 크로스 에이전트 계약 기능을 제공하며, 다양한 MCP 클라이언트 및 AI 코딩 도구와 연동됩니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "에이전트 메모리",
+      "장기 기억",
+      "MCP",
+      "RAG",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://compass.nautilus.social",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Cline",
+      "Cursor",
+      "Continue.dev",
+      "Zed"
+    ],
+    "install": [],
+    "usageSteps": [
+      "프로젝트 저장소를 클론하고 의존성을 설정합니다.",
+      "지원되는 MCP 클라이언트 또는 에이전트 도구와 연동합니다.",
+      "슬래시 명령어(`/compass-recall`, `/compass-verify` 등)를 사용하여 메모리와 신뢰성을 관리합니다."
+    ],
+    "examplePrompt": "이전에 논의했던 프로젝트 아키텍처 기억해줘",
+    "usageNote": "데몬 초기 콜드로드 시 최대 90초가 소요될 수 있습니다.",
+    "stars": 1254,
+    "forks": 36,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "yao-meta-skill",
+    "name": "yao-meta-skill",
+    "github": "https://github.com/yaojingang/yao-meta-skill",
+    "description": "재사용 가능한 AI 에이전트 스킬을 위한 엔지니어링, 평가 및 거버넌스 시스템입니다.",
+    "longDescription": "에이전트 스킬의 엄격한 엔지니어링, 평가, 거버넌스, 이식성을 지원하는 메타 스킬 시스템입니다. 워크플로우로부터 스킬을 생성하고 개선 및 평가하는 기능을 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "에이전트",
+      "스킬",
+      "평가",
+      "워크플로우 자동화",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/yaojingang/yao-meta-skill#readme",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI 설치",
+        "command": "npx -y skills add yaojingang/yao-meta-skill -a '*' -g -y",
+        "note": "skills CLI를 사용하여 글로벌 스킬로 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "위의 설치 명령어를 실행하여 스킬을 추가합니다.",
+      "클라이언트를 재시작합니다.",
+      "에이전트에게 워크플로우로부터 스킬 생성을 요청하거나 기존 스킬 평가를 지시합니다."
+    ],
+    "examplePrompt": "이 워크플로우를 바탕으로 새로운 에이전트 스킬을 만들어줘",
+    "usageNote": "",
+    "stars": 2705,
+    "forks": 258,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "evaluate",
+    "name": "evaluate",
+    "github": "https://github.com/huggingface/evaluate",
+    "description": "머신러닝 모델과 데이터셋을 손쉽게 평가하고 비교하기 위한 허깅페이스 라이브러리입니다.",
+    "longDescription": "자연어 처리부터 컴퓨터 비전까지 다양한 태스크의 대중적인 평가 지표 구현체를 제공합니다. 간단한 명령어로 메트릭을 불러와 표준화된 방식으로 모델 성능을 리포트할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "머신러닝",
+      "평가",
+      "데이터셋",
+      "메트릭",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://huggingface.co/docs/evaluate",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python",
+      "가상환경(venv 또는 conda)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install evaluate",
+        "note": "가상환경 내에서 설치하는 것을 권장합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 가상환경을 활성화합니다.",
+      "pip 명령어로 패키지를 설치합니다.",
+      "evaluate.load()를 통해 원하는 평가지표를 불러와 모델 평가에 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "LLM 평가의 경우 최신 라이브러리인 LightEval 사용이 권장됩니다.",
+    "stars": 2492,
+    "forks": 353,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "fable-method",
+    "name": "fable-method",
+    "github": "https://github.com/Sahir619/fable-method",
+    "description": "생각하고, 행동하고, 증명하는 Fable 워크플로우를 모델이 실행할 수 있는 스킬로 구현한 프레임워크입니다.",
+    "longDescription": "Claude Fable 워크플로우의 핵심 방법론을 추출하여 모든 모델이 실행할 수 있는 스킬과 검증 평가 도구로 구현했습니다. 실행 가능한 의사코드를 기반으로 모델이 스스로 단계를 거쳐 작업을 수행합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "에이전트",
+      "클로드",
+      "코딩 에이전트",
+      "평가",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Sahir619/fable-method",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 설치",
+        "command": "/plugin marketplace add Sahir619/fable-method\n/plugin install fable@fable-method",
+        "note": "Claude Code 세션 내에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Claude Code 세션을 엽니다.",
+      "플러그인 추가 및 설치 명령어를 실행합니다.",
+      "네임스페이스화된 fable 스킬을 호출하여 작업을 진행합니다."
+    ],
+    "examplePrompt": "fable 워크플로우를 사용하여 이 코드를 분석하고 검증해줘",
+    "usageNote": "",
+    "stars": 2304,
+    "forks": 337,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "trpc-agent-go",
+    "name": "trpc-agent-go",
+    "github": "https://github.com/trpc-group/trpc-agent-go",
+    "description": "그래프 워크플로우, 툴, 메모리, MCP, 평가 기능을 제공하는 Go 기반 에이전트 프레임워크입니다.",
+    "longDescription": "프로덕션 수준의 에이전트 시스템을 구축하기 위한 Go 네이티브 프레임워크입니다. LLM 에이전트, 타입 안정성을 갖춘 그래프 워크플로우, 멀티 에이전트 협업, 지식 검색, OpenTelemetry 관측 가능성을 하나의 스택에서 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "에이전트",
+      "Go",
+      "그래프 워크플로우",
+      "MCP",
+      "멀티 에이전트"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://trpc-group.github.io/trpc-agent-go/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Go 프로젝트에 패키지를 임포트합니다.",
+      "GraphAgent 및 LLM 설정을 구성합니다.",
+      "스트리밍 러너와 서비스 API를 통해 에이전트 애플리케이션을 빌드하고 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "고성능 Go 서비스 환경에 적합하도록 설계되었습니다.",
+    "stars": 1867,
+    "forks": 321,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "ragbits",
+    "name": "ragbits",
+    "github": "https://github.com/deepsense-ai/ragbits",
+    "description": "생성형 AI 및 RAG 애플리케이션의 신속한 개발을 위한 모듈형 빌딩 블록 라이브러리입니다.",
+    "longDescription": "LLM 교체, 다양한 형식의 문서 수집(20개 이상 포맷 지원), 고급 RAG 파이프라인 구축을 쉽게 할 수 있도록 돕는 파이썬 라이브러리입니다. 필요한 모듈만 선택하여 성능을 최적화할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RAG",
+      "LLM",
+      "문서 검색",
+      "가이드라인",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ragbits.deepsense.ai",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "pip를 통해 필요한 ragbits 모듈을 설치합니다.",
+      "LLM API 키 또는 로컬 모델을 설정합니다.",
+      "문서 파싱 및 벡터 검색 컴포넌트를 조합하여 GenAI 앱을 구현합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1677,
+    "forks": 144,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "prometheus-eval",
+    "name": "prometheus-eval",
+    "github": "https://github.com/prometheus-eval/prometheus-eval",
+    "description": "오픈소스 LLM 저지와 GPT-4 등을 활용하여 LLM 응답을 평가하기 위한 프레임워크입니다.",
+    "longDescription": "생성 태스크에서 LLM의 성능을 평가할 수 있는 리포지토리입니다. Prometheus 모델 시리즈 및 vLLM, litellm과의 통합을 지원하여 로컬 환경 및 API를 통한 유연한 평가가 가능합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "평가",
+      "LLM",
+      "GPT-4",
+      "vLLM",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/prometheus-eval/prometheus-eval",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install prometheus-eval",
+        "note": "기본 평가 라이브러리 설치"
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "로컬 추론을 원할 경우 vllm을 추가로 설치합니다.",
+      "평가 스크립트에서 Prometheus 또는 API 모델을 로드하여 응답 품질을 평가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1121,
+    "forks": 68,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "graph-rag-agent",
+    "name": "graph-rag-agent",
+    "github": "https://github.com/1517005260/graph-rag-agent",
+    "description": "GraphRAG와 LightRAG, DeepSearch 기술을 결합하여 지식 그래프 구축 및 사내망 RAG 추론을 수행하는 지능형 에이전트 시스템입니다.",
+    "longDescription": "GraphRAG, LightRAG, Neo4j 기반 지식 그래프 빌더를 통합하여 복잡한 정보 검색과 추론을 수행하는 RAG 솔루션입니다. 자체 평가 프레임워크를 포함하여 프라이빗 데이터 환경에서의 검색 및 답변 품질을 검증할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식그래프",
+      "RAG",
+      "인공지능에이전트",
+      "검색",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://deepwiki.com/1517005260/graph-rag-agent",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "필수 Python 패키지를 설치합니다.",
+      "설정 파일을 통해 LLM 및 Neo4j 연동 정보를 구성합니다.",
+      "그래프 구축 및 RAG 검색 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "그래프 기반 RAG를 활용하여 사내 문서에서 핵심 사실을 추출하고 추론하는 방법",
+    "usageNote": "",
+    "stars": 2346,
+    "forks": 321,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "emollm",
+    "name": "EmoLLM",
+    "github": "https://github.com/SmartFlowAI/EmoLLM",
+    "description": "사용자 심리 건강을 지원하고 공감형 상담 링크를 제공하는 오픈소스 심리 건강 대형 언어 모델입니다.",
+    "longDescription": "지시어 미세조정(Instruction Tuning)을 거쳐 사용자의 감정을 이해하고 심리적 지원과 상담을 제공하는 전문 대화형 모델입니다. 다양한 백본 모델을 지원하며 데이터셋, 평가, 배포 및 RAG 파이프라인을 포함합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "심리상담",
+      "언어모델",
+      "미세조정",
+      "RAG",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://openxlab.org.cn/apps/detail/chg0901/EmoLLMV3.0",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 종속성을 설치합니다.",
+      "미세조정 또는 추론 설정 파일을 수정합니다.",
+      "스크립트를 실행하여 모델 학습 및 평가를 진행합니다.",
+      "웹 인터페이스나 API를 통해 모델을 배포하고 테스트합니다."
+    ],
+    "examplePrompt": "최근 스트레스가 심하고 불안한데 마음을 진정시키는 조언을 해줘.",
+    "usageNote": "",
+    "stars": 1790,
+    "forks": 224,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "intellagent",
+    "name": "intellagent",
+    "github": "https://github.com/plurai-ai/intellagent",
+    "description": "시뮬레이션된 합성 상호작용을 통해 대화형 AI 에이전트를 포괄적으로 진단하고 최적화하는 프레임워크입니다.",
+    "longDescription": "에이전트의 잠재적 취약점과 사각지대를 발견하기 위해 현실적인 합성 시나리오를 시뮬레이션하고 성능을 분석합니다. 다중 에이전트 환경에서 에이전트의 안정성을 테스트하고 실제 배포 전 최적화를 지원합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "에이전트",
+      "평가",
+      "합성데이터",
+      "LLMOps",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://intellagent-doc.plurai.ai/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python = 3.9"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 의존성 설치",
+        "command": "git clone git@github.com:plurai-ai/intellagent.git && cd intellagent && pip install -r requirements.txt",
+        "note": "소스 코드를 다운로드하고 필수 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "설정 파일(config/llm_env.yml)에 LLM API 키를 설정합니다.",
+      "시뮬레이션 및 평가 파이프라인을 실행합니다."
+    ],
+    "examplePrompt": "고객 서비스 에이전트의 응답 정확도와 오류율을 시뮬레이션 기반으로 진단해줘.",
+    "usageNote": "",
+    "stars": 1260,
+    "forks": 155,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "gym",
+    "name": "NeMo Gym",
+    "github": "https://github.com/NVIDIA-NeMo/Gym",
+    "description": "다양한 시뮬레이션 환경을 활용하여 AI 모델과 에이전트의 성능을 평가하고 개선하는 도구입니다.",
+    "longDescription": "강화학습 및 LLM 기반 에이전트의 성능을 안전하고 체계적으로 검증할 수 있는 환경을 제공합니다. Ray 등과 연동하여 확장성 있는 평가 및 훈련 워크플로우를 지원합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "강화학습",
+      "에이전트",
+      "평가",
+      "환경",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.nvidia.com/nemo/gym/main/about/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python",
+      "OpenAI API Key 또는 지원되는 LLM 공급자",
+      "디스크 여유 공간 5GB 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install nemo-gym",
+        "note": "PyPI를 통해 NeMo Gym을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 필요한 API 키를 환경 변수에 설정합니다.",
+      "평가하려는 환경 및 모델 설정을 로드합니다.",
+      "벤치마크 및 에이전트 평가 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "에이전트가 특정 환경 내에서 목표를 달성하는 과정을 평가해줘.",
+    "usageNote": "",
+    "stars": 1249,
+    "forks": 397,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "kubetorch",
+    "name": "kubetorch",
+    "github": "https://github.com/run-house/kubetorch",
+    "description": "파이썬 코드를 통해 쿠버네티스 클러스터에서 AI 워크로드를 분산 실행하고 관리하는 서버리스 인터페이스입니다.",
+    "longDescription": "로컬 개발 환경에서 쿠버네티스의 방대한 연산 자원을 마치 로컬 프로세스처럼 활용할 수 있도록 돕습니다. 원격 로그, 예외 처리, 하드웨어 장애 복구를 실시간으로 지원하여 ML 인프라 관리의 복잡성을 줄여줍니다.",
+    "category": "개발 운영",
+    "tags": [
+      "쿠버네티스",
+      "분산처리",
+      "머신러닝",
+      "인프라",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://run.house",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python",
+      "Kubernetes 클러스터",
+      "Helm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Python 클라이언트 설치",
+        "command": "pip install \"kubetorch[client]\"",
+        "note": "클라이언트 패키지를 설치합니다."
+      },
+      {
+        "title": "Helm을 이용한 쿠버네티스 배포",
+        "command": "helm upgrade --install kubetorch oci://ghcr.io/run-house/charts/kubetorch --version 0.5.0 -n kubetorch --create-namespace",
+        "note": "클러스터에 런타임을 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "클라이언트 라이브러리를 설치하고 쿠버네티스 클러스터를 구성합니다.",
+      "파이썬 스크립트에서 Kubetorch 데코레이터나 API를 호출합니다.",
+      "클러스터에서 분산 학습 또는 추론 작업을 실행하고 로그를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1228,
+    "forks": 61,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "clawbench",
+    "name": "ClawBench",
+    "github": "https://github.com/TIGER-AI-Lab/ClawBench",
+    "description": "일상적인 웹 작업을 수행하는 브라우저 AI 에이전트를 위한 오픈소스 벤치마크입니다.",
+    "longDescription": "사용자가 일상적으로 수행하는 온라인 쇼핑, 예약, 양식 작성 등의 태스크를 바탕으로 브라우저 에이전트의 성능을 객관적으로 측정합니다. 결정적 채점(deterministic grading) 방식을 지원하여 신뢰성 있는 평가가 가능합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "브라우저에이전트",
+      "웹자동화",
+      "평가",
+      "벤치마크",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://claw-bench.com",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 종속성을 설치합니다.",
+      "평가 카탈로그 및 테스트 시나리오를 확인합니다.",
+      "벤치마크 실행 스크립트를 통해 에이전트 성능을 평가합니다."
+    ],
+    "examplePrompt": "온라인 쇼핑몰에서 특정 상품을 검색하고 장바구니에 담는 태스크를 에이전트가 완수하는지 테스트해줘.",
+    "usageNote": "",
+    "stars": 1071,
+    "forks": 68,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "deepfabric",
+    "name": "deepfabric",
+    "github": "https://github.com/nolabs-ai/deepfabric",
+    "description": "언어 모델 및 에이전트 평가를 위한 고품질 합성 훈련 데이터를 단일 파이프라인으로 생성하는 도구입니다.",
+    "longDescription": "추론 트레이스(reasoning trace)와 도구 호출 패턴을 결합하여 도메인 특화 데이터셋을 생성합니다. 주제 그래프 알고리즘을 활용하여 중복을 피하고 다양한 하위 주제를 포괄하는 데이터를 안정적으로 만들어냅니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "합성데이터",
+      "데이터생성",
+      "에이전트",
+      "파이프라인",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://docs.deepfabric.dev",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python",
+      "OpenAI API Key 등 LLM 자격 증명"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI 패키지 설치",
+        "command": "pip install deepfabric",
+        "note": "PyPI를 통해 deepfabric을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 API 키를 환경 변수에 설정합니다.",
+      "CLI 명령어를 통해 주제 프롬프트와 생성 모드를 지정합니다.",
+      "주제 그래프를 기반으로 고품질 합성 데이터셋 파일을 생성합니다."
+    ],
+    "examplePrompt": "파이썬 프로그래밍 기초에 관한 에이전트 학습용 합성 데이터 10개를 생성해줘.",
+    "usageNote": "",
+    "stars": 890,
+    "forks": 81,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "openjudge",
+    "name": "OpenJudge",
+    "github": "https://github.com/agentscope-ai/OpenJudge",
+    "description": "대형 언어 모델 및 AI 애플리케이션의 종합적 평가와 품질 보상을 위한 통합 프레임워크입니다.",
+    "longDescription": "내장된 평가기를 활용하거나 사용자가 직접 평가 기준(rubric)을 정의하여 AI 모델의 응답 품질을 정밀하게 진단할 수 있습니다. 온라인 플레이그라운드를 제공하여 설치 없이 웹 브라우저에서도 간편하게 테스트할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "평가",
+      "품질보상",
+      "정렬",
+      "LLM",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://openjudge.me/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Python 패키지 설치",
+        "command": "pip install py-openjudge",
+        "note": "PyPI를 통해 OpenJudge를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "평가 기준과 채점 방식을 설정합니다.",
+      "파이썬 코드 또는 온라인 플레이그라운드에서 모델 응답을 평가합니다."
+    ],
+    "examplePrompt": "생성된 텍스트 답변의 유용성과 정확성을 커스텀 루브릭을 이용해 채점해줘.",
+    "usageNote": "",
+    "stars": 877,
+    "forks": 73,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "opik-openclaw",
+    "name": "opik-openclaw",
+    "github": "https://github.com/comet-ml/opik-openclaw",
+    "description": "OpenClaw 에이전트 실행 추적 내용을 Opik 플랫폼으로 내보내어 모니터링할 수 있는 공식 플러그인입니다.",
+    "longDescription": "에이전트의 LLM 요청 및 응답, 하위 에이전트 호출, 도구 실행 결과, 에러 로그, 토큰 사용량 및 비용을 실시간으로 추적하고 시각화합니다. OpenClaw 게이트웨이 프로세스 내부에서 동작합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "관측가능성",
+      "에이전트",
+      "모니터링",
+      "플러그인",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.comet.com/site/products/opik/",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "OpenClaw = 2026.9.7",
+      "Node.js = 24.16",
+      "npm = 10"
+    ],
+    "supportedAgents": [
+      "OpenClaw"
+    ],
+    "install": [
+      {
+        "title": "OpenClaw 플러그인 설치",
+        "command": "openclaw plugins install clawhub:@opik/opik-openclaw",
+        "note": "OpenClaw 환경에 관측성 플러그인을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "필요한 Node.js 및 OpenClaw 버전을 확인합니다.",
+      "CLI 명령어를 통해 플러그인을 설치합니다.",
+      "OpenClaw 게이트웨이를 실행하여 에이전트 동작 및 토큰 비용을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 725,
+    "forks": 90,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
+    "id": "ranx",
+    "name": "ranx",
+    "github": "https://github.com/AmenRa/ranx",
+    "description": "Numba를 활용하여 고속 벡터 연산과 병렬 처리를 지원하는 정보 검색 및 랭킹 평가 라이브러리입니다.",
+    "longDescription": "정보 검색(Information Retrieval) 및 추천 시스템의 성능을 평가하고 비교하기 위한 다양한 랭킹 메트릭을 제공합니다. 사용자 친화적인 인터페이스와 빠른 속도를 바탕으로 대규모 랭킹 결과를 효율적으로 분석할 수 있습니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "정보검색",
+      "랭킹평가",
+      "추천시스템",
+      "성능분석",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://amenra.github.io/ranx",
+    "featured": 9,
+    "added": "2026-10-18",
+    "addedAt": "2026-10-18T11:03:57.439Z",
+    "requirements": [
+      "Python = 3.8"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 패키지 설치",
+        "command": "pip install ranx",
+        "note": "PyPI를 통해 ranx 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 ranx를 설치합니다.",
+      "평가 데이터(Qrels)와 검색 결과(Run) 딕셔너리를 구성합니다.",
+      "평가 함수를 호출하여 NDCG, MAP 등의 지표를 계산합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 701,
+    "forks": 34,
+    "starsUpdatedAt": "2026-10-18"
+  },
+  {
     "id": "oxidized",
     "name": "Oxidized",
     "github": "https://github.com/ytti/oxidized",
