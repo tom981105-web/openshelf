@@ -1,7 +1,563 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-18T01:06:12.791Z",
+  "updatedAt": "2026-10-18T02:06:02.867Z",
   "items": [
+    {
+      "id": "fastapi",
+      "name": "FastAPI",
+      "github": "https://github.com/fastapi/fastapi",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "neovim",
+      "name": "Neovim",
+      "github": "https://github.com/neovim/neovim",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11",
+      "tool": {
+        "id": "neovim",
+        "name": "Neovim",
+        "github": "https://github.com/neovim/neovim",
+        "description": "확장성과 사용성에 중점을 둔 현대적인 고성능 Vim 텍스트 편집기 포크입니다.",
+        "longDescription": "기존 Vim의 구조를 대폭 리팩토링하여 유지보수성을 높이고, Lua 스크립트를 통한 강력한 설정 및 플러그인 생태계를 제공합니다. 비동기 플러그인 호환성과 내장 LSP(Language Server Protocol) 지원으로 개발자 생산성을 극대화합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Neovim",
+          "텍스트 편집기",
+          "Lua"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://neovim.io",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T02:03:58.886Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 매니저 설치",
+            "command": "brew install neovim",
+            "note": "Homebrew를 사용하는 macOS 환경에서의 설치 예시"
+          }
+        ],
+        "usageSteps": [
+          "운영체제별 공식 패키지나 Homebrew 등을 통해 Neovim을 설치합니다.",
+          "설정 파일(init.lua)을 작성하여 플러그인과 키맵을 구성합니다.",
+          "터미널에서 nvim 명령어로 실행하여 사용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 103036,
+        "forks": 7191,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T02:05:55.108Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T02:05:57.027Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T02:05:59.617Z"
+    },
+    {
+      "id": "strapi",
+      "name": "Strapi",
+      "github": "https://github.com/strapi/strapi",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11",
+      "tool": {
+        "id": "strapi",
+        "name": "Strapi",
+        "github": "https://github.com/strapi/strapi",
+        "description": "개발자가 콘텐츠 API를 빠르게 구축할 수 있는 오픈소스 헤드리스 CMS입니다.",
+        "longDescription": "JavaScript 및 TypeScript 기반으로 완전히 커스터마이징이 가능하며, 직관적인 콘텐츠 타입 빌더를 제공하여 데이터 구조를 손쉽게 정의할 수 있습니다. 생성된 콘텐츠는 REST 및 GraphQL API를 통해 다양한 프론트엔드 환경에서 유연하게 활용할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "CMS",
+          "헤드리스CMS",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://strapi.io",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T02:03:58.886Z",
+        "requirements": [
+          "Node.js",
+          "npm 또는 yarn"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "빠른 시작",
+            "command": "npx create-strapi@latest my-project",
+            "note": "기본 기능이 포함된 새로운 Strapi 프로젝트를 즉시 생성합니다."
+          }
+        ],
+        "usageSteps": [
+          "Node.js 환경을 준비하고 npx 명령어로 프로젝트를 생성합니다.",
+          "관리자 패널에 접속하여 콘텐츠 구조(Content-Type)를 디자인합니다.",
+          "자동 생성된 REST 또는 GraphQL API를 통해 프론트엔드와 연동합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 73329,
+        "forks": 9888,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T02:05:55.335Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T02:05:57.343Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T02:06:00.503Z"
+    },
+    {
+      "id": "meilisearch",
+      "name": "Meilisearch",
+      "github": "https://github.com/meilisearch/meilisearch",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11",
+      "tool": {
+        "id": "meilisearch",
+        "name": "Meilisearch",
+        "github": "https://github.com/meilisearch/meilisearch",
+        "description": "AI 기반 하이브리드 검색을 지원하는 초고속 검색 엔진 API입니다.",
+        "longDescription": "웹사이트와 애플리케이션에 매끄럽게 통합되어 뛰어난 검색 경험을 제공하며, 오탈자 허용 및 즉시 검색 기능을 기본 지원합니다. 설치와 배포가 간편하며 대규모 데이터셋에서도 빠른 응답 속도를 보장합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "검색 엔진",
+          "API",
+          "Rust"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.meilisearch.com",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T02:03:58.886Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "바이너리 다운로드 및 실행",
+            "command": "curl -L https://install.meilisearch.com | sh",
+            "note": "공식 설치 스크립트를 사용하여 최신 바이너리를 다운로드합니다."
+          }
+        ],
+        "usageSteps": [
+          "검색 엔진 바이너리를 설치하거나 Docker로 컨테이너를 실행합니다.",
+          "인덱스를 생성하고 검색할 문서를 추가합니다.",
+          "API 엔드포인트를 호출하여 하이브리드 검색을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 59590,
+        "forks": 2742,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T02:05:55.539Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T02:05:57.601Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T02:06:01.354Z"
+    },
+    {
+      "id": "ccxt",
+      "name": "CCXT",
+      "github": "https://github.com/ccxt/ccxt",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "smsforwarder",
+      "name": "SmsForwarder",
+      "github": "https://github.com/pppscn/SmsForwarder",
+      "license": "BSD-2-Clause",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "tiktokdownloader",
+      "name": "TikTokDownloader",
+      "github": "https://github.com/JoeanAmier/TikTokDownloader",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "flaresolverr",
+      "name": "FlareSolverr",
+      "github": "https://github.com/FlareSolverr/FlareSolverr",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "fay",
+      "name": "Fay",
+      "github": "https://github.com/xszyou/Fay",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "xhs-downloader",
+      "name": "XHS-Downloader",
+      "github": "https://github.com/JoeanAmier/XHS-Downloader",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "trpc",
+      "name": "tRPC",
+      "github": "https://github.com/trpc/trpc",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "directus",
+      "name": "Directus",
+      "github": "https://github.com/directus/directus",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11",
+      "tool": {
+        "id": "directus",
+        "name": "Directus",
+        "github": "https://github.com/directus/directus",
+        "description": "SQL 데이터베이스를 헤드리스 CMS 및 관리자 패널로 변환하는 백엔드 플랫폼",
+        "longDescription": "기존 SQL 데이터베이스 위에 얹혀 즉시 REST 및 GraphQL API, 시각적 관리 스튜디오, AI 에이전트를 위한 기본 MCP 서버를 제공합니다. 소규모 조직과 개인 프로젝트에서는 대부분 무료로 사용할 수 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터베이스",
+          "CMS",
+          "백엔드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://directus.com",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T02:03:58.886Z",
+        "requirements": [
+          "SQL 데이터베이스",
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "기존 SQL 데이터베이스에 Directus를 연결합니다.",
+          "자동 생성된 REST 및 GraphQL API 엔드포인트를 확인합니다.",
+          "시각적 스튜디오를 통해 데이터를 관리하고 확장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 38565,
+        "forks": 4977,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T02:05:55.739Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T02:05:58.271Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T02:06:02.188Z"
+    },
+    {
+      "id": "one-api",
+      "name": "One API",
+      "github": "https://github.com/songquanpeng/one-api",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "graphql-engine",
+      "name": "Hasura GraphQL Engine",
+      "github": "https://github.com/hasura/graphql-engine",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "django-rest-framework",
+      "name": "Django REST Framework",
+      "github": "https://github.com/encode/django-rest-framework",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11",
+      "tool": {
+        "id": "django-rest-framework",
+        "name": "Django REST Framework",
+        "github": "https://github.com/encode/django-rest-framework",
+        "description": "Django를 위한 강력하고 유연한 웹 API 구축 툴킷",
+        "longDescription": "웹 브라우저를 통한 탐색 가능한 API 인터페이스와 다양한 인증 정책을 제공합니다. ORM 및 비ORM 데이터 소스를 지원하는 강력한 직렬화 기능을 갖추고 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Python",
+          "Django",
+          "API"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.django-rest-framework.org",
+        "featured": 9,
+        "added": "2026-10-18",
+        "addedAt": "2026-10-18T02:03:58.886Z",
+        "requirements": [
+          "Python",
+          "Django"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Pip을 이용한 설치",
+            "command": "pip install djangorestframework",
+            "note": "파이썬 패키지 관리자로 설치"
+          }
+        ],
+        "usageSteps": [
+          "pip를 이용해 장고 레스트 프레임워크를 설치합니다.",
+          "Django 프로젝트의 settings.py 내 INSTALLED_APPS에 'rest_framework'를 추가합니다.",
+          "시리얼라이저와 뷰를 정의하여 REST API 엔드포인트를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 30210,
+        "forks": 7093,
+        "starsUpdatedAt": "2026-10-18"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-18T02:05:55.953Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-18T02:05:58.709Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-18T02:06:02.867Z"
+    },
+    {
+      "id": "postgrest",
+      "name": "PostgREST",
+      "github": "https://github.com/PostgREST/postgrest",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "yapi",
+      "name": "YApi",
+      "github": "https://github.com/YMFE/yapi",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "itchat",
+      "name": "ItChat",
+      "github": "https://github.com/littlecodersh/ItChat",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "chi",
+      "name": "Chi",
+      "github": "https://github.com/go-chi/chi",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
+    {
+      "id": "whatsapp-web-js",
+      "name": "whatsapp-web.js",
+      "github": "https://github.com/wwebjs/whatsapp-web.js",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-18T02:05:54.594Z",
+      "sourceRun": "2026-10-18T11"
+    },
     {
       "id": "shadowbroker",
       "name": "Shadowbroker",
@@ -5504,91 +6060,6 @@
       },
       "recheckAttempts": 2,
       "recheckedAt": "2026-10-17T16:06:04.003Z"
-    },
-    {
-      "id": "directus",
-      "name": "Directus",
-      "github": "https://github.com/directus/directus",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-17T15:06:00.129Z",
-      "sourceRun": "2026-10-18T00",
-      "tool": {
-        "id": "directus",
-        "name": "Directus",
-        "github": "https://github.com/directus/directus",
-        "description": "SQL 데이터베이스를 헤드리스 CMS 및 API로 즉시 전환해주는 백엔드 플랫폼",
-        "longDescription": "기존 SQL 데이터베이스 위에 REST 및 GraphQL API 계층과 시각적인 관리 스튜디오를 제공합니다. AI 에이전트를 위한 네이티브 MCP 서버를 지원하여 확장성이 높습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CMS",
-          "데이터베이스",
-          "API"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://directus.com",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T15:03:58.383Z",
-        "requirements": [
-          "Node.js",
-          "SQL 데이터베이스 (PostgreSQL, MySQL 등)"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Npx로 프로젝트 생성",
-            "command": "npx create-directus-project my-project",
-            "note": "새로운 Directus 프로젝트를 로컬에 생성합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트 디렉토리에서 설치 명령어를 실행합니다.",
-          "연결할 데이터베이스 정보를 설정합니다.",
-          "웹 관리자 스튜디오에 접속하여 데이터를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "연간 매출 500만 달러 미만 조직은 대부분 무료로 이용할 수 있습니다.",
-        "stars": 38563,
-        "forks": 4976,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T15:06:00.902Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T15:06:03.686Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-17T16:06:04.837Z"
     },
     {
       "id": "dataease",
@@ -12924,87 +13395,6 @@
       "sourceRun": "2026-10-17T08"
     },
     {
-      "id": "strapi",
-      "name": "Strapi",
-      "github": "https://github.com/strapi/strapi",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-16T22:06:23.242Z",
-      "sourceRun": "2026-10-17T07",
-      "tool": {
-        "id": "strapi",
-        "name": "Strapi",
-        "github": "https://github.com/strapi/strapi",
-        "description": "JavaScript 및 TypeScript 기반 오픈소스 헤드리스 CMS",
-        "longDescription": "JavaScript와 TypeScript 기반으로 개발자가 콘텐츠 API를 빠르게 구축할 수 있도록 지원하는 오픈소스 헤드리스 CMS입니다. 직관적인 콘텐츠 타입 빌더를 제공하며 프론트엔드와 모바일 앱에서 쉽게 소비할 수 있는 API를 자동 생성합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CMS",
-          "API",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://strapi.io",
-        "featured": 9,
-        "added": "2026-10-16",
-        "addedAt": "2026-10-16T22:04:01.044Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "빠른 시작",
-            "command": "npx create-strapi@latest my-project",
-            "note": "새로운 Strapi 프로젝트를 즉시 생성합니다."
-          }
-        ],
-        "usageSteps": [
-          "터미널에서 설치 명령어 실행",
-          "프로젝트 디렉토리로 이동",
-          "관리자 패널에 접속하여 콘텐츠 구조 정의"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 73324,
-        "forks": 9891,
-        "starsUpdatedAt": "2026-10-16"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-16T22:06:23.838Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-16T22:06:26.389Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-16T23:06:33.399Z"
-    },
-    {
       "id": "zola",
       "name": "Zola",
       "github": "https://github.com/getzola/zola",
@@ -15447,83 +15837,6 @@
       "reasons": [],
       "checkedAt": "2026-10-16T16:08:25.894Z",
       "sourceRun": "2026-10-17T01"
-    },
-    {
-      "id": "meilisearch",
-      "name": "Meilisearch",
-      "github": "https://github.com/meilisearch/meilisearch",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-16T16:08:25.894Z",
-      "sourceRun": "2026-10-17T01",
-      "tool": {
-        "id": "meilisearch",
-        "name": "Meilisearch",
-        "github": "https://github.com/meilisearch/meilisearch",
-        "description": "웹사이트와 애플리케이션을 위한 초고속 AI 하이브리드 검색엔진 API",
-        "longDescription": "오타 허용, 의미 기반 검색 및 벡터 검색을 지원하며 애플리케이션에 손쉽게 통합하여 강력한 검색 경험을 제공하는 검색엔진입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "검색엔진",
-          "API",
-          "벡터검색"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.meilisearch.com",
-        "featured": 9,
-        "added": "2026-10-16",
-        "addedAt": "2026-10-16T16:03:59.604Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Meilisearch 바이너리를 다운로드하거나 Docker로 실행합니다.",
-          "인덱스를 생성하고 검색할 문서를 추가합니다.",
-          "API를 통해 실시간 검색 쿼리를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 59585,
-        "forks": 2739,
-        "starsUpdatedAt": "2026-10-16"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-16T16:08:26.426Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-16T16:08:29.435Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckError": "Gemini HTTP 503",
-      "recheckedAt": "2026-10-16T17:07:11.586Z"
     },
     {
       "id": "dbeaver",
