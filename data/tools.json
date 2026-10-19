@@ -1,5 +1,726 @@
 [
   {
+    "id": "awesome-playwright",
+    "name": "Awesome Playwright",
+    "github": "https://github.com/mxschmitt/awesome-playwright",
+    "description": "Playwright 기반의 유용한 도구, 유틸리티, 테스트 프로젝트를 모아 놓은 큐레이션 목록입니다.",
+    "longDescription": "웹 테스트 및 자동화를 위한 Playwright 프레임워크와 연계하여 사용할 수 있는 다양한 언어 지원, 통합 도구, 스크래핑 유틸리티, AI 에이전트 프로젝트를 한눈에 확인할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Playwright",
+      "웹 테스팅",
+      "브라우저 자동화",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "CC0-1.0",
+    "website": "https://mxschmitt.github.io/awesome-playwright/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "목록에서 필요한 Playwright 유틸리티나 통합 도구를 선택합니다.",
+      "해당 프로젝트의 안내에 따라 패키지를 설치합니다.",
+      "테스트 및 자동화 워크플로우에 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "순수 라이브러리 목록 모음이므로 개별 프로젝트별 설치 방법을 확인해야 합니다.",
+    "stars": 1597,
+    "forks": 327,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "zendriver",
+    "name": "Zendriver",
+    "github": "https://github.com/cdpdriver/zendriver",
+    "description": "ultrafunkamsterdam/nodriver 기반의 고속 비동기식 안티봇 우회 웹 스크래핑 및 자동화 프레임워크입니다.",
+    "longDescription": "봇 탐지를 회피하고 강력한 웹 스크래핑을 수행할 수 있도록 설계된 Python 기반 프레임워크로, 요소의 가독성 높은 HTML 표현과 Docker 지원 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "스크래핑",
+      "웹 자동화",
+      "Python",
+      "안티봇",
+      "비동기"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://zendriver.dev",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install zendriver",
+        "note": "pip 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 zendriver를 설치합니다.",
+      "Python 비동기 함수 내에서 zendriver를 임포트합니다.",
+      "대상 웹사이트에 접속하여 스크린샷 저장 및 데이터 추출 코드를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "안티봇 환경에 맞춰 크롬 디버그 프로토콜을 사용하므로 올바른 파이썬 비동기 문법이 필요합니다.",
+    "stars": 1459,
+    "forks": 108,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "invisible-puppeteer",
+    "name": "invisible_puppeteer",
+    "github": "https://github.com/feder-cr/invisible_puppeteer",
+    "description": "안티봇과 캡챠를 우회할 수 있는 C++ 패치 기반 파이썬용 스텔스 Puppeteer 도구입니다.",
+    "longDescription": "C++ 소스 레벨에서 패치된 안티봇 파이어폭스를 기반으로 동작하여 브라우저 지문(Fingerprint)을 완벽히 위장하며, 기존 Puppeteer Python 코드와 호환됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Puppeteer",
+      "웹 스크래핑",
+      "안티봇",
+      "Python",
+      "Firefox"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/feder-cr/invisible_puppeteer",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Python = 3.11",
+      "uv 패키지 매니저"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "프로젝트 초기화 및 패키지 추가",
+        "command": "uv add invisible-puppeteer",
+        "note": "uv를 사용하여 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "uv를 통해 프로젝트를 초기화하고 패키지를 설치합니다.",
+      "invisible-puppeteer 환경을 페치합니다.",
+      "기존 Puppeteer 코드를 활용해 스크래핑 및 자동화 스크립트를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "안티봇 방어벽이 높은 웹사이트를 크롤링할 때 유용합니다.",
+    "stars": 1404,
+    "forks": 165,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "webai2api",
+    "name": "WebAI2API",
+    "github": "https://github.com/foxhui/WebAI2API",
+    "description": "Camoufox 기반으로 LMArena, Gemini 등의 웹 AI 서비스를 OpenAI 호환 API로 변환해 주는 도구입니다.",
+    "longDescription": "시뮬레이션된 인간의 상호작용과 다중 창 동시성, 브라우저 인스턴스 데이터 격리를 지원하며, 웹 UI를 통해 실시간 로그 확인 및 관리 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 모델",
+      "OpenAI API",
+      "웹 자동화",
+      "Camoufox",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://foxhui.github.io/WebAI2API/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Node.js",
+      "pnpm",
+      "Camoufox"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "pnpm install",
+        "note": "pnpm을 사용하여 의존성을 설치합니다."
+      },
+      {
+        "title": "초기화 실행",
+        "command": "npm run init",
+        "note": "브라우저 및 사전 컴파일된 의존성을 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 pnpm install을 실행합니다.",
+      "npm run init 명령어로 브라우저 의존성을 설정합니다.",
+      "npm start로 서버를 구동하고 OpenAI 호환 API를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "네트워크 제한이 있는 경우 프록시 설정이 필요할 수 있습니다.",
+    "stars": 1396,
+    "forks": 356,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "browserable",
+    "name": "browserable",
+    "github": "https://github.com/browserable/browserable",
+    "description": "AI 에이전트를 위한 오픈소스 자체 호스팅형 브라우저 자동화 라이브러리입니다.",
+    "longDescription": "웹사이트 탐색, 폼 작성, 버튼 클릭, 정보 추출 기능을 갖춘 AI 브라우저 에이전트를 구축할 수 있도록 지원하며, Web Voyager 벤치마크에서 높은 성능을 검증받았습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "브라우저 자동화",
+      "Playwright",
+      "Docker",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://browserable.ai",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/browserable/browserable.git",
+        "note": "프로젝트 소스코드를 로컬에 클론합니다."
+      },
+      {
+        "title": "Docker Compose 실행",
+        "command": "docker-compose -f docker-compose.dev.yml up",
+        "note": "개발 환경 컨테이너를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker와 Docker Compose를 설치합니다.",
+      "저장소를 클론한 뒤 deployment 폴더로 이동합니다.",
+      "docker-compose 명령어로 개발 환경을 구동하고 관리자 대시보드에 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대시보드 접속 후 AI 제공자 API 키를 설정해야 정상 작동합니다.",
+    "stars": 1207,
+    "forks": 105,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "lcu",
+    "name": "LCU",
+    "github": "https://github.com/amontlabs/lcu",
+    "description": "공식 데스크톱 앱 인증 없이 독립적으로 실행되는 Codex 컴퓨터 유어스 런타임 하니스 도구입니다.",
+    "longDescription": "ChatGPT 데스크톱 앱의 컴퓨터 유어스 런타임과 지침을 추출하여, 인증 요구 없이 사용자의 에이전트 하니스(Harness)에 통합할 수 있도록 지원하는 도구입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "컴퓨터 유어스",
+      "AI 에이전트",
+      "CLI",
+      "JavaScript",
+      "macOS"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://lcu.amontlabs.com",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "ChatGPT desktop app",
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 추가",
+        "command": "claude plugin marketplace add amontlabs/lcu",
+        "note": "플러그인 마켓플레이스를 통해 LCU를 추가합니다."
+      },
+      {
+        "title": "플러그인 설치",
+        "command": "claude plugin install lcu@lcu",
+        "note": "플러그인을 활성화합니다."
+      }
+    ],
+    "usageSteps": [
+      "공식 ChatGPT 데스크톱 앱이 로컬에 설치되어 있는지 확인합니다.",
+      "에이전트 하니스에 LCU를 설치 및 설정합니다.",
+      "운영체제 권한을 확인하고 컴퓨터 유어스 기능을 연동합니다."
+    ],
+    "examplePrompt": "현재 OS 환경을 확인하고 LCU 설정을 완료해 줘.",
+    "usageNote": "공식 ChatGPT 데스크톱 앱이 로컬에 설치되어 있어야 런타임과 지침을 공급받을 수 있습니다.",
+    "stars": 1183,
+    "forks": 62,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "aipex",
+    "name": "AIPex",
+    "github": "https://github.com/AIPexStudio/AIPex",
+    "description": "기존 브라우저에서 실행되는 프라이버시 중심의 오픈소스 AI 브라우저 자동화 에이전트입니다.",
+    "longDescription": "별도의 브라우저 설치나 복잡한 워크플로우 학습 없이 기존 브라우저 환경에서 MCP와 스킬을 활용해 자동화 작업을 수행할 수 있습니다. 로컬 중심 실행으로 데이터가 외부로 유출되지 않으며 사용자가 직접 API 키를 관리합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "브라우저 자동화",
+      "AI 에이전트",
+      "MCP",
+      "크롬 확장 프로그램",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://claudechrome.com",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "MCP"
+    ],
+    "install": [],
+    "usageSteps": [
+      "저장소에서 확장 프로그램 코드를 다운로드합니다.",
+      "브라우저 확장 프로그램 관리자에서 개발자 모드를 활성화합니다.",
+      "압축을 해제한 폴더를 로드하여 확장 프로그램을 실행합니다."
+    ],
+    "examplePrompt": "현재 페이지에서 상품 가격 정보를 추출해서 요약해줘.",
+    "usageNote": "사용할 AI 모델의 API 키가 필요합니다.",
+    "stars": 1271,
+    "forks": 137,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "gemini-nexus",
+    "name": "Gemini-Nexus",
+    "github": "https://github.com/yeahhe365/Gemini-Nexus",
+    "description": "Gemini 웹, API 및 OpenAI 호환 인터페이스를 브라우저에 통합하는 크롬 확장 프로그램입니다.",
+    "longDescription": "사이드 패널과 플로팅 툴바를 제공하여 웹 페이지 컨텍스트 분석, 이미지 입력, 툴 호출 및 MCP 브라우저 제어를 지원합니다. 크롬 개발자 도구 프로토콜을 활용해 브라우저 네이티브 AI 워크플로우를 구현합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "Gemini",
+      "크롬 확장 프로그램",
+      "AI 에이전트",
+      "MCP",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/yeahhe365/Gemini-Nexus",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Gemini",
+      "MCP"
+    ],
+    "install": [
+      {
+        "title": "의존성 설치 및 패키징",
+        "command": "npm install && npm run package:extension",
+        "note": "패키지 설치 후 확장 프로그램 빌드를 진행합니다."
+      }
+    ],
+    "usageSteps": [
+      "릴리즈 페이지에서 최신 ZIP 파일을 다운로드하여 압축을 풉니다.",
+      "크롬 확장 프로그램 관리자에서 개발자 모드를 켭니다.",
+      "압축 해제된 폴더를 로드하여 확장 프로그램을 활성화합니다."
+    ],
+    "examplePrompt": "현재 보고 있는 웹페이지의 내용을 바탕으로 주요 항목을 정리해줘.",
+    "usageNote": "Gemini Web 또는 API 키 설정이 필요합니다.",
+    "stars": 1124,
+    "forks": 153,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "browsernode",
+    "name": "browsernode",
+    "github": "https://github.com/lennybase/browsernode",
+    "description": "AI 에이전트가 웹사이트를 쉽게 제어하고 자동화할 수 있도록 지원하는 TypeScript 구현체입니다.",
+    "longDescription": "Browser-use의 API 및 기능과 완전 호환되며, Playwright를 기반으로 AI 에이전트가 브라우저를 원활하게 조작할 수 있는 환경을 제공합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "AI 에이전트",
+      "브라우저 자동화",
+      "Playwright",
+      "TypeScript"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://browsernode.com/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Node.js (v20.19.4 이상)",
+      "npm"
+    ],
+    "supportedAgents": [
+      "OpenAI",
+      "Browser-use compatible agents"
+    ],
+    "install": [
+      {
+        "title": "패키지 및 Playwright 설치",
+        "command": "npm install browsernode && npm init playwright@latest && playwright install chromium",
+        "note": "라이브러리와 Chromium 드라이버를 함께 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 패키지를 설치합니다.",
+      "환경 변수 파일(.env)에 사용할 AI 모델의 API 키를 설정합니다.",
+      "스크립트를 작성하여 AI 에이전트 브라우저 자동화를 실행합니다."
+    ],
+    "examplePrompt": "GitHub에서 최신 트렌딩 리포지토리 목록을 검색해서 가져와줘.",
+    "usageNote": "Bun 환경에서는 Playwright 관련 버그가 있을 수 있어 Node.js 사용을 권장합니다.",
+    "stars": 1056,
+    "forks": 111,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "ovobrowser",
+    "name": "ovobrowser",
+    "github": "https://github.com/ovobrowsersupport/ovobrowser",
+    "description": "봇 탐지 테스트를 통과하기 위해 C++ 수준에서 수정된 소스级 Chromium 지문 커널입니다.",
+    "longDescription": "JS 주입 방식 대신 Chromium 소스 레벨에서 지문을 수정하여 컴파일하므로 탐지 사이트에서 일반적인 Chrome으로 인식됩니다. 다양한 프로그래밍 언어의 명령줄 제어를 지원합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "안티디텍트",
+      "브라우저 자동화",
+      "Chromium",
+      "지문 우회",
+      "Playwright"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ovobrowser.com/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "플랫폼에 맞는 바이너리 패키지를 다운로드합니다.",
+      "필요한 시작 인자와 함께 커널을 실행합니다.",
+      "Playwright나 Puppeteer 등의 자동화 도구를 해당 실행 파일에 연결합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "자동화 스크립트에서 지속형 컨텍스트(persistent context)와 함께 사용하는 것을 권장합니다.",
+    "stars": 1019,
+    "forks": 57,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "opentabs",
+    "name": "opentabs",
+    "github": "https://github.com/opentabs-dev/opentabs",
+    "description": "스크린샷이나 DOM 스크래핑 대신 브라우저 세션을 통해 실제 웹 API를 호출하는 AI 도구입니다.",
+    "longDescription": "사용자가 로그인한 인증 상태를 활용하여 API를 직접 호출하므로 별도의 API 키나 OAuth 설정 없이 MCP 클라이언트와 연동하여 웹 작업을 수행할 수 있습니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "MCP",
+      "브라우저 자동화",
+      "API",
+      "TypeScript",
+      "크롬 확장 프로그램"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://opentabs.dev",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Node.js",
+      "Chrome"
+    ],
+    "supportedAgents": [
+      "MCP 클라이언트",
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "CLI 설치",
+        "command": "npm install -g @opentabs-dev/cli",
+        "note": "전역 환경에 OpenTabs CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "CLI를 설치하고 크롬 확장 프로그램을 로드합니다.",
+      "로컬 서버와 브라우저를 연결합니다.",
+      "MCP 클라이언트를 통해 인증된 세션으로 API 기반 작업을 요청합니다."
+    ],
+    "examplePrompt": "디스코드 웹앱 세션을 통해 친구에게 메시지를 보내줘.",
+    "usageNote": "브라우저에 대상 서비스가 로그인되어 있어야 합니다.",
+    "stars": 988,
+    "forks": 99,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "scout",
+    "name": "scout",
+    "github": "https://github.com/outcrawlai/scout",
+    "description": "일반 언어로 작업 지시를 받아 실제 브라우저를 제어하여 작업을 완료하는 오픈소스 에이전트입니다.",
+    "longDescription": "사용자의 자연어 지시를 이해하고 웹페이지를 읽고 클릭, 입력, 스크롤 등의 작업을 수행한 뒤 결과를 반환합니다. 캡차 해결 기능을 포함한 클라우드 실행 및 로컬 실행을 모두 지원합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "AI 에이전트",
+      "브라우저 자동화",
+      "TypeScript",
+      "웹 스크래핑"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://outcrawl.ai",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Node.js (v22 이상)"
+    ],
+    "supportedAgents": [
+      "Outcrawl Agent"
+    ],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm i @outcrawl/scout",
+        "note": "프로젝트에 Scout 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js 환경에서 패키지를 설치합니다.",
+      "Outcrawl API 키와 사용할 모델의 API 키를 설정합니다.",
+      "수행할 태스크를 자연어로 작성하여 에이전트를 실행합니다."
+    ],
+    "examplePrompt": "해당 쇼핑몰에서 가장 저렴한 노트북을 찾아 모델명을 알려줘.",
+    "usageNote": "원활한 캡차 우회를 위해 클라우드 환경 연동을 권장합니다.",
+    "stars": 946,
+    "forks": 29,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "rustwright",
+    "name": "rustwright",
+    "github": "https://github.com/Skyvern-AI/rustwright",
+    "description": "Node 드라이버 없이 인프로세스 Rust CDP 엔진을 사용하여 기존 Playwright API를 고속으로 실행하는 브라우저 자동화 라이브러리입니다.",
+    "longDescription": "Python과 Node 환경에서 Playwright와 호환되면서도 속도가 빠르고 메모리 사용량을 줄여주며, 별도의 자동화 핑거프린트가 남지 않는 Chromium 전용 알파 버전 도구입니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "Playwright",
+      "CDP",
+      "Chromium",
+      "Rust",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Skyvern-AI/rustwright",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Python 또는 Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소 문서를 참고하여 패키지를 설치합니다.",
+      "기존 Playwright 스크립트의 드라이버 설정을 대체합니다.",
+      "Chromium 브라우저 자동화 작업을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 알파 단계이며 Chromium 전용으로 제공됩니다.",
+    "stars": 925,
+    "forks": 64,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "beachpatrol",
+    "name": "beachpatrol",
+    "github": "https://github.com/sebastiancarlos/beachpatrol",
+    "description": "Playwright 스크립트를 통해 일상적인 웹 브라우저 작업을 외부에서 제어하고 자동화할 수 있는 CLI 도구입니다.",
+    "longDescription": "터미널 환경에서 브라우저 기반의 반복 작업과 웹 라이프니츠 업무를 자동화할 수 있도록 설계된 엔드사용자용 자동화 허브입니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "CLI",
+      "브라우저 자동화",
+      "Playwright",
+      "JavaScript",
+      "터미널"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/sebastiancarlos/beachpatrol",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Node.js LTS (v22)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 의존성 설치",
+        "command": "git clone https://github.com/sebastiancarlos/beachpatrol && cd beachpatrol && npm install",
+        "note": "프로젝트를 클론하고 필요한 의존성 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "실행 파일 심볼릭 링크를 생성하거나 글로벌로 설치합니다.",
+      "터미널에서 명령어를 통해 브라우저 자동화 세션을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Playwright가 자동으로 Chromium 또는 Firefox를 설치합니다.",
+    "stars": 924,
+    "forks": 46,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "auto-browser",
+    "name": "auto-browser",
+    "github": "https://github.com/LvcidPsyche/auto-browser",
+    "description": "사용자가 개입할 수 있는 인간-참여형(Human-in-the-loop) MCP 네이티브 브라우저 에이전트입니다.",
+    "longDescription": "로컬 우선 원칙으로 설계된 오픈소스 브라우저 에이전트로, Playwright와 VNC, FastAPI를 결합하여 AI 에이전트가 실제 브라우저를 안전하게 제어하고 모니터링할 수 있도록 돕습니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "AI 에이전트",
+      "브라우저 자동화",
+      "MCP",
+      "Playwright",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/LvcidPsyche/auto-browser",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T06:03:59.673Z",
+    "requirements": [
+      "Docker",
+      "Python"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "MCP Client"
+    ],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하거나 GitHub Codespaces를 통해 환경을 엽니다.",
+      "컨테이너 또는 로컬 환경에서 서버를 실행합니다.",
+      "MCP 클라이언트를 연결하여 브라우저 제어 명령을 실행합니다."
+    ],
+    "examplePrompt": "구글 항공권 페이지에서 다음 주 제주도행 가장 저렴한 항공편을 찾아줘.",
+    "usageNote": "로컬 환경 또는 Codespaces에서 실행 시 대시보드와 noVNC 탭을 통해 진행 상황을 시각적으로 확인할 수 있습니다.",
+    "stars": 908,
+    "forks": 154,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
     "id": "agent-orchestrator",
     "name": "agent-orchestrator",
     "github": "https://github.com/OrchestratorInc/agent-orchestrator",
