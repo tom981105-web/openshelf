@@ -1,5 +1,681 @@
 [
   {
+    "id": "grid-map",
+    "name": "Grid Map",
+    "github": "https://github.com/ANYbotics/grid_map",
+    "description": "다중 데이터 레이어를 지원하는 모바일 로봇용 2.5차원 그리드 맵 C++ 라이브러리입니다.",
+    "longDescription": "Grid Map은 고도, 분산, 색상, 마찰 계수 등 다양한 지형 정보를 다층 구조로 관리할 수 있는 라이브러리입니다. 로봇 중심의 순환 버퍼 구조를 사용하여 거친 지형에서의 내비게이션 효율을 극대화합니다.",
+    "category": "공간정보",
+    "tags": [
+      "로보틱스",
+      "그리드맵",
+      "ROS",
+      "내비게이션",
+      "지형매핑"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/ANYbotics/grid_map",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "ROS",
+      "Eigen"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Debian 패키지 설치",
+        "command": "sudo apt-get install ros-$ROS_DISTRO-grid-map",
+        "note": "ROS 환경에서 패키지를 직접 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "ROS 환경에서 의존성 패키지를 설치합니다.",
+      "프로젝트 소스에 그리드 맵 패키지를 포함합니다.",
+      "로봇 센서 데이터를 연동하여 고도 및 지형 레이어를 생성합니다.",
+      "거친 지형 내비게이션 알고리즘에 맵 데이터를 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "ROS 배포판 버전에 맞는 의존성 확인이 필요합니다.",
+    "stars": 3259,
+    "forks": 883,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "lego-loam",
+    "name": "LeGO-LOAM",
+    "github": "https://github.com/RobustFieldAutonomyLab/LeGO-LOAM",
+    "description": "지상 주행 로봇을 위한 경량형 지면 최적화 라이다 오도메트리 및 매핑 시스템입니다.",
+    "longDescription": "LeGO-LOAM은 3차원 라이다 포인트 클라우드 데이터를 활용하여 실시간으로 6자유도 자세를 추정하는 오픈소스입니다. 지면 분할을 통해 연산량을 줄이고 실시간성을 높였습니다.",
+    "category": "공간정보",
+    "tags": [
+      "라이다",
+      "SLAM",
+      "오도메트리",
+      "로보틱스",
+      "ROS"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/RobustFieldAutonomyLab/LeGO-LOAM",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "ROS",
+      "GTSAM"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "GTSAM 다운로드 및 설치",
+        "command": "wget -O ~/Downloads/gtsam.zip https://github.com/borglab/gtsam/archive/4.0.0-alpha2.zip",
+        "note": "의존성 라이브러리인 GTSAM을 다운로드하여 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "ROS 및 GTSAM 의존성을 설치합니다.",
+      "Catkin 워크스페이스에 코드를 클론합니다.",
+      "패키지를 빌드하고 소스를 로드합니다.",
+      "라이다 및 IMU 데이터를 입력하여 실시간 6자유도 자세 추정을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Velodyne VLP-16 라이다 센서 사용을 기준으로 설계되었습니다.",
+    "stars": 2758,
+    "forks": 1163,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "kimera-vio",
+    "name": "Kimera-VIO",
+    "github": "https://github.com/MIT-SPARK/Kimera-VIO",
+    "description": "스테레오 카메라와 IMU 데이터를 활용한 고정밀 시각惯성 오도메트리 및 3D 메시 생성 파이프라인입니다.",
+    "longDescription": "Kimera-VIO는 실시간으로 카메라와 IMU 센서 데이터를 융합하여 로봇의 상태를 추정하고 실내외 환경의 3D 메시를 생성합니다. SLAM 기능과 결합하여 정확한 위치 인식을 지원합니다.",
+    "category": "공간정보",
+    "tags": [
+      "비주얼오도메트리",
+      "SLAM",
+      "3D재구성",
+      "로보틱스",
+      "C++"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://github.com/MIT-SPARK/Kimera-VIO",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "GTSAM = 4.1",
+      "OpenCV = 3.4",
+      "OpenGV"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "필수 사전 요구사항 라이브러리를 설치합니다.",
+      "작업 공간에 파이프라인을 클론하고 빌드합니다.",
+      "Euroc 등의 데이터셋 또는 실제 센서 스트림을 입력합니다.",
+      "실시간 상태 추정 결과와 3D 메시 출력을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Ubuntu 20.04 환경에서 테스트되었습니다.",
+    "stars": 1927,
+    "forks": 475,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "glim",
+    "name": "GLIM",
+    "github": "https://github.com/koide3/glim",
+    "description": "다양한 라이다 센서와 호환되는 범용적이고 확장 가능한 포인트 클라우드 기반 3D 매핑 프레임워크입니다.",
+    "longDescription": "GLIM은 팩터 그래프 기반의 다중 스캔 등록 오차 최소화를 통해 일관성 있는 맵을 생성합니다. GPU 가속을 지원하며, 수동 맵 보정을 위한 대화형 인터페이스를 제공합니다.",
+    "category": "공간정보",
+    "tags": [
+      "3D매핑",
+      "라이다",
+      "SLAM",
+      "GPU가속",
+      "ROS2"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://koide3.github.io/glim/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "Eigen",
+      "GTSAM",
+      "CUDA (선택)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "필수 의존성 라이브러리(Eigen, GTSAM 등)를 설치합니다.",
+      "프로젝트를 빌드하고 환경을 설정합니다.",
+      "센서 데이터를 로드하여 매핑 프로세스를 실행합니다.",
+      "필요시 대화형 인터페이스를 통해 맵핑 결과를 수정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "최신 버전 빌드를 위해 지정된 GTSAM 및 gtsam_points 버전을 사용해야 합니다.",
+    "stars": 1884,
+    "forks": 296,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "meshtastic-android",
+    "name": "Meshtastic Android",
+    "github": "https://github.com/meshtastic/Meshtastic-Android",
+    "description": "오프그리드 환경에서 LoRa 기반 암호화된 메시 네트워크 통신을 지원하는 안드로이드 애플리케이션입니다.",
+    "longDescription": "Meshtastic Android는 셀룰러 네트워크가 없는 오프그리드 상황에서도 LoRa 라디오 기기와 연동하여 메시 네트워크를 통해 메시지를 주고받을 수 있게 해주는 모바일 앱입니다.",
+    "category": "협업·소통",
+    "tags": [
+      "LoRa",
+      "안드로이드",
+      "메시네트워크",
+      "오프그리드",
+      "암호화통신"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://meshtastic.org",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "Android 기기",
+      "Meshtastic 하드웨어 기기"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "안드로이드 기기에 앱을 설치하거나 Obtainium을 통해 업데이트를 설정합니다.",
+      "블루투스를 통해 Meshtastic 하드웨어 기기와 페어링합니다.",
+      "앱 인터페이스를 통해 채널 설정을 구성합니다.",
+      "인터넷 연결 없이도 메시지 송수신 및 위치 공유를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "구글 서비스 포함 여부에 따라 google 또는 fdroid 빌드를 선택할 수 있습니다.",
+    "stars": 1876,
+    "forks": 531,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "streamlit-geospatial",
+    "name": "Streamlit Geospatial",
+    "github": "https://github.com/opengeos/streamlit-geospatial",
+    "description": "공간 데이터 분석과 시각화를 위한 멀티페이지 Streamlit 웹 애플리케이션입니다.",
+    "longDescription": "Streamlit Geospatial은 다양한 지리 공간 데이터 처리 및 시각화 도구를 웹 브라우저에서 손쉽게 사용할 수 있도록 구성된 오픈소스 멀티페이지 앱 템플릿입니다.",
+    "category": "공간정보",
+    "tags": [
+      "Streamlit",
+      "지리정보",
+      "데이터시각화",
+      "파이썬",
+      "웹앱"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://huggingface.co/spaces/giswqs/Streamlit",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "Python",
+      "Streamlit"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "레포지토리 포크 및 클론",
+        "command": "git clone https://github.com/opengeos/streamlit-geospatial.git",
+        "note": "깃허브 레포지토리를 로컬에 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "레포지토리를 본인의 계정으로 포크 및 클론합니다.",
+      "필요한 파이썬 패키지 의존성을 설치합니다.",
+      "pages/ 디렉토리에 새로운 앱 파일을 추가하여 기능을 확장합니다.",
+      "Streamlit을 실행하여 웹 대시보드를 구동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Streamlit Cloud에 무료로 배포하여 웹에서 바로 활용할 수 있습니다.",
+    "stars": 1031,
+    "forks": 451,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "direct-lidar-inertial-odometry",
+    "name": "Direct LiDAR-Inertial Odometry",
+    "github": "https://github.com/vectr-ucla/direct_lidar_inertial_odometry",
+    "description": "연속 시간 궤적을 구성하여 모션 보정을 수행하는 고정밀 경량형 라이다-惯성 오도메트리입니다.",
+    "longDescription": "DLIO는 새로운 Coarse-to-Fine 접근 방식을 적용하여 라이다와 IMU 데이터를 실시간으로 융합하는 오도메트리 알고리즘입니다. 까다로운 환경에서도 일관된 위치 추정을 제공합니다.",
+    "category": "공간정보",
+    "tags": [
+      "라이다",
+      "센서융합",
+      "오도메트리",
+      "SLAM",
+      "로보틱스"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/vectr-ucla/direct_lidar_inertial_odometry",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "ROS",
+      "OpenMP",
+      "PCL",
+      "Eigen"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 패키지 설치",
+        "command": "sudo apt install libomp-dev libpcl-dev libeigen3-dev",
+        "note": "컴파일에 필요한 필수 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "ROS 워크스페이스 내 src 디렉토리로 이동합니다.",
+      "레포지토리를 클론합니다.",
+      "catkin_tools를 사용하여 패키지를 컴파일합니다.",
+      "라이다 및 IMU 센서 노드를 실행하여 오도메트리를 구동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "ROS1 환경을 기본 지원하며, ros2 브랜치를 통해 ROS2도 지원합니다.",
+    "stars": 1060,
+    "forks": 265,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "lidar-slam-ros2",
+    "name": "LiDAR SLAM ROS 2",
+    "github": "https://github.com/rsasaki0109/lidar_slam_ros2",
+    "description": "포인트 클라우드 맵 제작과 벤치마킹을 지원하는 ROS 2 기반 라이다 SLAM 패키지입니다.",
+    "longDescription": "lidar_slam_ros2는 ROS 2 환경에서 포인트 클라우드 맵을 저작하고 성능을 평가할 수 있는 툴킷입니다. Autoware와 호환되는 맵 워크플로우를 제공하여 자율주행 연구에 유용합니다.",
+    "category": "공간정보",
+    "tags": [
+      "ROS2",
+      "라이다",
+      "SLAM",
+      "자율주행",
+      "맵작성"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://rsasaki0109.github.io/lidar_slam_ros2/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "ROS 2 (Humble / Jazzy)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "ROS 2 Humble 또는 Jazzy 환경을 준비합니다.",
+      "소스 코드를 빌드하고 패키지를 로드합니다.",
+      "rosbag 데이터를 이용하여 맵핑 진단 및 빌드를 실행합니다.",
+      "생성된 포인트 클라우드 맵을 내보내어 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "상세한 소스 빌드 및 데모 실행은 소스퀵스타트 스크립트를 참고하세요.",
+    "stars": 863,
+    "forks": 174,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "leaflet-markercluster",
+    "name": "Leaflet.markercluster",
+    "github": "https://github.com/Leaflet/Leaflet.markercluster",
+    "description": "Leaflet 지도 라이브러리를 위한 마커 클러스터링 플러그인입니다.",
+    "longDescription": "많은 수의 지리적 마커를 화면에 표시할 때 성능 저하를 막기 위해 클러스터 단위로 묶어서 시각화합니다. 부드러운 애니메이션과 다양한 커스터마이징 옵션을 제공합니다.",
+    "category": "공간정보",
+    "tags": [
+      "JavaScript",
+      "Leaflet",
+      "지도",
+      "클러스터링"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Leaflet/Leaflet.markercluster",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "Leaflet 1.0.0 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install leaflet.markercluster",
+        "note": "Node.js 환경에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Leaflet 및 마커 클러스터 CSS와 JS 파일을 불러옵니다.",
+      "L.markerClusterGroup()을 사용하여 클러스터 그룹 객체를 생성합니다.",
+      "마커를 그룹에 추가한 뒤 지도에 레이어로 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4172,
+    "forks": 999,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "maplab",
+    "name": "maplab",
+    "github": "https://github.com/ethz-asl/maplab",
+    "description": "모듈식 및 다중 모달 매핑과 로봇 위치 추정을 위한 프레임워크입니다.",
+    "longDescription": "로봇 공학 및 SLAM 연구를 위해 설계된 오픈소스 프레임워크로, 대규모 시각 및 관성 데이터 기반의 지도 생성과 최적화를 지원합니다.",
+    "category": "공간정보",
+    "tags": [
+      "C++",
+      "SLAM",
+      "로봇공학",
+      "매핑"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://maplab.asl.ethz.ch",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "Ubuntu 18.04/20.04",
+      "ROS Melodic"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "ROS 환경 및 시스템 의존성을 설치합니다.",
+      "소스 코드를 catkin 워크스페이스에 클론합니다.",
+      "catkin 빌드 도구를 사용하여 프로젝트를 컴파일합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2882,
+    "forks": 750,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "elevation-mapping",
+    "name": "elevation_mapping",
+    "github": "https://github.com/ANYbotics/elevation_mapping",
+    "description": "거친 지형 탐색을 위한 모바일 로봇 중심의 고도 지도를 생성하는 ROS 패키지입니다.",
+    "longDescription": "포즈 추정 장치와 거리 센서를 활용하여 로봇 주변의 고도 지도를 실시간으로 구축하며, 센서 노이즈와 위치 오차를 고려하도록 설계되었습니다.",
+    "category": "공간정보",
+    "tags": [
+      "C++",
+      "ROS",
+      "로봇공학",
+      "고도 지도"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/ANYbotics/elevation_mapping",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "ROS",
+      "Grid Map",
+      "kindr"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "ROS 및 필수 의존성 패키지를 설치합니다.",
+      "워크스페이스에 패키지를 클론하고 빌드합니다.",
+      "로봇 센서 토픽과 연동하여 고도 맵핑 노드를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 활발히 유지보수되지 않는 연구용 코드입니다.",
+    "stars": 1892,
+    "forks": 510,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "mapsui",
+    "name": "Mapsui",
+    "github": "https://github.com/Mapsui/Mapsui",
+    "description": ".NET 기반 멀티플랫폼 애플리케이션을 위한 오픈소스 맵 컴포넌트입니다.",
+    "longDescription": "MAUI, Avalonia, WPF, Blazor 등 다양한 .NET UI 프레임워크에서 OpenStreetMap 등의 지도를 쉽게 렌더링하고 상호작용할 수 있도록 지원합니다.",
+    "category": "공간정보",
+    "tags": [
+      "C#",
+      ".NET",
+      "GIS",
+      "지도"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://mapsui.com",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      ".NET SDK"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NuGet 패키지 설치",
+        "command": "dotnet add package Mapsui",
+        "note": ".NET 프로젝트에 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Mapsui NuGet 패키지를 설치합니다.",
+      "UI 뷰에 지도 컨트롤을 배치합니다.",
+      "레이어와 타일 소스를 설정하여 지도를 화면에 렌더링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1578,
+    "forks": 355,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "farmos",
+    "name": "farmOS",
+    "github": "https://github.com/farmOS/farmOS",
+    "description": "농장 경영 및 기록 관리를 위한 웹 기반 오픈소스 플랫폼입니다.",
+    "longDescription": "농경지, 작물, 가축, 장비 데이터와 센서 정보를 기록하고 지리적 정보와 연계하여 효율적인 농장 관리를 수행할 수 있도록 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "PHP",
+      "Drupal",
+      "농업",
+      "기록 관리"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://farmOS.org",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "Docker 또는 PHP/Drupal 서버 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker pull farmos/farmos",
+        "note": "도커를 통해 컨테이너 이미지를 내려받습니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 또는 도커 환경에 farmOS를 배포합니다.",
+      "웹 인터페이스에 접속하여 초기 관리자 계정을 설정합니다.",
+      "농장 구역 지도와 자산 정보를 입력하여 관리를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1373,
+    "forks": 368,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "facet",
+    "name": "Facet",
+    "github": "https://github.com/Tim-Maes/Facet",
+    "description": "도메인 모델로부터 DTO, 매퍼, 생성자 및 LINQ 프로젝션을 생성하는 .NET 소스너비 기반 생성기입니다.",
+    "longDescription": "컴파일 타임에 코드를 생성하여 런타임 오버헤드와 리플렉션을 없애고, EF Core 등과 연동하여 객체 매핑 효율을 높여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C#",
+      ".NET",
+      "코드 생성",
+      "DTO"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Tim-Maes/Facet",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      ".NET SDK"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NuGet 패키지 설치",
+        "command": "dotnet add package Facet",
+        "note": "프로젝트에 Facet 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Facet NuGet 패키지를 설치합니다.",
+      "도메인 모델에 적절한 속성이나 설정을 적용합니다.",
+      "컴파일 타임에 자동 생성된 DTO 및 매퍼 코드를 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1206,
+    "forks": 55,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "streets-gl",
+    "name": "streets-gl",
+    "github": "https://github.com/StrandedKitty/streets-gl",
+    "description": "WebGL2를 기반으로 구동되는 실시간 OpenStreetMap 3D 렌더러입니다.",
+    "longDescription": "웹 브라우저에서 오픈스트리트맵 데이터를 활용해 복잡한 건물 형상과 도시 경관을 시각적으로 뛰어난 3D 그래픽으로 실시간 렌더링합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "TypeScript",
+      "WebGL2",
+      "3D 렌더링",
+      "OpenStreetMap"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://streets.gl",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T15:04:04.544Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치 및 실행",
+        "command": "npm i && npm run dev",
+        "note": "패키지 설치 후 로컬 개발 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 프로젝트 폴더로 이동합니다.",
+      "npm i 명령어로 의존성을 설치합니다.",
+      "npm run dev 명령어로 로컬 서버를 구동하여 3D 맵을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1103,
+    "forks": 111,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
     "id": "final2x",
     "name": "Final2x",
     "github": "https://github.com/EutropicAI/Final2x",
