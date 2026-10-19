@@ -1,5 +1,849 @@
 [
   {
+    "id": "gemini-mcp-tool",
+    "name": "Gemini MCP Tool",
+    "github": "https://github.com/jamubc/gemini-mcp-tool",
+    "description": "AI 어시스턴트가 Google Gemini CLI를 통해 대용량 파일 분석 및 코드베이스 이해를 수행할 수 있게 해주는 MCP 서버입니다.",
+    "longDescription": "Gemini의 대규모 토큰 윈도우를 활용하여 대형 프로젝트의 소스 코드를 효율적으로 분석하고, Claude 등의 클라이언트와 연동할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Gemini",
+      "MCP",
+      "코드 분석",
+      "TypeScript",
+      "CLI"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://jamubc.github.io/gemini-mcp-tool/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "Claude Code에 추가",
+        "command": "claude mcp add gemini-cli -- npx -y gemini-mcp-tool",
+        "note": "Claude Code 환경에 MCP 서버를 등록합니다."
+      }
+    ],
+    "usageSteps": [
+      "명령어를 통해 MCP 서버를 등록합니다.",
+      "Claude 환경에서 /mcp 명령어로 활성화 여부를 확인합니다.",
+      "대용량 코드베이스 분석 작업을 수행합니다."
+    ],
+    "examplePrompt": "Gemini CLI를 통해 이 대규모 프로젝트의 아키텍처를 분석해 줘.",
+    "usageNote": "",
+    "stars": 2290,
+    "forks": 214,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "mcp-use",
+    "name": "mcp-use",
+    "github": "https://github.com/mcp-use/mcp-use",
+    "description": "ChatGPT 및 Claude를 위한 Model Context Protocol(MCP) 앱과 AI 에이전트 서버를 개발하기 위한 풀스택 타입스크립트 프레임워크입니다.",
+    "longDescription": "타입 안정성을 제공하며 기본 뷰 및 MCP 앱 지원, 내장 검사기(Inspector)를 포함하여 AI 에이전트용 MCP 서버와 플러그인을 빠르게 빌드하고 배포할 수 있도록 돕습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "TypeScript",
+      "MCP",
+      "ChatGPT",
+      "Claude",
+      "프레임워크"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://manufact.com",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Client SDK 설치",
+        "command": "npm install --save-dev @mcp-use/client",
+        "note": "프로젝트에 mcp-use 클라이언트 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 @mcp-use 패키지를 설치합니다.",
+      "MCP 서버 및 툴 로직을 구현합니다.",
+      "내장된 Inspector를 통해 서버를 테스트합니다."
+    ],
+    "examplePrompt": "Migrate this mcp-use project to v2 following https://docs.mcp-use.com/v2/typescript/server/migration",
+    "usageNote": "",
+    "stars": 10783,
+    "forks": 1511,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "magic-mcp",
+    "name": "magic-mcp",
+    "github": "https://github.com/21st-dev/magic-mcp",
+    "description": "에디터 내에서 React/Tailwind 컴포넌트를 검색하고 AI로 UI를 생성할 수 있는 통합 21st MCP 서버입니다.",
+    "longDescription": "Cursor, Claude Code, Windsurf 등의 에디터와 연동되어 1만 개 이상의 리액트 컴포넌트를 탐색하고 새로운 UI 코드를 즉시 생성할 수 있는 개발 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "React",
+      "TailwindCSS",
+      "MCP",
+      "Cursor",
+      "UI 컴포넌트"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "ISC",
+    "website": "https://21st.dev/mcp",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI 초기화",
+        "command": "npx @21st-dev/cli@latest init --client cursor",
+        "note": "사용 중인 클라이언트에 맞춰 21st MCP를 설정합니다."
+      }
+    ],
+    "usageSteps": [
+      "CLI 명령어를 실행하여 에디터에 MCP를 연동합니다.",
+      "API 키를 설정합니다.",
+      "AI 에디터 내에서 컴포넌트 검색 및 UI 생성을 요청합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "API 키가 필요합니다.",
+    "stars": 6103,
+    "forks": 493,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "ghidra-mcp",
+    "name": "ghidra-mcp",
+    "github": "https://github.com/bethington/ghidra-mcp",
+    "description": "AI 기반 리버스 엔지니어링을 위해 200개 이상의 MCP 툴과 Ghidra GUI 플러그인을 제공하는 서버입니다.",
+    "longDescription": "국가안보국(NSA)의 Ghidra와 연동되어 바이너리 분석, 정적 분석, 일괄 작업을 AI 에이전트가 수행할 수 있도록 지원하는 확장 프로그램입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Ghidra",
+      "리버스엔지니어링",
+      "바이너리분석",
+      "Java",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/bethington/ghidra-mcp",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Ghidra",
+      "Java 21",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "확장 프로그램 설치",
+        "command": "Ghidra 창에서 File  Install Extensions 선택",
+        "note": "다운로드한 zip 파일을 추가하고 Ghidra를 재시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "Ghidra에서 확장 프로그램(.zip)을 설치합니다.",
+      "GhidraMCPPlugin을 활성화합니다.",
+      "AI 클라이언트를 통해 리버스 엔지니어링 툴을 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정확히 일치하는 Ghidra 버전에서만 로드됩니다.",
+    "stars": 5773,
+    "forks": 349,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "exa-mcp-server",
+    "name": "exa-mcp-server",
+    "github": "https://github.com/exa-labs/exa-mcp-server",
+    "description": "AI 에이전트가 웹 검색, 콘텐츠 수집, 다단계 조사를 수행할 수 있도록 Exa 검색 기능을 제공하는 MCP 서버입니다.",
+    "longDescription": "LLM 및 에이전트가 최신 웹 정보를 탐색하고 문서 내용을 추출하여 고도화된 리서치를 수행할 수 있도록 지원하는 원격 및 플러그인 형태의 MCP 서버입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "웹검색",
+      "크롤링",
+      "리서치",
+      "MCP",
+      "Exa"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://exa.ai/docs/reference/exa-mcp",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Exa API Key"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Claude 플러그인 설치",
+        "command": "claude plugin install exa@claude-plugins-official",
+        "note": "Claude CLI 또는 마켓플레이스를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Exa API 키를 발급받습니다.",
+      "MCP 호스트 또는 클라이언트에 Exa 서버를 연결합니다.",
+      "AI에게 웹 검색 및 정보 수집을 지시합니다."
+    ],
+    "examplePrompt": "Exa를 사용해 최신 AI 에이전트 프레임워크 동향을 조사해 줘.",
+    "usageNote": "",
+    "stars": 5138,
+    "forks": 415,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "arxiv-mcp-server",
+    "name": "arxiv-mcp-server",
+    "github": "https://github.com/blazickjp/arxiv-mcp-server",
+    "description": "arXiv 논문의 원본 LaTeX 섹션 읽기, BibTeX 생성, 토픽 모니터링을 지원하는 로컬 MCP 서버입니다.",
+    "longDescription": "연구원과 개발자가 AI 에이전트를 통해 arXiv 논문 데이터를 로컬 디스크에 유지하면서 효율적으로 검색하고 문헌 연구를 수행할 수 있도록 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "arXiv",
+      "논문",
+      "연구",
+      "Python",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.pulsemcp.com/servers/blazickjp-arxiv-mcp-server",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uvx 실행",
+        "command": "uvx arxiv-mcp-server",
+        "note": "별도의 리포지토리 복제 없이 즉시 실행할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "uv 도구를 설치합니다.",
+      "Claude Desktop 등 MCP 지원 클라이언트 설정에 stdio 구성을 추가합니다.",
+      "에이전트를 통해 논문 검색 및 LaTeX 내용을 조회합니다."
+    ],
+    "examplePrompt": "arXiv에서 최근 발표된 RAG 관련 최신 논문을 검색해 줘.",
+    "usageNote": "",
+    "stars": 3225,
+    "forks": 270,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "jadx-ai-mcp",
+    "name": "jadx-ai-mcp",
+    "github": "https://github.com/zinja-coder/jadx-ai-mcp",
+    "description": "JADX 디컴파일러와 LLM을 연동하여 안드로이드 APK를 자동 분석하고 취약점을 진단하는 JADX 플러그인 및 MCP 서버입니다.",
+    "longDescription": "모바일 앱 보안 진단 및 리버스 엔지니어링 과정에서 Claude 등의 LLM이 JADX를 통해 APK 구조를 분석하고 취약점을 쉽게 찾을 수 있도록 돕습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "JADX",
+      "안드로이드",
+      "보안진단",
+      "리버스엔지니어링",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/zinja-coder/jadx-ai-mcp",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "JADX",
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "JADX 플러그인 설치",
+        "command": "jadx plugins --install \"github:zinja-coder:jadx-ai-mcp\"",
+        "note": "JADX 셸을 통해 최신 플러그인을 직접 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "JADX 환경에서 플러그인 설치 명령어를 실행합니다.",
+      "JADX-GUI를 통해 APK 파일을 엽니다.",
+      "AI 어시스턴트를 통해 코드 분석 및 취약점 진단을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2915,
+    "forks": 290,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "appllama-skills",
+    "name": "appllama-skills",
+    "github": "https://github.com/Appllama/appllama-skills",
+    "description": "상위 매출 모바일 앱의 UI 패턴과 디자인 시스템을 AI 에이전트에 학습시켜 네이티브 수준의 모바일 화면을 구현하게 해주는 에이전트 스킬입니다.",
+    "longDescription": "실제 성공한 앱들의 화면과 디자인 흐름을 분석하여 Claude Code, Cursor 등의 에이전트가 시뮬레이터 검증을 거친 고품질 모바일 앱 UI 코드를 작성할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "모바일개발",
+      "React Native",
+      "UI디자인",
+      "에이전트스킬",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://appllama.io/mcp",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "스킬 추가",
+        "command": "npx skills@latest add appllama/appllama-skills",
+        "note": "프로젝트 루트에서 실행하여 에이전트에 스킬을 통합합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 루트 디렉토리에서 설치 명령어를 실행합니다.",
+      "사용 중인 AI 에이전트(Claude Code, Cursor 등)를 선택합니다.",
+      "모바일 화면 UI 구현을 에이전트에 요청합니다."
+    ],
+    "examplePrompt": "상위 금융 앱의 로그인 화면 패턴을 참고해서 리액트 네이티브 화면을 만들어 줘.",
+    "usageNote": "",
+    "stars": 2890,
+    "forks": 154,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "nitrostack",
+    "name": "NitroStack",
+    "github": "https://github.com/nitrocloudofficial/nitrostack",
+    "description": "프로덕션 수준의 Model Context Protocol(MCP) 서버와 AI 네이티브 앱을 구축, 테스트, 배포하는 풀스택 TypeScript 프레임워크입니다.",
+    "longDescription": "데코레이터, 의존성 주입, 위젯을 지원하여 엔터프라이즈 환경에서 안전하고 효율적으로 AI 백엔드와 MCP 서버를 개발할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "MCP",
+      "AI 백엔드",
+      "프레임워크"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://nitrostack.ai",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Node.js = 20.18",
+      "npm = 9"
+    ],
+    "supportedAgents": [
+      "MCP 클라이언트"
+    ],
+    "install": [
+      {
+        "title": "프로젝트 생성",
+        "command": "npx @nitrostack/cli init my-server",
+        "note": "새로운 NitroStack 프로젝트를 스캐폴딩합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리로 이동합니다.",
+      "의존성을 설치합니다.",
+      "개발 서버를 실행하여 MCP 호환 클라이언트에 연결합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2534,
+    "forks": 1490,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "aisoc",
+    "name": "AiSOC",
+    "github": "https://github.com/beenuar/AiSOC",
+    "description": "보안 텔레메트리를 수집하고 LLM 에이전트를 통해 위협을 탐지·조치하는 오픈소스 AI 보안 운영 센터(SOC)입니다.",
+    "longDescription": "MITRE ATT&CK 프레임워크와 연동되어 에이전트의 추론 과정을 기록하고, API 키 없이 자체 호스팅 환경에서 안전하게 보안 인시던트를 대응할 수 있습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "SIEM",
+      "LLM 에이전트",
+      "MCP",
+      "위협 탐지"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://beenuar.github.io/AiSOC/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Python 3.9+",
+      "Docker",
+      "Make"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Cursor",
+      "Continue"
+    ],
+    "install": [
+      {
+        "title": "설치 및 의존성 확인",
+        "command": "make doctor",
+        "note": "시스템 요구사항을 검사합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 환경 설정을 마칩니다.",
+      "make up 명령어로 컨테이너 서비스를 실행합니다.",
+      "보안 로그 수집 및 LLM 에이전트 기반 위협 대응을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "첫 실행 시 약 2GB 규모의 모델이 다운로드됩니다.",
+    "stars": 2417,
+    "forks": 271,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "toolhive",
+    "name": "ToolHive",
+    "github": "https://github.com/stacklok/toolhive",
+    "description": "격리된 컨테이너 환경에서 Model Context Protocol(MCP) 서버를 안전하게 실행하고 관리하는 엔터프라이즈 플랫폼입니다.",
+    "longDescription": "요청별 ID 및 접근 제어 정책을 적용하고, 플랫폼 팀에 필요한 감사 로그 및 관측 가능성을 제공하여 안전한 MCP 운영을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "MCP",
+      "보안",
+      "컨테이너",
+      "Kubernetes",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://stacklok.com/download/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Go",
+      "컨테이너 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "ToolHive를 설치합니다.",
+      "격리된 컨테이너 환경에서 MCP 서버를 실행합니다.",
+      "접근 정책 및 인증 소스를 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2295,
+    "forks": 319,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "boss-agent-cli",
+    "name": "Boss Agent CLI",
+    "github": "https://github.com/can4hou6joeng4/boss-agent-cli",
+    "description": "AI 에이전트와 사용자가 활용할 수 있는 채용 플랫폼(BOSS 직聘) 연동 터미널 도구입니다.",
+    "longDescription": "복리후생 필터링, 로컬 후보군 관리, JSON 형식 출력 기능을 제공하며 준법적이고 안전한 채용 정보 수집 워크플로우를 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "채용",
+      "CLI",
+      "Python",
+      "MCP",
+      "자동화"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://can4hou6joeng4.github.io/boss-agent-cli/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Python = 3.10",
+      "uv"
+    ],
+    "supportedAgents": [
+      "Claude"
+    ],
+    "install": [
+      {
+        "title": "CLI 설치",
+        "command": "uv tool install boss-agent-cli",
+        "note": "uv를 사용하여 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "boss login 명령어로 계정에 로그인합니다.",
+      "boss search 명령어로 조건에 맞는 공고를 검색합니다.",
+      "목록을 필터링하고 후보군에 추가합니다."
+    ],
+    "examplePrompt": "광주 지역에서 주 5일 휴무 조건의 Golang 개발자 포지션을 찾아줘.",
+    "usageNote": "",
+    "stars": 2104,
+    "forks": 176,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "gitlab-mcp",
+    "name": "GitLab MCP",
+    "github": "https://github.com/zereight/gitlab-mcp",
+    "description": "GitLab REST 및 GraphQL API를 활용하여 프로젝트, 머지 리퀘스트, 이슈 등을 제어할 수 있는 100개 이상의 도구를 제공하는 MCP 서버입니다.",
+    "longDescription": "AI 어시스턴트가 GitLab 환경과 상호작용하여 이슈 관리, 파이프라인 모니터링, 코드 리뷰 등의 개발 작업을 자동화할 수 있게 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "GitLab",
+      "MCP",
+      "API",
+      "TypeScript",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://zereight.github.io/gitlab-mcp/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Cursor"
+    ],
+    "install": [
+      {
+        "title": "VS Code 확장 설치",
+        "command": "npx -y @zereight/mcp-gitlab@latest",
+        "note": "GitLab MCP 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "GitLab 개인 액세스 토큰을 환경 변수로 설정합니다.",
+      "MCP 클라이언트 설정에 서버 구성을 추가합니다.",
+      "AI를 통해 GitLab 이슈와 머지 리퀘스트를 관리합니다."
+    ],
+    "examplePrompt": "최근 열린 머지 리퀘스트 목록을 보여주고 리뷰해 줘.",
+    "usageNote": "",
+    "stars": 2049,
+    "forks": 359,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "mcphub-nvim",
+    "name": "MCP Hub Neovim",
+    "github": "https://github.com/ravitemer/mcphub.nvim",
+    "description": "네오빈(Neovim) 편집기 내에서 MCP 서버를 관리하고 테스트할 수 있는 MCP 클라이언트 플러그인입니다.",
+    "longDescription": "직관적인 인터페이스를 통해 인기 있는 채팅 플러그인과 MCP 서버를 매끄럽게 연동하여 개발 생산성을 높여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Neovim",
+      "Lua",
+      "MCP",
+      "에디터",
+      "플러그인"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ravitemer.github.io/mcphub.nvim/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Neovim",
+      "Lua"
+    ],
+    "supportedAgents": [
+      "Avante",
+      "ChatGPT",
+      "CodeCompanion"
+    ],
+    "install": [],
+    "usageSteps": [
+      "네오빈 패키지 매니저를 통해 플러그인을 설치합니다.",
+      "MCP 서버 설정을 구성합니다.",
+      "에디터 내에서 AI 채팅 플러그인과 함께 MCP 도구를 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1789,
+    "forks": 112,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "openosint",
+    "name": "OpenOSINT",
+    "github": "https://github.com/OpenOSINT/OpenOSINT",
+    "description": "자연어 인터페이스와 MCP 서버를 지원하는 오픈소스 AI 기반 공개 출처 정보(OSINT) 수집 및 분석 에이전트입니다.",
+    "longDescription": "20개 이상의 조사 도구를 REPL, CLI, MCP 서버 또는 웹 UI 형태로 제공하여 보안 연구원과 분석가가 신속하게 정보를 수집할 수 있도록 돕습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "OSINT",
+      "보안",
+      "파이썬",
+      "MCP",
+      "위협 정보"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://openosint.tech",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Python",
+      "uv"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "GPT-4"
+    ],
+    "install": [
+      {
+        "title": "MCP 서버 실행",
+        "command": "uvx --from openosint openosint-mcp",
+        "note": "패키지를 다운로드하고 MCP 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "uv 도구를 이용하여 OpenOSINT를 실행합니다.",
+      "자연어 질의를 통해 OSINT 조사를 수행합니다.",
+      "결과 데이터를 분석하고 검증합니다."
+    ],
+    "examplePrompt": "특정 대상에 대한 오픈소스 정보를 수집하고 요약해 줘.",
+    "usageNote": "허가된 보안 연구 및 분석 목적으로만 사용해야 합니다.",
+    "stars": 1775,
+    "forks": 281,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "mcp-language-server",
+    "name": "MCP Language Server",
+    "github": "https://github.com/isaacphi/mcp-language-server",
+    "description": "MCP 호환 클라이언트에 정의 찾기, 참조, 이름 변경, 진단 등의 의미론적 코드 분석 기능을 제공하는 언어 서버 브리지입니다.",
+    "longDescription": "Language Server Protocol(LSP)을 MCP로 변환하여 AI 어시스턴트가 소스 코드의 구조를 정확하게 파악하고 조작할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "LSP",
+      "MCP",
+      "Go",
+      "코드 분석",
+      "개발 도구"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/isaacphi/mcp-language-server",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Go",
+      "Language Server (예: gopls)"
+    ],
+    "supportedAgents": [
+      "MCP 클라이언트"
+    ],
+    "install": [
+      {
+        "title": "서버 설치",
+        "command": "go install github.com/isaacphi/mcp-language-server@latest",
+        "note": "Go를 이용하여 최신 버전을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Go 환경에서 서버를 설치합니다.",
+      "대상 언어의 언어 서버를 설치합니다.",
+      "MCP 클라이언트 설정에 서버를 추가합니다."
+    ],
+    "examplePrompt": "이 함수의 정의와 참조 위치를 찾아줘.",
+    "usageNote": "",
+    "stars": 1611,
+    "forks": 159,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "apple-docs-mcp",
+    "name": "Apple Docs MCP",
+    "github": "https://github.com/kimsungwhee/apple-docs-mcp",
+    "description": "애플 공식 개발자 문서, SwiftUI/UIKit API, WWDC 영상, 코드 예제를 AI 어시스턴트에서 검색할 수 있게 해주는 MCP 서버입니다.",
+    "longDescription": "자연어 질의를 통해 iOS, macOS, watchOS 등 애플 플랫폼의 방대한 기술 문서와 API 레퍼런스를 개발 환경 내에서 즉시 조회할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Apple",
+      "SwiftUI",
+      "iOS",
+      "MCP",
+      "문서 검색"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.npmjs.com/package/@kimsungwhee/apple-docs-mcp",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T02:03:58.907Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Claude Code",
+      "Cursor"
+    ],
+    "install": [
+      {
+        "title": "Claude Code에 추가",
+        "command": "claude mcp add apple-docs -- npx -y @kimsungwhee/apple-docs-mcp@latest",
+        "note": "Claude Code 환경에 애플 문서 MCP를 등록합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 명령어를 실행하여 MCP 서버를 등록합니다.",
+      "클라이언트를 재시작합니다.",
+      "애플 API 및 개발 문서에 대해 질문합니다."
+    ],
+    "examplePrompt": "SwiftUI에서 ScrollView의 최신 사용법을 예제 코드와 함께 알려줘.",
+    "usageNote": "",
+    "stars": 1385,
+    "forks": 69,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
     "id": "nerd-fonts",
     "name": "Nerd Fonts",
     "github": "https://github.com/ryanoasis/nerd-fonts",
