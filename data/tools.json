@@ -1,5 +1,633 @@
 [
   {
+    "id": "goatcounter",
+    "name": "goatcounter",
+    "github": "https://github.com/arp242/goatcounter",
+    "description": "개인 정보를 추적하지 않고 가볍게 사용할 수 있는 오픈소스 웹 분석 플랫폼입니다.",
+    "longDescription": "사용자 개인 정보를 수집하거나 쿠키를 강제하지 않는 프라이버시 친화적인 웹 분석 도구입니다. 자체 서버에 직접 설치하거나 호스팅 서비스 형태로 간편하게 이용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "웹 분석",
+      "프라이버시",
+      "Go",
+      "대시보드",
+      "통계"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.goatcounter.com",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "GoatCounter를 자체 서버에 빌드하거나 호스팅 서비스를 이용합니다.",
+      "제공되는 추적 스크립트를 웹사이트 HTML에 삽입합니다.",
+      "웹 대시보드에서 방문자 통계를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6074,
+    "forks": 285,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "fathom",
+    "name": "Fathom Lite",
+    "github": "https://github.com/usefathom/fathom",
+    "description": "개인정보 보호를 최우선으로 하는 가볍고 간단한 오픈소스 웹 분석 도구입니다.",
+    "longDescription": "사용자의 개인정보를 추적하지 않고 웹사이트 트래픽과 핵심 지표를 분석할 수 있는 Go 언어 기반의 가벼운 웹 분석 솔루션입니다. Google Analytics의 프라이버시 친화적인 대안으로 활용할 수 있습니다.",
+    "category": "생산성",
+    "tags": [
+      "웹분석",
+      "개인정보보호",
+      "Go",
+      "대시보드",
+      "통계"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://usefathom.com/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [
+      "Go",
+      "NPM"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 다운로드 및 실행",
+        "command": "git clone https://github.com/usefathom/fathom.git",
+        "note": "저장소를 클론하여 개발 환경을 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "Go와 NPM 환경을 준비하고 저장소를 클론합니다.",
+      "설정 파일을 구성하고 데이터베이스를 연결합니다.",
+      "서버를 실행하고 웹 대시보드에서 방문자 통계를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Fathom Lite는 커뮤니티 유지보수 버전이며 현재는 유료 호스팅 서비스가 주력으로 제공되고 있습니다.",
+    "stars": 8020,
+    "forks": 386,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "age",
+    "name": "Apache AGE",
+    "github": "https://github.com/apache/age",
+    "description": "관계형 데이터베이스와 그래프 데이터베이스를 동시에 지원하는 PostgreSQL용 확장 그래프 DBMS입니다.",
+    "longDescription": "PostgreSQL 위에 구축되어 표준 SQL과 오픈시퍼(openCypher) 쿼리 언어를 동시에 사용할 수 있게 해주는 오픈소스 그래프 데이터베이스 확장입니다. 복잡한 관계 데이터를 효율적으로 분석할 수 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "그래프데이터베이스",
+      "PostgreSQL",
+      "오픈시퍼",
+      "C",
+      "데이터베이스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://age.apache.org",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [
+      "PostgreSQL",
+      "gcc",
+      "readline"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Fedora 필수 라이브러리 설치",
+        "command": "dnf install gcc glibc glib-common readline readline-devel zlib zlib-devel flex bison",
+        "note": "소스 빌드를 위한 필수 개발 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "운영체제에 맞는 필수 개발 라이브러리를 설치합니다.",
+      "Apache AGE 소스 코드를 빌드하고 PostgreSQL에 extension으로 등록합니다.",
+      "PostgreSQL 클라이언트에서 AGE를 로드하고 Cypher 쿼리를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "PostgreSQL 버전과의 호환성을 확인한 후 설치를 진행해야 합니다.",
+    "stars": 4902,
+    "forks": 538,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "briefer",
+    "name": "Briefer",
+    "github": "https://github.com/briefercloud/briefer",
+    "description": "코드와 노션 스타일의 문서를 결합하여 대시보드와 노트를 한곳에서 만들 수 있는 분석 도구입니다.",
+    "longDescription": "Python과 SQL을 활용해 데이터 분석을 수행하고, 이를 노션처럼 아름다운 문서와 대시보드로 정리하여 팀과 공유할 수 있는 협업 데이터 분석 플랫폼입니다. 실시간 동기화와 스케줄링 기능을 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "노트북",
+      "대시보드",
+      "Python",
+      "SQL",
+      "데이터분석"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://briefer.cloud",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [
+      "Docker",
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip을 이용한 설치",
+        "command": "pip install briefer && briefer",
+        "note": "파이썬 패키지를 설치하고 로컬 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어를 통해 Briefer를 설치합니다.",
+      "briefer 명령어를 실행하여 로컬 서버를 구동합니다.",
+      "웹 브라우저(http://localhost:3000)에서 노트를 작성하고 분석 대시보드를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실행 시 내부적으로 Docker가 필요하므로 사전에 Docker가 설치되어 있어야 합니다.",
+    "stars": 4325,
+    "forks": 293,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "preswald",
+    "name": "Preswald",
+    "github": "https://github.com/StructuredLabs/preswald",
+    "description": "파이썬 기반의 대화형 데이터 앱과 대시보드를 브라우저에서 단일 파일로 실행할 수 있는 도구입니다.",
+    "longDescription": "WASM(Pyodide)과 DuckDB를 기반으로 작동하여 서버 의존성 없이 브라우저 내에서 직접 데이터 파이프라인과 시각화 대시보드를 실행할 수 있는 정적 사이트 및 앱 생성기입니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "WASM",
+      "Python",
+      "데이터시각화",
+      "대시보드",
+      "DuckDB"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.preswald.com/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install preswald",
+        "note": "파이썬 패키지 관리자를 통해 Preswald를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip install preswald 명령어로 패키지를 설치합니다.",
+      "preswald init my_app 명령어로 새 프로젝트 템플릿을 생성합니다.",
+      "preswald run 명령어로 로컬에서 대화형 앱을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "로컬 별도 백엔드 서버 없이 브라우저 환경에서 직접 데이터 앱을 구동할 수 있습니다.",
+    "stars": 4271,
+    "forks": 647,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "dbt",
+    "name": "dbt",
+    "github": "https://github.com/dbt-labs/dbt",
+    "description": "소프트웨어 엔지니어링 방식을 데이터 변환에 적용할 수 있는 데이터 분석 및 엔지니어링 도구입니다.",
+    "longDescription": "데이터 분석가와 엔지니어가 애플리케이션 빌드와 동일한 모범 사례를 활용하여 데이터를 변환할 수 있도록 지원하는 프레임워크입니다. Rust로 재작성된 v2.0부터는 별도의 Python 런타임 없이 단일 바이너리로 쉽게 설치하고 실행할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "데이터",
+      "ELT",
+      "분석",
+      "Rust",
+      "데이터 모델링"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://getdbt.com",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트 저장소 또는 환경 설정 파일을 준비합니다.",
+      "컴파일된 단일 바이너리나 드라이버를 통해 설치를 진행합니다.",
+      "데이터 변환 파이프라인을 작성하고 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "v1은 Python 기반이며 최신 v2.0은 Rust로 재작성되었습니다.",
+    "stars": 14043,
+    "forks": 2634,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "partytown",
+    "name": "partytown",
+    "github": "https://github.com/QwikDev/partytown",
+    "description": "성능 저하를 유발하는 서드파티 스크립트를 메인 스레드가 아닌 웹 워커로 오프로드하는 라이브러리입니다.",
+    "longDescription": "웹사이트의 성능과 Core Web Vitals 점수를 개선하기 위해 분석 도구 등 무거운 서드파티 자바스크립트 스크립트를 웹 워커에서 실행하도록 도와줍니다. 메인 스레드의 부하를 줄여 사용자 경험을 향상시킵니다.",
+    "category": "개발 도구",
+    "tags": [
+      "웹 워커",
+      "성능",
+      "JavaScript",
+      "DOM",
+      "최적화"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://partytown.qwik.dev",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 파티타운 라이브러리를 설치하거나 통합합니다.",
+      "설정 파일에서 서드파티 스크립트 경로를 지정합니다.",
+      "웹 워커 환경에서 스크립트가 로드되도록 설정하고 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13798,
+    "forks": 461,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "perspective",
+    "name": "perspective",
+    "github": "https://github.com/perspective-dev/perspective",
+    "description": "대용량 및 스트리밍 데이터셋에 최적화된 고성능 데이터 시각화 및 분석 컴포넌트입니다.",
+    "longDescription": "브라우저 및 데스크톱 환경에서 대규모 데이터를 다루기 위한 피벗 테이블, 데이터 그리드, 차트 기능을 제공합니다. Apache Arrow 및 WebAssembly를 활용하여 실시간으로 막대한 양의 데이터를 빠르게 처리합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "데이터 시각화",
+      "피벗 테이블",
+      "WASM",
+      "Rust",
+      "Apache Arrow"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://perspective-dev.github.io/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM 패키지 설치",
+        "command": "npm install @perspective-dev/client",
+        "note": "클라이언트 모듈 설치"
+      },
+      {
+        "title": "Python 패키지 설치",
+        "command": "pip install perspective-python",
+        "note": "파이썬 환경 설치"
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리자를 통해 패키지를 설치합니다.",
+      "데이터 그리드 또는 차트 컴포넌트를 웹 애플리케이션이나 Jupyter 노트에 임베드합니다.",
+      "데이터셋을 로드하고 필터링 및 피벗 기능을 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11319,
+    "forks": 1349,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "uplot",
+    "name": "uPlot",
+    "github": "https://github.com/leeoniya/uPlot",
+    "description": "시계열 데이터와 선형, 영역 차트를 매우 빠르게 렌더링하는 가벼운 Canvas 2D 기반 차트 라이브러리입니다.",
+    "longDescription": "수십만 개의 데이터 포인트를 25밀리초 만에 렌더링할 수 있는 고성능 차트 라이브러리입니다. 메모리 사용량을 최소화하면서도 부드러운 상호작용을 제공하는 시계열 데이터 시각화 도구입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "차트",
+      "시계열",
+      "Canvas",
+      "JavaScript",
+      "데이터 시각화"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/leeoniya/uPlot",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 uPlot을 포함시킵니다.",
+      "차트 옵션과 데이터를 정의합니다.",
+      "Canvas 기반의 차트 인스턴스를 생성하여 렌더링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10570,
+    "forks": 467,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "ua-parser-js",
+    "name": "ua-parser-js",
+    "github": "https://github.com/faisalman/ua-parser-js",
+    "description": "브라우저, 운영체제, 기기, 봇 및 AI 크롤러를 탐지하는 가벼운 사용자 에이전트 분석 라이브러리입니다.",
+    "longDescription": "사용자의 User-Agent 문자열을 기반으로 브라우저 종류, OS, 디바이스, 봇 등을 정확하게 식별하는 웹 개발 필수 도구입니다. 브라우저와 Node.js 환경 모두에서 의존성 없이 실행됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "사용자 에이전트",
+      "봇 탐지",
+      "JavaScript",
+      "브라우저 감지",
+      "API"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://uaparser.dev/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 라이브러리를 가져옵니다.",
+      "User-Agent 문자열을 파서에 전달합니다.",
+      "추출된 브라우저 및 기기 정보를 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10206,
+    "forks": 1213,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "delta",
+    "name": "delta",
+    "github": "https://github.com/delta-io/delta",
+    "description": "Spark, Presto, Flink 등 다양한 연산 엔진과 연동되는 오픈소스 레이크하우스 스토리지 프레임워크입니다.",
+    "longDescription": "빅데이터 저장소 위에 ACID 트랜잭션과 신뢰성 있는 데이터 관리를 제공하는 레이크하우스 아키텍처 핵심 스토리지 레이어입니다. 데이터 버전 관리와 대규모 분석 처리를 지원합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "빅데이터",
+      "레이크하우스",
+      "Spark",
+      "Scala",
+      "ACID"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://delta.io",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [
+      "Conda 또는 Python 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI 패키지 설치",
+        "command": "pip install delta-spark",
+        "note": "파이썬용 델타 스파크 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "Conda 등을 이용해 개발 환경을 설정합니다.",
+      "PyPI를 통해 패키지를 설치합니다.",
+      "Spark 또는 기타 연산 엔진과 연동하여 데이터 레이크하우스 파이프라인을 구축합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9051,
+    "forks": 2200,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "tautulli",
+    "name": "Tautulli",
+    "github": "https://github.com/Tautulli/Tautulli",
+    "description": "Plex 미디어 서버의 활동 모니터링, 통계 분석, 알림을 제공하는 파이썬 기반 웹 애플리케이션입니다.",
+    "longDescription": "Plex Media Server의 실시간 활동을 모니터링하고 시청 기록, 통계 대시보드, 맞춤형 알림 기능을 제공합니다. 반응형 웹 디자인을 지원하여 다양한 기기에서 편리하게 관리할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Plex",
+      "모니터링",
+      "통계",
+      "Python",
+      "대시보드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://tautulli.com",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [
+      "Python = 3.11"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커를 통한 실행",
+        "command": "docker pull tautulli/tautulli",
+        "note": "Docker 허브에서 이미지 다운로드"
+      }
+    ],
+    "usageSteps": [
+      "Python 또는 Docker 환경을 준비합니다.",
+      "Tautulli를 설치하고 실행합니다.",
+      "웹 인터페이스에 접속하여 Plex 서버와 연동하고 모니터링을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6616,
+    "forks": 635,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "pachyderm",
+    "name": "pachyderm",
+    "github": "https://github.com/pachyderm/pachyderm",
+    "description": "컨테이너 기반에서 데이터 버전 관리와 데이터 중심 파이프라인을 구축하는 오픈소스 시스템입니다.",
+    "longDescription": "Git과 유사한 데이터 버전 제어 기능을 제공하여 데이터 과학 및 대규모 파이프라인의 재현성을 보장합니다. 쿠버네티스 환경에서 데이터셋의 변경 이력을 추적하고 자동으로 파이프라인을 실행합니다.",
+    "category": "개발 운영",
+    "tags": [
+      "데이터 버전관리",
+      "Kubernetes",
+      "빅데이터",
+      "파이프라인",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.pachyderm.com/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [
+      "Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "로컬 또는 클라우드에 Kubernetes 클러스터를 준비합니다.",
+      "Pachyderm 배포 도구를 사용하여 클러스터에 배포합니다.",
+      "버전 제어 대상 데이터 리포지토리를 생성하고 파이프라인을 정의합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6311,
+    "forks": 576,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "polr",
+    "name": "polr",
+    "github": "https://github.com/cydrobolt/polr",
+    "description": "맞춤형 URL 단축과 데이터 관리를 지원하는 모던하고 가벼운 오픈소스 링크 단축 웹 애플리케이션입니다.",
+    "longDescription": "자체 서버에 직접 구축하여 사용할 수 있는 URL 단축기입니다. 직관적인 관리 인터페이스와 강력한 API를 제공하여 링크 통계를 추적하고 브랜딩된 단축 URL을 생성할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "URL 단축",
+      "PHP",
+      "Laravel",
+      "API",
+      "웹 애플리케이션"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://polrproject.org",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T20:04:07.674Z",
+    "requirements": [
+      "PHP",
+      "MySQL"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "PHP 및 MySQL 환경을 구성합니다.",
+      "소스코드를 클론하고 의존성을 설치합니다.",
+      "설정 파일을 수정하고 웹 서버를 통해 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5093,
+    "forks": 883,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
     "id": "deepresearch",
     "name": "DeepResearch",
     "github": "https://github.com/Alibaba-NLP/DeepResearch",
