@@ -1,7 +1,783 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-19T07:06:20.198Z",
+  "updatedAt": "2026-10-19T08:06:25.992Z",
   "items": [
+    {
+      "id": "outline",
+      "name": "Outline",
+      "github": "https://github.com/outline/outline",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.766Z",
+      "sourceRun": "2026-10-19T17",
+      "tool": {
+        "id": "outline",
+        "name": "Outline",
+        "github": "https://github.com/outline/outline",
+        "description": "빠르고 실시간 협업을 지원하는 마크다운 호환 팀 지식 베이스",
+        "longDescription": "React와 Node.js로 구축된 빠르고 현대적인 팀 위키 및 지식 관리 플랫폼입니다.실시간 공동 편집 기능과 마크다운을 지원하며 사내 문서화에 적합합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "지식베이스",
+          "위키",
+          "마크다운"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.getoutline.com",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T08:03:59.947Z",
+        "requirements": [
+          "Docker",
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 도커 이미지 또는 소스 코드를 다운로드합니다.",
+          "환경 변수 및 데이터베이스 설정을 구성합니다.",
+          "서비스를 실행하고 브라우저에서 접속하여 팀스페이스를 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "자체 호스팅 시 별도의 데이터베이스 및 인증 제공자 설정이 필요합니다.",
+        "stars": 40967,
+        "forks": 3619,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:15.254Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:17.408Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T08:06:21.600Z"
+    },
+    {
+      "id": "portainer",
+      "name": "Portainer",
+      "github": "https://github.com/portainer/portainer",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.766Z",
+      "sourceRun": "2026-10-19T17",
+      "tool": {
+        "id": "portainer",
+        "name": "Portainer",
+        "github": "https://github.com/portainer/portainer",
+        "description": "도커와 쿠버네티스 관리를 쉽게 해주는 경량 컨테이너 관리 UI",
+        "longDescription": "Docker, Swarm, Podman, Kubernetes 환경을 직관적인 웹 인터페이스로 관리할 수 있는 도구입니다. 초보자와 전문가 모두 컨테이너 배포와 모니터링을 쉽게 처리할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Docker",
+          "Kubernetes",
+          "컨테이너"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows",
+          "Web"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://www.portainer.io",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T08:03:59.947Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Portainer CE 실행",
+            "command": "docker volume create portainer_data && docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest",
+            "note": "도커 소켓을 연동하여 포인테어 컨테이너를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "도커가 설치된 환경에서 설치 명령어를 실행합니다.",
+          "웹 브라우저로 접속하여 관리자 계정을 생성합니다.",
+          "로컬 또는 원격 Docker/Kubernetes 환경을 연결하여 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 38684,
+        "forks": 2922,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:15.474Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:17.711Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T08:06:22.309Z"
+    },
+    {
+      "id": "chatwoot",
+      "name": "Chatwoot",
+      "github": "https://github.com/chatwoot/chatwoot",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.766Z",
+      "sourceRun": "2026-10-19T17",
+      "tool": {
+        "id": "chatwoot",
+        "name": "Chatwoot",
+        "github": "https://github.com/chatwoot/chatwoot",
+        "description": "오픈소스 라이브 채팅 및 다채널 고객 지원 플랫폼",
+        "longDescription": "Intercom과 Zendesk의 대안으로 사용할 수 있는 모던 고객 지원 플랫폼입니다. 웹사이트 라이브 채팅, 이메일, 소셜 미디어 등의 고객 문의를 한 곳에서 관리할 수 있습니다.",
+        "category": "협업·소통",
+        "tags": [
+          "고객지원",
+          "라이브채팅",
+          "옴니채널"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.chatwoot.com/help-center",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T08:03:59.947Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker Compose 설정을 준비합니다.",
+          "환경 변수 파일에 데이터베이스 및 서버 정보를 입력합니다.",
+          "컨테이너를 실행한 뒤 관리자 패널에 접속합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 37943,
+        "forks": 9254,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:15.659Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:17.952Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T08:06:24.159Z"
+    },
+    {
+      "id": "air",
+      "name": "Air",
+      "github": "https://github.com/air-verse/air",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "winapps",
+      "name": "WinApps",
+      "github": "https://github.com/winapps-org/winapps",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17",
+      "tool": {
+        "id": "winapps",
+        "name": "WinApps",
+        "github": "https://github.com/winapps-org/winapps",
+        "description": "리눅스 환경에서 윈도우 앱을 네이티브처럼 실행하는 통합 도구",
+        "longDescription": "Linux 및 GNOME/KDE 환경에서 Microsoft Office, Adobe Creative Cloud 등의 Windows 전용 애플리케이션을 가상화하여 네이티브 앱처럼 매끄럽게 실행합니다. 초기 설정 시 Windows 가상 머신 구성 작업이 필요합니다.",
+        "category": "생산성",
+        "tags": [
+          "Linux",
+          "Windows",
+          "가상화"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/winapps-org/winapps",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T08:03:59.947Z",
+        "requirements": [
+          "Docker 또는 Podman 또는 libvirt",
+          "FreeRDP"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "가상화 백엔드로 Windows VM을 설정합니다.",
+          "WinApps를 클론하고 설정 파일을 구성합니다.",
+          "설치 스크립트를 실행하여 애플리케이션 단축키를 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "초기 설정 시 Windows 가상 머신 구성 작업이 필요합니다.",
+        "stars": 16095,
+        "forks": 518,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:15.872Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:18.426Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T08:06:25.040Z"
+    },
+    {
+      "id": "docker-android",
+      "name": "Docker Android",
+      "github": "https://github.com/budtmo/docker-android",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17",
+      "tool": {
+        "id": "docker-android",
+        "name": "Docker Android",
+        "github": "https://github.com/budtmo/docker-android",
+        "description": "noVNC, 비디오 녹화, MCP 서버, AI 에이전트를 지원하는 도커 기반 안드로이드 에뮬레이터",
+        "longDescription": "도커 컨테이너 내부에서 안드로이드 에뮬레이터를 구동하는 솔루션입니다. 웹 브라우저를 통한 제어, 자동화 테스트, AI 에이전트 및 MCP 연동 기능을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "안드로이드",
+          "도커",
+          "에뮬레이터"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/budtmo/docker-android",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T08:03:59.947Z",
+        "requirements": [
+          "Docker",
+          "가상화 지원 CPU"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "호스트 시스템에서 Docker가 실행 중인지 확인합니다.",
+          "원하는 안드로이드 버전의 도커 이미지를 풀(pull) 받습니다.",
+          "컨테이너를 실행한 뒤 noVNC 웹 인터페이스로 접속합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "호스트 머신이 가상화를 지원해야 하며, macOS 및 Windows는 Ubuntu 가상머신 내 실행이 권장됩니다.",
+        "stars": 15987,
+        "forks": 1769,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:16.069Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:18.934Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T08:06:25.992Z"
+    },
+    {
+      "id": "transfer-sh",
+      "name": "Transfer.sh",
+      "github": "https://github.com/dutchcoders/transfer.sh",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "caprover",
+      "name": "CapRover",
+      "github": "https://github.com/caprover/caprover",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17",
+      "tool": {
+        "id": "caprover",
+        "name": "CapRover",
+        "github": "https://github.com/caprover/caprover",
+        "description": "도커와 Nginx 기반의 쉽고 확장 가능한 오픈소스 PaaS 플랫폼",
+        "longDescription": "Node.js, Python, PHP, Ruby, MySQL 등 다양한 앱과 데이터베이스를 복잡한 설정 없이 원클릭으로 배포할 수 있는 초간단 앱 배포 관리 매니저입니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "PaaS",
+          "Docker",
+          "Nginx",
+          "배포",
+          "웹서버"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://CapRover.com",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T08:03:59.947Z",
+        "requirements": [
+          "Docker",
+          "Ubuntu/Linux 서버"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "지원되는 Linux 서버에 Docker를 설치합니다.",
+          "CapRover 설치 명령어 한 줄을 실행합니다.",
+          "웹 GUI에 접속하여 앱과 데이터베이스를 배포합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 15188,
+        "forks": 1005,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:16.302Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:19.262Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "dozzle",
+      "name": "Dozzle",
+      "github": "https://github.com/amir20/dozzle",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "mailcow-dockerized",
+      "name": "mailcow: dockerized",
+      "github": "https://github.com/mailcow/mailcow-dockerized",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "compose",
+      "name": "Docker Compose",
+      "github": "https://github.com/docker/compose",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "faas",
+      "name": "OpenFaaS",
+      "github": "https://github.com/openfaas/faas",
+      "license": "확인 필요",
+      "status": "auto_approved_after_document_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17",
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:16.549Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:19.520Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": "MIT",
+        "licenseSource": "LICENSE complete MIT provisions (text match)",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "rancher",
+      "name": "Rancher",
+      "github": "https://github.com/rancher/rancher",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "kuboard-press",
+      "name": "Kuboard",
+      "github": "https://github.com/eip-work/kuboard-press",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17",
+      "tool": {
+        "id": "kuboard-press",
+        "name": "Kuboard",
+        "github": "https://github.com/eip-work/kuboard-press",
+        "description": "쿠버네티스 기반의 다중 클러스터 관리를 지원하는 직관적인 마이크로서비스 및 컨테이너 관리 웹 인터페이스입니다.",
+        "longDescription": "개인과 중소기업에 무료로 제공되며, 복잡한 kubectl 명령어 없이 웹 화면에서 워크로드, 네트워크, 스토리지 등을 시각적으로 관리할 수 있습니다. 템플릿 기반 배포와 브라우저 내 터미널, 실시간 로그 조회 등 강력한运维 기능을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Kubernetes",
+          "Docker",
+          "VitePress",
+          "문서",
+          "웹 인터페이스"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kuboard.cn/",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T08:03:59.947Z",
+        "requirements": [
+          "Kubernetes 1.15 ~ 1.34",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "VitePress 문서 로컬 개발 환경 설치",
+            "command": "pnpm install && pnpm docs:dev",
+            "note": "Kuboard 공식 문서 저장소의 의존성을 설치하고 로컬 개발 서버를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker Compose 또는 쿠버네티스 매니페스트를 이용해 Kuboard를 배포합니다.",
+          "웹 브라우저를 통해 Kuboard 대시보드에 로그인합니다.",
+          "관리하고자 하는 Kubernetes 클러스터의 kubeconfig 또는 토큰을 등록합니다.",
+          "시각화된 메뉴를 통해 파드, 디플로이먼트, 로그 및 설정값을 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 25255,
+        "forks": 1591,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:16.690Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:20.145Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "vulhub",
+      "name": "Vulhub",
+      "github": "https://github.com/vulhub/vulhub",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "nginx-proxy",
+      "name": "nginx-proxy",
+      "github": "https://github.com/nginx-proxy/nginx-proxy",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "docker-elk",
+      "name": "docker-elk",
+      "github": "https://github.com/deviantony/docker-elk",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "sealos",
+      "name": "Sealos",
+      "github": "https://github.com/labring/sealos",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17",
+      "tool": {
+        "id": "sealos",
+        "name": "Sealos",
+        "github": "https://github.com/labring/sealos",
+        "description": "쿠버네티스를 기반으로 애플리케이션의 개발, 배포, 확장을 원스톱으로 지원하는 AI 네이티브 클라우드 운영 체제입니다.",
+        "longDescription": "클라우드 IDE에서의 개발부터 프로덕션 환경 배포 및 관리를 단일 플랫폼에서 통합합니다. 현대적인 AI 애플리케이션, SaaS 플랫폼, 관리형 데이터베이스 및 복잡한 마이크로서비스 아키텍처를 쉽게 구축하고 확장할 수 있습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Kubernetes",
+          "Docker",
+          "클라우드 OS",
+          "DevOps",
+          "마이크로서비스"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://sealos.io",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T08:03:59.947Z",
+        "requirements": [
+          "Kubernetes",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Dev Container에서 열기",
+            "command": "https://vscode.dev/github/labring/sealos",
+            "note": "VS Code Dev Container를 통해 개발 환경을 즉시 구성합니다."
+          }
+        ],
+        "usageSteps": [
+          "Sealos 클라우드 플랫폼 또는 로컬 쿠버네티스 환경에 접속합니다.",
+          "클라우드 IDE 또는 GitHub 저장소 연동을 통해 프로젝트를 연결합니다.",
+          "원클릭 배포 기능을 사용하여 데이터베이스나 애플리케이션 서비스를 생성합니다.",
+          "대시보드를 통해 리소스 사용량을 모니터링하고 오토스케일링을 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18371,
+        "forks": 2477,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T08:06:16.878Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T08:06:20.572Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "distrobox",
+      "name": "Distrobox",
+      "github": "https://github.com/89luca89/distrobox",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
+    {
+      "id": "netshoot",
+      "name": "netshoot",
+      "github": "https://github.com/nicolaka/netshoot",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T08:06:14.767Z",
+      "sourceRun": "2026-10-19T17"
+    },
     {
       "id": "fluidx3d",
       "name": "FluidX3D",
@@ -27391,84 +28167,6 @@
       "sourceRun": "2026-10-17T15"
     },
     {
-      "id": "sealos",
-      "name": "Sealos",
-      "github": "https://github.com/labring/sealos",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-17T06:05:54.365Z",
-      "sourceRun": "2026-10-17T15",
-      "tool": {
-        "id": "sealos",
-        "name": "Sealos",
-        "github": "https://github.com/labring/sealos",
-        "description": "Kubernetes 기반 AI 네이티브 클라우드 운영 체제",
-        "longDescription": "Kubernetes를 활용하여 복잡한 마이크로서비스 아키텍처, 데이터베이스 및 AI 애플리케이션을 쉽게 배포하고 확장할 수 있는 클라우드 Platform입니다. 개발부터 프로덕션 운영까지 통합 관리합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Kubernetes",
-          "클라우드",
-          "컨테이너"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://sealos.io",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T06:03:58.454Z",
-        "requirements": [
-          "Kubernetes",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Sealos CLI 다운로드 및 설치",
-          "클러스터 초기화 및 노드 추가",
-          "웹 UI 또는 CLI를 통한 애플리케이션 배포"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 18369,
-        "forks": 2477,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T07:51:29.697Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T07:51:29.697Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-17T06:06:00.460Z",
-      "lastVerifiedAt": "2026-10-17T07:51:29.697Z"
-    },
-    {
       "id": "cubesandbox",
       "name": "CubeSandbox",
       "github": "https://github.com/TencentCloud/CubeSandbox",
@@ -28481,81 +29179,6 @@
       "reasons": [],
       "checkedAt": "2026-10-17T03:05:54.068Z",
       "sourceRun": "2026-10-17T12"
-    },
-    {
-      "id": "portainer",
-      "name": "Portainer",
-      "github": "https://github.com/portainer/portainer",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-17T03:05:54.068Z",
-      "sourceRun": "2026-10-17T12",
-      "tool": {
-        "id": "portainer",
-        "name": "Portainer",
-        "github": "https://github.com/portainer/portainer",
-        "description": "도커 및 쿠버네티스 관리를 간소화해 주는 가벼운 컨테이너 관리 웹 UI",
-        "longDescription": "Docker, Swarm, Podman, Kubernetes 환경을 직관적으로 관리할 수 있는 웹 기반 컨테이너 관리 도구입니다. 홈랩 운영자, 개발자, 학생 등이 컨테이너를 손쉽게 다룰 수 있도록 돕습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "도커",
-          "쿠버네티스",
-          "웹UI"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://www.portainer.io",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T03:03:58.237Z",
-        "requirements": [
-          "Docker environment"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 문서의 배포 가이드 확인",
-          "도커 컨테이너 형태로 포테이너 서버 실행",
-          "웹 브라우저로 접속하여 초기 계정 설정 및 클러스터 연결"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 38672,
-        "forks": 2923,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T03:05:54.644Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T03:05:55.917Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-17T04:05:58.557Z"
     },
     {
       "id": "istio",
@@ -40569,85 +41192,6 @@
       "reasons": [],
       "checkedAt": "2026-10-15T13:06:28.790Z",
       "sourceRun": "2026-10-15T22"
-    },
-    {
-      "id": "outline",
-      "name": "Outline",
-      "github": "https://github.com/outline/outline",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-15T13:06:28.790Z",
-      "sourceRun": "2026-10-15T22",
-      "tool": {
-        "id": "outline",
-        "name": "Outline",
-        "github": "https://github.com/outline/outline",
-        "description": "성장하는 팀을 위한 빠르고 실시간 협업이 가능한 지식 베이스 플랫폼입니다.",
-        "longDescription": "React와 Node.js 기반으로 구축되어 아름다운 UI, 실시간 협업 편집, 마크다운 호환성을 제공합니다. 팀 내 문서화와 정보 공유를 원활하게 돕는 오픈소스 지식 베이스 솔루션입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "지식 베이스",
-          "마크다운",
-          "실시간 협업"
-        ],
-        "platforms": [
-          "Web",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.getoutline.com",
-        "featured": 9,
-        "added": "2026-10-15",
-        "addedAt": "2026-10-15T13:03:59.494Z",
-        "requirements": [
-          "Docker",
-          "Node.js",
-          "PostgreSQL",
-          "Redis"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "도커 및 필수 데이터베이스 환경을 준비합니다.",
-          "컨테이너 이미지를 다운로드하고 설정 파일을 구성합니다.",
-          "서비스를 실행하고 웹 브라우저를 통해 접속합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 40907,
-        "forks": 3617,
-        "starsUpdatedAt": "2026-10-15"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-15T13:06:29.712Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-15T13:06:32.409Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-15T14:07:12.154Z"
     },
     {
       "id": "1panel",
