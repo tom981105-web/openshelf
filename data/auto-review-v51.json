@@ -1,7 +1,490 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-19T12:06:57.217Z",
+  "updatedAt": "2026-10-19T13:06:33.694Z",
   "items": [
+    {
+      "id": "dependency-cruiser",
+      "name": "Dependency Cruiser",
+      "github": "https://github.com/sverweij/dependency-cruiser",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.332Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "tfsec",
+      "name": "Tfsec",
+      "github": "https://github.com/aquasecurity/tfsec",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "go-tools",
+      "name": "Staticcheck",
+      "github": "https://github.com/dominikh/go-tools",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "zizmor",
+      "name": "Zizmor",
+      "github": "https://github.com/zizmorcore/zizmor",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "slither",
+      "name": "Slither",
+      "github": "https://github.com/crytic/slither",
+      "license": "AGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "revive",
+      "name": "Revive",
+      "github": "https://github.com/revive-lint/revive",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "kube-linter",
+      "name": "KubeLinter",
+      "github": "https://github.com/stackrox/kube-linter",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "binsider",
+      "name": "Binsider",
+      "github": "https://github.com/orhun/binsider",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "nullaway",
+      "name": "NullAway",
+      "github": "https://github.com/uber/NullAway",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "nilaway",
+      "name": "NilAway",
+      "github": "https://github.com/uber-go/nilaway",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "brakeman",
+      "name": "Brakeman",
+      "github": "https://github.com/presidentbeef/brakeman",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22",
+      "tool": {
+        "id": "brakeman",
+        "name": "Brakeman",
+        "github": "https://github.com/presidentbeef/brakeman",
+        "description": "Ruby on Rails 애플리케이션의 보안 취약점을 검사하는 정적 분석 도구",
+        "longDescription": "Brakeman은 Ruby on Rails 웹 애플리케이션의 소스 코드를 분석하여 잠재적인 보안 취약점을 자동으로 탐지해 주는 정적 분석 도구입니다. 복잡한 설정 없이 애플리케이션 루트 디렉토리에서 바로 실행하여 보안 감사 리포트를 얻을 수 있습니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "취약점",
+          "정적분석"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://brakemanscanner.org/",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T13:04:02.807Z",
+        "requirements": [
+          "RubyGems 또는 Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "RubyGems 설치",
+            "command": "gem install brakeman",
+            "note": "Ruby 환경에서 젬을 통해 직접 설치합니다."
+          },
+          {
+            "title": "Docker 실행",
+            "command": "docker pull presidentbeef/brakeman",
+            "note": "도커 이미지를 다운로드하여 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "애플리케이션의 루트 디렉토리로 이동합니다.",
+          "터미널에서 'brakeman' 명령어를 실행합니다.",
+          "출력되는 보안 취약점 리포트를 확인하고 수정합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7285,
+        "forks": 779,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T13:06:26.868Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T13:06:28.287Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T13:06:30.546Z"
+    },
+    {
+      "id": "cppcheck",
+      "name": "Cppcheck",
+      "github": "https://github.com/cppcheck-opensource/cppcheck",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "go-callvis",
+      "name": "go-callvis",
+      "github": "https://github.com/ondrajz/go-callvis",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "apkleaks",
+      "name": "APKLeaks",
+      "github": "https://github.com/dwisiswant0/apkleaks",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "pmd",
+      "name": "PMD",
+      "github": "https://github.com/pmd/pmd",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22",
+      "tool": {
+        "id": "pmd",
+        "name": "PMD",
+        "github": "https://github.com/pmd/pmd",
+        "description": "다양한 언어를 지원하는 확장 가능한 소스 코드 분석 및 품질 검사기",
+        "longDescription": "PMD는 소스 코드의 잠재적 결함과 안티 패턴을 찾아내는 정적 코드 분석기입니다. Java뿐만 아니라 다양한 프로그래밍 언어를 지원하여 코드 품질을 유지하도록 돕습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "코드품질",
+          "정적분석",
+          "Java"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pmd.github.io",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T13:04:02.807Z",
+        "requirements": [
+          "Java 런타임"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "최신 바이너리 배포판을 다운로드하여 압축을 풉니다.",
+          "bin/pmd check 명령어를 실행하여 소스 코드를 검사합니다.",
+          "생성된 분석 리포트를 확인하고 코드를 개선합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5512,
+        "forks": 1600,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T13:06:27.097Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T13:06:28.553Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T13:06:31.399Z"
+    },
+    {
+      "id": "applicationinspector",
+      "name": "ApplicationInspector",
+      "github": "https://github.com/microsoft/ApplicationInspector",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "flake8",
+      "name": "Flake8",
+      "github": "https://github.com/PyCQA/flake8",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22",
+      "tool": {
+        "id": "flake8",
+        "name": "Flake8",
+        "github": "https://github.com/PyCQA/flake8",
+        "description": "파이썬 코드의 스타일과 품질을 검사하기 위해 여러 린터를 통합한 도구입니다.",
+        "longDescription": "Flake8은 PyFlakes, pycodestyle, McCabe 복잡도 검사기를 하나의 명령어로 통합하여 파이썬 소스 코드의 PEP 8 스타일 가이드 준수 여부와 잠재적 오류를 검사해 주는 대표적인 린터입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "파이썬",
+          "Linter",
+          "코드품질"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://flake8.pycqa.org",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T13:04:02.807Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "pip 명령어로 Flake8을 설치합니다.",
+          "프로젝트 디렉토리에서 'flake8' 명령어를 실행합니다.",
+          "출력된 스타일 위반 및 오류 내역을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3828,
+        "forks": 361,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T13:06:27.346Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T13:06:29.003Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T13:06:32.150Z"
+    },
+    {
+      "id": "bearer",
+      "name": "Bearer",
+      "github": "https://github.com/Bearer/bearer",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22",
+      "tool": {
+        "id": "bearer",
+        "name": "Bearer",
+        "github": "https://github.com/Bearer/bearer",
+        "description": "소스 코드를 스캔하여 보안 및 프라이버시 위험을 발견하고 필터링하는 SAST 도구입니다.",
+        "longDescription": "Bearer는 정적 애플리케이션 보안 테스트(SAST) 도구로, 소스 코드와 데이터 흐름을 분석하여 주요 보안 및 개인정보 보호 위험을 식별합니다. GDPR 등 규정 준수 여부를 확인하고 보안 취약점을 우선순위에 따라 필터링할 수 있습니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "프라이버시",
+          "정적분석"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.bearer.com",
+        "featured": 9,
+        "added": "2026-10-19",
+        "addedAt": "2026-10-19T13:04:02.807Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "설치 스크립트 실행",
+            "command": "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh",
+            "note": "공식 릴리스 설치 스크립트를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트 또는 Homebrew를 통해 Bearer CLI를 설치합니다.",
+          "소스 코드 루트 디렉토리에서 스캔 명령어를 실행합니다.",
+          "발견된 보안 및 프라이버시 리스크 리포트를 검토합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2763,
+        "forks": 155,
+        "starsUpdatedAt": "2026-10-19"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-19T13:06:27.556Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-19T13:06:29.518Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-19T13:06:32.914Z"
+    },
+    {
+      "id": "codeboarding",
+      "name": "CodeBoarding",
+      "github": "https://github.com/CodeBoarding/CodeBoarding",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
+    {
+      "id": "nodejsscan",
+      "name": "nodejsscan",
+      "github": "https://github.com/ajinabraham/nodejsscan",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-19T13:06:26.333Z",
+      "sourceRun": "2026-10-19T22"
+    },
     {
       "id": "sentry",
       "name": "Sentry",
@@ -75,8 +558,8 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T12:06:54.265Z"
+      "recheckAttempts": 2,
+      "recheckedAt": "2026-10-19T13:06:33.694Z"
     },
     {
       "id": "pm2",
@@ -23929,87 +24412,6 @@
       "sourceRun": "2026-10-18T08"
     },
     {
-      "id": "bearer",
-      "name": "Bearer",
-      "github": "https://github.com/Bearer/bearer",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-17T23:06:02.504Z",
-      "sourceRun": "2026-10-18T08",
-      "tool": {
-        "id": "bearer",
-        "name": "Bearer",
-        "github": "https://github.com/Bearer/bearer",
-        "description": "소스 코드의 보안 및 개인정보 위험을 식별하는 SAST 도구입니다.",
-        "longDescription": "데이터 흐름을 분석하여 상위 보안 및 프라이버시 리스크를 발견하고 필터링하며 우선순위를 지정할 수 있게 돕습니다. 소스 코드의 잠재적 취약점을 정적으로 분석하여 안전한 소프트웨어 개발을 지원합니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "SAST",
-          "보안",
-          "개인정보"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.bearer.com",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T23:04:04.678Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "설치 스크립트 실행",
-            "command": "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh",
-            "note": "환경에 맞는 최신 빌드를 자동으로 내려받아 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트 디렉토리에서 CLI 도구를 실행합니다.",
-          "소스 코드 스캔을 통해 데이터 흐름 및 보안 취약점을 분석합니다.",
-          "발견된 보안 리포트를 확인하고 조치합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2759,
-        "forks": 155,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T23:06:03.327Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T23:06:05.531Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-17T23:06:07.421Z"
-    },
-    {
       "id": "shippie",
       "name": "Shippie",
       "github": "https://github.com/mattzcarey/shippie",
@@ -24028,89 +24430,6 @@
       "reasons": [],
       "checkedAt": "2026-10-17T23:06:02.504Z",
       "sourceRun": "2026-10-18T08"
-    },
-    {
-      "id": "pmd",
-      "name": "pmd",
-      "github": "https://github.com/pmd/pmd",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-17T23:06:02.504Z",
-      "sourceRun": "2026-10-18T08",
-      "tool": {
-        "id": "pmd",
-        "name": "pmd",
-        "github": "https://github.com/pmd/pmd",
-        "description": "다양한 프로그래밍 언어를 지원하는 확장 가능한 소스 코드 정적 분석기입니다.",
-        "longDescription": "Java, JavaScript, Apex, Swift 등 다양한 언어의 소스 코드를 분석하여 잠재적 버그, 비효율적인 코드, 보안 취약점을 탐지합니다. 사용자 정의 규칙을 추가하여 팀 내 코딩 표준을 강제할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "정적분석",
-          "코드품질",
-          "린터"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pmd.github.io",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T23:04:04.678Z",
-        "requirements": [
-          "Java"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "바이너리 다운로드",
-            "command": "bin/pmd check",
-            "note": "최신 릴리스 바이너리를 다운로드하여 압축 해제 후 실행"
-          }
-        ],
-        "usageSteps": [
-          "최신 릴리스 바이너리를 다운로드합니다.",
-          "분석할 소스 코드 경로를 지정하여 실행합니다.",
-          "결과 리포트를 확인하고 지적된 코드 스멜을 개선합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5512,
-        "forks": 1600,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T23:06:03.547Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T23:06:05.882Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-17T23:06:08.078Z"
     },
     {
       "id": "megalinter",
