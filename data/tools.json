@@ -1,5 +1,609 @@
 [
   {
+    "id": "graphiti",
+    "name": "Graphiti",
+    "github": "https://github.com/getzep/graphiti",
+    "description": "AI 에이전트를 위한 실시간 시간적 지식 그래프 구축 프레임워크입니다.",
+    "longDescription": "Graphiti는 AI 에이전트와 대화 데이터를 구조화된 지속형 상태로 변환하기 위해 시간적 지식 그래프를 구축하는 프레임워크입니다. 실시간 상호작용과 정확한 이력 조회가 필요한 애플리케이션에 적합합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식 그래프",
+      "RAG",
+      "AI 에이전트",
+      "Python",
+      "Neo4j"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://help.getzep.com/graphiti",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python 3.10 이상",
+      "Neo4j 5.26 등 지원되는 데이터베이스",
+      "OpenAI API Key"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install graphiti",
+        "note": "파이썬 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 3.10 이상 환경을 준비합니다.",
+      "Neo4j 등 백엔드 그래프 데이터베이스를 설정합니다.",
+      "pip를 통해 패키지를 설치합니다.",
+      "API 키를 환경 변수에 설정하고 그래프 구축 코드를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 31997,
+    "forks": 3289,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "turbovec",
+    "name": "turbovec",
+    "github": "https://github.com/RyanCodrai/turbovec",
+    "description": "Google Research의 TurboQuant를 기반으로 구축된 고성능 인메모리 벡터 인덱스입니다.",
+    "longDescription": "turbovec은 Python과 Rust를 지원하는 인메모리 벡터 인덱스로, 임베딩을 차원당 2비트 또는 4비트로 압축하여 메모리 사용량을 크게 줄이고 에이전트 최적화 SIMD 커널을 통해 고속 검색을 수행합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "벡터 검색",
+      "Rust",
+      "Python",
+      "임베딩",
+      "SIMD"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pypi.org/project/turbovec/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python",
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install turbovec",
+        "note": "파이썬 바인딩 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 turbovec 패키지를 설치합니다.",
+      "NumPy 등을 이용해 임베딩 데이터를 불러옵니다.",
+      "TurboQuantIndex를 초기화하고 벡터를 추가합니다.",
+      "search 메서드를 호출하여 근접 이웃 검색을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17403,
+    "forks": 1488,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "pixelrag",
+    "name": "PixelRAG",
+    "github": "https://github.com/StarTrail-org/PixelRAG",
+    "description": "웹 파싱의 한계를 넘어 스크린샷과 시각적 인덱스를 활용하는 확장 가능한 픽셀 네이티브 검색 시스템입니다.",
+    "longDescription": "PixelRAG는 웹페이지나 문서를 스크린샷 타일로 렌더링하고 시각적 인덱스를 검색하여 RAG의 성능을 높이는 시스템입니다. 텍스트 추출 위주의 기존 방식에서 벗어나 시각적 문맥을 활용합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RAG",
+      "시각 검색",
+      "Multimodal",
+      "Python",
+      "VLM"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://arxiv.org/pdf/2606.28344",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install pixelrag",
+        "note": "패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 pixelrag를 설치합니다.",
+      "pixelshot 명령어를 사용하여 웹페이지를 스크린샷으로 렌더링합니다.",
+      "시각적 인덱스를 생성하거나 API를 통해 검색을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10306,
+    "forks": 909,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "xberg",
+    "name": "Xberg",
+    "github": "https://github.com/xberg-io/xberg",
+    "description": "Rust 코어 기반으로 100개 이상의 문서 형식과 300개 이상의 코딩 언어를 지원하는 다국어 문서 인텔리전스 엔진입니다.",
+    "longDescription": "Xberg는 PDF, 스캔 이미지, 스프레드시트, 오디오, URL 등 다양한 형식의 파일에서 깨끗한 텍스트, 테이블, 메타데이터, 구조화된 데이터를 추출하는 고성능 문서 인텔리전스 엔진입니다. CLI, REST API 및 MCP 서버를 지원합니다.",
+    "category": "문서",
+    "tags": [
+      "문서 인텔리전스",
+      "PDF 추출",
+      "OCR",
+      "Rust",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.xberg.io",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 문서의 설치 가이드를 참고하여 바이너리 또는 패키지를 설치합니다.",
+      "추출할 파일이나 URL을 지정하여 엔진을 실행합니다.",
+      "텍스트, 테이블, 메타데이터 등의 출력 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9426,
+    "forks": 595,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "paper-qa",
+    "name": "PaperQA2",
+    "github": "https://github.com/Future-House/paper-qa",
+    "description": "인용 기능이 포함된 과학 문헌 기반 고정밀 RAG 답변 생성 패키지입니다.",
+    "longDescription": "PaperQA2는 PDF, 텍스트 파일, 오피스 문서, 소스 코드 등의 과학 문헌을 대상으로 고정밀 검색증강생성(RAG)을 수행하여 정확한 답변과 출처 인용을 제공하는 파이썬 패키지입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RAG",
+      "과학 문헌",
+      "Python",
+      "인용",
+      "검색"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://futurehouse.gitbook.io/futurehouse-cookbook",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install paper-qa",
+        "note": "파이썬 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 paper-qa 패키지를 설치합니다.",
+      "환경에 적합한 LLM API 키를 설정합니다.",
+      "파이썬 라이브러리 또는 CLI를 통해 문서를 추가하고 질의합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9408,
+    "forks": 943,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "deep-searcher",
+    "name": "DeepSearcher",
+    "github": "https://github.com/zilliztech/deep-searcher",
+    "description": "최신 LLM과 벡터 데이터베이스를 결합하여 프라이빗 데이터 기반 검색, 평가 및 추론을 수행하는 오픈소스 Deep Research 대안입니다.",
+    "longDescription": "DeepSearcher는 OpenAI, Qwen, DeepSeek 등 최신 LLM과 Milvus 등 벡터 데이터베이스를 결합하여 프라이빗 데이터를 대상으로 정밀한 검색과 추론을 수행하는 오픈소스 도구입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Deep Research",
+      "RAG",
+      "벡터 데이터베이스",
+      "Python",
+      "LLM"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://zilliztech.github.io/deep-searcher/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python 3.10"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "가상환경 생성 및 설치",
+        "command": "python -m venv .venv && source .venv/bin/activate && pip install deepsearcher",
+        "note": "가상환경을 구축하고 딥서처 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 3.10 가상환경을 생성하고 활성화합니다.",
+      "pip를 통해 deepsearcher 패키지를 설치합니다.",
+      "필요에 따라 ollama 등 부가 의존성을 함께 설치합니다.",
+      "API 키와 벡터 DB를 설정하고 검색 및 추론 작업을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8345,
+    "forks": 831,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "postgresml",
+    "name": "PostgresML",
+    "github": "https://github.com/postgresml/postgresml",
+    "description": "PostgreSQL 데이터베이스 내부에서 직접 머신러닝 모델과 LLM, 벡터 검색을 수행할 수 있게 해주는 확장 기능입니다.",
+    "longDescription": "데이터를 별도의 모델 서버로 이동하지 않고 DB 안에서 GPU 가속과 함께 기계학습 및 임베디드 연산을 처리할 수 있는 고성능 MLOps 환경을 제공합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "PostgreSQL",
+      "머신러닝",
+      "벡터 데이터베이스",
+      "임베딩",
+      "SQL"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://postgresml.org",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "PostgreSQL",
+      "pgml extension"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 실행",
+        "command": "docker run -it -v postgresml_data:/var/lib/postgresql/data -p 5432:5432 postgresml/postgresml:latest",
+        "note": "PostgresML 도커 이미지를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 컨테이너를 실행하거나 PostgresML 클라우드 계정을 생성합니다.",
+      "PostgreSQL에 pgml 확장을 활성화합니다.",
+      "SQL 쿼리를 통해 모델 학습, 예측 및 벡터 유사도 검색을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6823,
+    "forks": 363,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "genkit",
+    "name": "Genkit",
+    "github": "https://github.com/genkit-ai/genkit",
+    "description": "자바스크립트, 고, 파이썬 등으로 안정적인 AI 에이전트 및 풀스택 AI 애플리케이션을 구축하기 위한 오픈소스 프레임워크입니다.",
+    "longDescription": "구글 파이어베이스 팀이 프로덕션 환경에서 사용하며 개발한 프레임워크로, 멀티모달 콘텐츠, 구조화된 출력, 도구 호출, 에이전트 워크플로우를 통합된 인터페이스로 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 에이전트",
+      "TypeScript",
+      "Go",
+      "Python",
+      "프레임워크"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://genkit.dev",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Node.js 또는 Go 또는 Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 Genkit SDK를 설치합니다.",
+      "지원되는 언어 환경에 맞춰 AI 모델과 플러그인을 설정합니다.",
+      "에이전트 워크플로우 및 도구 호출 로직을 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6529,
+    "forks": 863,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "lavague",
+    "name": "LaVague",
+    "github": "https://github.com/lavague-ai/LaVague",
+    "description": "사용자의 목표를 받아 웹 브라우저 상호작용 자동화 코드를 생성하고 실행하는 대형 액션 모델(LAM) 기반 웹 에이전트 프레임워크입니다.",
+    "longDescription": "세계 모델과 액션 엔진을 결합하여 '특정 라이브러리 설치 문서 찾기' 같은 고수준의 목표를 브라우저 내에서 직접 수행할 수 있도록 지원합니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "AI 에이전트",
+      "웹 자동화",
+      "대형 액션 모델",
+      "Python",
+      "Selenium"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.lavague.ai/en/latest/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Python 환경에 LaVague 라이브러리를 설치합니다.",
+      "세계 모델과 LLM 백엔드를 구성합니다.",
+      "자동화할 목표를 입력하여 에이전트를 실행합니다."
+    ],
+    "examplePrompt": "Hugging Face의 Diffusers 라이브러리 설치 방법을 찾아줘",
+    "usageNote": "",
+    "stars": 6391,
+    "forks": 573,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "llm-graph-builder",
+    "name": "Knowledge Graph Builder",
+    "github": "https://github.com/neo4j-labs/llm-graph-builder",
+    "description": "PDF, 문서, 웹페이지 등 비정형 데이터를 LLM과 LangChain을 이용해 구조화된 지식 그래프로 변환해 주는 도구입니다.",
+    "longDescription": "다양한 소스로부터 파일을 업로드하여 Neo4j 데이터베이스에 지식 그래프를 구축하고, 이를 기반으로 고도화된 그래프 RAG 검색을 수행할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "지식 그래프",
+      "GraphRAG",
+      "Neo4j",
+      "LangChain",
+      "Python"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://llm-graph-builder.neo4jlabs.com/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python 3.12+",
+      "Neo4j 5.23+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Neo4j 데이터베이스를 준비하고 백엔드 환경을 설정합니다.",
+      "PDF, 텍스트 등의 비정형 문서를 업로드합니다.",
+      "LLM을 활용해 지식 그래프를 생성하고 쿼리를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5282,
+    "forks": 883,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "chonkie",
+    "name": "Chonkie",
+    "github": "https://github.com/feyninc/chonkie",
+    "description": "빠르고 효율적이며 견고한 RAG 파이프라인을 위해 가볍게 텍스트 청킹(Chunking)을 처리해 주는 파이썬 라이브러리입니다.",
+    "longDescription": "RAG 시스템 구축 시 데이터 수집 단계에서 텍스트를 최적의 크기로 분할하고 관리할 수 있도록 설계된 고성능 청커입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RAG",
+      "텍스트 분할",
+      "임베딩",
+      "Python",
+      "라이브러리"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.chonkie.ai",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Python 환경에서 Chonkie 패키지를 설치합니다.",
+      "분할할 문서를 로드합니다.",
+      "청킹 알고리즘을 적용하여 텍스트를 조각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4792,
+    "forks": 364,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "openexecutive",
+    "name": "OpenExecutive",
+    "github": "https://github.com/SenteLabsAI/OpenExecutive",
+    "description": "8개의 전문 에이전트가 협업하여 가상의 경영진 팀을 구성하는 AI 기반 비즈니스 관리 플랫폼입니다.",
+    "longDescription": "지출 승인 임계값, 기업 지식 시스템 통합 등을 기본 지원하며, 고도화된 멀티 에이전트 협업을 통해 조직 관리를 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "AI 에이전트",
+      "멀티 에이전트",
+      "FastAPI",
+      "Next.js",
+      "Python"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://openexecutive.ai",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Python 3.11+",
+      "Anthropic API Key"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 설치",
+        "command": "git clone https://github.com/SenteLabsAI/OpenExecutive.git && cd OpenExecutive && make install",
+        "note": "프로젝트를 클론하고 백엔드 및 웹 앱 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      ".env 파일에 API Key를 설정합니다.",
+      "make dev 명령어로 백엔드와 프론트엔드를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5627,
+    "forks": 617,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "ragapp",
+    "name": "RAGapp",
+    "github": "https://github.com/ragapp/ragapp",
+    "description": "기업 환경에서 Docker를 이용해 쉽게 배포할 수 있는 엔터프라이즈용 에이전틱 RAG(Agentic RAG) 솔루션입니다.",
+    "longDescription": "OpenAI 커스텀 GPT처럼 간편하게 설정할 수 있으며, LlamaIndex를 기반으로 구축되어 사내 클라우드 인프라에 직접 배포 가능한 관리자 UI를 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RAG",
+      "LlamaIndex",
+      "Docker",
+      "엔터프라이즈",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/ragapp/ragapp",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T04:03:59.544Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 실행",
+        "command": "docker run -p 8000:8000 ragapp/ragapp",
+        "note": "도커 컨테이너를 실행하여 RAGapp을 구동합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 컨테이너를 실행합니다.",
+      "브라우저에서 관리자 UI(http://localhost:8000/admin)에 접속합니다.",
+      "AI 모델과 지식 베이스를 연동하여 RAG 서비스를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4444,
+    "forks": 470,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
     "id": "instatic",
     "name": "Instatic",
     "github": "https://github.com/CoreBunch/Instatic",
