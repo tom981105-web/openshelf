@@ -1,5 +1,673 @@
 [
   {
+    "id": "dpp",
+    "name": "D++ (DPP)",
+    "github": "https://github.com/brainboxdotcc/DPP",
+    "description": "소규모부터 대규모 봇까지 지원하는 가볍고 확장 가능한 C++ 디스코드 API 라이브러리입니다.",
+    "longDescription": "C++로 작성된 고성능 디스코드 봇 개발용 라이브러리로, 메모리 사용량이 적고 비동기 처리가 용이합니다. 대형 디스코드 봇 인프라를 안정적으로 구축할 수 있도록 다양한 API 래퍼를 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "디스코드",
+      "봇",
+      "C++",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://dpp.dev/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "C++ 컴파일러",
+      "CMake"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "패키지 매니저 또는 소스 빌드를 통해 D++ 라이브러리를 설치합니다.",
+      "디스코드 개발자 포털에서 봇 토큰을 발급받습니다.",
+      "C++ 코드에서 클라이언트를 초기화하고 이벤트 핸들러를 등록합니다.",
+      "프로젝트를 컴파일하고 봇을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1399,
+    "forks": 210,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "algoliasearch-client-javascript",
+    "name": "Algolia JavaScript Client",
+    "github": "https://github.com/algolia/algoliasearch-client-javascript",
+    "description": "JavaScript 및 Node.js 환경에서 Algolia 검색 엔진과 상호작용하기 위한 공식 API 클라이언트입니다.",
+    "longDescription": "웹 브라우저와 Node.js 모두에서 동작하며, TypeScript 기반으로 안전한 타입 정의를 제공합니다. Algolia의 고속 검색 API를 간편하게 호출하여 실시간 검색 기능을 구현할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "검색",
+      "API",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.algolia.com/doc/libraries/sdk/install#javascript",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Yarn 설치",
+        "command": "yarn add algoliasearch@5.60.0",
+        "note": "Yarn을 이용한 패키지 설치"
+      },
+      {
+        "title": "NPM 설치",
+        "command": "npm install algoliasearch@5.60.0",
+        "note": "NPM을 이용한 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "패키지 매니저를 통해 클라이언트 라이브러리를 설치합니다.",
+      "Algolia 애플리케이션 ID와 API 키를 사용하여 클라이언트를 초기화합니다.",
+      "인덱스에 데이터를 저장하거나 검색 쿼리를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1383,
+    "forks": 226,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "mtproto",
+    "name": "MTProto (Go)",
+    "github": "https://github.com/xelaj/mtproto",
+    "description": "텔레그램 API를 Go 언어 환경에서 순수 네이티브로 구현한 클라이언트 라이브러리입니다.",
+    "longDescription": "외부 의존성을 최소화하고 Go 언어의 동시성 모델을 활용하여 텔레그램 프로토콜과 직접 통신할 수 있습니다. 텔레그램 기반 자동화 도구나 봇을 개발할 때 유용하게 활용됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "텔레그램",
+      "API",
+      "Go",
+      "프로토콜"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/xelaj/mtproto",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go Get 설치",
+        "command": "go get github.com/xelaj/mtproto",
+        "note": "라이브러리 다운로드"
+      }
+    ],
+    "usageSteps": [
+      "go get 명령어로 패키지를 프로젝트에 추가합니다.",
+      "go generate 명령어를 실행하여 필요한 메서드 구조체를 생성합니다.",
+      "텔레그램 API 인증 정보를 설정하고 클라이언트 메서드를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1351,
+    "forks": 136,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "ain",
+    "name": "Ain",
+    "github": "https://github.com/jonaslu/ain",
+    "description": "파일과 폴더를 통해 API를 유연하게 관리하고 테스트할 수 있는 터미널 기반 HTTP API 클라이언트입니다.",
+    "longDescription": "Postman이나 Insomnia의 대안으로 설계되었으며, 스크립트 활용, 환경 변수 파일(.env) 지원, cURL 명령어 내보내기 등의 기능을 제공합니다. 터미널 환경에서 빠르고 효율적인 API 요청 테스트를 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API",
+      "cURL",
+      "터미널",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/jonaslu/ain",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Homebrew, Go 또는 바이너리를 통해 Ain을 설치합니다.",
+      "API 요청을 정의할 디렉토리와 파일을 생성합니다.",
+      "터미널에서 ain 명령어를 실행하여 API를 호출하고 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 623,
+    "forks": 16,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "wptools",
+    "name": "WPTools",
+    "github": "https://github.com/siznax/wptools",
+    "description": "위키피디아, 위키데이터 등 미디어위키 기반 플랫폼에서 데이터를 쉽게 추출할 수 있는 파이썬 도구입니다.",
+    "longDescription": "개발자와 데이터 연구원이 위키백과 문서 요약, 인포박스 정보, 미디어 파일, 통계 데이터 등을 간편하게 수집할 수 있도록 파이썬 API와 명령줄 인터페이스를 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "위키피디아",
+      "데이터추출",
+      "Python",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/siznax/wptools",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install wptools",
+        "note": "PyPI를 통한 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 wptools를 설치합니다.",
+      "파이썬 스크립트에서 wptools를 임포트합니다.",
+      "특정 위키 페이지 객체를 생성하고 쿼리 데이터를 가져옵니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 595,
+    "forks": 77,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "uplink",
+    "name": "Uplink",
+    "github": "https://github.com/prkumar/uplink",
+    "description": "파이썬을 위한 선언형 HTTP 클라이언트 라이브러리입니다.",
+    "longDescription": "Retrofit에서 영감을 받은 파이썬용 선언형 HTTP 클라이언트로, Python 3.10 이상을 공식 지원하며 aiohttp 등과 연동됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "HTTP",
+      "API",
+      "aiohttp",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://uplink.prkumar.dev",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Python 3.10 이상",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip를 이용한 설치",
+        "command": "pip install -U uplink",
+        "note": "최신 안정 버전을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "클래스와 데코레이터를 사용하여 HTTP API 인터페이스를 선언합니다.",
+      "클라이언트 인스턴스를 생성하고 정의된 메서드를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1141,
+    "forks": 67,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "mastodon-py",
+    "name": "Mastodon.py",
+    "github": "https://github.com/halcy/Mastodon.py",
+    "description": "마스돈(Mastodon) API를 파이썬으로 쉽게 다룰 수 있게 해주는 래퍼 라이브러리입니다.",
+    "longDescription": "최신 마스돈 공개 API의 기능들을 완벽히 지원하며, 파이썬을 통해 툿(Toot) 작성, 계정 관리, 타임라인 조회 등을 간편하게 구현할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "Mastodon",
+      "API",
+      "SNS",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/halcy/Mastodon.py",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Python 3.7 이상",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip를 이용한 설치",
+        "command": "pip install Mastodon.py",
+        "note": "PyPI를 통해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 Mastodon.py를 설치합니다.",
+      "애플리케이션을 등록하여 인증 토큰을 생성합니다.",
+      "Mastodon 클라이언트에 토큰을 전달해 API를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 959,
+    "forks": 172,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "client",
+    "name": "GitLab PHP API Client",
+    "github": "https://github.com/GitLabPHP/Client",
+    "description": "PHP 환경에서 GitLab API v4를 손쉽게 다룰 수 있는 모던 API 클라이언트입니다.",
+    "longDescription": "PSR 표준을 따르는 PHP 8.1~8.5 전용 GitLab API v4 클라이언트로, Composer를 통해 간편하게 프로젝트에 통합할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PHP",
+      "GitLab",
+      "API",
+      "Composer",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/GitLabPHP/Client",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "PHP 8.1 이상",
+      "Composer"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Composer를 이용한 요구사항 추가",
+        "command": "composer require gitlab/client",
+        "note": "프로젝트에 클라이언트 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Composer를 통해 패키지를 설치합니다.",
+      "PSR 호환 HTTP 클라이언트 구현체를 함께 준비합니다.",
+      "GitLab 클라이언트를 초기화하고 API 요청을 보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 954,
+    "forks": 451,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "binance",
+    "name": "Binance SDK for Node.js",
+    "github": "https://github.com/sieblyio/binance",
+    "description": "바이낸스 REST API와 웹소켓을 자바스크립트 및 타입스크립트 환경에서 다루기 위한 SDK입니다.",
+    "longDescription": "타입스크립트와 브라우저 환경을 지원하며, 바이낸스 거래소의 데이터 조회 및 실시간 웹소켓 통신 기능을 통합 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "Binance",
+      "API"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://siebly.io/sdk/binance/javascript",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm을 이용한 설치",
+        "command": "npm i binance",
+        "note": "프로젝트에 바이낸스 SDK를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm 명령어로 패키지를 설치합니다.",
+      "코드에서 SDK를 불러와 바이낸스 API 키를 설정합니다.",
+      "REST API 또는 WebSocket 메서드를 호출하여 시세를 조회하거나 거래를 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 930,
+    "forks": 283,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "pyowm",
+    "name": "PyOWM",
+    "github": "https://github.com/csparpa/pyowm",
+    "description": "OpenWeatherMap 웹 API를 파이썬에서 간편하게 사용할 수 있도록 감싼 래퍼 라이브러리입니다.",
+    "longDescription": "현재 날씨, 예보, 역사적 날씨 데이터 등을 객체지향적인 파이썬 코드로 손쉽게 조회할 수 있게 도와줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "OpenWeatherMap",
+      "Weather",
+      "API",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pyowm.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip를 이용한 설치",
+        "command": "pip install pyowm",
+        "note": "PyPI를 통해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip로 pyowm을 설치합니다.",
+      "OpenWeatherMap에서 발급받은 API Key로 클라이언트를 초기화합니다.",
+      "원하는 지역의 날씨 정보를 요청합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 814,
+    "forks": 172,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "pywikibot",
+    "name": "Pywikibot",
+    "github": "https://github.com/wikimedia/pywikibot",
+    "description": "미디어위키(MediaWiki) API와 상호작용하는 공식 파이썬 라이브러리 및 봇 프레임워크입니다.",
+    "longDescription": "위키백과, 위키데이터 등 위키미디어 프로젝트에서 자동화된 편집 및 문서 관리를 수행할 수 있는 파이썬 라이브러리를 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "MediaWiki",
+      "Wikipedia",
+      "Bot",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.mediawiki.org/wiki/Manual:Pywikibot",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI를 통한 설치",
+        "command": "pip install pywikibot",
+        "note": "스크립트를 제외한 기본 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "파이썬 스크립트에서 pywikibot을 임포트합니다.",
+      "대상 위키 사이트와 페이지를 지정하여 텍스트 수정 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 778,
+    "forks": 222,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "python3-krakenex",
+    "name": "Python3 Krakenex",
+    "github": "https://github.com/veox/python3-krakenex",
+    "description": "크라켄(Kraken.com) 암호화폐 거래소의 REST API를 파이썬 3에서 이용하기 위한 클라이언트입니다.",
+    "longDescription": "가상자산 거래소 Kraken의 REST API와 간편하게 통신할 수 있도록 지원하며, requests 라이브러리를 기반으로 동작합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "Kraken",
+      "Exchange",
+      "API",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-3.0",
+    "website": "https://github.com/veox/python3-krakenex",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Python 3.3 이상",
+      "requests"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI를 통한 설치",
+        "command": "pip install krakenex",
+        "note": "가상환경 내에서 설치하는 것을 권장합니다."
+      }
+    ],
+    "usageSteps": [
+      "가상환경을 활성화하고 pip로 패키지를 설치합니다.",
+      "스크립트에서 krakenex 모듈을 불러옵니다.",
+      "API 키와 비밀키를 설정하여 공개 및 비공개 엔드포인트에 요청을 보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 726,
+    "forks": 224,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "ghapi",
+    "name": "GhApi",
+    "github": "https://github.com/AnswerDotAI/ghapi",
+    "description": "GitHub의 방대한 API를 활용할 수 있는 직관적이고 완전한 파이썬 인터페이스입니다.",
+    "longDescription": "OpenAPI 사양을 기반으로 자동 생성되는 파이썬용 GitHub API 클라이언트로, 최신 비동기 처리를 지원하며 주피터 노트북 환경 등에서 강력한 자동완성을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "GitHub",
+      "API",
+      "OpenAPI",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://ghapi.fast.ai/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install ghapi",
+        "note": "파이썬 환경에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 ghapi를 설치합니다.",
+      "파이썬 REPL이나 주피터 노트북을 실행합니다.",
+      "GhApi 객체를 생성하고 자동 완성 기능을 활용해 GitHub API를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 687,
+    "forks": 69,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
+    "id": "qbittorrent-api",
+    "name": "qBittorrent API",
+    "github": "https://github.com/rmartin16/qbittorrent-api",
+    "description": "qBittorrent의 웹 API를 파이썬에서 제어하기 위한 클라이언트 구현체입니다.",
+    "longDescription": "토렌트 추가, 삭제, 상태 모니터링 등 qBittorrent 웹 UI 기능을 파이썬 코드로 자동화하고 관리할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "qBittorrent",
+      "API",
+      "토렌트",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://qbittorrent-api.readthedocs.io/",
+    "featured": 9,
+    "added": "2026-10-19",
+    "addedAt": "2026-10-19T16:04:03.389Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip를 통한 설치",
+        "command": "python -m pip install qbittorrent-api",
+        "note": "PyPI에서 최신 클라이언트를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "qBittorrent 웹 UI 접속 정보(호스트, 포트, 계정)를 설정합니다.",
+      "클라이언트 인스턴스를 생성하여 토렌트 작업을 제어합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 516,
+    "forks": 77,
+    "starsUpdatedAt": "2026-10-19"
+  },
+  {
     "id": "grid-map",
     "name": "Grid Map",
     "github": "https://github.com/ANYbotics/grid_map",
