@@ -1,5 +1,593 @@
 [
   {
+    "id": "serviceradar",
+    "name": "serviceradar",
+    "github": "https://github.com/carverauto/serviceradar",
+    "description": "오픈소스 기반의 네트워크 관리, 모니터링, ITOM 및 보안 분석 플랫폼입니다.",
+    "longDescription": "최신 관측성과 제로 트러스트 아키텍처를 결합하여 네트워크 스캔과 인프라 모니터링을 수행합니다. Docker Compose를 통해 간편하게 배포하여 기업 및 홈랩 환경의 가시성을 높일 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Observability",
+      "Network Monitoring",
+      "Elixir",
+      "Docker",
+      "OpenTelemetry"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://serviceradar.cloud",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose로 빠른 설치",
+        "command": "git clone https://github.com/carverauto/serviceradar.git && cd serviceradar && docker compose up -d",
+        "note": "저장소를 복제하고 도커 컴포즈를 통해 서비스를 백그라운드로 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론하고 환경 변수를 설정합니다.",
+      "Docker Compose 명령어로 서비스를 실행합니다.",
+      "컨테이너 로그에서 관리자 비밀번호를 확인하고 웹 인터페이스에 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "초기 실행 시 생성되는 로그에서 관리자 인증 정보를 확인해야 합니다.",
+    "stars": 920,
+    "forks": 2,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "super",
+    "name": "super",
+    "github": "https://github.com/spr-networks/super",
+    "description": "장치별 개별 와이파이 비밀번호, 광고 차단 및 정책 기반 네트워크 접근 제어를 지원하는 라우터 소프트웨어입니다.",
+    "longDescription": "적응형 마이크로 세그먼트 네트워크를 생성하여 와이파이 장치 관리, 원격 VPN, 인터넷 필터링 기능을 제공합니다. 홈랩 환경에서 강력한 보안과 네트워크 제어를 구현합니다.",
+    "category": "네트워크",
+    "tags": [
+      "Router",
+      "WiFi",
+      "Adblock",
+      "WireGuard",
+      "Security"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://www.supernetworks.org/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Docker 또는 호환되는 라우터 하드웨어"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "지원되는 운영체제 또는 Docker 환경에 SPR을 설치합니다.",
+      "관리자 인터페이스를 통해 네트워크 정책 및 장치별 접근 권한을 설정합니다.",
+      "광고 차단 및 VPN 기능을 활성화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "네트워크 라우팅 및 방화벽 규칙을 직접 제어하므로 전용 네트워크 인터페이스가 필요할 수 있습니다.",
+    "stars": 873,
+    "forks": 67,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "astroluma",
+    "name": "Astroluma",
+    "github": "https://github.com/Sanjeet990/Astroluma",
+    "description": "일일 태스크, 장치 모니터링, 앱 통합 및 날씨 정보를 한눈에 관리할 수 있는 MERN 스택 기반 홈랩 대시보드입니다.",
+    "longDescription": "반응형 디자인과 동적 설정 옵션을 제공하여 사용자의 홈랩 환경을 맞춤형으로 관리할 수 있습니다. 사이드바와 카테고리 배치를 유연하게 변경할 수 있습니다.",
+    "category": "생산성",
+    "tags": [
+      "Dashboard",
+      "Homelab",
+      "셀프호스팅",
+      "Docker",
+      "Node.js"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://getastroluma.com/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "도커 컴포즈 설정 파일을 생성합니다.",
+      "컨테이너를 빌드하고 실행합니다.",
+      "웹 브라우저로 대시보드에 접속하여 위젯과 앱을 배치합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "공식 컴포즈 생성기를 이용하면 간편하게 설정 파일을 만들 수 있습니다.",
+    "stars": 772,
+    "forks": 22,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "lab-dash",
+    "name": "lab-dash",
+    "github": "https://github.com/AnthonyGress/lab-dash",
+    "description": "서버 및 홈랩 애플리케이션을 관리하기 위해 설계된 오픈소스 내부 호스팅 홈페이지 대시보드입니다.",
+    "longDescription": "드래그 앤 드롭으로 위젯을 재배치할 수 있으며, 서비스 단축키, 시스템 정보 및 서비스 상태 확인 기능을 제공합니다. 민감한 데이터는 로컬에서 AES-256 암호화로 보호됩니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Dashboard",
+      "Homelab",
+      "Docker",
+      "React",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/AnthonyGress/lab-dash",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose로 실행",
+        "command": "docker compose up -d",
+        "note": "설정된 compose 파일을 통해 Lab Dash 컨테이너를 백그라운드로 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 컴포즈 파일에 Lab Dash 설정을 작성합니다.",
+      "컨테이너를 실행하고 웹 UI로 접속합니다.",
+      "그리드 레이아웃에 자주 사용하는 홈랩 서비스와 위젯을 추가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "네트워크 사용량 모니터링을 위해 호스트 네트워크 모드나 방화벽 허용이 필요할 수 있습니다.",
+    "stars": 730,
+    "forks": 52,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "kuvasz",
+    "name": "kuvasz",
+    "github": "https://github.com/kuvasz-uptime/kuvasz",
+    "description": "HTTP(S) 가용성, SSL 인증서 만료일 및 크론잡을 모니터링하고 상태 페이지를 제공하는 오픈소스 서비스입니다.",
+    "longDescription": "YAML 기반의 인프라형 코드(IaC) 설정, 프로메테우스 연동, 완전한 REST API 및 다양한 알림 채널을 지원하여 안정적인 서비스 모니터링 환경을 구축할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Monitoring",
+      "Uptime",
+      "SSL",
+      "Kotlin",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://kuvasz-uptime.dev/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "도커 이미지 또는 컴포즈 파일을 이용해 Kuvasz를 배포합니다.",
+      "YAML 설정 파일을 통해 모니터링할 웹사이트와 서비스를 정의합니다.",
+      "상태 페이지와 알림 채널을 연동하여 장애 상황을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "컨테이너 환경에서 간편하게 실행할 수 있으며 프로메테우스와 쉽게 연동됩니다.",
+    "stars": 660,
+    "forks": 40,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "netgoat",
+    "name": "NetGoat",
+    "github": "https://github.com/netgoat-xyz/netgoat",
+    "description": "로컬 및 클라우드 환경을 위한 자체 호스팅 리버스 프록시 및 트래픽 정책 에이전트",
+    "longDescription": "Go 언어로 작성된 가벼운 자가 호스팅 리버스 프록시 및 트래픽 제어 에이전트로, 클라우드플레어의 유료 기능을 무료로 대체할 수 있도록 설계되었습니다.",
+    "category": "네트워크",
+    "tags": [
+      "Go",
+      "리버스 프록시",
+      "DNS",
+      "자가 호스팅"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://netgoat.app",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Go 1.18 이상 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "테스트 실행",
+        "command": "go test ./...",
+        "note": "패키지 테스트를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "YAML 설정 파일을 작성하여 업스트림 라우트를 구성합니다.",
+      "Go 바이너리를 실행하거나 Docker를 통해 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "초기 알파 버전이므로 공인 인터넷에 노출 시 인증된 TLS 설정이 권장됩니다.",
+    "stars": 902,
+    "forks": 50,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "hypermind",
+    "name": "Hypermind",
+    "github": "https://github.com/lklynet/hypermind",
+    "description": "완전 탈중앙화 P2P 배포 카운터 및 임시 채팅 플랫폼",
+    "longDescription": "Hyperswarm 기반의 분산 시스템을 활용하여 현재 컨테이너를 구동 중인 사용자 수를 실시간으로 파악하고 가볍게 소통할 수 있는 P2P 플랫폼입니다.",
+    "category": "네트워크",
+    "tags": [
+      "P2P",
+      "Node.js",
+      "탈중앙화",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hypermind.lkly.net",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Node.js 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker를 통해 컨테이너를 실행합니다.",
+      "웹 인터페이스 또는 API를 통해 분산 스웜 상태를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "가벼운 장난감 프로젝트이자 분산 시스템 실험용으로 제작되었습니다.",
+    "stars": 842,
+    "forks": 31,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "hestia-core",
+    "name": "Project Hestia",
+    "github": "https://github.com/mult1v4c/hestia-core",
+    "description": "홈랩 서비스를 위한 모듈식 그리드 기반 브라우저 대시보드",
+    "longDescription": "복잡한 백엔드 없이 브라우저에서 직접 실행되며, Base16 테마와 다양한 API 통합을 지원하는 모듈형 대시보드입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "대시보드",
+      "HTML",
+      "Docker",
+      "홈랩"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mult1v4c/hestia-core",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Docker 및 Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 빌드 및 실행",
+        "command": "docker build -t hestia-core .",
+        "note": "도커 이미지를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "도커 이미지를 빌드하고 컨테이너를 실행합니다.",
+      "웹 브라우저를 통해 대시보드에 접속하여 위젯을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "API 통합 기능을 사용하려면 Docker 환경에서의 실행이 권장됩니다.",
+    "stars": 685,
+    "forks": 45,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "mikrodash",
+    "name": "MikroDash",
+    "github": "https://github.com/SecOps-7/MikroDash",
+    "description": "MikroTik RouterOS v7을 위한 실시간 오픈소스 명령 센터 및 대시보드",
+    "longDescription": "웹소켓을 통해 라우터 API와 직접 통신하여 CPU, 트래픽, 무선 클라이언트, DHCP, 방화벽 상태를 실시간으로 모니터링할 수 있는 단일 바이너리 대시보드입니다.",
+    "category": "네트워크",
+    "tags": [
+      "Go",
+      "네트워크 모니터링",
+      "Docker",
+      "라우터"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/SecOps-7/MikroDash",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "MikroTik RouterOS v7",
+      "Docker 또는 Go 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "RouterOS 컨테이너 기능을 활성화합니다.",
+      "Docker 또는 단일 바이너리 형태로 MikroDash를 배포합니다.",
+      "라우터 API 정보를 입력하여 실시간 모니터링을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "데이터 지속성을 위해 /data 볼륨 마운트 설정이 필수적입니다.",
+    "stars": 619,
+    "forks": 91,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "proxmoxmcp-plus",
+    "name": "ProxmoxMCP-Plus",
+    "github": "https://github.com/RekklesNA/ProxmoxMCP-Plus",
+    "description": "LLM 및 AI 에이전트에서 Proxmox VE를 안전하게 제어하기 위한 MCP 및 OpenAPI 컨트롤 플레인",
+    "longDescription": "Model Context Protocol(MCP)과 OpenAPI를 연동하여 AI 에이전트가 Proxmox VE의 VM, LXC, 백업, 스냅샷 등을 안전하게 관리할 수 있도록 지원하는 도구입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "MCP",
+      "Proxmox",
+      "AI 에이전트",
+      "가상화"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/RekklesNA/ProxmoxMCP-Plus#readme",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Python",
+      "Proxmox VE",
+      "MCP 지원 클라이언트"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 Python 환경을 설정합니다.",
+      "Proxmox VE 연결 정보 및 API 토큰을 구성합니다.",
+      "MCP 지원 클라이언트(Claude Desktop 등)에 도구를 연동합니다."
+    ],
+    "examplePrompt": "프로모스(Proxmox)에서 centos-template을 복제하여 새로운 LXC 컨테이너를 생성해줘.",
+    "usageNote": "보안 가이드를 참고하여 적절한 권한 및 명령 정책을 설정해야 합니다.",
+    "stars": 601,
+    "forks": 105,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "eccm",
+    "name": "Ethernet Cable Connection Manager",
+    "github": "https://github.com/bijomaru78/eccm",
+    "description": "네트워크 케이블 및 물리적 연결 상태를 시각화하는 브라우저 기반 도구",
+    "longDescription": "스위치, 패치 패널, 월 포트, 라우터 등의 네트워크 장비를 배치하고 포트를 연결하여 홈랩의 물리적 배선 상태를 관리할 수 있는 오프라인 도구입니다.",
+    "category": "네트워크",
+    "tags": [
+      "네트워크",
+      "오프라인",
+      "HTML",
+      "시스템 관리"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://bijomaru78.github.io/eccm/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "모던 웹 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹 브라우저로 애플리케이션을 엽니다.",
+      "스위치, 라우터, 패치 패널 등의 장비를 생성합니다.",
+      "포트를 상호 연결하고 레이아웃을 JSON 파일로 내보내거나 저장합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "서버 없이 순수 HTML과 JavaScript로만 동작하여 오프라인에서도 사용할 수 있습니다.",
+    "stars": 570,
+    "forks": 37,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "espkvm",
+    "name": "ESP-KVM",
+    "github": "https://github.com/espkvm/espkvm",
+    "description": "ESP32-P4 기반의 저렴한 오픈소스 IP-KVM 솔루션",
+    "longDescription": "타겟 기기의 HDMI 출력을 캡처하고 USB 키보드·마우스를 에뮬레이트하여 웹 브라우저를 통해 원격으로 BIOS 화면 및 부팅 과정을 제어할 수 있는 하드웨어 기반 KVM입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "ESP32",
+      "KVM",
+      "하드웨어",
+      "원격 제어"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://espkvm.io",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "ESP32-P4 보드",
+      "Toshiba TC358743 브릿지"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "ESP32-P4 하드웨어 보드에 펌웨어를 플래싱합니다.",
+      "타겟 기기의 HDMI 및 USB 포트에 장치를 연결합니다.",
+      "브라우저를 통해 장치 IP에 접속하여 원격 화면을 제어합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "운영체제가 설치되지 않은 부팅 화면이나 BIOS 설정에서도 작동합니다.",
+    "stars": 538,
+    "forks": 38,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "bindery",
+    "name": "Bindery",
+    "github": "https://github.com/vavallee/bindery",
+    "description": "Usenet 및 토렌트를 위한 현대적인 도서 및 오디오북 다운로드 관리자",
+    "longDescription": "메타데이터 소스 장애에 대응할 수 있도록 설계된 Readarr 대안으로, 작가 모니터링, 인덱서 검색, SABnzbd 연동을 통한 자동 다운로드 및 라이브러리 구성을 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Go",
+      "다운로드 관리자",
+      "오디오북",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/vavallee/bindery",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Docker 또는 Go 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker Compose를 사용하여 Bindery 컨테이너를 배포합니다.",
+      "기존 Readarr의 데이터베이스(readarr.db)를 가져와 설정을 마이그레이션합니다.",
+      "웹 UI에서 다운로드 클라이언트 및 인덱서를 연결합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "OpenLibrary 등 공개 API를 활용하여 메타데이터 단일 장애점을 방지합니다.",
+    "stars": 528,
+    "forks": 78,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "local-content-share",
+    "name": "Local Content Share",
+    "github": "https://github.com/Tanq16/local-content-share",
+    "description": "로컬 네트워크 내에서 텍스트 스니펫과 파일을 쉽게 공유할 수 있는 자가 호스팅 앱",
+    "longDescription": "클라이언트 설정 없이 로컬 네트워크 내의 모든 기기에서 텍스트, 링크, 파일을 공유하고 마크다운 메모를 작성할 수 있는 에어드랍 대안 앱입니다.",
+    "category": "협업·소통",
+    "tags": [
+      "파일 공유",
+      "Docker",
+      "Go",
+      "자가 호스팅"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Tanq16/local-content-share",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T02:04:07.859Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run --name local-content-share -p 8080:8080 -v $HOME/.localcontentshare:/app/data tanq16/local-content-share:main",
+        "note": "컨테이너를 실행하여 로컬 공유 서버를 시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 명령어를 사용하여 애플리케이션을 실행합니다.",
+      "동일한 로컬 네트워크의 기기에서 브라우저로 서버 주소에 접속합니다.",
+      "텍스트 스니펫을 공유하거나 파일을 업로드하여 다운로드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "데이터 영구 저장을 위해 볼륨 마운트 디렉터리 설정이 권장됩니다.",
+    "stars": 495,
+    "forks": 22,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
     "id": "cleverhans",
     "name": "CleverHans",
     "github": "https://github.com/cleverhans-lab/cleverhans",
