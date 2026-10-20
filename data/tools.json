@@ -1,5 +1,792 @@
 [
   {
+    "id": "pocketsphinx",
+    "name": "PocketSphinx",
+    "github": "https://github.com/cmusphinx/pocketsphinx",
+    "description": "가볍고 효율적인 카네기 멜론 대학의 오픈소스 음성 인식 엔진입니다.",
+    "longDescription": "PocketSphinx는 자원이 제한된 환경에서도 동작하도록 설계된 소형 연속 음성 인식 엔진입니다. 오래된 알고리즘을 사용하지만 그 컴팩트함과 효율성 덕분에 임베디드 및 다양한 애플리케이션에서 유용하게 쓰입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "C",
+      "오디오",
+      "임베디드"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/cmusphinx/pocketsphinx",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "CMake",
+      "C 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "CMake를 사용하여 프로젝트를 빌드합니다.",
+      "오디오 입력 소스와 모델 파일을 설정합니다.",
+      "음성 인식 엔진을 실행하여 오디오를 텍스트로 변환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "최신 빌드에는 CMake가 필수로 사용되며 SphinxBase 의존성이 제거되었습니다.",
+    "stars": 4352,
+    "forks": 728,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "crisperwhisper",
+    "name": "CrisperWhisper",
+    "github": "https://github.com/nyrahealth/CrisperWhisper",
+    "description": "단어 단위 타임스탬프와 함께 발화 내용 그대로 또는 정돈된 형태로 제어 가능한 고정밀 음성 인식 도구입니다.",
+    "longDescription": "말더듬, 추임새, 침묵 등을 원문 그대로 기록하거나 가독성을 높여 정돈된 텍스트로 변환하는 방식을 정밀하게 제어할 수 있는 프로덕션급 음성 인식 모델입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "ASR",
+      "음성인식",
+      "타임스탬프",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://nyra-labs.com",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NVIDIA GPU 설치",
+        "command": "pip install \"crisperwhisper[ct2]\"",
+        "note": "CTranslate2 기반 GPU 가속 설치"
+      },
+      {
+        "title": "순수 PyTorch 설치",
+        "command": "pip install \"crisperwhisper[transformers]\"",
+        "note": "플랫폼 제약 없는 PyTorch 기반 설치"
+      }
+    ],
+    "usageSteps": [
+      "환경에 맞는 패키지를 설치합니다.",
+      "파이썬 코드에서 CrisperWhisper 모델을 로드합니다.",
+      "오디오 파일을 전달하여 정밀한 자막 및 텍스트 변환 결과를 얻습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1457,
+    "forks": 94,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "wenet",
+    "name": "WeNet",
+    "github": "https://github.com/wenet-e2e/wenet",
+    "description": "프로덕션 환경을 목표로 하는 고성능 단일 및 다국어 음성 인식 툴킷입니다.",
+    "longDescription": "WeNet은 산업계 배포를 우선으로 설계된 종단간 음성 인식 툴킷입니다. Conformer 및 Transformer 아키텍처를 기반으로 하며 스트리밍 및 비스트리밍 음성 인식을 모두 지원합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "ASR",
+      "음성인식",
+      "Conformer",
+      "PyTorch"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://wenet-e2e.github.io/wenet/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3.7+",
+      "PyTorch",
+      "SoX"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Conda 설치",
+        "command": "conda install conda-forge::sox",
+        "note": "SoX 패키지 설치"
+      },
+      {
+        "title": "PyTorch 및 TorchAudio 설치",
+        "command": "pip install torch==2.2.2+cu121 torchaudio==2.2.2+cu121 -f https://download.pytorch.org/whl/torch_stable.html",
+        "note": "GPU 지원 PyTorch 설치"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 종속성을 설치합니다.",
+      "제공된 예제 레시피 디렉토리로 이동합니다.",
+      "데이터 준비 및 학습 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5247,
+    "forks": 1191,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "whisper-jax",
+    "name": "Whisper JAX",
+    "github": "https://github.com/sanchit-gandhi/whisper-jax",
+    "description": "OpenAI의 Whisper 모델을 JAX로 구현하여 TPU 환경에서 최대 70배 빠른 속도를 제공합니다.",
+    "longDescription": "Hugging Face Transformers 기반으로 최적화된 JAX 구현체를 사용하여 OpenAI Whisper의 추론 속도를 극대화한 도구입니다. CPU, GPU, TPU 환경을 모두 지원합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Whisper",
+      "JAX",
+      "음성인식",
+      "TPU"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/sanchit-gandhi/whisper-jax",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3.9+",
+      "JAX 0.4.5+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "JAX 설치",
+        "command": "pip install jax",
+        "note": "공식 가이드에 따라 장치별 JAX 설치"
+      }
+    ],
+    "usageSteps": [
+      "JAX 및 의존성 패키지를 설치합니다.",
+      "파이썬 파이프라인 코드를 작성하거나 추론 엔드포인트를 구성합니다.",
+      "오디오 파일을 입력하여 고속으로 텍스트 변환을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4677,
+    "forks": 409,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "whisper-timestamped",
+    "name": "Whisper Timestamped",
+    "github": "https://github.com/linto-ai/whisper-timestamped",
+    "description": "단어 단위의 타임스탬프와 신뢰도 점수를 제공하는 다국어 자동 음성 인식 도구입니다.",
+    "longDescription": "OpenAI Whisper 모델을 확장하여 정밀한 단어 단위 타임스탬프와 인식 신뢰도를 추출할 수 있도록 지원하는 파이썬 패키지입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Whisper",
+      "음성인식",
+      "타임스탬프",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/linto-ai/whisper-timestamped",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3+",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install whisper-timestamped",
+        "note": "pip를 이용한 기본 설치"
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "파이썬 스크립트에서 모델을 불러옵니다.",
+      "오디오 파일과 함께 함수를 호출하여 단어별 타임스탬프를 얻습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2855,
+    "forks": 212,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "sherpa-ncnn",
+    "name": "Sherpa-ncnn",
+    "github": "https://github.com/k2-fsa/sherpa-ncnn",
+    "description": "인터넷 연결 없이 모바일 및 데스크톱에서 ncnn을 통해 실시간 음성 인식을 수행하는 차세대 Kaldi 도구입니다.",
+    "longDescription": "ncnn 추론 프레임워크를 기반으로 안드로이드, iOS, 리눅스, 윈도우 등 다양한 플랫폼에서 오프라인 실시간 음성 인식 및 음성 활동 감지를 제공합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "ncnn",
+      "실시간",
+      "모바일"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://k2-fsa.github.io/sherpa/ncnn/index.html",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "C++ 컴파일러 또는 지원 플랫폼별 개발 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트 문서를 참고하여 대상 플랫폼에 맞는 빌드 설정을 진행합니다.",
+      "사전 학습된 모델 가중치를 다운로드합니다.",
+      "애플리케이션에 통합하거나 제공되는 데모를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1795,
+    "forks": 223,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "dsnote",
+    "name": "Speech Note",
+    "github": "https://github.com/mkiol/dsnote",
+    "description": "오프라인 음성 인식, 음성 합성 및 기계 번역을 지원하는 리눅스 데스크톱 메모 앱입니다.",
+    "longDescription": "인터넷 연결 없이 로컬에서 음성을 텍스트로 변환하고, 텍스트를 음성으로 읽어주며, 번역 기능까지 제공하는 리눅스 및 Sailfish OS용 데스크톱 애플리케이션입니다.",
+    "category": "문서",
+    "tags": [
+      "음성인식",
+      "음성합성",
+      "번역",
+      "Linux"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MPL-2.0",
+    "website": "https://github.com/mkiol/dsnote",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Flatpak 지원 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Flatpak을 통해 애플리케이션을 설치합니다.",
+      "내장된 모델 브라우저를 통해 필요한 언어 및 STT/TTS 모델을 다운로드합니다.",
+      "메모 작성, 음성 받아쓰기 및 번역 기능을 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1695,
+    "forks": 76,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "obs-localvocal",
+    "name": "LocalVocal",
+    "github": "https://github.com/royshil/obs-localvocal",
+    "description": "OpenAI Whisper를 활용하여 OBS Studio에서 실시간 로컬 음성 인식 및 자막 생성을 수행하는 플러그인입니다.",
+    "longDescription": "외부 서버 전송 없이 로컬 환경에서 구동되는 고성능 AI 음성 인식 기능을 OBS Studio에 통합하여 실시간 스트리밍 자막 생성과 번역을 지원합니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "OBS",
+      "음성인식",
+      "자막",
+      "플러그인"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://obsproject.com/forum/resources/localvocal-live-stream-ai-assistant.1769/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "OBS Studio"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "플러그인 바이너리 또는 소스코드를 다운로드하여 OBS 디렉토리에 설치합니다.",
+      "OBS Studio를 실행하고 LocalVocal 필터 또는소스를 추가합니다.",
+      "모델을 선택하고 마이크 오디오 입력을 연결하여 실시간 자막 생성을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1642,
+    "forks": 126,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "amica",
+    "name": "Amica",
+    "github": "https://github.com/semperai/amica",
+    "description": "음성 합성 및 음성 인식을 결합하여 3D 캐릭터와 대화할 수 있는 오픈 소스 인터페이스입니다.",
+    "longDescription": "사용자가 LLM과 연동된 3D 아바타 캐릭터와 실시간 음성 대화를 나눌 수 있도록 웹 및 데스크톱 환경을 제공하는 오픈 소스 프론트엔드 인터페이스입니다.",
+    "category": "협업·소통",
+    "tags": [
+      "3D",
+      "음성인식",
+      "음성합성",
+      "챗봇"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://heyamica.com",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "웹 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹 인터페이스에 접속하거나 저장소를 클론하여 실행합니다.",
+      "설정에서 사용할 AI 백엔드 및 음성 인식/합성 옵션을 구성합니다.",
+      "마이크를 통해 3D 캐릭터와 대화를 나눕니다."
+    ],
+    "examplePrompt": "안녕하세요, 오늘 날씨에 대해 이야기해 주세요.",
+    "usageNote": "",
+    "stars": 1616,
+    "forks": 271,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "sglang-omni",
+    "name": "SGLang-Omni",
+    "github": "https://github.com/sgl-project/sglang-omni",
+    "description": "오디오 모델(TTS, ASR) 및 통합 멀티모달 모델을 위한 고성능 서빙 프레임워크입니다.",
+    "longDescription": "음성 생성, 음성 인식 및 대형 멀티모달 모델을 빠르고 효율적으로 서비스할 수 있도록 최적화된 고성능 분산 추론 및 서빙 프레임워크입니다.",
+    "category": "AI 모델",
+    "tags": [
+      "추론",
+      "음성인식",
+      "서빙",
+      "CUDA"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://sgl-project.github.io/sglang-omni/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python",
+      "CUDA 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "uv pip install --prerelease=allow \"sglang-omni==0.1.8\"",
+        "note": "uv 패키지 매니저를 이용한 설치"
+      }
+    ],
+    "usageSteps": [
+      "지원되는 오디오 또는 멀티모달 모델 가중치를 다운로드합니다.",
+      "서빙 명령어를 통해 모델 서버를 구동합니다.",
+      "OpenAI 호환 API 엔드포인트를 통해 요청을 전송합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1562,
+    "forks": 623,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "asrt-speechrecognition",
+    "name": "ASRT_SpeechRecognition",
+    "github": "https://github.com/nl8590687/ASRT_SpeechRecognition",
+    "description": "텐서플로우를 기반으로 구현된 딥러닝 중국어 음성 인식 시스템입니다.",
+    "longDescription": "중국어 음성 인식(STT)을 위한 오픈소스 딥러닝 프로젝트로, CNN과 CTC 손실 함수 등을 활용하여 음성을 텍스트로 변환합니다. 관련 데이터셋과 학습 파이프라인을 함께 제공하여 음성 인식 학습에 유용합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "Python",
+      "TensorFlow",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://www.ailemon.net/asrt",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3.9+",
+      "TensorFlow 2.5+",
+      "CUDA (GPU 사용 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 패키지 설치",
+        "command": "pip install -r requirements.txt",
+        "note": "필요한 파이썬 라이브러리를 일괄 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "requirements.txt를 통해 의존성을 설치합니다.",
+      "제공되는 스크립트를 통해 모델 학습 및 평가를 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "GPU 환경과 올바른 버전의 CUDA 및 cuDNN 설정이 권장됩니다.",
+    "stars": 8393,
+    "forks": 1893,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "moss-transcribe-diarize",
+    "name": "MOSS-Transcribe-Diarize",
+    "github": "https://github.com/OpenMOSS/MOSS-Transcribe-Diarize",
+    "description": "50개 이상의 언어를 지원하는 다중 화자 음성 전사 및 화자 분리 오디오 모델입니다.",
+    "longDescription": "오디오 이해와 장문 다중 화자 전사, 타임스탬프, 음향 이벤트 감지를 수행할 수 있는 경량 오픈소스 음성 모델입니다. SGLang 등을 통해 로컬에서 구동하거나 웹 애플리케이션 형태로 활용할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "화자분리",
+      "Python",
+      "다국어",
+      "LLM"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://huggingface.co/OpenMOSS-Team/MOSS-Transcribe-Diarize",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3.10+",
+      "CUDA 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "모델 다운로드",
+        "command": "hf download OpenMOSS-Team/MOSS-Transcribe-Diarize",
+        "note": "Hugging Face에서 모델 가중치를 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "모델 가중치를 다운로드합니다.",
+      "서버 실행 명령어를 통해 모델을 서빙합니다.",
+      "오디오 파일을 입력하여 전사 및 화자 분리 결과를 얻습니다."
+    ],
+    "examplePrompt": "이 오디오 파일의 내용을 화자별로 구분해서 전사해 주세요.",
+    "usageNote": "CUDA 13 또는 12 환경에 맞는 서빙 도구 설정이 필요합니다.",
+    "stars": 2190,
+    "forks": 134,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "parlor",
+    "name": "Parlor",
+    "github": "https://github.com/fikrikarim/parlor",
+    "description": "실시간 멀티모달 AI 음성 비서 기능과 유사한 오픈소스 온디바이스 AI 도구입니다.",
+    "longDescription": "애플 실리콘 및 로컬 GPU 환경에서 완전히 온디바이스로 동작하는 실시간 멀티모달 음성 AI 실험 프로젝트입니다. 텍스트 음성 변환(TTS), 음성 인식(STT), 로컬 LLM을 조합하여 음성 대화 기능을 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "온디바이스AI",
+      "음성비서",
+      "Python",
+      "Apple Silicon",
+      "실시간"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/fikrikarim/parlor",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3.12+",
+      "llama.cpp",
+      "Apple Silicon Mac 또는 지원 GPU"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "필요한 시스템 의존성과 llama.cpp를 설치합니다.",
+      "저장소를 클론하고 파이썬 환경을 구성합니다.",
+      "실시간 음성 비서 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "영어 회화 연습을 도와줘.",
+    "usageNote": "연구 및 실험 목적의 프리뷰 프로젝트로 사양에 따른 메모리 요구량이 있습니다.",
+    "stars": 2077,
+    "forks": 299,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "fireredasr",
+    "name": "FireRedASR",
+    "github": "https://github.com/FireRedTeam/FireRedASR",
+    "description": "만다린, 중국 방언 및 영어를 지원하는 산업용 고성능 음성 인식 모델입니다.",
+    "longDescription": "공공 벤치마크에서 우수한 성능을 보이는 오픈소스 산업용 자동 음성 인식(ASR) 시스템입니다. VAD, LID, Punc 모듈과 결합된 올인원 음성 인식 기능을 제공하여 높은 정확도를 자랑합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "ASR",
+      "Python",
+      "Transformer",
+      "대화형AI"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/FireRedTeam/FireRedASR",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3.10",
+      "Conda",
+      "CUDA GPU"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "환경 설정 및 의존성 설치",
+        "command": "git clone https://github.com/FireRedTeam/FireRedASR.git && conda create --name fireredasr python=3.10 && conda activate fireredasr && pip install -r requirements.txt",
+        "note": "전용 가상 환경을 만들고 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 Conda 환경을 생성하여 활성화합니다.",
+      "필요한 패키지를 설치하고 PATH를 설정합니다.",
+      "오디오 파일을 16kHz PCM 형식으로 변환 후 모델을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "오디오 입력은 16kHz 16-bit PCM 형식으로 사전 변환해야 합니다.",
+    "stars": 2007,
+    "forks": 199,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "whisper-ctranslate2",
+    "name": "whisper-ctranslate2",
+    "github": "https://github.com/Softcatala/whisper-ctranslate2",
+    "description": "CTranslate2 기반으로 구현되어 원본 대비 훨씬 빠른 속도를 제공하는 Whisper CLI 클라이언트입니다.",
+    "longDescription": "OpenAI Whisper 모델을 CTranslate2 및 Faster-whisper 백엔드로 실행하여 동일한 정확도를 유지하면서도 최대 4배 빠른 속도와 적은 메모리 사용량을 제공하는 명령행 도구입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Whisper",
+      "음성인식",
+      "CLI",
+      "Python",
+      "최적화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Softcatala/whisper-ctranslate2",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python",
+      "Docker (선택 사항)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "파이썬 패키지 설치",
+        "command": "pip install whisper-ctranslate2",
+        "note": "pip를 사용하여 최신 안정 버전을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 패키지를 설치합니다.",
+      "명령줄에서 whisper-ctranslate2 명령과 대상 오디오 파일을 입력합니다.",
+      "실시간 전사 또는 자막 생성 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "GPU 가속을 사용하려면 적절한 CUDA 드라이버 및 런타임이 필요합니다.",
+    "stars": 1365,
+    "forks": 126,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "mlx-tune",
+    "name": "mlx-tune",
+    "github": "https://github.com/ARahim3/mlx-tune",
+    "description": "Apple Silicon Mac에서 MLX를 활용해 LLM, 비전, 오디오 모델을 네이티브로 파인튜닝하는 도구입니다.",
+    "longDescription": "Apple 실리콘 환경에서 효율적으로 대형 언어 모델, 음성 인식(STT), 텍스트 음성 변환(TTS), 비전 모델 등의 미세 조정(SFT, DPO, Lora 등)을 수행할 수 있도록 지원하는 프레임워크입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Apple Silicon",
+      "미세조정",
+      "MLX",
+      "macOS",
+      "Python"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://arahim3.github.io/mlx-tune/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Apple Silicon Mac",
+      "Python",
+      "uv 또는 pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "uv pip install mlx-tune",
+        "note": "uv 패키지 매니저를 사용하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "uv 또는 pip를 이용해 패키지를 설치합니다.",
+      "오디오 지원이 필요한 경우 관련 추가 패키지와 ffmpeg를 설치합니다.",
+      "파인튜닝 설정에 맞춰 학습 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Apple Silicon이 탑재된 macOS 환경에서 최적의 성능을 발휘합니다.",
+    "stars": 1444,
+    "forks": 135,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "streamspeech",
+    "name": "StreamSpeech",
+    "github": "https://github.com/ictnlp/StreamSpeech",
+    "description": "오프라인 및 동시 음성 인식, 음성 번역, 음성 합성을 모두 지원하는 올인원 스트리밍 모델입니다.",
+    "longDescription": "단일 모델 내에서 음성 인식, 번역, 합성을 동시에 수행할 수 있는 스트리밍 오디오 프로세싱 시스템입니다. 단어 단위의 점진적 합성 및 실시간 음성 번역 작업을 효율적으로 처리할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성번역",
+      "음성합성",
+      "스트리밍",
+      "Python",
+      "PyTorch"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ictnlp.github.io/StreamSpeech-site/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T13:04:08.434Z",
+    "requirements": [
+      "Python 3.10",
+      "PyTorch 2.0.1",
+      "fairseq",
+      "SimulEval"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "fairseq 및 SimulEval 설치",
+        "command": "cd fairseq && pip install --editable ./ --no-build-isolation && cd SimulEval && pip install --editable ./",
+        "note": "소스 디렉토리에서 편집 가능 모드로 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 지정된 버전의 파이토치와 파이썬 환경을 맞춥니다.",
+      "fairseq 및 SimulEval 개발자 모드로 패키지를 설치합니다.",
+      "Hugging Face 등에서 모델 가중치를 다운로드하여 스트리밍 추론을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정확한 파이썬 및 PyTorch 버전 일치가 요구됩니다.",
+    "stars": 1294,
+    "forks": 105,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
     "id": "hubble-md",
     "name": "Hubble.md",
     "github": "https://github.com/bholmesdev/hubble.md",
