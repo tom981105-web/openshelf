@@ -1,7 +1,1066 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-20T10:06:24.789Z",
+  "updatedAt": "2026-10-20T11:06:45.213Z",
   "items": [
+    {
+      "id": "redis",
+      "name": "redis",
+      "github": "https://github.com/redis/redis",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "redis",
+        "name": "redis",
+        "github": "https://github.com/redis/redis",
+        "description": "실시간 데이터 기반 애플리케이션을 위한 고성능 인메모리 캐시 및 데이터 구조 서버입니다.",
+        "longDescription": "Redis는 캐시, 메시지 브로커, 벡터 검색 등을 지원하는 빠르고 유연한 인메모리 데이터 저장소입니다. 다양한 데이터 구조를 메모리에 적재하여 고속 읽기/쓰기를 제공합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "캐시",
+          "데이터베이스",
+          "인메모리"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://redis.io",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "C 99 호환 컴파일러",
+          "Make"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "소스 빌드",
+            "command": "make",
+            "note": "소스 코드를 다운로드한 후 루트 디렉토리에서 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소 클론 또는 소스 다운로드",
+          "make 명령어로 컴파일",
+          "src/redis-server 실행하여 서버 구동",
+          "src/redis-cli로 클라이언트 접속"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 77036,
+        "forks": 24887,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:29.516Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:34.509Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T11:06:40.572Z"
+    },
+    {
+      "id": "meilisearch",
+      "name": "meilisearch",
+      "github": "https://github.com/meilisearch/meilisearch",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "meilisearch",
+        "name": "meilisearch",
+        "github": "https://github.com/meilisearch/meilisearch",
+        "description": "사이트와 애플리케이션에 AI 기반 하이브리드 검색을 제공하는 초고속 검색 엔진 API입니다.",
+        "longDescription": "Meilisearch는 전문 검색, 의미 검색, 하이브리드 검색을 빠르고 간편하게 구현할 수 있는 오픈소스 검색 엔진입니다. 오타 교정과 빠른 응답 속도가 특징입니다.",
+        "category": "지식·검색",
+        "tags": [
+          "검색엔진",
+          "API",
+          "벡터검색"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.meilisearch.com",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -it --rm -p 7700:7700 getmeili/meilisearch:v1.1",
+            "note": "Docker를 통해 Meilisearch 인스턴스를 즉시 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker를 사용하여 Meilisearch 컨테이너 실행",
+          "브라우저나 API 클라이언트를 통해 7700 포트 접속",
+          "인덱스 생성 및 문서 추가",
+          "검색 API 호출을 통한 결과 조회"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 59614,
+        "forks": 2751,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:29.833Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:34.832Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T11:06:41.286Z"
+    },
+    {
+      "id": "metabase",
+      "name": "metabase",
+      "github": "https://github.com/metabase/metabase",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "metabase",
+        "name": "metabase",
+        "github": "https://github.com/metabase/metabase",
+        "description": "누구나 쉽게 데이터를 시각화하고 질문할 수 있는 오픈소스 비즈니스 인텔리전스 도구입니다.",
+        "longDescription": "Metabase는 SQL을 잘 몰라도 사내 데이터베이스를 연결해 대시보드와 리포트를 만들 수 있는 사용자 친화적인 BI 툴입니다. 임베디드 분석 기능과 슬랙 연동 등을 지원합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "비즈니스인텔리전스",
+          "대시보드",
+          "데이터시각화"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://metabase.com",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "Java 11 이상 또는 Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker로 실행",
+            "command": "docker run -d -p 3000:3000 --name metabase metabase/metabase",
+            "note": "도커를 이용해 로컬 환경에 Metabase를 간단히 구동합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 컨테이너 실행 후 웹 브라우저로 3000번 포트 접속",
+          "관리자 계정 생성 및 초기 설정 완료",
+          "사용 중인 데이터베이스(MySQL, PostgreSQL 등) 연결",
+          "질문 작성기를 통해 데이터 조회 및 대시보드 구성"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 49755,
+        "forks": 6914,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:30.066Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:35.503Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T11:06:42.031Z"
+    },
+    {
+      "id": "tidb",
+      "name": "tidb",
+      "github": "https://github.com/pingcap/tidb",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20"
+    },
+    {
+      "id": "directus",
+      "name": "directus",
+      "github": "https://github.com/directus/directus",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "directus",
+        "name": "directus",
+        "github": "https://github.com/directus/directus",
+        "description": "SQL 데이터베이스를 헤드리스 CMS, 관리자 패널, API로 변환하는 백엔드 플랫폼",
+        "longDescription": "Directus는 기존 데이터베이스 위에 REST 및 GraphQL API 계층과 시각적 관리 스튜디오를 제공하는 협업형 백엔드 플랫폼입니다. AI 에이전트를 위한 네이티브 MCP 서버 기능을 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "CMS",
+          "API",
+          "백엔드"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://directus.com",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "Node.js 18 이상 또는 Docker",
+          "SQL 데이터베이스"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Npx로 프로젝트 생성",
+            "command": "npx create-directus-project my-project",
+            "note": "대화형 설정으로 Directus 프로젝트를 로컬에 생성합니다."
+          }
+        ],
+        "usageSteps": [
+          "npx 명령어로 Directus 프로젝트 초기화",
+          "사용할 데이터베이스 연결 정보 입력",
+          "npm run dev 명령어로 개발 서버 실행",
+          "웹 관리자 스튜디오에 접속하여 스키마 및 콘텐츠 관리"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 38625,
+        "forks": 4981,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:30.304Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:36.450Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T11:06:42.679Z"
+    },
+    {
+      "id": "typeorm",
+      "name": "typeorm",
+      "github": "https://github.com/typeorm/typeorm",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20"
+    },
+    {
+      "id": "dragonfly",
+      "name": "dragonfly",
+      "github": "https://github.com/dragonflydb/dragonfly",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "dragonfly",
+        "name": "dragonfly",
+        "github": "https://github.com/dragonflydb/dragonfly",
+        "description": "Redis와 Memcached를 대체하는 고성능 멀티스레딩 인메모리 데이터 저장소",
+        "longDescription": "Dragonfly는 기존 인메모리 데이터베이스의 성능 한계를 극복하기 위해 멀티스레드와 공유 없는 구조로 설계되었습니다. Redis 프로토콜과 완벽하게 호환되며 고성능 캐싱 및 데이터 저장 용도로 사용됩니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "인메모리",
+          "Redis",
+          "데이터베이스"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.dragonflydb.io/",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run --network host docker.dragonflydb.io/dragonflydb/dragonfly",
+            "note": "도커를 사용하여 Dragonfly 서버를 구동합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker를 통한 컨테이너 실행",
+          "redis-cli 등 기존 Redis 클라이언트 도구를 이용해 포트 접속",
+          "일반적인 Redis 명령어 수행 테스트",
+          "성능 및 메모리 사용량 모니터링"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 31802,
+        "forks": 1284,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:30.584Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:36.982Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T11:06:45.213Z"
+    },
+    {
+      "id": "chat2db",
+      "name": "Chat2DB",
+      "github": "https://github.com/OtterMind/Chat2DB",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "chat2db",
+        "name": "Chat2DB",
+        "github": "https://github.com/OtterMind/Chat2DB",
+        "description": "40개 이상의 데이터베이스를 지원하며 AI 모델과 연동해 SQL 작성 및 최적화를 돕는 로컬 퍼스트 데이터베이스 클라이언트입니다.",
+        "longDescription": "Chat2DB는 개발자와 데이터 분석가를 위한 크로스플랫폼 SQL 워크스페이스입니다. 사용자가 직접 소유한 AI 모델을 연동하여 자연어로 쿼리를 생성하고 설명할 수 있으며 MCP를 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "데이터베이스GUI",
+          "SQL클라이언트",
+          "AI어시스턴트",
+          "Java"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://chat2db.ai",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "Java 17 이상 또는 Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "암호화 키 초기화",
+            "command": "./script/security/init-community-encryption-key.sh",
+            "note": "소스 코드를 체크아웃한 후 보안 설정을 위해 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "릴리즈 페이지에서 설치 파일 다운로드 또는 소스 빌드",
+          "애플리케이션 실행 후 사용할 데이터베이스 연결 정보 추가",
+          "SQL 워크스페이스에서 쿼리 작성 또는 AI 어시스턴트 활용",
+          "데이터 관리 및 시각화 작업 수행"
+        ],
+        "examplePrompt": "사용자 테이블에서 최근 3일간 가입한 활성 유저 수를 조회해줘",
+        "usageNote": "",
+        "stars": 28323,
+        "forks": 3228,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:30.867Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:37.394Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "valkey",
+      "name": "valkey",
+      "github": "https://github.com/valkey-io/valkey",
+      "license": "BSD-3-Clause",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20"
+    },
+    {
+      "id": "spacetimedb",
+      "name": "SpacetimeDB",
+      "github": "https://github.com/clockworklabs/SpacetimeDB",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "spacetimedb",
+        "name": "SpacetimeDB",
+        "github": "https://github.com/clockworklabs/SpacetimeDB",
+        "description": "애플리케이션 로직을 데이터베이스에 직접 업로드하여 실시간 반응형 앱을 구축할 수 있는 관계형 데이터베이스 서버입니다.",
+        "longDescription": "SpacetimeDB는 데이터베이스와 서버의 역할을 동시에 수행하는 차세대 관계형 DB입니다. Rust나 TypeScript 등으로 모듈을 작성해 올리면 클라이언트가 중간 서버 없이 직접 통신합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "관계형데이터베이스",
+          "실시간",
+          "웹개발",
+          "Rust"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://spacetimedb.com",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "Rust 또는 .NET 등 모듈 개발 도구"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "CLI 설치 (macOS / Linux)",
+            "command": "curl -sSf https://install.spacetimedb.com | sh",
+            "note": "SpacetimeDB 명령줄 도구를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 통해 spacetime CLI 설치",
+          "spacetime login 명령어로 GitHub 계정 연동",
+          "spacetime dev --template chat-room 명령어로 템플릿 프로젝트 생성",
+          "모듈 빌드 및 데이터베이스 배포"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 25320,
+        "forks": 1092,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:31.142Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:38.186Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "cockroach",
+      "name": "CockroachDB",
+      "github": "https://github.com/cockroachdb/cockroach",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "cockroach",
+        "name": "CockroachDB",
+        "github": "https://github.com/cockroachdb/cockroach",
+        "description": "높은 가용성과 확장성을 제공하는 클라우드 네이티브 분산 SQL 데이터베이스입니다.",
+        "longDescription": "현대적이고 데이터 집약적인 애플리케이션 구축을 위해 설계된 분산 SQL 데이터베이스입니다. 트랜잭션 및 강력한 일관성을 갖춘 키-값 저장소를 기반으로 원활한 확장과 데이터 배치 제어를 지원합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "분산 데이터베이스",
+          "SQL",
+          "클라우드 네이티브",
+          "Go"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.cockroachlabs.com",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 문서의 빠른 시작 가이드를 참고하여 클러스터를 구성합니다.",
+          "클라이언트 드라이버를 통해 애플리케이션과 연결합니다.",
+          "SQL 문을 사용하여 데이터를 관리하고 쿼리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 32575,
+        "forks": 4150,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:31.434Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:38.516Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "rocksdb",
+      "name": "RocksDB",
+      "github": "https://github.com/facebook/rocksdb",
+      "license": "GPL-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20"
+    },
+    {
+      "id": "mongo",
+      "name": "MongoDB",
+      "github": "https://github.com/mongodb/mongo",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "mongo",
+        "name": "MongoDB",
+        "github": "https://github.com/mongodb/mongo",
+        "description": "유연한 문서 지향형 데이터 저장을 지원하는 NoSQL 데이터베이스 서버입니다.",
+        "longDescription": "현대 애플리케이션을 위한 확장성과 유연성을 갖춘 대표적인 문서형 NoSQL 데이터베이스입니다. 데이터베이스 서버(mongod)와 샤딩 라우터(mongos), 그리고 전용 셸(mongosh)을 제공합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "NoSQL",
+          "데이터베이스",
+          "문서 저장소",
+          "C++"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.mongodb.com/",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "데이터 디렉토리 (예: /data/db)"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Homebrew로 설치",
+            "command": "brew tap mongodb/brew && brew install mongosh",
+            "note": "macOS 환경에서 MongoDB 셸을 설치합니다."
+          },
+          {
+            "title": "Docker로 실행",
+            "command": "docker pull mongodb/mongodb-community-server",
+            "note": "도커 이미지를 다운로드하여 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "데이터 디렉토리를 생성합니다 (`sudo mkdir -p /data/db`).",
+          "데이터베이스 서버를 실행합니다 (`./mongod`).",
+          "몽고 셸을 통해 접속하여 쿼리를 테스트합니다 (`./mongosh`)."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 28651,
+        "forks": 5835,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:31.676Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:39.276Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "sqlitebrowser",
+      "name": "DB Browser for SQLite",
+      "github": "https://github.com/sqlitebrowser/sqlitebrowser",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "sqlitebrowser",
+        "name": "DB Browser for SQLite",
+        "github": "https://github.com/sqlitebrowser/sqlitebrowser",
+        "description": "SQLite 데이터베이스를 시각적으로 생성, 설계, 편집할 수 있는 오픈소스 GUI 툴입니다.",
+        "longDescription": "사용자가 SQLite 데이터베이스 파일과 상호작용할 수 있도록 돕는 고품질의 시각적 도구입니다. 테이블, 인덱스, 뷰 등을 간편하게 관리할 수 있으며 크로스 플랫폼을 지원합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "SQLite",
+          "GUI",
+          "데이터베이스 관리",
+          "C++"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://sqlitebrowser.org",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Chocolatey로 설치 (Windows)",
+            "command": "choco install sqlitebrowser",
+            "note": "윈도우 초콜레티 패키지 관리자를 이용한 설치"
+          },
+          {
+            "title": "Winget으로 설치 (Windows)",
+            "command": "winget install -e --id DBBrowserForSQLite.DBBrowserForSQLite",
+            "note": "윈도우 패키지 관리자를 이용한 설치"
+          }
+        ],
+        "usageSteps": [
+          "프로그램을 실행하고 새로운 SQLite 데이터베이스를 생성하거나 기존 파일을 엽니다.",
+          "데이터 탭에서 테이블 데이터를 조회하고 직접 편집합니다.",
+          "실행 탭에서 SQL 쿼리를 직접 작성하고 실행 결과를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 24716,
+        "forks": 2377,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:32.570Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T11:06:39.649Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "pandas-ai",
+      "name": "PandasAI",
+      "github": "https://github.com/sinaptik-ai/pandas-ai",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "pandas-ai",
+        "name": "PandasAI",
+        "github": "https://github.com/sinaptik-ai/pandas-ai",
+        "description": "대화형 언어 모델과 RAG를 활용하여 데이터베이스 및 데이터 세트와 자연어로 대화할 수 있는 라이브러리입니다.",
+        "longDescription": "SQL, CSV, Parquet 등의 다양한 데이터 소스와 대화하듯 데이터를 분석할 수 있게 해주는 도구입니다. LLM을 연동하여 질문을 바탕으로 Python 코드나 SQL을 생성하고 시각화 결과를 제공합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "LLM",
+          "데이터 분석",
+          "텍스트투SQL",
+          "Python"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pandas-ai.com",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "Python 3.8 ~ 3.11"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Pip로 설치",
+            "command": "pip install pandasai pandasai-litellm",
+            "note": "파이썬 패키지 관리자를 통해 라이브러리를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "PandasAI와 LLM 연동 모듈을 임포트합니다.",
+          "데이터프레임 또는 데이터 소스를 초기화합니다.",
+          "자연어 질문을 입력하여 데이터 분석 결과나 시각화를 얻습니다."
+        ],
+        "examplePrompt": "데이터셋에서 가장 판매량이 높은 상위 5개 제품을 보여줘",
+        "usageNote": "",
+        "stars": 23889,
+        "forks": 2342,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:32.799Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "rxdb",
+      "name": "RxDB",
+      "github": "https://github.com/pubkey/rxdb",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20"
+    },
+    {
+      "id": "rqlite",
+      "name": "rqlite",
+      "github": "https://github.com/rqlite/rqlite",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20"
+    },
+    {
+      "id": "pgcli",
+      "name": "pgcli",
+      "github": "https://github.com/dbcli/pgcli",
+      "license": "BSD-3-Clause",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20"
+    },
+    {
+      "id": "kysely",
+      "name": "Kysely",
+      "github": "https://github.com/kysely-org/kysely",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20"
+    },
+    {
+      "id": "beekeeper-studio",
+      "name": "Beekeeper Studio",
+      "github": "https://github.com/beekeeper-studio/beekeeper-studio",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T11:06:28.785Z",
+      "sourceRun": "2026-10-20T20",
+      "tool": {
+        "id": "beekeeper-studio",
+        "name": "Beekeeper Studio",
+        "github": "https://github.com/beekeeper-studio/beekeeper-studio",
+        "description": "MySQL, Postgres, SQLite, SQL Server 등을 지원하는 현대적이고 직관적인 오픈소스 SQL 클라이언트 및 데이터베이스 관리 도구",
+        "longDescription": "다양한 데이터베이스를 직관적인 UI로 관리할 수 있는 크로스플랫폼 SQL 에디터입니다. Linux, macOS, Windows 환경을 지원하며 개발자가 쉽게 쿼리를 작성하고 데이터를 관리할 수 있도록 돕습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "SQL",
+          "데이터베이스",
+          "Electron",
+          "TypeScript",
+          "MySQL"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.beekeeperstudio.io",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T11:04:04.135Z",
+        "requirements": [
+          "NodeJS 20+",
+          "NPM",
+          "Yarn"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "소스 코드 클론 및 의존성 설치",
+            "command": "git clone git@github.com:beekeeper-studio/beekeeper-studio.git && cd beekeeper-studio && yarn install",
+            "note": "저장소를 복제하고 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "공식 홈페이지 또는 저장소에서 설치 파일을 다운로드합니다.",
+          "애플리케이션을 실행하고 연결할 데이터베이스 유형을 선택합니다.",
+          "서버 접속 정보(Host, Port, User, Password 등)를 입력하여 연결합니다.",
+          "SQL 쿼리를 작성하고 실행하여 데이터를 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 23773,
+        "forks": 1652,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T11:06:33.087Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
     {
       "id": "prompts-chat",
       "name": "Prompts.chat",
@@ -9728,91 +10787,6 @@
       "recheckError": "Gemini HTTP 503"
     },
     {
-      "id": "meilisearch",
-      "name": "Meilisearch",
-      "github": "https://github.com/meilisearch/meilisearch",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T21:08:49.289Z",
-      "sourceRun": "2026-10-20T06",
-      "tool": {
-        "id": "meilisearch",
-        "name": "Meilisearch",
-        "github": "https://github.com/meilisearch/meilisearch",
-        "description": "웹사이와 애플리케이션을 위한 초고속 하이브리드 AI 검색 엔진 API",
-        "longDescription": "오타 허용, 전문 검색, 의미론적 검색을 지원하여 매끄러운 검색 경험을 제공하는 경량 검색 엔진입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "검색엔진",
-          "API",
-          "Rust",
-          "하이브리드검색",
-          "전문검색"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.meilisearch.com",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T21:04:06.770Z",
-        "requirements": [
-          "Docker 또는 셸 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 설치",
-            "command": "docker run -it --rm -p 7700:7700 getmeili/meilisearch:v1.12",
-            "note": "Docker를 통해 로컬에서 Meilisearch 실행"
-          }
-        ],
-        "usageSteps": [
-          "Docker 컨테이너를 실행하여 Meilisearch 서버를 시작합니다.",
-          "API 키를 발급받아 클라이언트 애플리케이션과 연동합니다.",
-          "문서를 추가하고 검색 쿼리를 요청합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 59612,
-        "forks": 2747,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T21:08:50.242Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T21:08:53.697Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
-    },
-    {
       "id": "weaviate",
       "name": "Weaviate",
       "github": "https://github.com/weaviate/weaviate",
@@ -10413,91 +11387,6 @@
       "reasons": [],
       "checkedAt": "2026-10-19T21:08:49.290Z",
       "sourceRun": "2026-10-20T06"
-    },
-    {
-      "id": "metabase",
-      "name": "Metabase",
-      "github": "https://github.com/metabase/metabase",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T20:06:23.773Z",
-      "sourceRun": "2026-10-20T05",
-      "tool": {
-        "id": "metabase",
-        "name": "Metabase",
-        "github": "https://github.com/metabase/metabase",
-        "description": "누구나 쉽게 데이터 질문을 던지고 시각화할 수 있는 오픈소스 비즈니스 인텔리전스 도구입니다.",
-        "longDescription": "기업 내 모든 구성원이 SQL을 몰라도 데이터를 탐색하고 대시보드를 구축할 수 있도록 지원하는 비즈니스 인텔리전스 및 임베디드 분석 플랫폼입니다. 다양한 데이터베이스와 쉽게 연동되며 직관적인 웹 인터페이스를 제공합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "비즈니스인텔리전스",
-          "대시보드",
-          "데이터시각화"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://metabase.com",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T20:04:07.674Z",
-        "requirements": [
-          "Java",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run -d -p 3000:3000 --name metabase metabase/metabase",
-            "note": "도커를 이용해 로컬에서 빠르게 실행할 수 있습니다."
-          }
-        ],
-        "usageSteps": [
-          "도커 명령어를 통해 Metabase 컨테이너를 실행합니다.",
-          "웹 브라우저에서 http://localhost:3000 에 접속합니다.",
-          "초기 관리자 계정을 설정하고 사용할 데이터베이스를 연결합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "프로덕션 환경에서는 별도의 외부 데이터베이스(PostgreSQL 등)를 설정하여 사용하는 것을 권장합니다.",
-        "stars": 49740,
-        "forks": 6914,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T20:06:24.361Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T20:06:26.444Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T20:06:29.811Z"
     },
     {
       "id": "posthog",
@@ -19213,94 +20102,6 @@
       "sourceRun": "2026-10-19T15"
     },
     {
-      "id": "spacetimedb",
-      "name": "SpacetimeDB",
-      "github": "https://github.com/clockworklabs/SpacetimeDB",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T05:05:57.439Z",
-      "sourceRun": "2026-10-19T14",
-      "tool": {
-        "id": "spacetimedb",
-        "name": "SpacetimeDB",
-        "github": "https://github.com/clockworklabs/SpacetimeDB",
-        "description": "애플리케이션 로직을 데이터베이스에 직접 업로드하여 실시간 동기화를 지원하는 관계형 데이터베이스 서버입니다.",
-        "longDescription": "SpacetimeDB는 데이터베이스가 곧 서버 역할을 수행하는 관계형 데이터베이스입니다. 클라이언트가 중간 서버 없이 직접 접속하여 멀티플레이어 게임이나 협업 도구 등 실시간 반응형 애플리케이션을 구축할 수 있습니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "실시간",
-          "Rust"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://spacetimedb.com",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T05:03:59.804Z",
-        "requirements": [
-          "curl 또는 PowerShell"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "macOS / Linux 설치",
-            "command": "curl -sSf https://install.spacetimedb.com | sh",
-            "note": "쉘 스크립트를 통한 간편 설치"
-          },
-          {
-            "title": "Windows 설치",
-            "command": "iwr https://windows.spacetimedb.com -useb | iex",
-            "note": "PowerShell을 통한 간편 설치"
-          }
-        ],
-        "usageSteps": [
-          "SpacetimeDB 클라이언트 CLI를 설치합니다.",
-          "spacetime login 명령어로 GitHub 계정을 인증합니다.",
-          "spacetime dev --template chat-room 명령어로 프로젝트 템플릿을 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 25315,
-        "forks": 1092,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T05:05:57.950Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T05:06:00.565Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T05:06:04.945Z"
-    },
-    {
       "id": "agent-orchestrator",
       "name": "agent-orchestrator",
       "github": "https://github.com/OrchestratorInc/agent-orchestrator",
@@ -20525,85 +21326,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-19T03:06:05.079Z"
-    },
-    {
-      "id": "directus",
-      "name": "directus",
-      "github": "https://github.com/directus/directus",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T03:05:57.979Z",
-      "sourceRun": "2026-10-19T12",
-      "tool": {
-        "id": "directus",
-        "name": "directus",
-        "github": "https://github.com/directus/directus",
-        "description": "SQL 데이터베이스를 헤드리스 CMS 및 인스턴트 API로 변환하는 협업 백엔드",
-        "longDescription": "관계형 데이터베이스 위에 REST 및 GraphQL API 계층과 시각적 관리 스튜디오를 제공합니다. AI 에이전트를 위한 네이티브 MCP 서버를 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CMS",
-          "백엔드",
-          "데이터베이스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://directus.com",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T03:04:01.531Z",
-        "requirements": [
-          "SQL Database",
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "기존 SQL 데이터베이스에 Directus를 연결합니다.",
-          "자동 생성된 REST 및 GraphQL API를 확인합니다.",
-          "시각적 스튜디오를 통해 콘텐츠 및 데이터를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 38590,
-        "forks": 4978,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T03:05:58.560Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T03:06:01.470Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T03:06:05.797Z"
     },
     {
       "id": "zola",
@@ -24956,83 +25678,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-18T20:06:01.311Z"
-    },
-    {
-      "id": "redis",
-      "name": "Redis",
-      "github": "https://github.com/redis/redis",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-18T20:05:53.876Z",
-      "sourceRun": "2026-10-19T05",
-      "tool": {
-        "id": "redis",
-        "name": "Redis",
-        "github": "https://github.com/redis/redis",
-        "description": "실시간 데이터 구동 애플리케이션을 위한 고성능 인메모리 데이터 구조 서버 및 캐시",
-        "longDescription": "데이터베이스, 캐시, 메시지 브로커 및 벡터 검색 엔진으로 널리 사용되는 오픈소스 인메모리 데이터 저장소입니다. 빠른 처리 속도와 다양한 데이터 구조를 지원하여 대규모 실시간 시스템에 적합합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "캐시",
-          "NoSQL",
-          "인메모리"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://redis.io",
-        "featured": 9,
-        "added": "2026-10-18",
-        "addedAt": "2026-10-18T20:04:00.314Z",
-        "requirements": [
-          "C 컴파일러"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "소스 코드를 클론하거나 공식 패키지를 다운로드합니다.",
-          "의존성을 설치하고 소스 빌드를 진행합니다.",
-          "Redis 서버를 실행하여 캐시 및 데이터베이스로 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 76936,
-        "forks": 24874,
-        "starsUpdatedAt": "2026-10-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-18T20:05:54.561Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-18T20:05:57.550Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-18T20:06:02.081Z"
     },
     {
       "id": "budibase",
@@ -37086,86 +37731,6 @@
       "recheckedAt": "2026-10-17T16:06:05.606Z"
     },
     {
-      "id": "pandas-ai",
-      "name": "PandasAI",
-      "github": "https://github.com/sinaptik-ai/pandas-ai",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-17T15:06:00.130Z",
-      "sourceRun": "2026-10-18T00",
-      "tool": {
-        "id": "pandas-ai",
-        "name": "PandasAI",
-        "github": "https://github.com/sinaptik-ai/pandas-ai",
-        "description": "대화형 LLM과 RAG를 활용하여 데이터와 자연어로 대화하며 분석하는 파이썬 라이브러리",
-        "longDescription": "판다스 데이터프레임과 SQL 데이터베이스를 자연어 질의를 통해 손쉽게 탐색하고 시각화할 수 있도록 지원합니다. AI 에이전트 및 데이터 과학 워크플로우에 유용합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "AI",
-          "파이썬",
-          "데이터분석"
-        ],
-        "platforms": [],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pandas-ai.com",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T15:03:58.383Z",
-        "requirements": [
-          "Python 3.8 ~ 3.11",
-          "OpenAI API Key 등 LLM 백엔드"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Pip 설치",
-            "command": "pip install pandasai pandasai-litellm",
-            "note": "파이썬 환경에서 pip를 통해 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "라이브러리를 임포트하고 LLM 인스턴스를 초기화합니다.",
-          "데이터프레임 객체에 PandasAI를 적용합니다.",
-          "자연어로 질문을 입력하여 데이터 분석 결과를 얻습니다."
-        ],
-        "examplePrompt": "가장 매출이 높은 상위 5개 지역을 보여줘",
-        "usageNote": "LLM API 사용량에 따라 비용이 발생할 수 있습니다.",
-        "stars": 23886,
-        "forks": 2340,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T15:06:01.328Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T15:06:04.248Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-17T15:06:08.713Z"
-    },
-    {
       "id": "chatlab",
       "name": "ChatLab",
       "github": "https://github.com/ChatLab/ChatLab",
@@ -37626,89 +38191,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "chat2db",
-      "name": "Chat2DB",
-      "github": "https://github.com/OtterMind/Chat2DB",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-17T14:06:03.976Z",
-      "sourceRun": "2026-10-17T23",
-      "tool": {
-        "id": "chat2db",
-        "name": "Chat2DB",
-        "github": "https://github.com/OtterMind/Chat2DB",
-        "description": "자연어 기반 SQL 생성과 다중 데이터베이스를 지원하는 오픈소스 데이터베이스 클라이언트",
-        "longDescription": "Chat2DB는 개발자, DBA, 데이터 분석가를 위한 크로스플랫폼 데이터베이스 관리 툴입니다. AI 어시스턴트를 연동하여 자연어로 쿼리를 생성 및 최적화할 수 있으며, 다양한 환경을 지원합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "SQL",
-          "AI"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://chat2db.ai",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T14:04:01.839Z",
-        "requirements": [
-          "Java 런타임 환경 (내장형 패키지 제공)"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "보안 키 초기화 설정",
-            "command": "./script/security/init-community-encryption-key.sh",
-            "note": "소스 체크아웃 환경에서 암호화 키 생성"
-          }
-        ],
-        "usageSteps": [
-          "공식 배포판이나 클라이언트 앱을 다운로드하여 실행합니다.",
-          "사용 중인 데이터베이스(MySQL, PostgreSQL 등)의 접속 정보를 입력해 연결합니다.",
-          "AI 어시스턴트 설정에서 본인의 LLM API Key를 등록하여 텍스트로 SQL을 질의합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 28323,
-        "forks": 3104,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T14:06:04.891Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T14:06:06.505Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-17T14:06:08.927Z"
     },
     {
       "id": "omlx",
@@ -45116,81 +45598,6 @@
       "recheckedAt": "2026-10-16T18:07:24.496Z"
     },
     {
-      "id": "sqlitebrowser",
-      "name": "DB Browser for SQLite",
-      "github": "https://github.com/sqlitebrowser/sqlitebrowser",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-16T16:08:25.895Z",
-      "sourceRun": "2026-10-17T01",
-      "tool": {
-        "id": "sqlitebrowser",
-        "name": "DB Browser for SQLite",
-        "github": "https://github.com/sqlitebrowser/sqlitebrowser",
-        "description": "SQLite 데이터베이스 파일을 시각적으로 생성, 설계, 편집할 수 있는 오픈소스 도구입니다.",
-        "longDescription": "사용자가 친숙한 스프레드시트 유사 인터페이스를 통해 SQLite 데이터베이스를 손쉽게 다룰 수 있도록 돕는 크로스플랫폼 GUI 브라우저입니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "SQLite",
-          "데이터베이스",
-          "GUI"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://sqlitebrowser.org",
-        "featured": 9,
-        "added": "2026-10-16",
-        "addedAt": "2026-10-16T16:03:59.604Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 사이트나 패키지 관리자를 통해 프로그램을 설치합니다.",
-          "기존 SQLite 파일을 열거나 새 데이터베이스를 생성합니다.",
-          "테이블 구조를 변경하거나 데이터를 직접 수정하고 쿼리를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 24702,
-        "forks": 2376,
-        "starsUpdatedAt": "2026-10-16"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-16T16:08:27.522Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-16T16:08:31.506Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-16T16:08:58.266Z"
-    },
-    {
       "id": "chartdb",
       "name": "ChartDB",
       "github": "https://github.com/chartdb/chartdb",
@@ -45229,90 +45636,6 @@
       "reasons": [],
       "checkedAt": "2026-10-16T16:08:25.895Z",
       "sourceRun": "2026-10-17T01"
-    },
-    {
-      "id": "beekeeper-studio",
-      "name": "Beekeeper Studio",
-      "github": "https://github.com/beekeeper-studio/beekeeper-studio",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-16T16:08:25.895Z",
-      "sourceRun": "2026-10-17T01",
-      "tool": {
-        "id": "beekeeper-studio",
-        "name": "Beekeeper Studio",
-        "github": "https://github.com/beekeeper-studio/beekeeper-studio",
-        "description": "MySQL, Postgres, SQLite 등을 지원하는 현대적이고 직관적인 오픈소스 SQL 클라이언트입니다.",
-        "longDescription": "Beekeeper Studio는 깔끔한 UI와 강력한 기능을 갖춘 크로스플랫폼 데이터베이스 관리 도구입니다. 테이블 데이터 편집, 쿼리 작성, 스키마 시각화 등을 간편하게 수행할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "SQL",
-          "데이터베이스",
-          "Electron",
-          "Postgres",
-          "MySQL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.beekeeperstudio.io",
-        "featured": 9,
-        "added": "2026-10-16",
-        "addedAt": "2026-10-16T16:03:59.604Z",
-        "requirements": [
-          "Node.js 20+",
-          "Yarn"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 복제 및 의존성 설치",
-            "command": "git clone https://github.com/beekeeper-studio/beekeeper-studio.git && cd beekeeper-studio && yarn install",
-            "note": "소스코드를 클론하고 의존성을 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "Beekeeper Studio를 실행합니다.",
-          "연결할 데이터베이스 유형(Postgres, MySQL 등)과 접속 정보를 입력합니다.",
-          "쿼리 탭에서 SQL을 실행하거나 시각적 인터페이스로 데이터를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 23756,
-        "forks": 1648,
-        "starsUpdatedAt": "2026-10-16"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-16T16:08:28.247Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-16T16:08:33.359Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "neon",
