@@ -1,7 +1,751 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-20T02:06:24.190Z",
+  "updatedAt": "2026-10-20T03:06:20.690Z",
   "items": [
+    {
+      "id": "sentry",
+      "name": "Sentry",
+      "github": "https://github.com/getsentry/sentry",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "tool": {
+        "id": "sentry",
+        "name": "Sentry",
+        "github": "https://github.com/getsentry/sentry",
+        "description": "개발자를 위한 오류 추적 및 성능 모니터링 플랫폼",
+        "longDescription": "코드 오류를 실시간으로 감지, 추적하고 수정할 수 있도록 돕는 디버깅 플랫폼입니다. 다양한 프로그래밍 언어와 프레임워크의 공식 SDK를 제공하여 애플리케이션의 안정성을 높입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "오류추적",
+          "모니터링",
+          "디버깅"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://sentry.io",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T03:04:02.253Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트에 맞는 공식 Sentry SDK를 설치합니다.",
+          "애플리케이션 초기화 코드에 Sentry DSN을 설정합니다.",
+          "예외 발생 시 자동으로 수집되는 오류 리포트를 대시보드에서 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 45606,
+        "forks": 4939,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:05.681Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:08.533Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T03:06:14.014Z"
+    },
+    {
+      "id": "goreplay",
+      "name": "GoReplay",
+      "github": "https://github.com/probelabs/goreplay",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "tool": {
+        "id": "goreplay",
+        "name": "GoReplay",
+        "github": "https://github.com/probelabs/goreplay",
+        "description": "라이브 HTTP 트래픽을 캡처하여 테스트 환경으로 재생하는 오픈소스 도구입니다.",
+        "longDescription": "실제 데이터를 기반으로 시스템을 지속적으로 테스트할 수 있게 해주는 HTTP 트래픽 캡처 및 재생 도구입니다. 코드 배포, 설정 변경, 인프라 변경 시 시스템의 신뢰성을 검증하는 데 유용합니다.",
+        "category": "테스트·품질",
+        "tags": [
+          "HTTP",
+          "트래픽",
+          "테스트"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://goreplay.org",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T03:04:02.253Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "바이너리 다운로드",
+            "command": "sudo ./gor --input-raw :8000 --output-stdout",
+            "note": "GitHub 릴리즈에서 바이너리를 다운로드하여 실행"
+          }
+        ],
+        "usageSteps": [
+          "최신 릴리즈 바이너리를 다운로드하거나 직접 컴파일합니다.",
+          "입력 소스와 출력 타겟을 지정하여 명령어를 실행합니다.",
+          "라이브 트래픽을 테스트 환경으로 라우팅하여 결과를 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "일부 네트워크 캡처 작업 시 루트 권한이 필요할 수 있습니다.",
+        "stars": 19320,
+        "forks": 102,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:05.959Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:09.242Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T03:06:14.645Z"
+    },
+    {
+      "id": "kubesphere",
+      "name": "KubeSphere",
+      "github": "https://github.com/kubesphere/kubesphere",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "tool": {
+        "id": "kubesphere",
+        "name": "KubeSphere",
+        "github": "https://github.com/kubesphere/kubesphere",
+        "description": "쿠버네티스 멀티 클라우드 및 엣지 관리를 위한 분산 운영체제 플랫폼입니다.",
+        "longDescription": "쿠버네티스를 커널로 사용하여 플러그앤플레이 아키텍처를 제공하는 멀티텐넌트 컨테이너 플랫폼입니다. 개발자 친화적인 웹 UI와 자동화된 IT 운영 및 DevOps 워크플로우를 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "쿠버네티스",
+          "컨테이너",
+          "DevOps"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kubesphere.io",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T03:04:02.253Z",
+        "requirements": [
+          "Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "기존 쿠버네티스 클러스터 환경을 준비합니다.",
+          "KubeSphere 설치 스크립트 또는 매니페스트를 적용합니다.",
+          "웹 대시보드에 접속하여 클러스터와 애플리케이션을 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 17058,
+        "forks": 2893,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:06.174Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:09.680Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T03:06:15.318Z"
+    },
+    {
+      "id": "bytebase",
+      "name": "Bytebase",
+      "github": "https://github.com/bytebase/bytebase",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "tool": {
+        "id": "bytebase",
+        "name": "Bytebase",
+        "github": "https://github.com/bytebase/bytebase",
+        "description": "데이터베이스 변경 관리와 접근 제어를 통합한 오픈소스 데이터베이스 거버넌스 플랫폼",
+        "longDescription": "사람과 AI 에이전트 모두를 위한 단일 제어 지점을 제공하여 주요 데이터베이스의 스키마 변경, 접근 제어, 규정 준수를 관리합니다. 기존의 분산된 마이그레이션 스크립트와 SQL 클라이언트 작업을 통합합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터베이스",
+          "거버넌스",
+          "SQL"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.bytebase.com",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T03:04:02.253Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run --init --name bytebase --restart always -p 8080:8080 --volume ~/.bytebase:/var/bytebase bytebase/bytebase",
+            "note": "도커를 사용하여 바이트베이스 컨테이너 실행"
+          }
+        ],
+        "usageSteps": [
+          "Docker 명령어를 사용하여 Bytebase를 실행합니다.",
+          "웹 브라우저에서 포트 8080으로 접속하여 초기 설정 마법사를 완료합니다.",
+          "데이터베이스 인스턴스를 연동하고 변경 승인 워크플로우를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 14614,
+        "forks": 1006,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:06.382Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:10.037Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T03:06:19.913Z"
+    },
+    {
+      "id": "kubescape",
+      "name": "Kubescape",
+      "github": "https://github.com/kubescape/kubescape",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "flyway",
+      "name": "Flyway",
+      "github": "https://github.com/flyway/flyway",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "miller",
+      "name": "Miller",
+      "github": "https://github.com/johnkerl/miller",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "tool": {
+        "id": "miller",
+        "name": "Miller",
+        "github": "https://github.com/johnkerl/miller",
+        "description": "정형 데이터 포맷을 위한 명령줄 기반의 데이터 처리 도구",
+        "longDescription": "전통적인 유닉스 도구와 유사하지만 이름이 지정된 필드를 지원하여 구조화된 텍스트 데이터를 쉽게 필터링, 정렬, 집계할 수 있습니다. CSV, TSV, JSON 등 다양한 정형 데이터 포맷을 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "CLI",
+          "데이터처리",
+          "JSON"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://miller.readthedocs.io",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T03:04:02.253Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Homebrew 설치 (Mac)",
+            "command": "brew install miller",
+            "note": "맥OS 환경에서 홈브루를 이용한 설치"
+          },
+          {
+            "title": "APT 설치 (Linux)",
+            "command": "apt-get install miller",
+            "note": "우분투 및 데비안 계열 리눅스 설치"
+          }
+        ],
+        "usageSteps": [
+          "패키지 관리자를 통해 Miller를 설치합니다.",
+          "터미널에서 `mlr` 명령어를 입력하고 조작할 데이터 파일과 쿼리를 지정합니다.",
+          "필요한 변환, 통계 계산, 포맷 변경 결과를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 10045,
+        "forks": 247,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:06.628Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:10.836Z",
+      "documentEvidence": {
+        "license": "BSD-2-Clause",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-20T03:06:20.690Z"
+    },
+    {
+      "id": "k8sgpt",
+      "name": "K8sGPT",
+      "github": "https://github.com/k8sgpt-ai/k8sgpt",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "steampipe",
+      "name": "Steampipe",
+      "github": "https://github.com/turbot/steampipe",
+      "license": "AGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "headlamp",
+      "name": "Headlamp",
+      "github": "https://github.com/kubernetes-sigs/headlamp",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "walle-web",
+      "name": "Walle",
+      "github": "https://github.com/meolu/walle-web",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "yearning",
+      "name": "Yearning",
+      "github": "https://github.com/cookieY/Yearning",
+      "license": "AGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "fission",
+      "name": "Fission",
+      "github": "https://github.com/fission/fission",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "docker-selenium",
+      "name": "Docker Selenium",
+      "github": "https://github.com/SeleniumHQ/docker-selenium",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "tool": {
+        "id": "docker-selenium",
+        "name": "Docker Selenium",
+        "github": "https://github.com/SeleniumHQ/docker-selenium",
+        "description": "Chrome, Firefox, Edge 브라우저 자동화를 대규모로 쉽게 수행할 수 있도록 Selenium Grid를 도커 환경에서 제공합니다.",
+        "longDescription": "컨테이너 플랫폼을 활용하여 분산된 브라우저 자동화 테스트 환경을 빠르게 구축하고, VNC를 통한 디버깅 및 쿠버네티스 연동을 지원합니다.",
+        "category": "브라우저 자동화",
+        "tags": [
+          "Selenium",
+          "Docker",
+          "브라우저",
+          "테스트",
+          "자동화"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://www.selenium.dev/docker-selenium/",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T03:04:02.253Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose 실행",
+            "command": "docker compose up",
+            "note": "구성 파일에 맞춰 컨테이너를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "도커 환경을 준비합니다.",
+          "Docker Compose 설정 파일을 작성하거나 가져옵니다.",
+          "컨테이너를 실행하여 Selenium Grid에 접속합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8660,
+        "forks": 2538,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:06.880Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:11.991Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "oneuptime",
+      "name": "OneUptime",
+      "github": "https://github.com/OneUptime/oneuptime",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "tool": {
+        "id": "oneuptime",
+        "name": "OneUptime",
+        "github": "https://github.com/OneUptime/oneuptime",
+        "description": "가동 시간, 인시던트, 온콜, 상태 페이지, 로그 및 APM을 통합 제공하는 오픈소스 모니터링 플랫폼입니다.",
+        "longDescription": "여러 상용 SaaS 도구를 대체할 수 있는 자체 호스팅 가능한 통합 관측성 플랫폼으로, 장애 감지 시 알림 발송 및 상태 페이지 갱신, 원인 분석을 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "모니터링",
+          "관측성",
+          "인시던트",
+          "TypeScript",
+          "Docker"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://oneuptime.com",
+        "featured": 9,
+        "added": "2026-10-20",
+        "addedAt": "2026-10-20T03:04:02.253Z",
+        "requirements": [
+          "Docker",
+          "Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Helm 설치",
+            "command": "helm repo add oneuptime https://helm-chart.oneuptime.com\nhelm install oneuptime oneuptime/oneuptime",
+            "note": "프로덕션 환경을 위해 Helm 차트를 이용해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker Compose 또는 쿠버네티스 환경을 준비합니다.",
+          "설치 명령어를 실행하여 플랫폼을 배포합니다.",
+          "웹 대기 화면에 접속하여 모니터링 계정을 생성하고 대상을 등록합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7746,
+        "forks": 475,
+        "starsUpdatedAt": "2026-10-20"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:07.136Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:12.362Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "k3sup",
+      "name": "K3sup",
+      "github": "https://github.com/alexellis/k3sup",
+      "license": "확인 필요",
+      "status": "auto_approved_after_document_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:07.338Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:12.707Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": "MIT",
+        "licenseSource": "LICENSE complete MIT provisions (text match)",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "clearml",
+      "name": "ClearML",
+      "github": "https://github.com/clearml/clearml",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "litmus",
+      "name": "LitmusChaos",
+      "github": "https://github.com/litmuschaos/litmus",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "freelens",
+      "name": "Freelens",
+      "github": "https://github.com/freelensapp/freelens",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12"
+    },
+    {
+      "id": "flipt",
+      "name": "Flipt",
+      "github": "https://github.com/flipt-io/flipt",
+      "license": "확인 필요",
+      "status": "auto_approved_after_document_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-20T03:06:05.080Z",
+      "sourceRun": "2026-10-20T12",
+      "licenseEvidenceCheckedAt": "2026-10-20T03:06:07.623Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [],
+      "documentEvidenceCheckedAt": "2026-10-20T03:06:13.081Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": "MIT",
+        "licenseSource": "LICENSE complete MIT provisions (text match)",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
     {
       "id": "pi-hosted",
       "name": "pi-hosted",
@@ -9201,82 +9945,6 @@
       "reasons": [],
       "checkedAt": "2026-10-19T13:06:26.333Z",
       "sourceRun": "2026-10-19T22"
-    },
-    {
-      "id": "sentry",
-      "name": "Sentry",
-      "github": "https://github.com/getsentry/sentry",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T12:06:44.710Z",
-      "sourceRun": "2026-10-19T21",
-      "tool": {
-        "id": "sentry",
-        "name": "Sentry",
-        "github": "https://github.com/getsentry/sentry",
-        "description": "실시간 에러 추적 및 성능 모니터링 플랫폼",
-        "longDescription": "실시간 에러 로깅과 APM 기능을 제공하여 코드의 예외 상황과 성능 병목 구간을 빠르게 파악할 수 있습니다. 다양한 프로그래밍 언어와 프레임워크를 공식 SDK로 지원하여 쉽게 연동할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "모니터링",
-          "에러 추적",
-          "APM"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://sentry.io",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T12:04:03.438Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트에 맞는 공식 Sentry SDK를 설치합니다.",
-          "애플리케이션 초기화 코드에 Sentry DSN을 설정합니다.",
-          "웹 대시보드에서 수집되는 에러 및 성능 지표를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "대규모 트래픽 환경에서는 적절한 샘플링 레이트 설정이 권장됩니다.",
-        "stars": 45603,
-        "forks": 4940,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T12:06:45.349Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T12:06:48.132Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-19T13:06:33.694Z"
     },
     {
       "id": "pm2",
@@ -32064,81 +32732,6 @@
       "sourceRun": "2026-10-18T07"
     },
     {
-      "id": "kubesphere",
-      "name": "KubeSphere",
-      "github": "https://github.com/kubesphere/kubesphere",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-17T22:05:55.917Z",
-      "sourceRun": "2026-10-18T07",
-      "tool": {
-        "id": "kubesphere",
-        "name": "KubeSphere",
-        "github": "https://github.com/kubesphere/kubesphere",
-        "description": "멀티 클라우드 및 엣지 관리를 위한 쿠버네티스 기반 컨테이너 플랫폼",
-        "longDescription": "직관적인 웹 UI를 제공하여 쿠버네티스 클러스터 프로비저닝, DevOps 파이프라인, 마이크로서비스 관리를 통합 지원합니다. 멀티 클라우드 및 엣지 환경에서의 효율적인 컨테이너 관리 기능을 제공합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "쿠버네티스",
-          "DevOps",
-          "클라우드네이티브"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kubesphere.io",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T22:03:59.332Z",
-        "requirements": [
-          "Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "기존 쿠버네티스 클러스터를 준비합니다.",
-          "공식 설치 가이드에 따라 KubeSphere 설치 명령어를 실행합니다.",
-          "웹 대시보드에 접속하여 클러스터와 워크로드를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 17060,
-        "forks": 2827,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T22:05:56.421Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T22:05:57.466Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-17T23:06:09.081Z"
-    },
-    {
       "id": "ecapture",
       "name": "eCapture",
       "github": "https://github.com/gojue/ecapture",
@@ -32187,90 +32780,6 @@
       "reasons": [],
       "checkedAt": "2026-10-17T22:05:55.917Z",
       "sourceRun": "2026-10-18T07"
-    },
-    {
-      "id": "oneuptime",
-      "name": "OneUptime",
-      "github": "https://github.com/OneUptime/oneuptime",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-17T22:05:55.917Z",
-      "sourceRun": "2026-10-18T07",
-      "tool": {
-        "id": "oneuptime",
-        "name": "OneUptime",
-        "github": "https://github.com/OneUptime/oneuptime",
-        "description": "가동 시간, 인시던트, 온콜, 상태 페이지, 로그 및 APM을 통합 제공하는 오픈소스 모니터링 플랫폼입니다.",
-        "longDescription": "여러 유료 SaaS 도구를 대체할 수 있는 올인원 관측성 플랫폼으로, 장애 감지 시 담당자 호출부터 수정 PR 생성까지 지원합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "모니터링",
-          "인시던트",
-          "SRE"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://oneuptime.com",
-        "featured": 9,
-        "added": "2026-10-17",
-        "addedAt": "2026-10-17T22:03:59.332Z",
-        "requirements": [
-          "Docker",
-          "Docker Compose"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Helm을 이용한 설치",
-            "command": "helm repo add oneuptime https://helm-chart.oneuptime.com && helm install oneuptime oneuptime/oneuptime",
-            "note": "쿠버네티스 환경에서 헬름 차트를 이용해 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker Compose 또는 Kubernetes 환경을 준비합니다.",
-          "설치 명령어를 실행하여 OneUptime 서비스를 구동합니다.",
-          "관리자 계정을 생성하고 첫 번째 모니터링 대상을 등록합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7745,
-        "forks": 475,
-        "starsUpdatedAt": "2026-10-17"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-17T22:05:56.590Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-17T22:05:57.788Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-17T23:06:09.693Z"
     },
     {
       "id": "agent-starter-pack",
@@ -43802,87 +44311,6 @@
       "sourceRun": "2026-10-16T18"
     },
     {
-      "id": "goreplay",
-      "name": "GoReplay",
-      "github": "https://github.com/probelabs/goreplay",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-16T09:06:11.921Z",
-      "sourceRun": "2026-10-16T18",
-      "tool": {
-        "id": "goreplay",
-        "name": "GoReplay",
-        "github": "https://github.com/probelabs/goreplay",
-        "description": "실제 HTTP 트래픽을 캡처하여 테스트 환경으로 재생하는 시스템 검증 도구",
-        "longDescription": "GoReplay는 프로덕션 환경의 실시간 라이브 HTTP 트래픽을 기록하고 이를 스테이징이나 테스트 환경으로 전달할 수 있게 해줍니다. 실제 데이터를 기반으로 배포 안정성을 높이는 데 도움을 줍니다.",
-        "category": "개발 도구",
-        "tags": [
-          "네트워크",
-          "트래픽",
-          "테스트"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://goreplay.org",
-        "featured": 9,
-        "added": "2026-10-16",
-        "addedAt": "2026-10-16T09:04:02.797Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "바이너리 다운로드",
-            "command": "sudo ./gor --input-raw :8000 --output-stdout",
-            "note": "릴리즈 페이지에서 바이너리를 받아 기본 수신 테스트를 수행합니다."
-          }
-        ],
-        "usageSteps": [
-          "릴리즈 페이지에서 최신 바이너리를 다운로드합니다.",
-          "입력 소스와 출력 타겟을 지정하여 명령어를 실행합니다.",
-          "실제 트래픽을 캡처 및 재생하여 시스템 동작을 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 19320,
-        "forks": 102,
-        "starsUpdatedAt": "2026-10-16"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-16T09:06:12.635Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-16T09:06:14.414Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-16T10:06:37.837Z"
-    },
-    {
       "id": "pytest",
       "name": "Pytest",
       "github": "https://github.com/pytest-dev/pytest",
@@ -44167,90 +44595,6 @@
       "sourceRun": "2026-10-16T17"
     },
     {
-      "id": "bytebase",
-      "name": "Bytebase",
-      "github": "https://github.com/bytebase/bytebase",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-16T08:06:15.594Z",
-      "sourceRun": "2026-10-16T17",
-      "tool": {
-        "id": "bytebase",
-        "name": "Bytebase",
-        "github": "https://github.com/bytebase/bytebase",
-        "description": "개발자와 AI를 위한 안전한 데이터베이스 거버넌스 및 형상 관리 플랫폼",
-        "longDescription": "Bytebase는 여러 데이터베이스의 스키마 변경, 접근 제어, 감사 로그를 통합 관리하는 오픈소스 데이터베이스 거버넌스 플랫폼입니다. GitOps 워크플로우와 결합하여 데이터베이스 변경 작업을 안전하게 자동화할 수 있습니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "SQL",
-          "GitOps"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.bytebase.com",
-        "featured": 9,
-        "added": "2026-10-16",
-        "addedAt": "2026-10-16T08:04:02.442Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run --rm --name bytebase -p 8080:8080 --volume ~/.bytebase:/var/bytebase bytebase/bytebase",
-            "note": "Docker를 사용하여 로컬 환경에 Bytebase를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 명령어로 Bytebase 컨테이너를 실행합니다.",
-          "웹 브라우저에서 포트 8080으로 접속하여 초기 관리자 계정을 설정합니다.",
-          "관리할 데이터베이스 인스턴스를 연동합니다.",
-          "스키마 변경 요청 및 승인 워크플로우를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 14573,
-        "forks": 995,
-        "starsUpdatedAt": "2026-10-16"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-16T08:14:57.043Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-16T08:14:57.043Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-16T09:06:35.490Z",
-      "lastVerifiedAt": "2026-10-16T08:14:57.043Z"
-    },
-    {
       "id": "semaphore",
       "name": "Semaphore UI",
       "github": "https://github.com/semaphoreui/semaphore",
@@ -44309,88 +44653,6 @@
       "reasons": [],
       "checkedAt": "2026-10-16T08:06:15.594Z",
       "sourceRun": "2026-10-16T17"
-    },
-    {
-      "id": "miller",
-      "name": "Miller",
-      "github": "https://github.com/johnkerl/miller",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-16T08:06:15.594Z",
-      "sourceRun": "2026-10-16T17",
-      "tool": {
-        "id": "miller",
-        "name": "Miller",
-        "github": "https://github.com/johnkerl/miller",
-        "description": "CSV, TSV, JSON 등 정형 데이터 처리를 위한 명령줄 도구",
-        "longDescription": "Miller는 awk, sed, cut 등의 전통적인 유닉스 도구와 유사하지만, 필드 이름을 기준으로 CSV, TSV, JSON 등의 표 형식 데이터를 손쉽게 가공, 필터링, 통계 집계할 수 있는 강력한 CLI 도구입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CLI",
-          "CSV",
-          "JSON",
-          "데이터 처리"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://miller.readthedocs.io",
-        "featured": 9,
-        "added": "2026-10-16",
-        "addedAt": "2026-10-16T08:04:02.442Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Homebrew 설치",
-            "command": "brew install miller",
-            "note": "macOS 환경에서 Homebrew를 통해 Miller를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "터미널에서 패키지 관리자를 통해 Miller를 설치합니다.",
-          "데이터 파일 형식과 처리할 명령어를 조합하여 실행합니다.",
-          "예: 'mlr --csv put '$total = $price * $quantity' data.csv'"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 10044,
-        "forks": 245,
-        "starsUpdatedAt": "2026-10-16"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-16T08:14:57.716Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-16T08:14:57.716Z",
-      "documentEvidence": {
-        "license": "BSD-2-Clause",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503",
-      "lastVerifiedAt": "2026-10-16T08:14:57.716Z"
     },
     {
       "id": "netboot-xyz",
