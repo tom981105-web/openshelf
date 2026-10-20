@@ -1,5 +1,519 @@
 [
   {
+    "id": "hubble-md",
+    "name": "Hubble.md",
+    "github": "https://github.com/bholmesdev/hubble.md",
+    "description": "사용자와 AI 에이전트가 함께 협업할 수 있는 마크다운 기반의 노트패드 애플리케이션입니다.",
+    "longDescription": "Hubble.md는 노션이나 애플 메모와 유사한 직관적인 글쓰기 경험을 제공하는 오픈소스 마크다운 노트 앱입니다. AI 에이전트가 로컬 노트 폴더를 직접 참조하고 편집할 수 있도록 설계되어 실시간 협업이 가능합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "마크다운",
+      "노트",
+      "AI에이전트",
+      "로컬우선"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hubble.md",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치 및 데스크톱 빌드",
+        "command": "pnpm install\npnpm bundle:desktop:mac",
+        "note": "패키지 설치 후 macOS용 데스크톱 번들을 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 패키지를 설치합니다.",
+      "데스크톱 앱 번들을 빌드하거나 실행합니다.",
+      "노트 폴더를 지정하여 글을 작성하고 AI 에이전트와 연동합니다."
+    ],
+    "examplePrompt": "작성한 프로젝트 노트를 분석하고 누락된 문서를 보완해줘.",
+    "usageNote": "",
+    "stars": 1483,
+    "forks": 97,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "eclaire",
+    "name": "Eclaire",
+    "github": "https://github.com/eclaire-labs/eclaire",
+    "description": "할 일, 노트, 문서, 사진, 북마크를 통합 관리하는 프라이버시 중심의 로컬 우선 AI 어시스턴트입니다.",
+    "longDescription": "Eclaire는 개인 데이터를 하나의 공간에서 통합 관리하고 AI를 통해 활용할 수 있도록 돕는 self-hosted 오픈소스 어시스턴트입니다. REST API를 통한 확장성을 제공하며 개인정보 보호에 중점을 둡니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI어시스턴트",
+      "로컬우선",
+      "셀프호스팅",
+      "문서관리",
+      "생산성"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://eclaire.co",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 환경 설정을 마칩니다.",
+      "로컬 서버를 실행하여 개인 데이터베이스에 연결합니다.",
+      "노트와 태스크를 등록하고 AI 어시스턴트를 활용합니다."
+    ],
+    "examplePrompt": "저장된 북마크와 노트를 바탕으로 이번 주 주요 관심사를 정리해줘.",
+    "usageNote": "",
+    "stars": 926,
+    "forks": 105,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "obsidian-mcp-server",
+    "name": "Obsidian MCP Server",
+    "github": "https://github.com/cyanheads/obsidian-mcp-server",
+    "description": "Model Context Protocol을 통해 Obsidian 볼트의 노트를 읽고, 쓰고, 검색하고 편집하는 서버입니다.",
+    "longDescription": "Obsidian MCP Server는 AI 모델과 에이전트가 Obsidian 볼트 내부의 노트, 태그, 프론트매터에 접근할 수 있도록 돕는 도구입니다. STDIO 및 Streamable HTTP 통신 방식을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Obsidian",
+      "MCP",
+      "AI에이전트",
+      "지식베이스",
+      "TypeScript"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.npmjs.com/package/obsidian-mcp-server",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Bun",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 의존성 설치",
+        "command": "git clone https://github.com/cyanheads/obsidian-mcp-server.git\ncd obsidian-mcp-server\nbun install",
+        "note": "프로젝트를 클론하고 Bun 패키지 매니저로 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "환경 변수 파일(.env)을 복사하고 OBSIDIAN_API_KEY 등을 설정합니다.",
+      "MCP 클라이언트 또는 AI 에이전트 설정에 서버를 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 698,
+    "forks": 110,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "takenote",
+    "name": "TakeNote",
+    "github": "https://github.com/taniarascia/takenote",
+    "description": "개발자를 위해 설계된 웹 기반 마크다운 메모 및 노트 애플리케이션입니다.",
+    "longDescription": "아이디와 유사한 환경에서 일반 텍스트 노트를 작성하고 마크다운 미리보기, 문법 강조, 키보드 단축키를 지원하는 개발자용 메모 앱입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "Markdown",
+      "노트",
+      "웹앱"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://takenote.dev",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "클라이언트 실행",
+        "command": "npm run client",
+        "note": "개발 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제합니다.",
+      "의존성을 설치하고 개발 서버를 실행합니다.",
+      "브라우저에서 메모 작성 및 관리를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7124,
+    "forks": 1311,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "mdx-notes",
+    "name": "MDX Notes",
+    "github": "https://github.com/maqi1520/mdx-notes",
+    "description": "MDX를 활용하여 블로그 작성과 위챗(WeChat) 공식 계정용 조판을 지원하는 크로스플랫폼 메모 소프트웨어입니다.",
+    "longDescription": "마크다운의 한계를 보완하는 MDX를 기반으로 하여, 원클릭으로 위챗에 복사할 수 있는 스타일 컴포넌트와 QR 코드 생성 기능을 제공하는 크로스플랫폼 노트 앱입니다.",
+    "category": "문서",
+    "tags": [
+      "TypeScript",
+      "Markdown",
+      "MDX",
+      "노트"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://mdxnotes.com/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스 페이지에서 앱을 다운로드하여 설치합니다.",
+      "MDX 형식으로 글을 작성합니다.",
+      "원클릭으로 위챗 공식 계정 등에 서식을 맞춰 복사합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1595,
+    "forks": 185,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "obsidian-execute-code",
+    "name": "Obsidian Execute Code",
+    "github": "https://github.com/twibiral/obsidian-execute-code",
+    "description": "Obsidian 노트 내에서 직접 코드 블록의 스니펫을 실행할 수 있는 플러그인입니다.",
+    "longDescription": "Node.js, Python 등 다양한 프로그래밍 언어의 코드 조각을 옵시디언 노트 화면에서 바로 실행하고 결과를 확인할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "Obsidian",
+      "플러그인",
+      "코드실행"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/twibiral/obsidian-execute-code",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Obsidian"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Obsidian 커뮤니티 플러그인에서 본 플러그인을 설치하고 활성화합니다.",
+      "노트 내 코드 블록에 코드를 작성합니다.",
+      "실행 버튼을 눌러 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1535,
+    "forks": 105,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "daily-you",
+    "name": "Daily You",
+    "github": "https://github.com/Demizo/Daily_You",
+    "description": "개인 정보 보호를 최우선으로 하는 오프라인 우선 일기 및 감정 저널 앱입니다.",
+    "longDescription": "플러터(Flutter)로 제작되어 일상을 기록하고, 감정을 추적하며, 마크다운을 지원하는 사생활 보호 중심의 다이어리 애플리케이션입니다.",
+    "category": "생산성",
+    "tags": [
+      "Dart",
+      "Flutter",
+      "일기",
+      "개인정보"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/Demizo/Daily_You",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Flutter"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "flutter pub get",
+        "note": "프로젝트 디렉토리에서 패키지를 가져옵니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 플러터 환경을 설정합니다.",
+      "앱을 빌드하거나 F-Droid 등을 통해 설치합니다.",
+      "매일의 단상과 감정을 기록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1377,
+    "forks": 64,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "btw",
+    "name": "btw",
+    "github": "https://github.com/btw-so/btw",
+    "description": "몇 분 만에 개인 블로그를 구축할 수 있는 오픈소스 미디엄(Medium) 대안 플랫폼입니다.",
+    "longDescription": "Docker와 PostgreSQL을 활용해 자체 호스팅이 가능한 개인 웹사이트 및 블로그 빌더로, 복잡한 설정 없이 글을 게시할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "JavaScript",
+      "Docker",
+      "블로그",
+      "웹사이토빌더"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://btw.so",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose",
+      "PostgreSQL"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 및 PostgreSQL 환경을 준비합니다.",
+      "소스 코드를 내려받고 컨테이너를 실행합니다.",
+      "웹 인터페이스를 통해 블로그를 설정하고 글을 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1253,
+    "forks": 102,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "crossnote-app",
+    "name": "Crossnote",
+    "github": "https://github.com/0xGG/crossnote-app",
+    "description": "서버나 계정 없이 브라우저나 로컬 폴더에서 작동하는 로컬 우선 마크다운 노트 앱입니다.",
+    "longDescription": "IndexedDB와 브라우저 내장 Git을 활용하여 오프라인에서도 작동하며, 마크다운 파일을 로컬 폴더에 안전하게 보관하고 동기화합니다.",
+    "category": "문서",
+    "tags": [
+      "TypeScript",
+      "React",
+      "Markdown",
+      "로컬우선"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/0xGG/crossnote-app",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "웹 앱에 접속하거나 소스를 실행합니다.",
+      "로컬 파일 시스템 접근 권한을 부여합니다.",
+      "마크다운 노트를 작성하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1091,
+    "forks": 80,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "note-bridge-desktop",
+    "name": "Note Bridge",
+    "github": "https://github.com/lingxuanqjc-alt/note-bridge-desktop",
+    "description": "샤오미, 오포, 비보, 화웨이 등 7대 플랫폼의 메모를 상호 이전하고 4가지 포맷으로 내보내는 Windows 데스크톱 도구입니다.",
+    "longDescription": "휴대폰 브랜드 변경 시 클라우드에 갇힌 노트를 로컬 파일(TXT, Markdown, HTML, DOCX)로 내보내거나 다른 플랫폼으로 안전하게 마이그레이션할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Python",
+      "Windows",
+      "데이터마이그레이션",
+      "노트내보내기"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lingxuanqjc-alt/note-bridge-desktop#readme",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Windows"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스 페이지에서 Windows 버전을 다운로드합니다.",
+      "소스 노트 플랫폼을 선택합니다.",
+      "원하는 내보내기 형식이나 이전 대상을 지정하여 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1005,
+    "forks": 53,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "lumina-note",
+    "name": "Lumina Note",
+    "github": "https://github.com/blueberrycongee/Lumina-Note",
+    "description": "양방향 링크와 오픈코디(opencode) SDK 기반의 AI 에이전트가 통합된 로컬 우선 마크다운 노트 앱입니다.",
+    "longDescription": "사용자의 허가 하에 전체 노트 볼트를 이해하고 조작할 수 있는 AI 어시스턴트가 내장되어 있어 지식 관리를 돕는 현대적인 데스크톱 애플리케이션입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "TypeScript",
+      "Electron",
+      "AI",
+      "Markdown"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/blueberrycongee/Lumina-Note",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스에서 앱을 다운로드하여 설치합니다.",
+      "로컬 폴더를 볼트로 선택합니다.",
+      "설정에서 AI 모델 제공자 및 API 키를 구성합니다."
+    ],
+    "examplePrompt": "볼트 전체의 노트를 분석하여 요약해줘",
+    "usageNote": "",
+    "stars": 918,
+    "forks": 96,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
+    "id": "mdsilo-app",
+    "name": "mdSilo",
+    "github": "https://github.com/mdSilo/mdSilo-app",
+    "description": "강력한 일체형 글쓰기 도구와 마인드맵, 간판 보드를 지원하는 가벼운 로컬 우선 지식 베이스 및 피드 Reader입니다.",
+    "longDescription": "React와 Tauri로 빌드되어 아이디어와 생각을 구조화하고, 마크다운 편집과 RSS 피드 구독 기능을 동시에 제공하는 지식 관리 플랫폼입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "TypeScript",
+      "Tauri",
+      "지식베이스",
+      "Markdown"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://mdsilo.com/",
+    "featured": 9,
+    "added": "2026-10-20",
+    "addedAt": "2026-10-20T12:04:06.495Z",
+    "requirements": [
+      "Node.js",
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드",
+        "command": "npm install && npm run tauri build",
+        "note": "의존성 설치 후 Tauri 앱을 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 Rust 및 Node.js 환경을 준비합니다.",
+      "의존성을 설치하고 빌드 명령어를 실행합니다.",
+      "생성된 실행 파일을 통해 노트를 작성하고 지식을 시각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 854,
+    "forks": 48,
+    "starsUpdatedAt": "2026-10-20"
+  },
+  {
     "id": "tidb",
     "name": "tidb",
     "github": "https://github.com/pingcap/tidb",
