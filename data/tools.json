@@ -1,5 +1,622 @@
 [
   {
+    "id": "k8s-tutorials",
+    "name": "Kubernetes Tutorials",
+    "github": "https://github.com/guangzhengli/k8s-tutorials",
+    "description": "초보부터 실무까지 무료로 학습할 수 있는 오픈소스 쿠버네티스(k8s) 튜토리얼.",
+    "longDescription": "Kubernetes의 핵심 개념, 설정, 배포, Ingress, Helm 등 실무에 필요한 다양한 주제를 다루는 오픈소스 강의 프로젝트입니다. 개발자와 엔지니어가 k8s를 쉽게 익힐 수 있도록 구성되어 있습니다.",
+    "category": "교육·학습",
+    "tags": [
+      "Kubernetes",
+      "K8s",
+      "DevOps",
+      "Docker",
+      "튜토리얼"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://guangzhengli.com/courses/kubernetes",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "온라인 과정 웹사이트에 접속합니다.",
+      "Pod, Deployment, Service 등 기본 아키텍처부터 실습 예제를 확인합니다.",
+      "Helm 및 Minikube 등을 활용해 실습을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5980,
+    "forks": 651,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "tbox",
+    "name": "TBOX",
+    "github": "https://github.com/tboox/tbox",
+    "description": "C 언어 개발을 위한 glib 스타일의 강력하고 사용하기 쉬운 크로스플랫폼 라이브러리.",
+    "longDescription": "스트림, 코루틴, 정규표현식, 컨테이너, 알고리즘 등 C 개발을 돕는 다양한 모듈을 제공하여 개발 생산성을 높여줍니다. Windows, macOS, Linux, Android, iOS 등 다양한 플랫폼을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C",
+      "라이브러리",
+      "크로스플랫폼",
+      "코루틴",
+      "알고리즘"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://tboox.top",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "xmake"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "xmake를 이용한 호스트 빌드",
+        "command": "cd ./tbox\nxmake",
+        "note": "xmake 설치 필요"
+      }
+    ],
+    "usageSteps": [
+      "xmake 빌드 도구를 설치합니다.",
+      "저장소 코드를 클론한 후 해당 디렉토리로 이동합니다.",
+      "명령어를 입력하여 플랫폼별 라이브러리를 빌드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5125,
+    "forks": 750,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "dockerpi",
+    "name": "dockerpi",
+    "github": "https://github.com/lukechilds/dockerpi",
+    "description": "Docker 이미지 내부에서 QEMU를 이용해 구동되는 가상 라즈베리 파이(Raspberry Pi) 환경.",
+    "longDescription": "단순한 라즈비안 컨테이너가 아닌, QEMU 기반의 완전한 ARM 아키텍처 라즈베리 파이 가상 머신 환경을 제공합니다. 파일시스템 영구 저장을 위한 볼륨 마운트를 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Docker",
+      "RaspberryPi",
+      "QEMU",
+      "ARM",
+      "가상머신"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lukechilds/dockerpi",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker로 라즈베리 파이 실행",
+        "command": "docker run -it lukechilds/dockerpi",
+        "note": "기본 실행"
+      }
+    ],
+    "usageSteps": [
+      "Docker가 설치된 환경에서 실행 명령어를 입력합니다.",
+      "QEMU를 통해 가상 ARM 라즈베리 파이 부팅 과정을 확인합니다.",
+      "필요시 `-v` 옵션으로 볼륨을 마운트하여 파일시스템 변경 사항을 저장합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2045,
+    "forks": 218,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "open-compute",
+    "name": "open-compute",
+    "github": "https://github.com/elliothux/open-compute",
+    "description": "단일 머신에서 구동되는, Cloudflare Workers와 호환되는 자체 호스팅 서버리스 플랫폼.",
+    "longDescription": "Workers, KV, D1, R2, Queues 등 Cloudflare Workers의 프로그래밍 모델을 단일 바이너리 및 데몬으로 자체 하드웨어에서 실행할 수 있게 해주는 Rust 기반 플랫폼입니다. Kubernetes나 복잡한 분산 제어 평면이 필요 없습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Cloudflare",
+      "Serverless",
+      "Rust",
+      "WASM",
+      "클라우드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://open-compute.dev",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "최신 open-compute 릴리즈 바이너리를 다운로드하여 설치합니다.",
+      "로컬 인스턴스 설정을 구성하고 데몬을 실행합니다.",
+      "ocd status 명령어를 통해 서비스 상태를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1979,
+    "forks": 77,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "baetyl",
+    "name": "Baetyl",
+    "github": "https://github.com/baetyl/baetyl",
+    "description": "클라우드의 컴퓨팅, 데이터, 서비스 능력을 엣지 디바이스까지 완벽하게 확장해 주는 엣지 컴퓨팅 프레임워크.",
+    "longDescription": "엣지 노드 관리, 원격 배포, 클라우드-엣지 간 데이터 동기화, 컨테이너 및 함수(FaaS) 애플리케이션 실행을 지원하는 오픈소스 엣지 컴퓨팅 플랫폼입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Edge",
+      "IoT",
+      "Docker",
+      "Golang",
+      "엣지컴퓨팅"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://baetyl.io/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "클라우드 관리 수이트에서 엣지 노드를 생성합니다.",
+      "엣지 디바이스에 Baetyl 프레임워크를 온라인 설치합니다.",
+      "클라우드와 엣지 간의 애플리케이션 배포 및 데이터 동기화를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1902,
+    "forks": 324,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "ptcpdump",
+    "name": "ptcpdump",
+    "github": "https://github.com/mozillazg/ptcpdump",
+    "description": "eBPF 기반의 프로세스 인지형 패킷 분석 및 캡처 도구입니다.",
+    "longDescription": "tcpdump와 호환되는 패킷 분석기로서 eBPF 기술을 활용하여 네트워크 트래픽이 어떤 프로세스에서 발생했는지 추적할 수 있습니다. 컨테이너 환경 및 쿠버네티스(Kubernetes) 포드와 연계된 네트워크 포렌식 및 디버깅에 유용합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "eBPF",
+      "tcpdump",
+      "네트워크 캡처",
+      "보안",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mozillazg/ptcpdump",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Linux kernel version = 5.2",
+      "bpftool",
+      "clang"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "GitHub 릴리스에서 다운로드",
+        "command": "wget https://github.com/mozillazg/ptcpdump/releases/latest/download/ptcpdump-linux-amd64",
+        "note": "사전 빌드된 바이너리를 다운로드하여 직접 실행할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "릴리스 페이지 또는 소스 코드를 통해 ptcpdump 바이너리를 준비합니다.",
+      "관리자 권한(sudo)으로 ptcpdump를 실행합니다.",
+      "네트워크 인터페이스와 필터 조건을 지정하여 패킷을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "eBPF 기능을 지원하는 최신 리눅스 커널 환경이 필요합니다.",
+    "stars": 1289,
+    "forks": 68,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "swift-collections",
+    "name": "Swift Collections",
+    "github": "https://github.com/apple/swift-collections",
+    "description": "Swift 프로그래밍 언어를 위한 추가적인 범용 자료구조 오픈소스 패키지.",
+    "longDescription": "Swift 표준 라이브러리를 보완하는 다양한 고성능 자료구조 구현체를 제공합니다. Deque, OrderedDictionary, OrderedSet 등의 실용적인 컨테이너 타입을 포함하고 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Swift",
+      "자료구조",
+      "라이브러리",
+      "iOS"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/apple/swift-collections",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Swift 5.x 이상"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Swift Package Manager (SPM)를 통해 프로젝트에 패키지를 추가합니다.",
+      "소스 파일에서 필요한 모듈(예: DequeModule)을 임포트합니다.",
+      "고성능 컨테이너 자료구조를 코드에 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4519,
+    "forks": 421,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "tiny-container",
+    "name": "Tiny Container",
+    "github": "https://github.com/Cateners/tiny_container",
+    "description": "안드로이드 기기에서 데스크톱 환경이 포함된 데비안 리눅스를 간편하게 실행하는 앱.",
+    "longDescription": "일반 사용자들이 복잡한 리눅스 지식 없이도 안드로이드 스마트폰이나 태블릿에서 PC용 소프트웨어를 사용할 수 있도록 돕습니다. 원클릭 초기화 및 친화적인 UI를 제공합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "Android",
+      "Debian",
+      "Linux",
+      "Proot",
+      "Termux"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/Cateners/tiny_container",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "안드로이드 기기"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "안드로이드 앱을 설치하고 실행합니다.",
+      "약 5분간의 자동 초기화 과정을 거칩니다.",
+      "제공되는 데스크톱 환경에서 리눅스 프로그램을 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "일반 사용자를 위해 설계되어 복잡한 명령어 없이 GUI를 통해 소프트웨어를 설치할 수 있습니다.",
+    "stars": 4303,
+    "forks": 212,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "factory",
+    "name": "Factory",
+    "github": "https://github.com/hmlongco/Factory",
+    "description": "Swift 및 SwiftUI 환경을 위한 현대적인 컨테이너 기반 의존성 주입(DI) 라이브러리.",
+    "longDescription": "SwiftUI의 철학에서 영감을 받은 모던한 의존성 주입 프레임워크입니다. 모듈화된 iOS 애플리케이션에서 안전하고 유연하게 객체 의존성을 관리할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Swift",
+      "SwiftUI",
+      "의존성주입",
+      "iOS",
+      "DI"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/hmlongco/Factory",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Swift 패키지 매니저"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "SPM을 통한 추가",
+        "command": "import FactoryKit",
+        "note": "Factory 패키지 추가 후 FactoryKit을 임포트하여 사용합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 타겟에 Factory 패키지를 추가합니다.",
+      "의존성 컨테이너와 등록할 서비스를 정의합니다.",
+      "필요한 곳에서 인젝션 매크로 또는 프로퍼티 래퍼를 통해 주입받아 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2917,
+    "forks": 192,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "nydus",
+    "name": "Nydus",
+    "github": "https://github.com/dragonflyoss/nydus",
+    "description": "컨테이너 이미지 및 데이터 배포를 위한 고성능 온디맨드 로드 파일시스템 프레임워크.",
+    "longDescription": "컨테이너 이미지의 빠른 부팅과 효율적인 배포를 지원하는 러스트 기반의 스토리지 및 파일시스템 프레임워크입니다. OCI 이미지와 완벽히 호환되며 대규모 클라우드 환경에 적합합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Rust",
+      "컨테이너",
+      "파일시스템",
+      "Kubernetes",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://nydus.dev/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Linux 커널"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 릴리즈 페이지에서 바이너리를 다운로드합니다.",
+      "Kubernetes 또는 컨테이너 런타임(containerd)과 연동하여 스냅샷터로 설정합니다.",
+      "온디맨드 방식으로 컨테이너 이미지를 지연 로딩하여 부팅 속도를 가속화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1682,
+    "forks": 279,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "serverless-registry",
+    "name": "Container Registry in Workers",
+    "github": "https://github.com/cloudflare/serverless-registry",
+    "description": "Cloudflare Workers와 R2 스토리지 기반으로 구축된 가벼운 컨테이너 레지스트리.",
+    "longDescription": "Cloudflare의 서버리스 인프라를 활용하여 Docker 이미지 푸시 및 풀 작업을 처리하는 컨테이너 레지스트리 구현체입니다. JWT 및 사용자 인증을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Cloudflare",
+      "Docker",
+      "TypeScript",
+      "서버리스",
+      "레지스트리"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/cloudflare/serverless-registry",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "pnpm",
+      "Cloudflare 계정"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "pnpm install",
+        "note": "프로젝트 디렉토리에서 필요한 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 pnpm으로 의존성을 설치합니다.",
+      "설정 파일(wrangler.jsonc 등)을 생성하고 Cloudflare R2 버킷을 연결합니다.",
+      "wrangler를 통해 프로덕션 환경에 레지스트리를 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1466,
+    "forks": 126,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "gomanagedocker",
+    "name": "goManageDocker",
+    "github": "https://github.com/ajayd-san/gomanagedocker",
+    "description": "Go와 BubbleTea로 제작된 빠르고 편리한 도커 이미지·컨테이너·볼륨 관리 TUI 도구.",
+    "longDescription": "복잡한 도커 명령어를 매번 검색할 필요 없이 터미널 환경에서 직관적인 텍스트 사용자 인터페이스(TUI)를 통해 도커 오브젝트를 손쉽게 제어할 수 있도록 돕는 유틸리티입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "Docker",
+      "TUI",
+      "터미널",
+      "개발도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/ajayd-san/gomanagedocker",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "유닉스 계열 설치",
+        "command": "bash (curl -s ...)",
+        "note": "스크립트를 통해 최신 버전을 다운로드하고 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하거나 소스를 빌드하여 바이너리를 준비합니다.",
+      "터미널에서 `gomanagedocker` 명령어를 입력하여 실행합니다.",
+      "키보드 단축키를 이용해 실행 중인 컨테이너, 이미지, 볼륨을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 638,
+    "forks": 25,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "lazytainer",
+    "name": "Lazytainer",
+    "github": "https://github.com/vmorganp/Lazytainer",
+    "description": "네트워크 트래픽을 모니터링하여 평소에는 중지해 두었다가 필요할 때 깨우는 도커 지연 로딩 도구.",
+    "longDescription": "서버의 에너지 효율성과 지속 가능성을 높이기 위해 개발된 도구입니다. 대상 도커 컨테이너로 향하는 네트워크 트래픽을 감시하다가 요청이 들어오면 컨테이너를 자동으로 시작하고, 평상시에는 일시 중지하거나 정지시킵니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Docker",
+      "Go",
+      "컨테이너",
+      "에너지효율",
+      "자동화"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/vmorganp/Lazytainer",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 실행",
+        "command": "git clone https://github.com/vmorganp/Lazytainer\ncd Lazytainer",
+        "note": "프로젝트를 클론하고 디렉토리로 이동합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론하고 설정을 구성합니다.",
+      "Docker Compose 스택을 실행합니다.",
+      "네트워크 트래픽 유입에 따른 컨테이너 자동 온/오프 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 776,
+    "forks": 29,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "kernel-images",
+    "name": "kernel-images",
+    "github": "https://github.com/kernel/kernel-images",
+    "description": "브라우저 자동화와 웹 에이전트를 위한 샌드박스 크롬 브라우저 서비스입니다.",
+    "longDescription": "Playwright나 Puppeteer 같은 크롬 개발자 도구 기반 프레임워크와 연동 가능한 샌드박스 크롬 브라우저 인프라를 제공합니다. 원격 GUI 라이브 뷰 스트리밍과 비디오 리플레이 기능을 통해 웹 자동화 작업과 AI 에이전트를 시각적으로 모니터링하고 제어할 수 있습니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "브라우저",
+      "자동화",
+      "크롬",
+      "AI 에이전트",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.kernel.sh",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T01:04:03.428Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -p 9222:9222 kernel/kernel-images",
+        "note": "컨테이너를 실행하여 브라우저 인프라를 시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker를 사용하여 컨테이너를 실행합니다.",
+      "Playwright 또는 Puppeteer를 실행 중인 브라우저 인스턴스에 연결합니다.",
+      "웹 자동화 스크립트나 AI 에이전트 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1107,
+    "forks": 92,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
     "id": "date",
     "name": "date",
     "github": "https://github.com/HowardHinnant/date",
