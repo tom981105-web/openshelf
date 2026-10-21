@@ -1,5 +1,276 @@
 [
   {
+    "id": "keeweb",
+    "name": "KeeWeb",
+    "github": "https://github.com/keeweb/keeweb",
+    "description": "KeePass 데이터베이스와 호환되는 무료 크로스플랫폼 비밀번호 관리자입니다.",
+    "longDescription": "KeeWeb은 데스크톱과 웹 브라우저에서 모두 사용할 수 있는 안전한 비밀번호 관리자입니다. 기존의 KeePass kdbx 파일 형식을 완벽하게 지원하며, 깔끔한 사용자 인터페이스와 로컬 파일 저장 기능을 제공합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "비밀번호관리",
+      "보안",
+      "KeePass",
+      "암호화",
+      "데스크톱"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://keeweb.info",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T02:04:04.329Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트 또는 릴리즈 페이지에서 프로그램을 설치하거나 웹 버전을 엽니다.",
+      "새로운 비밀번호 데이터베이스를 생성하거나 기존 kdbx 파일을 불러옵니다.",
+      "마스터 비밀번호를 설정하여 안전하게 인증 정보를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13018,
+    "forks": 1164,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "hydra",
+    "name": "Ory Hydra",
+    "github": "https://github.com/ory/hydra",
+    "description": "OAuth 2.0 및 OpenID Connect 프로토콜을 지원하는 고성능 오픈소스 인증 서버입니다.",
+    "longDescription": "헤드리스 API 기반으로 기존 사용자 관리 시스템과 유연하게 연동되는 인터넷 규모의 인증 서버입니다. 낮은 지연 시간과 높은 처리량을 제공하며 분산 환경에 최적화되어 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "OAuth2",
+      "OIDC",
+      "인증",
+      "Go",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.ory.com/?utm_source=github&utm_medium=banner&utm_campaign=hydra",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T02:04:04.329Z",
+    "requirements": [
+      "Ory CLI"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Ory CLI 설치",
+        "command": "bash (curl https://raw.githubusercontent.com/ory/meta/master/install.sh) -b ory",
+        "note": "공식 설치 스크립트를 사용합니다."
+      }
+    ],
+    "usageSteps": [
+      "Ory CLI를 설치합니다.",
+      "OAuth2 클라이언트를 생성하고 관련 권한 부여 코드를 구성합니다.",
+      "API를 통해 토큰 발급 및 검증을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "확장성 있는 엔터프라이즈 인증 시스템 구축에 적합합니다.",
+    "stars": 17621,
+    "forks": 1613,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "dompurify",
+    "name": "DOMPurify",
+    "github": "https://github.com/cure53/DOMPurify",
+    "description": "HTML, MathML, SVG 입력을 정화하여 XSS 공격을 방지하는 고속 JavaScript 살균기입니다.",
+    "longDescription": "브라우저 DOM 전용으로 설계된 빠르고 관용적인 XSS 살균 라이브러리입니다. 안전한 기본값으로 악성 스크립트를 제거하며 세밀한 설정과 훅을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "보안",
+      "JavaScript",
+      "XSS",
+      "웹",
+      "살균기"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cure53.de/purify",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T02:04:04.329Z",
+    "requirements": [
+      "Node.js 환경 또는 브라우저"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM 패키지 설치",
+        "command": "npm i dompurify",
+        "note": "프로젝트의 의존성에 추가하여 사용합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm을 통해 패키지를 설치하거나 CDN 링크를 포함합니다.",
+      "코드 내에서 DOMPurify.sanitize() 함수를 호출합니다.",
+      "안전하게 정화된 HTML 문자열을 웹 페이지에 삽입합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "사용자 입력 HTML 렌더링 시 XSS 취약점 방어를 위해 필수적으로 사용됩니다.",
+    "stars": 17478,
+    "forks": 872,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "zaproxy",
+    "name": "OWASP ZAP",
+    "github": "https://github.com/zaproxy/zaproxy",
+    "description": "웹 애플리케이션 취약점을 진단하기 위한 가장 인기 있는 오픈소스 DAST 보안 스캐너입니다.",
+    "longDescription": "OWASP ZAP(Zed Attack Proxy)은 개발자와 테스터가 웹 애플리케이션의 보안 취약점을 쉽게 찾을 수 있도록 돕는 도구입니다. 자동화된 스캐너 기능과 수동 테스트를 위한 다양한 가로채기(Proxy) 도구를 제공합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "DAST",
+      "취약점진단",
+      "펜테스팅",
+      "API"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.zaproxy.org",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T02:04:04.329Z",
+    "requirements": [
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트에서 ZAP을 다운로드하여 실행합니다.",
+      "진단할 대상 웹 애플리케이션의 URL을 입력합니다.",
+      "자동 스캔을 실행하거나 프록시를 통해 요청을 가로채며 취약점을 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15982,
+    "forks": 2672,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "myip",
+    "name": "MyIP",
+    "github": "https://github.com/jason5ng32/MyIP",
+    "description": "IP 주소 확인, DNS 누수 테스트, 속도 측정 등 다양한 네트워크 진단 도구를 제공하는 IP 툴박스입니다.",
+    "longDescription": "MyIP는 사용자의 IP 주소와 지리적 위치를 확인하고, WebRTC 및 DNS 누수 검사, 프록시 품질 테스트, 네트워크 속도 측정 등을 한 번에 수행할 수 있는 유용한 웹 기반 네트워크 도구입니다.",
+    "category": "네트워크",
+    "tags": [
+      "IP",
+      "네트워크",
+      "DNS",
+      "속도측정",
+      "PWA"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ipcheck.ing",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T02:04:04.329Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d -p 18966:18966 --name myip --restart always jason5ng32/myip",
+        "note": "Docker를 통해 로컬 서버에 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 컨테이너를 실행하거나 공개된 웹 서비스를 방문합니다.",
+      "대시보드에서 자신의 IP 주소와 위치 정보를 확인합니다.",
+      "필요한 경우 DNS 누수 테스트나 네트워크 속도 측정 도구를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12175,
+    "forks": 1246,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "javascript-obfuscator",
+    "name": "JavaScript Obfuscator",
+    "github": "https://github.com/javascript-obfuscator/javascript-obfuscator",
+    "description": "자바스크립트 및 Node.js 코드를 강력하게 난독화하여 역공학을 방지하는 개발 도구입니다.",
+    "longDescription": "JavaScript Obfuscator는 소스 코드의 가독성을 떨어뜨리고 구조를 변형하여 무단 복제와 분석을 어렵게 만드는 강력한 난독화 도구입니다. 제어 흐름 평탄화 및 문자열 암호화 등의 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "JavaScript",
+      "Node.js",
+      "난독화",
+      "보안",
+      "개발도구"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://obfuscator.io",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T02:04:04.329Z",
+    "requirements": [
+      "Node.js",
+      "npm 또는 yarn"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM 설치",
+        "command": "npm install --save-dev javascript-obfuscator",
+        "note": "프로젝트의 개발 의존성으로 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 패키지를 설치합니다.",
+      "스크립트 내에서 난독화 모듈을 불러옵니다.",
+      "옵션을 설정하고 자바스크립트 소스 코드를 난독화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16317,
+    "forks": 1747,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
     "id": "k8s-tutorials",
     "name": "Kubernetes Tutorials",
     "github": "https://github.com/guangzhengli/k8s-tutorials",
