@@ -1,5 +1,393 @@
 [
   {
+    "id": "mempalace",
+    "name": "mempalace",
+    "github": "https://github.com/MemPalace/mempalace",
+    "description": "로컬 우선 환경에서 동작하는 고성능 AI 메모리 시스템입니다.",
+    "longDescription": "외부 API 호출 없이 로컬 환경에서 정확도 높은 기억 및 검색 기능을 제공하는 AI 메모리 시스템입니다. 다양한 백엔드를 플러그인 형태로 지원하며, 에이전트의 컨텍스트 유지와 장기 기억 관리를 돕습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI메모리",
+      "RAG",
+      "MCP",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://mempalaceofficial.com/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T09:04:02.829Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "스킬 추가",
+        "command": "npx skills add MemPalace/mempalace",
+        "note": "AI 에이전트 환경에 MemPalace 스킬을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 또는 스킬을 프로젝트에 추가합니다.",
+      "가이드에 따라 메모리 서버 및 CLI를 설정합니다.",
+      "에이전트와의 상호작용 중 자동으로 컨텍스트와 기억을 저장하고 불러옵니다."
+    ],
+    "examplePrompt": "지난 주에 논의했던 데이터베이스 설계 구조를 요약해줘",
+    "usageNote": "",
+    "stars": 59674,
+    "forks": 7570,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "toon",
+    "name": "toon",
+    "github": "https://github.com/toon-format/toon",
+    "description": "LLM 프롬프트 효율을 높이기 위해 JSON 데이터를 압축하고 인간이 읽기 쉽게 직렬화하는 포맷 및 SDK입니다.",
+    "longDescription": "대형언어모델 프롬프트 전송 시 토큰 비용을 절감하기 위해 JSON 데이터를 간결하고 토큰 최적화된 형태로 변환해주는 직렬화 포맷입니다. TypeScript SDK와 CLI 도구를 함께 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "직렬화",
+      "토큰최적화",
+      "TypeScript",
+      "CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://toonformat.dev",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T09:04:02.829Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 패키지 설치",
+        "command": "npm install @toon-format/toon",
+        "note": "프로젝트에 TOON 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 프로젝트에 설치합니다.",
+      "복잡한 JSON 데이터를 TOON 포맷으로 인코딩합니다.",
+      "압축된 데이터를 LLM 프롬프트에 포함하여 전송합니다."
+    ],
+    "examplePrompt": "대규모 JSON 응답 데이터를 TOON 포맷으로 변환해줘",
+    "usageNote": "",
+    "stars": 25535,
+    "forks": 1148,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "peft",
+    "name": "peft",
+    "github": "https://github.com/huggingface/peft",
+    "description": "대형 사전 학습 모델의 효율적인 파라미터 미세 조정(PEFT)을 지원하는 허깅페이스 오픈소스 라이브러리입니다.",
+    "longDescription": "거대 언어 모델의 전체 파라미터를 수정하는 대신 극히 일부의 파라미터만 학습하여 비용과 저장 공간을 대폭 줄여주는 LoRA 등 최신 매개변수 효율적 미세 조정 기법을 제공합니다. 허깅페이스 Transformers 및 Diffusers와 긴밀하게 통합되어 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "PEFT",
+      "LoRA",
+      "PyTorch",
+      "Transformers",
+      "파이썬"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://huggingface.co/docs/peft",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T09:04:02.829Z",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "Transformers"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip로 PEFT 설치",
+        "command": "pip install peft",
+        "note": "파이썬 환경에서 PEFT 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어를 통해 PEFT 패키지를 설치합니다.",
+      "사전 학습된 베이스 모델을 로드하고 PEFT 설정(LoRAConfig 등)을 정의합니다.",
+      "get_peft_model 함수로 모델을 감싸고 학습을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 21817,
+    "forks": 2631,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "magpie",
+    "name": "magpie",
+    "github": "https://github.com/yetone/magpie",
+    "description": "메뉴 바에서 다양한 에이전트 모델과 서비스 계정을 간편하게 전환하고 관리할 수 있는 통합 게이트웨이 도구입니다.",
+    "longDescription": "로컬 게이트웨이 하나로 Claude Code, Codex, Deepseek, Gemini 등 다양한 AI 에이전트 모델을 통합 관리할 수 있는 도구입니다. macOS, Windows, Linux의 메뉴 바, TUI, 웹 UI 등 다양한 인터페이스를 지원하며 할당량이 소진되면 자동으로 다음 계정으로 전환합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "CLI",
+      "메뉴바 앱",
+      "LLM",
+      "API 게이트웨이"
+    ],
+    "platforms": [
+      "macOS",
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://usemagpie.ai",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T09:04:02.829Z",
+    "requirements": [
+      "Go (선택 사항)"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex",
+      "Gemini CLI"
+    ],
+    "install": [
+      {
+        "title": "셸 스크립트로 설치",
+        "command": "curl -fsSL https://usemagpie.ai/install.sh | sh",
+        "note": "자동 설치 스크립트를 실행하여 magpie를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 명령어를 실행하거나 공식 웹사이트에서 앱을 다운로드합니다.",
+      "메뉴 바 또는 CLI를 통해 사용할 AI 서비스 계정을 추가합니다.",
+      "원하는 에이전트와 모델을 선택하여 유연하게 작업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 18449,
+    "forks": 1346,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "janus",
+    "name": "Janus",
+    "github": "https://github.com/deepseek-ai/Janus",
+    "description": "멀티모달 이해와 이미지 생성을 모두 지원하는 통합 비전-언어 모델 시리즈입니다.",
+    "longDescription": "멀티모달 이해 능력과 시각적 생성 능력을 통합한 유연한 아키텍처의 인공지능 모델입니다. 이미지와 텍스트를 동시에 처리할 수 있는 강력한 성능을 제공하며, Janus-Pro 등 향상된 버전의 추론 및 사용법을 제공합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "Multimodal",
+      "PyTorch",
+      "컴퓨터 비전",
+      "생성 AI",
+      "파이썬"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/deepseek-ai/Janus",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T09:04:02.829Z",
+    "requirements": [
+      "Python = 3.8",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 편집 모드 설치",
+        "command": "pip install -e .",
+        "note": "저장소 디렉토리에서 필요한 의존성을 포함하여 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 3.8 이상 환경에서 저장소를 클론합니다.",
+      "pip install -e . 명령어로 패키지와 종속성을 설치합니다.",
+      "제공되는 추론 예제 코드를 활용하여 멀티모달 이해 또는 이미지 생성을 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17760,
+    "forks": 2231,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "nano-vllm",
+    "name": "nano-vllm",
+    "github": "https://github.com/GeeeekExplorer/nano-vllm",
+    "description": "바닥부터 가볍고 읽기 쉽게 구현한 경량 vLLM 오프라인 추론 엔진입니다.",
+    "longDescription": "약 1,200줄의 깔끔한 파이썬 코드로 vLLM의 핵심 기능을 직접 구현한 경량 추론 엔진입니다. 프리픽스 캐싱, 텐서 병렬화, 토치 컴파일, CUDA 그래프 등의 최적화 스위트를 포함하여 빠른 오프라인 추론 속도를 제공합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "LLM",
+      "인프라",
+      "PyTorch",
+      "딥러닝",
+      "파이썬"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/GeeeekExplorer/nano-vllm",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T09:04:02.829Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "깃을 통한 패키지 설치",
+        "command": "pip install git+https://github.com/GeeeekExplorer/nano-vllm.git",
+        "note": "깃헙 저장소로부터 직접 nano-vllm을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "huggingface-cli를 사용하여 필요한 모델 가중치를 로컬 디렉토리에 다운로드합니다.",
+      "제공되는 example.py 스크립트를 참조하여 추론을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "vLLM과 유사한 API 구조를 제공합니다.",
+    "stars": 16040,
+    "forks": 2771,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "opcode",
+    "name": "opcode",
+    "github": "https://github.com/winfunc/opcode",
+    "description": "Claude Code용 강력한 GUI 데스크톱 앱 및 툴킷",
+    "longDescription": "Tauri 2 기반으로 제작된 데스크톱 애플리케이션으로, Claude Code 프로젝트 탐색, 커스텀 에이전트 생성, 백그라운드 에이전트 실행 및 MCP 서버 관리를 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Claude Code",
+      "Tauri",
+      "GUI",
+      "데스크톱 앱",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://opcode.sh",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T09:04:02.829Z",
+    "requirements": [
+      "Node.js",
+      "Rust",
+      "Claude Code CLI"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [],
+    "usageSteps": [
+      "리포지토리를 클론합니다.",
+      "패키지 매니저로 의존성을 설치합니다.",
+      "개발 서버를 실행하거나 빌드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Anthropic의 공식 제품이 아니며 독립 개발자로 운영되는 프로젝트입니다.",
+    "stars": 22417,
+    "forks": 1737,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "banana-slides",
+    "name": "banana-slides",
+    "github": "https://github.com/Anionex/banana-slides",
+    "description": "생성형 AI 기반의 원스톱 PPT 젠레이터 및 슬라이드 제작 애플리케이션",
+    "longDescription": "이미지 생성 모델과 LLM을 결합하여 한 줄 아이디어, 대강의 개요, 문서 또는 커스텀 템플릿을 바탕으로 몇 분 만에 편집 가능한 PPT를 자동 생성해 주는 오픈소스 웹 애플리케이션입니다.",
+    "category": "문서",
+    "tags": [
+      "PPT",
+      "AI 슬라이드",
+      "Vibe PPT",
+      "템플릿",
+      "문서 생성"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://bananaslides.online",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T09:04:02.829Z",
+    "requirements": [
+      "Docker",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 배포",
+        "command": "docker compose up -d",
+        "note": "도커를 이용해 로컬 환경에서 간편하게 실행할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "애플리케이션을 실행하거나 웹 인터페이스에 접속합니다.",
+      "생성하고자 하는 PPT의 주제나 개요를 입력합니다.",
+      "원하는 템플릿이나 텍스트 프롬프트를 지정해 슬라이드를 생성합니다.",
+      "결과물을 확인하고 필요시 대화형 수정 명령을 내려 편집합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 15811,
+    "forks": 1798,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
     "id": "last30days-skill-cn",
     "name": "last30days-skill-cn",
     "github": "https://github.com/Jesseovo/last30days-skill-cn",
