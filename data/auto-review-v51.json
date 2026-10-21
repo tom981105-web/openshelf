@@ -1,7 +1,893 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-21T11:06:20.955Z",
+  "updatedAt": "2026-10-21T12:06:28.004Z",
   "items": [
+    {
+      "id": "fluidx3d",
+      "name": "FluidX3D",
+      "github": "https://github.com/ProjectPhysX/FluidX3D",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.798Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "fluidx3d",
+        "name": "FluidX3D",
+        "github": "https://github.com/ProjectPhysX/FluidX3D",
+        "description": "모든 GPU와 CPU에서 OpenCL을 통해 구동되는 고성능 격자 볼츠만 유체 시뮬레이션 소프트웨어입니다.",
+        "longDescription": "OpenCL 백엔드를 활용하여 고속으로 유체 역학(CFD) 시뮬레이션을 수행할 수 있는 메모리 효율적인 오픈소스 소프트웨어입니다. 복잡한 3D 유체 거동과 물리 현상을 그래픽 처리 장치에서 실시간에 가깝게 시뮬레이션합니다.",
+        "category": "과학·연구",
+        "tags": [
+          "유체역학",
+          "시뮬레이션",
+          "OpenCL"
+        ],
+        "platforms": [
+          "Windows",
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://youtube.com/@ProjectPhysX",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [
+          "OpenCL 호환 GPU 또는 CPU"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소 코드를 클론합니다.",
+          "지원되는 OpenCL 런타임 및 드라이버를 설치합니다.",
+          "소스 코드를 빌드하고 예제 시뮬레이션을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "상업적 용도로는 무료가 아니며 비상업적 용도로만 무료로 사용할 수 있습니다.",
+        "stars": 5325,
+        "forks": 476,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:16.398Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:19.591Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-21T12:06:25.158Z"
+    },
+    {
+      "id": "shadow",
+      "name": "Shadow",
+      "github": "https://github.com/shadow/shadow",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "shadow",
+        "name": "Shadow",
+        "github": "https://github.com/shadow/shadow",
+        "description": "실제 애플리케이션 코드를 직접 실행하여 대규모 분산 네트워크 시스템을 시뮬레이션하는 도구입니다.",
+        "longDescription": "수천 개의 네트워크 연결 프로세스를 리눅스 환경에서 확장성 있게 시뮬레이션할 수 있는 이산 이벤트 네트워크 시뮬레이터입니다. 실제 구동되는 바이너리를 격리된 비공개 네트워크 실험 환경에서 안전하게 테스트할 수 있습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "네트워크",
+          "시뮬레이션",
+          "분산시스템"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://shadow.github.io",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [
+          "Linux 환경",
+          "Rust 툴체인"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Shadow 빌드 및 설치",
+            "command": "./setup build --clean --test && ./setup install",
+            "note": "의존성 설치 후 로컬 환경에 Shadow를 빌드하고 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "필수 의존성을 설치합니다.",
+          "설치 스크립트를 통해 빌드 및 테스트를 수행합니다.",
+          "제공되는 예제 시뮬레이션 가이드를 따라 실험을 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1734,
+        "forks": 285,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:16.635Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:19.889Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-21T12:06:25.898Z"
+    },
+    {
+      "id": "enzyme",
+      "name": "Enzyme",
+      "github": "https://github.com/EnzymeAD/Enzyme",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "enzyme",
+        "name": "Enzyme",
+        "github": "https://github.com/EnzymeAD/Enzyme",
+        "description": "LLVM 및 MLIR을 위한 고성능 자동 미분 플러그인",
+        "longDescription": "정적으로 분석 가능한 LLVM 및 MLIR 코드에 대해 고성능 자동 미분을 수행하여 최적화된 코드의 그래디언트를 생성합니다. 기존의 최적화 수준을 유지하면서 최첨단 미분 도구와 동등하거나 그 이상의 성능을 발휘합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "자동미분",
+          "LLVM",
+          "MLIR"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://enzyme.mit.edu",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [
+          "LLVM",
+          "CMake",
+          "Ninja"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "CMake를 이용한 빌드",
+            "command": "cmake -G Ninja .. -DLLVM_DIR=/path/to/llvm/lib/cmake/llvm -DLLVM_EXTERNAL_LIT=/path/to/lit/lit.py && ninja",
+            "note": "LLVM 경로를 지정하여 빌드합니다."
+          }
+        ],
+        "usageSteps": [
+          "Enzyme 저장소를 클론하고 빌드 디렉토리를 생성합니다.",
+          "CMake 및 Ninja를 사용하여 플러그인을 컴파일합니다.",
+          "소스 코드 내에서 `__enzyme_autodiff` 함수를 호출하여 미분을 적용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1719,
+        "forks": 197,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:16.897Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:20.405Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-21T12:06:26.548Z"
+    },
+    {
+      "id": "peroxide",
+      "name": "Peroxide",
+      "github": "https://github.com/Axect/Peroxide",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "scikit-video",
+      "name": "scikit-video",
+      "github": "https://github.com/scikit-video/scikit-video",
+      "license": "BSD-3-Clause",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "avogadrolibs",
+      "name": "Avogadro2 (avogadrolibs)",
+      "github": "https://github.com/OpenChemistry/avogadrolibs",
+      "license": "BSD-3-Clause",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "fipy",
+      "name": "FiPy",
+      "github": "https://github.com/usnistgov/fipy",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "fipy",
+        "name": "FiPy",
+        "github": "https://github.com/usnistgov/fipy",
+        "description": "파이썬 기반 유한 체적법 편미분 방정식(PDE) 솔버",
+        "longDescription": "재료 과학 및 물리학의 복잡한 편미분 방정식을 수치적으로 풀 수 있는 파이썬 프레임워크입니다. 상변화 모델, 확산, 대류 등의 물리 현상을 시뮬레이션하기 위한 다양한 도구를 제공합니다.",
+        "category": "과학·연구",
+        "tags": [
+          "편미분방정식",
+          "유한체적법",
+          "시뮬레이션"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://pages.nist.gov/fipy/en/latest",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [
+          "Python",
+          "NumPy",
+          "SciPy"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Conda를 통한 설치",
+            "command": "conda install -c conda-forge fipy",
+            "note": "Conda 환경에서 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Conda 또는 파이썬 환경을 준비합니다.",
+          "FiPy 패키지를 설치합니다.",
+          "파이썬 코드에서 메쉬를 정의하고 방정식을 설정하여 시뮬레이션을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 643,
+        "forks": 185,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:17.098Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:21.066Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-21T12:06:27.259Z"
+    },
+    {
+      "id": "yt",
+      "name": "yt",
+      "github": "https://github.com/yt-project/yt",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "yt",
+        "name": "yt",
+        "github": "https://github.com/yt-project/yt",
+        "description": "천체물리학 및 체적 데이터 분석과 시각화를 위한 파이썬 기반 툴킷",
+        "longDescription": "격자, 입자, 비정형 메쉬 등 다양한 형태의 수치 시뮬레이션 데이터를 분석하고 렌더링할 수 있는 오픈소스 파이썬 패키지입니다. 천문학, 지리학, 핵공학 등 대규모 볼륨 데이터를 다루는 분야에서 주로 사용됩니다.",
+        "category": "지식·검색",
+        "tags": [
+          "데이터시각화",
+          "천체물리학",
+          "데이터분석"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://yt-project.org",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [
+          "Python",
+          "NumPy"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Conda를 통한 설치",
+            "command": "conda install -c conda-forge yt",
+            "note": "Conda-forge 채널을 통해 yt를 설치합니다."
+          },
+          {
+            "title": "Pip을 통한 설치",
+            "command": "python -m pip install yt",
+            "note": "파이썬 패키지 관리자를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Conda 또는 Pip 명령어로 패키지를 설치합니다.",
+          "파이썬 스크립트에서 yt를 임포트합니다.",
+          "시뮬레이션 데이터셋을 로드하고 슬라이스 컷이나 3D 렌더링을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 559,
+        "forks": 325,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:17.286Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:21.634Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-21T12:06:28.004Z"
+    },
+    {
+      "id": "scilean",
+      "name": "SciLean",
+      "github": "https://github.com/lecopivo/SciLean",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "pathsim",
+      "name": "PathSim",
+      "github": "https://github.com/pathsim/pathsim",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "mlpack",
+      "name": "mlpack",
+      "github": "https://github.com/mlpack/mlpack",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "mlpack",
+        "name": "mlpack",
+        "github": "https://github.com/mlpack/mlpack",
+        "description": "C++로 작성된 빠르고 유연한 기계 학습 라이브러리입니다.",
+        "longDescription": "직관적이고 고성능의 C++ 머신러닝 라이브러리로, 다양한 프로그래밍 언어 바인딩을 제공하며 프로덕션 및 연구 환경에 적합합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "C++",
+          "머신러닝",
+          "딥러닝",
+          "라이브러리"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.mlpack.org/",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "소스 코드를 다운로드하거나 저장소를 클론합니다.",
+          "C++ 프로젝트에 헤더를 포함합니다.",
+          "제공되는 API를 호출하여 머신러닝 모델을 학습시킵니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5715,
+        "forks": 1723,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:17.549Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:22.179Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "pycuda",
+      "name": "pycuda",
+      "github": "https://github.com/inducer/pycuda",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "pycuda",
+        "name": "pycuda",
+        "github": "https://github.com/inducer/pycuda",
+        "description": "파이썬에서 NVIDIA CUDA 병렬 연산 API를 활용할 수 있게 해주는 라이브러리입니다.",
+        "longDescription": "파이썬ic한 방식으로 CUDA 드라이버 API와 다차원 배열 및 알고리즘에 접근하여 GPU 가속 연산을 수행할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Python",
+          "CUDA",
+          "GPU",
+          "병렬컴퓨팅"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://mathema.tician.de/software/pycuda",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [
+          "NVIDIA CUDA",
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "PyCUDA 패키지를 설치합니다.",
+          "파이썬 코드에서 pycuda 모듈을 임포트합니다.",
+          "GPU 배열과 컨텍스트를 생성하여 연산을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2052,
+        "forks": 299,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:17.744Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:22.644Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "chapel",
+      "name": "chapel",
+      "github": "https://github.com/chapel-lang/chapel",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "chapel",
+        "name": "chapel",
+        "github": "https://github.com/chapel-lang/chapel",
+        "description": "대규모 병렬 컴퓨팅을 위해 설계된 현대적인 프로그래밍 언어입니다.",
+        "longDescription": "슈퍼컴퓨터부터 노트북, 클라우드에 이르기까지 다양한 환경에서 고성능 병렬 연산을 생산적으로 수행할 수 있는 언어 및 컴파일러를 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Chapel",
+          "병렬컴퓨팅",
+          "HPC",
+          "프로그래밍언어"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://chapel-lang.org",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 웹사이트에서 Chapel을 다운로드하거나 설치합니다.",
+          "코드를 작성하고 컴파일러로 빌드합니다.",
+          "병렬 실행 옵션을 주어 프로그램을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2047,
+        "forks": 450,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:18.038Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:23.070Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "pyopencl",
+      "name": "pyopencl",
+      "github": "https://github.com/inducer/pyopencl",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "pyopencl",
+        "name": "pyopencl",
+        "github": "https://github.com/inducer/pyopencl",
+        "description": "파이썬에서 OpenCL 표준을 이용해 이종 플랫폼 GPU 및 가속기 연산을 가능하게 하는 라이브러리입니다.",
+        "longDescription": "AMD, NVIDIA, Apple 등 다양한 벤더의 OpenCL 구현체와 연동하여 파이썬 코드로 고성능 병렬 알고리즘을 실행할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Python",
+          "OpenCL",
+          "GPU",
+          "병렬컴퓨팅"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://mathema.tician.de/software/pyopencl",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [
+          "Python",
+          "OpenCL 라이브러리"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Conda 등을 통해 PyOpenCL 및 OpenCL 런타임을 설치합니다.",
+          "파이썬에서 pyopencl 모듈을 불러옵니다.",
+          "커널 함수를 작성하고 큐를 통해 디바이스에서 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1157,
+        "forks": 247,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:18.266Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:23.467Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "exprtk",
+      "name": "exprtk",
+      "github": "https://github.com/ArashPartow/exprtk",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21",
+      "tool": {
+        "id": "exprtk",
+        "name": "exprtk",
+        "github": "https://github.com/ArashPartow/exprtk",
+        "description": "고성능 C++ 수학 수식 파싱 및 평가 라이브러리입니다.",
+        "longDescription": "문자열 형태의 복잡한 수학 수식을 실시간으로 파싱하고 고속으로 평가할 수 있도록 최적화된 헤더 전용 C++ 툴킷입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "C++",
+          "수학수식",
+          "파서",
+          "고성능"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.partow.net/programming/exprtk/index.html",
+        "featured": 9,
+        "added": "2026-10-21",
+        "addedAt": "2026-10-21T12:04:05.187Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "헤더 파일을 프로젝트에 포함합니다.",
+          "심볼 테이블과 수식 문자열을 정의합니다.",
+          "표현식을 컴파일하고 값을 계산합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1035,
+        "forks": 325,
+        "starsUpdatedAt": "2026-10-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-21T12:06:18.469Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-21T12:06:24.161Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "neurodiffeq",
+      "name": "neurodiffeq",
+      "github": "https://github.com/NeuroDiffGym/neurodiffeq",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "mfc",
+      "name": "MFC",
+      "github": "https://github.com/MFlowCode/MFC",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "vsl",
+      "name": "vsl",
+      "github": "https://github.com/vlang/vsl",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "react-quiz-component",
+      "name": "react-quiz-component",
+      "github": "https://github.com/wingkwong/react-quiz-component",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
+    {
+      "id": "librmath-js",
+      "name": "libRmath.js",
+      "github": "https://github.com/R-js/libRmath.js",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-21T12:06:15.799Z",
+      "sourceRun": "2026-10-21T21"
+    },
     {
       "id": "voyager",
       "name": "Voyager",
@@ -22665,90 +23551,6 @@
       "sourceRun": "2026-10-20T10"
     },
     {
-      "id": "fluidx3d",
-      "name": "FluidX3D",
-      "github": "https://github.com/ProjectPhysX/FluidX3D",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T01:06:21.734Z",
-      "sourceRun": "2026-10-20T10",
-      "tool": {
-        "id": "fluidx3d",
-        "name": "FluidX3D",
-        "github": "https://github.com/ProjectPhysX/FluidX3D",
-        "description": "OpenCL 기반의 고성능 래티스 볼츠만 유체역학 시뮬레이션 소프트웨어",
-        "longDescription": "FluidX3D는 격자 볼츠만 방정식(LBM)을 활용하여 모든 GPU와 CPU에서 구동되는 고성능 전산유체역학(CFD) 솔루션입니다. 복잡한 유체 흐름을 고속으로 시각화하고 분석할 수 있는 기능을 제공합니다.",
-        "category": "과학·연구",
-        "tags": [
-          "유체역학",
-          "시뮬레이션",
-          "GPU"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://youtube.com/@ProjectPhysX",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T01:04:05.761Z",
-        "requirements": [
-          "OpenCL 런타임",
-          "GPU 드라이버"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 클론",
-            "command": "git clone https://github.com/ProjectPhysX/FluidX3D.git",
-            "note": "소스 코드를 로컬에 복제합니다."
-          }
-        ],
-        "usageSteps": [
-          "GPU 드라이버 및 OpenCL 런타임을 설치합니다.",
-          "소스 코드를 컴파일하거나 제공되는 빌드를 설정합니다.",
-          "유체 시뮬레이션 파라미터를 설정하고 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "비상업적 용도로만 무료로 사용할 수 있습니다.",
-        "stars": 5320,
-        "forks": 475,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T01:06:22.616Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T01:06:25.694Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-20T01:06:38.759Z"
-    },
-    {
       "id": "tcpcopy",
       "name": "TCPCopy",
       "github": "https://github.com/session-replay-tools/tcpcopy",
@@ -23322,88 +24124,6 @@
         "오픈소스 또는 무료 조건 미확인"
       ],
       "documentEvidenceCheckedAt": "2026-10-20T01:06:27.664Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "shadow",
-      "name": "Shadow",
-      "github": "https://github.com/shadow/shadow",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T01:06:21.735Z",
-      "sourceRun": "2026-10-20T10",
-      "tool": {
-        "id": "shadow",
-        "name": "Shadow",
-        "github": "https://github.com/shadow/shadow",
-        "description": "실제 애플리케이션 코드를 직접 실행하여 대규모 분산 시스템을 실험하는 이산 이벤트 네트워크 시뮬레이터입니다.",
-        "longDescription": "수천 개의 노드로 구성된 대규모 네트워크 및 분산 애플리케이션을 단일 컴퓨터 환경에서 현실감 있고 재현 가능하게 시뮬레이션할 수 있는 리눅스 기반 도구입니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Rust",
-          "네트워킹",
-          "분산시스템",
-          "시뮬레이션",
-          "Linux"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://shadow.github.io",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T01:04:05.761Z",
-        "requirements": [
-          "Linux 환경",
-          "C/C++ 및 Rust 컴파일러"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Shadow 빌드 및 설치",
-            "command": "./setup build --clean --test && ./setup install",
-            "note": "제공되는 셋업 스크립트를 사용하여 빌드하고 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "공식 가이드에 따라 필수 빌드 의존성을 설치합니다.",
-          "시뮬레이션 설정 파일(YAML)과 대상 프로그램 바이너리를 준비합니다.",
-          "Shadow 명령어를 통해 시뮬레이션을 실행하고 결과 로그 및 성능 지표를 분석합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1732,
-        "forks": 284,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T01:06:23.903Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T01:06:27.877Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -33019,168 +33739,6 @@
       "sourceRun": "2026-10-19T17"
     },
     {
-      "id": "chapel",
-      "name": "Chapel",
-      "github": "https://github.com/chapel-lang/chapel",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T07:06:07.637Z",
-      "sourceRun": "2026-10-19T16",
-      "tool": {
-        "id": "chapel",
-        "name": "Chapel",
-        "github": "https://github.com/chapel-lang/chapel",
-        "description": "대규모 병렬 컴퓨팅을 위해 설계된 현대적인 프로그래밍 언어",
-        "longDescription": "노트북, 클라우드, 슈퍼컴퓨터 등 다양한 하드웨어 환경에서 병렬 연산을 수행할 수 있도록 설계된 고성능 프로그래밍 언어입니다. Apache 2.0 라이선스로 배포됩니다.",
-        "category": "개발 도구",
-        "tags": [
-          "병렬컴퓨팅",
-          "HPC",
-          "프로그래밍언어"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://chapel-lang.org",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T07:04:00.756Z",
-        "requirements": [
-          "C++ 컴파일러"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 웹사이트 또는 저장소에서 Chapel 설치",
-          "샘플 소스코드 작성",
-          "컴파일 후 병렬 프로그램 실행"
-        ],
-        "examplePrompt": "",
-        "usageNote": "Apache 2.0 라이선스로 배포됩니다.",
-        "stars": 2047,
-        "forks": 450,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T08:58:38.554Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T08:58:38.554Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T07:06:17.649Z",
-      "lastVerifiedAt": "2026-10-19T08:58:38.554Z"
-    },
-    {
-      "id": "enzyme",
-      "name": "Enzyme",
-      "github": "https://github.com/EnzymeAD/Enzyme",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T07:06:07.637Z",
-      "sourceRun": "2026-10-19T16",
-      "tool": {
-        "id": "enzyme",
-        "name": "Enzyme",
-        "github": "https://github.com/EnzymeAD/Enzyme",
-        "description": "LLVM 및 MLIR을 위한 고성능 자동 미분(AD) 플러그인",
-        "longDescription": "최적화된 코드에 대해 자동 미분을 수행하여 최첨단 도구와 동등하거나 그 이상의 성능을 제공하는 고성능 컴파일러 플러그인입니다. 정적으로 분석 가능한 LLVM 및 MLIR 코드에 적용됩니다.",
-        "category": "개발 도구",
-        "tags": [
-          "자동미분",
-          "LLVM",
-          "컴파일러"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://enzyme.mit.edu",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T07:04:00.756Z",
-        "requirements": [
-          "LLVM",
-          "CMake",
-          "Ninja"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "CMake 빌드",
-            "command": "cmake -G Ninja .. -DLLVM_DIR=/path/to/llvm/lib/cmake/llvm -DLLVM_EXTERNAL_LIT=/path/to/lit/lit.py",
-            "note": "CMake를 사용하여 빌드 환경을 구성합니다."
-          }
-        ],
-        "usageSteps": [
-          "LLVM 및 의존성 도구 설치",
-          "Enzyme 소스 코드 클론 후 빌드 디렉토리 생성",
-          "컴파일 및 테스트 실행"
-        ],
-        "examplePrompt": "",
-        "usageNote": "정적으로 분석 가능한 LLVM 및 MLIR 코드에 적용됩니다.",
-        "stars": 1719,
-        "forks": 196,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T08:58:39.743Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T08:58:39.743Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T07:06:19.412Z",
-      "lastVerifiedAt": "2026-10-19T08:58:39.743Z"
-    },
-    {
       "id": "plip",
       "name": "PLIP",
       "github": "https://github.com/pharmai/plip",
@@ -33241,166 +33799,6 @@
       "sourceRun": "2026-10-19T16"
     },
     {
-      "id": "mlpack",
-      "name": "mlpack",
-      "github": "https://github.com/mlpack/mlpack",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T07:06:07.637Z",
-      "sourceRun": "2026-10-19T16",
-      "tool": {
-        "id": "mlpack",
-        "name": "mlpack",
-        "github": "https://github.com/mlpack/mlpack",
-        "description": "C++ 기반의 빠르고 유연한 머신러닝 라이브러리",
-        "longDescription": "직관적이고 고성능의 C++ 머신러닝 라이브러리로, 다양한 프로그래밍 언어 바인딩을 제공하여 연구 및 프로덕션 환경 모두에 적합합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C++",
-          "머신러닝",
-          "라이브러리"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.mlpack.org/",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T07:04:00.756Z",
-        "requirements": [
-          "C++ 컴파일러"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "소스 코드를 다운로드하거나 저장소를 복제합니다.",
-          "C++ 프로젝트에 헤더를 포함합니다.",
-          "제공되는 API를 활용해 머신러닝 모델을 구현합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5714,
-        "forks": 1724,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T08:58:40.474Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T08:58:40.474Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T07:06:20.198Z",
-      "lastVerifiedAt": "2026-10-19T08:58:40.474Z"
-    },
-    {
-      "id": "pycuda",
-      "name": "pycuda",
-      "github": "https://github.com/inducer/pycuda",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T07:06:07.637Z",
-      "sourceRun": "2026-10-19T16",
-      "tool": {
-        "id": "pycuda",
-        "name": "pycuda",
-        "github": "https://github.com/inducer/pycuda",
-        "description": "파이썬에서 NVIDIA CUDA 병렬 연산 API를 쉽게 활용할 수 있는 라이브러리",
-        "longDescription": "파이썬 개발자가 NVIDIA의 CUDA 병렬 연산 API에 접근할 수 있도록 배열과 알고리즘을 지원하는 강력한 래퍼 라이브러리입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Python",
-          "CUDA",
-          "GPU",
-          "병렬 연산"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://mathema.tician.de/software/pycuda",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T07:04:00.756Z",
-        "requirements": [
-          "NVIDIA CUDA",
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "PyPI 설치",
-            "command": "pip install pycuda",
-            "note": "파이프를 통한 패키지 설치"
-          }
-        ],
-        "usageSteps": [
-          "CUDA가 지원되는 NVIDIA 드라이버를 설치합니다.",
-          "pip를 통해 pycuda를 설치합니다.",
-          "파이썬 스크립트에서 pycuda를 임포트하여 GPU 연산을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2052,
-        "forks": 299,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T08:58:41.035Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T08:58:41.035Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "lastVerifiedAt": "2026-10-19T08:58:41.035Z"
-    },
-    {
       "id": "gosl",
       "name": "gosl",
       "github": "https://github.com/cpmech/gosl",
@@ -33419,166 +33817,6 @@
       "reasons": [],
       "checkedAt": "2026-10-19T07:06:07.637Z",
       "sourceRun": "2026-10-19T16"
-    },
-    {
-      "id": "pyopencl",
-      "name": "pyopencl",
-      "github": "https://github.com/inducer/pyopencl",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T07:06:07.637Z",
-      "sourceRun": "2026-10-19T16",
-      "tool": {
-        "id": "pyopencl",
-        "name": "pyopencl",
-        "github": "https://github.com/inducer/pyopencl",
-        "description": "파이썬에서 OpenCL 이종 병렬 컴퓨팅을 활용할 수 있게 해주는 라이브러리",
-        "longDescription": "다양한 하드웨어 가속기를 지원하는 OpenCL API를 파이썬에서 객체 지향적이고 안전하게 다룰 수 있도록 돕습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Python",
-          "OpenCL",
-          "GPU",
-          "병렬 프로그래밍"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://mathema.tician.de/software/pyopencl",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T07:04:00.756Z",
-        "requirements": [
-          "OpenCL 런타임",
-          "Python",
-          "NumPy"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Conda 설치",
-            "command": "conda install conda-forge::pyopencl",
-            "note": "콘다를 통한 간편 설치"
-          }
-        ],
-        "usageSteps": [
-          "플랫폼에 맞는 OpenCL 드라이버 및 런타임을 설치합니다.",
-          "Conda 또는 pip를 통해 pyopencl을 설치합니다.",
-          "파이썬 코드에서 OpenCL 커널을 작성하고 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1157,
-        "forks": 247,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T08:58:41.663Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T08:58:41.663Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "lastVerifiedAt": "2026-10-19T08:58:41.663Z"
-    },
-    {
-      "id": "exprtk",
-      "name": "exprtk",
-      "github": "https://github.com/ArashPartow/exprtk",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T07:06:07.637Z",
-      "sourceRun": "2026-10-19T16",
-      "tool": {
-        "id": "exprtk",
-        "name": "exprtk",
-        "github": "https://github.com/ArashPartow/exprtk",
-        "description": "고성능 C++ 수학 수식 파싱 및 평가 라이브러리",
-        "longDescription": "복잡한 수식을 효율적으로 파싱하고 고속으로 평가할 수 있는 헤더 온리 형태의 C++ 라이브러리입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C++",
-          "수학 수식",
-          "파서",
-          "고성능"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.partow.net/programming/exprtk/index.html",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T07:04:00.756Z",
-        "requirements": [
-          "C++ 컴파일러"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "헤더 파일을 프로젝트에 포함합니다.",
-          "수식 문자열과 변수 테이블을 정의합니다.",
-          "exprtk 파서를 이용해 수식을 컴파일하고 평가합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1034,
-        "forks": 324,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T07:06:09.823Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T07:06:15.205Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "ohpc",
@@ -33609,89 +33847,6 @@
       "reasons": [],
       "checkedAt": "2026-10-19T07:06:07.637Z",
       "sourceRun": "2026-10-19T16"
-    },
-    {
-      "id": "yt",
-      "name": "yt",
-      "github": "https://github.com/yt-project/yt",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T07:06:07.637Z",
-      "sourceRun": "2026-10-19T16",
-      "tool": {
-        "id": "yt",
-        "name": "yt",
-        "github": "https://github.com/yt-project/yt",
-        "description": "천체물리학 및 과학 데이터 분석·시각화를 위한 파이썬 패키지",
-        "longDescription": "체적 데이터, 입자 데이터 등 복잡한 그리드 기반 과학 데이터를 분석하고 다차원 시각화를 수행할 수 있는 오픈소스 파이썬 라이브러리입니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "Python",
-          "데이터 시각화",
-          "천체물리학",
-          "과학 계산"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://yt-project.org",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T07:04:00.756Z",
-        "requirements": [
-          "Python",
-          "NumPy"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Conda 설치",
-            "command": "conda install -c conda-forge yt",
-            "note": "conda-forge를 통한 설치"
-          }
-        ],
-        "usageSteps": [
-          "Python 또는 Conda 환경을 준비합니다.",
-          "conda 또는 pip 명령어로 yt 패키지를 설치합니다.",
-          "파이썬 스크립트에서 데이터를 로드하고 시각화 함수를 호출합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 559,
-        "forks": 325,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T07:06:10.061Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T07:06:15.777Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "awesome-playwright",
