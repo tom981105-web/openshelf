@@ -1,5 +1,746 @@
 [
   {
+    "id": "doris",
+    "name": "Apache Doris",
+    "github": "https://github.com/apache/doris",
+    "description": "AI 에이전트를 위한 고성능 실시간 분석 및 하이브리드 검색 데이터베이스입니다.",
+    "longDescription": "현대적인 분산 SQL 데이터베이스로, 대규모 데이터에 대한 실시간 분석과 OLAP 쿼리를 초저지연으로 처리합니다. 벡터 검색과 레이크하우스 아키텍처를 지원하여 AI 분석 및 대규모 로그 처리 백엔드로 적합합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "OLAP",
+      "데이터베이스",
+      "SQL",
+      "실시간",
+      "벡터 검색"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://doris.apache.org",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Java 8+",
+      "C++ 컴파일러(소스 빌드 시)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 사이트나 Docker를 통해 Apache Doris를 다운로드하고 실행합니다.",
+      "FE(Frontend) 및 BE(Backend) 노드를 설정하고 클러스터를 구성합니다.",
+      "MySQL 클라이언트 등을 통해 Doris에 접속하여 SQL 쿼리를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 16112,
+    "forks": 3993,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "pixie",
+    "name": "Pixie",
+    "github": "https://github.com/pixie-io/pixie",
+    "description": "쿠버네티스 환경에서 eBPF를 활용해 즉시 애플리케이션 관측 데이터를 수집하는 오픈소스 도구입니다.",
+    "longDescription": "코드 수정 없이 eBPF 기술을 이용해 쿠버네티스 클러스터 내의 트래픽, 메트릭, 분산 추적 정보를 자동으로 수집하고 시각화합니다. 실시간 라이브 UI와 CLI를 통해 마이크로서비스의 성능을 손쉽게 진단할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "eBPF",
+      "모니터링",
+      "CNCF",
+      "C++"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://px.dev",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Kubernetes 클러스터에 Pixie CLI를 이용해 Pixie를 설치합니다.",
+      "Live UI 또는 CLI를 통해 클러스터 내 네트워크 트래픽과 서비스 성능을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6550,
+    "forks": 507,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "btrace",
+    "name": "BTrace",
+    "github": "https://github.com/btraceio/btrace",
+    "description": "실행 중인 자바(Java) 애플리케이션에 재시작이나 재컴파일 없이 안전하게 트레이싱 코드를 동적으로 주입하는 도구입니다.",
+    "longDescription": "프로덕션 환경에서 운영 중인 JVM에 안전하게 동적 바이트코드 계측을 수행하여 런타임 진단과 성능 분석을 지원합니다. 자바 애플리케이션의 병목 현상이나 예기치 않은 동작을 실시간으로 추적할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "JVM",
+      "디버깅",
+      "성능 분석",
+      "바이트코드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/btraceio/btrace",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Java JDK"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "JBang을 이용한 실행",
+        "command": "jbang catalog add --name btraceio https://raw.githubusercontent.com/btraceio/jbang-catalog/main/jbang-catalog.json\njbang btrace@btraceio script.java",
+        "note": "JBang을 통해 별도의 설치 없이 BTrace 스크립트를 즉시 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "대상 Java 프로세스의 PID를 확인합니다.",
+      "BTrace 스크립트를 작성합니다.",
+      "JBang 또는 CLI 도구를 이용해 프로세스에 스크립트를 연결하여 트레이싱 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5997,
+    "forks": 953,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "threatmapper",
+    "name": "ThreatMapper",
+    "github": "https://github.com/deepfence/ThreatMapper",
+    "description": "클라우드 네이티브 애플리케이션의 보안 취약점을 탐지하고 보호하는 오픈소스 CNAPP 플랫폼입니다.",
+    "longDescription": "컨테이너, 호스트, 클라우드 리소스 전반의 보안 위협을 실시간으로 스캔하고 공격 경로를 토폴로지 형태로 시각화합니다. 클라우드 보안 포스트처(CSPM)와 워크로드 보호(CWPP) 기능을 통합 제공합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "Cloud Native",
+      "Kubernetes",
+      "취약점 스캔",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://threatmapper.org",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 배포",
+        "command": "wget https://github.com/deepfence/ThreatMapper/raw/release-2.5/deployment-scripts/docker-compose.yml\ndocker-compose -f docker-compose.yml up --detach",
+        "note": "Management Console을 Docker 환경에 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker Compose를 사용하여 ThreatMapper 콘솔을 실행합니다.",
+      "웹 관리 콘솔에 접속하여 관리자 계정을 생성하고 API 키를 발급받습니다.",
+      "대상 클러스터나 호스트에 에이전트를 배포하여 취약점 스캔을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5325,
+    "forks": 632,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "parca",
+    "name": "Parca",
+    "github": "https://github.com/parca-dev/parca",
+    "description": "라인 번호 수준까지 CPU와 메모리 사용량을 분석하는 연속 프로파일링(Continuous Profiling) 도구입니다.",
+    "longDescription": "클라우드 네이티브 환경에서 CPU와 메모리 프로파일 데이터를 지속적으로 수집하여 인프라 비용을 절감하고 성능을 최적화합니다. eBPF 기술을 기반으로 오버헤드가 적은 프로파일링을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "프로파일링",
+      "eBPF",
+      "성능 최적화",
+      "Observability",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://parca.dev/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Linux 커널 (eBPF 지원)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Parca 서버와 Parca 에이전트를 Kubernetes 클러스터에 배포합니다.",
+      "웹 UI에 접속하여 시간대별 CPU 및 메모리 프로파일링 그래프를 확인합니다.",
+      "병목 구간의 소스 코드 라인 번호를 추적하여 성능을 개선합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4996,
+    "forks": 266,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "mtail",
+    "name": "mtail",
+    "github": "https://github.com/google/mtail",
+    "description": "애플리케이션 로그에서 내부 모니터링 데이터를 추출하여 시계열 데이터베이스로 전송하는 도구입니다.",
+    "longDescription": "로그 파일을 실시간으로 파싱하고 프로그래밍 가능한 추출 규칙을 적용하여 Prometheus 등의 메트릭으로 변환합니다. 로그 기반의 모니터링과 지표 수집을 가볍고 유연하게 구현할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "로그",
+      "모니터링",
+      "Prometheus",
+      "메트릭",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/google/mtail",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "GitHub 릴리스 페이지에서 사전 컴파일된 바이너리를 다운로드합니다.",
+      "로그 파싱을 위한 mtail 프로그램(보통 `.mtail` 확장자)을 작성합니다.",
+      "대상 로그 파일 경로와 mtail 프로그램을 지정하여 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4033,
+    "forks": 394,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "grafana-dashboards-kubernetes",
+    "name": "Grafana Dashboards Kubernetes",
+    "github": "https://github.com/dotdc/grafana-dashboards-kubernetes",
+    "description": "쿠버네티스 클러스터 모니터링을 위한 현대적이고 직관적인 Grafana 대시보드 모음입니다.",
+    "longDescription": "Prometheus와 kube-state-metrics 기반의 데이터를 활용하여 쿠버네티스 노드, Pod, 클러스터 리소스 사용량을 한눈에 파악할 수 있는 고품질 Grafana 대시보드 템플릿 세트를 제공합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Grafana",
+      "Kubernetes",
+      "대시보드",
+      "모니터링",
+      "Prometheus"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/dotdc/grafana-dashboards-kubernetes",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Grafana",
+      "Prometheus",
+      "kube-state-metrics"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Grafana 대시보드 메뉴에서 JSON 파일을 가져오거나 Terraform/Helm을 통해 배포합니다.",
+      "Prometheus 데이터소스와 연동합니다.",
+      "쿠버네티스 클러스터 상태를 대시보드에서 실시간으로 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3823,
+    "forks": 487,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "kube-state-metrics",
+    "name": "kube-state-metrics",
+    "github": "https://github.com/kubernetes/kube-state-metrics",
+    "description": "쿠버네티스 클러스터 수준의 리소스 메트릭을 생성하고 노출하는 에이전트",
+    "longDescription": "쿠버네티스 API 서버를 리슨하여 배포, 포드, 리소스 상태 등 다양한 개체에 대한 메트릭을 생성합니다. Prometheus 등 모니터링 시스템과 연동하여 클러스터 상태를 상세히 파악할 수 있도록 돕습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "Prometheus",
+      "메트릭",
+      "모니터링",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kubernetes.io/docs/concepts/cluster-administration/kube-state-metrics/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Go",
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 설치",
+        "command": "go get k8s.io/kube-state-metrics/v2",
+        "note": "GOPATH에 프로젝트를 설치합니다."
+      },
+      {
+        "title": "Docker 컨테이너 빌드",
+        "command": "make container",
+        "note": "루트 폴더에서 실행하여 자체 포함된 바이너리와 Docker 이미지를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "Kubernetes 클러스터 환경을 준비합니다.",
+      "매니페스트 또는 Helm을 이용해 클러스터 내에 배포합니다.",
+      "Prometheus 설정에서 kube-state-metrics 엔드포인트를 스크레이프하도록 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6225,
+    "forks": 2198,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "mimir",
+    "name": "Grafana Mimir",
+    "github": "https://github.com/grafana/mimir",
+    "description": "Prometheus를 위한 수평 확장 가능하고 가용성이 높은 장기 메트릭 저장소",
+    "longDescription": "대규모 Prometheus 메트릭 데이터를 수평 확장 방식으로 안정적으로 저장하고 조회할 수 있는 오픈소스 분산 시계열 데이터베이스입니다. 멀티테넌시와 빠른 PromQL 쿼리 성능을 지원합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "Prometheus",
+      "시계열",
+      "모니터링",
+      "스토리지",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://grafana.com/oss/mimir/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "추가 종속성 없는 단일 바이너리 (모놀리식 모드 기준)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Grafana Mimir 바이너리를 다운로드하거나 Docker를 통해 실행합니다.",
+      "모놀리식 모드로 설정하여 단일 인스턴스로 빠르게 시작합니다.",
+      "Prometheus의 remote_write 설정에서 Mimir 엔드포인트를 지정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5259,
+    "forks": 855,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "aya",
+    "name": "Aya",
+    "github": "https://github.com/aya-rs/aya",
+    "description": "개발자 경험과 운영 편의성에 중점을 둔 Rust용 eBPF 라이브러리",
+    "longDescription": "BCC나 C 기반 툴chain에 대한 의존성을 최소화하고, 순수 Rust 환경에서 eBPF 프로그램을 쉽게 작성, 로드 및 관리할 수 있도록 지원하는 고성능 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Rust",
+      "eBPF",
+      "BPF",
+      "보안",
+      "네트워크"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://aya-rs.dev/book/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Rust 툴체인",
+      "Linux 커널"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Cargo 프로젝트의 dependencies에 aya를 추가합니다.",
+      "eBPF 바이트코드 파일을 로드하고 프로그램 인스턴스를 가져옵니다.",
+      "커널 훅에 프로그램을 부착하고 이벤트를 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4863,
+    "forks": 482,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "datadog-agent",
+    "name": "Datadog Agent",
+    "github": "https://github.com/DataDog/datadog-agent",
+    "description": "시스템 및 애플리케이션의 메트릭, 로그, 트레이스를 수집하여 Datadog으로 전송하는 에이전트",
+    "longDescription": "인프라와 애플리케이션의 성능 저하나 장애 요소를 모니터링하기 위해 각종 메트릭과 분산 추적(APM), 로그를 수집하는 오픈소스 에이전트 소프트웨어입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Datadog",
+      "모니터링",
+      "APM",
+      "로그",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.datadoghq.com/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Go 툴체인 (소스 빌드 시)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Datadog 플랫폼에서 제공하는 설치 안내 및 스크립트를 확인합니다.",
+      "대상 서버나 컨테이너 환경에 에이전트를 설치합니다.",
+      "API 키를 설정하고 모니터링 대시보드에서 수집 상태를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3769,
+    "forks": 1516,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "kiali",
+    "name": "Kiali",
+    "github": "https://github.com/kiali/kiali",
+    "description": "Istio 서비스 메시를 위한 시각화 및 관리 콘솔",
+    "longDescription": "Istio 서비스 메시 내에서 실행되는 마이크로서비스들의 상호작용을 토폴로지 맵으로 시각화하고, 상태 모니터링과 설정 검증을 지원하는 관리 도구입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Istio",
+      "서비스메시",
+      "Kubernetes",
+      "모니터링",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.kiali.io",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Kubernetes 클러스터",
+      "Istio"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Kubernetes 클러스터에 Istio가 설치되어 있는지 확인합니다.",
+      "Kiali 애드온 또는 Helm 차트를 이용해 클러스터에 배포합니다.",
+      "웹 콘솔에 접속하여 서비스 토폴로지와 트래픽 흐름을 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3647,
+    "forks": 571,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "express-status-monitor",
+    "name": "Express Status Monitor",
+    "github": "https://github.com/RafalWilinski/express-status-monitor",
+    "description": "Node.js 및 Express 애플리케이션을 위한 실시간 모니터링 미들웨어",
+    "longDescription": "Socket.io와 Chart.js를 기반으로 하여 Express 기반 서버의 CPU, 메모리 사용량, 응답 시간, 요청 수 등의 핵심 성능 지표를 웹 대시보드로 실시간 리포팅하는 가벼운 모듈입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Node.js",
+      "Express",
+      "모니터링",
+      "미들웨어",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://dynobase.dev/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Node.js  4.x"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 패키지 설치",
+        "command": "npm install express-status-monitor --save",
+        "note": "프로젝트에 모듈을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm을 통해 패키지를 설치합니다.",
+      "Express 앱 설정 파일에서 다른 미들웨어보다 앞서 `app.use(require('express-status-monitor')());`를 추가합니다.",
+      "서버를 실행하고 `/status` 경로로 접속하여 모니터링 대시보드를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3615,
+    "forks": 264,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "quill",
+    "name": "Quill",
+    "github": "https://github.com/odygrd/quill",
+    "description": "성능에 민감한 C++17 애플리케이션을 위한 초저지연 비동기 로깅 및 메트릭 라이브러리",
+    "longDescription": "로그 포맷팅과 I/O 작업을 전용 백엔드 워커 스레드로 분리하여, 애플리케이션 메인 스레드의 지연 시간을 최소화하도록 설계된 고성능 C++ 로깅 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C++",
+      "로깅",
+      "비동기",
+      "저지연",
+      "성능"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://quillcpp.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "C++17 이상을 지원하는 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "vcpkg 설치",
+        "command": "vcpkg install quill",
+        "note": "vcpkg 패키지 관리자를 이용한 설치"
+      },
+      {
+        "title": "Conan 설치",
+        "command": "conan install quill",
+        "note": "Conan 패키지 관리자를 이용한 설치"
+      }
+    ],
+    "usageSteps": [
+      "선호하는 패키지 관리자나 소스 빌드를 통해 Quill을 프로젝트에 통합합니다.",
+      "프론트엔드와 백엔드 로거 인스턴스를 초기화합니다.",
+      "지연 시간에 민감한 코드 경로에서 로그 매크로를 호출하여 비동기 기록을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3061,
+    "forks": 274,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "parseable",
+    "name": "Parseable",
+    "github": "https://github.com/parseablehq/parseable",
+    "description": "클라우드 네이트 데이터 레이크 아키텍처 기반의 오픈소스 통합 관측성 플랫폼",
+    "longDescription": "Rust로 작성되어 로그, 메트릭, 트레이스를 효율적으로 수집하고 저장하는 플랫폼입니다. 컬럼나 압축 기술을 통해 스토리지 비용을 크게 절감하면서 OpenTelemetry와 호환되는 쿼리를 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Rust",
+      "로그",
+      "모니터링",
+      "OpenTelemetry",
+      "클라우드네이티브"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://parseable.com",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Docker 또는 Rust 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 등을 이용해 Parseable 서버를 실행합니다.",
+      "기본 자격증명(admin / admin)으로 웹 대시보드에 로그인합니다.",
+      "애플리케이션 로그나 OpenTelemetry 데이터를 해당 엔드포인트로 전송하여 시각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2561,
+    "forks": 181,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "victorialogs",
+    "name": "VictoriaLogs",
+    "github": "https://github.com/VictoriaMetrics/VictoriaLogs",
+    "description": "테라바이트 규모의 로그를 효율적으로 처리하는 고성능 로그 데이터베이스",
+    "longDescription": "방대한 로그 데이터를 저렴한 비용으로 빠르게 수집, 저장, 조회할 수 있도록 최적화된 로그 전용 데이터베이스입니다. Elasticsearch나 Loki의 대안으로 활용할 수 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "로그",
+      "시계열",
+      "Elasticsearch",
+      "Loki",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.victoriametrics.com/victorialogs/",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "Go 런타임 또는 Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 이미지나 pre-compiled 바이너리를 다운로드합니다.",
+      "VictoriaLogs 서버를 실행하고 로그 수집 포트를 개방합니다.",
+      "FluentBit, Logstash 또는 Promtail 등을 통해 로그를 전송하고 쿼리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2393,
+    "forks": 200,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
+    "id": "proton",
+    "name": "Proton",
+    "github": "https://github.com/timeplus-io/proton",
+    "description": "단일 C++ 바이너리로 동작하는 고성능 스트리밍 SQL 엔진",
+    "longDescription": "밀리초 단위의 지연 시간과 높은 처리량을 제공하는 스트림 처리 엔진입니다. 실시간 로그, 메트릭, 이벤트 데이터로부터 스트리밍 SQL을 통해 지속적인 컨텍스트 계산과 ETL을 수행할 수 있습니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "SQL",
+      "스트림처리",
+      "C++",
+      "실시간",
+      "ETL"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://timeplus.com",
+    "featured": 9,
+    "added": "2026-10-21",
+    "addedAt": "2026-10-21T17:04:04.096Z",
+    "requirements": [
+      "C++ 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl https://install.timeplus.com/oss | sh",
+        "note": "Timeplus Proton OSS 버전을 다운로드하고 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 Proton 바이너리를 설치합니다.",
+      "서버를 실행하고 클라이언트 인터페이스에 접속합니다.",
+      "SQL 쿼리를 작성하여 실시간 스트림 데이터 처리 및 분석 파이프라인을 구축합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2271,
+    "forks": 112,
+    "starsUpdatedAt": "2026-10-21"
+  },
+  {
     "id": "prismarr",
     "name": "Prismarr",
     "github": "https://github.com/Shoshuo/Prismarr",
