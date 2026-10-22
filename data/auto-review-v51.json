@@ -1,7 +1,828 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-22T19:07:06.061Z",
+  "updatedAt": "2026-10-22T20:08:04.420Z",
   "items": [
+    {
+      "id": "termux-app",
+      "name": "Termux",
+      "github": "https://github.com/termux/termux-app",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "termux-app",
+        "name": "Termux",
+        "github": "https://github.com/termux/termux-app",
+        "description": "안드로이드용 강력한 터미널 에뮬레이터 및 리눅스 환경 앱",
+        "longDescription": "Termux는 루팅 없이 안드로이드 기기에서 리눅스 환경을 구축할 수 있는 터미널 에뮬레이터입니다. 패키지 관리자를 통해 다양한 개발 도구를 설치하고 모바일에서 직접 코딩과 서버 관리를 수행할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "안드로이드",
+          "리눅스",
+          "터미널"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://f-droid.org/en/packages/com.termux",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [
+          "안드로이드 OS"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "F-Droid 또는 공식 릴리즈 페이지에서 Termux 앱을 설치합니다.",
+          "앱을 실행한 뒤 패키지 목록을 업데이트하기 위해 pkg update 명령어를 입력합니다.",
+          "pkg install git python 등 필요한 도구를 설치하여 사용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "최신 안드로이드 버전에서는 백그라운드 프로세스 제한으로 인해 일부 설정이 필요할 수 있습니다.",
+        "stars": 63199,
+        "forks": 7986,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:54.943Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:06:58.114Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-22T20:07:16.849Z"
+    },
+    {
+      "id": "pi-hole",
+      "name": "Pi-hole",
+      "github": "https://github.com/pi-hole/pi-hole",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "pi-hole",
+        "name": "Pi-hole",
+        "github": "https://github.com/pi-hole/pi-hole",
+        "description": "네트워크 전반의 광고와 트래커를 차단하는 리눅스 기반 DNS 싱크홀 시스템입니다.",
+        "longDescription": "Pi-hole은 라즈베리파이 등의 리눅스 하드웨어에서 동작하며, 네트워크로 유입되는 광고 및 악성 도메인 요청을 DNS 수준에서 차단합니다. 클라이언트 측에 별도의 소프트웨어를 설치할 필요 없이 스마트 TV나 모바일 앱의 광고까지 광범위하게 제거해 줍니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "광고차단",
+          "DNS",
+          "네트워크",
+          "리눅스"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pi-hole.net",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [
+          "Linux 운영체제",
+          "Bash 셸"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "자동 설치 스크립트 실행",
+            "command": "curl -sSL https://install.pi-hole.net | bash",
+            "note": "공식 설치 스크립트를 다운로드하여 대화형으로 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "지원되는 리눅스 서버나 라즈베리파이에 접속합니다.",
+          "설치 명령어를 실행하고 화면의 안내에 따라 네트워크 설정을 완료합니다.",
+          "웹 관리자 대시보드에 접속하여 차단 통계와 로그를 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "공유기 또는 기기의 DNS 설정을 Pi-hole 서버의 IP로 변경해야 네트워크 전체에 적용됩니다.",
+        "stars": 61394,
+        "forks": 3332,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:55.217Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:06:58.564Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckError": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "glances",
+      "name": "Glances",
+      "github": "https://github.com/nicolargo/glances",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "glances",
+        "name": "Glances",
+        "github": "https://github.com/nicolargo/glances",
+        "description": "파이썬 기반의 크로스 플랫폼 시스템 모니터링 툴",
+        "longDescription": "Glances는 CPU, 메모리, 디스크, 네트워크, 프로세스 등 다양한 시스템 자원 사용량을 직관적인 터미널 인터페이스와 웹 UI로 보여줍니다. RESTful API 등을 지원하여 외부 모니터링 시스템과 연동하기에도 편리합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "모니터링",
+          "시스템",
+          "Python"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://nicolargo.github.io/glances/",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [
+          "Python 3.x",
+          "pip"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "PyPI를 통한 설치",
+            "command": "pip install glances",
+            "note": "파이썬 패키지 관리자를 이용해 가장 최신 안정 버전을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "가상환경 또는 시스템 터미널에서 설치 명령어를 실행합니다.",
+          "glances 명령어를 입력하여 모니터링 대시보드를 실행합니다.",
+          "단축키를 통해 프로세스 정렬 및 상세 정보를 제어합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "고급 센서 정보를 보려면 psutil 등의 추가 라이브러리 설치가 필요할 수 있습니다.",
+        "stars": 33825,
+        "forks": 1838,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:55.470Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:06:59.314Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-22T20:07:37.740Z"
+    },
+    {
+      "id": "windterm",
+      "name": "WindTerm",
+      "github": "https://github.com/kingToolbox/WindTerm",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "windterm",
+        "name": "WindTerm",
+        "github": "https://github.com/kingToolbox/WindTerm",
+        "description": "데브옵스 엔지니어를 위한 고성능 크로스 플랫폼 SSH, 셸 및 SFTP 클라이언트입니다.",
+        "longDescription": "WindTerm은 자동 완성, 구문 강조, 세션 관리, SFTP 파일 전송 등 강력한 기능을 갖춘 전문적인 터미널 프로그램입니다. 기업과 개인 사용자 모두 무료로 사용할 수 있으며 리소스 사용량이 적고 속도가 빠릅니다.",
+        "category": "개발 도구",
+        "tags": [
+          "터미널",
+          "SSH",
+          "SFTP"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kingtoolbox.github.io",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "GitHub 릴리즈 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
+          "압축을 해제하고 실행 파일을 실행합니다.",
+          "새로운 SSH 또는 Telnet 세션을 생성하여 서버에 접속합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "상업적 및 비상업적 용도 모두 무료로 제공됩니다.",
+        "stars": 32495,
+        "forks": 2480,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:55.660Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:06:59.926Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-22T20:07:52.048Z"
+    },
+    {
+      "id": "cool-retro-term",
+      "name": "Cool Retro Term",
+      "github": "https://github.com/Swordfish90/cool-retro-term",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "cool-retro-term",
+        "name": "Cool Retro Term",
+        "github": "https://github.com/Swordfish90/cool-retro-term",
+        "description": "옛날 브라운관 모니터의 감성을 재현하는 터미널 에뮬레이터입니다.",
+        "longDescription": "Cool Retro Term은 구형 음극선관(CRT) 화면의 독특한 비주얼 효과와 타이핑 느낌을 모사한 터미널입니다. 다양한 색상 테마와 시각 효과를 커스텀하여 레트로한 분위기에서 작업할 수 있습니다.",
+        "category": "개인 도구",
+        "tags": [
+          "터미널",
+          "레트로",
+          "브라운관"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/Swordfish90/cool-retro-term",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [
+          "Qt",
+          "QML"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "배포 페이지에서 AppImage 또는 DMG 파일을 다운로드하거나 패키지 관리자를 통해 설치합니다.",
+          "프로그램을 실행하여 기본 레트로 터미널 화면을 확인합니다.",
+          "우클릭 메뉴를 통해 폰트, 색상, CRT 효과 등을 조정합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "시각적 효과에 중점을 두어 일반 터미널보다 그래픽 자원을 다소 더 소모합니다.",
+        "stars": 26524,
+        "forks": 1040,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:55.961Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:07:00.683Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-22T20:08:04.420Z"
+    },
+    {
+      "id": "eza",
+      "name": "eza",
+      "github": "https://github.com/eza-community/eza",
+      "license": "EUPL-1.2",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "eza",
+        "name": "eza",
+        "github": "https://github.com/eza-community/eza",
+        "description": "Rust로 작성된 빠르고 현대적인 ls 명령어 대체 유틸리티입니다.",
+        "longDescription": "eza는 전통적인 리눅스 ls 명령어를 개선하여 파일 색상 구분, Git 상태 표시, 트리 뷰, 아이콘 지원 등 다채로운 기능을 제공합니다. 가독성이 높고 직관적인 파일 목록 탐색 경험을 선사합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "CLI",
+          "Rust",
+          "파일",
+          "터미널"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "EUPL-1.2",
+        "website": "https://eza.rocks",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [
+          "Rust 패키지 관리자 또는 각 플랫폼 패키지 매니저"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "패키지 관리자(예: Homebrew, Cargo 등)를 통해 eza를 설치합니다.",
+          "터미널에서 eza 또는 eza -l --icons 명령어를 입력합니다.",
+          "색상과 아이콘이 적용된 향상된 파일 목록을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "아이콘 기능을 온전히 활용하려면 Nerd Fonts가 적용된 터미널 폰트가 필요합니다.",
+        "stars": 23632,
+        "forks": 548,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:56.204Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:07:01.364Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "peass-ng",
+      "name": "PEASS-ng",
+      "github": "https://github.com/peass-ng/PEASS-ng",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "peass-ng",
+        "name": "PEASS-ng",
+        "github": "https://github.com/peass-ng/PEASS-ng",
+        "description": "리눅스 및 윈도우 환경에서 권한 상승 취약점을 탐지하기 위한 오프소스 스크립트 모음입니다.",
+        "longDescription": "PEASS-ng(Privilege Escalation Awesome Scripts Suite)는 시스템 보안 감사 및 침투 테스트 시 수동으로 확인하기 번거로운 권한 상승 벡터를 자동으로 스캔해주는 툴입니다. 색상화된 출력과 상세한 보고서를 제공하여 보안 전문가들의 필수 도구로 쓰입니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "권한상승",
+          "Bash",
+          "PowerShell"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://book.hacktricks.xyz",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [
+          "Bash 또는 Windows 환경"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "GitHub 릴리즈 페이지에서 최신 linPEAS 또는 winPEAS 스크립트를 다운로드합니다.",
+          "타겟 시스템으로 스크립트를 안전하게 옮깁니다.",
+          "스크립트를 실행하여 시스템 취약점 및 권한 상승 포인트를 분석합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "반드시 허가된 시스템 및 교육·보안 진단 목적으로만 사용해야 합니다.",
+        "stars": 20709,
+        "forks": 3401,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:56.466Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:07:01.872Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "sshx",
+      "name": "sshx",
+      "github": "https://github.com/ekzhang/sshx",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "netcatty",
+      "name": "Netcatty",
+      "github": "https://github.com/binaricat/Netcatty",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "kaku",
+      "name": "Kaku",
+      "github": "https://github.com/tw93/Kaku",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "github": "https://github.com/git/git",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "git",
+        "name": "Git",
+        "github": "https://github.com/git/git",
+        "description": "분산 버전 관리 시스템으로 소스 코드 추적과 협업을 지원합니다.",
+        "longDescription": "리누스 토발즈가 개발한 고성능 분산 버전 관리 시스템으로, 소프트웨어 개발에서 소스 코드 변경 사항을 추적하고 여러 개발자와 협업할 수 있도록 돕습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Git",
+          "버전관리",
+          "소스코드",
+          "CLI"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/git/git",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소 초기화: git init",
+          "변경 사항 스테이징: git add .",
+          "변경 사항 커밋: git commit -m \"메시지\""
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 63943,
+        "forks": 28576,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:56.700Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:07:02.775Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "fish-shell",
+      "name": "Fish Shell",
+      "github": "https://github.com/fish-shell/fish-shell",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "tool": {
+        "id": "fish-shell",
+        "name": "Fish Shell",
+        "github": "https://github.com/fish-shell/fish-shell",
+        "description": "설정이 필요 없고 자동완성과 구문 강조 기능을 제공하는 사용자 친화적 셸입니다.",
+        "longDescription": "터미널 사용자 경험을 극대화하기 위해 설계된 스마트하고 친숙한 커맨드라인 셸입니다. 별도의 복잡한 설정 없이도 타이핑 중 자동완성, 구문 강조 및 편리한 탭 완성 기능을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Fish",
+          "셸",
+          "터미널",
+          "Rust"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://fishshell.com",
+        "featured": 9,
+        "added": "2026-10-22",
+        "addedAt": "2026-10-22T20:04:02.607Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "패키지 관리자를 통해 설치",
+          "기본 셸을 fish로 변경: chsh -s /usr/local/bin/fish",
+          "fish 실행하여 대화형 사용 시작"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 34335,
+        "forks": 2385,
+        "starsUpdatedAt": "2026-10-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:56.937Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-22T20:07:03.544Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "iterm2-color-schemes",
+      "name": "iTerm2 Color Schemes",
+      "github": "https://github.com/mbadolato/iTerm2-Color-Schemes",
+      "license": "확인 필요",
+      "status": "auto_approved_after_document_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05",
+      "licenseEvidenceCheckedAt": "2026-10-22T20:06:57.169Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [],
+      "documentEvidenceCheckedAt": "2026-10-22T20:07:04.557Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": "MIT",
+        "licenseSource": "LICENSE complete MIT provisions (text match)",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "terminals-are-sexy",
+      "name": "Terminals Are Sexy",
+      "github": "https://github.com/k4m4/terminals-are-sexy",
+      "license": "CC0-1.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "bash-oneliner",
+      "name": "Bash Oneliner",
+      "github": "https://github.com/onceupon/Bash-Oneliner",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "operit",
+      "name": "Operit AI",
+      "github": "https://github.com/AAswordman/Operit",
+      "license": "LGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "wego",
+      "name": "Wego",
+      "github": "https://github.com/schachmat/wego",
+      "license": "ISC",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "htop",
+      "name": "htop",
+      "github": "https://github.com/htop-dev/htop",
+      "license": "GPL-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "no-more-secrets",
+      "name": "No More Secrets",
+      "github": "https://github.com/bartobri/no-more-secrets",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
+    {
+      "id": "rainfrog",
+      "name": "Rainfrog",
+      "github": "https://github.com/achristmascarl/rainfrog",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-22T20:06:54.254Z",
+      "sourceRun": "2026-10-23T05"
+    },
     {
       "id": "openscad",
       "name": "OpenSCAD",
@@ -23662,155 +24483,6 @@
       "recheckedAt": "2026-10-21T13:06:50.807Z"
     },
     {
-      "id": "windterm",
-      "name": "WindTerm",
-      "github": "https://github.com/kingToolbox/WindTerm",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T13:06:34.002Z",
-      "sourceRun": "2026-10-21T22",
-      "tool": {
-        "id": "windterm",
-        "name": "WindTerm",
-        "github": "https://github.com/kingToolbox/WindTerm",
-        "description": "데브옵스 엔지니어를 위한 고성능 전문 SSH/Shell/Telnet/Serial 터미널 클라이언트입니다.",
-        "longDescription": "상용 및 비상용으로 모두 무료로 사용할 수 있으며, 강력한 텍스트 편집 기능과 자동 완성, 다양한 세션 관리 기능을 제공하는 터미널 유틸리티입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "SSH",
-          "터미널",
-          "DevOps"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kingtoolbox.github.io",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T13:04:03.903Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Releases 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
-          "압축을 해제하고 실행 파일을 실행합니다.",
-          "새로운 SSH 또는 Shell 세션을 생성하여 접속합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 32480,
-        "forks": 2479,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T13:06:35.280Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T13:06:40.834Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-21T13:06:51.674Z"
-    },
-    {
-      "id": "cool-retro-term",
-      "name": "cool-retro-term",
-      "github": "https://github.com/Swordfish90/cool-retro-term",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T13:06:34.002Z",
-      "sourceRun": "2026-10-21T22",
-      "tool": {
-        "id": "cool-retro-term",
-        "name": "cool-retro-term",
-        "github": "https://github.com/Swordfish90/cool-retro-term",
-        "description": "고전 브라운관 모니터의 감성을 재현한 멋진 디자인의 터미널 에뮬레이터입니다.",
-        "longDescription": "오래된 음극선관(CRT) 화면의 색상, 글꼴, 스캔라인 효과를 시각적으로 정교하게 모방하여 레트로한 분위기를 제공하는 커스텀 터미널입니다.",
-        "category": "개인 도구",
-        "tags": [
-          "터미널",
-          "레트로",
-          "커스텀"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/Swordfish90/cool-retro-term",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T13:04:03.903Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Releases 페이지에서 AppImage 또는 패키지 관리자를 통해 설치합니다.",
-          "앱을 실행하여 고전 모니터 스타일의 터미널 환경을 이용합니다.",
-          "우클릭 메뉴를 통해 색상, 글꼴, 시각 효과 등을 취향에 맞게 조절합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 26522,
-        "forks": 1040,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T13:06:35.873Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T13:06:42.217Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-21T13:06:56.881Z"
-    },
-    {
       "id": "brave-browser",
       "name": "Brave Browser",
       "github": "https://github.com/brave/brave-browser",
@@ -36465,84 +37137,6 @@
       "sourceRun": "2026-10-21T01"
     },
     {
-      "id": "pi-hole",
-      "name": "Pi-hole",
-      "github": "https://github.com/pi-hole/pi-hole",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T15:10:00.554Z",
-      "sourceRun": "2026-10-21T00",
-      "tool": {
-        "id": "pi-hole",
-        "name": "Pi-hole",
-        "github": "https://github.com/pi-hole/pi-hole",
-        "description": "네트워크 전체의 광고를 차단하는 리눅스 기반 DNS 싱크홀 도구입니다.",
-        "longDescription": "네트워크 장치 전체를 대상으로 클라이언트 소프트웨어 설치 없이 원치 않는 광고와 콘텐츠를 차단합니다. DNS 쿼리를 캐싱하여 브라우징 속도를 향상시키며 가벼운 리눅스 하드웨어에서 원활하게 동작합니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "광고차단",
-          "DNS",
-          "네트워크",
-          "리눅스",
-          "대시보드"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pi-hole.net",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T15:06:19.868Z",
-        "requirements": [
-          "Linux 하드웨어"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "지원되는 리눅스 서버에 접속합니다.",
-          "공식 설치 스크립트를 실행하여 안내에 따라 설정합니다.",
-          "네트워크의 DNS 설정을 Pi-hole IP로 지정합니다.",
-          "웹 대시보드에서 차단 통계를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "네트워크의 주요 DNS 서버로 동작하므로 안정적인 리눅스 환경에 설치하는 것이 좋습니다.",
-        "stars": 61353,
-        "forks": 3327,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T15:10:01.199Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T15:10:10.107Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "The operation was aborted due to timeout"
-    },
-    {
       "id": "v2ray-agent",
       "name": "v2ray-agent",
       "github": "https://github.com/mack-a/v2ray-agent",
@@ -36551,84 +37145,6 @@
       "reasons": [],
       "checkedAt": "2026-10-20T15:10:00.555Z",
       "sourceRun": "2026-10-21T00"
-    },
-    {
-      "id": "peass-ng",
-      "name": "PEASS-ng",
-      "github": "https://github.com/peass-ng/PEASS-ng",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T15:10:00.555Z",
-      "sourceRun": "2026-10-21T00",
-      "tool": {
-        "id": "peass-ng",
-        "name": "PEASS-ng",
-        "github": "https://github.com/peass-ng/PEASS-ng",
-        "description": "시스템 권한 상승 취약점을 탐지하고 분석하기 위한 자동화 스크립트 모음입니다.",
-        "longDescription": "윈도우, 리눅스, 유닉스, 맥OS 환경에서 권한 상승 기회를 찾기 위해 시스템 정보를 수집하고 분석하는 도구입니다. 가독성을 높인 색상 출력과 상세한 감사 결과를 제공합니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "보안",
-          "취약점분석",
-          "권한상승",
-          "Bash",
-          "PowerShell"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://book.hacktricks.xyz",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T15:06:19.868Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "릴리즈 페이지에서 대상 운영체제에 맞는 스크립트나 바이너리를 다운로드합니다.",
-          "대상 시스템으로 파일을 전송합니다.",
-          "스크립트를 실행하여 시스템 구성을 검사합니다.",
-          "출력된 결과를 분석하여 보안 취약점이나 설정 오류를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "보안 진단 및 권한 분석 목적으로만 사용해야 합니다.",
-        "stars": 20701,
-        "forks": 3402,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T15:10:03.232Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T15:10:11.280Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "The operation was aborted due to timeout"
     },
     {
       "id": "shelljs",
@@ -36689,156 +37205,6 @@
       "reasons": [],
       "checkedAt": "2026-10-20T15:10:00.555Z",
       "sourceRun": "2026-10-21T00"
-    },
-    {
-      "id": "git",
-      "name": "Git",
-      "github": "https://github.com/git/git",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T15:10:00.555Z",
-      "sourceRun": "2026-10-21T00",
-      "tool": {
-        "id": "git",
-        "name": "Git",
-        "github": "https://github.com/git/git",
-        "description": "빠르고 확장 가능한 분산 버전 관리 시스템입니다.",
-        "longDescription": "소스 코드 변경 사항을 추적하고 여러 개발자가 협업할 수 있도록 지원하는 업계 표준 분산 버전 관리 시스템입니다. 명령줄 인터페이스를 통해 효율적인 소스 코드 관리 기능을 제공합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "버전관리",
-          "소스코드",
-          "CLI"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/git/git",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T15:06:19.868Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소 초기화: git init",
-          "변경 사항 스테이징: git add .",
-          "커밋 생성: git commit -m \"메시지\""
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 63908,
-        "forks": 28584,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T15:10:03.476Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T15:10:11.982Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-20T15:11:32.296Z"
-    },
-    {
-      "id": "fish-shell",
-      "name": "Fish Shell",
-      "github": "https://github.com/fish-shell/fish-shell",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T15:10:00.555Z",
-      "sourceRun": "2026-10-21T00",
-      "tool": {
-        "id": "fish-shell",
-        "name": "Fish Shell",
-        "github": "https://github.com/fish-shell/fish-shell",
-        "description": "별도의 복잡한 설정 없이 자동완성과 구문 강조 기능을 제공하는 사용자 친화적 셸입니다.",
-        "longDescription": "사용자 편의성에 초점을 맞춘 스마트한 인터랙티브 커맨드라인 셸로, 타이핑 중 자동 제안 및 강력한 탭 완성 기능을 기본 제공합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Fish",
-          "셸",
-          "터미널",
-          "Rust"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://fishshell.com",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T15:06:19.868Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 웹사이트 또는 패키지 매니저를 통해 fish 설치",
-          "기본 셸을 fish로 변경: chsh -s $(which fish)",
-          "터미널에서 fish 실행"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 34332,
-        "forks": 2401,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T15:10:03.985Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T15:10:12.815Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "The operation was aborted due to timeout"
     },
     {
       "id": "kaldi",
@@ -47865,89 +48231,6 @@
       "recheckedAt": "2026-10-19T12:06:55.008Z"
     },
     {
-      "id": "glances",
-      "name": "Glances",
-      "github": "https://github.com/nicolargo/glances",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T12:06:44.710Z",
-      "sourceRun": "2026-10-19T21",
-      "tool": {
-        "id": "glances",
-        "name": "Glances",
-        "github": "https://github.com/nicolargo/glances",
-        "description": "파이썬 기반의 터미널 및 웹 시스템 모니터링 도구",
-        "longDescription": "CPU, 메모리, 디스크 등 다양한 시스템 지표를 색상 기반 UI로 제공하며, RESTful API를 지원하여 원격 모니터링에 용이합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "시스템 모니터링",
-          "Python",
-          "CLI"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://nicolargo.github.io/glances/",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T12:04:03.438Z",
-        "requirements": [
-          "Python 3+"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "PyPI를 통한 설치",
-            "command": "pip install glances",
-            "note": "파이썬 가상환경에서 실행하는 것이 좋습니다."
-          }
-        ],
-        "usageSteps": [
-          "가상환경을 생성하고 활성화합니다.",
-          "pip install glances 명령어로 패키지를 설치합니다.",
-          "터미널에 glances를 입력하여 모니터링 대시보드를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 33806,
-        "forks": 1831,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T12:06:45.815Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T12:06:49.156Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T12:06:55.687Z"
-    },
-    {
       "id": "keep",
       "name": "Keep",
       "github": "https://github.com/keephq/keep",
@@ -51928,150 +52211,6 @@
       "reasons": [],
       "checkedAt": "2026-10-19T02:06:10.749Z",
       "sourceRun": "2026-10-19T11"
-    },
-    {
-      "id": "termux-app",
-      "name": "Termux",
-      "github": "https://github.com/termux/termux-app",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T01:06:04.173Z",
-      "sourceRun": "2026-10-19T10",
-      "tool": {
-        "id": "termux-app",
-        "name": "Termux",
-        "github": "https://github.com/termux/termux-app",
-        "description": "안드로이드용 터미널 에뮬레이터 및 리눅스 환경 앱",
-        "longDescription": "루팅 없이 안드로이드 기기에서 다양한 패키지와 리눅스 도구를 실행할 수 있는 터미널 에뮬레이터입니다. 패키지 관리자를 통해 파이썬, git, vim 등 다양한 개발 도구를 설치하여 모바일 환경에서 활용할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "안드로이드",
-          "터미널",
-          "리눅스"
-        ],
-        "platforms": [],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://f-droid.org/en/packages/com.termux",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T01:04:01.225Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "F-Droid 또는 공식 경로를 통해 Termux 앱을 설치합니다.",
-          "앱을 실행한 뒤 패키지 목록을 업데이트합니다.",
-          "pkg install 명령어로 필요한 개발 도구나 유틸리티를 설치합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 62922,
-        "forks": 7941,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T01:06:04.690Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T01:06:06.681Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 2,
-      "recheckedAt": "2026-10-19T02:06:17.302Z"
-    },
-    {
-      "id": "eza",
-      "name": "eza",
-      "github": "https://github.com/eza-community/eza",
-      "license": "EUPL-1.2",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-19T01:06:04.173Z",
-      "sourceRun": "2026-10-19T10",
-      "tool": {
-        "id": "eza",
-        "name": "eza",
-        "github": "https://github.com/eza-community/eza",
-        "description": "기존 ls 명령어를 대체하는 현대적이고 컬러풀한 터미널 파일 목록 조회 도구입니다.",
-        "longDescription": "Rust로 작성되어 빠른 속도를 자랑하며, 파일 아이콘 지원, Git 상태 표시, 트리 구조 보기 등 다양한 시각적 편의 기능을 제공합니다. 기존 ls 명령어와 유사하게 사용할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CLI",
-          "파일관리",
-          "Rust"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "EUPL-1.2",
-        "website": "https://eza.rocks",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T01:04:01.225Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "패키지 관리자나 Cargo를 통해 eza를 설치합니다.",
-          "터미널에서 eza 명령어를 입력하여 현재 디렉토리의 파일을 확인합니다.",
-          "옵션을 추가하여 상세 정보나 트리 구조를 출력합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 23598,
-        "forks": 546,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T01:06:05.424Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T01:06:08.873Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T01:06:15.035Z"
     },
     {
       "id": "ttyd",
