@@ -1,5 +1,584 @@
 [
   {
+    "id": "ackee",
+    "name": "Ackee",
+    "github": "https://github.com/electerious/Ackee",
+    "description": "개인 보호를 중시하며 자체 서버에 구축할 수 있는 Node.js 기반의 웹사이트 분석 도구입니다.",
+    "longDescription": "구글 애널리틱스의 대안으로 설계되었으며, 최소한의 인터페이스로 웹사이트 트래픽과 방문자 통계를 개인정보 침해 없이 안전하게 제공합니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "웹분석",
+      "개인정보보호",
+      "Node.js",
+      "대시보드",
+      "자체구축"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ackee.electerious.com",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "Node.js",
+      "MongoDB"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 패키지 설치",
+        "command": "git clone https://github.com/electerious/Ackee.git && cd Ackee && npm install",
+        "note": "소스 코드를 클론하고 의존성 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "MongoDB 데이터베이스를 준비하고 연결 환경 변수를 설정합니다.",
+      "리포지토리 디렉터리에서 의존성을 설치하고 애플리케이션을 빌드합니다.",
+      "서버를 실행하고 관리자 계정을 구성합니다.",
+      "추적 스크립트를 대상 웹사이트에 삽입하여 방문자 통계를 수집합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4718,
+    "forks": 388,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "openmeter",
+    "name": "OpenMeter",
+    "github": "https://github.com/openmeterio/openmeter",
+    "description": "AI, API 및 데브옵스 제품을 위한 실시간 사용량 측정 및 과금(Metering and Billing) 인프라 오픈소스입니다.",
+    "longDescription": "대규모 사용량벤치마크와 이벤트를 실시간으로 수집 및 집계하여 사용량 기반 요금제(Usage-based billing)와 크레딧 시스템을 구축할 수 있도록 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "과금",
+      "미터링",
+      "API",
+      "FinOps",
+      "Golang"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://openmeter.io",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "Docker",
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "TypeScript SDK 설치",
+        "command": "npm install @openmeter/sdk tsx",
+        "note": "Node.js 환경에서 OpenMeter TypeScript SDK를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker를 사용하여 OpenMeter 및 관련 백엔드 서비스를 실행합니다.",
+      "클라이언트 애플리케이션에서 사용량 이벤트를 API로 전송합니다.",
+      "TypeScript 또는 API를 통해 집계된 사용량 데이터를 조회합니다.",
+      "결제 시스템과 연동하여 사용량 기반 청구를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2401,
+    "forks": 229,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "quary",
+    "name": "Quary",
+    "github": "https://github.com/quarylabs/quary",
+    "description": "엔지니어를 위한 오픈소스 비즈니스 인텔리전스(BI) 및 데이터 모델링 도구입니다.",
+    "longDescription": "VS Code 확장 프로그램과 Rust 기반 CLI를 결합하여 코드로 관리하는 데이터 분석 환경을 제공하며, ELT 및 리포트 작성 워크플로우를 간소화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "BI",
+      "데이터모델링",
+      "ELT",
+      "VSCode",
+      "Rust"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.quary.dev",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "Homebrew (Mac)",
+      "VS Code"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew CLI 설치",
+        "command": "brew install quarylabs/quary/quary",
+        "note": "macOS에서 Homebrew를 통해 Quary CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "VS Code 마켓플레이스에서 Quary 확장을 설치합니다.",
+      "CLI를 이용해 로컬 프로젝트 환경을 초기화합니다.",
+      "SQL 및 코드를 작성하여 데이터 모델과 파이프라인을 정의합니다.",
+      "대시보드와 리포트를 생성하여 팀과 인사이트를 공유합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2385,
+    "forks": 58,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "talivia",
+    "name": "Talivia",
+    "github": "https://github.com/talivia-group/talivia",
+    "description": "웹 분석, 세션 재생, 수익 기여도 분석을 제공하는 창업자 및 개발자용 오픈소스 수익 중심 분석 플랫폼입니다.",
+    "longDescription": "Stripe, LemonSqueezy 등의 결제 연동 데이터와 웹 트래픽을 결합하여, 유저의 행동이 실제 매출로 이어지는 과정을 추적할 수 있는 자체 구축형 솔루션입니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "매출분석",
+      "세션재생",
+      "웹분석",
+      "Stripe",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://talivia.com",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose",
+      "PostgreSQL"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 실행",
+        "command": "git clone https://github.com/talivia-group/talivia.git && cd talivia && docker compose up -d",
+        "note": "저장소를 복제한 뒤 Docker Compose로 서비스를 시작합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 환경 설정 파일을 구성합니다.",
+      "Docker Compose를 사용하여 데이터베이스와 애플리케이션 컨테이너를 실행합니다.",
+      "웹 대시보드에 접속하여 추적 스크립트를 웹사이트에 연동합니다.",
+      "결제 플랫폼 연동을 추가하여 수익 기여도와 세션 기록을 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2372,
+    "forks": 133,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "lemo-opuscar",
+    "name": "Lemo-Opuscar",
+    "github": "https://github.com/lemomo-ai/lemo-opuscar",
+    "description": "Claude 코딩 에이전트를 활용해 코드로 영화 스타일과 영상을 제작하는 툴박스입니다.",
+    "longDescription": "별도의 복잡한 영상 생성 모델 없이 59가지의 다양한 필름 스타일 프롬프트와 에이전트 스킬을 이용해 코드 기반으로 완성도 높은 숏폼 영상을 제작할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "Claude",
+      "영상 제작",
+      "애니메이션",
+      "코드 기반"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://lemomo-ai.github.io/lemo-opuscar/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "Node.js",
+      "Claude Code 환경"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "클로드 플러그인 추가",
+        "command": "claude plugin marketplace add lemomo-ai/lemo-opuscar",
+        "note": "마켓플레이스에 레포지토리를 등록합니다."
+      },
+      {
+        "title": "플러그인 설치",
+        "command": "claude plugin install lemo-opuscar@lemolab",
+        "note": "에이전트 스킬을 로컬에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 플러그인 명령어를 실행하여 설치합니다.",
+      "원하는 작업 폴더에서 스타일 가이드와 도구를 로드합니다.",
+      "에이전트에게 원하는 스토리와 스타일을 지시하여 영상을 생성합니다."
+    ],
+    "examplePrompt": "59번 느와르 스타일을 적용하여 도시를 배경으로 한 30초짜리 단편 영화 코드를 만들어줘",
+    "usageNote": "Claude Opus 5.5 모델에 최적화되어 있습니다.",
+    "stars": 6013,
+    "forks": 676,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "rotki",
+    "name": "Rotki",
+    "github": "https://github.com/rotki/rotki",
+    "description": "개인 정보 보호를 최우선으로 하는 오픈소스 자가 호스팅 자산 포트폴리오 관리 및 회계 툴입니다.",
+    "longDescription": "암호화폐 포트폴리오 추적, 분석, 회계 및 자산 관리를 중앙 서버에 의존하지 않고 안전하게 로컬 환경에서 수행할 수 있습니다.",
+    "category": "생산성",
+    "tags": [
+      "블록체인",
+      "암호화폐",
+      "포트폴리오",
+      "회계",
+      "보안"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://rotki.com",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "Docker 또는 Python 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -d -p 0.0.0.0:4220:4220 rotki/rotki",
+        "note": "도커를 통해 자가 호스팅 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 또는 공식 패키지를 통해 애플리케이션을 실행합니다.",
+      "웹 인터페이스에 접속하여 계정을 생성합니다.",
+      "보유 중인 블록체인 지갑 주소나 거래소 계정을 연동하여 자산을 추적합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "자체 서버에서 구동되므로 금융 데이터의 프라이버시가 보장됩니다.",
+    "stars": 4054,
+    "forks": 777,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "angle-grinder",
+    "name": "Angle Grinder",
+    "github": "https://github.com/rcoh/angle-grinder",
+    "description": "명령어 환경에서 로그 파일을 빠르고 정교하게 분석하고 집계할 수 있는 CLI 도구입니다.",
+    "longDescription": "복잡한 로그 데이터 구조를 파싱하고 합산, 평균, 최소/최대값, 백분위수 계산 등을 터미널 상에서 실시간으로 처리할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "Rust",
+      "로그 분석",
+      "데이터 처리",
+      "터미널"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/rcoh/angle-grinder",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "소스 빌드 또는 패키지 관리자를 통해 바이너리를 설치합니다.",
+      "로그 파일을 명령어 입력과 함께 실행합니다.",
+      "쿼리 문법을 사용하여 원하는 형태로 데이터를 필터링하고 집계합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "초당 100만 행 이상의 고속 로그 처리가 가능합니다.",
+    "stars": 3765,
+    "forks": 76,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "roapi",
+    "name": "ROAPI",
+    "github": "https://github.com/roapi/roapi",
+    "description": "코드 작성 없이 정적 데이터셋을 대상으로 읽기 전용 REST 및 GraphQL API를 자동으로 생성해주는 도구입니다.",
+    "longDescription": "Apache Arrow와 Datafusion 기반으로 작동하며, CSV, Parquet, JSON 등 다양한 형식의 데이터 파일로부터 즉시 고성능 쿼리 API를 구축할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API",
+      "Rust",
+      "SQL",
+      "데이터셋",
+      "REST API"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://roapi.github.io/docs",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install roapi",
+        "note": "macOS 환경에서 홈브루를 통해 설치합니다."
+      },
+      {
+        "title": "Pip 설치",
+        "command": "pip install roapi",
+        "note": "파이썬 환경에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "ROAPI를 설치하고 데이터 파일 경로를 지정합니다.",
+      "서버를 구동하여 자동으로 생성된 SQL/REST 엔드포인트를 확인합니다.",
+      "API를 호출하여 데이터를 조회합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "변경이 적은 대용량 정적 데이터 분석에 적합합니다.",
+    "stars": 3434,
+    "forks": 210,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "ossinsight",
+    "name": "OSSInsight",
+    "github": "https://github.com/pingcap/ossinsight",
+    "description": "10억 건 이상의 깃허브 이벤트 데이터를 분석하여 오픈소스 생태계 트렌드와 인사이트를 제공하는 플랫폼입니다.",
+    "longDescription": "자연어 질의(Text2SQL) 기능을 통해 오픈소스 트렌드, AI 에이전트, 개발 도구 등의 생태계 동향을 실시간으로 탐색할 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "GitHub",
+      "오픈소스",
+      "데이터 분석",
+      "AI",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://ossinsight.io/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "pnpm install",
+        "note": "프로젝트에 필요한 패키지를 설치합니다."
+      },
+      {
+        "title": "개발 서버 실행",
+        "command": "pnpm dev",
+        "note": "웹 애플리케이션을 로컬에 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "개발 서버를 실행하여 웹 인터페이스에 접속합니다.",
+      "검색창과 자연어를 통해 오픈소스 통계 데이터를 조회합니다."
+    ],
+    "examplePrompt": "가장 빠르게 성장하는 AI 에이전트 관련 오픈소스 순위를 보여줘",
+    "usageNote": "",
+    "stars": 2518,
+    "forks": 458,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "counterscale",
+    "name": "Counterscale",
+    "github": "https://github.com/benvinegar/counterscale",
+    "description": "클라우드프레어(Cloudflare) 환경에서 자가 호스팅하여 비용 부담 없이 사용할 수 있는 웹 분석 도구입니다.",
+    "longDescription": "웹사이트 방문자 통계와 페이지뷰를 가볍게 추적할 수 있으며, 클라우드프레어 인프라를 활용해 대규모 트래픽에도 저렴하고 안정적으로 운영할 수 있습니다.",
+    "category": "생산성",
+    "tags": [
+      "Cloudflare",
+      "웹 분석",
+      "통계",
+      "대시보드",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://counterscale.dev",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "Node.js v20 이상",
+      "Cloudflare 계정"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 프로젝트 의존성을 설치합니다.",
+      "Cloudflare Workers 및 R2 스토리지를 구성합니다.",
+      "추적 스크립트를 웹사이트에 삽입하여 방문자 데이터를 수집합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "클라우드프레어 무료 티어에서도 운영 가능하도록 설계되었습니다.",
+    "stars": 2168,
+    "forks": 135,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "duckdb-wasm",
+    "name": "DuckDB-Wasm",
+    "github": "https://github.com/duckdb/duckdb-wasm",
+    "description": "웹어셈블리(WebAssembly)를 통해 브라우저 내부에서 직접 실행되는 인프로세스 SQL OLAP 데이터베이스입니다.",
+    "longDescription": "브라우저 환경에서 Arrow, Parquet, CSV, JSON 등의 파일을 고성능으로 직접 쿼리할 수 있으며, 클라이언트 사이드 데이터 분석에 최적화되어 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "Wasm",
+      "DuckDB",
+      "SQL",
+      "데이터베이스",
+      "브라우저"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://shell.duckdb.org",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "웹 브라우저 또는 Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 DuckDB-Wasm 패키지를 임포트합니다.",
+      "웹어셈블리 모듈을 초기화합니다.",
+      "SQL 문을 작성하여 브라우저 메모리 내 데이터를 조회합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "서버 통신 없이 브라우저 내에서 대용량 데이터 분석이 가능합니다.",
+    "stars": 2147,
+    "forks": 236,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "pg-mooncake",
+    "name": "pg_mooncake",
+    "github": "https://github.com/Mooncake-Labs/pg_mooncake",
+    "description": "포스트그레스(Postgres) 테이블에 대해 실시간 분석 쿼리를 수행할 수 있게 해주는 컬럼스토어 확장 기능입니다.",
+    "longDescription": "Apache Iceberg 포맷을 기반으로 Postgres 테이블을 컬럼스토어로 미러링하여 스트리밍 및 배치 작업에서 초 단위 미만의 빠른 분석 쿼리 성능을 제공합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "PostgreSQL",
+      "데이터베이스",
+      "분석",
+      "Rust",
+      "Iceberg"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://mooncake.dev/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T15:04:00.440Z",
+    "requirements": [
+      "PostgreSQL",
+      "Docker (권장)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 실행",
+        "command": "docker run --name mooncake --rm -e POSTGRES_PASSWORD=password mooncakelabs/pg_mooncake",
+        "note": "확장 프로그램이 사전 설치된 도커 이미지를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 이미지 또는 소스를 통해 PostgreSQL을 실행합니다.",
+      "psql 클라이언트를 통해 데이터베이스에 접속합니다.",
+      "확장 기능을 활성화하고 컬럼스토어 테이블을 생성하여 쿼리를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실시간 대시보드 및 분석용 데이터베이스 구축에 적합합니다.",
+    "stars": 2009,
+    "forks": 75,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
     "id": "carla",
     "name": "CARLA",
     "github": "https://github.com/carla-simulator/carla",
