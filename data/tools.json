@@ -1,5 +1,533 @@
 [
   {
+    "id": "subtrackr",
+    "name": "SubTrackr",
+    "github": "https://github.com/bscott/subtrackr",
+    "description": "Go와 HTMX로 구축된 자체 호스팅 구독 서비스 관리 애플리케이션입니다.",
+    "longDescription": "구독 중인 서비스를 추적하고 지출을 시각화하며 갱신 알림을 제공합니다. 다양한 테마와 선택적 로그인 인증 기능을 지원합니다.",
+    "category": "생산성",
+    "tags": [
+      "구독관리",
+      "Go",
+      "HTMX",
+      "자체호스팅",
+      "재정관리"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://subtrackr.xyz/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 배포",
+        "command": "docker-compose up -d",
+        "note": "도커 콤포즈 파일을 생성하고 컨테이너를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버에 Docker 환경을 구성합니다.",
+      "`docker-compose.yml` 파일을 작성하고 서비스를 실행합니다.",
+      "웹 UI에 접속하여 구독 중인 서비스와 결제 주기를 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "개인 및 홈랩 환경에서 구독료 지출을 한눈에 파악하기에 적합합니다.",
+    "stars": 475,
+    "forks": 27,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "dashwise",
+    "name": "Dashwise",
+    "github": "https://github.com/andreasmolnardev/dashwise",
+    "description": "GUI 설정을 지원하는 올인원 홈랩 통합 대시보드입니다.",
+    "longDescription": "복잡한 설정 파일 수정 없이 웹 UI를 통해 직접 편집할 수 있으며, 인증 기능과 다양한 홈랩 통합 기능을 제공하는 모던한 대시보드 솔루션입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "대시보드",
+      "홈랩",
+      "TypeScript",
+      "Docker",
+      "자체호스팅"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://dashwise-next.vercel.app/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 실행",
+        "command": "docker compose up -d",
+        "note": "프로덕션 배포용 설정 파일을 사용하여 컨테이너를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker Compose로 Dashwise를 배포합니다.",
+      "웹 브라우저를 통해 대시보드에 접속합니다.",
+      "GUI 편집기를 사용하여 북마크 및 홈랩 서비스 위젯을 배치합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "PocketBase 백엔드를 포함한 통합 컨테이너 방식으로 쉽게 배포할 수 있습니다.",
+    "stars": 462,
+    "forks": 24,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "ctroadmap",
+    "name": "CTRoadmap",
+    "github": "https://github.com/NoobCity99/CTRoadmap",
+    "description": "홈랩 서버 네트워크 구성 및 기능을 문서화하고 시각화하는 자체 호스팅 도구입니다.",
+    "longDescription": "노드, 서비스, 스토리지, 스크립트, 설정 간의 관계를 도식화하여 파워포인트 등을 대체할 수 있는 독립형 로컬 우선 문서화 웹 애플리케이션입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "네트워크다이어그램",
+      "문서화",
+      "Docker",
+      "TypeScript",
+      "자체호스팅"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/NoobCity99/CTRoadmap",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose v2",
+      "Bash"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "표준 Linux/Docker 설치",
+        "command": "curl -sSL ... | bash",
+        "note": "제공되는 설치 스크립트를 사용하여 도커 및 관련 컴포넌트를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "제공된 설치 스크립트를 실행하여 애플리케이션을 설치합니다.",
+      "웹 브라우저를 통해 포트 8088로 접속합니다.",
+      "홈랩의 서버와 서비스 간의 관계를 노드 형태로 시각화하여 기록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "시스템을 직접 모니터링하거나 제어하지 않는 순수 문서화 전용 도구입니다.",
+    "stars": 370,
+    "forks": 15,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "rallyup",
+    "name": "Rallyup",
+    "github": "https://github.com/darwindarak/rallyup",
+    "description": "소규모 비즈니스 및 홈랩을 위한 경량 Wake-On-LAN(WOL) 스케줄러 및 의존성 관리 도구입니다.",
+    "longDescription": "정전 등의 상황 이후 방화벽, 스토리지, 하이퍼바이저 등의 인프라 서비스가 올바른 순서로 켜질 수 있도록 의존성을 관리하고 WOL 신호를 보내는 Rust 기반 CLI 도구입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "WOL",
+      "자동화",
+      "Rust",
+      "CLI",
+      "홈랩"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/darwindarak/rallyup",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "Rust 툴체인 (소스 빌드 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설정 파일과 함께 실행",
+        "command": "rallyup servers.yaml",
+        "note": "서버 의존성이 정의된 YAML 파일을 인자로 전달하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버의 MAC 주소와 부팅 순서 의존성이 담긴 `servers.yaml` 파일을 작성합니다.",
+      "라즈베리 파이 등 상시 전원이 켜진 저전력 기기에 도구를 배치합니다.",
+      "시스템 부팅 시 스크립트를 통해 인프라를 순차적으로 깨웁니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "인프라 장비들이 Wake-On-LAN 기능을 지원해야 정상 작동합니다.",
+    "stars": 362,
+    "forks": 10,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "fnos-apps",
+    "name": "fnos-apps",
+    "github": "https://github.com/conversun/fnos-apps",
+    "description": "飞牛 fnOS NAS 서드파티 응용 프로그램 저장소로 175개 이상의 자매주최 앱 .fpk 설치 패키지를 제공합니다.",
+    "longDescription": "飞牛 fnOS NAS를 위한 서드파티 앱 패키지 저장소이며, Plex, Emby, Jellyfin, qBittorrent, Immich 등을 .fpk 패키지로 제공합니다. 상위 저장소의 버전을 매일 자동으로 동기화하여 최신 상태를 유지합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "NAS",
+      "자매주최",
+      "미디어 서버",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/conversun/fnos-apps",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "fnOS 앱 센터를 설치합니다.",
+      "제공되는 앱 목록에서 필요한 패키지를 선택합니다.",
+      "원클릭으로 설치 및 업데이트를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 857,
+    "forks": 82,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "clouds-against-humanity",
+    "name": "Clouds-Against-Humanity",
+    "github": "https://github.com/ChiefGyk3D/Clouds-Against-Humanity",
+    "description": "제로 트러스트, DevSecOps, IaC, 클라우드 아키텍처를 학습할 수 있는 오픈소스 클라우드 보안 홈랩 환경입니다.",
+    "longDescription": "OpenTofu, Spacelift, Doppler, Twingate를 활용하여 퍼블릭 인바운드 포트 없이 안전하게 구성된 디지털오션 기준 환경입니다. 클라우드 보안 학습을 위한 레퍼런스 아키텍처를 제공합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "클라우드 보안",
+      "DevSecOps",
+      "Terraform",
+      "Zero Trust"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/ChiefGyk3D/Clouds-Against-Humanity",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "OpenTofu 1.8+",
+      "Python 3"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 복제하고 OpenTofu 및 필요한 도구를 설치합니다.",
+      "비밀 정보 관리를 위해 Doppler와 연동합니다.",
+      "비용 검사 및 설정 문서 검증 스크립트를 실행하여 상태를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 498,
+    "forks": 24,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "pve-microvm",
+    "name": "pve-microvm",
+    "github": "https://github.com/rcarmo/pve-microvm",
+    "description": "Proxmox VE에서 200ms 이하 부팅과 KVM 격리를 제공하는 Firecracker 유사 마이크로 VM 패키지입니다.",
+    "longDescription": "Proxmox VE에 QEMU microvm 머신 타입 지원을 추가하는 데비안 패키지입니다. OCI 컨테이너 이미지, Firecracker 루트fs 이미지, 유니커널 등을 가볍고 안전하게 실행할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Proxmox",
+      "MicroVM",
+      "가상화",
+      "샌드박싱"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://rcarmo.github.io/projects/pve-microvm",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "Proxmox VE"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 가이드를 참고하여 pve-microvm 패키지를 Proxmox 노드에 설치합니다.",
+      "웹 UI 또는 CLI를 통해 마이크로 VM 템플릿과 게스트 OS를 구성합니다.",
+      "가벼운 가상 머신 인스턴스를 생성하고 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실험적인 프로젝트이므로 프로덕션 환경 사용 시 주의가 필요합니다.",
+    "stars": 439,
+    "forks": 21,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "boxbox",
+    "name": "BoxBox",
+    "github": "https://github.com/jR4dh3y/BoxBox",
+    "description": "홈랩 및 NAS 서버를 위한 모던한 셀프 호스팅 웹 기반 파일 관리자입니다.",
+    "longDescription": "SvelteKit과 Go로 제작된 홈랩 전용 파일 관리자입니다. 마운트된 Linux 경로 탐색, 대용량 파일 및 폴더 업로드, 미리보기, 코드 편집, 검색, 공유 링크 기능을 브라우저 UI로 제공합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "파일 관리자",
+      "NAS",
+      "Svelte",
+      "Go"
+    ],
+    "platforms": [
+      "Web",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://boxbox.radhey.dev",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 확인하고 도커 또는 소스 코드를 통해 빌드합니다.",
+      "관리할 Linux 파일 경로를 마운트합니다.",
+      "웹 브라우저로 접속하여 파일을 관리하고 공유 링크를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 346,
+    "forks": 8,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "sigwood",
+    "name": "sigwood",
+    "github": "https://github.com/helixmap/sigwood",
+    "description": "로그 파일(Zeek, Pi-hole, syslog, CloudTrail 등)을 대상으로 로컬 우선 위협 탐지를 수행하는 명령줄 도구입니다.",
+    "longDescription": "그rep과 SIEM 사이의 간극을 메우는 로컬 중심의 위협 사냥 도구입니다. 비콘 현상, 의심스러운 DNS, 포트 스캔 등의 이상 징후를 탐지하고 각 탐지 규칙의 공격 기법 이름을 명시합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "로그 분석",
+      "CLI",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pypi.org/project/sigwood/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "Python 3.11+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pipx 설치",
+        "command": "pipx install sigwood",
+        "note": "pipx를 사용하여 전역 명령어로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 3.11 이상 환경에서 pipx 또는 pip를 통해 sigwood를 설치합니다.",
+      "로그 디렉토리나 개별 로그 파일을 지정하여 명령어를 실행합니다.",
+      "탐지된 보안 위협 및 이상 징후 리포트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 322,
+    "forks": 14,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "compose-farm",
+    "name": "compose-farm",
+    "github": "https://github.com/basnijholt/compose-farm",
+    "description": "SSH를 통해 여러 호스트에서 Docker Compose 명령을 실행할 수 있는 미니멀 CLI 도구입니다.",
+    "longDescription": "에이전트 없이 멀티 호스트 Docker Compose 관리를 지원하는 CLI 및 웹 UI 도구입니다. 설정 파일이 일반 폴더 형태로 유지되어 버전 관리가 용이하고 락인이 없습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Docker",
+      "CLI",
+      "오케스트레이션",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://compose-farm.nijho.lt",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "Python",
+      "SSH"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI 설치",
+        "command": "pip install compose-farm",
+        "note": "파이썬 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 이용해 compose-farm을 설치합니다.",
+      "멀티 호스트 및 스택 구성을 위한 설정 파일을 작성합니다.",
+      "cf apply 명령을 실행하여 원격 호스트에 설정을 동기화하고 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 318,
+    "forks": 3,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "tsbridge",
+    "name": "tsbridge",
+    "github": "https://github.com/jtdowney/tsbridge",
+    "description": "Tailscale tsnet 라이브러리를 기반으로 Tailnet 내에서 여러 HTTPS 서비스를 노출하는 가벼운 프록시 관리자입니다.",
+    "longDescription": "Tailscale 네트워크 내부에서 다수의 백엔드 서비스를 간편하게 프록시할 수 있도록 지원합니다. 설정 파일이나 도커 컨테이너 레이블을 통해 손쉽게 서비스를 추가할 수 있습니다.",
+    "category": "네트워크",
+    "tags": [
+      "Tailscale",
+      "프록시",
+      "네트워킹",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/jtdowney/tsbridge",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [
+      "Tailscale"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 설치",
+        "command": "go install github.com/jtdowney/tsbridge/cmd/tsbridge@latest",
+        "note": "Go 언어 환경에서 직접 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Tailscale OAuth 자격 증명을 획득합니다.",
+      "tsbridge.toml 설정 파일을 작성하거나 도커 레이블을 구성합니다.",
+      "tsbridge를 실행하여 Tailnet 내 HTTPS 서비스를 노출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 317,
+    "forks": 16,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "homebutler",
+    "name": "homebutler",
+    "github": "https://github.com/Higangssh/homebutler",
+    "description": "서버의 변경 사항 중 의미 있는 내용만 감지하여 알려주는 단일 Go 바이너리 모니터링 도구입니다.",
+    "longDescription": "데이터베이스나 감시 대상 머신에 상주하는 에이전트 없이 동작하며, 이전 서버 상태를 기억하고 변경된 부분만 골라서 리포트합니다. MCP 서버 기능이 내장되어 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "모니터링",
+      "CLI",
+      "Go",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://homebutler.dev",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T21:04:03.095Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install Higangssh/homebutler/homebutler",
+        "note": "맥OS 및 리눅스 환경에서 홈브루를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Homebrew 또는 원라인 인스톨 스크립트로 homebutler를 설치합니다.",
+      "homebutler report 명령을 실행하여 서버 상태 스냅샷을 비교합니다.",
+      "변경 사항 리포트를 확인하거나 AI 에이전트 및 MCP와 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 305,
+    "forks": 22,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
     "id": "bindsnet",
     "name": "BindsNET",
     "github": "https://github.com/BindsNET/bindsnet",
