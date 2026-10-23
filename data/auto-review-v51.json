@@ -1,7 +1,839 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23T05:06:15.304Z",
+  "updatedAt": "2026-10-23T06:06:25.344Z",
   "items": [
+    {
+      "id": "docker-practice",
+      "name": "docker_practice",
+      "github": "https://github.com/yeasy/docker_practice",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "docker-practice",
+        "name": "docker_practice",
+        "github": "https://github.com/yeasy/docker_practice",
+        "description": "실제 사례와 DevOps 실습을 통해 Docker 및 컨테이너 기술을 학습할 수 있는 가이드북입니다.",
+        "longDescription": "Docker의 기초부터 실무 활용까지 다루는 입문서로, 최신 컨테이너 기술과 오케스트레이션 개념을 예제와 함께 제공합니다. 개발자와 시스템 엔지니어가 컨테이너 환경을 구축하고 모범 사례를 익히기에 유용합니다.",
+        "category": "교육·학습",
+        "tags": [
+          "Docker",
+          "DevOps",
+          "컨테이너"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://yeasy.gitbook.io/docker_practice/",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [
+          "mdPress"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "mdPress 설치 및 실행",
+            "command": "brew tap yeasy/tap && brew install mdpress && mdpress serve",
+            "note": "로컬 환경에서 문서를 빌드하고 미리보기 실행"
+          }
+        ],
+        "usageSteps": [
+          "온라인 또는 로컬 환경에서 도서 목차를 확인합니다.",
+          "원하는 Docker 및 컨테이너 실습 챕터를 선택합니다.",
+          "제공되는 명령어와 예제를 따라 실습을 진행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 26322,
+        "forks": 5775,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:13.086Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:16.284Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T06:06:22.386Z"
+    },
+    {
+      "id": "osx-proxmox",
+      "name": "OSX-PROXMOX",
+      "github": "https://github.com/luchina-gabriel/OSX-PROXMOX",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "osx-proxmox",
+        "name": "OSX-PROXMOX",
+        "github": "https://github.com/luchina-gabriel/OSX-PROXMOX",
+        "description": "Proxmox VE에서 macOS 설치를 지원하는 도구",
+        "longDescription": "Proxmox 가상화 환경에서 macOS를 간편하게 설치하고 구동할 수 있도록 돕는 스크립트 모음입니다. 복잡한 설정 과정을 자동화하여 가상 머신에 macOS를 빠르게 구축할 수 있습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "macOS",
+          "Proxmox",
+          "가상화"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://osx-proxmox.com",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [
+          "Proxmox VE 7.X ~ 9.X"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "설치 스크립트 실행",
+            "command": "/bin/bash -c \"$(curl -fsSL https://install.osx-proxmox.com)\"",
+            "note": "Proxmox 웹 콘솔의 쉘 환경에서 실행"
+          }
+        ],
+        "usageSteps": [
+          "Proxmox VE를 깨끗한 상태로 준비합니다.",
+          "Proxmox 웹 콘솔의 쉘에 접속합니다.",
+          "제공된 설치 명령어를 복사하여 붙여넣고 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7850,
+        "forks": 636,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:13.446Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:17.065Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T06:06:22.922Z"
+    },
+    {
+      "id": "unikraft",
+      "name": "unikraft",
+      "github": "https://github.com/unikraft/unikraft",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "unikraft",
+        "name": "unikraft",
+        "github": "https://github.com/unikraft/unikraft",
+        "description": "최고 수준의 성능과 보안을 제공하는 차세대 클라우드 네이티브 유니커널 개발 키트",
+        "longDescription": "애플리케이션 구동에 필요한 최소한의 운영체제 구성요소만 골라 가벼운 가상 머신 이미지로 빌드해주는 유니커널 프레임워크입니다. 클라우드 환경에서 빠른 부팅 시간과 뛰어난 자원 효율성을 제공합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "유니커널",
+          "클라우드네이티브",
+          "가상화"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://unikraft.org",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [
+          "KraftKit CLI"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "KraftKit 설치",
+            "command": "curl -sSfL https://get.kraftkit.sh | sh",
+            "note": "macOS, Linux, Windows 환경 공통 설치 명령어"
+          }
+        ],
+        "usageSteps": [
+          "KraftKit CLI를 설치합니다.",
+          "kraft run 명령어로 가벼운 유니커널 가상 머신을 실행합니다.",
+          "kraft ps 명령어로 실행 중인 인스턴스를 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3907,
+        "forks": 1528,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:13.753Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:18.035Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T06:06:23.638Z"
+    },
+    {
+      "id": "try-omarchy",
+      "name": "try-omarchy",
+      "github": "https://github.com/omacom/try-omarchy",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "proxcenter-ui",
+      "name": "proxcenter-ui",
+      "github": "https://github.com/adminsyspro/proxcenter-ui",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "proxcenter-ui",
+        "name": "proxcenter-ui",
+        "github": "https://github.com/adminsyspro/proxcenter-ui",
+        "description": "Proxmox VE 환경을 위한 VMware vCenter 대안 통합 관리 웹 인터페이스",
+        "longDescription": "Proxmox 가상 환경과 Proxmox Backup Server 인스턴스를 하나의 대시보드에서 모니터링하고 관리할 수 있는 엔터프라이즈급 플랫폼입니다. 고가용성, 부하 분산, 클러스터 간 마이그레이션 기능을 직관적인 웹 UI로 제공합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Proxmox",
+          "시스템 관리",
+          "가상화"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.proxcenter.io",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [
+          "Docker Engine 24+",
+          "Docker Compose v2"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "커뮤니티 에디션 설치",
+            "command": "curl -fsSL https://proxcenter.io/install/community | sudo bash",
+            "note": "Docker 및 필수 구성요소를 포함하여 자동 설치"
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 실행하여 Docker 기반의 스택을 배포합니다.",
+          "브라우저를 통해 포트 3000으로 접속합니다.",
+          "관리자 계정을 생성하고 Proxmox VE 노드를 연동합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1733,
+        "forks": 114,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:14.017Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:18.476Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T06:06:24.545Z"
+    },
+    {
+      "id": "xen-orchestra",
+      "name": "xen-orchestra",
+      "github": "https://github.com/vatesfr/xen-orchestra",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "xen-orchestra",
+        "name": "xen-orchestra",
+        "github": "https://github.com/vatesfr/xen-orchestra",
+        "description": "XCP-ng 및 XenServer 인프라 통합 관리 솔루션",
+        "longDescription": "웹 UI와 CLI를 통해 에이전트 없이 가상화 인프라를 중앙에서 제어하고 백업할 수 있는 플랫폼입니다. 가상 머신 관리 외에도 클라우드화 기능 및 Terraform 연동을 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "가상화",
+          "백업",
+          "인프라관리"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://xen-orchestra.com",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [
+          "XCP-ng 또는 XenServer 호스트"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "배포 양식 이용",
+            "command": "Visit Vates deployment page",
+            "note": "공식 웹사이트의 배포 도구를 통해 간편 설치"
+          }
+        ],
+        "usageSteps": [
+          "Vates 배포 플랫폼을 통해 Xen Orchestra 인스턴스를 구성합니다.",
+          "웹 인터페이스에 로그인합니다.",
+          "관리할 XCP-ng 또는 XenServer 호스트를 등록하여 인프라를 통합 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 994,
+        "forks": 328,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:14.228Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:18.943Z",
+      "documentEvidence": {
+        "license": "ISC",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T06:06:25.344Z"
+    },
+    {
+      "id": "vz",
+      "name": "vz",
+      "github": "https://github.com/Code-Hex/vz",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "vm-bhyve",
+      "name": "vm-bhyve",
+      "github": "https://github.com/churchers/vm-bhyve",
+      "license": "BSD-2-Clause",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "see",
+      "name": "see",
+      "github": "https://github.com/WithSecureOpenSource/see",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "obliteration",
+      "name": "obliteration",
+      "github": "https://github.com/obhq/obliteration",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.468Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "qemu-2",
+      "name": "QEMU",
+      "github": "https://github.com/qemu/qemu",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "qemu-2",
+        "name": "QEMU",
+        "github": "https://github.com/qemu/qemu",
+        "description": "범용 머신 및 사용자 공간 에뮬레이터이자 가상화 도구입니다.",
+        "longDescription": "하드웨어 가상화 지원 없이도 전체 머신을 에뮬레이트할 수 있으며, KVM 및 Xen 하이퍼바이저와 통합하여 거의 네이티브에 가까운 성능을 제공하는 오픈소스 가상화 소프트웨어입니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "가상화",
+          "에뮬레이터",
+          "하이퍼바이저",
+          "C"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://www.qemu.org",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 웹사이트 또는 소스 코드를 통해 QEMU를 다운로드합니다.",
+          "타겟 아키텍처에 맞는 디스크 이미지와 커널을 준비합니다.",
+          "명령줄 인터페이스를 통해 가상 머신을 실행하고 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "풀 리퀘스트는 비활성화되어 있으며 공식 웹사이트의 릴리스 타볼을 사용해야 합니다.",
+        "stars": 13900,
+        "forks": 7363,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:14.510Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:19.457Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "cloud-hypervisor",
+      "name": "Cloud Hypervisor",
+      "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "cloud-hypervisor",
+        "name": "Cloud Hypervisor",
+        "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
+        "description": "최근 클라우드 워크로드에 특화된 Rust 기반 가상 머신 모니터입니다.",
+        "longDescription": "보안에 강점을 두고 Rust로 작성되었으며, CPU 및 메모리 핫플러그, Linux와 Windows 게스트 실행, 최소한의 가벼운 리소스 사용량을 제공합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Rust",
+          "하이퍼바이저",
+          "가상화",
+          "클라우드"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.cloudhypervisor.org",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [
+          "Rust 툴체인"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "소스 코드를 복제하거나 사전 빌드된 바이너리를 다운로드합니다.",
+          "커널과 디스크 이미지를 준비합니다.",
+          "명령줄을 통해 가상 머신 게스트를 부팅합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6417,
+        "forks": 809,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:14.720Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:20.204Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "terraform-provider-libvirt",
+      "name": "Terraform Provider Libvirt",
+      "github": "https://github.com/dmacvicar/terraform-provider-libvirt",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "terraform-provider-libvirt",
+        "name": "Terraform Provider Libvirt",
+        "github": "https://github.com/dmacvicar/terraform-provider-libvirt",
+        "description": "Linux KVM과 libvirt를 사용하여 인프라를 프로비저닝하는 Terraform 프로바이더입니다.",
+        "longDescription": "가상 머신, 스토리지 풀, 네트워크 등의 libvirt 리소스를 Terraform을 통해 코드로 정의하고 관리할 수 있도록 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Terraform",
+          "KVM",
+          "libvirt",
+          "Go",
+          "가상화"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/dmacvicar/terraform-provider-libvirt",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [
+          "Terraform",
+          "KVM",
+          "libvirt"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Terraform 설정 파일에 libvirt 프로바이더를 선언합니다.",
+          "terraform init 명령어로 프로바이더를 설치합니다.",
+          "terraform apply를 통해 가상 머신 및 인프라를 배포합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1898,
+        "forks": 525,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:14.900Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:20.895Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "one",
+      "name": "OpenNebula",
+      "github": "https://github.com/OpenNebula/one",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "xcp",
+      "name": "XCP-ng",
+      "github": "https://github.com/xcp-ng/xcp",
+      "license": "GPL-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "virtualbox",
+      "name": "Oracle VirtualBox",
+      "github": "https://github.com/VirtualBox/virtualbox",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "pvetui",
+      "name": "pvetui",
+      "github": "https://github.com/devnullvoid/pvetui",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "lytenyte",
+      "name": "LyteNyte Grid",
+      "github": "https://github.com/1771-Technologies/lytenyte",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15",
+      "tool": {
+        "id": "lytenyte",
+        "name": "LyteNyte Grid",
+        "github": "https://github.com/1771-Technologies/lytenyte",
+        "description": "종속성이 없는 초고속 React 데이터 그리드 라이브러리입니다.",
+        "longDescription": "약 40KB의 가벼운 크기로 대용량 데이터를 원활하게 렌더링하며, 정렬, 필터링, 그룹화 등 150개 이상의 엔터프라이즈급 기능을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "React",
+          "데이터 그리드",
+          "TypeScript",
+          "테이블",
+          "프론트엔드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.1771technologies.com/",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T06:04:02.055Z",
+        "requirements": [
+          "Node.js",
+          "React"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "NPM 설치",
+            "command": "npm install --save @1771technologies/lytenyte-core",
+            "note": "핵심 패키지를 프로젝트에 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 패키지를 설치합니다.",
+          "컴포넌트 파일에서 그리드 모듈을 불러옵니다.",
+          "데이터와 컬럼 설정을 정의하여 렌더링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "PRO 버전의 경우 라이선스가 없으면 워터마크가 표시됩니다.",
+        "stars": 1030,
+        "forks": 54,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T06:06:15.140Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:21.232Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "heim",
+      "name": "heim",
+      "github": "https://github.com/heim-rs/heim",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15"
+    },
+    {
+      "id": "rsuite-table",
+      "name": "rsuite-table",
+      "github": "https://github.com/rsuite/rsuite-table",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T06:06:12.469Z",
+      "sourceRun": "2026-10-23T15"
+    },
     {
       "id": "openbb",
       "name": "OpenBB",
@@ -3655,7 +4487,16 @@
       "recheckReasons": [
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
-      ]
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T06:06:21.551Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
     },
     {
       "id": "ocl",
@@ -29528,247 +30369,6 @@
       "sourceRun": "2026-10-22T01"
     },
     {
-      "id": "docker-practice",
-      "name": "docker_practice",
-      "github": "https://github.com/yeasy/docker_practice",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T16:09:52.611Z",
-      "sourceRun": "2026-10-22T01",
-      "tool": {
-        "id": "docker-practice",
-        "name": "docker_practice",
-        "github": "https://github.com/yeasy/docker_practice",
-        "description": "실제 DevOps 사례를 통해 Docker와 컨테이너 기술을 학습할 수 있는 가이드북입니다.",
-        "longDescription": "초보자부터 전문가까지 Docker 및 컨테이너 기술의 핵심 개념을 실무 예제와 함께 익힐 수 있도록 구성된 오픈소스 기술 가이드입니다. 최신 Docker Engine과 관련 도구들을 활용한 실전 배포 및 운영 노하우를 제공합니다.",
-        "category": "교육·학습",
-        "tags": [
-          "Docker",
-          "Kubernetes",
-          "DevOps",
-          "컨테이너",
-          "가이드북"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://yeasy.gitbook.io/docker_practice/",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T16:04:03.491Z",
-        "requirements": [
-          "mdPress"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "mdPress 설치 및 실행",
-            "command": "brew tap yeasy/tap && brew install mdpress && mdpress serve",
-            "note": "로컬 환경에서 문서를 빌드하고 미리보기 서버를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "온라인 GitBook이나 다운로드한 PDF를 통해 내용을 학습합니다.",
-          "로컬에서 문서를 직접 빌드하려면 mdPress를 설치합니다.",
-          "제공되는 실습 예제를 Docker 환경에서 직접 실행해 봅니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 26316,
-        "forks": 5774,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T16:09:54.788Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T16:10:00.479Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "osx-proxmox",
-      "name": "OSX-PROXMOX",
-      "github": "https://github.com/luchina-gabriel/OSX-PROXMOX",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T16:09:52.611Z",
-      "sourceRun": "2026-10-22T01",
-      "tool": {
-        "id": "osx-proxmox",
-        "name": "OSX-PROXMOX",
-        "github": "https://github.com/luchina-gabriel/OSX-PROXMOX",
-        "description": "Proxmox VE 환경에서 간편하게 macOS를 설치하고 구동할 수 있는 자동화 스크립트입니다.",
-        "longDescription": "Intel 및 AMD 하드웨어를 모두 지원하는 Proxmox VE 위에서 macOS를 손쉽게 설정하고 실행할 수 있도록 돕는 툴입니다. 복잡한 수동 설정 과정 없이 단 몇 번의 명령어로 가상머신 환경을 구축할 수 있습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Proxmox",
-          "macOS",
-          "가상화",
-          "Hackintosh",
-          "스크립트"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://osx-proxmox.com",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T16:04:03.491Z",
-        "requirements": [
-          "Proxmox VE 7.X ~ 9.X"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "설치 스크립트 실행",
-            "command": "/bin/bash -c \"$(curl -fsSL https://install.osx-proxmox.com)\"",
-            "note": "Proxmox 웹 콘솔의 쉘에서 실행하여 설치를 진행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Proxmox VE 최신 버전을 새로 설치합니다.",
-          "Proxmox 웹 콘솔의 쉘(Shell)에 접속합니다.",
-          "제공된 설치 명령어를 복사하여 붙여넣고 실행합니다.",
-          "화면의 안내에 따라 macOS 가상머신 구성을 완료합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7848,
-        "forks": 635,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T16:09:55.030Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T16:10:01.239Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "cloud-hypervisor",
-      "name": "cloud-hypervisor",
-      "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T16:09:52.611Z",
-      "sourceRun": "2026-10-22T01",
-      "tool": {
-        "id": "cloud-hypervisor",
-        "name": "cloud-hypervisor",
-        "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
-        "description": "최신 클라우드 워크로드에 특화된 Rust 기반의 고성능 가상머신 모니터(VMM)입니다.",
-        "longDescription": "Linux 및 Windows 게스트 운영체제를 안전하고 효율적으로 실행할 수 있도록 설계된 오픈소스 VMM입니다. CPU, 메모리, 장치 핫플러그를 지원하며 보안과 경량화에 초점을 맞추어 개발되었습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Rust",
-          "KVM",
-          "가상화",
-          "클라우드",
-          "VMM"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.cloudhypervisor.org",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T16:04:03.491Z",
-        "requirements": [
-          "Linux KVM 지원 호스트"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "사전 빌드된 바이너리 패키지를 다운로드하거나 소스코드에서 빌드합니다.",
-          "커널 및 디스크 이미지를 준비합니다.",
-          "Cloud Hypervisor 명령어를 통해 가상머신 게스트를 부팅합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6408,
-        "forks": 808,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T16:09:55.279Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T16:10:02.013Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "hyperdbg",
       "name": "HyperDbg",
       "github": "https://github.com/HyperDbg/HyperDbg",
@@ -29789,171 +30389,6 @@
       "sourceRun": "2026-10-22T01"
     },
     {
-      "id": "unikraft",
-      "name": "unikraft",
-      "github": "https://github.com/unikraft/unikraft",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T16:09:52.611Z",
-      "sourceRun": "2026-10-22T01",
-      "tool": {
-        "id": "unikraft",
-        "name": "unikraft",
-        "github": "https://github.com/unikraft/unikraft",
-        "description": "최고의 성능과 보안을 제공하는 차세대 클라우드 네이티브 유니커널 개발 키트입니다.",
-        "longDescription": "애플리케이션과 필요한 커널 라이브러리를 직접 결합하여 운영체제 오버헤드를 최소화하고 초경량 가상머신을 실행할 수 있게 해주는 오픈소스 개발 키트입니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Unikernel",
-          "클라우드네이티브",
-          "가상화",
-          "성능최적화",
-          "CLI"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://unikraft.org",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T16:04:03.491Z",
-        "requirements": [
-          "KraftKit CLI"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "KraftKit 설치",
-            "command": "curl -sSfL https://get.kraftkit.sh | sh",
-            "note": "unikraft 관리를 위한 kraft CLI 도구를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "KraftKit CLI를 설치하여 환경을 설정합니다.",
-          "kraft run 명령어로 예제 유니커널 가상머신을 실행합니다.",
-          "kraft ps 명령어로 인스턴스 상태를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3900,
-        "forks": 1526,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T16:09:55.598Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T16:10:02.653Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "proxcenter-ui",
-      "name": "proxcenter-ui",
-      "github": "https://github.com/adminsyspro/proxcenter-ui",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T16:09:52.611Z",
-      "sourceRun": "2026-10-22T01",
-      "tool": {
-        "id": "proxcenter-ui",
-        "name": "proxcenter-ui",
-        "github": "https://github.com/adminsyspro/proxcenter-ui",
-        "description": "Proxmox 환경을 통합 관리할 수 있는 현대적인 웹 기반 엔터프라이즈 관리 플랫폼입니다.",
-        "longDescription": "VMware vCenter의 대안으로 설계된 오픈소스 솔루션으로, 여러 Proxmox VE 클러스터와 Proxmox Backup Server 인스턴스를 단일 대시보드에서 모니터링하고 관리할 수 있습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Proxmox",
-          "가상화",
-          "대시보드",
-          "Docker",
-          "셀프호스팅"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.proxcenter.io",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T16:04:03.491Z",
-        "requirements": [
-          "Docker Engine 24+",
-          "Docker Compose v2"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "커뮤니티 에디션 설치",
-            "command": "curl -fsSL https://proxcenter.io/install/community | sudo bash",
-            "note": "Docker 및 필수 구성 요소를 자동으로 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "설치 스크립트를 실행하여 Docker 기반 스택을 배포합니다.",
-          "브라우저에서 `http://서버IP:3000`에 접속합니다.",
-          "관리자 계정을 생성하고 Proxmox VE 호스트를 등록하여 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1730,
-        "forks": 114,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T16:09:55.890Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T16:10:03.038Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "cilicon",
       "name": "Cilicon",
       "github": "https://github.com/traderepublic/Cilicon",
@@ -29972,87 +30407,6 @@
       "reasons": [],
       "checkedAt": "2026-10-21T16:09:52.611Z",
       "sourceRun": "2026-10-22T01"
-    },
-    {
-      "id": "lytenyte",
-      "name": "lytenyte",
-      "github": "https://github.com/1771-Technologies/lytenyte",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T16:09:52.611Z",
-      "sourceRun": "2026-10-22T01",
-      "tool": {
-        "id": "lytenyte",
-        "name": "lytenyte",
-        "github": "https://github.com/1771-Technologies/lytenyte",
-        "description": "제로 의존성으로 구동되며 고성능 엔터프라이즈 기능을 지원하는 React 데이터 그리드입니다.",
-        "longDescription": "방대한 데이터를 다루는 웹 애플리케이션을 위해 설계된 초고속 React 데이터 테이블 및 그리드 라이브러리입니다. 정렬, 필터링, 피벗 등 150여 가지의 엔터프라이즈 기능을 제공합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "React",
-          "데이터그리드",
-          "테이블",
-          "TypeScript",
-          "UI"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.1771technologies.com/",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T16:04:03.491Z",
-        "requirements": [
-          "React"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "코어 패키지 설치",
-            "command": "npm install --save @1771technologies/lytenyte-core",
-            "note": "기본 그리드 패키지를 프로젝트에 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "npm을 통해 LyteNyte 패키지를 설치합니다.",
-          "컴포넌트에 데이터 그리드 컴포넌트를 임포트합니다.",
-          "데이터 소스와 컬럼 설정을 정의하여 그리드를 렌더링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1030,
-        "forks": 54,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T16:09:56.159Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T17:06:51.392Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "velxio",
