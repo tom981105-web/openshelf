@@ -1,5 +1,546 @@
 [
   {
+    "id": "carla",
+    "name": "CARLA",
+    "github": "https://github.com/carla-simulator/carla",
+    "description": "자율주행 연구를 지원하기 위해 처음부터 설계된 오픈소스 시뮬레이터입니다.",
+    "longDescription": "도시 환경, 도로 및 자율주행 차량 개발을 위한 시뮬레이션 기능을 제공하는 오픈소스 플랫폼입니다. 센서 데이터 생성, 훈련, 검증을 아우르는 자율주행 연구용 오픈 워크플로우를 제공합니다.",
+    "category": "과학·연구",
+    "tags": [
+      "자율주행",
+      "시뮬레이터",
+      "컴퓨터 비전",
+      "C++",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://carla.org",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python 3",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설정 스크립트 실행",
+        "command": "./Setup.sh",
+        "note": "Linux 환경에서 빌드에 필요한 의존성과 파이썬 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 제공되는 셋업 스크립트를 실행합니다.",
+      "시뮬레이터 바이너리 또는 언리얼 엔진 소스를 기반으로 환경을 구축합니다.",
+      "파이썬 API를 이용해 자율주행 에이전트와 센서를 연동하고 실험을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 14526,
+    "forks": 4732,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "deeplearning4j",
+    "name": "Deeplearning4j",
+    "github": "https://github.com/deeplearning4j/deeplearning4j",
+    "description": "JVM 환경에서 딥러닝 모델을 학습하고 배포하기 위한 오픈소스 툴킷입니다.",
+    "longDescription": "자바 및 스칼라 개발자를 위한 분산 딥러닝 라이브러리입니다. Keras, TensorFlow, ONNX, PyTorch 모델을 임포트할 수 있으며, CPU 및 GPU 백엔드를 지원하는 고성능 행렬 연산 라이브러리를 포함합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "딥러닝",
+      "Java",
+      "Scala",
+      "TensorFlow",
+      "Keras"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://deeplearning4j.konduit.ai",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Java JDK",
+      "Maven"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Maven 의존성 추가",
+        "command": "dependency\n    groupIdorg.eclipse.deeplearning4j/groupId\n    artifactIddeeplearning4j-core/artifactId\n    version1.0.0-M2.1/version\n/dependency",
+        "note": "프로젝트의 pom.xml 파일에 코어 라이브러리 의존성을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "빌드 도구(Maven 또는 Gradle) 설정 파일에 Deeplearning4j 종속성을 추가합니다.",
+      "자바 코드로 신경망 모델 구조를 정의하거나 외부 프레임워크의 모델을 가져옵니다.",
+      "데이터셋을 로드하고 학습 및 추론 파이프라인을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 14272,
+    "forks": 3821,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "interpret",
+    "name": "InterpretML",
+    "github": "https://github.com/interpretml/interpret",
+    "description": "블랙박스 머신러닝 모델을 설명하고 해석 가능한 모델을 학습시키는 파이썬 패키지입니다.",
+    "longDescription": "복잡한 인공지능 및 머신러닝 모델의 예측 결과를 투명하게 이해할 수 있도록 돕는 도구모음입니다. 마이크로소프트 연구소에서 개발한 EBM(Explainable Boosting Machine) 등의 해석 가능한 모델 학습 기능을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "설명 가능한 AI",
+      "XAI",
+      "머신러닝",
+      "Python",
+      "Scikit-learn"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://interpret.ml/docs",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install interpret",
+        "note": "파이썬 패키지 관리자를 통해 기본 해석 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경에서 interpret 라이브러리를 가져옵니다.",
+      "제공되는 EBM 또는 설명 기능을 사용하여 머신러닝 모델을 학습시킵니다.",
+      "시각화 대시보드를 통해 모델의 예측 근거와 특성 중요도를 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6967,
+    "forks": 792,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "minimind-v",
+    "name": "minimind-v",
+    "github": "https://github.com/jingyaogong/minimind-v",
+    "description": "단 2시간 만에 처음부터 65M 파라미터 규모의 시각-언어 모델(VLM)을 직접 학습시킬 수 있는 오픈소스 프로젝트입니다.",
+    "longDescription": "경량화된 VLM을 구축하고 학습시키는 전 과정을 실습할 수 있도록 구성된 교육 및 연구용 저장소입니다. 시각 인코더와 언어 모델 가중치를 다운로드하여 소규모 환경에서 빠르게 VLM 학습을 경험할 수 있습니다.",
+    "category": "AI 모델",
+    "tags": [
+      "VLM",
+      "Python",
+      "PyTorch",
+      "딥러닝",
+      "챗봇"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://jingyaogong.github.io/minimind-v",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python",
+      "Git"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone --depth 1 https://github.com/jingyaogong/minimind-v",
+        "note": "프로젝트 소스코드를 로컬에 클론합니다."
+      },
+      {
+        "title": "의존성 설치",
+        "command": "pip install -r requirements.txt",
+        "note": "필수 파이썬 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필수 의존성을 설치합니다.",
+      "모델스콥 등을 통해 비전 인코더 및 언어 모델 가중치를 다운로드합니다.",
+      "학습 스크립트를 실행하여 모델을 학습시킵니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8780,
+    "forks": 983,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "dalle2-pytorch",
+    "name": "DALLE2-pytorch",
+    "github": "https://github.com/lucidrains/DALLE2-pytorch",
+    "description": "OpenAI의 텍스트-이미지 생성 신경망인 DALL-E 2를 PyTorch로 구현한 오픈소스 라이브러리입니다.",
+    "longDescription": "텍스트 임베딩을 기반으로 이미지 임베딩을 예측하는 확산 사전 네트워크 등을 포함하여 DALL-E 2 아키텍처를 파이토치 환경에서 재현하고 학습할 수 있도록 지원합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "DALL-E 2",
+      "PyTorch",
+      "Python",
+      "텍스트-이미지",
+      "생성형 AI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lucidrains/DALLE2-pytorch",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install dalle2-pytorch",
+        "note": "pip를 사용하여 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경에서 패키지를 설치합니다.",
+      "CLIP 및 관련 모듈을 연동하여 데이터셋을 준비합니다.",
+      "제공되는 파이토치 코드를 활용해 모델 학습 및 추론을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 11302,
+    "forks": 1064,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "denoising-diffusion-pytorch",
+    "name": "denoising-diffusion-pytorch",
+    "github": "https://github.com/lucidrains/denoising-diffusion-pytorch",
+    "description": "생성 모델의 새로운 패러다임인 Denoising Diffusion Probabilistic Model(DDPM)을 파이토치로 구현한 라이브러리입니다.",
+    "longDescription": "데이터 분포의 그래디언트를 추정하는 노이즈 제거 점수 매칭 방식과 랑주뱅 샘플링을 활용하여 고품질의 생성 모델을 구축할 수 있는 간결하고 직관적인 파이토치 구현체를 제공합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "DDPM",
+      "PyTorch",
+      "Python",
+      "생성 모델",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lucidrains/denoising-diffusion-pytorch",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install denoising_diffusion_pytorch",
+        "note": "pip를 이용해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "Unet 및 GaussianDiffusion 모듈을 임포트합니다.",
+      "텐서 이미지를 입력하여 모델 학습 및 샘플링을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 10712,
+    "forks": 1283,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "sonnet",
+    "name": "sonnet",
+    "github": "https://github.com/google-deepmind/sonnet",
+    "description": "머신러닝 연구를 위해 텐서플로우 2 기반으로 구축된 구글 딥마인드의 신경망 라이브러리입니다.",
+    "longDescription": "신경망을 구축하기 위한 단순하고 조합 가능한 추상화 모델을 제공하며, 비지도/지도 학습 및 강화학습 등 다양한 목적의 인공지능 모델을 유연하게 설계할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TensorFlow",
+      "Python",
+      "딥러닝",
+      "신경망",
+      "DeepMind"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://sonnet.dev/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "TensorFlow 2.0+",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "텐서플로우 및 소넷 설치",
+        "command": "pip install tensorflow tensorflow-probability && pip install dm-sonnet",
+        "note": "텐서플로우 및 소넷 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "텐서플로우 2.0 이상 환경을 준비합니다.",
+      "pip 명령어로 소넷을 설치합니다.",
+      "파이썬 코드에서 sonnet을 임포트하여 모델을 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9977,
+    "forks": 1307,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "imagen-pytorch",
+    "name": "imagen-pytorch",
+    "github": "https://github.com/lucidrains/imagen-pytorch",
+    "description": "구글의 텍스트-이미지 생성 모델인 Imagen을 파이토치로 구현한 오픈소스 프로젝트입니다.",
+    "longDescription": "사전 학습된 T5 텍스트 모델의 임베딩을 조건으로 활용하는 캐스케이딩 DDPM 구조를 채택하여, 텍스트 프롬프트로부터 고품질의 이미지를 생성하는 최신 합성 기법을 구현합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "Imagen",
+      "PyTorch",
+      "Python",
+      "텍스트-이미지",
+      "생성형 AI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lucidrains/imagen-pytorch",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install imagen-pytorch",
+        "note": "pip를 통해 imagen-pytorch를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경에서 패키지를 설치합니다.",
+      "Unet과 Imagen 모듈을 불러옵니다.",
+      "텍스트 임베딩과 연동하여 학습 및 추론 코드를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8429,
+    "forks": 789,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "palm-rlhf-pytorch",
+    "name": "PaLM-rlhf-pytorch",
+    "github": "https://github.com/lucidrains/PaLM-rlhf-pytorch",
+    "description": "PaLM 아키텍처 기반 위에 인간 피드백을 활용한 강화학습(RLHF)을 적용하여 오픈소스 대형 언어 모델 학습을 지원하는 파이토치 구현체입니다.",
+    "longDescription": "ChatGPT와 유사한 대형 언어 모델 학습 파이프라인을 오픈소스 진영에서 구현할 수 있도록 PaLM 모델 구조에 RLHF 알고리즘을 결합한 실험적인 프로젝트입니다.",
+    "category": "AI 모델",
+    "tags": [
+      "RLHF",
+      "PaLM",
+      "PyTorch",
+      "Python",
+      "LLM"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lucidrains/PaLM-rlhf-pytorch",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install palm-rlhf-pytorch",
+        "note": "pip 명령어로 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "자기회귀 트랜스포머 형태의 PaLM 모델을 초기화합니다.",
+      "입력 시퀀스를 바탕으로 손실 계산 및 강화학습 파이프라인을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7862,
+    "forks": 670,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "flower",
+    "name": "flower",
+    "github": "https://github.com/flwrlabs/flower",
+    "description": "다양한 프레임워크를 지원하는 친화적인 연합 학습(Federated Learning) 및 분산 AI 프레임워크입니다.",
+    "longDescription": "PyTorch, TensorFlow, Scikit-Learn 등 다양한 머신러닝 프레임워크와 연동하여 안전하게 분산 환경에서 모델을 학습시키고 연합 분석을 수행할 수 있도록 돕는 오픈소스 프레임워크입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "연합 학습",
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "분산 시스템"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://flower.ai",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install flwr",
+        "note": "pip를 사용하여 Flower 프레임워크를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 환경에서 flwr 패키지를 설치합니다.",
+      "공식 문서의 PyTorch 또는 TensorFlow 퀵스타트 가이드를 참고합니다.",
+      "서버와 클라이언트 코드를 작성하여 연합 학습 작업을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7178,
+    "forks": 1241,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "scikit-opt",
+    "name": "scikit-opt",
+    "github": "https://github.com/guofei9987/scikit-opt",
+    "description": "유전 알고리즘, 입자 군집 최적화, 담금질 기법 등 다양한 휴리스틱 최적화 알고리즘을 파이썬으로 제공하는 도구입니다.",
+    "longDescription": "복잡한 최적화 문제와 외판원 문제(TSP) 등을 해결하기 위해 유전 알고리즘, 입자 군집 최적화(PSO), 개미 군집 알고리즘 등을 손쉽게 적용할 수 있는 사용자 친화적인 파이썬 라이브러리입니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "유전 알고리즘",
+      "최적화",
+      "Python",
+      "알고리즘",
+      "데이터 분석"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://scikit-opt.github.io/scikit-opt/#/en/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T14:04:03.018Z",
+    "requirements": [
+      "Python = 3.5"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "라이브러리 설치",
+        "command": "pip install scikit-opt",
+        "note": "pip를 통해 scikit-opt를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "사용자 정의 함수(UDF)나 기본 제공되는 최적화 알고리즘 클래스를 불러옵니다.",
+      "목적 함수와 제약 조건을 설정한 뒤 최적화 연산을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6723,
+    "forks": 1109,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
     "id": "heml",
     "name": "HEML",
     "github": "https://github.com/SparkPost/heml",
