@@ -1,5 +1,536 @@
 [
   {
+    "id": "cloakbrowser-manager",
+    "name": "CloakBrowser Manager",
+    "github": "https://github.com/CloakHQ/CloakBrowser-Manager",
+    "description": "독립된 브라우저 프로필과 고유 지문을 관리할 수 있는 웹 기반 오픈소스 프로필 관리자입니다.",
+    "longDescription": "멀티로그인(Multilogin)의 자체 호스팅 대안으로, 각 프로필마다 독립된 쿠키, 프록시, GPU 및 브라우저 지문을 제공합니다. Cloudflare Turnstile 및 reCAPTCHA 우회 기능을 포함합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "지문 브라우저",
+      "프록시",
+      "멀티 계정",
+      "Docker",
+      "FastAPI"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://cloakbrowser.dev/manager/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "Docker",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "최신 릴리스에서 인스톨러 다운로드 또는 Docker 실행",
+      "프로필 생성 및 프록시 설정",
+      "독립된 환경에서 브라우저 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "macOS에서는 초기 실행 시 터미널 권한 승인이 필요할 수 있습니다.",
+    "stars": 992,
+    "forks": 230,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "dsh-browser",
+    "name": "dsh Browser Assistant",
+    "github": "https://github.com/omdsh-dev/dsh-browser",
+    "description": "DeepSeek Harness가 로그인 상태와 세션을 유지한 채 브라우저를 직접 제어할 수 있는 Chrome 확장 프로그램입니다.",
+    "longDescription": "시각(Vision) 기능 없이도 DeepSeek 에이전트가 사용자의 기존 브라우저 탭을 읽고, 요소를 조작하며, 탐색 및 탭 관리를 수행할 수 있도록 지원하는 사이드패널 브리지 플러그인입니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "DeepSeek",
+      "Chrome 확장",
+      "브라우저 자동화",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/omdsh-dev/dsh-browser",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [
+      "DeepSeek Harness"
+    ],
+    "install": [
+      {
+        "title": "저장소 복제 및 빌드",
+        "command": "git clone https://github.com/omdsh-dev/dsh-browser.git",
+        "note": "프로젝트 클론"
+      }
+    ],
+    "usageSteps": [
+      "소스 코드 다운로드 및 의존성 설치",
+      "Chrome 확장 프로그램으로 로드",
+      "DeepSeek Harness와 연동하여 브라우저 제어"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 885,
+    "forks": 75,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "gemini-skill",
+    "name": "Gemini Skill",
+    "github": "https://github.com/WJZ-P/gemini-skill",
+    "description": "CDP를 통해 Gemini 웹버전을 제어하여 AI 이미지 생성, 대화 및 추출을 자동화하는 MCP 및 스킬입니다.",
+    "longDescription": "Model Context Protocol(MCP) 및 OpenClaw 등과 호환되는 에이전트 도구로, 브라우저를 통해 Gemini 웹 인터페이스와 상호작용하여 이모티콘 생성, 드로잉 및 이미지 추출 작업을 수행합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "Gemini",
+      "MCP",
+      "브라우저 자동화",
+      "이미지 생성",
+      "JavaScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/WJZ-P/gemini-skill",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "Node.js",
+      "Chrome / Edge"
+    ],
+    "supportedAgents": [
+      "OpenClaw",
+      "MCP 호환 에이전트"
+    ],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/WJZ-P/gemini-skill.git",
+        "note": "프로젝트 클론"
+      },
+      {
+        "title": "의존성 설치",
+        "command": "npm install",
+        "note": "필요 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 클론 및 패키지 설치",
+      "환경 변수 파일(.env) 설정",
+      "에이전트 또는 MCP 클라이언트를 통해 실행"
+    ],
+    "examplePrompt": "Gemini를 이용해 고양이 이모티콘 생성해줘",
+    "usageNote": "Gemini 웹버전 로그인이 사전에 필요합니다.",
+    "stars": 832,
+    "forks": 122,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "figranium",
+    "name": "Figranium",
+    "github": "https://github.com/figranium/figranium",
+    "description": "시각적 블록을 쌓아 복잡한 브라우저 워크플로를 구축하고 API로 실행하는 도구입니다.",
+    "longDescription": "클릭, 입력, 대기 등의 액션 블록을 조합하여 웹 자동화 흐름을 시각적으로 설계할 수 있습니다. 저장된 작업은 HTTP API를 통해 런타임 변수와 함께 트리거할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "브라우저 자동화",
+      "API",
+      "웹 스크래핑",
+      "TypeScript",
+      "Docker"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://figranium.dev",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "디렉토리 생성",
+        "command": "mkdir figranium-server && cd figranium-server",
+        "note": "설치 폴더 생성 및 이동"
+      },
+      {
+        "title": "구성 파일 다운로드",
+        "command": "wget https://raw.githubusercontent.com/figranium/figranium/main/docker-compose.deploy.yml -O docker-compose.yml",
+        "note": "배포용 컴포즈 파일 다운로드"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리 생성 및 설정 파일 다운로드",
+      "Docker Compose로 서비스 실행",
+      "웹 인터페이스에서 블록 기반 워크플로 구성"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 777,
+    "forks": 48,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "terminal-2",
+    "name": "Browser Use Terminal",
+    "github": "https://github.com/browser-use/terminal",
+    "description": "브라우저 작업을 터미널 UI(TUI) 환경에서 직접 제어하고 자동화할 수 있는 도구입니다.",
+    "longDescription": "Rust 기반의 TUI 인터페이스를 제공하며, 실제 Chrome 세션과 CDP 제어를 결합하여 로그인 상태를 유지한 채 브라우저 작업을 모니터링, 일시정지, 재시도할 수 있습니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "TUI",
+      "Rust",
+      "브라우저 자동화",
+      "LLM",
+      "CDP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://browser-use.com/terminal",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Browser Use 에이전트"
+    ],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl -fsSL https://browser-use.com/terminal/install.sh | sh",
+        "note": "터미널 도구 자동 설치"
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트 실행",
+      "터미널에서 browser 명령어 입력",
+      "TUI 인터페이스를 통해 브라우저 에이전트 작업 지시"
+    ],
+    "examplePrompt": "오픈소스 트렌딩 저장소를 찾아줘",
+    "usageNote": "",
+    "stars": 654,
+    "forks": 41,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "uscrapper",
+    "name": "Uscrapper Vanta",
+    "github": "https://github.com/z0m31en7/Uscrapper",
+    "description": "표면웹과 다크웹을 아우르며 유용한 정보와 인사이트를 추출하는 OSINT 데이터 수집 도구입니다.",
+    "longDescription": "Uscrapper Vanta는 다크웹과 표면웹 소스에서 키워드 기반으로 이메일, 소셜 미디어 링크, 연락처 등의 개인 정보와 데이터를 수집할 수 있는 파이썬 기반 오픈소스 정보 추출 도구입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "OSINT",
+      "Python",
+      "다크웹",
+      "데이터 수집",
+      "스크래핑"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/z0m31en7/Uscrapper",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "Python 3"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "git clone https://github.com/z0m31en7/Uscrapper.git && cd Uscrapper/install/ && chmod +x ./install.sh && ./install.sh",
+        "note": "리눅스 환경에서 설치 스크립트를 실행하여 의존성을 설정합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 인스톨 스크립트를 실행합니다.",
+      "대상 URL 또는 검색 키워드를 설정합니다.",
+      "명령줄 인터페이스를 통해 데이터를 수집합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 797,
+    "forks": 92,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "gpt-promo-scanner",
+    "name": "ChatGPT Team Promo Scanner",
+    "github": "https://github.com/JUk1-GH/gpt-promo-scanner",
+    "description": "ChatGPT Team(Business) 구독용 글로벌 프로모션 코드를 자동으로 스캔하고 검증하는 도구입니다.",
+    "longDescription": "전 세계 여러 국가의 파트너 채널을 통해 배포된 ChatGPT Team 비즈니스 요금제 프로모션 코드를 대량으로 생성, 검증, 가격 비교 및 결제까지 지원하는 파이썬 기반 자동화 툴킷입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Python",
+      "ChatGPT",
+      "자동화",
+      "크롤링",
+      "프록시"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/JUk1-GH/gpt-promo-scanner",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "Python 3.9+",
+      "Clash Verge"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "프로젝트 설치",
+        "command": "git clone https://github.com/JUk1-GH/gpt-promo-scanner.git && cd gpt-promo-scanner && pip install -r requirements.txt",
+        "note": "저장소를 클론한 후 필수 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Clash 프록시 클라이언트가 실행 중인 상태를 유지합니다.",
+      "ChatGPT 세션에서 액세스 토큰을 획득하여 설정합니다.",
+      "스크립트를 실행하여 프로모션 코드를 스캔하고 유효성을 검증합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프록시 연결 및 계정 인증 정보가 정확해야 합니다.",
+    "stars": 766,
+    "forks": 142,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "ketch",
+    "name": "Ketch",
+    "github": "https://github.com/1broseidon/ketch",
+    "description": "AI 에이전트를 위해 설계된 빠르고 상태 없는 웹 검색 및 스크래핑 전용 명령줄 도구입니다.",
+    "longDescription": "여러 복잡한 제공자 SDK를 연결할 필요 없이 단 하나의 바이너리로 웹 검색과 스크래핑 작업을 수행할 수 있는 고성능 CLI 도구입니다. 데몬이나 별도의 API 서버 없이 가볍게 실행됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "CLI",
+      "AI 에이전트",
+      "스크래핑",
+      "검색"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ketch.run",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install ketch",
+        "note": "macOS 환경에서 Homebrew를 통해 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 설치 명령어를 통해 바이너리를 설치합니다.",
+      "터미널에서 검색 또는 스크래핑 명령어를 실행합니다.",
+      "결과를 확인하고 에이전트 워크플로우에 통합합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 730,
+    "forks": 42,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "mink",
+    "name": "Mink",
+    "github": "https://github.com/minkphp/Mink",
+    "description": "PHP 웹 애플리케이션의 브라우저 에뮬레이션과 테스트를 추상화해주는 라이브러리입니다.",
+    "longDescription": "다양한 웹 브라우저 제어 드라이버를 공통된 인터페이스로 다룰 수 있게 해주는 PHP 라이브러리입니다. 브라우저 자동화와 인수 테스트 작성 시 드라이버 간의 종속성을 줄여줍니다.",
+    "category": "테스트·품질",
+    "tags": [
+      "PHP",
+      "브라우저 자동화",
+      "테스트",
+      "웹 테스트"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://mink.behat.org/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "PHP",
+      "Composer"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Composer 의존성 설치",
+        "command": "curl -sS https://getcomposer.org/installer | php && php composer.phar install",
+        "note": "Composer를 통해 프로젝트 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Composer를 이용하여 Mink 패키지를 프로젝트에 추가합니다.",
+      "테스트 코드 내에서 세션과 드라이버를 초기화합니다.",
+      "페이지 요소 탐색 및 클릭 등의 동작을 스크립트로 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1608,
+    "forks": 286,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "spidr",
+    "name": "Spidr",
+    "github": "https://github.com/postmodern/spidr",
+    "description": "사이트와 링크를 빠르고 유연하게 탐색할 수 있는 다목적 루비 웹 스파이더링 라이브러리입니다.",
+    "longDescription": "웹사이트 내의 링크, iframe, 리디렉션 등을 효율적으로 추적하고 수집할 수 있도록 설계된 Ruby 웹 크롤러 라이브러리입니다. 빠르고 간편하게 웹 탐색 자동화를 구현할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Ruby",
+      "크롤러",
+      "스크래핑",
+      "웹 스파이더"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/postmodern/spidr",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "Ruby = 2.0.0"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gem 설치",
+        "command": "gem install spidr",
+        "note": "Ruby 패키지管理器를 통해 spidr 젬을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Ruby 환경에서 spidr 라이브러리를 불러옵니다.",
+      "탐색할 대상 웹사이트 URL을 지정하여 스파이더를 실행합니다.",
+      "링크 탐색 이벤트별 처리 로직을 콜백으로 정의합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 836,
+    "forks": 104,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "google-search-results-python",
+    "name": "Google Search Results Python",
+    "github": "https://github.com/serpapi/google-search-results-python",
+    "description": "SERP API를 활용하여 구글 검색 결과를 쉽고 빠르게 파싱할 수 있는 파이썬 패키지입니다.",
+    "longDescription": "SerpApi 서비스와 연동하여 구글 검색 결과, 이미지, 관련 쿼리 등의 데이터를 안정적으로 추출할 수 있는 Python 라이브러리입니다. 복잡한 파싱 로직 없이 구조화된 데이터를 받아볼 수 있습니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Python",
+      "스크래핑",
+      "검색",
+      "API"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/serpapi/google-search-results-python",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T01:04:02.064Z",
+    "requirements": [
+      "Python 3.7+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 패키지 설치",
+        "command": "pip install google-search-results",
+        "note": "pip를 사용하여 파이썬 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 프로젝트에 설치합니다.",
+      "API 키와 검색 쿼리를 포함한 파라미터를 설정합니다.",
+      "검색 결과를 딕셔너리 형태로 호출하여 데이터를 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정상적인 사용을 위해 SerpApi 계정 및 API 키가 필요합니다.",
+    "stars": 760,
+    "forks": 118,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
     "id": "cirrus",
     "name": "Cirrus",
     "github": "https://github.com/Spiderpig86/Cirrus",
