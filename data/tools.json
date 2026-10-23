@@ -1,5 +1,186 @@
 [
   {
+    "id": "sundials",
+    "name": "SUNDIALS",
+    "github": "https://github.com/llnl/sundials",
+    "description": "비선형 및 미분/대수 방정식 수치 해법 라이브러리 모음",
+    "longDescription": "로렌스 리버모어 국립 연구소(LLNL)에서 개발한 비선형 대수 방정식 및 상미분/대수 방정식(ODE/DAE) 솔버 제품군으로, 고성능 과학 계산 및 시뮬레이션에 활용됩니다.",
+    "category": "과학·연구",
+    "tags": [
+      "수치해석",
+      "방정식",
+      "수학",
+      "HPC",
+      "C"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://computing.llnl.gov/projects/sundials",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T02:04:01.657Z",
+    "requirements": [
+      "CMake",
+      "C 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/llnl/sundials.git",
+        "note": "공식 깃허브 저장소에서 소스 코드를 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 빌드 디렉토리를 만듭니다.",
+      "CMake를 사용하여 프로젝트를 구성합니다.",
+      "컴파일 후 시뮬레이션 및 방정식 풀이 프로젝트에 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 701,
+    "forks": 175,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "findiff",
+    "name": "findiff",
+    "github": "https://github.com/maroba/findiff",
+    "description": "임의 차원의 수치 미분 및 편미분 방정식을 위한 파이썬 패키지",
+    "longDescription": "유한 차분법을 사용하여 임의의 차원에서 수치 도함수를 계산하고 편미분 방정식을 효율적으로 풀 수 있도록 지원하는 파이썬 패키지로, JAX 및 CuPy 가속을 지원합니다.",
+    "category": "과학·연구",
+    "tags": [
+      "파이썬",
+      "수치미분",
+      "편미분방정식",
+      "수학",
+      "JAX"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/maroba/findiff",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T02:04:01.657Z",
+    "requirements": [
+      "Python",
+      "NumPy"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install --upgrade findiff",
+        "note": "파이썬 환경에서 최신 파이썬 패키지를 업그레이드 및 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 findiff 패키지를 설치합니다.",
+      "파이썬 스크립트에서 findiff를 불러옵니다.",
+      "격자 데이터와 미분 연산자를 정의하여 수치 미분을 계산합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 509,
+    "forks": 73,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "amgcl",
+    "name": "amgcl",
+    "github": "https://github.com/ddemidov/amgcl",
+    "description": "대규모 희소 선형 시스템을 대수적 다중격자(AMG) 방법으로 해결하는 C++ 라이브러리입니다.",
+    "longDescription": "CUDA, OpenCL, OpenMP 등을 지원하여 멀티코어 및 GPU 환경에서 고성능 행렬 연산과 솔버 기능을 수행합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C++",
+      "선형대수",
+      "다중격자",
+      "GPU"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://amgcl.readthedocs.org/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T02:04:01.657Z",
+    "requirements": [
+      "C++ compiler",
+      "CMake"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "소스코드를 클론하고 CMake를 통해 빌드합니다.",
+      "라이브러리 헤더를 프로젝트에 포함합니다.",
+      "희소 행렬 데이터를 입력하고 솔버를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 882,
+    "forks": 145,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "vexcl",
+    "name": "vexcl",
+    "github": "https://github.com/ddemidov/vexcl",
+    "description": "OpenCL, CUDA, OpenMP를 지원하는 C++ 벡터 수식 템플릿 라이브러리입니다.",
+    "longDescription": "복잡한 벡터 연산을 간결한 표현식으로 작성할 수 있게 하며 이종 가속기 환경에서 높은 성능을 발휘합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C++",
+      "OpenCL",
+      "CUDA",
+      "벡터연산"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://vexcl.readthedocs.org",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T02:04:01.657Z",
+    "requirements": [
+      "C++ compiler"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "VexCL 헤더 파일을 프로젝트 경로에 다운로드합니다.",
+      "프로그램에서 백엔드(OpenCL/CUDA 등)를 선택해 큐를 생성합니다.",
+      "벡터 표현식 연산을 구현하고 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 722,
+    "forks": 88,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
     "id": "cloakbrowser-manager",
     "name": "CloakBrowser Manager",
     "github": "https://github.com/CloakHQ/CloakBrowser-Manager",
