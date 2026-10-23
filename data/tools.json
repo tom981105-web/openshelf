@@ -1,5 +1,492 @@
 [
   {
+    "id": "openebs",
+    "name": "OpenEBS",
+    "github": "https://github.com/openebs/openebs",
+    "description": "Kubernetes 환경에서 스테이트풀 애플리케이션을 위해 영구 스토리지를 제공하는 오픈소스 컨테이너 네이티브 스토리지 플랫폼입니다.",
+    "longDescription": "다양한 로컬 PV 프로비저너와 분산 블록 스토리지 엔진을 통해 쿠버네티스 클러스터 내에서 안정적인 영구 볼륨 관리를 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "스토리지",
+      "컨테이너",
+      "CNCF",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://openebs.io",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Kubernetes 클러스터에 Helm 또는 kubectl을 이용해 OpenEBS를 배포합니다.",
+      "원하는 스토리지 엔진(Hostpath, ZFS, LVM 등)의 StorageClass를 구성합니다.",
+      "PVC(PersistentVolumeClaim)를 생성하여 스테이트풀 워크로드에 연결합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9837,
+    "forks": 983,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "cloudnative-pg",
+    "name": "CloudNativePG",
+    "github": "https://github.com/cloudnative-pg/cloudnative-pg",
+    "description": "Kubernetes 환경에서 PostgreSQL 데이터베이스의 전체 수명 주기를 관리하는 고성능 쿠버네티스 오퍼레이터입니다.",
+    "longDescription": "자동 장애 조치(Failover), 고가용성 구성, 지속적 백업 및 복구 기능을 제공하여 GitOps 기반의 데이터베이스 운영을 자동화합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "PostgreSQL",
+      "Kubernetes",
+      "오퍼레이터",
+      "데이터베이스",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cloudnative-pg.io",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Kubernetes 클러스터에 CloudNativePG 오퍼레이터를 설치합니다.",
+      "PostgreSQL 클러스터 설정을 담은 YAML 매니페스트를 작성합니다.",
+      "kubectl apply 명령어로 DB 클러스터를 배포하고 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9483,
+    "forks": 803,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "stern",
+    "name": "Stern",
+    "github": "https://github.com/stern/stern",
+    "description": "Kubernetes 클러스터의 여러 Pod 및 컨테이너 로그를 동시에 실시간으로 추적(tail)할 수 있는 도구입니다.",
+    "longDescription": "정규표현식이나 리소스 이름을 기반으로 Pod를 쉽게 필터링할 수 있으며, 색상 구분을 통해 다중 컨테이너 디버깅을 효율적으로 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "로그",
+      "디버깅",
+      "CLI",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/stern/stern",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go로 설치",
+        "command": "go install github.com/stern/stern@latest",
+        "note": "Go 언어 환경에서 최신 버전을 설치합니다."
+      },
+      {
+        "title": "Homebrew (Mac/Linux)",
+        "command": "brew install stern",
+        "note": "Homebrew를 통해 간편하게 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Homebrew 또는 Go를 통해 stern을 설치합니다.",
+      "kubectl 설정이 완료된 상태에서 stern [검색어] 명령어를 실행합니다.",
+      "매칭되는 여러 Pod의 로그를 색상별로 확인하며 디버깅합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4901,
+    "forks": 180,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "kagent",
+    "name": "kagent",
+    "github": "https://github.com/kagent-dev/kagent",
+    "description": "쿠버네티스 환경에서 AI 에이전트를 손쉽게 빌드하고 배포할 수 있는 네이티브 프레임워크입니다.",
+    "longDescription": "Kubernetes 오케스트레이션 플랫폼에 최적화된 AI 에이전트 구축 프레임워크입니다. 커스텀 리소스를 통해 에이전트의 동작과 런타임 설정을 유연하게 관리할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "Kubernetes",
+      "AI 에이전트",
+      "DevOps",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kagent.dev",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [
+      "kagent"
+    ],
+    "install": [],
+    "usageSteps": [
+      "공식 가이드를 참고하여 클러스터에 kagent를 설치합니다.",
+      "에이전트 커스텀 리소스(YAML)를 작성합니다.",
+      "kubectl을 이용해 에이전트를 배포하고 동작을 테스트합니다."
+    ],
+    "examplePrompt": "쿠버네티스 클러스터의 파드 오류를 진단해줘",
+    "usageNote": "",
+    "stars": 4079,
+    "forks": 853,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "sysbox",
+    "name": "Sysbox",
+    "github": "https://github.com/nestybox/sysbox",
+    "description": "컨테이너 내부에서 시스템d, Docker, Kubernetes 등을 가상머신처럼 실행할 수 있게 해주는 차세대 컨테이너 런타임입니다.",
+    "longDescription": "루트리스(Rootless) 컨테이너의 보안 격리를 강화하는 동시에, 전통적인 가상머신에서만 구동 가능하던 시스템 수준의 소프트웨어를 컨테이너 안에서 원활하게 실행하도록 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "컨테이너",
+      "Docker",
+      "Kubernetes",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/nestybox/sysbox",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "지원되는 Linux 배포판"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "시스템에 Sysbox 패키지를 다운로드하여 설치합니다.",
+      "도커 데몬 설정에서 런타임으로 sysbox를 지정합니다.",
+      "sysbox-runc 런타임을 사용하여 시스템 컨테이너를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "호스트 커널 버전 및 지원 여부를 확인해야 합니다.",
+    "stars": 3924,
+    "forks": 237,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "hetzner-k3s",
+    "name": "hetzner-k3s",
+    "github": "https://github.com/vitobotta/hetzner-k3s",
+    "description": "Hetzner 클라우드에 프로덕션 수준의 쿠버네티스(K3s) 클러스터를 빠르고 쉽게 구축하는 도구입니다.",
+    "longDescription": "Hetzner Cloud API를 활용하여 최소한의 설정으로 고가용성 K3s 쿠버네티스 클러스터를 프로비저닝할 수 있는 Crystal 기반 유틸리티입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "Hetzner",
+      "DevOps",
+      "클라우드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hetzner-k3s.com/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Hetzner API 토큰"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Linux 바이너리 다운로드 및 설치",
+        "command": "wget https://github.com/vitobotta/hetzner-k3s/releases/latest/download/hetzner-k3s-linux-amd64 && chmod +x hetzner-k3s-linux-amd64 && sudo mv hetzner-k3s-linux-amd64 /usr/local/bin/hetzner-k3s",
+        "note": "실행 파일을 경로에 이동하여 사용합니다."
+      }
+    ],
+    "usageSteps": [
+      "클러스터 설정 파일(cluster.yaml)을 생성하고 Hetzner 토큰을 입력합니다.",
+      "hetzner-k3s 클러스터 생성 명령어를 실행합니다.",
+      "생성된 kubeconfig 파일을 사용하여 클러스터에 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3711,
+    "forks": 235,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "wrkflw",
+    "name": "WRKFLW",
+    "github": "https://github.com/bahdotsh/wrkflw",
+    "description": "로컬 환경에서 GitHub Actions 워크플로우를 검증하고 실행할 수 있는 명령줄(CLI) 도구입니다.",
+    "longDescription": "Rust로 작성된 터미널 기반 UI(TUI)를 제공하여, GitHub에 코드를 푸시하기 전에 로컬 기기에서 워크플로우를 직접 테스트하고 디버깅할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CI",
+      "GitHub Actions",
+      "CLI",
+      "Rust"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/bahdotsh/wrkflw",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Rust 환경 또는 Homebrew"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo를 이용한 설치",
+        "command": "cargo install wrkflw",
+        "note": "러스트 패키지 매니저로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      ".github/workflows 경로가 있는 프로젝트 디렉토리로 이동합니다.",
+      "wrkflw 명령어를 실행하여 TUI 인터페이스를 엽니다.",
+      "워크플로우 구문을 검증하고 로컬 실행 테스트를 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3333,
+    "forks": 63,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "cyclops",
+    "name": "cyclops",
+    "github": "https://github.com/cyclops-ui/cyclops",
+    "description": "개발자 친화적인 UI를 제공하는 오픈소스 쿠버네티스 패키지 및 애플리케이션 관리 플랫폼입니다.",
+    "longDescription": "복잡한 Helm 차트나 매니페스트를 직접 다루지 않고도 웹 UI를 통해 쿠버네티스 애플리케이션을 쉽게 배포하고 관리할 수 있도록 돕는 플랫폼 엔지니어링 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "Helm",
+      "DevOps",
+      "React"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cyclops-ui.com",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Kubernetes 클러스터",
+      "kubectl"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "kubectl을 이용한 매니페스트 적용",
+        "command": "kubectl apply -f https://raw.githubusercontent.com/cyclops-ui/cyclops/cyclops-ctrl/hack/install.yaml",
+        "note": "쿠버네티스 클러스터에 사이클롭스를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "클러스터에 사이클롭스를 설치합니다.",
+      "웹 대시보드에 접속하여 배포하고자 하는 템플릿을 선택합니다.",
+      "폼 인터페이스를 통해 값을 설정하고 애플리케이션을 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3319,
+    "forks": 755,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "xxh",
+    "name": "xxh",
+    "github": "https://github.com/xxh/xxh",
+    "description": "SSH 접속 시 원격지 설치나 루트 권한 없이도 좋아하는 셸(Xonsh, Fish, Zsh 등)을 그대로 사용할 수 있게 해주는 도구입니다.",
+    "longDescription": "로컬에서 포터블 셸 환경과 플러그인을 미리 준비한 뒤 SSH를 통해 원격 호스트로 업로드하여 사용하므로, 원격 서버 환경을 더럽히지 않고 익숙한 개발 환경을 유지할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "SSH",
+      "Shell",
+      "Zsh",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://github.com/xxh/xxh",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "SSH 클라이언트",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "로컬 환경에 xxh를 설치합니다.",
+      "xxh hostname 형식으로 원격 서버에 접속합니다.",
+      "원격지에서 평소에 쓰던 셸과 설정으로 작업을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6117,
+    "forks": 124,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "adminset",
+    "name": "AdminSet",
+    "github": "https://github.com/guohongze/adminset",
+    "description": "기업용 CMDB, CI/CD, 자동화 작업 编排, 시스템 모니터링을 통합 제공하는 오픈소스 자동화 운영 플랫폼입니다.",
+    "longDescription": "DevOps 철학을 바탕으로 실제 운영(Ops) 환경의 다양한 요구사항을 통합하여 구축된 전체 자동화 운영 관리 시스템으로, 자산 관리부터 지속적 배포까지 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "CMDB",
+      "DevOps",
+      "자동화",
+      "Django"
+    ],
+    "platforms": [
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "http://adminset.cn",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Ubuntu 24.04 LTS",
+      "Python 3.12",
+      "Django 4.2+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "자동 설치 스크립트 실행",
+        "command": "git clone https://github.com/guohongze/adminset.git && cd adminset/install && ./server/auto_install.sh",
+        "note": "루트 권한으로 자동 설치 스크립트를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 리눅스 환경에서 저장소를 복제합니다.",
+      "설치 스크립트를 실행하여 데이터베이스 및 필수 서비스를 구성합니다.",
+      "웹 브라우저를 통해 Adminset 관리자 페이지에 접속하여 시스템을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "설치 시 root 권한이 필요하며 사전 요구사항을 충족해야 합니다.",
+    "stars": 3456,
+    "forks": 1422,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
+    "id": "opendevops",
+    "name": "CODO (opendevops)",
+    "github": "https://github.com/opendevops-cn/opendevops",
+    "description": "기업용 다중 혼합 클라우드 환경을 위한 원스톱 오픈소스 DevOps 및 자동화 운영 관리 플랫폼입니다.",
+    "longDescription": "CMDB, CI/CD, 작업 스케줄링, 모니터링 등 클라우드 환경 관리와 자동화 운영에 필요한 핵심 기능을 웹 기반으로 통합 제공하는 엔터프라이즈급 플랫폼입니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "DevOps",
+      "자동화",
+      "CMDB",
+      "CI/CD"
+    ],
+    "platforms": [
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "http://www.opendevops.cn/",
+    "featured": 9,
+    "added": "2026-10-23",
+    "addedAt": "2026-10-23T22:04:06.976Z",
+    "requirements": [
+      "Python 3.9+",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트 저장소를 클론합니다.",
+      "도커 콤포즈 또는 제공되는 가이드를 참고하여 백엔드와 프론트엔드를 실행합니다.",
+      "웹 대시보드에 접속하여 운영 파이프라인을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4106,
+    "forks": 1032,
+    "starsUpdatedAt": "2026-10-23"
+  },
+  {
     "id": "subtrackr",
     "name": "SubTrackr",
     "github": "https://github.com/bscott/subtrackr",
