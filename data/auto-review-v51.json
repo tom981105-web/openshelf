@@ -1,7 +1,1103 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-22T23:06:36.127Z",
+  "updatedAt": "2026-10-23T00:06:29.294Z",
   "items": [
+    {
+      "id": "spacetimedb",
+      "name": "SpacetimeDB",
+      "github": "https://github.com/clockworklabs/SpacetimeDB",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "spacetimedb",
+        "name": "SpacetimeDB",
+        "github": "https://github.com/clockworklabs/SpacetimeDB",
+        "description": "애플리케이션 로직을 직접 업로드하여 실시간 동기화를 지원하는 관계형 데이터베이스 서버입니다.",
+        "longDescription": "SpacetimeDB는 데이터베이스 자체가 서버 역할을 하도록 설계된 관계형 데이터베이스입니다. 사용자는 다양한 언어로 작성한 모듈을 데이터베이스에 직접 업로드하여 실시간 애플리케이션을 구축할 수 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터베이스",
+          "실시간",
+          "백엔드"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://spacetimedb.com",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Rust",
+          "curl 또는 PowerShell"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "macOS / Linux 설치",
+            "command": "curl -sSf https://install.spacetimedb.com | sh",
+            "note": "macOS 및 Linux 환경에서 SpacetimeDB CLI를 설치합니다."
+          },
+          {
+            "title": "Windows 설치",
+            "command": "iwr https://windows.spacetimedb.com -useb | iex",
+            "note": "Windows PowerShell을 사용하여 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "SpacetimeDB CLI를 설치합니다.",
+          "spacetime login 명령어로 GitHub 계정을 인증합니다.",
+          "spacetime dev --template chat-r 명령어로 개발용 템플릿을 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 25339,
+        "forks": 1092,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:16.970Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:20.542Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T00:06:25.988Z"
+    },
+    {
+      "id": "rocket",
+      "name": "Rocket",
+      "github": "https://github.com/rwf2/Rocket",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "rocket",
+        "name": "Rocket",
+        "github": "https://github.com/rwf2/Rocket",
+        "description": "사용 편의성과 보안, 속도를 중시하는 Rust용 비동기 웹 프레임워크입니다.",
+        "longDescription": "Rocket은 직관적인 API와 강력한 타입 안전성을 바탕으로 빠르고 안전한 웹 애플리케이션을 구축할 수 있도록 돕는 Rust 웹 프레임워크입니다. 매크로 기반의 라우팅과 요청 가공을 통해 보일러플레이트를 줄여줍니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Rust",
+          "웹프레임워크",
+          "백엔드"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://rocket.rs",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Rust"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Crates.io 참조",
+            "command": "cargo add rocket",
+            "note": "Cargo를 통해 프로젝트에 Rocket 크레이트를 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "Cargo를 이용해 Rust 프로젝트를 생성합니다.",
+          "Cargo.toml 파일에 Rocket 의존성을 추가합니다.",
+          "매크로를 활용하여 라우트 핸들러를 정의하고 서버를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 25777,
+        "forks": 1647,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:17.221Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:21.047Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T00:06:26.686Z"
+    },
+    {
+      "id": "angular-example-app",
+      "name": "Angular Example App",
+      "github": "https://github.com/Ismaestro/angular-example-app",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "angular-example-app",
+        "name": "Angular Example App",
+        "github": "https://github.com/Ismaestro/angular-example-app",
+        "description": "최신 Angular 기능과 프로덕션 모범 사례를 담은 예제 웹 애플리케이션",
+        "longDescription": "이 프로젝트는 독립형 컴포넌트, 시그널, 라우팅, 국제화 등의 핵심 기능을 실제 비즈니스 로직과 함께 학습할 수 있도록 구성된 Angular 스타터 템플릿입니다. 최신 Angular 개발 방식을 익히고 프로덕션 수준의 구조를 참고하는 데 유용합니다.",
+        "category": "교육·학습",
+        "tags": [
+          "Angular",
+          "프론트엔드",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://angular-example-app.ismaestro.com/",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Node.js",
+          "npm"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "의존성 설치 및 실행",
+            "command": "npm i && npm start",
+            "note": "패키지를 설치하고 로컬 개발 서버를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론한 후 프로젝트 디렉토리로 이동합니다.",
+          "npm i 명령어로 필요한 패키지를 설치합니다.",
+          "npm start 명령어로 로컬 개발 서버를 실행하고 브라우저에서 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2386,
+        "forks": 1267,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:17.391Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:21.609Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T00:06:27.676Z"
+    },
+    {
+      "id": "portfoliowebsite",
+      "name": "PortfolioWebsite",
+      "github": "https://github.com/AhmadHassan-BTed/PortfolioWebsite",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "portfoliowebsite",
+        "name": "PortfolioWebsite",
+        "github": "https://github.com/AhmadHassan-BTed/PortfolioWebsite",
+        "description": "소프트웨어 엔지니어링과 그래픽 디자인 역량을 소개하는 고성능 정적 포트폴리오 웹사이트",
+        "longDescription": "HTML5, CSS3, JavaScript 및 Vite를 기반으로 구축된 정적 포트폴리오 템플릿입니다. 깔끔하고 반응형 레이아웃을 제공하여 개인 프로젝트와 이력서를 공유하는 데 적합합니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "포트폴리오",
+          "웹사이트",
+          "프론트엔드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://ahmadhassan-bted.github.io/PortfolioWebsite/",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Node.js",
+          "npm"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "의존성 동기화",
+            "command": "npm install",
+            "note": "프로젝트 의존성을 설치합니다."
+          },
+          {
+            "title": "개발 서버 실행",
+            "command": "npm run dev",
+            "note": "Vite 개발 서버를 초기화합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 프로젝트 폴더로 이동합니다.",
+          "npm install 명령어로 의존성을 설치합니다.",
+          "npm run dev 명령어로 로컬 환경에서 미리보기를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1778,
+        "forks": 0,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:17.627Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:22.213Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T00:06:28.429Z"
+    },
+    {
+      "id": "cirrus",
+      "name": "Cirrus",
+      "github": "https://github.com/Spiderpig86/Cirrus",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09"
+    },
+    {
+      "id": "urlpages",
+      "name": "URL Pages",
+      "github": "https://github.com/jstrieb/urlpages",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09"
+    },
+    {
+      "id": "snappysnippet",
+      "name": "SnappySnippet",
+      "github": "https://github.com/kdzwinel/SnappySnippet",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "snappysnippet",
+        "name": "SnappySnippet",
+        "github": "https://github.com/kdzwinel/SnappySnippet",
+        "description": "DOM 요소의 HTML과 CSS를 추출해 CodePen 등으로 내보내는 크롬 확장 프로그램",
+        "longDescription": "웹페이지의 특정 요소를 검사한 뒤 불필요한 속성을 제거하고 읽기 쉬운 CSS로 최적화해 주는 브라우저 확장 프로그램입니다. 추출한 코드를 원คลิก으로 CodePen, jsFiddle 등로 내보낼 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Chrome 확장 프로그램",
+          "HTML/CSS",
+          "개발자 도구"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/kdzwinel/SnappySnippet",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Google Chrome"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 다운로드하거나 클론합니다.",
+          "크롬 확장 프로그램 페이지에서 개발자 모드를 켜고 압축 해제된 확장 프로그램으로 수동 로드합니다.",
+          "개발자 도구의 SnappySnippet 탭을 열어 원하는 요소를 추출합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1123,
+        "forks": 160,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:17.821Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:22.989Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-23T00:06:29.294Z"
+    },
+    {
+      "id": "expressive-code",
+      "name": "Expressive Code",
+      "github": "https://github.com/expressive-code/expressive-code",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09"
+    },
+    {
+      "id": "shinydashboard",
+      "name": "shinydashboard",
+      "github": "https://github.com/rstudio/shinydashboard",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "shinydashboard",
+        "name": "shinydashboard",
+        "github": "https://github.com/rstudio/shinydashboard",
+        "description": "R 언어를 사용하여 대시보드 형태의 인터랙티브 웹 애플리케이션을 손쉽게 구축할 수 있는 프레임워크입니다.",
+        "longDescription": "shinydashboard는 R의 Shiny 패키지와 연동되어 헤더, 사이드바, 박스 레이아웃 등 대시보드 UI를 간편하게 구성할 수 있게 해주는 패키지입니다. 데이터 시각화와 통계 분석 결과를 웹 인터페이스로 빠르게 전환할 수 있습니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "R",
+          "대시보드",
+          "Shiny",
+          "웹 앱",
+          "데이터 시각화"
+        ],
+        "platforms": [
+          "Web",
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://rstudio.github.io/shinydashboard/",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "R",
+          "Shiny"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "CRAN에서 설치",
+            "command": "install.packages(\"shinydashboard\")",
+            "note": "R 콘솔에서 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "R 또는 RStudio를 실행합니다.",
+          "install.packages(\"shinydashboard\") 명령어로 패키지를 설치합니다.",
+          "library(shinydashboard)를 호출하여 대시보드 UI와 서버 로직을 작성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 926,
+        "forks": 291,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:18.107Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:23.321Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "javalite",
+      "name": "JavaLite",
+      "github": "https://github.com/javalite/javalite",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "javalite",
+        "name": "JavaLite",
+        "github": "https://github.com/javalite/javalite",
+        "description": "자바 환경에서 일상적인 개발의 즐거움을 되찾아 주기 위해 설계된 응집력 있는 신속 애플리케이션 프레임워크 컬렉션입니다.",
+        "longDescription": "JavaLite는 ActiveJDBC 등의 모듈을 포함하여 관례(Convention over Configuration)를 바탕으로 자바 기반 웹 애플리케이션을 빠르게 개발할 수 있도록 지원하는 프레임워크입니다. 데이터베이스 연동과 테스트 작성을 간소화합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Java",
+          "ActiveJDBC",
+          "백엔드",
+          "웹 프레임워크",
+          "빠른 개발"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://javalite.io",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Docker",
+          "Maven"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 및 Maven 빌드",
+            "command": "docker compose up -d && mvn clean install",
+            "note": "Docker로 데이터베이스를 구동하고 Maven을 통해 프로젝트를 빌드합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트 루트 디렉토리에서 Docker Compose를 실행하여 데이터베이스 컨테이너를 띄웁니다.",
+          "mvn clean install 명령어로 프로젝트를 빌드하고 테스트를 실행합니다.",
+          "ActiveJDBC 설정을 활용하여 데이터베이스 모델과 비즈니스 로직을 구현합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 869,
+        "forks": 208,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:18.380Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:23.664Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "content-2",
+      "name": "MDN Web Docs Content",
+      "github": "https://github.com/mdn/content",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "content-2",
+        "name": "MDN Web Docs Content",
+        "github": "https://github.com/mdn/content",
+        "description": "HTML, CSS, JavaScript 및 웹 API에 대한 포괄적인 공식 문서를 제공하는 오픈소스 저장소입니다.",
+        "longDescription": "전세계 웹 개발자들을 위한 표준 문서인 MDN Web Docs의 원본 소스코드를 관리합니다. 다양한 웹 기술 표준과 상세한 레퍼런스, 초보자를 위한 학습 리소스를 포함하고 있습니다.",
+        "category": "교육·학습",
+        "tags": [
+          "문서",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "웹표준"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://developer.mozilla.org",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Node.js",
+          "npm"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "의존성 설치 및 실행",
+            "command": "npm install && npm start",
+            "note": "로컬 환경에서 MDN 문서를 빌드하고 미리보기를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 Node.js 환경을 준비합니다.",
+          "npm install 명령어로 필요한 패키지를 설치합니다.",
+          "npm start 명령어로 로컬 개발 서버를 실행하여 문서를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 11072,
+        "forks": 23270,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:18.621Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:24.115Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "shiny",
+      "name": "Shiny for R",
+      "github": "https://github.com/rstudio/shiny",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "shiny",
+        "name": "Shiny for R",
+        "github": "https://github.com/rstudio/shiny",
+        "description": "R 언어를 사용하여 HTML, CSS, JavaScript 없이도 풍부한 대화형 웹 애플리케이션을 구축할 수 있는 프레임워크입니다.",
+        "longDescription": "R 코드의 데이터 분석 결과를 직관적인 반응형 웹 인터페이스로 쉽게 변환해 줍니다. 확장성이 뛰어난 리액티브 프로그래밍 모델을 기반으로 다양한 대시보드와 웹 앱을 만들 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "R",
+          "웹앱",
+          "대시보드",
+          "프레임워크"
+        ],
+        "platforms": [
+          "Web",
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://shiny.posit.co/",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "R"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "CRAN을 통한 설치",
+            "command": "install.packages(\"shiny\")",
+            "note": "R 콘솔에서 안정 버전을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "R 환경에서 shiny 패키지를 설치합니다.",
+          "library(shiny)로 라이브러리를 불러옵니다.",
+          "runExample()을 통해 기본 예제 앱을 실행하여 동작을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5705,
+        "forks": 1889,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:18.910Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:24.455Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "ui-buttons",
+      "name": "UI Buttons",
+      "github": "https://github.com/youneslaaroussi/ui-buttons",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09"
+    },
+    {
+      "id": "wanix",
+      "name": "Wanix",
+      "github": "https://github.com/tractordev/wanix",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09"
+    },
+    {
+      "id": "css-docs",
+      "name": "CSS Docs",
+      "github": "https://github.com/youneslaaroussi/css-docs",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09"
+    },
+    {
+      "id": "oxide-auth",
+      "name": "Oxide Auth",
+      "github": "https://github.com/197g/oxide-auth",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "oxide-auth",
+        "name": "Oxide Auth",
+        "github": "https://github.com/197g/oxide-auth",
+        "description": "Actix 등 다양한 프론트엔드 웹 서버와 조합하여 사용할 수 있는 설정 가능하고 확장 가능한 Rust 기반 OAuth2 서버 라이브러리입니다.",
+        "longDescription": "서버에서 OAuth2 토큰을 관리하기 위한 종합적이고 확장 가능한 인터페이스를 제공합니다. 핵심 패키지는 특정 웹 프레어워크에 종속되지 않으며, 트레이트 기반 설계를 통해 백엔드와 프론트엔드를 유연하게 연동할 수 있습니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "OAuth2",
+          "인증",
+          "Rust",
+          "백엔드"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/197g/oxide-auth",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Cargo"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "예제 실행",
+            "command": "cargo run example-actix",
+            "note": "Actix 백엔드를 사용하는 OAuth2 서버 예제를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Cargo를 사용하여 프로젝트에 의존성을 추가합니다.",
+          "제공되는 트레이트를 활용해 백엔드 저장소와 프론트엔드를 구성합니다.",
+          "예제 코드를 참고하여 인증 서버를 실행하고 토큰 발급 흐름을 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 786,
+        "forks": 103,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:19.071Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-23T00:06:25.133Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "self-improving-agent",
+      "name": "Self-Improving Agent for OpenClaw",
+      "github": "https://github.com/pskoett/self-improving-agent",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.311Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "self-improving-agent",
+        "name": "Self-Improving Agent for OpenClaw",
+        "github": "https://github.com/pskoett/self-improving-agent",
+        "description": "세션 간 지속적인 개선을 위해 학습 내용, 오류, 기능 요청을 기록하고 반영하는 OpenClaw 전용 에이전트 지식 스킬입니다.",
+        "longDescription": "AI 에이전트가 이전 작업에서 얻은 피드백과 실수들을 기억하고 다음 작업에 활용할 수 있도록 돕습니다. 마켓플레이스 환경에서 에이전트의 역량을 점진적으로 향상시키는 데 기여합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI에이전트",
+          "지식관리",
+          "메모리",
+          "OpenClaw"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://clawhub.ai/pskoett/skills/self-improving-agent",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [
+          "OpenClaw"
+        ],
+        "install": [],
+        "usageSteps": [
+          "저장소의 self-improving-agent 하위 폴더를 확인합니다.",
+          "해당 스킬 패키지를 OpenClaw의 스킬 디렉토리에 복사합니다.",
+          "에이전트 세션 내에서 학습 및 오류 기록 기능이 활성화되었는지 확인합니다."
+        ],
+        "examplePrompt": "이전 세션에서 발생한 오류를 분석하고 개선안을 기록해줘",
+        "usageNote": "OpenClaw 환경 전용으로 설계되었습니다.",
+        "stars": 777,
+        "forks": 116,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:19.268Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "wpt",
+      "name": "Web Platform Tests",
+      "github": "https://github.com/web-platform-tests/wpt",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.312Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "wpt",
+        "name": "Web Platform Tests",
+        "github": "https://github.com/web-platform-tests/wpt",
+        "description": "WHATWG, W3C 등 웹 플랫폼 표준 명세를 검증하기 위한 종합적인 브라우저 테스트 수트입니다.",
+        "longDescription": "다양한 브라우저 엔진(Chrome, Firefox, Safari 등)에서 웹 표준이 올바르게 구현되었는지 테스트하고 검증하는 공식 플랫폼입니다. 브라우저 자동화 및 테스트 실행을 위한 도구들을 포함하고 있습니다.",
+        "category": "테스트·품질",
+        "tags": [
+          "테스트",
+          "웹표준",
+          "브라우저",
+          "자동화"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://web-platform-tests.org/",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Python 3"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "매니페스트 업데이트",
+            "command": "wpt manifest",
+            "note": "테스트 매니페스트를 생성하거나 업데이트합니다."
+          }
+        ],
+        "usageSteps": [
+          "Python 3 환경에서 저장소를 클론하고 설정합니다.",
+          "wpt manifest 명령어로 테스트 매니페스트를 생성합니다.",
+          "wpt serve 등의 명령어로 테스트 서버를 구동하고 검증을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6281,
+        "forks": 4014,
+        "starsUpdatedAt": "2026-10-23"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-23T00:06:19.471Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "thruster",
+      "name": "Thruster",
+      "github": "https://github.com/thruster-rs/Thruster",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-23T00:06:16.312Z",
+      "sourceRun": "2026-10-23T09"
+    },
+    {
+      "id": "pakyow",
+      "name": "Pakyow",
+      "github": "https://github.com/pakyow/pakyow",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-23T00:06:16.312Z",
+      "sourceRun": "2026-10-23T09",
+      "tool": {
+        "id": "pakyow",
+        "name": "Pakyow",
+        "github": "https://github.com/pakyow/pakyow",
+        "description": "HTML 뷰를 백엔드 로직과 바로 연결하여 디자인을 우선시하는 루비(Ruby) 기반 웹 프레임워크입니다.",
+        "longDescription": "백엔드 코드 작성 없이 브라우저 내에서 먼저 인터페이스를 프로토타이핑한 뒤 데이터 바인딩을 추가하여 완전한 웹 앱으로 확장할 수 있습니다. 웹 개발의 진입 장벽을 낮추고 디자이너와 개발자 간 협업을 돕습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Ruby",
+          "웹프레ım워크",
+          "디자인",
+          "풀스택"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pakyow.com",
+        "featured": 9,
+        "added": "2026-10-23",
+        "addedAt": "2026-10-23T00:04:04.540Z",
+        "requirements": [
+          "Ruby"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Ruby 환경에서 Pakyow 프레임워크를 설치합니다.",
+          "HTML 뷰 템플릿을 작성하여 UI 프로토타입을 구성합니다.",
+          "데이터 바인딩을 적용하여 백엔드 동작을 연결하고 앱을 완성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 815,
+        "forks": 63,
+        "starsUpdatedAt": "2026-10-23"
+      }
+    },
     {
       "id": "hello-agents",
       "name": "hello-agents",
@@ -9254,85 +10350,6 @@
         "명확히 검증되지 않은 라이선스"
       ],
       "documentEvidenceCheckedAt": "2026-10-22T13:08:57.141Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "self-improving-agent",
-      "name": "self-improving-agent",
-      "github": "https://github.com/pskoett/self-improving-agent",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T13:08:48.157Z",
-      "sourceRun": "2026-10-22T22",
-      "tool": {
-        "id": "self-improving-agent",
-        "name": "self-improving-agent",
-        "github": "https://github.com/pskoett/self-improving-agent",
-        "description": "세션 간 지속적인 개선을 위해 학습 내용, 오류, 기능 요청을 포착하는 OpenClaw용 에이전트 지식 스킬입니다.",
-        "longDescription": "AI 에이전트가 작업 과정에서 얻은 인사이트를 기억하고 반영할 수 있도록 지원하며, 스킬 마켓플레이스에서 연동하여 사용할 수 있습니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI에이전트",
-          "지식관리",
-          "메모리",
-          "OpenClaw"
-        ],
-        "platforms": [
-          "Web",
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://clawhub.ai/pskoett/skills/self-improving-agent",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T13:04:03.159Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [
-          "OpenClaw"
-        ],
-        "install": [],
-        "usageSteps": [
-          "패키지 폴더를 OpenClaw의 스킬 디렉토리(~/.openclaw/skills/)에 복사합니다.",
-          "에이전트 실행 시 스킬이 자동으로 로드되도록 설정합니다.",
-          "작업 중 발생하는 피드백과 학습 내용이 메모리에 기록되는지 확인합니다."
-        ],
-        "examplePrompt": "지난 세션에서 발생한 오류를 분석하고 개선 사항을 기억해줘.",
-        "usageNote": "",
-        "stars": 777,
-        "forks": 116,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T13:08:51.320Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T13:08:57.951Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -32410,93 +33427,6 @@
       }
     },
     {
-      "id": "content-2",
-      "name": "content",
-      "github": "https://github.com/mdn/content",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T03:06:11.967Z",
-      "sourceRun": "2026-10-21T12",
-      "tool": {
-        "id": "content-2",
-        "name": "content",
-        "github": "https://github.com/mdn/content",
-        "description": "HTML, CSS, JavaScript 및 웹 표준 기술을 다루는 MDN 웹 문서 소스 저장소",
-        "longDescription": "전 세계 웹 개발자들을 위한 공식 레퍼런스이자 학습 가이드인 MDN Web Docs의 방대한 콘텐츠와 가이드를 제공합니다.",
-        "category": "교육·학습",
-        "tags": [
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "웹개발",
-          "문서"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://developer.mozilla.org",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T03:03:59.877Z",
-        "requirements": [
-          "Node.js",
-          "npm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "의존성 설치",
-            "command": "npm install",
-            "note": "로컬 미리보기 환경을 구축하기 위해 패키지를 설치합니다."
-          },
-          {
-            "title": "로컬 서버 실행",
-            "command": "npm start",
-            "note": "로컬에서 문서를 빌드하고 미리봅니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 Node.js 환경을 설정합니다.",
-          "npm 명령어로 의존성을 설치하고 로컬 서버를 구동합니다.",
-          "브라우저에서 문서 내용을 확인하고 수정 사항을 기여합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 11068,
-        "forks": 23264,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T03:06:14.279Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T03:06:20.452Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "react-styleguidist",
       "name": "react-styleguidist",
       "github": "https://github.com/styleguidist/react-styleguidist",
@@ -38333,96 +39263,6 @@
       "reasons": [],
       "checkedAt": "2026-10-20T15:10:00.555Z",
       "sourceRun": "2026-10-21T00"
-    },
-    {
-      "id": "spacetimedb",
-      "name": "SpacetimeDB",
-      "github": "https://github.com/clockworklabs/SpacetimeDB",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T14:07:44.096Z",
-      "sourceRun": "2026-10-20T23",
-      "tool": {
-        "id": "spacetimedb",
-        "name": "SpacetimeDB",
-        "github": "https://github.com/clockworklabs/SpacetimeDB",
-        "description": "애플리케이션 로직을 데이터베이스에 직접 업로드하여 서버 없이 실시간 동기화를 지원하는 관계형 데이터베이스 서버입니다.",
-        "longDescription": "실시간 웹 애플리케이션, 대시보드, 채팅 및 멀티플레이어 게임을 위해 설계되었으며 클라이언트가 중간 서버 없이 데이터베이스와 직접 통신합니다. Rust, C#, TypeScript 등 다양한 언어로 스키마와 비즈니스 로직을 모듈 형태로 작성할 수 있습니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "Rust",
-          "실시간",
-          "멀티플레이어",
-          "웹 개발"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://spacetimedb.com",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T14:04:06.196Z",
-        "requirements": [
-          "Rust 또는 지원되는 언어 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "CLI 설치 (macOS / Linux)",
-            "command": "curl -sSf https://install.spacetimedb.com | sh",
-            "note": "macOS 및 Linux 환경에서 SpacetimeDB CLI를 설치합니다."
-          },
-          {
-            "title": "로그인",
-            "command": "spacetime login",
-            "note": "GitHub 계정을 연동하여 인증을 진행합니다."
-          }
-        ],
-        "usageSteps": [
-          "공식 설치 스크립트를 사용하여 CLI 도구를 설치합니다.",
-          "spacetime login 명령어로 계정 인증을 완료합니다.",
-          "템플릿을 기반으로 개발을 시작하고 데이터베이스 모듈을 배포합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 25321,
-        "forks": 1092,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T14:07:45.378Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T14:07:50.449Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "The operation was aborted due to timeout"
     },
     {
       "id": "assimp",
@@ -51728,166 +52568,6 @@
       "sourceRun": "2026-10-19T14"
     },
     {
-      "id": "wpt",
-      "name": "web-platform-tests",
-      "github": "https://github.com/web-platform-tests/wpt",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T05:05:57.439Z",
-      "sourceRun": "2026-10-19T14",
-      "tool": {
-        "id": "wpt",
-        "name": "web-platform-tests",
-        "github": "https://github.com/web-platform-tests/wpt",
-        "description": "브라우저 및 웹 플랫폼 표준 준수를 위한 공식 테스트 스위트",
-        "longDescription": "WHATWG 및 W3C 등의 웹 표준 사양을 검증하기 위한 종합 테스트 러너 및 테스트 스위트입니다. 로컬 환경에서 브라우저 호환성을 테스트하고 자동화할 수 있습니다.",
-        "category": "테스트·품질",
-        "tags": [
-          "테스트",
-          "웹표준",
-          "브라우저"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://web-platform-tests.org/",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T05:03:59.804Z",
-        "requirements": [
-          "Python 3"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 복제하고 의존성을 설치합니다.",
-          "wpt manifest 명령어로 테스트 매니페스트를 생성 또는 갱신합니다.",
-          "wpt serve-wave 등의 명령어로 테스트 서버를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6238,
-        "forks": 4002,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T05:05:58.206Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T05:06:01.090Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T05:06:05.601Z"
-    },
-    {
-      "id": "shiny",
-      "name": "Shiny",
-      "github": "https://github.com/rstudio/shiny",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T05:05:57.439Z",
-      "sourceRun": "2026-10-19T14",
-      "tool": {
-        "id": "shiny",
-        "name": "Shiny",
-        "github": "https://github.com/rstudio/shiny",
-        "description": "R 언어만으로 대화형 웹 애플리케이션을 구축할 수 있는 프레임워크",
-        "longDescription": "데이터 분석가와 통계학자가 복잡한 웹 기술 없이도 반응형 웹 앱을 만들 수 있게 해주는 R 패키지입니다. 직관적인 반응형 프로그래밍 모델을 제공하여 기존 R 코드를 웹 인터페이스로 쉽게 전환할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "R",
-          "웹앱",
-          "데이터분석"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://shiny.posit.co/",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T05:03:59.804Z",
-        "requirements": [
-          "R 언어 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "CRAN에서 설치",
-            "command": "install.packages(\"shiny\")",
-            "note": "R 콘솔에서 안정 버전 설치"
-          }
-        ],
-        "usageSteps": [
-          "R 콘솔에서 library(shiny)를 실행하여 패키지를 불러옵니다.",
-          "runExample() 명령어로 내장된 예제 앱을 실행해 봅니다.",
-          "UI와 서버 로직을 작성하여 자신만의 웹 앱을 빌드합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5702,
-        "forks": 1889,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T05:05:58.444Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T05:06:01.362Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T05:06:06.607Z"
-    },
-    {
       "id": "gowebly",
       "name": "Gowebly",
       "github": "https://github.com/gowebly/gowebly",
@@ -51926,87 +52606,6 @@
       "reasons": [],
       "checkedAt": "2026-10-19T05:05:57.439Z",
       "sourceRun": "2026-10-19T14"
-    },
-    {
-      "id": "angular-example-app",
-      "name": "Angular Example App",
-      "github": "https://github.com/Ismaestro/angular-example-app",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T05:05:57.439Z",
-      "sourceRun": "2026-10-19T14",
-      "tool": {
-        "id": "angular-example-app",
-        "name": "Angular Example App",
-        "github": "https://github.com/Ismaestro/angular-example-app",
-        "description": "최신 Angular 기능을 활용한 프로덕션 준비 완료형 실무 예제 웹 애플리케이션",
-        "longDescription": "Angular 초보자와 실무 개발자 모두를 위한 모범 사례 기반의 스타터 템플릿입니다. 독립형 컴포넌트, 시그널, 라우팅 및 실제 API 연동 구조를 학습하고 확장할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Angular",
-          "프론트엔드",
-          "웹개발"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://angular-example-app.ismaestro.com/",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T05:03:59.804Z",
-        "requirements": [
-          "Node.js 및 npm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "의존성 설치 및 실행",
-            "command": "npm i && npm start",
-            "note": "패키지 설치 후 개발 서버 구동"
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론한 후 프로젝트 디렉토리로 이동합니다.",
-          "npm i 명령어로 의존성 패키지를 설치합니다.",
-          "npm start 명령어를 실행하여 로컬 개발 서버를 엽니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2386,
-        "forks": 1392,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T05:05:58.652Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T05:06:02.033Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-19T05:06:07.370Z"
     },
     {
       "id": "esri-leaflet",
@@ -52110,82 +52709,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-19T05:06:08.330Z"
-    },
-    {
-      "id": "rocket",
-      "name": "Rocket",
-      "github": "https://github.com/rwf2/Rocket",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-19T05:05:57.439Z",
-      "sourceRun": "2026-10-19T14",
-      "tool": {
-        "id": "rocket",
-        "name": "Rocket",
-        "github": "https://github.com/rwf2/Rocket",
-        "description": "사용성, 보안, 속도에 초점을 맞춘 Rust용 비동기 웹 프레임워크입니다.",
-        "longDescription": "직관적이고 안전한 API를 제공하여 Rust 개발자가 고성능 웹 애플리케이션을 빠르게 구축할 수 있도록 돕는 대표적인 웹 프레임워크입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Rust",
-          "웹프레임워크",
-          "백엔드",
-          "API"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://rocket.rs",
-        "featured": 9,
-        "added": "2026-10-19",
-        "addedAt": "2026-10-19T05:03:59.804Z",
-        "requirements": [
-          "Rust"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Cargo를 통해 프로젝트에 Rocket 크레이트 추가",
-          "매크로를 이용해 라우팅 및 핸들러 함수 작성",
-          "애플리케이션 빌드 및 실행"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 25776,
-        "forks": 1647,
-        "starsUpdatedAt": "2026-10-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-19T05:05:59.282Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-19T05:06:03.147Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "front-end-performance-checklist",
