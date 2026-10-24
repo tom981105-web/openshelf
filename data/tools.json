@@ -1,5 +1,516 @@
 [
   {
+    "id": "gefyra",
+    "name": "Gefyra",
+    "github": "https://github.com/gefyrahq/gefyra",
+    "description": "쿠버네티스 클러스터와 연동하여 로컬 애플리케이션을 초고속으로 개발할 수 있는 도구입니다.",
+    "longDescription": "로컬에서 실행 중인 컨테이너나 코드를 원격 쿠버네티스 클러스터의 트래픽과 연결하여 원활한 디버깅과 개발을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "Docker",
+      "Python",
+      "개발도구",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://gefyra.dev",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Kubernetes 클러스터",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Gefyra CLI 설치 및 클러스터 연결",
+      "로컬 개발 환경 설정",
+      "클러스터 브리지 생성 후 로컬 디버깅 시작"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 801,
+    "forks": 35,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "harborguard",
+    "name": "HarborGuard",
+    "github": "https://github.com/HarborGuard/HarborGuard",
+    "description": "다양한 도구가 통합된 현대적인 도커 이미지 취약점 스캔 및 패치 플랫폼입니다.",
+    "longDescription": "도커 이미지의 보안 평가를 관리하고 시각화하기 위한 직관적인 웹 인터페이스를 제공하며, 컨테이너 보안성을 높여줍니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Docker",
+      "보안",
+      "취약점스캔",
+      "TypeScript",
+      "React"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://demo.harborguard.co/",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker로 실행",
+        "command": "docker run -p 3000:3000 ghcr.io/harborguard/harborguard:latest",
+        "note": "최신 HarborGuard 컨테이너를 실행하여 웹 인터페이스에 접속합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker를 이용해 HarborGuard 이미지 실행",
+      "웹 브라우저(포트 3000)로 접속",
+      "컨테이너 이미지 스캔 및 보안 취약점 확인"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 627,
+    "forks": 27,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "tengine",
+    "name": "Tengine",
+    "github": "https://github.com/OAID/Tengine",
+    "description": "임베디드 기기를 위한 가볍고 고성능의 모듈형 AI 추론 엔진입니다.",
+    "longDescription": "다양한 하드웨어 플랫폼에서 딥러닝 모델을 효율적으로 실행할 수 있도록 설계된 추론 엔진입니다. ARM, x86, NPU 등 다양한 가속기를 지원하며 딥러닝 분류 및 검출 알고리즘 예제를 제공합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "딥러닝",
+      "추론",
+      "임베디드",
+      "C++",
+      "AI"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/OAID/Tengine",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "C++ 컴파일러",
+      "CMake"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 소스 코드를 빌드합니다.",
+      "제공되는 예제(examples)를 통해 모델 분류 및 검출을 테스트합니다.",
+      "필요한 경우 모델 변환 도구를 사용하여 타겟 기기용 모델로 변환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4533,
+    "forks": 982,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "docker-php-nginx",
+    "name": "Docker PHP-FPM & Nginx",
+    "github": "https://github.com/TrafeX/docker-php-nginx",
+    "description": "Alpine Linux 기반의 가볍고 안전한 PHP-FPM 및 Nginx 도커 이미지입니다.",
+    "longDescription": "최신 PHP와 Nginx를 결합하여 웹 애플리케이션 배포를 간소화하는 컨테이너 이미지입니다. 초소형 이미지 크기와 비특권 사용자 실행 설정을 통해 성능과 보안을 모두 최적화했습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Docker",
+      "PHP",
+      "Nginx",
+      "Alpine",
+      "웹서버"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hub.docker.com/r/trafex/php-nginx",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker를 통해 이미지를 풀하거나 커스텀 Dockerfile을 작성합니다.",
+      "웹 소스 코드를 컨테이너 볼륨에 마운트합니다.",
+      "컨테이너를 실행하여 웹 서비스를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1511,
+    "forks": 759,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "django-health-check",
+    "name": "Django Health Check",
+    "github": "https://github.com/codingjoe/django-health-check",
+    "description": "Django 애플리케이션을 위한 확장 가능한 상태 점검 플러그인입니다.",
+    "longDescription": "데이터베이스, 캐시, 스토리지 등 Django 애플리케이션의 핵심 구성 요소와 서비스 상태를 모니터링하고 진단할 수 있는 플러그인 시스템을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Django",
+      "Python",
+      "모니터링",
+      "헬스체크",
+      "웹"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://codingjoe.dev/django-health-check/",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Python",
+      "Django"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install django-health-check",
+        "note": "pip를 사용하여 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 패키지를 설치합니다.",
+      "Django 프로젝트의 INSTALLED_APPS 및 URL 설정을 구성합니다.",
+      "상태 점검 엔드포인트를 통해 애플리케이션 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1424,
+    "forks": 225,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "kube-fledged",
+    "name": "Kube-fledged",
+    "github": "https://github.com/senthilrch/kube-fledged",
+    "description": "쿠버네티스 워커 노드에 컨테이너 이미지 캐시를 생성하고 관리하는 오퍼레이터입니다.",
+    "longDescription": "클러스터 워커 노드에 미리 컨테이너 이미지를 다운로드하여 캐싱함으로써, 애플리케이션 파드가 지연 없이 거의 즉시 시작될 수 있도록 지원하는 쿠버네티스 애드온입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "캐시",
+      "컨테이너",
+      "DevOps",
+      "오퍼레이터"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/senthilrch/kube-fledged",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm을 이용한 설치",
+        "command": "helm repo add kube-fledged https://senthilrch.github.io/kube-fledged-charts\nhelm install kube-fledged kube-fledged/kube-fledged -n kube-fledged",
+        "note": "Helm 차트를 이용해 쿠버네티스에 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "Helm 또는 YAML 매니페스트를 사용하여 클러스터에 Kube-fledged를 배포합니다.",
+      "ImageCache 자원을 생성하여 캐시할 이미지와 대상 노드를 지정합니다.",
+      "파드 기동 시 이미지 풀 지연이 감소하는 것을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1378,
+    "forks": 127,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "bottlejs",
+    "name": "BottleJS",
+    "github": "https://github.com/young-steveo/bottlejs",
+    "description": "자바스크립트 애플리케이션을 위한 강력한 의존성 주입 마이크로 컨테이너입니다.",
+    "longDescription": "브라우저와 Node.js 환경 모두에서 사용할 수 있는 가볍고 직관적인 의존성 주입(DI) 라이브러리입니다. 서비스 등록, 미들웨어 설정, 객체 생명주기 관리를 간단하게 처리할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "JavaScript",
+      "의존성주입",
+      "Node.js",
+      "라이브러리",
+      "DI"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/young-steveo/bottlejs",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Node.js 또는 브라우저 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM을 이용한 설치",
+        "command": "npm install bottlejs",
+        "note": "프로젝트 디렉토리에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm 또는 bower를 통해 패키지를 설치합니다.",
+      "코드에서 Bottle 인스턴스를 생성하고 서비스를 등록합니다.",
+      "필요한 곳에서 의존성을 주입받아 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1302,
+    "forks": 63,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "caddy-docker",
+    "name": "Caddy Docker",
+    "github": "https://github.com/abiosoft/caddy-docker",
+    "description": "다양한 플러그인이 포함된 Caddy 웹서버용 도커 이미지입니다.",
+    "longDescription": "자동 HTTPS 설정으로 유명한 Caddy 웹서버를 도커 환경에서 쉽게 실행할 수 있도록 구성한 이미지입니다. Git, CORS, RealIP, Cloudflare DNS 등의 유용한 플러그인이 사전 포함되어 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Docker",
+      "Caddy",
+      "웹서버",
+      "HTTPS",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hub.docker.com/r/abiosoft/caddy/",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "도커 실행",
+        "command": "docker run -d -p 2015:2015 abiosoft/caddy",
+        "note": "도커를 통해 Caddy 컨테이너를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker를 사용하여 이미지를 다운로드합니다.",
+      "설정 파일 및 인증서 스토리지를 볼륨으로 마운트합니다.",
+      "브라우저로 서버에 접속하여 동작을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 785,
+    "forks": 300,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "container",
+    "name": "Golobby Container",
+    "github": "https://github.com/golobby/container",
+    "description": "Go 언어를 위한 가볍고 강력한 IoC 의존성 주입 컨테이너입니다.",
+    "longDescription": "Go 언어 프로그램에서 객체의 생명주기를 관리하고 추상화와 구현체를 바인딩해주는 의존성 주입 프레임워크입니다. 높은 테스트 커버리지와 깔끔한 API를 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "Golang",
+      "의존성주입",
+      "IoC",
+      "프레임워크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/golobby/container",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Go v1.11 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 모듈 설치",
+        "command": "go get github.com/golobby/container/v3",
+        "note": "프로젝트에 컨테이너 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 go get 명령어로 패키지를 설치합니다.",
+      "코드에서 컨테이너를 생성하고 인터페이스와 구현체를 바인딩합니다.",
+      "필요한 컴포넌트를 주입받아 애플리케이션을 구동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 610,
+    "forks": 36,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "leash",
+    "name": "Leash",
+    "github": "https://github.com/strongdm/leash",
+    "description": "AI 코딩 에이전트를 컨테이너로 감싸고 보안 정책을 강제하는 도구입니다.",
+    "longDescription": "AI 에이전트의 활동을 모니터링하고 격리하기 위해 에이전트를 컨테이너 환경에서 실행하는 보안 도구입니다. Cedar 정책 언어를 사용하여 에이전트의 행위를 세밀하게 제어할 수 있습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "AI",
+      "보안",
+      "컨테이너",
+      "샌드박스",
+      "Node.js"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://leash.strongdm.ai/",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Docker",
+      "Podman",
+      "OrbStack 중 하나"
+    ],
+    "supportedAgents": [
+      "claude-code",
+      "codex-cli"
+    ],
+    "install": [
+      {
+        "title": "NPM을 통한 설치",
+        "command": "npm install -g @strongdm/leash",
+        "note": "전역 환경에 Leash CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm을 사용하여 Leash를 전역에 설치합니다.",
+      "보안 정책을 정의하고 AI 에이전트 실행 명령어를 Leash로 감쌉니다.",
+      "컨테이너 환경에서 에이전트의 활동을 모니터링하며 안전하게 실행합니다."
+    ],
+    "examplePrompt": "leash run claude-code",
+    "usageNote": "",
+    "stars": 597,
+    "forks": 46,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "go-judge",
+    "name": "go-judge",
+    "github": "https://github.com/criyle/go-judge",
+    "description": "리눅스 컨테이너 기술을 기반으로 구축된 가볍고 안전한 REST 및 gRPC API 기반 샌드박스 서비스",
+    "longDescription": "go-judge는 cgroup과 컨테이너 기술을 활용하여 격리된 환경에서 프로그램을 안전하게 실행하고 평가할 수 있는 고성능 샌드박스 서비스입니다. 간단한 REST 및 gRPC 인터페이스를 제공하여 온라인 저지(Online Judge) 시스템이나 코드 실행 플랫폼을 쉽게 구축할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "샌드박스",
+      "API",
+      "컨테이너",
+      "Go",
+      "보안"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.goj.ac",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T20:04:01.212Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 실행",
+        "command": "docker run -it --rm --privileged --shm-size=256m -p 5050:5050 --name=go-judge criyle/go-judge",
+        "note": "Docker를 통해 샌드박스 서비스를 즉시 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "릴리즈 페이지에서 바이너리를 다운로드하거나 Docker 이미지 실행",
+      "지정된 포트(기본 5050)로 REST 또는 gRPC API 요청 전송",
+      "격리된 환경에서 안전하게 코드 실행 결과 수신"
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경에서는 권한 설정 및 리소스 제한(cgroup)을 면밀히 검토해야 합니다.",
+    "stars": 633,
+    "forks": 104,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
     "id": "veritas-kanban",
     "name": "Veritas Kanban",
     "github": "https://github.com/BradGroux/veritas-kanban",
