@@ -1,5 +1,313 @@
 [
   {
+    "id": "microservices-demo",
+    "name": "Online Boutique",
+    "github": "https://github.com/GoogleCloudPlatform/microservices-demo",
+    "description": "쿠버네티스와 마이크로서비스 아키텍처를 시연하기 위한 클라우드 네이티브 이커머스 샘플 애플리케이션입니다.",
+    "longDescription": "사용자가 상품을 탐색하고 장바구니에 담아 구매할 수 있는 웹 기반 쇼핑몰로, 다양한 마이크로서비스 간 gRPC 통신과 Istio 서비스 메시 연동을 보여줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "마이크로서비스",
+      "gRPC",
+      "Istio",
+      "데모"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cymbal-shops.retail.cymbal.dev",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T17:04:02.835Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Kubernetes 클러스터 환경을 준비합니다.",
+      "제공되는 매니페스트 또는 Kpt/Helm 패키지를 클러스터에 배포합니다.",
+      "프론트엔드 서비스의 외부 주소로 접속하여 쇼핑몰 앱을 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실제 상업용이 아닌 클라우드 아키텍처 학습 및 데모용입니다.",
+    "stars": 21087,
+    "forks": 10595,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "gf",
+    "name": "GoFrame",
+    "github": "https://github.com/gogf/gf",
+    "description": "더 빠르고 쉽고 효율적인 프로젝트 개발을 위한 강력한 Go 언어 애플리케이션 프레임워크입니다.",
+    "longDescription": "풍부한 모듈과 강력한 CLI 도구를 제공하여 마이크로서비스 및 웹 애플리케이션 개발을 가속화하며, 풍부한 엔터프라이즈급 기능을 내장하고 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "프레임워크",
+      "웹 개발",
+      "마이크로서비스",
+      "ORM"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://goframe.org",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T17:04:02.835Z",
+    "requirements": [
+      "Go 1.23 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "프레임워크 모듈 추가",
+        "command": "go get -u github.com/gogf/gf/v2",
+        "note": "기존 Go 모듈에 GoFrame v2를 추가합니다."
+      },
+      {
+        "title": "CLI 도구 설치",
+        "command": "go install github.com/gogf/gf/cmd/gf/v2@latest",
+        "note": "GoFrame 개발 보조 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Go 1.23 이상 환경을 준비합니다.",
+      "프로젝트에 GoFrame 패키지를 임포트합니다.",
+      "main.go 파일에 서버 바인딩 코드를 작성하고 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 13287,
+    "forks": 1730,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "kubespray",
+    "name": "Kubespray",
+    "github": "https://github.com/kubernetes-sigs/kubespray",
+    "description": "Ansible을 이용해 프로덕션 수준의 쿠버네티스 클러스터를 손쉽게 배포하는 도구입니다.",
+    "longDescription": "AWS, GCE, Azure, OpenStack 및 베어메탈 환경에서 고가용성 쿠버네티스 클러스터를 구성할 수 있도록 돕는 Ansible 플레이북 모음입니다. 유연한 컴포넌트 설정과 멀티 플랫폼을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "Ansible",
+      "인프라",
+      "클러스터",
+      "DevOps"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/kubernetes-sigs/kubespray",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T17:04:02.835Z",
+    "requirements": [
+      "Python",
+      "Ansible"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "가상 환경 구동",
+        "command": "vagrant up",
+        "note": "베이그런트를 이용한 초기 환경 실행"
+      }
+    ],
+    "usageSteps": [
+      "Python 및 Ansible을 시스템에 설치합니다.",
+      "인벤토리 파일 및 클러스터 구성을 요구사항에 맞게 수정합니다.",
+      "Ansible 플레이북을 실행하여 쿠버네티스 클러스터를 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실행 전 공식 문서의 인벤토리 설정 가이드를 숙지해야 합니다.",
+    "stars": 18799,
+    "forks": 6936,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "kops",
+    "name": "kOps",
+    "github": "https://github.com/kubernetes/kops",
+    "description": "클라우드 환경에서 프로덕션 등급의 쿠버네티스 클러스터를 생성, 업그레이드 및 관리하는 도구입니다.",
+    "longDescription": "마치 kubectl처럼 클러스터를 다룰 수 있게 해주는 도구로, AWS, GCE, DigitalOcean 등 다양한 클라우드 환경에서 쿠버네티스 클러스터의 전체 라이프사이클을 자동 관리합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "클라우드",
+      "DevOps",
+      "인프라",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kops.sigs.k8s.io/",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T17:04:02.835Z",
+    "requirements": [
+      "kubectl"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 설치 가이드를 참고하여 kOps 바이너리를 설치합니다.",
+      "클러스터 상태를 저장할 S3 등의 클라우드 스토리지를 구성합니다.",
+      "명령어를 통해 쿠버네티스 클러스터를 생성하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "지원되는 클라우드 공급자별 권장 설정 가이드를 확인하세요.",
+    "stars": 16695,
+    "forks": 4716,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "rook",
+    "name": "Rook",
+    "github": "https://github.com/rook/rook",
+    "description": "쿠버네티스를 위한 클라우드 네이티브 스토리지 오케스트레이터입니다.",
+    "longDescription": "스토리지 관리의 복잡성을 자동화하여 쿠버네티스 클러스터 내부에서 자가 관리형 분산 스토리지를 손쉽게 프로비저닝하고 운영할 수 있도록 지원하는 CNCF 졸업 프로젝트입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "Ceph",
+      "Storage",
+      "CNCF",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://rook.io",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T17:04:02.835Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "쿠버네티스 클러스터 환경을 준비합니다.",
+      "Rook 오퍼레이터 매니페스트를 클러스터에 배포합니다.",
+      "스토리지 클러스터 CRD를 생성하여 스토리지를 활성화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "안정적인 운영을 위해 권장되는 최소 노드 사양을 확인하세요.",
+    "stars": 13693,
+    "forks": 2874,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "tilt",
+    "name": "Tilt",
+    "github": "https://github.com/tilt-dev/tilt",
+    "description": "쿠버네티스 환경의 마이크로서비스 개발 환경을 코드로 정의하고 자동화하는 도구입니다.",
+    "longDescription": "코드 변경 감지, 컨테이너 이미지 빌드, 쿠버네티스 환경 업데이트까지의 과정을 자동화하여 복잡한 마이크로서비스 애플리케이션 개발을 쾌적하게 만들어줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "DevOps",
+      "Go",
+      "개발환경",
+      "마이크로서비스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://tilt.dev/",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T17:04:02.835Z",
+    "requirements": [
+      "Kubernetes 클러스터",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트 루트에 Tiltfile을 작성합니다.",
+      "터미널에서 `tilt up` 명령어를 실행하여 웹 대시보드와 개발 환경을 엽니다.",
+      "코드를 수정하면 Tilt이 자동으로 빌드 및 배포를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "팀 협업 시 표준화된 개발 환경을 구축하는 데 유용합니다.",
+    "stars": 10113,
+    "forks": 419,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
+    "id": "flannel",
+    "name": "Flannel",
+    "github": "https://github.com/flannel-io/flannel",
+    "description": "쿠버네티스를 위해 설계된 가볍고 단순한 레이어 3 네트워크 패브릭입니다.",
+    "longDescription": "각 호스트에 단일 바이너리 에이전트를 실행하여 사전 구성된 주소 공간에서 서브넷 리스를 할당하고, 쿠버네티스 API 또는 etcd를 통해 컨테이너 간 오버레이 네트워크를 구축합니다.",
+    "category": "네트워크",
+    "tags": [
+      "Kubernetes",
+      "네트워크",
+      "Overlay",
+      "Go",
+      "CNI"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/flannel-io/flannel",
+    "featured": 9,
+    "added": "2026-10-24",
+    "addedAt": "2026-10-24T17:04:02.835Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "쿠버네티스 클러스터 생성 시 네트워크 애드온으로 Flannel을 선택하거나 매니페스트를 적용합니다.",
+      "각 노드에서 `flanneld` 에이전트가 정상 작동하는지 확인합니다.",
+      "파이프라인 및 Pod 간 통신 상태를 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대부분의 경량 쿠버네티스 배포판에 기본 포함되어 있습니다.",
+    "stars": 9560,
+    "forks": 2879,
+    "starsUpdatedAt": "2026-10-24"
+  },
+  {
     "id": "act-plus-plus",
     "name": "ACT-plus-plus",
     "github": "https://github.com/MarkFzp/act-plus-plus",
