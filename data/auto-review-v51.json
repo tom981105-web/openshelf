@@ -1,7 +1,1245 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-23T23:06:20.290Z",
+  "updatedAt": "2026-10-24T00:06:25.744Z",
   "items": [
+    {
+      "id": "nocodb",
+      "name": "NocoDB",
+      "github": "https://github.com/nocodb/nocodb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.640Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "nocodb",
+        "name": "NocoDB",
+        "github": "https://github.com/nocodb/nocodb",
+        "description": "Airtable을 대체하는 오픈소스 로코드 데이터베이스 및 스프레드시트 플랫폼",
+        "longDescription": "NocoDB는 기존 데이터베이스를 스프레드시트 인터페이스로 전환하여 빠르게 데이터를 관리할 수 있도록 돕는 오픈소스 로코드 도구입니다. PostgreSQL, SQLite 등 다양한 데이터베이스와 연결할 수 있으며 자동으로 REST API를 생성합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "로코드",
+          "스프레드시트",
+          "데이터베이스"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://nocodb.com",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -d --name noco -v \"$(pwd)\"/nocodb:/usr/app/data/ -p 8080:8080 nocodb/nocodb:latest",
+            "note": "Docker를 이용해 NocoDB 컨테이너를 백그라운드로 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 명령어를 통해 NocoDB를 실행합니다.",
+          "웹 브라우저에서 localhost:8080에 접속합니다.",
+          "관리자 계정을 생성하고 새 프로젝트 또는 기존 데이터베이스를 연결합니다.",
+          "스프레드시트 인터페이스에서 데이터를 추가, 수정하고 API를 활용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 65333,
+        "forks": 5095,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:14.253Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:17.363Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-24T00:06:22.512Z"
+    },
+    {
+      "id": "handsontable",
+      "name": "Handsontable",
+      "github": "https://github.com/handsontable/handsontable",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "handsontable",
+        "name": "Handsontable",
+        "github": "https://github.com/handsontable/handsontable",
+        "description": "스프레드시트 인터페이스를 제공하는 JavaScript 데이터 그리드 컴포넌트입니다.",
+        "longDescription": "Handsontable은 웹 애플리케이션에서 엑셀과 유사한 사용자 경험을 제공하는 데이터 그리드 라이브러리입니다. React, Angular, Vue 등 다양한 프레임워크와 연동하여 복잡한 데이터 편집, 검증, 그리드 관리 기능을 구현할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "JavaScript",
+          "스프레드시트",
+          "데이터그리드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://handsontable.com/docs",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치",
+            "command": "npm install handsontable",
+            "note": "프로젝트에 Handsontable 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "npm을 통해 프로젝트에 패키지를 설치합니다.",
+          "원하는 프레임워크 전용 래퍼 또는 바닐라 JS 환경에서 컴포넌트를 불러옵니다.",
+          "데이터와 설정을 정의하여 그리드를 렌더링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 22069,
+        "forks": 3186,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:14.430Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:17.968Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-24T00:06:23.243Z"
+    },
+    {
+      "id": "teable",
+      "name": "Teable",
+      "github": "https://github.com/teableio/teable",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "teable",
+        "name": "Teable",
+        "github": "https://github.com/teableio/teable",
+        "description": "PostgreSQL 기반의 AI 연동형 오픈소스 스프레드시트 데이터베이스",
+        "longDescription": "Teable은 스프레드시트 인터페이스를 제공하면서 내부적으로 강력한 PostgreSQL을 사용하여 데이터 관리와 AI 워크플로우를 결합할 수 있는 플랫폼입니다. 비즈니스 자동화와 커스텀 앱 구축을 위한 데이터베이스 인프라로 활용할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "PostgreSQL",
+          "스프레드시트",
+          "데이터베이스"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://teable.ai",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "Node.js",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "의존성 설치",
+            "command": "corepack enable && pnpm install",
+            "note": "패키지 매니저 활성화 후 프로젝트 의존성을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트 레포지토리를 클론하고 패키지 관리자를 설정합니다.",
+          "PostgreSQL 데이터베이스 모드를 초기화합니다.",
+          "개발 서버를 실행하여 스프레드시트 기반 워크플로우를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 21918,
+        "forks": 1357,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:14.631Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:18.293Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-24T00:06:24.093Z"
+    },
+    {
+      "id": "kkfileview",
+      "name": "kkFileView",
+      "github": "https://github.com/kekingcn/kkFileView",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "kkfileview",
+        "name": "kkFileView",
+        "github": "https://github.com/kekingcn/kkFileView",
+        "description": "Spring Boot 기반의 범용 문서 온라인 미리보기 솔루션",
+        "longDescription": "kkFileView는 Office 문서, PDF, 압축파일 등 다양한 형식의 문서를 웹 브라우저에서 별도의 변환 플러그인 없이 즉시 미리 볼 수 있도록 지원합니다. Spring Boot를 기반으로 구현되어 쉽게 배포할 수 있는 오픈소스 프로젝트입니다.",
+        "category": "문서",
+        "tags": [
+          "Spring Boot",
+          "문서 미리보기",
+          "Java"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kkview.cn",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "Java JDK",
+          "LibreOffice"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Git Clone",
+            "command": "git clone https://github.com/kekingcn/kkFileView.git",
+            "note": "소스코드를 로컬에 클론합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트를 클론하고 의존성을 확인합니다.",
+          "ServerMain.java 파일을 실행하여 백엔드 서비스를 기동합니다.",
+          "웹 브라우저에서 지정된 포트로 접속하여 문서 미리보기 기능을 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 14796,
+        "forks": 3338,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:14.843Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:18.671Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-24T00:06:24.981Z"
+    },
+    {
+      "id": "phpword",
+      "name": "PHPWord",
+      "github": "https://github.com/PHPOffice/PHPWord",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "phpword",
+        "name": "PHPWord",
+        "github": "https://github.com/PHPOffice/PHPWord",
+        "description": "PHP 환경에서 Word 문서를 읽고 쓰기 위한 라이브러리",
+        "longDescription": "PHPWord는 개발자가 PHP 스크립트를 사용하여 동적으로 Word 문서를 생성하고 편집할 수 있도록 지원합니다. 문서 속성 설정, 서식 지정, 표 삽입 등 다양한 워드 프로세싱 기능을 제공합니다.",
+        "category": "문서",
+        "tags": [
+          "PHP",
+          "문서 처리",
+          "라이브러리"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://phpoffice.github.io/PHPWord/",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "PHP"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Composer 설치",
+            "command": "composer require phpoffice/phpword",
+            "note": "Composer를 사용하여 PHPWord 패키지를 프로젝트에 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "Composer를 통해 라이브러리를 설치합니다.",
+          "PHP 스크립트에서 PHPWord 클래스를 불러옵니다.",
+          "새로운 텍스트나 표를 포함하는 문서를 생성하고 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7587,
+        "forks": 2728,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:15.106Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:19.020Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-24T00:06:25.744Z"
+    },
+    {
+      "id": "rowy",
+      "name": "Rowy",
+      "github": "https://github.com/buildship-ai/rowy",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "rowy",
+        "name": "Rowy",
+        "github": "https://github.com/buildship-ai/rowy",
+        "description": "Firebase 및 Google Cloud를 위한 Airtable 스타일의 로코드 백엔드 플랫폼입니다.",
+        "longDescription": "Rowy는 스프레드시트 UI를 통해 데이터베이스를 손쉽게 관리하고, 브라우저 환경에서 직접 JavaScript 및 TypeScript 기반의 Cloud Functions 워크플로우를 구축할 수 있는 오픈소스 로코드 백엔드 도구입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "Firebase",
+          "로코드",
+          "백엔드",
+          "TypeScript",
+          "Airtable"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://rowy.io",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "Google Cloud Platform",
+          "Firebase"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "GCP 배포",
+            "command": "https://rowy.app",
+            "note": "웹 대시보드를 통해 Google Cloud 프로젝트에 Rowy를 간편 배포합니다."
+          }
+        ],
+        "usageSteps": [
+          "Google Cloud 프로젝트에 Rowy를 배포합니다.",
+          "스프레드시트 형태의 UI에 접속하여 데이터베이스 스키마를 구성합니다.",
+          "필요한 클라우드 함수 및 자동화 워크플로우를 스크립트로 작성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6843,
+        "forks": 556,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:15.301Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:19.376Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "sc-im",
+      "name": "sc-im",
+      "github": "https://github.com/andmarti1424/sc-im",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "sc-im",
+        "name": "sc-im",
+        "github": "https://github.com/andmarti1424/sc-im",
+        "description": "터미널 환경에서 Vim 키보드 단축키로 조작하는 ncurses 기반 스프레드시트 계산기입니다.",
+        "longDescription": "sc-im은 터미널에서 실행되는 가벼운 스프레드시트 프로그램으로, Vim과 유사한 키보드 인터페이스를 제공합니다. 명령어 기반으로 숫자를 계산하고 데이터를 표 형태로 정리할 수 있어 터미널 애호가에게 유용합니다.",
+        "category": "생산성",
+        "tags": [
+          "터미널",
+          "Vim",
+          "스프레드시트",
+          "C",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/andmarti1424/sc-im",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "ncurses",
+          "gcc",
+          "make"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "컴파일 및 설치",
+            "command": "make install",
+            "note": "소스코드를 빌드하고 시스템에 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "필수 의존성 패키지(ncurses, gcc 등)를 설치합니다.",
+          "레포지토리를 클론하고 소스코드를 빌드합니다.",
+          "터미널에서 명령어를 입력하여 스프레드시트 환경을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5714,
+        "forks": 239,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:15.522Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:19.801Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "unioffice",
+      "name": "unioffice",
+      "github": "https://github.com/unidoc/unioffice",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "unioffice",
+        "name": "unioffice",
+        "github": "https://github.com/unidoc/unioffice",
+        "description": "Go 언어로 Office 문서(Word, Excel, PowerPoint)를 생성하고 처리하는 순수 Go 라이브러리입니다.",
+        "longDescription": "unioffice는 고성능 문서 처리를 목표로 하는 Go 언어 라이브러리로, Microsoft Office Open XML 형식(.docx, .xlsx, .pptx)의 파일을 프로그래밍 방식으로 생성 및 편집할 수 있습니다.",
+        "category": "문서",
+        "tags": [
+          "Go",
+          "Golang",
+          "OOXML",
+          "Excel",
+          "Word"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://unidoc.io/unioffice/",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "Go"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Go Get",
+            "command": "go get github.com/unidoc/unioffice/v2",
+            "note": "Go 모듈 경로를 통해 라이브러리를 다운로드합니다."
+          }
+        ],
+        "usageSteps": [
+          "Go 프로젝트 내에서 모듈을 임포트합니다.",
+          "코드를 통해 문서 객체를 초기화하고 텍스트나 표 데이터를 추가합니다.",
+          "파일로 문서를 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4936,
+        "forks": 509,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:15.717Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:20.342Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "hyperformula",
+      "name": "HyperFormula",
+      "github": "https://github.com/handsontable/hyperformula",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "hyperformula",
+        "name": "HyperFormula",
+        "github": "https://github.com/handsontable/hyperformula",
+        "description": "웹 애플리케이션을 위한 400개 이상의 수식을 지원하는 오픈소스 헤드리스 스프레드시트 엔진입니다.",
+        "longDescription": "HyperFormula는 사용자 인터페이스가 없는 헤드리스 방식의 스프레드시트 계산 엔진으로, TypeScript로 작성되었습니다. 스프레드시트 수식 파싱 및 평가 기능, 실행 취소/다시 하기, CRUD 연산을 제공하여 다양한 비즈니스 앱에 내장할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "TypeScript",
+          "수식 엔진",
+          "스프레드시트",
+          "계산 엔진",
+          "Node.js"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://hyperformula.handsontable.com/",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치",
+            "command": "npm install hyperformula",
+            "note": "프로젝트에 HyperFormula 계산 엔진을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "npm을 통해 라이브러리를 설치합니다.",
+          "애플리케이션 코드에서 HyperFormula 인스턴스를 생성합니다.",
+          "데이터와 수식을 주입하여 계산 결과를 도출합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2819,
+        "forks": 172,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:15.953Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:20.988Z",
+      "documentEvidence": {
+        "license": "GPL-3.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "poi",
+      "name": "Apache POI",
+      "github": "https://github.com/apache/poi",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "poi",
+        "name": "Apache POI",
+        "github": "https://github.com/apache/poi",
+        "description": "Java 환경에서 Microsoft Office 형식 파일을 읽고 쓸 수 있는 표준 Java API 라이브러리입니다.",
+        "longDescription": "Apache POI는 OLE2 및 OOXML 표준을 기반으로 하는 Microsoft Office 파일(Excel, Word, PowerPoint 등)을 Java 코드로 조작할 수 있게 해주는 성숙한 오픈소스 라이브러리입니다.",
+        "category": "문서",
+        "tags": [
+          "Java",
+          "Excel",
+          "Word",
+          "PowerPoint",
+          "라이브러리"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://poi.apache.org/",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "Java JDK 17+",
+          "Apache Ant 또는 Gradle"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Gradle 의존성 추가",
+            "command": "implementation 'org.apache.poi:poi:5.2.3'",
+            "note": "Gradle 빌드 파일에 Apache POI 라이브러리를 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트 빌드 파일에 Apache POI 의존성을 선언합니다.",
+          "Java 코드에서 Workbook이나 Document 객체를 생성합니다.",
+          "파일을 읽거나 데이터를 기록한 뒤 스트림을 닫습니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2280,
+        "forks": 851,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:16.196Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-24T00:06:21.533Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "epplus",
+      "name": "EPPlus",
+      "github": "https://github.com/EPPlusSoftware/EPPlus",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "epplus",
+        "name": "EPPlus",
+        "github": "https://github.com/EPPlusSoftware/EPPlus",
+        "description": ".NET 환경에서 엑셀(XLSX) 스프레드시트를 생성, 수정 및 조작할 수 있는 라이브러리입니다.",
+        "longDescription": ".NET 애플리케이션에서 마이크로소프트 엑셀 파일을 프로그래밍 방식으로 다룰 수 있도록 돕는 오픈소스 라이브러리입니다. 강력한 스프레드시트 포맷 파싱 및 셀 조작 기능을 제공하여 백엔드 보고서 생성 등에 유용하게 쓰입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "C#",
+          ".NET",
+          "Excel",
+          "스프레드시트",
+          "OOXML"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://epplussoftware.com",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          ".NET 런타임"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "NuGet 패키지 설치",
+            "command": "dotnet add package EPPlus",
+            "note": "프로젝트에 EPPlus 패키지를 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 EPPlus 패키지를 설치합니다.",
+          "코드에서 ExcelPackage 객체를 초기화합니다.",
+          "워크시트를 생성하고 셀 데이터를 채운 뒤 파일을 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2040,
+        "forks": 303,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:16.385Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "docx-2",
+      "name": "DocX",
+      "github": "https://github.com/xceedsoftware/DocX",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "docx-2",
+        "name": "DocX",
+        "github": "https://github.com/xceedsoftware/DocX",
+        "description": "마이크로소프트 워드 설치 없이 .NET에서 Word 문서를 생성하고 편집할 수 있는 라이브러리입니다.",
+        "longDescription": "개발자가 마이크로소프트 오피스나 Word를 설치하지 않은 환경에서도 직관적인 API를 통해 Word 2007/2010/2013 이상 버터의 문서를 만들고 수정할 수 있도록 지원하는 가벼운 .NET 라이브러리입니다.",
+        "category": "문서",
+        "tags": [
+          "C#",
+          ".NET",
+          "Word",
+          "문서 자동화",
+          "DOCX"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/xceedsoftware/DocX",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          ".NET 환경"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트에 DocX 라이브러리를 추가합니다.",
+          "DocX API를 사용하여 새로운 문서 객체를 생성합니다.",
+          "텍스트, 단락, 표 등을 추가한 뒤 지정된 경로에 문서로 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1922,
+        "forks": 482,
+        "starsUpdatedAt": "2026-10-24"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-24T00:06:16.615Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "libxlsxwriter",
+      "name": "libxlsxwriter",
+      "github": "https://github.com/jmcnamara/libxlsxwriter",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "libxlsxwriter",
+        "name": "libxlsxwriter",
+        "github": "https://github.com/jmcnamara/libxlsxwriter",
+        "description": "C 언어로 엑셀 XLSX 파일을 생성할 수 있는 빠르고 가벼운 라이브러리입니다.",
+        "longDescription": "텍스트, 숫자, 수식, 하이퍼링크는 물론 차트, 조건부 서식, 병합 셀 등 다양한 엑셀 기능을 지원하는 C 언어 기반 라이브러리입니다. 대용량 파일 작성을 위한 메모리 최적화 모드를 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "C",
+          "Excel",
+          "XLSX",
+          "스프레드시트",
+          "파일 생성"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://libxlsxwriter.github.io",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "C 컴파일러"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "소스코드를 다운로드하거나 빌드 환경에 포함합니다.",
+          "workbook_new 함수로 새로운 엑셀 워크북을 생성합니다.",
+          "워크시트에 데이터를 입력하고 workbook_close로 파일을 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1765,
+        "forks": 385,
+        "starsUpdatedAt": "2026-10-24"
+      }
+    },
+    {
+      "id": "phppresentation",
+      "name": "PHPPresentation",
+      "github": "https://github.com/PHPOffice/PHPPresentation",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "phppresentation",
+        "name": "PHPPresentation",
+        "github": "https://github.com/PHPOffice/PHPPresentation",
+        "description": "PHP 환경에서 프레젠테이션(PowerPoint) 문서를 읽고 쓸 수 있는 순수 PHP 라이브러리입니다.",
+        "longDescription": "메모리 상에서 프레젠테이션 구조를 표현하고 메타데이터 설정, 슬라이드 추가, 도형 및 텍스트 삽입 등을 수행하여 PowerPoint(PPTX) 파일을 생성할 수 있는 강력한 PHP 오픈소스 라이브러리입니다.",
+        "category": "문서",
+        "tags": [
+          "PHP",
+          "PowerPoint",
+          "PPTX",
+          "프레젠테이션",
+          "문서 자동화"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://phpoffice.github.io/PHPPresentation",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "PHP 런타임"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Composer 등을 통해 프로젝트에 라이브러리를 추가합니다.",
+          "PhpPresentation 객체를 생성하여 프레젠테이션 구조를 정의합니다.",
+          "슬라이드를 추가하고 원하는 콘텐츠를 구성한 뒤 지정된 포맷으로 내보냅니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1371,
+        "forks": 549,
+        "starsUpdatedAt": "2026-10-24"
+      }
+    },
+    {
+      "id": "smoothcsv3",
+      "name": "SmoothCSV",
+      "github": "https://github.com/kohii/smoothcsv3",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "smoothcsv3",
+        "name": "SmoothCSV",
+        "github": "https://github.com/kohii/smoothcsv3",
+        "description": "실제 업무를 위해 설계된 빠르고 직관적인 크로스플랫폼 CSV 파일 편집기입니다.",
+        "longDescription": "Tauri 기반으로 제작되어 뛰어난 성능과 직관적인 스프레드시트 UI를 제공하는 CSV 전용 편집기입니다. 행/열 도구, 데이터 정제 기능뿐만 아니라 SQL 쿼리를 활용한 고급 데이터 조작 기능을 지원합니다.",
+        "category": "생산성",
+        "tags": [
+          "CSV",
+          "에디터",
+          "스프레드시트",
+          "데이터 도구",
+          "Tauri"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://smoothcsv.com/",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 웹사이트 또는 릴리스 페이지에서 설치 파일을 다운로드합니다.",
+          "프로그램을 실행하고 편집할 CSV 파일을 엽니다.",
+          "스프레드시트 인터페이스를 통해 데이터를 수정하고 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1351,
+        "forks": 20,
+        "starsUpdatedAt": "2026-10-24"
+      }
+    },
+    {
+      "id": "spreadsheet-architect",
+      "name": "Spreadsheet Architect",
+      "github": "https://github.com/westonganger/spreadsheet_architect",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09"
+    },
+    {
+      "id": "123elf",
+      "name": "123elf",
+      "github": "https://github.com/taviso/123elf",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09",
+      "tool": {
+        "id": "123elf",
+        "name": "123elf",
+        "github": "https://github.com/taviso/123elf",
+        "description": "리눅스 환경에서 네이티브로 실행되는 클래식 Lotus 1-2-3 스프레드시트 포팅 버전입니다.",
+        "longDescription": "과거 유명했던 고전 스프레드시트 프로그램인 Lotus 1-2-3 Release 3를 리눅스 터미널 환경에서 네이티브로 구동할 수 있도록 포팅한 레트로 컴퓨팅 및 유닉스 유틸리티 프로젝트입니다.",
+        "category": "개인 도구",
+        "tags": [
+          "C",
+          "Lotus",
+          "레트로컴퓨팅",
+          "스프레드시트",
+          "Unix"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/taviso/123elf",
+        "featured": 9,
+        "added": "2026-10-24",
+        "addedAt": "2026-10-24T00:04:01.294Z",
+        "requirements": [
+          "C 컴파일러",
+          "ncurses 개발 라이브러리"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "설치",
+            "command": "make install",
+            "note": "소스 코드를 빌드하고 시스템에 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "필수 의존성 패키지를 설치합니다.",
+          "make 명령어로 프로젝트를 빌드합니다.",
+          "터미널에서 ./123 명령어를 입력하여 프로그램을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1299,
+        "forks": 57,
+        "starsUpdatedAt": "2026-10-24"
+      }
+    },
+    {
+      "id": "corexlsx",
+      "name": "CoreXLSX",
+      "github": "https://github.com/CoreOffice/CoreXLSX",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09"
+    },
+    {
+      "id": "miniword",
+      "name": "MiniWord",
+      "github": "https://github.com/mini-software/MiniWord",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09"
+    },
+    {
+      "id": "vulcan-sql",
+      "name": "VulcanSQL",
+      "github": "https://github.com/Canner/vulcan-sql",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-24T00:06:13.641Z",
+      "sourceRun": "2026-10-24T09"
+    },
     {
       "id": "nodebestpractices",
       "name": "nodebestpractices",
@@ -21263,82 +22501,6 @@
       "recheckedAt": "2026-10-22T22:06:29.357Z"
     },
     {
-      "id": "rowy",
-      "name": "Rowy",
-      "github": "https://github.com/buildship-ai/rowy",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T22:06:14.831Z",
-      "sourceRun": "2026-10-23T07",
-      "tool": {
-        "id": "rowy",
-        "name": "Rowy",
-        "github": "https://github.com/buildship-ai/rowy",
-        "description": "스프레드시트 UI로 데이터베이스를 관리하고 클라우드 함수를 구축하는 로코드 플랫폼입니다.",
-        "longDescription": "Firebase 및 Google Cloud와 연동하여 Airtable과 유사한 인터페이스로 데이터를 조작할 수 있습니다. 브라우저에서 직접 JavaScript와 TypeScript 기반의 클라우드 함수 워크플로우를 작성할 수 있습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "로코드",
-          "Firebase",
-          "스프레드시트"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://rowy.io",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T22:04:02.813Z",
-        "requirements": [
-          "Google Cloud",
-          "Firebase"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Google Cloud 프로젝트에 Rowy를 배포합니다.",
-          "스프레드시트 형태의 UI를 통해 데이터베이스를 관리합니다.",
-          "로우코드 방식으로 클라우드 함수와 자동화 워크플로우를 구축합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "데이터와 클라우드 함수는 사용자의 GCP 프로젝트 내에 안전하게 유지됩니다.",
-        "stars": 6843,
-        "forks": 556,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T22:06:16.777Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T22:06:22.098Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-22T22:06:31.451Z"
-    },
-    {
       "id": "cinetry",
       "name": "Cinetry",
       "github": "https://github.com/gstory0404/Cinetry",
@@ -30032,90 +31194,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-22T10:06:24.694Z"
-    },
-    {
-      "id": "kkfileview",
-      "name": "kkFileView",
-      "github": "https://github.com/kekingcn/kkFileView",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T10:06:15.407Z",
-      "sourceRun": "2026-10-22T19",
-      "tool": {
-        "id": "kkfileview",
-        "name": "kkFileView",
-        "github": "https://github.com/kekingcn/kkFileView",
-        "description": "Spring Boot 기반의 범용 온라인 문서 미리보기 솔루션입니다.",
-        "longDescription": "Office 문서, PDF, 압축파일 등 다양한 포맷의 파일을 별도의 클라이언트 설치 없이 웹 브라우저에서 바로 미리볼 수 있도록 지원합니다. 오픈소스 기반으로 쉽게 배포하여 웹 서비스에 통합할 수 있습니다.",
-        "category": "문서",
-        "tags": [
-          "Spring Boot",
-          "문서 뷰어",
-          "Java"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kkview.cn",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T10:04:02.791Z",
-        "requirements": [
-          "Java 8+",
-          "LibreOffice 또는 OpenOffice"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "소스 다운로드",
-            "command": "git pull https://github.com/kekingcn/kkFileView.git",
-            "note": "깃 저장소를 클론합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트를 클론하고 의존성을 구성합니다.",
-          "ServerMain.java 메인 메서드를 실행합니다.",
-          "웹 브라우저에서 로컬 주소(포트 8012)로 접속하여 미리보기 기능을 테스트합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "Linux 환경에서는 LibreOffice가 자동으로 설치되나 Mac OS 등에서는 수동 설치가 필요할 수 있습니다.",
-        "stars": 14790,
-        "forks": 3338,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T10:06:16.230Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T10:06:19.749Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-22T10:06:25.412Z"
     },
     {
       "id": "questpdf",
@@ -38993,177 +40071,6 @@
       "sourceRun": "2026-10-22T05"
     },
     {
-      "id": "nocodb",
-      "name": "NocoDB",
-      "github": "https://github.com/nocodb/nocodb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T19:06:55.432Z",
-      "sourceRun": "2026-10-22T04",
-      "tool": {
-        "id": "nocodb",
-        "name": "NocoDB",
-        "github": "https://github.com/nocodb/nocodb",
-        "description": "오픈소스 에어테이블 대안인 셀프 호스팅 로우코드 데이터베이스 플랫폼",
-        "longDescription": "기존 데이터베이스를 스프레드시트 인터페이스로 변환하여 간편하게 관리하고 자동화 API를 구축할 수 있도록 돕습니다. PostgreSQL, SQLite 등 다양한 데이터베이스와 연동하여 신속하게 비즈니스 애플리케이션을 만들 수 있습니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "로우코드",
-          "스프레드시트"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://nocodb.com",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T19:04:03.473Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행 (SQLite)",
-            "command": "docker run -d --name noco -v \"$(pwd)\"/nocodb:/usr/app/data/ -p 8080:8080 nocodb/nocodb:latest",
-            "note": "SQLite를 사용하는 기본 Docker 실행 명령입니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker를 통해 NocoDB 컨테이너를 실행합니다.",
-          "웹 브라우저에서 포트 8080으로 접속합니다.",
-          "계정을 생성하고 새로운 데이터베이스 또는 기존 DB를 연결합니다.",
-          "스프레드시트 뷰에서 데이터를 편집하고 REST API를 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "프로덕션 환경에서는 영구 볼륨 경로와 보안 설정을 별도로 구성하는 것이 좋습니다.",
-        "stars": 65317,
-        "forks": 5098,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T19:06:56.157Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T19:07:00.103Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-21T19:07:06.279Z"
-    },
-    {
-      "id": "teable",
-      "name": "Teable",
-      "github": "https://github.com/teableio/teable",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T19:06:55.433Z",
-      "sourceRun": "2026-10-22T04",
-      "tool": {
-        "id": "teable",
-        "name": "Teable",
-        "github": "https://github.com/teableio/teable",
-        "description": "PostgreSQL 기반의 AI 연동형 비즈니스 스프레드시트 플랫폼",
-        "longDescription": "스프레드시트의 사용성과 강력한 PostgreSQL 데이터베이스를 결합하여 복잡한 데이터 관리와 AI 워크플로우를 지원합니다. 클라우드 서비스 이용 및 자체 호스팅을 모두 지원합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "스프레드시트",
-          "데이터베이스",
-          "PostgreSQL"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://teable.ai",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T19:04:03.473Z",
-        "requirements": [
-          "Node.js",
-          "pnpm",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "의존성 설치",
-            "command": "corepack enable && pnpm install",
-            "note": "패키지 매니저 활성화 및 프로젝트 의존성을 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 프로젝트 디렉토리로 이동합니다.",
-          "corepack enable 명령으로 패키지 매니저를 활성화합니다.",
-          "pnpm install 명령으로 의존성을 설치합니다.",
-          "Make 명령어를 통해 데이터베이스 모드를 초기화하고 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "정상적인 구동을 위해 사전에 PostgreSQL 환경이 준비되어 있어야 합니다.",
-        "stars": 21911,
-        "forks": 1356,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T19:06:56.410Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T19:07:00.422Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-21T19:07:07.099Z"
-    },
-    {
       "id": "opencvsharp",
       "name": "OpenCvSharp",
       "github": "https://github.com/shimat/opencvsharp",
@@ -39174,87 +40081,6 @@
       "sourceRun": "2026-10-22T04"
     },
     {
-      "id": "handsontable",
-      "name": "Handsontable",
-      "github": "https://github.com/handsontable/handsontable",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T19:06:55.433Z",
-      "sourceRun": "2026-10-22T04",
-      "tool": {
-        "id": "handsontable",
-        "name": "Handsontable",
-        "github": "https://github.com/handsontable/handsontable",
-        "description": "JavaScript/TypeScript 기반의 스프레드시트 스타일 데이터 그리드 컴포넌트입니다.",
-        "longDescription": "React, Angular, Vue 등 다양한 프레임워크를 지원하며, 엑셀과 유사한 사용자 경험을 제공하여 복잡한 데이터 입력, 편집, 검증 기능을 구현할 수 있는 강력한 데이터 그리드 라이브러리입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "스프레드시트",
-          "데이터그리드"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://handsontable.com/docs",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T19:04:03.473Z",
-        "requirements": [
-          "npm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "npm 설치",
-            "command": "npm install handsontable",
-            "note": "프로젝트에 패키지 추가"
-          }
-        ],
-        "usageSteps": [
-          "패키지 관리자를 통해 의존성을 설치합니다.",
-          "HTML 요소 컨테이너를 준비합니다.",
-          "JavaScript 또는 프레임워크 컴포넌트로 Handsontable 인스턴스를 생성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 22067,
-        "forks": 3187,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T19:06:58.551Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T19:07:05.168Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "ce",
       "name": "Jspreadsheet CE",
       "github": "https://github.com/jspreadsheet/ce",
@@ -39263,85 +40089,6 @@
       "reasons": [],
       "checkedAt": "2026-10-21T19:06:55.433Z",
       "sourceRun": "2026-10-22T04"
-    },
-    {
-      "id": "sc-im",
-      "name": "sc-im",
-      "github": "https://github.com/andmarti1424/sc-im",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T19:06:55.433Z",
-      "sourceRun": "2026-10-22T04",
-      "tool": {
-        "id": "sc-im",
-        "name": "sc-im",
-        "github": "https://github.com/andmarti1424/sc-im",
-        "description": "Vim 단축키와 ncurses 기반 인터페이스를 제공하는 터미널용 스프레드시트 계산기입니다.",
-        "longDescription": "터미널 환경에서 스프레드시트 작업을 수행할 수 있는 가벼운 도구로, vim 키 바인딩을 지원하여 키보드 중심의 빠른 데이터 조작과 계산이 가능합니다.",
-        "category": "생산성",
-        "tags": [
-          "C",
-          "터미널",
-          "스프레드시트",
-          "Vim",
-          "CLI"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/andmarti1424/sc-im",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T19:04:03.473Z",
-        "requirements": [
-          "ncurses",
-          "bison",
-          "gcc",
-          "make"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "필수 의존성을 설치합니다.",
-          "소스 코드를 빌드하고 실행합니다.",
-          "Vim 스타일의 단축키로 셀을 탐색하고 수식을 입력합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5714,
-        "forks": 238,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T19:06:58.849Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T21:06:20.710Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "fortune-sheet",
@@ -39424,84 +40171,6 @@
       "reasons": [],
       "checkedAt": "2026-10-21T19:06:55.433Z",
       "sourceRun": "2026-10-22T04"
-    },
-    {
-      "id": "hyperformula",
-      "name": "HyperFormula",
-      "github": "https://github.com/handsontable/hyperformula",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-21T19:06:55.433Z",
-      "sourceRun": "2026-10-22T04",
-      "tool": {
-        "id": "hyperformula",
-        "name": "HyperFormula",
-        "github": "https://github.com/handsontable/hyperformula",
-        "description": "UI가 없는 헤드리스 형태로 동작하는 고성능 오픈소스 스프레드시트 계산 엔진입니다.",
-        "longDescription": "400개 이상의 수식, CRUD 연산, 실행 취소/다시 하기, 정렬 기능을 지원하며, 웹 애플리케이션, AI의 결정론적 연산 레이어, CRM 계산 필드 등 다양한 비즈니스 로직에 통합할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "TypeScript",
-          "스프레드시트",
-          "계산엔진",
-          "Excel",
-          "Node.js"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://hyperformula.handsontable.com/",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T19:04:03.473Z",
-        "requirements": [
-          "npm"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트에 HyperFormula 패키지를 설치합니다.",
-          "스프레드시트 인스턴스를 초기화하고 데이터를 구성합니다.",
-          "수식 평가 및 계산 기능을 연동합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2818,
-        "forks": 172,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T20:06:35.920Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T23:06:15.516Z",
-      "documentEvidence": {
-        "license": "GPL-3.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "grumphp",
@@ -54250,84 +54919,6 @@
       "sourceRun": "2026-10-20T14"
     },
     {
-      "id": "phpword",
-      "name": "PHPWord",
-      "github": "https://github.com/PHPOffice/PHPWord",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T05:06:05.185Z",
-      "sourceRun": "2026-10-20T14",
-      "tool": {
-        "id": "phpword",
-        "name": "PHPWord",
-        "github": "https://github.com/PHPOffice/PHPWord",
-        "description": "PHP로 Word 문서를 동적으로 읽고 쓸 수 있는 라이브러리",
-        "longDescription": "PHP 환경에서 OOXML, ODF, RTF 등 다양한 포맷의 문서를 프로그래밍 방식으로 생성, 수정 및 변환할 수 있습니다. 순수 PHP로 작성되어 문서 자동화 작업에 유용하게 사용됩니다.",
-        "category": "개발 도구",
-        "tags": [
-          "PHP",
-          "문서자동화",
-          "DOCX"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://phpoffice.github.io/PHPWord/",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T05:04:04.657Z",
-        "requirements": [
-          "PHP"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Composer를 사용하여 프로젝트에 패키지를 추가합니다.",
-          "PHP 코드에서 라이브러리를 임포트합니다.",
-          "문서 객체를 생성하고 내용을 추가한 뒤 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7588,
-        "forks": 2729,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T05:06:06.135Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T05:06:09.622Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-20T05:06:16.497Z"
-    },
-    {
       "id": "mocreak",
       "name": "Mocreak",
       "github": "https://github.com/OdysseusYuan/Mocreak",
@@ -54580,79 +55171,6 @@
       "recheckedAt": "2026-10-20T05:06:18.844Z"
     },
     {
-      "id": "poi",
-      "name": "poi",
-      "github": "https://github.com/apache/poi",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T05:06:05.186Z",
-      "sourceRun": "2026-10-20T14",
-      "tool": {
-        "id": "poi",
-        "name": "poi",
-        "github": "https://github.com/apache/poi",
-        "description": "Microsoft Office 바이너리 및 OOXML 파일 형식을 읽고 쓸 수 있는 자바 API 라이브러리입니다.",
-        "longDescription": "Java 환경에서 Excel, Word, PowerPoint 등의 마이크로소프트 오피스 문서를 프로그래밍 방식으로 생성, 조작 및 추출할 수 있도록 지원하는 표준 도구입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Java",
-          "Excel",
-          "Word",
-          "PowerPoint"
-        ],
-        "platforms": [],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://poi.apache.org/",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T05:04:04.657Z",
-        "requirements": [
-          "Java JDK 17+",
-          "Apache Ant 또는 Gradle"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트에 Apache POI 의존성을 추가합니다.",
-          "Java 코드에서 관련 API를 호출하여 문서를 로드하거나 생성합니다.",
-          "파일 입출력 로직을 구현하여 데이터를 처리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2279,
-        "forks": 852,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T05:06:06.946Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T05:06:12.185Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "reactgrid",
       "name": "ReactGrid",
       "github": "https://github.com/silevis/reactgrid",
@@ -54661,87 +55179,6 @@
       "reasons": [],
       "checkedAt": "2026-10-20T05:06:05.186Z",
       "sourceRun": "2026-10-20T14"
-    },
-    {
-      "id": "smoothcsv3",
-      "name": "SmoothCSV",
-      "github": "https://github.com/kohii/smoothcsv3",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-20T05:06:05.186Z",
-      "sourceRun": "2026-10-20T14",
-      "tool": {
-        "id": "smoothcsv3",
-        "name": "SmoothCSV",
-        "github": "https://github.com/kohii/smoothcsv3",
-        "description": "대용량 CSV 파일도 빠르게 편집할 수 있도록 설계된 강력하고 직관적인 크로스플랫폼 CSV 편집기입니다.",
-        "longDescription": "스프레드시트와 유사한 UI를 통해 CSV 데이터를 직관적으로 편집할 수 있으며, SQL 쿼리 실행 및 행/열 관리 등 고급 기능을 제공합니다.",
-        "category": "생산성",
-        "tags": [
-          "CSV",
-          "에디터",
-          "스프레드시트",
-          "Tauri",
-          "데이터 도구"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://smoothcsv.com/",
-        "featured": 9,
-        "added": "2026-10-20",
-        "addedAt": "2026-10-20T05:04:04.657Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "웹사이트 다운로드",
-            "command": "# 공식 웹사이트에서 설치 파일 다운로드",
-            "note": "데스크톱 환경에 맞게 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "공식 웹사이트나 저장소에서 프로그램을 다운로드 및 설치합니다.",
-          "편집할 CSV 파일을 불러옵니다.",
-          "스프레드시트 형태의 그리드에서 데이터를 편집하고 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1350,
-        "forks": 20,
-        "starsUpdatedAt": "2026-10-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-20T06:06:10.528Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-20T06:06:16.938Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "jamaibase",
@@ -64595,89 +65032,6 @@
       "sourceRun": "2026-10-18T09"
     },
     {
-      "id": "unioffice",
-      "name": "unioffice",
-      "github": "https://github.com/unidoc/unioffice",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-18T00:05:51.463Z",
-      "sourceRun": "2026-10-18T09",
-      "tool": {
-        "id": "unioffice",
-        "name": "unioffice",
-        "github": "https://github.com/unidoc/unioffice",
-        "description": "Go 언어로 Office Open XML 문서(docx, xlsx, pptx)를 생성하고 처리하는 고성능 라이브러리입니다.",
-        "longDescription": "Go 언어 환경에서 Word, Excel, PowerPoint 문서를 프로그래밍 방식으로 생성 및 편집할 수 있도록 지원합니다. 뛰어난 호환성과 성능을 목표로 설계된 강력한 오피스 문서 처리 도구입니다.",
-        "category": "문서",
-        "tags": [
-          "Go",
-          "Office",
-          "Excel",
-          "Word",
-          "PowerPoint"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://unidoc.io/unioffice/",
-        "featured": 9,
-        "added": "2026-10-18",
-        "addedAt": "2026-10-18T00:03:59.305Z",
-        "requirements": [
-          "Go"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Go Get",
-            "command": "go get github.com/unidoc/unioffice/v2",
-            "note": "프로젝트에 패키지를 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "Go 프로젝트에서 패키지를 임포트합니다.",
-          "새로운 문서 객체를 생성하거나 기존 문서를 로드합니다.",
-          "원하는 서식과 데이터를 추가한 후 파일로 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "유료 플랜 및 무료 티어 API 키가 필요할 수 있습니다.",
-        "stars": 4934,
-        "forks": 509,
-        "starsUpdatedAt": "2026-10-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-18T00:05:53.366Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-18T00:05:57.871Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "hucre",
       "name": "hucre",
       "github": "https://github.com/productdevbook/hucre",
@@ -64686,164 +65040,6 @@
       "reasons": [],
       "checkedAt": "2026-10-18T00:05:51.463Z",
       "sourceRun": "2026-10-18T09"
-    },
-    {
-      "id": "epplus",
-      "name": "EPPlus",
-      "github": "https://github.com/EPPlusSoftware/EPPlus",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-18T00:05:51.463Z",
-      "sourceRun": "2026-10-18T09",
-      "tool": {
-        "id": "epplus",
-        "name": "EPPlus",
-        "github": "https://github.com/EPPlusSoftware/EPPlus",
-        "description": ".NET 환경에서 Excel 스프레드시트를 생성하고 조작할 수 있는 강력한 라이브러리입니다.",
-        "longDescription": ".NET 개발자가 코드를 통해 Excel 스프레드시트를 손쉽게 읽고, 쓰고, 차트나 서식을 적용할 수 있게 해줍니다. 대용량 엑셀 파일 처리와 다양한 .NET 런타임을 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C#",
-          ".NET",
-          "Excel",
-          "스프레드시트"
-        ],
-        "platforms": [
-          "Windows",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://epplussoftware.com",
-        "featured": 9,
-        "added": "2026-10-18",
-        "addedAt": "2026-10-18T00:03:59.305Z",
-        "requirements": [
-          ".NET"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NuGet 설치",
-            "command": "dotnet add package epplus",
-            "note": ".NET CLI를 통해 패키지를 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트에 EPPlus NuGet 패키지를 추가합니다.",
-          "ExcelPackage 객체를 생성하여 워크북을 다룹니다.",
-          "데이터를 셀에 채우고 파일을 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2040,
-        "forks": 304,
-        "starsUpdatedAt": "2026-10-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-18T00:05:53.593Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-18T00:05:58.613Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "libxlsxwriter",
-      "name": "libxlsxwriter",
-      "github": "https://github.com/jmcnamara/libxlsxwriter",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-18T00:05:51.463Z",
-      "sourceRun": "2026-10-18T09",
-      "tool": {
-        "id": "libxlsxwriter",
-        "name": "libxlsxwriter",
-        "github": "https://github.com/jmcnamara/libxlsxwriter",
-        "description": "C 언어로 Excel XLSX 파일을 생성할 수 있는 가볍고 빠른 라이브러리입니다.",
-        "longDescription": "텍스트, 숫자, 수식, 하이퍼링크 및 차트 등을 포함하는 표준 Excel 2007+ XLSX 파일을 작성할 수 있는 C 라이브러리입니다. 메모리 최적화 모드를 지원하여 대용량 파일 생성에 유용합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C",
-          "Excel",
-          "XLSX",
-          "라이브러리"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://libxlsxwriter.github.io",
-        "featured": 9,
-        "added": "2026-10-18",
-        "addedAt": "2026-10-18T00:03:59.305Z",
-        "requirements": [
-          "C 컴파일러"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "소스코드를 프로젝트에 포함하거나 빌드합니다.",
-          "workbook_new 함수로 새 워크북을 생성합니다.",
-          "워크시트에 데이터를 작성하고 닫습니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1765,
-        "forks": 386,
-        "starsUpdatedAt": "2026-10-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-18T00:05:53.795Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-18T00:05:59.331Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "xlnt",
