@@ -1,5 +1,584 @@
 [
   {
+    "id": "http-kit",
+    "name": "http-kit",
+    "github": "https://github.com/http-kit/http-kit",
+    "description": "Clojure 언어를 위한 고성능 이벤트 기반 비동기 HTTP 클라이언트 및 서버 라이브러리입니다.",
+    "longDescription": "미니멀하고 효율적인 Ring 호환 HTTP 클라이언트/서버 라이브러리입니다. 이벤트 기반 아키텍처를 사용하여 높은 동시성을 지원하며 웹소켓과 롱폴링을 위한 통합 API를 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Clojure",
+      "HTTP",
+      "웹소켓",
+      "비동기",
+      "Java"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.taoensso.com/http-kit",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Java",
+      "Clojure"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "project.clj 또는 deps.edn에 http-kit 의존성을 추가합니다.",
+      "Ring 규격에 맞는 핸들러 함수를 작성합니다.",
+      "run-server 함수를 호출하여 HTTP 서버를 구동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2565,
+    "forks": 353,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "httpoison",
+    "name": "HTTPoison",
+    "github": "https://github.com/edgurgel/httpoison",
+    "description": "hackney 기반으로 동작하는 유연하고 사용하기 쉬운 Elixir용 HTTP 클라이언트 라이브러리입니다.",
+    "longDescription": "Elixir 개발자가 외부 웹 서비스와 간편하게 상호작용할 수 있도록 돕는 HTTP 클라이언트입니다. 쿠키 관리, 리디렉션 추적, SSL 검증 등의 기능을 직관적인 API로 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Elixir",
+      "HTTP",
+      "API",
+      "클라이언트"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hex.pm/packages/httpoison",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Erlang/OTP 27+",
+      "Elixir 1.17+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Mix 의존성 추가",
+        "command": "{:httpoison, \"~ 3.0\"}",
+        "note": "mix.exs 파일의 deps 함수에 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "mix.exs 파일에 HTTPoison을 의존성으로 추가하고 mix deps.get을 실행합니다.",
+      "HTTPoison.get/2 등을 호출하여 대상 URL에 요청을 보냅니다.",
+      "반환된 응답 구조체를 파싱하여 데이터를 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2287,
+    "forks": 349,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "ktorfit",
+    "name": "Ktorfit",
+    "github": "https://github.com/Foso/Ktorfit",
+    "description": "Kotlin 멀티플랫폼 환경에서 Retrofit에서 영감을 받아 구현된 KSP 기반 HTTP 클라이언트 생성기입니다.",
+    "longDescription": "Kotlin Multiplatform 프로젝트에서 어노테이션 기반으로 API 인터페이스를 정의하고 Ktor 클라이언트를 자동 생성해주는 도구입니다. 안드로이드, iOS, JS, Jvm 등 다양한 타겟을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kotlin",
+      "Ktor",
+      "멀티플랫폼",
+      "API",
+      "코드생성"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://foso.github.io/Ktorfit",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Kotlin",
+      "KSP"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 KSP 플러그인과 Ktorfit 플러그인을 설정합니다.",
+      "인터페이스를 정의하고 @GET, @POST 등의 어노테이션을 붙입니다.",
+      "프로젝트를 빌드하여 구현체 코드를 자동 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2103,
+    "forks": 79,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "lua-resty-http",
+    "name": "lua-resty-http",
+    "github": "https://github.com/ledgetech/lua-resty-http",
+    "description": "OpenResty 및 ngx_lua 환경을 위한 고성능 Lua 기반 HTTP 클라이언트 코소켓 드라이버입니다.",
+    "longDescription": "Nginx 환경에서 Lua 스크립트를 통해 외부 HTTP 요청을 처리할 수 있는 클라이언트 라이브러리입니다. 스트리밍 응답 바디, 커넥션 풀링, 프록시 연결 및 SSL 통신을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Lua",
+      "OpenResty",
+      "Nginx",
+      "HTTP",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://github.com/ledgetech/lua-resty-http",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "OpenResty",
+      "LuaRocks"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "LuaRocks 설치",
+        "command": "luarocks install lua-resty-http && luarocks install lua-resty-openssl",
+        "note": "LuaRocks를 통해 모듈과 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "LuaRocks 명령어로 라이브러리를 설치합니다.",
+      "Lua 코드에서 resty.http 모듈을 불러옵니다.",
+      "클라이언트 인스턴스를 생성하고 request 메서드로 API를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2078,
+    "forks": 629,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "tesla",
+    "name": "Tesla",
+    "github": "https://github.com/elixir-tesla/tesla",
+    "description": "다양한 어댑터와 미들웨어를 지원하는 유연하고 확장 가능한 Elixir HTTP 클라이언트 라이브러리입니다.",
+    "longDescription": "미들웨어 패턴을 사용하여 로깅, 재시도, JSON 인코딩 등의 기능을 유연하게 조합할 수 있는 Elixir HTTP 클라이언트입니다. Mint, Hackney 등 다양한 백엔드 어댑터를 선택하여 사용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Elixir",
+      "HTTP",
+      "미들웨어",
+      "클라이언트"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/elixir-tesla/tesla",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Elixir"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Mix 의존성 추가",
+        "command": "{:tesla, \"~ 1.4\"}",
+        "note": "mix.exs 파일에 테슬라 라이브러리를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "mix.exs에 테슬라와 원하는 어댑터를 의존성으로 추가합니다.",
+      "모듈 내에서 use Tesla를 선언하고 미들웨어를 정의합니다.",
+      "Tesla.get/2 함수를 호출하여 HTTP 요청을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2077,
+    "forks": 369,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "rest-nvim",
+    "name": "rest.nvim",
+    "github": "https://github.com/rest-nvim/rest.nvim",
+    "description": "Neovim 환경에서 HTTP 요청을 비동기식으로 실행하고 테스트할 수 있는 Lua 기반 클라이언트입니다.",
+    "longDescription": "Neovim 내부에서 직접 HTTP 요청을 작성하고 실행 결과를 확인할 수 있는 개발자 도구입니다. cURL 기반으로 동작하며, 텍스트 파일에 작성된 요청을 파싱하여 응답을 보기 쉽게 출력합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Neovim",
+      "Lua",
+      "API",
+      "HTTP",
+      "에디터플러그인"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/rest-nvim/rest.nvim",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Neovim = 0.10.1",
+      "curl"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Lazy.nvim 설치",
+        "command": "{\"rest-nvim/rest.nvim\", dependencies = { \"nvim-treesitter/nvim-treesitter\" }}",
+        "note": "패키지 매니저 설정을 통해 플러그인을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 매니저를 통해 Neovim에 rest.nvim을 설치합니다.",
+      ".http 확장자의 파일에 HTTP 요청 스크립트를 작성합니다.",
+      "커서를 요청 위에 두고 실행 키를 눌러 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2071,
+    "forks": 146,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "forest",
+    "name": "Forest",
+    "github": "https://github.com/dromara/forest",
+    "description": "Java 환경에서 복잡한 설정 없이 로컬 메서드 호출처럼 HTTP 요청을 처리할 수 있는 선언식 클라이언트 프레임워크입니다.",
+    "longDescription": "Httpclient와 OkHttp를 백엔드로 사용하여 선언적인 방식으로 HTTP 요청을 정의할 수 있는 자바 프레임워크입니다. 비즈니스 로직과 통신 프로토콜을 분리하고 인터페이스 기반으로 API를 호출할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "HTTP",
+      "Spring",
+      "선언식",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/dromara/forest",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Java"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Maven 또는 Gradle 프로젝트에 Forest 의존성을 추가합니다.",
+      "인터페이스를 생성하고 @Get, @Post 등의 어노테이션과 URL을 지정합니다.",
+      "해당 인터페이스를 빈으로 주입받아 일반 자바 메서드처럼 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1948,
+    "forks": 242,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "cross-fetch",
+    "name": "cross-fetch",
+    "github": "https://github.com/lquixada/cross-fetch",
+    "description": "Node.js, 브라우저, React Native 환경을 모두 지원하는 범용 WHATWG Fetch API 라이브러리입니다.",
+    "longDescription": "다양한 JavaScript 런타임 환경에서 동일한 Fetch API 인터페이스를 사용할 수 있도록 해주는 유틸리티입니다. 환경별 차이를 추상화하여 일관된 네트워크 요청 코드를 작성할 수 있게 합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "JavaScript",
+      "TypeScript",
+      "Fetch",
+      "API",
+      "Node.js"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lquixada/cross-fetch",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Node.js 또는 브라우저 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 패키지를 설치합니다.",
+      "코드 파일에서 fetch 함수를 임포트합니다.",
+      "표준 fetch API와 동일하게 HTTP 요청을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1694,
+    "forks": 107,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "requests-2",
+    "name": "Requests for Go",
+    "github": "https://github.com/earthboundkid/requests",
+    "description": "표준 net/http 라이브러리를 보완하여 간결한 문법으로 HTTP 요청을 처리하는 Go 패키지입니다.",
+    "longDescription": "Go 언어에서 HTTP 요청 작성을 단순화하고 안전하게 처리할 수 있도록 돕는 도구입니다. 응답 본문 자동 닫기, 기본 상태 코드 검증, JSON 직렬화 헬퍼 등을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "HTTP",
+      "API",
+      "라이브러리",
+      "헬퍼"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://blog.carlana.net/post/2021/requests-golang-http-client/",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Go 1.18+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Go 모듈 환경에서 패키지를 가져옵니다.",
+      "체이닝 방식을 사용하여 요청 파라미터를 설정합니다.",
+      "요청을 실행하고 결과를 직렬화하여 받습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1672,
+    "forks": 63,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "restclient-cpp",
+    "name": "restclient-cpp",
+    "github": "https://github.com/mrtazz/restclient-cpp",
+    "description": "libcurl 기반으로 간편하게 RESTful HTTP 요청을 수행할 수 있는 C++ 클라이언트 라이브러리입니다.",
+    "longDescription": "C++ 애플리케이션에서 가볍게 REST API를 호출할 수 있도록 설계된 클라이언트 라이브러리입니다. 헤더 설정, 인증, 다양한 HTTP 메서드 호출을 단순화된 API로 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C++",
+      "REST",
+      "HTTP",
+      "cURL",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://code.mrtazz.com/restclient-cpp/",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "libcurl",
+      "C++ 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew를 이용한 macOS 설치",
+        "command": "brew tap mrtazz/oss && brew install restclient-cpp",
+        "note": "macOS 환경 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 restclient-cpp 라이브러리를 링크합니다.",
+      "클라이언트 인스턴스를 생성하고 헤더를 설정합니다.",
+      "GET 또는 POST 등의 메서드를 호출하여 응답을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1611,
+    "forks": 374,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "sttp",
+    "name": "sttp client",
+    "github": "https://github.com/softwaremill/sttp",
+    "description": "다양한 백엔드와 동기/비동기 방식을 지원하는 확장 가능한 Scala용 HTTP 클라이언트입니다.",
+    "longDescription": "타입 안전성과 직관적인 API를 제공하는 Scala 전용 HTTP 클라이언트 라이브러리입니다. Akka, Cats, ZIO 등 다양한 생태계의 비동기 런타임과 결합하여 사용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Scala",
+      "HTTP",
+      "클라이언트",
+      "비동기",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://sttp.softwaremill.com",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Scala",
+      "SBT"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "build.sbt 파일에 sttp 의존성을 추가합니다.",
+      "요청 객체를 정의하고 원하는 백엔드를 선택합니다.",
+      "요청을 전송하고 응답 데이터를 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1507,
+    "forks": 336,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "tapir",
+    "name": "tapir",
+    "github": "https://github.com/softwaremill/tapir",
+    "description": "타입 안전한 HTTP API를 선언적으로 정의하고 서버, 클라이언트, 문서를 동시에 생성하는 Scala 라이브러리입니다.",
+    "longDescription": "API 엔드포인트를 하나의 정의로 통합하여 서버 구현, 클라이언트 코드, OpenAPI 문서까지 자동으로 생성해주는 고생산성 도구입니다. 타입 안정성을 보장하며 다양한 웹 프레임워크와 연동됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Scala",
+      "API",
+      "OpenAPI",
+      "문서화",
+      "타입안전"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://tapir.softwaremill.com",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Scala",
+      "SBT"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 tapir 코어 및 관련 모듈 의존성을 추가합니다.",
+      "엔드포인트의 입력과 출력 구조를 Scala 코드로 선언합니다.",
+      "선언된 정의를 바탕으로 서버 라우트나 문서 인터페이스를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1475,
+    "forks": 471,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
+    "id": "squbs",
+    "name": "squbs",
+    "github": "https://github.com/paypal/squbs",
+    "description": "대규모 프로덕션 환경을 위한 Akka Streams 및 Akka HTTP 기반의 마이크로서비스 프레임워크입니다.",
+    "longDescription": "PayPal에서 개발한 고가용성 마이크로서비스 구축 프레임워크입니다. Akka 생태계를 바탕으로 안정적인 컴포넌트 관리, 라우팅, 확장성 있는 분산 서비스 구성을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Scala",
+      "Akka",
+      "마이크로서비스",
+      "HTTP",
+      "스트리밍"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://paypal.github.io/squbs",
+    "featured": 9,
+    "added": "2026-10-25",
+    "addedAt": "2026-10-25T01:04:05.341Z",
+    "requirements": [
+      "Scala",
+      "Java 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "giter8 템플릿을 사용하여 새 프로젝트를 생성합니다.",
+      "서비스 컴포넌트와 설정을 구성합니다.",
+      "애플리케이션을 빌드하고 실행하여 서비스를 구동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1429,
+    "forks": 234,
+    "starsUpdatedAt": "2026-10-25"
+  },
+  {
     "id": "3d-force-graph",
     "name": "3d-force-graph",
     "github": "https://github.com/vasturiano/3d-force-graph",
