@@ -1,7 +1,1065 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-25T19:07:06.354Z",
+  "updatedAt": "2026-10-25T20:06:20.206Z",
   "items": [
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "windmill",
+        "name": "Windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "API, 백그라운드 작업, 워크플로우, UI를 빠르게 구축하는 오픈소스 개발자 플랫폼",
+        "longDescription": "다양한 프로그래밍 언어로 스크립트를 작성하여 자동으로 UI를 생성하고 복잡한 워크플로우로 조합할 수 있습니다. Retool과 Pipedream의 강력한 오픈소스 대안으로 활용됩니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "자동화",
+          "API"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Helm",
+          "Kubernetes",
+          "Docker 중 선택"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Helm을 통한 설치",
+            "command": "helm repo add windmill https://windmill-labs.github.io/windmill-helm-charts/ && helm install windmill-chart windmill/windmill --namespace=windmill --create-namespace",
+            "note": "Helm 차트를 사용하여 쿠버네티스 클러스터에 윈드밀을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "쿠버네티스 또는 Docker 환경을 준비합니다.",
+          "Helm 차트 또는 컨테이너를 통해 Windmill을 배포합니다.",
+          "웹 대시보드에 접속하여 스크립트와 워크플로우를 작성합니다.",
+          "자동 생성된 내부 UI를 통해 작업을 실행하고 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "워커당 최소 1vCPU 및 1~2GB RAM이 권장됩니다.",
+        "stars": 18263,
+        "forks": 1127,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:05.452Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:09.553Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T20:06:17.029Z"
+    },
+    {
+      "id": "xonsh",
+      "name": "Xonsh",
+      "github": "https://github.com/xonsh/xonsh",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "xonsh",
+        "name": "Xonsh",
+        "github": "https://github.com/xonsh/xonsh",
+        "description": "파이썬 언어와 호환되며 셸 기능을 제공하는 크로스 플랫폼 파이썬 셸",
+        "longDescription": "파이썬 3의 슈퍼셋 언어로 동작하며 일반 명령어 실행과 파이썬 코드를 매끄럽게 결합하여 사용할 수 있습니다. 리눅스, macOS, 윈도우 등 다양한 환경을 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "파이썬",
+          "셸",
+          "자동화"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://xon.sh",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Python 3"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "파이썬 환경에 Xonsh를 설치합니다.",
+          "터미널에서 `xonsh`를 실행하여 셸 환경으로 진입합니다.",
+          "셸 명령어와 파이썬 문법을 혼용하여 스크립트를 작성하고 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 9685,
+        "forks": 751,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:05.742Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:10.258Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T20:06:17.740Z"
+    },
+    {
+      "id": "connect",
+      "name": "Redpanda Connect",
+      "github": "https://github.com/redpanda-data/connect",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "connect",
+        "name": "Redpanda Connect",
+        "github": "https://github.com/redpanda-data/connect",
+        "description": "다양한 소스와 싱크 사이에서 데이터를 실시간으로 변환하고 라우팅하는 고성능 스트림 처리기입니다.",
+        "longDescription": "Postgres, MySQL, MongoDB 등의 변경 데이터 캡처(CDC)를 지원하며, Bloblang 매핑 언어를 통해 데이터를 손쉽게 정제, 변환, 필터링할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "스트리밍",
+          "ETL",
+          "Go"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.redpanda.com/connect/home/",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Go",
+          "Docker (테스트용)"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "정적 바이너리 파일을 다운로드하거나 컨테이너 이미지를 준비합니다.",
+          "파이프라인 소스 및 싱크 설정을 작성합니다.",
+          "스트림 프로세서를 실행하여 실시간 데이터 파이프라인을 구동합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8791,
+        "forks": 979,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:06.019Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:11.260Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T20:06:18.492Z"
+    },
+    {
+      "id": "growthbook",
+      "name": "GrowthBook",
+      "github": "https://github.com/growthbook/growthbook",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "growthbook",
+        "name": "GrowthBook",
+        "github": "https://github.com/growthbook/growthbook",
+        "description": "기능 플래그 및 A/B 테스트 통합 플랫폼",
+        "longDescription": "웹과 모바일 애플리케이션에서 안전하게 기능을 배포하고 실험을 진행할 수 있도록 지원합니다. 자체 데이터 웨어하우스와 연동하여 통계 기반의 분석 결과를 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "기능 플래그",
+          "A/B 테스트",
+          "데이터 분석"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.growthbook.io",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose로 실행",
+            "command": "git clone https://github.com/growthbook/growthbook.git && cd growthbook && docker compose up -d",
+            "note": "로컬 환경에 GrowthBook 컨테이너를 백그라운드로 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 복제하고 Docker Compose 명령어로 컨테이너를 실행합니다.",
+          "웹 브라우저에서 `http://localhost:3000`으로 접속합니다.",
+          "기능 플래그와 실험(A/B 테스트)을 생성하고 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8531,
+        "forks": 884,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:06.364Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:11.775Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T20:06:19.513Z"
+    },
+    {
+      "id": "lakefs",
+      "name": "lakeFS",
+      "github": "https://github.com/treeverse/lakeFS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "lakefs",
+        "name": "lakeFS",
+        "github": "https://github.com/treeverse/lakeFS",
+        "description": "오브젝트 스토리지에 Git과 같은 버전 관리 기능을 제공하는 도구",
+        "longDescription": "AWS S3, Azure Blob Storage 등의 스토리지 위에 원자적이고 반복 가능한 데이터 조작, 브랜치 관리, 롤백 기능을 제공합니다. 대규모 데이터 파이프라인의 안정성을 높이는 데 도움을 줍니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터레이크",
+          "버전관리",
+          "Git"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.lakefs.io",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Python 또는 Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker를 이용한 실행",
+            "command": "docker run --pull always --name lakefs -p 8000:8000 treeverse/lakeFS:latest run --quickstart",
+            "note": "도커를 통해 lakeFS 샌드박스 인스턴스를 빠르게 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 또는 파이썬 환경을 통해 lakeFS 서버를 실행합니다.",
+          "웹 브라우저에서 `http://127.0.0.1:8000/`에 접속하여 초기 설정을 완료합니다.",
+          "데이터 레이크 저장소를 생성하고 브랜치 및 버전 관리를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5570,
+        "forks": 486,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:06.676Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:12.366Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T20:06:20.206Z"
+    },
+    {
+      "id": "rudder-server",
+      "name": "RudderStack",
+      "github": "https://github.com/rudderlabs/rudder-server",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "rudder-server",
+        "name": "RudderStack",
+        "github": "https://github.com/rudderlabs/rudder-server",
+        "description": "프라이버시와 보안을 중시하는 기업을 위한 오픈소스 고객 데이터 플랫폼(CDP) 및 파이프라인입니다.",
+        "longDescription": "다양한 애플리케이션, 웹사이트에서 이벤트를 수집하여 데이터 웨어하우스 및 비즈니스 도구로 안전하게 동기화할 수 있도록 지원합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "CDP",
+          "데이터 파이프라인",
+          "Go",
+          "PostgreSQL"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.rudderstack.com/",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "RudderStack 백엔드와 PostgreSQL 데이터베이스를 연동하여 배포합니다.",
+          "웹 UI를 통해 이벤트 소스와 목적지를 설정합니다.",
+          "애플리케이션에서 테스트 이벤트를 전송하여 파이프라인 정상 작동을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4505,
+        "forks": 80,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:06.979Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:13.018Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "qsv",
+      "name": "qsv",
+      "github": "https://github.com/dathere/qsv",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "qsv",
+        "name": "qsv",
+        "github": "https://github.com/dathere/qsv",
+        "description": "CSV 및 표 형식 데이터를 초고속으로 처리하고 변환할 수 있는 Rust 기반 데이터 랭글링 도구입니다.",
+        "longDescription": "대용량 CSV 파일의 필터링, 통계 분석, 지리 정보 매핑, 데이터 정제를 빠르고 효율적으로 수행할 수 있는 다양한 명령어를 제공합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "CSV",
+          "Rust",
+          "데이터 분석",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://qsv.dathere.com",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리즈 페이지 또는 패키지 매니저를 통해 qsv를 설치합니다.",
+          "터미널에서 `qsv` 명령어를 호출하여 사용 가능한 하위 명령어를 확인합니다.",
+          "대용량 CSV 파일에 대해 검색, 인덱싱, 통계 요약 등의 작업을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3814,
+        "forks": 115,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:07.261Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:14.221Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "memphis",
+      "name": "Memphis",
+      "github": "https://github.com/superstreamlabs/memphis",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "memphis",
+        "name": "Memphis",
+        "github": "https://github.com/superstreamlabs/memphis",
+        "description": "백엔드 개발자가 실시간 이벤트 기반 기능을 쉽게 구축할 수 있도록 지원하는 확장 가능한 데이터 스트리밍 플랫폼입니다.",
+        "longDescription": "메시지 큐와 스트림 처리를 간소화하며, 쿠버네티스 및 도커 환경에서 손쉽게 배포하여 마이크로서비스 간의 안정적인 데이터 흐름을 관리할 수 있습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "스트리밍",
+          "메시지 큐",
+          "Kubernetes",
+          "Docker",
+          "Go"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.memphis.dev",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Docker Compose 또는 Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose로 실행",
+            "command": "curl -s https://memphisdev.github.io/memphis-docker/docker-compose.yml -o docker-compose.yml && docker compose -f docker-compose.yml -p memphis up",
+            "note": "도커를 이용해 멤피스 스트리밍 플랫폼을 로컬에 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker Compose 또는 쿠버네티스 설정을 준비합니다.",
+          "설치 명령어를 실행하여 서비스를 구동합니다.",
+          "관리 UI에 접속하여 토픽 생성 및 메시지 스트림을 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3444,
+        "forks": 221,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:07.534Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:14.749Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 아웃라이너의 장점을 결합한 자유 형식의 계층형 데이터 조직화 도구입니다.",
+        "longDescription": "할 일 목록, 일정 관리, 아이디어 브레인스토밍, 소규모 데이터베이스 구축 등 복잡하고 계층적인 정보를 직관적으로 정리할 수 있는 데스크톱 애플리케이션입니다.",
+        "category": "생산성",
+        "tags": [
+          "스프레드시트",
+          "마인드맵",
+          "노트 작성",
+          "C++",
+          "데스크톱"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 릴리즈 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
+          "애플리케이션을 실행하고 새로운 트리시츠 문서를 생성합니다.",
+          "계층 구조의 표 형식으로 아이디어나 데이터를 입력하고 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS에서는 최초 실행 시 보안 설정으로 인해 직접 실행 허용이 필요할 수 있습니다.",
+        "stars": 3175,
+        "forks": 224,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:07.812Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:15.543Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "soda-core",
+      "name": "Soda Core",
+      "github": "https://github.com/sodadata/soda-core",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "soda-core",
+        "name": "Soda Core",
+        "github": "https://github.com/sodadata/soda-core",
+        "description": "데이터 스택 전반에서 데이터 품질과 계약(Data Contract)을 정의하고 검증할 수 있는 오픈소스 엔진입니다.",
+        "longDescription": "YAML 기반의 간단한 구문으로 데이터 품질 규칙을 정의하고, CLI 또는 파이썬 API를 통해 스키마와 데이터 상태를 자동으로 테스트 및 검증할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "데이터 품질",
+          "Python",
+          "CLI",
+          "YAML",
+          "데이터 테스트"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://go.soda.io/core-docs",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Python 3.9, 3.10, 3.11, 3.12 중 하나"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "파이썬 환경에서 지원 버전을 확인한 뒤 Soda 패키지를 설치합니다.",
+          "YAML 형식의 데이터 품질 검사 계약 파일을 작성합니다.",
+          "CLI 명령어를 실행하여 데이터 웨어하우스의 스키마와 데이터를 검증합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2445,
+        "forks": 294,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:08.082Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T20:06:16.012Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "data-engineering-zoomcamp",
+      "name": "Data Engineering Zoomcamp",
+      "github": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "data-engineering-zoomcamp",
+        "name": "Data Engineering Zoomcamp",
+        "github": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
+        "description": "프로덕션급 데이터 파이프라인 구축을 다루는 무료 9주 데이터 엔지니어링 코스입니다.",
+        "longDescription": "데이터 엔지니어링의 기초부터 시작해 처음부터 끝까지 엔드투엔드 데이터 파이프라인을 구축하며 업계 표준 도구와 모범 사례를 실습을 통해 배울 수 있습니다.",
+        "category": "교육·학습",
+        "tags": [
+          "데이터엔지니어링",
+          "Docker",
+          "Apache Kafka",
+          "dbt",
+          "무료강의"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://courses.datatalks.club/register/de-zoomcamp/",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 GitHub 저장소의 코스 자료를 확인합니다.",
+          "유튜브 재생목록에서 비디오 강의를 시청합니다.",
+          "Slack 또는 Telegram 커뮤니티에 참여하여 질문하고 소통합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 46397,
+        "forks": 8995,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:08.352Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "second-brain-ai-assistant-course",
+      "name": "Second Brain AI Assistant Course",
+      "github": "https://github.com/decodingai-magazine/second-brain-ai-assistant-course",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05"
+    },
+    {
+      "id": "metarank",
+      "name": "Metarank",
+      "github": "https://github.com/metarank/metarank",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05"
+    },
+    {
+      "id": "udacity-data-engineering-projects",
+      "name": "Udacity Data Engineering Projects",
+      "github": "https://github.com/san089/Udacity-Data-Engineering-Projects",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "udacity-data-engineering-projects",
+        "name": "Udacity Data Engineering Projects",
+        "github": "https://github.com/san089/Udacity-Data-Engineering-Projects",
+        "description": "데이터 모델링, 클라우드 인프라 구축, 데이터 웨어하우스 및 데이터 레이크 개발 프로젝트 모음입니다.",
+        "longDescription": "Postgres를 이용한 데이터 모델링, Cassandra NoSQL 파이프라인, Airflow 기반 ETL 등 실무 중심의 데이터 엔지니어링 프로젝트 예제들을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "데이터엔지니어링",
+          "Apache Airflow",
+          "PostgreSQL",
+          "AWS",
+          "ETL"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/san089/Udacity-Data-Engineering-Projects",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Python",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "관심 있는 프로젝트 폴더로 이동합니다.",
+          "필요한 요구 사항 및 데이터베이스 설정을 확인합니다.",
+          "Python 스크립트 및 ETL 파이프라인 코드를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2017,
+        "forks": 599,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T20:06:08.640Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "nao",
+      "name": "nao",
+      "github": "https://github.com/getnao/nao",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05",
+      "tool": {
+        "id": "nao",
+        "name": "nao",
+        "github": "https://github.com/getnao/nao",
+        "description": "데이터 컨텍스트를 구성하고 누구나 채팅으로 데이터 분석을 수행할 수 있게 해주는 오픈소스 분석 에이전트입니다.",
+        "longDescription": "CLI를 통해 데이터베이스와 메타데이터 컨텍스트를 구축하고, 슬랙봇 및 웹 인터페이스를 통해 자연어로 데이터 웨어하우스에서 분석을 수행하도록 지원합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "텍스트투SQL",
+          "데이터분석",
+          "비즈니스인텔리전스",
+          "TypeScript",
+          "MCP"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.getnao.io",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T20:04:04.417Z",
+        "requirements": [
+          "Python",
+          "pip"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "nao-core 설치",
+            "command": "pip install nao-core",
+            "note": "nao-core 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "nao init 명령어로 프로젝트를 초기화합니다.",
+          "데이터베이스 연결 및 에이전트 컨텍스트를 설정합니다.",
+          "채팅 인터페이스를 통해 데이터에 대한 질문을 던지고 분석 결과를 확인합니다."
+        ],
+        "examplePrompt": "지난달 국가별 매출 상위 5개 품목을 보여줘",
+        "usageNote": "",
+        "stars": 1952,
+        "forks": 295,
+        "starsUpdatedAt": "2026-10-25"
+      }
+    },
+    {
+      "id": "pyper",
+      "name": "Pyper",
+      "github": "https://github.com/pyper-dev/pyper",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05"
+    },
+    {
+      "id": "pyjanitor",
+      "name": "pyjanitor",
+      "github": "https://github.com/pyjanitor-devs/pyjanitor",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05"
+    },
+    {
+      "id": "dataengineeringproject",
+      "name": "DataEngineeringProject",
+      "github": "https://github.com/damklis/DataEngineeringProject",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05"
+    },
+    {
+      "id": "quilt",
+      "name": "Quilt",
+      "github": "https://github.com/quiltdata/quilt",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05"
+    },
+    {
+      "id": "neumai",
+      "name": "Neum AI",
+      "github": "https://github.com/NeumTry/NeumAI",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T20:06:04.766Z",
+      "sourceRun": "2026-10-26T05"
+    },
     {
       "id": "prompts-chat",
       "name": "prompts.chat",
@@ -1437,79 +2495,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-25T18:06:10.561Z"
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-25T18:06:01.015Z",
-      "sourceRun": "2026-10-26T03",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "스프레드시트와 마인드맵을 대체하는 프리폼 계층형 데이터 조직화 도구입니다.",
-        "longDescription": "복잡한 데이터를 체계적으로 관리할 수 있도록 돕는 다차원 계층형 스프레드시트입니다. 할 일 목록, 브레인스토밍, 프로젝트 관리 등 다양한 정보 구조화에 적합합니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "아웃라이너"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T18:04:02.565Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "릴리스 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
-          "애플리케이션을 실행하고 새 계층형 스프레드시트를 생성합니다.",
-          "데이터를 입력하고 계층 구조를 설정하여 정리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "macOS에서는 최초 실행 시 보안 설정으로 인해 실행이 차단될 수 있습니다.",
-        "stars": 3175,
-        "forks": 224,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T18:06:02.050Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T18:06:06.293Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-25T18:06:11.205Z"
     },
     {
       "id": "kanwas",
@@ -34563,83 +35548,6 @@
       "sourceRun": "2026-10-24T07"
     },
     {
-      "id": "xonsh",
-      "name": "Xonsh",
-      "github": "https://github.com/xonsh/xonsh",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T22:06:10.070Z",
-      "sourceRun": "2026-10-24T07",
-      "tool": {
-        "id": "xonsh",
-        "name": "Xonsh",
-        "github": "https://github.com/xonsh/xonsh",
-        "description": "Python 언어를 기반으로 하여 셸 기능과 명령어 실행을 완벽하게 통합한 크로스플랫폼 파이썬 셸입니다.",
-        "longDescription": "Python 3의 문법 슈퍼셋으로 동작하며, 일반적인 셸 명령어와 파이썬 스크립트를 동시에 매끄럽게 사용할 수 있는 확장성 높은 도구입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Python",
-          "Shell",
-          "CLI",
-          "자동화",
-          "크로스플랫폼"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://xon.sh",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T22:04:06.976Z",
-        "requirements": [
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "pip 또는 패키지 관리자를 통해 xonsh를 설치합니다.",
-          "터미널에서 xonsh를 실행하여 프롬프트로 진입합니다.",
-          "셸 명령어와 파이썬 문법을 조합하여 작업을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9686,
-        "forks": 751,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T22:06:11.631Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T22:06:15.024Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "cloudnative-pg",
       "name": "CloudNativePG",
       "github": "https://github.com/cloudnative-pg/cloudnative-pg",
@@ -38350,92 +39258,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-23T15:07:24.515Z"
-    },
-    {
-      "id": "growthbook",
-      "name": "GrowthBook",
-      "github": "https://github.com/growthbook/growthbook",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T15:06:45.263Z",
-      "sourceRun": "2026-10-24T00",
-      "tool": {
-        "id": "growthbook",
-        "name": "GrowthBook",
-        "github": "https://github.com/growthbook/growthbook",
-        "description": "오픈소스 기능 플래그, 실험, 제품 분석을 통합 제공하는 플랫폼입니다.",
-        "longDescription": "제품 기능 배포를 안전하게 제어하고 사용자를 대상으로 실험을 진행하여 그 결과를 데이터 기반으로 분석할 수 있는 오픈소스 솔루션입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "기능플래그",
-          "A/B테스트",
-          "데이터분석"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.growthbook.io",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T15:04:00.440Z",
-        "requirements": [
-          "Docker",
-          "Docker Compose"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker Compose 실행",
-            "command": "git clone https://github.com/growthbook/growthbook.git && cd growthbook && docker compose up -d",
-            "note": "저장소를 복제한 뒤 Docker Compose로 컨테이너를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 Docker Compose로 서비스를 시작합니다.",
-          "브라우저에서 `http://localhost:3000`으로 접속하여 초기 계정을 만듭니다.",
-          "프로젝트에 기능 플래그와 실험 항목을 생성합니다.",
-          "SDK를 애플리케이션에 연동하여 플래그를 제어하고 결과를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8528,
-        "forks": 884,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T15:06:46.940Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T15:06:50.429Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-23T15:07:26.045Z"
     },
     {
       "id": "chartbrew",
@@ -44213,85 +45035,6 @@
       "sourceRun": "2026-10-23T12"
     },
     {
-      "id": "data-engineering-zoomcamp",
-      "name": "Data Engineering Zoomcamp",
-      "github": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T03:06:26.912Z",
-      "sourceRun": "2026-10-23T12",
-      "tool": {
-        "id": "data-engineering-zoomcamp",
-        "name": "Data Engineering Zoomcamp",
-        "github": "https://github.com/DataTalksClub/data-engineering-zoomcamp",
-        "description": "프로덕션급 데이터 파이프라인 구축을 다루는 무료 9주 데이터 엔지니어링 과정입니다.",
-        "longDescription": "처음부터 끝까지 완전한 데이터 파이프라인을 구축하며 데이터 엔지니어링의 기본기를 다질 수 있습니다. 업계 표준 도구와 모범 사례를 직접 실습하며 배울 수 있는 오픈소스 과정입니다.",
-        "category": "교육·학습",
-        "tags": [
-          "데이터엔지니어링",
-          "강좌",
-          "Docker",
-          "Python",
-          "Kafka"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://courses.datatalks.club/register/de-zoomcamp/",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T03:04:04.213Z",
-        "requirements": [
-          "Git",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 GitHub 저장소를 클론합니다.",
-          "주차별 안내에 따라 학습 자료와 비디오 강의를 확인합니다.",
-          "실습 환경을 구성하고 데이터 파이프라인 프로젝트를 직접 구현합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 46342,
-        "forks": 8992,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T03:06:28.863Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T03:06:32.430Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "ubicloud",
       "name": "Ubicloud",
       "github": "https://github.com/ubicloud/ubicloud",
@@ -49140,591 +49883,6 @@
       "sourceRun": "2026-10-23T02"
     },
     {
-      "id": "connect",
-      "name": "Redpanda Connect",
-      "github": "https://github.com/redpanda-data/connect",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T16:06:47.851Z",
-      "sourceRun": "2026-10-23T01",
-      "tool": {
-        "id": "connect",
-        "name": "Redpanda Connect",
-        "github": "https://github.com/redpanda-data/connect",
-        "description": "다양한 소스와 싱크 사이에서 데이터를 이동하고 변환하는 고성능 스트림 처리기입니다.",
-        "longDescription": "Redpanda Connect는 다양한 소스와 싱크 간에 데이터를 스트리밍하고 변환할 수 있는 경량 스트림 처리 도구입니다. Bloblang을 사용한 데이터 매핑과 다양한 데이터베이스 변경 감지(CDC) 커넥터를 지원합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "스트림처리",
-          "ETL",
-          "Go",
-          "데이터",
-          "CDC"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.redpanda.com/connect/home/",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T16:04:05.016Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Task 실행",
-            "command": "task test",
-            "note": "소스 코드 테스트 실행"
-          }
-        ],
-        "usageSteps": [
-          "구성 파일 작성",
-          "단일 바이너리 또는 Docker로 실행",
-          "데이터 스트리밍 파이프라인 모니터링"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8792,
-        "forks": 978,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T16:06:48.501Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T16:06:52.740Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "The operation was aborted due to timeout"
-    },
-    {
-      "id": "lakefs",
-      "name": "lakeFS",
-      "github": "https://github.com/treeverse/lakeFS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T16:06:47.851Z",
-      "sourceRun": "2026-10-23T01",
-      "tool": {
-        "id": "lakefs",
-        "name": "lakeFS",
-        "github": "https://github.com/treeverse/lakeFS",
-        "description": "오브젝트 스토리지를 Git처럼 버전 관리할 수 있게 해주는 데이터 버전 컨트롤 시스템입니다.",
-        "longDescription": "lakeFS는 AWS S3, Azure Blob Storage, Google Cloud Storage 등의 오브젝트 스토리지 위에 Git과 유사한 버전 제어 레이어를 제공합니다. 데이터 레이크에서 원자적이고 재현 가능한 작업을 수행할 수 있습니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터버전관리",
-          "오브젝트스토리지",
-          "Go",
-          "S3",
-          "Git"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.lakefs.io",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T16:04:05.016Z",
-        "requirements": [
-          "Python 또는 Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker로 빠른 시작",
-            "command": "docker run --pull always --name lakefs -p 8000:8000 treeverse/lakefs:latest run --quickstart",
-            "note": "Docker를 이용해 lakeFS 샌드박스 실행"
-          }
-        ],
-        "usageSteps": [
-          "lakeFS 서버 실행",
-          "웹 UI 또는 CLI를 통해 브랜치 생성",
-          "데이터 변경 사항 커밋 및 병합"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5565,
-        "forks": 485,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T16:06:49.165Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T16:06:53.706Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "The operation was aborted due to timeout"
-    },
-    {
-      "id": "rudder-server",
-      "name": "RudderStack",
-      "github": "https://github.com/rudderlabs/rudder-server",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T16:06:47.851Z",
-      "sourceRun": "2026-10-23T01",
-      "tool": {
-        "id": "rudder-server",
-        "name": "RudderStack",
-        "github": "https://github.com/rudderlabs/rudder-server",
-        "description": "프라이버시와 보안을 중시하는 오픈소스 고객 데이터 플랫폼(CDP)입니다.",
-        "longDescription": "RudderStack은 애플리케이션, 웹사이트 등에서 고객 데이터를 수집하여 데이터 웨어하우스와 비즈니스 도구로 라우팅하는 오픈소스 CDP입니다. Go와 React로 작성되었으며 데이터 파이프라인 구축을 지원합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "CDP",
-          "데이터파이프라인",
-          "ETL",
-          "Go",
-          "PostgreSQL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.rudderstack.com/",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T16:04:05.016Z",
-        "requirements": [
-          "PostgreSQL",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 배포",
-            "command": "docker run ...",
-            "note": "Docker 이미지를 통해 RudderStack 실행"
-          }
-        ],
-        "usageSteps": [
-          "PostgreSQL 데이터베이스 준비",
-          "RudderStack 서버 배포",
-          "이벤트 데이터 전송 및 연동 설정"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 4505,
-        "forks": 81,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T16:06:49.409Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T16:06:54.136Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "The operation was aborted due to timeout"
-    },
-    {
-      "id": "qsv",
-      "name": "qsv",
-      "github": "https://github.com/dathere/qsv",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T16:06:47.851Z",
-      "sourceRun": "2026-10-23T01",
-      "tool": {
-        "id": "qsv",
-        "name": "qsv",
-        "github": "https://github.com/dathere/qsv",
-        "description": "대용량 CSV 및 표 형태의 데이터를 초고속으로 처리하는 Rust 기반 툴킷입니다.",
-        "longDescription": "qsv는 Rust로 작성되어 매우 빠른 속도로 CSV 파일을 조작, 검증, 변환할 수 있는 데이터 랭글링 툴킷입니다. 인덱싱, 통계 분석, 지오코딩 등의 다양한 명령어를 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CSV",
-          "데이터처리",
-          "Rust"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://qsv.dathere.com",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T16:04:05.016Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Cargo로 설치",
-            "command": "cargo install qsv",
-            "note": "Rust 패키지 관리자를 통한 설치"
-          }
-        ],
-        "usageSteps": [
-          "qsv 명령어 확인",
-          "CSV 파일 인덱싱 및 통계 확인",
-          "데이터 필터링 및 변환 수행"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3813,
-        "forks": 115,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T16:06:49.690Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T16:06:55.157Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-22T16:08:26.553Z"
-    },
-    {
-      "id": "memphis",
-      "name": "Memphis.dev",
-      "github": "https://github.com/superstreamlabs/memphis",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T16:06:47.851Z",
-      "sourceRun": "2026-10-23T01",
-      "tool": {
-        "id": "memphis",
-        "name": "Memphis.dev",
-        "github": "https://github.com/superstreamlabs/memphis",
-        "description": "백엔드 개발자를 위해 설계된 확장 가능하고 간편한 실시간 데이터 스트리밍 플랫폼입니다.",
-        "longDescription": "Memphis.dev는 이벤트 중심 및 실시간 기능을 빠르게 구축할 수 있도록 지원하는 데이터 스트리밍 플랫폼입니다. 쿠버네티스와 Docker Compose를 통해 쉽게 배포할 수 있습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "스트리밍",
-          "메시지큐",
-          "Kubernetes",
-          "Docker",
-          "Go"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.memphis.dev",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T16:04:05.016Z",
-        "requirements": [
-          "Docker Compose 또는 Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker Compose로 실행",
-            "command": "curl -s https://memphisdev.github.io/memphis-docker/docker-compose.yml -o docker-compose.yml && docker compose -f docker-compose.yml -p memphis up",
-            "note": "Docker Compose를 이용한 로컬 실행"
-          }
-        ],
-        "usageSteps": [
-          "Docker Compose 파일 다운로드",
-          "컨테이너 실행",
-          "대시보드 접속 및 스트림 생성"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3444,
-        "forks": 222,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T16:06:49.963Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T16:06:55.488Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "soda-core",
-      "name": "Soda Core",
-      "github": "https://github.com/sodadata/soda-core",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T16:06:47.851Z",
-      "sourceRun": "2026-10-23T01",
-      "tool": {
-        "id": "soda-core",
-        "name": "Soda Core",
-        "github": "https://github.com/sodadata/soda-core",
-        "description": "현대 데이터 스택을 위한 데이터 계약 및 품질 검증 엔진입니다.",
-        "longDescription": "Soda Core는 YAML로 데이터 품질 계약을 정의하고 데이터 스택 전반에서 스키마와 데이터를 자동으로 검증할 수 있는 오픈소스 도구입니다. CLI와 Python API를 제공합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "데이터품질",
-          "YAML",
-          "Python",
-          "CLI",
-          "데이터검증"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://go.soda.io/core-docs",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T16:04:05.016Z",
-        "requirements": [
-          "Python 3.9, 3.10, 3.11, 또는 3.12"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "PyPI를 통한 설치",
-            "command": "pip install soda-core",
-            "note": "Python 패키지 관리자를 통한 설치"
-          }
-        ],
-        "usageSteps": [
-          "Soda Core 설치",
-          "YAML 형식의 데이터 검증 규칙 작성",
-          "CLI를 통한 검증 실행"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2439,
-        "forks": 292,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T16:06:50.253Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T16:06:56.218Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "nao",
-      "name": "nao",
-      "github": "https://github.com/getnao/nao",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T16:06:47.851Z",
-      "sourceRun": "2026-10-23T01",
-      "tool": {
-        "id": "nao",
-        "name": "nao",
-        "github": "https://github.com/getnao/nao",
-        "description": "데이터 팀을 위한 오픈소스 AI 분석 에이전트 및 대화형 인터페이스 구축 프레임워크입니다.",
-        "longDescription": "nao는 데이터 웨어하우스와 연동하여 자연어로 데이터 분석을 수행할 수 있는 분석 에이전트를 구축하고 배포하는 프레임워크입니다. 파일 시스템 기반의 컨텍스트 빌더를 제공합니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI에이전트",
-          "데이터분석",
-          "Text-to-SQL",
-          "TypeScript",
-          "Python"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.getnao.io",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T16:04:05.016Z",
-        "requirements": [
-          "Python",
-          "pip"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Core 패키지 설치",
-            "command": "pip install nao-core",
-            "note": "Python 패키지 설치"
-          }
-        ],
-        "usageSteps": [
-          "nao-core 패키지 설치",
-          "nao init 명령어로 프로젝트 초기화",
-          "데이터베이스 및 LLM 키 연결"
-        ],
-        "examplePrompt": "지난달 가장 매출이 높은 제품 상위 5개를 보여줘",
-        "usageNote": "",
-        "stars": 1949,
-        "forks": 290,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T16:06:50.480Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-22T16:06:56.590Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "feathr",
       "name": "Feathr",
       "github": "https://github.com/feathr-ai/feathr",
@@ -50067,93 +50225,6 @@
       "reasons": [],
       "checkedAt": "2026-10-22T15:10:45.891Z",
       "sourceRun": "2026-10-23T00"
-    },
-    {
-      "id": "windmill",
-      "name": "Windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-22T15:10:45.891Z",
-      "sourceRun": "2026-10-23T00",
-      "tool": {
-        "id": "windmill",
-        "name": "Windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "스크립트를 웹훅, 워크플로우, UI 앱으로 변환해주는 오픈소스 개발자 플랫폼입니다.",
-        "longDescription": "파이썬, 타입스크립트, Go, SQL 등 다양한 언어로 작성된 스크립트를 자동화 워크플로우와 내부 관리용 UI로 전환할 수 있는 강력한 오픈소스 플랫폼입니다. Airflow보다 빠른 워크플로우 엔진을 제공하며, Retool과 Temporal의 오픈소스 대안으로 활용됩니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "업무 자동화",
-          "워크플로우",
-          "로우코드",
-          "API",
-          "백그라운드 작업"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-10-22",
-        "addedAt": "2026-10-22T15:04:06.089Z",
-        "requirements": [
-          "Docker",
-          "Kubernetes",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Helm을 이용한 설치",
-            "command": "helm repo add windmill https://windmill-labs.github.io/windmill-helm-charts/\nhelm install windmill-chart windmill/windmill --namespace=windmill --create-namespace",
-            "note": "쿠버네티스 환경에 윈드밀 차트를 배포합니다."
-          }
-        ],
-        "usageSteps": [
-          "선호하는 언어(Python, TypeScript, Go 등)로 스크립트를 작성합니다.",
-          "Windmill 대시보드에 스크립트를 등록하고 입력 파라미터를 정의합니다.",
-          "스크립트를 조합하여 복잡한 워크플로우 및 자동화 파이프라인을 구성합니다.",
-          "자동 생성된 웹 UI를 통해 워크플로우를 실행하고 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "셀프 호스팅 시 작업자(Worker)당 최소 1 vCPU와 1~2GB RAM이 권장됩니다.",
-        "stars": 18247,
-        "forks": 1124,
-        "starsUpdatedAt": "2026-10-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-22T18:06:31.215Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T14:06:53.623Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "fscalendar",
