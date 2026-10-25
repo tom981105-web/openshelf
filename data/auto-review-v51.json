@@ -1,7 +1,1245 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-25T13:06:16.375Z",
+  "updatedAt": "2026-10-25T14:06:29.764Z",
   "items": [
+    {
+      "id": "nocodb",
+      "name": "NocoDB",
+      "github": "https://github.com/nocodb/nocodb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.911Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "nocodb",
+        "name": "NocoDB",
+        "github": "https://github.com/nocodb/nocodb",
+        "description": "Airtable을 대체하는 오픈소스 로코드 데이터베이스 및 스프레드시트 플랫폼입니다.",
+        "longDescription": "기존 데이터베이스를 스프레드시트 형태의 UI로 변환하여 관리할 수 있으며, 자동화 및 REST API 생성을 지원합니다. 셀프 호스팅이 가능하여 자체 인프라에서 안전하게 데이터를 운영할 수 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터베이스",
+          "스프레드시트",
+          "로코드"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://nocodb.com",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 설치",
+            "command": "docker run -d --name noco -v \"$(pwd)\"/nocodb:/usr/app/data/ -p 8080:8080 nocodb/nocodb:latest",
+            "note": "SQLite 기반 Docker 실행"
+          }
+        ],
+        "usageSteps": [
+          "Docker 명령어를 통해 컨테이너를 실행합니다.",
+          "웹 브라우저에서 포트 8080으로 접속합니다.",
+          "관리자 계정을 생성하고 새로운 스프레드시트 데이터베이스를 구축합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 65355,
+        "forks": 5098,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:17.674Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:21.314Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T14:06:26.425Z"
+    },
+    {
+      "id": "teable",
+      "name": "Teable",
+      "github": "https://github.com/teableio/teable",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "teable",
+        "name": "Teable",
+        "github": "https://github.com/teableio/teable",
+        "description": "PostgreSQL 기반의 AI 및 비즈니스용 오픈소스 스프레드시트 플랫폼입니다.",
+        "longDescription": "스프레드시트의 직관적인 인터페이스와 강력한 PostgreSQL 데이터베이스 기능을 결합한 도구입니다. 사용자는 이를 통해 AI 워크플로우와 맞춤형 애플리케이션을 직접 구축할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "스프레드시트",
+          "PostgreSQL",
+          "업무자동화"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://teable.ai",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "Node.js",
+          "pnpm",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "의존성 설치",
+            "command": "corepack enable && pnpm install",
+            "note": "프로젝트 패키지 설치"
+          }
+        ],
+        "usageSteps": [
+          "저장소를 복제하고 패키지 관리자를 활성화합니다.",
+          "데이터베이스 모드 설정을 초기화합니다.",
+          "웹 인터페이스를 통해 데이터를 관리하고 AI 워크플로우를 연결합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 21925,
+        "forks": 1357,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:17.900Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:21.664Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T14:06:27.133Z"
+    },
+    {
+      "id": "handsontable",
+      "name": "Handsontable",
+      "github": "https://github.com/handsontable/handsontable",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "handsontable",
+        "name": "Handsontable",
+        "github": "https://github.com/handsontable/handsontable",
+        "description": "React, Angular, Vue를 지원하는 스프레드시트 형태의 JavaScript 데이터 그리드 컴포넌트",
+        "longDescription": "엑셀과 유사한 사용자 경험을 제공하여 웹 애플리케이션에서 복잡한 데이터를 쉽게 입력, 편집, 검증할 수 있습니다. 기업용 내부 시스템이나 ERP, 재고 관리 시스템 개발에 유용합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "JavaScript",
+          "스프레드시트",
+          "데이터그리드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://handsontable.com/docs",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "Node.js",
+          "npm"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "NPM 설치",
+            "command": "npm install handsontable",
+            "note": "프로젝트에 패키지 추가"
+          }
+        ],
+        "usageSteps": [
+          "패키지 관리자를 통해 라이브러리를 설치합니다.",
+          "원하는 프레임워크 래퍼를 선택하여 임포트합니다.",
+          "컴포넌트 옵션을 설정하고 데이터 그리드를 렌더링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 22070,
+        "forks": 3186,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:18.124Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:22.332Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T14:06:27.841Z"
+    },
+    {
+      "id": "imagemagick",
+      "name": "ImageMagick",
+      "github": "https://github.com/ImageMagick/ImageMagick",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "imagemagick",
+        "name": "ImageMagick",
+        "github": "https://github.com/ImageMagick/ImageMagick",
+        "description": "200개 이상의 이미지 포맷을 생성, 편집, 변환할 수 있는 강력한 오픈소스 이미지 처리 도구입니다.",
+        "longDescription": "명령어 라인 인터페이스와 다양한 프로그래밍 언어 API를 제공하여 이미지 변환, 합성, 색상 조정 등의 작업을 자동화할 수 있습니다. 대규모 이미지 일괄 처리에 널리 사용됩니다.",
+        "category": "영상·애니메이션",
+        "tags": [
+          "이미지처리",
+          "변환",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://imagemagick.org",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "시스템 환경에 맞게 ImageMagick을 설치합니다.",
+          "터미널에서 명령어 도구를 통해 이미지 변환 작업을 수행합니다.",
+          "스크립트에 통합하여 자동화 작업을 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "보안 정책을 로컬 환경에 맞게 설정한 뒤 사용하는 것을 권장합니다.",
+        "stars": 17731,
+        "forks": 1686,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:18.358Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:22.657Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T14:06:29.013Z"
+    },
+    {
+      "id": "pillow",
+      "name": "Pillow",
+      "github": "https://github.com/python-pillow/Pillow",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "pillow",
+        "name": "Pillow",
+        "github": "https://github.com/python-pillow/Pillow",
+        "description": "파이썬을 위한 강력한 이미지 처리 라이브러리",
+        "longDescription": "PIL 라이브러리의 친화적인 포크 버전으로 다양한 이미지 파일 형식을 지원합니다. 이미지 리사이징, 필터링, 자르기 등 다양한 이미지 조작 작업을 수행할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "파이썬",
+          "이미지처리",
+          "라이브러리"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://python-pillow.org",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "PIP 설치",
+            "command": "pip install Pillow",
+            "note": "파이썬 패키지 설치"
+          }
+        ],
+        "usageSteps": [
+          "pip 명령어로 패키지를 설치합니다.",
+          "파이썬 스크립트에서 Image 모듈을 불러옵니다.",
+          "이미지 파일을 열고 필요한 가공 작업을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 13926,
+        "forks": 2562,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:18.607Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:22.977Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-25T14:06:29.764Z"
+    },
+    {
+      "id": "imagesharp",
+      "name": "ImageSharp",
+      "github": "https://github.com/SixLabors/ImageSharp",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "imagesharp",
+        "name": "ImageSharp",
+        "github": "https://github.com/SixLabors/ImageSharp",
+        "description": "닷넷(.NET) 환경을 위한 고성능의 크로스플랫폼 2D 그래픽 및 이미지 처리 라이브러리입니다.",
+        "longDescription": "완전한 관리 코드로 작성되어 다양한 플랫폼에서 안정적으로 동작하며, 대규모 웹 애플리케이션의 이미지 처리 워크로드에 최적화되어 있습니다. EXIF 데이터 처리와 다양한 포맷 변환을 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          ".NET",
+          "C#",
+          "이미지처리",
+          "그래픽"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://sixlabors.com/products/imagesharp/",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          ".NET"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "NuGet 패키지 설치",
+            "command": "dotnet add package SixLabors.ImageSharp",
+            "note": "NuGet을 통한 안정 버전 설치"
+          }
+        ],
+        "usageSteps": [
+          "NuGet 패키지 매니저로 패키지를 추가합니다.",
+          "코드 내에서 ImageSharp 네임스페이스를 참조합니다.",
+          "이미지 로드, 필터 적용 및 저장 로직을 구현합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8043,
+        "forks": 908,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:18.818Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:23.286Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "gocv",
+      "name": "GoCV",
+      "github": "https://github.com/hybridgroup/gocv",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "gocv",
+        "name": "GoCV",
+        "github": "https://github.com/hybridgroup/gocv",
+        "description": "Go 언어에서 OpenCV 4 이상을 활용하여 컴퓨터 비전 작업을 수행할 수 있는 패키지입니다.",
+        "longDescription": "DNN, CUDA, OpenCV Contrib, OpenVINO 등을 지원하여 고성능 객체 감지, 얼굴 추적, 이미지 분류 등의 컴퓨터 비전 파이프라인을 Go 언어로 구현할 수 있게 해줍니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Go",
+          "OpenCV",
+          "컴퓨터비전",
+          "CUDA"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://gocv.io",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "Go",
+          "OpenCV"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "시스템에 호환되는 버전의 OpenCV를 설치합니다.",
+          "Go 프로젝트에서 GoCV 패키지를 가져옵니다.",
+          "비디오 캡처 및 이미지 처리 코드를 작성하고 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7516,
+        "forks": 899,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:19.024Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:23.924Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "rowy",
+      "name": "Rowy",
+      "github": "https://github.com/buildship-ai/rowy",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "rowy",
+        "name": "Rowy",
+        "github": "https://github.com/buildship-ai/rowy",
+        "description": "Firebase 및 Google Cloud 환경을 위한 Airtable 스타일의 로코드 백엔드 관리 플랫폼입니다.",
+        "longDescription": "스프레드시트 형태의 UI로 데이터베이스를 손쉽게 관리하고, 브라우저 환경에서 직접 JavaScript나 TypeScript로 클라우드 함수 워크플로우를 구축할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "Firebase",
+          "Google Cloud",
+          "로코드",
+          "백엔드",
+          "스프레드시트"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://rowy.io",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "Google Cloud Platform",
+          "Firebase"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Google Cloud 프로젝트에 Rowy를 배포합니다.",
+          "브라우저 인터페이스를 통해 데이터베이스에 연결합니다.",
+          "스프레드시트 UI를 통해 데이터를 관리하고 클라우드 함수를 작성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6842,
+        "forks": 556,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:19.273Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:24.288Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "scikit-image",
+      "name": "scikit-image",
+      "github": "https://github.com/scikit-image/scikit-image",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "scikit-image",
+        "name": "scikit-image",
+        "github": "https://github.com/scikit-image/scikit-image",
+        "description": "파이썬 기반의 과학 계산용 이미지 처리 및 컴퓨터 비전 알고리즘 라이브러리입니다.",
+        "longDescription": "NumPy 배열과 호환되며 필터링, 형태학적 연산, 분할, 기하학적 변환 등 다양한 이미지 처리 알고리즘을 제공합니다. 연구 및 데이터 분석 작업에 널리 활용됩니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "Python",
+          "이미지처리",
+          "NumPy",
+          "컴퓨터비전"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://scikit-image.org",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "Python",
+          "NumPy"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "PIP 설치",
+            "command": "pip install scikit-image",
+            "note": "파이썬 패키지 설치"
+          }
+        ],
+        "usageSteps": [
+          "pip 또는 conda 명령어로 라이브러리를 설치합니다.",
+          "파이썬에서 skimage 모듈을 임포트합니다.",
+          "필요한 이미지 분석 및 변환 함수를 호출하여 처리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6624,
+        "forks": 2437,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:19.534Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:24.886Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 개요 작성기를 대체하는 계층형 스프레드시트 데이터 조직화 도구입니다.",
+        "longDescription": "자유로운 형식으로 할 일 목록, 프로젝트 관리, 아이디어 브레인스토밍 등 복잡한 계층 데이터를 한눈에 정리할 수 있도록 설계된 데스크톱 애플리케이션입니다.",
+        "category": "생산성",
+        "tags": [
+          "스프레드시트",
+          "마인드맵",
+          "생산성",
+          "지식관리"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리스 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
+          "애플리케이션을 실행하고 새로운 트리시트 문서를 생성합니다.",
+          "계층 구조로 아이디어와 데이터를 입력하고 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS에서는 최초 실행 시 보안 설정으로 인해 직접 열기 확인이 필요할 수 있습니다.",
+        "stars": 3175,
+        "forks": 224,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:19.788Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-25T14:06:25.465Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "halide",
+      "name": "Halide",
+      "github": "https://github.com/halide/Halide",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "halide",
+        "name": "Halide",
+        "github": "https://github.com/halide/Halide",
+        "description": "현대 기계에서 고성능 이미지 및 배열 처리를 쉽게 작성할 수 있는 프로그래밍 언어입니다.",
+        "longDescription": "C++에 임베디드되어 동작하는 고성능 데이터 병렬 연산 도구로, 다양한 CPU, 운영 체제 및 GPU 연산 API를 타겟으로 컴파일할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "컴파일러",
+          "DSL",
+          "GPU",
+          "C++",
+          "성능"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://halide-lang.org",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "LLVM"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "LLVM 클론",
+            "command": "git clone --depth 1 --branch llvmorg-21.1.8 https://github.com/llvm/llvm-project.git",
+            "note": "LLVM 소스 코드 클론"
+          }
+        ],
+        "usageSteps": [
+          "LLVM 및 종속성을 설치합니다.",
+          "C++ API를 사용하여 Halide 파이프라인 인메모리 표현을 작성합니다.",
+          "오브젝트 파일로 컴파일하거나 JIT 방식으로 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6628,
+        "forks": 1106,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:20.064Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "sc-im",
+      "name": "sc-im",
+      "github": "https://github.com/andmarti1424/sc-im",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "sc-im",
+        "name": "sc-im",
+        "github": "https://github.com/andmarti1424/sc-im",
+        "description": "터미널 환경에서 Vim 단축키로 조작할 수 있는 ncurses 기반 스프레드시트 계산기입니다.",
+        "longDescription": "고전적인 sc 스프레드시트를 기반으로 개발되었으며, 터미널 환경에서 가볍고 빠르게 표 형식의 데이터를 계산하고 관리할 수 있도록 지원합니다.",
+        "category": "생산성",
+        "tags": [
+          "터미널",
+          "스프레드시트",
+          "Vim",
+          "콘솔",
+          "ncurses"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/andmarti1424/sc-im",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "ncurses",
+          "bison 또는 yacc",
+          "gcc",
+          "make"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "필수 의존성 패키지를 설치합니다.",
+          "소스코드를 빌드하거나 패키지 매니저를 통해 설치합니다.",
+          "터미널에서 scim 명령어로 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5715,
+        "forks": 239,
+        "starsUpdatedAt": "2026-10-25"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-25T14:06:20.283Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "hyperformula",
+      "name": "HyperFormula",
+      "github": "https://github.com/handsontable/hyperformula",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "hyperformula",
+        "name": "HyperFormula",
+        "github": "https://github.com/handsontable/hyperformula",
+        "description": "400개 이상의 수식, CRUD 및 정렬 기능을 제공하는 오픈소스 헤드리스 스프레드시트 엔진입니다.",
+        "longDescription": "사용자 인터페이스가 없는 순수 계산 레이어로 설계되어, 웹 애플리케이션이나 Node.js 백엔드에 스프레드시트 수식 파서 및 평가기를 쉽게 통합할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "스프레드시트",
+          "계산엔진",
+          "TypeScript",
+          "엑셀",
+          "수식"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://hyperformula.handsontable.com/",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트에 라이브러리를 임베디드합니다.",
+          "계산 엔진을 초기화하고 수식 데이터를 로드합니다.",
+          "평가 및 수식 계산 결과를 활용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2821,
+        "forks": 172,
+        "starsUpdatedAt": "2026-10-25"
+      }
+    },
+    {
+      "id": "cv-cuda",
+      "name": "CV-CUDA",
+      "github": "https://github.com/CVCUDA/CV-CUDA",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "cv-cuda",
+        "name": "CV-CUDA",
+        "github": "https://github.com/CVCUDA/CV-CUDA",
+        "description": "클라우드 규모의 이미지 처리 및 컴퓨터 비전을 위한 GPU 가속 오픈소스 라이브러리입니다.",
+        "longDescription": "NVIDIA GPU 환경에서 대규모 이미지 처리 파이프라인을 고성능으로 수행할 수 있도록 파이썬 및 C++ 바인딩을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "CUDA",
+          "GPU",
+          "컴퓨터비전",
+          "C++",
+          "Python"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://cvcuda.github.io",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "NVIDIA GPU",
+          "CUDA"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "사전 빌드된 패키지 또는 소스코드를 통해 설치합니다.",
+          "파이썬에서 cvcuda 모듈을 임포트합니다.",
+          "텐서 데이터를 변환하고 이미지 처리 함수를 호출합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2730,
+        "forks": 264,
+        "starsUpdatedAt": "2026-10-25"
+      }
+    },
+    {
+      "id": "jpegview",
+      "name": "JPEGView",
+      "github": "https://github.com/sylikc/jpegview",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "jpegview",
+        "name": "JPEGView",
+        "github": "https://github.com/sylikc/jpegview",
+        "description": "최소한의 GUI를 갖추고 실시간 이미지 보정을 지원하는 빠르고 가벼운 뷰어 및 편집기입니다.",
+        "longDescription": "JPEG, PNG, WEBP 등 다양한 이미지 포맷을 빠르게 열람할 수 있으며, 선명도, 색균형, 회전 등 실시간 이미지 조정 기능을 제공하는 무설치 포터블 프로그램입니다.",
+        "category": "개인 도구",
+        "tags": [
+          "이미지뷰어",
+          "Windows",
+          "포터블",
+          "C++",
+          "사진편집"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/sylikc/jpegview",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리즈 페이지에서 포터블 압축파일을 다운로드합니다.",
+          "압축을 해제합니다.",
+          "실행 파일을 열어 이미지를 확인하고 보정 기능을 사용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3004,
+        "forks": 190,
+        "starsUpdatedAt": "2026-10-25"
+      }
+    },
+    {
+      "id": "postprocessing",
+      "name": "postprocessing",
+      "github": "https://github.com/pmndrs/postprocessing",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "postprocessing",
+        "name": "postprocessing",
+        "github": "https://github.com/pmndrs/postprocessing",
+        "description": "three.js 환경을 위한 패스 및 효과 기반의 실시간 후처리 렌더링 라이브러리입니다.",
+        "longDescription": "전체 화면 이미지 조작 도구를 사용하여 웹GL 렌더링 워크플로우에 다양한 필터와 시각 효과를 손쉽게 확장할 수 있습니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "Three.js",
+          "WebGL",
+          "그래픽",
+          "JavaScript",
+          "렌더링"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://github.com/pmndrs/postprocessing",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [
+          "three"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "NPM 설치",
+            "command": "npm install three postprocessing",
+            "note": "패키지 및 피어 디펜던시 설치"
+          }
+        ],
+        "usageSteps": [
+          "npm을 통해 라이브러리를 설치합니다.",
+          "three.js 렌더러와 컴포저를 설정합니다.",
+          "후처리 패스와 효과를 추가하여 렌더링 파이프라인을 완성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2898,
+        "forks": 250,
+        "starsUpdatedAt": "2026-10-25"
+      }
+    },
+    {
+      "id": "webp-server-go",
+      "name": "webp_server_go",
+      "github": "https://github.com/webp-sh/webp_server_go",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23"
+    },
+    {
+      "id": "magic-copy",
+      "name": "Magic Copy",
+      "github": "https://github.com/kevmo314/magic-copy",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23"
+    },
+    {
+      "id": "photodemon",
+      "name": "PhotoDemon",
+      "github": "https://github.com/tannerhelland/PhotoDemon",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23",
+      "tool": {
+        "id": "photodemon",
+        "name": "PhotoDemon",
+        "github": "https://github.com/tannerhelland/PhotoDemon",
+        "description": "전문가급 기능과 고성능을 제공하는 100% 무료 오픈소스 포터블 사진 편집기입니다.",
+        "longDescription": "설치가 필요 없는 휴대용 이미지 편집 프로그램으로, 다양한 사진 보정 필터와 다국어 인터페이스를 가벼운 용량으로 제공합니다.",
+        "category": "개인 도구",
+        "tags": [
+          "사진편집",
+          "포터블",
+          "Windows",
+          "이미지필터",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://photodemon.org",
+        "featured": 9,
+        "added": "2026-10-25",
+        "addedAt": "2026-10-25T14:04:03.811Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리즈 페이지에서 휴대용 ZIP 파일을 다운로드합니다.",
+          "원하는 위치에 압축을 해제합니다.",
+          "실행 파일을 열어 사진 편집 작업을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2403,
+        "forks": 257,
+        "starsUpdatedAt": "2026-10-25"
+      }
+    },
+    {
+      "id": "triangle",
+      "name": "triangle",
+      "github": "https://github.com/esimov/triangle",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-25T14:06:16.912Z",
+      "sourceRun": "2026-10-25T23"
+    },
     {
       "id": "pmd",
       "name": "PMD",
@@ -159,79 +1397,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-25T13:06:13.260Z"
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-25T13:06:01.702Z",
-      "sourceRun": "2026-10-25T22",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "스프레드시트, 마인드맵, 개요 작성기를 대체하는 계층형 데이터 정리 도구",
-        "longDescription": "할 일 목록, 브레인스토밍, 프로젝트 관리 등 복잡한 계층 구조를 가진 데이터를 직관적이고 컴팩트하게 정리할 수 있습니다. 기존 스프레드시트의 친숙함과 마인드맵의 구조적 장점을 동시에 제공하는 데스크톱 애플리케이션입니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "프로젝트 관리"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T13:04:02.252Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리스 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
-          "애플리케이션을 실행하고 새 그리드 문서를 생성합니다.",
-          "계층적으로 데이터를 입력하고 트리 구조로 항목을 정리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3173,
-        "forks": 224,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T13:06:02.856Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T13:06:07.062Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-25T13:06:13.926Z"
     },
     {
       "id": "bearer",
@@ -21091,81 +22256,6 @@
       "recheckedAt": "2026-10-24T12:06:38.250Z"
     },
     {
-      "id": "rowy",
-      "name": "Rowy",
-      "github": "https://github.com/buildship-ai/rowy",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T12:06:12.381Z",
-      "sourceRun": "2026-10-24T21",
-      "tool": {
-        "id": "rowy",
-        "name": "Rowy",
-        "github": "https://github.com/buildship-ai/rowy",
-        "description": "스프레드시트 형태의 UI로 데이터베이스를 관리하고 클라우드 함수를 빌드하는 로우코드 플랫폼입니다.",
-        "longDescription": "브라우저 환경에서 Firebase 및 Google Cloud 데이터베이스를 쉽게 관리할 수 있는 로우코드 백엔드 플랫폼입니다. 스프레드시트 인터페이스와 JS/TS 기반 클라우드 함수 워크플로우를 제공합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "로우코드",
-          "Firebase",
-          "GCP",
-          "TypeScript",
-          "스프레드시트"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://rowy.io",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T12:04:03.441Z",
-        "requirements": [
-          "Google Cloud Platform / Firebase 프로젝트"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "GCP 프로젝트에 Rowy를 배포합니다.",
-          "스프레드시트 형태의 UI에서 데이터를 관리합니다.",
-          "필요한 경우 로우코드 클라우드 함수 워크플로우를 설정합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6842,
-        "forks": 556,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T12:06:14.075Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T12:06:18.311Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "cms",
       "name": "Statamic",
       "github": "https://github.com/statamic/cms",
@@ -26018,91 +27108,6 @@
       }
     },
     {
-      "id": "teable",
-      "name": "teable",
-      "github": "https://github.com/teableio/teable",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T06:06:02.280Z",
-      "sourceRun": "2026-10-24T15",
-      "tool": {
-        "id": "teable",
-        "name": "teable",
-        "github": "https://github.com/teableio/teable",
-        "description": "스프레드시트의 편리함과 강력한 PostgreSQL 백엔드를 결합하여 AI 워크플로우와 맞춤형 앱을 구축할 수 있는 오픈소스 AI 스프레드시트 플랫폼입니다.",
-        "longDescription": "Teable은 겉보기에는 스프레드시트처럼 쉽고 직관적이면서, 내부적으로는 강력한 PostgreSQL 데이터베이스를 기반으로 동작하는 데이터 관리 및 앱 빌더 플랫폼입니다. 실시간 데이터와 연동되는 AI 에이전트와 워크플로우를 구성하여 비즈니스 업무를 자동화할 수 있습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "스프레드시트",
-          "PostgreSQL",
-          "노코드",
-          "AI",
-          "자동화"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://teable.ai",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T06:03:59.655Z",
-        "requirements": [
-          "NodeJS",
-          "pnpm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "패키지 관리자 활성화 및 의존성 설치",
-            "command": "corepack enable && pnpm install",
-            "note": "corepack을 활성화하고 pnpm을 통해 프로젝트 의존성을 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론한 후 의존성을 설치합니다.",
-          "데이터베이스 모드 설정을 초기화합니다.",
-          "서버를 실행하고 웹 인터페이스를 통해 스프레드시트 기반의 데이터 관리를 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 21920,
-        "forks": 1357,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T07:06:03.231Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T08:06:16.609Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "dgraph",
       "name": "dgraph",
       "github": "https://github.com/dgraph-io/dgraph",
@@ -29393,170 +30398,6 @@
       "sourceRun": "2026-10-24T10"
     },
     {
-      "id": "nocodb",
-      "name": "NocoDB",
-      "github": "https://github.com/nocodb/nocodb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T00:06:13.640Z",
-      "sourceRun": "2026-10-24T09",
-      "tool": {
-        "id": "nocodb",
-        "name": "NocoDB",
-        "github": "https://github.com/nocodb/nocodb",
-        "description": "Airtable을 대체하는 오픈소스 로코드 데이터베이스 및 스프레드시트 플랫폼",
-        "longDescription": "NocoDB는 기존 데이터베이스를 스프레드시트 인터페이스로 전환하여 빠르게 데이터를 관리할 수 있도록 돕는 오픈소스 로코드 도구입니다. PostgreSQL, SQLite 등 다양한 데이터베이스와 연결할 수 있으며 자동으로 REST API를 생성합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "로코드",
-          "스프레드시트",
-          "데이터베이스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://nocodb.com",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T00:04:01.294Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run -d --name noco -v \"$(pwd)\"/nocodb:/usr/app/data/ -p 8080:8080 nocodb/nocodb:latest",
-            "note": "Docker를 이용해 NocoDB 컨테이너를 백그라운드로 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 명령어를 통해 NocoDB를 실행합니다.",
-          "웹 브라우저에서 localhost:8080에 접속합니다.",
-          "관리자 계정을 생성하고 새 프로젝트 또는 기존 데이터베이스를 연결합니다.",
-          "스프레드시트 인터페이스에서 데이터를 추가, 수정하고 API를 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 65333,
-        "forks": 5095,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T00:06:14.253Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T00:06:17.363Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-24T00:06:22.512Z"
-    },
-    {
-      "id": "handsontable",
-      "name": "Handsontable",
-      "github": "https://github.com/handsontable/handsontable",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T00:06:13.641Z",
-      "sourceRun": "2026-10-24T09",
-      "tool": {
-        "id": "handsontable",
-        "name": "Handsontable",
-        "github": "https://github.com/handsontable/handsontable",
-        "description": "스프레드시트 인터페이스를 제공하는 JavaScript 데이터 그리드 컴포넌트입니다.",
-        "longDescription": "Handsontable은 웹 애플리케이션에서 엑셀과 유사한 사용자 경험을 제공하는 데이터 그리드 라이브러리입니다. React, Angular, Vue 등 다양한 프레임워크와 연동하여 복잡한 데이터 편집, 검증, 그리드 관리 기능을 구현할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "JavaScript",
-          "스프레드시트",
-          "데이터그리드"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://handsontable.com/docs",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T00:04:01.294Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "npm 설치",
-            "command": "npm install handsontable",
-            "note": "프로젝트에 Handsontable 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "npm을 통해 프로젝트에 패키지를 설치합니다.",
-          "원하는 프레임워크 전용 래퍼 또는 바닐라 JS 환경에서 컴포넌트를 불러옵니다.",
-          "데이터와 설정을 정의하여 그리드를 렌더링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 22069,
-        "forks": 3186,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T00:06:14.430Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T00:06:17.968Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-24T00:06:23.243Z"
-    },
-    {
       "id": "kkfileview",
       "name": "kkFileView",
       "github": "https://github.com/kekingcn/kkFileView",
@@ -29726,90 +30567,6 @@
       "recheckedAt": "2026-10-24T00:06:25.744Z"
     },
     {
-      "id": "sc-im",
-      "name": "sc-im",
-      "github": "https://github.com/andmarti1424/sc-im",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T00:06:13.641Z",
-      "sourceRun": "2026-10-24T09",
-      "tool": {
-        "id": "sc-im",
-        "name": "sc-im",
-        "github": "https://github.com/andmarti1424/sc-im",
-        "description": "터미널 환경에서 Vim 키보드 단축키로 조작하는 ncurses 기반 스프레드시트 계산기입니다.",
-        "longDescription": "sc-im은 터미널에서 실행되는 가벼운 스프레드시트 프로그램으로, Vim과 유사한 키보드 인터페이스를 제공합니다. 명령어 기반으로 숫자를 계산하고 데이터를 표 형태로 정리할 수 있어 터미널 애호가에게 유용합니다.",
-        "category": "생산성",
-        "tags": [
-          "터미널",
-          "Vim",
-          "스프레드시트",
-          "C",
-          "CLI"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/andmarti1424/sc-im",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T00:04:01.294Z",
-        "requirements": [
-          "ncurses",
-          "gcc",
-          "make"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "컴파일 및 설치",
-            "command": "make install",
-            "note": "소스코드를 빌드하고 시스템에 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "필수 의존성 패키지(ncurses, gcc 등)를 설치합니다.",
-          "레포지토리를 클론하고 소스코드를 빌드합니다.",
-          "터미널에서 명령어를 입력하여 스프레드시트 환경을 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5714,
-        "forks": 239,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T00:06:15.522Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T00:06:19.801Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "unioffice",
       "name": "unioffice",
       "github": "https://github.com/unidoc/unioffice",
@@ -29888,90 +30645,6 @@
         "verifiedLicense": null,
         "licenseSource": "unknown",
         "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "hyperformula",
-      "name": "HyperFormula",
-      "github": "https://github.com/handsontable/hyperformula",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T00:06:13.641Z",
-      "sourceRun": "2026-10-24T09",
-      "tool": {
-        "id": "hyperformula",
-        "name": "HyperFormula",
-        "github": "https://github.com/handsontable/hyperformula",
-        "description": "웹 애플리케이션을 위한 400개 이상의 수식을 지원하는 오픈소스 헤드리스 스프레드시트 엔진입니다.",
-        "longDescription": "HyperFormula는 사용자 인터페이스가 없는 헤드리스 방식의 스프레드시트 계산 엔진으로, TypeScript로 작성되었습니다. 스프레드시트 수식 파싱 및 평가 기능, 실행 취소/다시 하기, CRUD 연산을 제공하여 다양한 비즈니스 앱에 내장할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "TypeScript",
-          "수식 엔진",
-          "스프레드시트",
-          "계산 엔진",
-          "Node.js"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://hyperformula.handsontable.com/",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T00:04:01.294Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "npm 설치",
-            "command": "npm install hyperformula",
-            "note": "프로젝트에 HyperFormula 계산 엔진을 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "npm을 통해 라이브러리를 설치합니다.",
-          "애플리케이션 코드에서 HyperFormula 인스턴스를 생성합니다.",
-          "데이터와 수식을 주입하여 계산 결과를 도출합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2819,
-        "forks": 172,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T00:06:15.953Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T00:06:20.988Z",
-      "documentEvidence": {
-        "license": "GPL-3.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
@@ -38634,484 +39307,6 @@
       "sourceRun": "2026-10-23T19"
     },
     {
-      "id": "imagemagick",
-      "name": "ImageMagick",
-      "github": "https://github.com/ImageMagick/ImageMagick",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.634Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "imagemagick",
-        "name": "ImageMagick",
-        "github": "https://github.com/ImageMagick/ImageMagick",
-        "description": "200개 이상의 이미지 포맷을 생성, 편집, 변환 및 표시할 수 있는 오픈소스 소프트웨어 제품군입니다.",
-        "longDescription": "이미지 처리 자동화와 스크립팅을 위한 강력한 명령어 라인 도구와 API를 제공합니다. 다양한 플랫폼에서 디지털 이미지 조작 및 포맷 변환 작업을 효율적으로 수행할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "이미지 처리",
-          "CLI",
-          "API"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://imagemagick.org",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "시스템 환경에 맞는 ImageMagick 패키지를 설치합니다.",
-          "보안 정책을 로컬 환경에 맞게 설정합니다.",
-          "명령어 라인을 통해 이미지 변환 및 편집 작업을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 17715,
-        "forks": 1683,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:24.293Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T09:06:28.287Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-23T09:06:36.817Z"
-    },
-    {
-      "id": "pillow",
-      "name": "Pillow",
-      "github": "https://github.com/python-pillow/Pillow",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.634Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "pillow",
-        "name": "Pillow",
-        "github": "https://github.com/python-pillow/Pillow",
-        "description": "파이썬을 위한 친화적인 이미지 처리 라이브러리인 PIL의 포크 버전입니다.",
-        "longDescription": "다양한 파일 포맷을 지원하며 효율적인 내부 메모리 표현을 바탕으로 이미지 처리 도구의 기반을 제공합니다. 파이썬 환경에서 이미지 편집 및 조작 작업을 손쉽게 구현할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Python",
-          "이미지 처리",
-          "PIL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://python-pillow.org",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "파이썬 환경에서 pip 명령어로 라이브러리를 설치합니다.",
-          "스크립트에서 PIL 또는 Pillow 모듈을 임포트합니다.",
-          "이미지 객체를 생성하고 필요한 변환 작업을 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 13914,
-        "forks": 2558,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:24.614Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T09:06:28.681Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-23T09:06:37.466Z"
-    },
-    {
-      "id": "imagesharp",
-      "name": "ImageSharp",
-      "github": "https://github.com/SixLabors/ImageSharp",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.634Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "imagesharp",
-        "name": "ImageSharp",
-        "github": "https://github.com/SixLabors/ImageSharp",
-        "description": ".NET 환경을 위한 고성능 크로스 플랫폼 2D 이미지 처리 라이브러리",
-        "longDescription": "현대적인 워크로드에 맞춰 설계되어 고성능 이미지 처리 및 그래픽 조작을 지원합니다. 다양한 이미지 포맷을 다루는 .NET 애플리케이션 개발에 유용합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "이미지처리",
-          "그래픽스",
-          ".NET"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://sixlabors.com/products/imagesharp/",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [
-          ".NET"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NuGet 패키지 설치",
-            "command": "dotnet add package SixLabors.ImageSharp",
-            "note": "NuGet을 통한 안정 버전 설치"
-          }
-        ],
-        "usageSteps": [
-          "NuGet을 통해 프로젝트에 패키지를 추가합니다.",
-          "코드에서 ImageSharp 네임스페이스를 참조합니다.",
-          "이미지 로딩, 필터 적용 및 저장 코드를 작성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8041,
-        "forks": 909,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:24.895Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T09:06:29.204Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-23T09:06:38.312Z"
-    },
-    {
-      "id": "gocv",
-      "name": "GoCV",
-      "github": "https://github.com/hybridgroup/gocv",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.634Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "gocv",
-        "name": "GoCV",
-        "github": "https://github.com/hybridgroup/gocv",
-        "description": "OpenCV 4 이상을 활용한 Go 언어 컴퓨터 비전 패키지",
-        "longDescription": "DNN, CUDA, OpenCV Contrib 및 OpenVINO를 지원하여 고성능 객체 감지 및 비디오 처리를 구현할 수 있습니다. Go 언어 기반의 컴퓨터 비전 애플리케이션 개발에 적합합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Go",
-          "컴퓨터 비전",
-          "OpenCV"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://gocv.io",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [
-          "OpenCV"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "시스템에 호환되는 OpenCV를 설치합니다.",
-          "Go 모듈에 GoCV 패키지를 추가합니다.",
-          "비디오캡처 및 이미지 처리 코드를 작성하고 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7515,
-        "forks": 899,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:25.237Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T09:06:30.383Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-23T09:06:39.249Z"
-    },
-    {
-      "id": "scikit-image",
-      "name": "scikit-image",
-      "github": "https://github.com/scikit-image/scikit-image",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.634Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "scikit-image",
-        "name": "scikit-image",
-        "github": "https://github.com/scikit-image/scikit-image",
-        "description": "파이썬 기반의 알고리즘 중심 이미지 처리 라이브러리",
-        "longDescription": "과학 계산용 파이썬 생태계와 연동되어 다양한 이미지 필터링, 분할, 기하학적 변환 기능을 제공합니다. 연구 및 데이터 분석 목적의 이미지 처리에 유용합니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "Python",
-          "이미지 처리",
-          "컴퓨터 비전"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://scikit-image.org",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [
-          "Python",
-          "NumPy"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "pip 설치",
-            "command": "pip install scikit-image",
-            "note": "PyPI를 통한 설치"
-          }
-        ],
-        "usageSteps": [
-          "pip 또는 conda 명령어로 패키지를 설치합니다.",
-          "파이썬 스크립트에서 skimage 모듈을 불러옵니다.",
-          "원하는 이미지 처리 함수를 적용하여 결과를 분석합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6626,
-        "forks": 2436,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:25.598Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T09:06:31.197Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-23T09:06:39.982Z"
-    },
-    {
-      "id": "halide",
-      "name": "Halide",
-      "github": "https://github.com/halide/Halide",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.634Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "halide",
-        "name": "Halide",
-        "github": "https://github.com/halide/Halide",
-        "description": "현대 기기에서 고성능 이미지 및 배열 처리 코드를 쉽게 작성할 수 있도록 설계된 프로그래밍 언어입니다.",
-        "longDescription": "C++에 임베디드되어 동작하며 계산과 스케줄링을 분리하여 하드웨어 성능을 극대화합니다. 다양한 CPU, GPU 및 운영체제를 타겟으로 고속 데이터 병렬 연산을 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C++",
-          "컴파일러",
-          "GPU",
-          "성능 최적화"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://halide-lang.org",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [
-          "LLVM"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "LLVM 클론",
-            "command": "git clone --depth 1 --branch llvmorg-21.1.8 https://github.com/llvm/llvm-project.git",
-            "note": "의존성 LLVM 소스코드 클론"
-          }
-        ],
-        "usageSteps": [
-          "LLVM 및 필수 빌드 도구를 준비합니다.",
-          "C++ API를 사용하여 이미지 처리 파이프라인을 정의합니다.",
-          "코드를 객체 파일로 컴파일하거나 JIT 방식으로 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6626,
-        "forks": 1106,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:25.918Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T09:06:32.371Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "thumbnailator",
       "name": "Thumbnailator",
       "github": "https://github.com/coobird/thumbnailator",
@@ -39120,80 +39315,6 @@
       "reasons": [],
       "checkedAt": "2026-10-23T09:06:23.634Z",
       "sourceRun": "2026-10-23T18"
-    },
-    {
-      "id": "jpegview",
-      "name": "JPEGView",
-      "github": "https://github.com/sylikc/jpegview",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.634Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "jpegview",
-        "name": "JPEGView",
-        "github": "https://github.com/sylikc/jpegview",
-        "description": "최소한의 GUI를 갖추고 실시간 이미지 보정이 가능한 빠르고 설정 가능한 이미지 뷰어입니다.",
-        "longDescription": "JPEG, BMP, PNG, WEBP 등 다양한 이미지 형식을 지원하며 선명도, 색균형, 회전 등의 실시간 보정 기능을 제공합니다. 무설치 휴대용 형태로 간편하게 실행할 수 있습니다.",
-        "category": "개인 도구",
-        "tags": [
-          "이미지 뷰어",
-          "Windows",
-          "C++",
-          "유틸리티"
-        ],
-        "platforms": [
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/sylikc/jpegview",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [
-          "Windows"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 저장소에서 포터블 압축 파일을 다운로드하여 해제합니다.",
-          "실행 파일을 실행하여 이미지가 포함된 폴더를 엽니다.",
-          "단축키나 마우스 조작을 통해 실시간으로 이미지를 감상하고 편집합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3005,
-        "forks": 191,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:26.235Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T09:06:33.434Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "gowall",
@@ -39330,88 +39451,6 @@
       "sourceRun": "2026-10-23T18"
     },
     {
-      "id": "cv-cuda",
-      "name": "CV-CUDA",
-      "github": "https://github.com/CVCUDA/CV-CUDA",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.635Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "cv-cuda",
-        "name": "CV-CUDA",
-        "github": "https://github.com/CVCUDA/CV-CUDA",
-        "description": "클라우드 규모의 이미지 처리와 컴퓨터 비전을 가속하는 NVIDIA GPU 기반 오픈소스 라이브러리입니다.",
-        "longDescription": "대규모 비디오 처리 및 AI 파이프라인에서 성능 병목을 해결하기 위해 설계된 GPU 가속 라이브러리로, 파이썬 및 C++ 바인딩을 제공하여 고성능 이미지 변환 작업을 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C++",
-          "Python",
-          "CUDA",
-          "GPU",
-          "컴퓨터 비전"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://cvcuda.github.io",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [
-          "NVIDIA GPU",
-          "CUDA"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "PyPI 패키지 설치",
-            "command": "pip install cvcuda-cu12",
-            "note": "CUDA 12 환경용 파이썬 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "호환되는 NVIDIA GPU와 CUDA 드라이버를 준비합니다.",
-          "PIP를 통해 시스템에 맞는 pre-built 패키지를 설치합니다.",
-          "파이썬 코드에서 cvcuda 모듈을 임포트하여 GPU 가속 연산을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "지원되는 CUDA 버전 및 하드웨어 사양을 확인해야 합니다.",
-        "stars": 2730,
-        "forks": 264,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:26.819Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T09:06:35.124Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "oss-documentscanner",
       "name": "OSS Document Scanner",
       "github": "https://github.com/ossappscollective/OSS-DocumentScanner",
@@ -39448,81 +39487,6 @@
         "license": "MIT",
         "verifiedLicense": "MIT",
         "licenseSource": "LICENSE complete MIT provisions (text match)",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "photodemon",
-      "name": "PhotoDemon",
-      "github": "https://github.com/tannerhelland/PhotoDemon",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T09:06:23.635Z",
-      "sourceRun": "2026-10-23T18",
-      "tool": {
-        "id": "photodemon",
-        "name": "PhotoDemon",
-        "github": "https://github.com/tannerhelland/PhotoDemon",
-        "description": "전문가급 기능과 빠른 성능을 제공하는 100% 무료 포터블 사진 편집기입니다.",
-        "longDescription": "설치가 필요 없는 휴대용 윈도우 사진 편집 프로그램으로, 다양한 이미지 필터와 고급 보정 도구를 지원하며 오픈소스 기반으로 누구나 자유롭게 사용할 수 있습니다.",
-        "category": "디자인·시각화",
-        "tags": [
-          "Visual Basic 6.0",
-          "Windows",
-          "사진 편집기",
-          "포터블",
-          "이미지 필터"
-        ],
-        "platforms": [
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://photodemon.org",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T09:04:03.684Z",
-        "requirements": [
-          "Windows 운영체제"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 저장소 또는 릴리스 페이지에서 포터블 ZIP 파일을 다운로드합니다.",
-          "압축을 해제한 후 별도의 설치 없이 실행파일을 실행합니다.",
-          "사진 파일을 불러와 원하는 필터나 편집 기능을 적용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "설치 과정이 필요 없는 포터블 프로그램입니다.",
-        "stars": 2400,
-        "forks": 257,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T09:06:27.540Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T10:06:32.368Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
