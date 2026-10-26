@@ -1,5 +1,475 @@
 [
   {
+    "id": "parsebench",
+    "name": "ParseBench",
+    "github": "https://github.com/run-llama/ParseBench",
+    "description": "AI 에이전트를 위한 문서 파싱 및 OCR 성능을 평가하는 벤치마크 프레임워크입니다.",
+    "longDescription": "ParseBench는 다양한 비전 언어 모델 및 파싱 도구의 PDF 문서 이해, 표 추출, OCR 성능을 정량적으로 비교하고 평가할 수 있는 표준화된 벤치마크 환경을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "벤치마크",
+      "문서파싱",
+      "OCR",
+      "LLM"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://arxiv.org/abs/2604.08538",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI 설치",
+        "command": "pip install \"parse-bench[runners]\"",
+        "note": "러너 기능과 함께 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 평가하려는 파싱 도구의 API 키를 설정합니다.",
+      "벤치마크 데이터셋을 다운로드합니다.",
+      "평가 스크립트를 실행하여 파싱 결과를 채점합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 616,
+    "forks": 128,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "skillevaluator",
+    "name": "SkillEvaluator",
+    "github": "https://github.com/NVIDIA/SkillEvaluator",
+    "description": "품질 게이트와 의미론적 중복 감지를 통해 AI 에이전트 스킬을 다중 계층으로 평가하는 프레임워크입니다.",
+    "longDescription": "NVIDIA SkillEvaluator는 에이전트 스킬이 에이전트의 실제 행동에 미치는 영향을 측정하고, 합성 평가 데이터셋을 생성하며, 라이브 에이전트 평가를 수행하는 오픈소스 도구입니다.",
+    "category": "AI 평가",
+    "tags": [
+      "에이전트",
+      "평가",
+      "보안",
+      "검증"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://docs.nvidia.com/skills/skillevaluator/",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      "Python",
+      "Git",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone --depth 1 https://github.com/NVIDIA/SkillEvaluator.git && cd SkillEvaluator",
+        "note": "소스 코드를 복제하고 디렉터리로 이동합니다."
+      }
+    ],
+    "usageSteps": [
+      "uv 및 Git을 이용해 저장소를 클론합니다.",
+      "의존성을 설치하고 평가 환경을 구성합니다.",
+      "에이전트 스킬 평가 명령어를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 598,
+    "forks": 75,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "tide",
+    "name": "TIDE",
+    "github": "https://github.com/dbolya/tide",
+    "description": "객체 검출 및 인스턴스 세분화 모델의 오류를 식별하고 분석하기 위한 범용 툴박스입니다.",
+    "longDescription": "TIDE는 컴퓨터 비전 모델에서 객체 검출과 세분화 오류가 전체 성능에 미치는 영향을 정량적으로 계산하고 식별하여 모델 개선 방향을 제시해 주는 파이썬 패키지입니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "객체검출",
+      "컴퓨터비전",
+      "오류분석",
+      "시각화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://dbolya.github.io/tide",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip3 install tidecv",
+        "note": "PyPI를 통해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 tidecv 패키지를 설치합니다.",
+      "모델의 예측 결과와 정답 데이터셋을 로드합니다.",
+      "TIDE 분석 툴을 실행하여 오분류 및 위치 오류를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 750,
+    "forks": 119,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "meta-agents-research-environments",
+    "name": "Meta Agents Research Environments",
+    "github": "https://github.com/facebookresearch/meta-agents-research-environments",
+    "description": "동적이고 현실적인 시나리오에서 AI 에이전트를 평가하기 위한 종합 연구 플랫폼입니다.",
+    "longDescription": "Meta ARE는 정적 벤치마크와 달리 새로운 정보가 유입됨에 따라 전략을 동적으로 조정해야 하는 환경을 시뮬레이션하여 복잡한 다단계 추론 작업을 수행하는 에이전트를 평가합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "에이전트",
+      "시뮬레이션",
+      "벤치마크",
+      "강화학습"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://facebookresearch.github.io/meta-agents-research-environments/",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install meta-agents-research-environments",
+        "note": "PyPI를 통해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "평가 환경 시나리오를 불러옵니다.",
+      "에이전트를 동적 환경에 배포하고 성능을 측정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 574,
+    "forks": 81,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "automatic-speech-recognition",
+    "name": "Automatic_Speech_Recognition",
+    "github": "https://github.com/zzw922cn/Automatic_Speech_Recognition",
+    "description": "TensorFlow 기반의 중국어 및 영어 엔드투엔드 음성 인식 시스템입니다.",
+    "longDescription": "TensorFlow를 활용하여 만다린어와 영어를 지원하는 엔드투엔드 자동 음성 인식 시스템을 구현합니다. 데이터 전처리, 동적 RNN 드롭아웃, 자동 평가 등의 기능을 제공합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "TensorFlow",
+      "딥러닝",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/zzw922cn/Automatic_Speech_Recognition",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      "Python 3.5",
+      "libsndfile",
+      "scikit.audiolab"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 설치",
+        "command": "sudo pip3 install -r requirements.txt && sudo python3 setup.py install",
+        "note": "필수 패키지와 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "필수 요구사항과 requirements.txt를 설치합니다.",
+      "제공되는 스크립트를 통해 학습 및 평가를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Python 3.5 환경 및 libsndfile 설치가 필요합니다.",
+    "stars": 2836,
+    "forks": 534,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "fuzzbench",
+    "name": "fuzzbench",
+    "github": "https://github.com/google/fuzzbench",
+    "description": "다양한 퍼저(Fuzzer)의 성능을 대규모로 엄격하게 평가하기 위한 구글의 퍼징 벤치마크 서비스입니다.",
+    "longDescription": "실제 세계의 다양한 프로젝트와 OSS-Fuzz 벤치마크를 활용하여 퍼저의 성능을 객관적으로 측정하고 통계 리포트를 생성합니다.",
+    "category": "테스트·품질",
+    "tags": [
+      "퍼징",
+      "보안",
+      "벤치마크",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://google.github.io/fuzzbench/",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      "Python",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/google/fuzzbench.git",
+        "note": "FuzzBench 소스코드를 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 공식 문서를 참조하여 환경을 구성합니다.",
+      "평가하고자 하는 퍼저를 API에 맞게 연동합니다.",
+      "벤치마크를 실행하고 리포트를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "상세한 사용법은 공식 문서 웹사이트를 참고해야 합니다.",
+    "stars": 1208,
+    "forks": 305,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "ncalc",
+    "name": "ncalc",
+    "github": "https://github.com/ncalc/ncalc",
+    "description": ".NET 환경을 위한 빠르고 가벼운 수학 및 논리식 평가(Expression Evaluator) 라이브러리입니다.",
+    "longDescription": "동적 수식, 수학 함수, 논리 연산 등을 고성능으로 파싱하고 평가할 수 있도록 지원하는 유연한 .NET 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      ".NET",
+      "C#",
+      "표현식평가",
+      "파서"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ncalc.gumbarros.com.br",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      ".NET Runtime"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NuGet 패키지 추가",
+        "command": "dotnet add package NCalc",
+        "note": "프로젝트에 NCalc 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      ".NET 프로젝트를 엽니다.",
+      "dotnet CLI를 통해 NCalc 패키지를 설치합니다.",
+      "코드 내에서 식을 파싱하고 평가하는 로직을 구현합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "필요에 따라 추가적인 확장 패키지를 선택적으로 설치할 수 있습니다.",
+    "stars": 1168,
+    "forks": 124,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "semantic-kitti-api",
+    "name": "semantic-kitti-api",
+    "github": "https://github.com/PRBonn/semantic-kitti-api",
+    "description": "SemanticKITTI 데이터셋의 포인트 클라우드 시각화 및 평가를 위한 공식 Python API입니다.",
+    "longDescription": "대규모 3D 포인트 클라우드 데이터셋인 SemanticKITTI의 데이터를 열고, 시각화하며, 의미론적 분할 및 장면 완성 결과를 평가하는 스크립트를 제공합니다.",
+    "category": "공간정보",
+    "tags": [
+      "포인트클라우드",
+      "데이터셋",
+      "컴퓨터비전",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://semantic-kitti.org",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      "Python 3",
+      "python3-pyqt5.qtopengl"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "시스템 및 Python 의존성 설치",
+        "command": "sudo apt install python3-dev python3-pip python3-pyqt5.qtopengl && sudo pip3 install -r requirements.txt",
+        "note": "시각화 및 API 실행에 필요한 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "시스템 의존성과 Python 패키지를 설치합니다.",
+      "SemanticKITTI 데이터셋을 다운로드하고 정리합니다.",
+      "제공되는 visualize.py 스크립트를 실행하여 데이터를 시각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "--help 플래그를 통해 각 스크립트의 옵션을 확인할 수 있습니다.",
+    "stars": 900,
+    "forks": 192,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "iou-tracker",
+    "name": "iou-tracker",
+    "github": "https://github.com/bochinski/iou-tracker",
+    "description": "이미지 정보를 사용하지 않고 속도를 극대화한 IOU 기반 다중 객체 추적기의 Python 구현체입니다.",
+    "longDescription": "탐지 결과 간의 IOU(Intersection over Union)만을 활용하여 고속으로 객체를 추적하는 알고리즘으로, 비디오 분석 및 객체 추적 연구에 유용합니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "객체추적",
+      "컴퓨터비전",
+      "영상처리",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://www.nue.tu-berlin.de",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      "Python",
+      "NumPy"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "가상환경 생성 및 패키지 설치",
+        "command": "pip install numpy lapsolver tqdm opencv-contrib-python",
+        "note": "추적 알고리즘 실행에 필요한 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "필요한 파이썬 패키지들을 설치합니다.",
+      "지원되는 데이터셋(UA-DETRAC 등)을 준비합니다.",
+      "스크립트를 실행하여 추적 성능을 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "KCF 등 추가적인 시각적 추적기를 사용하려면 추가 설정이 필요할 수 있습니다.",
+    "stars": 702,
+    "forks": 173,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "expressionevaluator",
+    "name": "ExpressionEvaluator",
+    "github": "https://github.com/codingseb/ExpressionEvaluator",
+    "description": "단일 C# 파일로 구성된 간단한 수학 및사전 C# 표현식 평가기입니다.",
+    "longDescription": "복잡한 설정 없이 프로젝트에 포함하여 수학적 계산, 표현식 평가, 그리고 간단한 C# 유사 스크립트를 실행할 수 있는 경량 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C#",
+      "스크립팅",
+      "수학표현식",
+      "파서"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/codingseb/ExpressionEvaluator",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T01:04:02.298Z",
+    "requirements": [
+      ".NET"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소에서 ExpressionEvaluator.cs 파일을 다운로드합니다.",
+      "C# 프로젝트에 파일을 추가합니다.",
+      "코드를 통해 수식 문자열을 실행하고 결과를 얻습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "단일 파일 구조로 되어 있어 별도의 패키지 설치 없이 쉽게 통합할 수 있습니다.",
+    "stars": 630,
+    "forks": 101,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
     "id": "habo",
     "name": "Habo",
     "github": "https://github.com/xpavle00/Habo",
