@@ -1,5 +1,517 @@
 [
   {
+    "id": "arc-kit",
+    "name": "ArcKit",
+    "github": "https://github.com/tractorjuice/arc-kit",
+    "description": "AI 코딩 어시스턴트를 활용하여 엔터프라이즈 아키텍처 거버넌스, 전략 및 규정 준수를 지원하는 도구입니다.",
+    "longDescription": "소프트웨어 아키텍처 설계와 거버넌스 프로세스를 자동화하고 AI 코딩 도구와 연동하여 표준 준수 여부를 검증하는 프레임워크입니다. Claude Code 등의 플러그인 형태로 통합되어 엔터프라이즈 환경에서의 아키텍처 결정을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "소프트웨어 아키텍처",
+      "거버넌스",
+      "컴플라이언스",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://arckit.org/",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "Claude Code 최신 버전"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 추가",
+        "command": "claude install latest\n/plugin marketplace add tractorjuice/arckit",
+        "note": "Claude Code 환경에 ArcKit 플러그인을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Claude Code를 최신 버전으로 업데이트합니다.",
+      "마켓플레이스 명령어를 통해 ArcKit 플러그인을 추가합니다.",
+      "아키텍처 거버넌스 및 요구사항 검증 작업을 실행합니다."
+    ],
+    "examplePrompt": "현재 시스템 아키텍처가 엔터프라이즈 보안 표준을 준수하는지 검토해줘.",
+    "usageNote": "",
+    "stars": 2265,
+    "forks": 281,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "pi-mcp-adapter",
+    "name": "Pi MCP Adapter",
+    "github": "https://github.com/nicobailon/pi-mcp-adapter",
+    "description": "Pi 코딩 에이전트를 위한 토큰 효율적인 모델 콘텍스트 프로토콜(MCP) 어댑터입니다.",
+    "longDescription": "컨텍스트 윈도우 소모를 최소화하면서 Pi 코딩 에이전트에서 다양한 MCP 서버를 활용할 수 있도록 지원하는 확장 어댑터입니다. 백그라운드 태스크 실행, 의미 기반 도구 순위 매기기 등의 기능을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "MCP",
+      "코딩 에이전트",
+      "확장",
+      "토큰 최적화"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/nicobailon/pi-mcp-adapter",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "Pi 모노"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pi를 통한 설치",
+        "command": "pi install npm:pi-mcp-adapter",
+        "note": "Pi CLI를 사용하여 어댑터를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 설치 명령어를 실행하여 어댑터를 설치합니다.",
+      "Pi 코딩 에이전트를 재시작합니다.",
+      "표준 MCP 설정 파일을 자동으로 읽어와 에이전트에서 도구를 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1620,
+    "forks": 390,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "agentdock",
+    "name": "AgentDock",
+    "github": "https://github.com/uvwt/agentdock",
+    "description": "AI 에이전트가 로컬 머신, 서버, 컨테이너를 안전하게 제어할 수 있도록 지원하는 보안 MCP 런타임입니다.",
+    "longDescription": "웹 브라우저의 ChatGPT 등을 통해 여러 컴퓨터와 서버를 하나의 대화창에서 원격으로 관리할 수 있습니다. 실제 개발 환경에서 직접 코드 작성, 설정 변경, 명령어 실행 및 배포 작업을 수행할 수 있도록 보안이 강화된 접근 제어 환경을 제공합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "MCP",
+      "Docker",
+      "DevOps",
+      "원격 제어"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://nexusdock.co",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "Docker 또는 Linux/macOS/Windows 환경"
+    ],
+    "supportedAgents": [
+      "ChatGPT",
+      "Claude",
+      "기타 MCP 호환 에이전트"
+    ],
+    "install": [
+      {
+        "title": "Docker 설치",
+        "command": "docker run -d --name agentdock ...",
+        "note": "Docker를 이용한 간편 배포 방식입니다."
+      }
+    ],
+    "usageSteps": [
+      "AgentDock을 서버 또는 로컬 환경에 설치합니다.",
+      "AI 클라이언트(ChatGPT 등)에서 MCP 설정을 구성합니다.",
+      "대화창을 통해 원격 머신의 명령어나 파일 시스템을 제어합니다."
+    ],
+    "examplePrompt": "현재 서버의 Docker 컨테이너 상태를 확인하고 리소스를 최적화해 줘.",
+    "usageNote": "",
+    "stars": 1278,
+    "forks": 164,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "northcinder",
+    "name": "NorthCinder",
+    "github": "https://github.com/cinderline/northcinder",
+    "description": "사용자가 원하는 소스를 기반으로 상품을 비교하고 구매 전 승인을 요청하는 쇼핑 에이전트 MCP 서버입니다.",
+    "longDescription": "대형 마켓플레이스가 특정 플랫폼으로 사용자를 유도하는 것과 달리, 독립적인 소스에서 상품 정보를 비교하고 투명하게 출처를 보여줍니다. 구매가 이루어지기 전에 반드시 사용자의 승인을 거치는 안전한 쇼핑 자동화를 지원합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "쇼핑 에이전트",
+      "MCP",
+      "TypeScript",
+      "로컬 우선",
+      "사람 개입"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/cinderline/northcinder",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "Node.js 20 이상"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "Cursor",
+      "기타 MCP 호환 클라이언트"
+    ],
+    "install": [
+      {
+        "title": "의존성 설치 및 초기화",
+        "command": "corepack pnpm install --frozen-lockfile && corepack pnpm build && node northcinder/bin/northcinder.js init",
+        "note": "pnpm을 사용하여 패키지를 빌드하고 초기화합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node.js 환경에서 저장소를 클론하고 패키지를 설치합니다.",
+      "초기화 명령어를 실행하여 MCP 서버를 등록합니다.",
+      "AI 에이전트를 통해 상품 검색 및 비교를 요청합니다."
+    ],
+    "examplePrompt": "가장 가성비 좋은 무선 이어폰 세 개를 찾아 비교해 줘.",
+    "usageNote": "",
+    "stars": 1205,
+    "forks": 9,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "figwright",
+    "name": "Figwright",
+    "github": "https://github.com/awdr74100/figwright",
+    "description": "Figma 디자인을 프레임워크 코드로 변환하고 코드를 다시 캔버스로 푸시할 수 있는 양방향 Figma MCP 서버입니다.",
+    "longDescription": "Figma 플러그인과 로컬 웹소켓 릴레이를 통해 MCP 서버를 연결합니다. 개발 모드 유료 라이선스 없이도 AI 코딩 에이전트가 Figma 디자인을 인식하고 프레임워크 코드로 변환하거나 수정 사항을 반영할 수 있습니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Figma",
+      "MCP",
+      "UI 디자인",
+      "코드 생성",
+      "TypeScript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/awdr74100/figwright",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "Node.js",
+      "Figma"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Cursor",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "MCP 클라이언트 설정",
+        "command": "npx -y @figwright/mcp@latest",
+        "note": "MCP 설정 파일에 서버 명령어를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Figma 플러그인을 설치하고 실행합니다.",
+      "Claude Code 또는 Cursor 등의 MCP 설정에 Figwright를 추가합니다.",
+      "에이전트를 통해 디자인 요소를 코드로 변환하거나 캔버스를 조작합니다."
+    ],
+    "examplePrompt": "현재 열려 있는 Figma 디자인의 로그인 화면 컴포넌트를 React 코드로 작성해 줘.",
+    "usageNote": "",
+    "stars": 1185,
+    "forks": 67,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "innovation-lab-examples",
+    "name": "Fetch.ai Innovation Lab Examples",
+    "github": "https://github.com/fetchai/innovation-lab-examples",
+    "description": "uAgents, MCP, LangChain 등을 활용한 80개 이상의 프로덕션 준비 완료형 AI 에이전트 파이썬 예제 모음입니다.",
+    "longDescription": "자율형 AI 에이전트, 멀티 에이전트 시스템, 에이전틱 AI 워크플로우를 구축하는 데 필요한 다양한 실무 예제를 제공합니다. Fetch.ai uAgents 및 A2A 프로토콜을 포함하여 OpenAI, Claude, Gemini 등 주요 LLM과의 연동 방법을 다룹니다.",
+    "category": "교육·학습",
+    "tags": [
+      "AI 에이전트",
+      "Python",
+      "LangChain",
+      "멀티 에이전트",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://innovationlab.fetch.ai/resources/docs/intro",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [
+      "OpenAI",
+      "Claude",
+      "Gemini",
+      "CrewAI"
+    ],
+    "install": [
+      {
+        "title": "가상환경 생성 및 의존성 설치",
+        "command": "python3 -m venv .venv && source .venv/bin/activate && pip install -r requirements.txt",
+        "note": "프로젝트 디렉토리에서 가상환경을 활성화하고 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "원하는 예제 디렉토리로 이동합니다.",
+      "파이썬 가상환경을 생성하고 패키지를 설치합니다.",
+      "환경 변수(.env) 파일을 설정하고 에이전트 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "제공된 퀵스타터 예제를 기반으로 자율 주식 분석 에이전트를 실행해 줘.",
+    "usageNote": "",
+    "stars": 1169,
+    "forks": 84,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "atlassian-mcp-server",
+    "name": "Atlassian MCP Server",
+    "github": "https://github.com/atlassian/atlassian-mcp-server",
+    "description": "Jira, Confluence, Bitbucket 등을 Claude, ChatGPT, Cursor 등 AI 도구와 안전하게 연결하는 공식 원격 MCP 서버입니다.",
+    "longDescription": "Atlassian Cloud와 외부 AI 도구 간의 클라우드 호스팅 브리지 역할을 합니다. 팀워크 그래프(Teamwork Graph)를 기반으로 AI가 Jira 이슈, Confluence 문서, Bitbucket 저장소 데이터에 실시간으로 접근하여 업무를 수행할 수 있게 지원합니다.",
+    "category": "협업·소통",
+    "tags": [
+      "Jira",
+      "Confluence",
+      "Bitbucket",
+      "MCP",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Web",
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://atlassian.com/platform/rovo-mcp",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "Atlassian Cloud 계정"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "ChatGPT",
+      "Cursor",
+      "VS Code"
+    ],
+    "install": [
+      {
+        "title": "플러그인 설정",
+        "command": "claude mcp add atlassian ...",
+        "note": "클라이언트 환경에 맞게 공식 지침에 따라 MCP 서버를 등록합니다."
+      }
+    ],
+    "usageSteps": [
+      "Atlassian 계정 인증을 완료합니다.",
+      "사용 중인 AI 클라이언트(Claude Desktop, Cursor 등)에 Atlassian MCP 서버를 추가합니다.",
+      "대화창을 통해 Jira 티켓 조회나 Confluence 문서 검색을 수행합니다."
+    ],
+    "examplePrompt": "최근 진행 중인 스프린트에서 내가 담당한 Jira 이슈 목록을 요약해 줘.",
+    "usageNote": "",
+    "stars": 1123,
+    "forks": 143,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "stackql",
+    "name": "StackQL",
+    "github": "https://github.com/stackql/stackql",
+    "description": "SQL 구문을 사용하여 클라우드, SaaS, API 및 MCP 리소스를 조회, 프로비저닝 및 관리할 수 있는 통합 프레임워크입니다.",
+    "longDescription": "Go 언어로 작성된 오픈소스 프로젝트로, 표준 SQL 질의를 통해 다양한 로컬 및 원격 서비스의 상태를 생성, 수정 및 조회할 수 있습니다. 인간 개발자와 AI 에이전트 모두에게 일관된 인터페이스를 제공하여 인프라 관리를 간소화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "SQL",
+      "클라우드 자동화",
+      "인프라",
+      "Go",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://stackql.io/",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [],
+    "supportedAgents": [
+      "MCP 호환 AI 에이전트"
+    ],
+    "install": [
+      {
+        "title": "Homebrew를 이용한 macOS 설치",
+        "command": "brew install stackql/stackql/stackql",
+        "note": "Homebrew 패키지 매니저를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "StackQL을 설치하고 제공되는 공급자(Provider)를 구성합니다.",
+      "SQL 인터프리터를 실행하거나 CLI 명령어를 입력합니다.",
+      "SQL 쿼리문으로 클라우드 자원을 조회하거나 조작합니다."
+    ],
+    "examplePrompt": "SELECT * FROM aws.s3.buckets WHERE region = 'us-east-1';",
+    "usageNote": "",
+    "stars": 1068,
+    "forks": 90,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "arcade-mcp",
+    "name": "Arcade MCP",
+    "github": "https://github.com/ArcadeAI/arcade-mcp",
+    "description": "사용자 정의 기능과 MCP 서버를 구축하기 위한 오픈소스 Python 프레임워크 및 도구 개발 라이브러리입니다.",
+    "longDescription": "개발자가 에이전트를 위한 커스텀 도구와 MCP 서버를 쉽게 만들 수 있도록 돕는 파이썬 프레임워크입니다. CLI를 통해 프로젝트를 빠르게 스캐폴딩하고 OAuth API 연동 등을 간단하게 구현할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "MCP",
+      "프레임워크",
+      "개발 도구",
+      "API"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.arcade.dev",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "Python",
+      "uv 도구"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "기타 MCP 호환 에이전트"
+    ],
+    "install": [
+      {
+        "title": "CLI 설치",
+        "command": "uv tool install arcade-mcp",
+        "note": "uv 패키지 관리자를 사용하여 Arcade CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Arcade CLI를 사용하여 새 서버 프로젝트를 생성합니다 (arcade new my_server).",
+      "생성된 템플릿 코드에 커스텀 파이썬 함수와 도구를 작성합니다.",
+      "MCP 서버를 실행하여 AI 에이전트와 연동합니다."
+    ],
+    "examplePrompt": "새로운 커스텀 MCP 도구를 작성하는 기본 구조를 만들어 줘.",
+    "usageNote": "",
+    "stars": 1060,
+    "forks": 122,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
+    "id": "comfyui-mcp",
+    "name": "ComfyUI MCP",
+    "github": "https://github.com/artokun/comfyui-mcp",
+    "description": "자연어로 ComfyUI 그래프를 편집하고 이미지, 비디오, 오디오를 생성할 수 있는 로컬 우선 에이전트 제어판입니다.",
+    "longDescription": "ComfyUI를 위한 MCP 서버 및 라이브 사이드바 에이전트로, 설치된 모델을 인식하고 워크플로우를 자동으로 구성하며 렌더링을 실행합니다. Claude, ChatGPT, 로컬 Ollama 등 다양한 LLM과 연동하여 그래픽 작업을 제어할 수 있습니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "ComfyUI",
+      "이미지 생성",
+      "비디오 생성",
+      "MCP",
+      "로컬 우선"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://comfyui-mcp.artokun.io/docs",
+    "featured": 9,
+    "added": "2026-10-26",
+    "addedAt": "2026-10-26T16:04:14.727Z",
+    "requirements": [
+      "ComfyUI 설치 환경",
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude",
+      "ChatGPT",
+      "Gemini",
+      "Ollama"
+    ],
+    "install": [
+      {
+        "title": "MCP 서버 및 패키지 설정",
+        "command": "npm install -g @artokun/comfyui-mcp",
+        "note": "npm을 통해 글로벌 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "ComfyUI를 로컬 환경에 실행합니다.",
+      "ComfyUI MCP 서버를 설정하여 AI 클라이언트와 연결합니다.",
+      "자연어로 이미지 생성 워크플로우 작성을 요청합니다."
+    ],
+    "examplePrompt": "Flux 모델을 사용하여 네온사인이 빛나는 미래도시 풍경을 생성하는 ComfyUI 워크플로우를 만들어 줘.",
+    "usageNote": "",
+    "stars": 864,
+    "forks": 139,
+    "starsUpdatedAt": "2026-10-26"
+  },
+  {
     "id": "liveterm",
     "name": "LiveTerm",
     "github": "https://github.com/Cveinnt/LiveTerm",
