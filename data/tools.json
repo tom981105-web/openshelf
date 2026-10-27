@@ -1,5 +1,424 @@
 [
   {
+    "id": "unifi-mcp",
+    "name": "UniFi MCP",
+    "github": "https://github.com/sirkirby/unifi-mcp",
+    "description": "UniFi 네트워크, 보안 및 액세스 제품군을 AI 에이전트 워크플로우로 관리할 수 있게 해주는 MCP 서버 및 API 모음입니다.",
+    "longDescription": "Claude Code, Codex 등의 AI 에이전트 마켓플레이스에서 플러그인 형태로 설치하여 자연어로 UniFi 배포 환경을 제어하고 진단할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "MCP",
+      "UniFi",
+      "네트워크",
+      "AI에이전트",
+      "Python"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://unifimcp.com/",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "Python",
+      "UniFi 인프라"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "PyPI 패키지 설치",
+        "command": "pip install unifi-network-mcp",
+        "note": "네트워크 MCP 서버 설치"
+      }
+    ],
+    "usageSteps": [
+      "지원되는 패키지 관리자를 통해 원하는 UniFi MCP 서버를 설치합니다.",
+      "AI 에이전트 마켓플레이스 설정에 플러그인을 추가합니다.",
+      "에이전트를 통해 네트워크 상태 확인 및 관리를 요청합니다."
+    ],
+    "examplePrompt": "현재 UniFi 네트워크에 연결된 모든 장비의 상태를 점검해줘",
+    "usageNote": "",
+    "stars": 955,
+    "forks": 133,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
+    "id": "homeassistant-espscreen",
+    "name": "Tessera Screen Manager",
+    "github": "https://github.com/MaxGramser/homeassistant_espscreen",
+    "description": "저렴한 ESP32 터치 패널에서 홈 어시스턴트 대시보드를 YAML이나 MQTT 없이 드래그앤드롭으로 구성할 수 있는 앱입니다.",
+    "longDescription": "2.8인치부터 10.1인치까지 다양한 ESP32 기반 컬러 LCD 터치 스크린을 지원하며, 홈 어시스턴트 애드온 형태로 쉽게 설치하여 각 방마다 아름다운 터치 디스플레이를 구축할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "HomeAssistant",
+      "ESP32",
+      "스마트홈",
+      "터치스크린",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://tessera-maxgramser.on-forge.com",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "Home Assistant",
+      "ESP32 하드웨어"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Home Assistant 애드온 스토어에 Tessera 저장소 리포지토리를 추가합니다.",
+      "Tessera Screen Manager를 설치하고 실행합니다.",
+      "웹 편집기를 통해 드래그앤드롭으로 화면 레이아웃을 디자인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "컬러 LCD 터치스크린 전용이며 E-ink 패널은 지원하지 않습니다.",
+    "stars": 916,
+    "forks": 122,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
+    "id": "house-control",
+    "name": "House Control",
+    "github": "https://github.com/0xProbabillity/house-control",
+    "description": "집안의 조명, 에어컨 등 스마트 기기 상태를 Mac 메뉴 바와 iPhone에서 라이브 3D 모델로 모니터링하고 제어하는 앱입니다.",
+    "longDescription": "Smart Life, Home Assistant, Philips Hue, Apple Home과 연동되며, 단 하나의 JSON 파일로 방, 벽, 가구 등의 평면도를 3D로 구현하여 시각적인 스마트홈 제어를 제공합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "스마트홈",
+      "macOS",
+      "iOS",
+      "3D",
+      "Swift"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/0xProbabillity/house-control",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "macOS 13 Ventura 이상",
+      "Xcode Command Line Tools",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스코드 클론 및 빌드",
+        "command": "git clone https://github.com/0xProbabillity/house-control.git && cd house-control && ./scripts/build-app.sh",
+        "note": "앱 빌드 및 실행"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 빌드 스크립트를 실행하여 앱을 컴파일합니다.",
+      "집 구조가 담긴 JSON 설정 파일을 연결합니다.",
+      "Mac 메뉴 바의 아이콘을 클릭하여 3D 모델을 통해 기기를 제어합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "iPhone 앱 빌드에는 Xcode 16 및 iOS 17 이상이 필요합니다.",
+    "stars": 778,
+    "forks": 110,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
+    "id": "gpt-home",
+    "name": "GPT Home",
+    "github": "https://github.com/judahpaul16/gpt-home",
+    "description": "Raspberry Pi 기반으로 LiteLLM과 LangGraph를 활용해 구축하는 자가 호스팅형 스마트홈 AI 어시스턴트입니다.",
+    "longDescription": "상용 스마트 홈 어시스턴트의 대안으로 설계되었으며, 음성 인식과 대화형 LLM을 결합하여 홈 어시스턴트 및 각종 IoT 기기를 자연스럽게 제어할 수 있는 오픈소스 솔루션입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "AI어시스턴트",
+      "스마트홈",
+      "RaspberryPi",
+      "LangGraph",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://hub.docker.com/r/judahpaul/gpt-home",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "Raspberry Pi 또는 Linux 서버",
+      "Docker",
+      "Python 3.11"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "지원되는 Linux 서버 또는 Raspberry Pi에 환경을 준비합니다.",
+      "설치 스크립트를 실행하여 Docker 및 필수 시스템 의존성을 설치합니다.",
+      "웹 인터페이스를 통해 대화형 스마트홈 제어 기능을 구성합니다."
+    ],
+    "examplePrompt": "거실 불을 끄고 편안한 조명 모드로 변경해줘",
+    "usageNote": "LLM API 키(OpenAI 등)와 하드웨어 구성 요소가 별도로 필요합니다.",
+    "stars": 652,
+    "forks": 68,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
+    "id": "node-red-contrib-home-assistant-websocket",
+    "name": "node-red-contrib-home-assistant-websocket",
+    "github": "https://github.com/zachowj/node-red-contrib-home-assistant-websocket",
+    "description": "Node-RED와 Home Assistant를 웹소켓 통신을 통해 유기적으로 연결하여 강력한 자동화를 구현할 수 있는 노드 모음입니다.",
+    "longDescription": "Home Assistant의 상태 변화, 이벤트 및 서비스 호출을 Node-RED의 흐름 제어 로직과 결합하여 복잡하고 세밀한 스마트홈 자동화 시나리오를 손쉽게 만들 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Node-RED",
+      "HomeAssistant",
+      "웹소켓",
+      "자동화",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://zachowj.github.io/node-red-contrib-home-assistant-websocket/",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "Node.js v20+",
+      "Node-RED v3.1.1+",
+      "Home Assistant v2024.3+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm을 이용한 설치",
+        "command": "cd ~/.node-red && npm install node-red-contrib-home-assistant-websocket",
+        "note": "Node-RED 디렉토리에서 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "Node-RED 팔레트 관리자 또는 npm을 통해 패키지를 설치합니다.",
+      "Node-RED를 재시작한 후 Home Assistant 서버 연결 노드를 추가합니다.",
+      "트리거 및 액션 노드를 배치하여 자동화 플로우를 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Node-RED 및 Home Assistant가 사전에 설치되어 운영 중이어야 합니다.",
+    "stars": 603,
+    "forks": 127,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
+    "id": "zha-device-handlers",
+    "name": "ZHA Device Handlers",
+    "github": "https://github.com/zigpy/zha-device-handlers",
+    "description": "홈 어시스턴트의 Zigbee(ZHA) 통합에서 제조사별 기기 호환성 문제를 해결하기 위한 커스텀 쿼크 라이브러리입니다.",
+    "longDescription": "Zigbee 표준을 벗어난 제조사 기기의 메시지를 파싱하여 기능적 공백을 메워주는 브리지 역할을 합니다. 다양한 Zigbee 센서와 조명을 원활하게 연동할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Zigbee",
+      "Home Assistant",
+      "Python",
+      "IoT",
+      "드라이버"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/zigpy/zha-device-handlers",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "Python",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "개발 환경 설정",
+        "command": "script/setup",
+        "note": "프로젝트 루트에서 스크립트를 실행하여 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 개발 환경을 설정합니다.",
+      "필요한 경우 특정 기기용 쿼크 코드를 작성하거나 수정합니다.",
+      "테스트를 실행하여 정상 동작을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "주로 Home Assistant의 ZHA 구성요소 내부에서 자동으로 로드되어 작동합니다.",
+    "stars": 1152,
+    "forks": 1248,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
+    "id": "nspanel-lovelace-ui",
+    "name": "NSPanel Lovelace UI",
+    "github": "https://github.com/joBr99/nspanel-lovelace-ui",
+    "description": "Sonoff NSPanel의 Nextion 터치스크린에 홈 어시스턴트의 Lovelace UI 디자인을 적용하는 커스텀 펌웨어입니다.",
+    "longDescription": "Tasmota 기반으로 동작하며, 벽걸이형 제어 패널인 NSPanel을 홈 어시스턴트와 연동하여 조명, 온도조절기, 스위치 등을 터치 인터페이스로 직접 제어할 수 있게 합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "Home Assistant",
+      "Tasmota",
+      "IoT",
+      "스마트홈",
+      "펌웨어"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/joBr99/nspanel-lovelace-ui",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "Sonoff NSPanel",
+      "Tasmota"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "NSPanel에 Tasmota 펌웨어를 플래시합니다.",
+      "Nextion 디스플레이에 커스텀 TFT 파일을 업로드합니다.",
+      "AppDaemon 또는 전용 애드온을 통해 홈 어시스턴트와 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "하드웨어 배선 및 플래싱 작업 시 전원 차단 등 안전 수칙을 준수해야 합니다.",
+    "stars": 997,
+    "forks": 203,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
+    "id": "python-ring-doorbell",
+    "name": "Python Ring Doorbell",
+    "github": "https://github.com/python-ring-doorbell/python-ring-doorbell",
+    "description": "Ring.com 스마트 도어벨 및 카메라 기기를 파이썬 객체로 제어할 수 있는 API 라이브러리입니다.",
+    "longDescription": "Ring 기기의 라이브 뷰, 이벤트 감지, 모션 경고 등을 파이썬 코드로 조작할 수 있게 해주며, 홈 어시스턴트 등의 홈 오토메이션 시스템과의 연동을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "Ring",
+      "API",
+      "도어벨",
+      "스마트홈"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-3.0",
+    "website": "https://github.com/python-ring-doorbell/python-ring-doorbell",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "Python 3"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI를 통한 설치",
+        "command": "pip install ring_doorbell",
+        "note": "파이썬 패키지 관리자를 통해 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip install ring_doorbell 명령으로 라이브러리를 설치합니다.",
+      "파이썬 스크립트에서 Ring 계정 인증 정보를 입력하여 세션을 생성합니다.",
+      "장치 목록을 조회하고 필요한 제어 메서드를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Ring 공식 API 정책 변경에 따라 비공식 리버스 엔지니어링 기반 기능은 제한될 수 있습니다.",
+    "stars": 704,
+    "forks": 224,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
+    "id": "homepoint",
+    "name": "Homepoint",
+    "github": "https://github.com/sieren/Homepoint",
+    "description": "ESP32 칩셋 기반 화면을 통해 MQTT 및 HomeKit 스마트홈 기기를 제어할 수 있는 스마트홈 터치 인터페이스입니다.",
+    "longDescription": "M5Stack 등의 ESP32 터치스크린 기기에서 동작하며, 스마트홈의 다양한 장면(Scene)과 기기 상태를 시각적으로 확인하고 직접 터치하여 제어할 수 있습니다.",
+    "category": "하드웨어·IoT",
+    "tags": [
+      "ESP32",
+      "MQTT",
+      "HomeKit",
+      "스마트홈",
+      "IoT"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/sieren/Homepoint",
+    "featured": 9,
+    "added": "2026-10-27",
+    "addedAt": "2026-10-27T20:04:15.527Z",
+    "requirements": [
+      "ESP32 하드웨어",
+      "ESP-IDF"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 ESP-IDF 환경을 설정합니다.",
+      "Wi-Fi 및 MQTT 브로커 연결 정보를 설정 파일에 입력합니다.",
+      "펌웨어를 컴파일하여 ESP32 기기에 플래시합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "하드웨어 디스플레이 모델에 맞는 설정 변경이 필요할 수 있습니다.",
+    "stars": 662,
+    "forks": 87,
+    "starsUpdatedAt": "2026-10-27"
+  },
+  {
     "id": "ppt-image-first",
     "name": "ppt-image-first",
     "github": "https://github.com/NyxTides/ppt-image-first",
