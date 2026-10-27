@@ -1,7 +1,1167 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T09:06:53.372Z",
+  "updatedAt": "2026-10-27T11:07:09.832Z",
   "items": [
+    {
+      "id": "elasticsearch",
+      "name": "Elasticsearch",
+      "github": "https://github.com/elastic/elasticsearch",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.170Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "elasticsearch",
+        "name": "Elasticsearch",
+        "github": "https://github.com/elastic/elasticsearch",
+        "description": "대규모 데이터셋을 위한 분산형 실시간 검색 및 분석 엔진입니다.",
+        "longDescription": "속도와 연관성에 최적화된 분산 검색 및 분석 엔진이자 확장 가능한 데이터 저장소입니다. 전문 검색, 벡터 검색, 생성형 AI 애플리케이션 연동 및 로그와 지표 모니터링을 지원합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "검색엔진",
+          "벡터DB",
+          "분산시스템"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.elastic.co/products/elasticsearch",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "Java 17 이상"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -p 9200:9200 -p 5601:5601 -it docker.elastic.co/elasticsearch/elasticsearch:latest",
+            "note": "Docker를 이용해 Elasticsearch 및 Kibana를 로컬에 빠르게 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 또는 공식 패키지를 통해 Elasticsearch 인스턴스를 시작합니다.",
+          "출력되는 설정 및 인증 정보를 확인합니다.",
+          "REST API 또는 클라이언트 라이브러리를 통해 데이터를 색인하고 검색합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "로컬 테스트 시 기본 인증 및 HTTPS 설정에 주의하세요.",
+        "stars": 78400,
+        "forks": 26133,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:47.807Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:51.625Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-27T11:07:00.643Z"
+    },
+    {
+      "id": "meilisearch",
+      "name": "Meilisearch",
+      "github": "https://github.com/meilisearch/meilisearch",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "meilisearch",
+        "name": "Meilisearch",
+        "github": "https://github.com/meilisearch/meilisearch",
+        "description": "웹사이트와 애플리케이션을 위한 초고속 AI 하이브리드 검색엔진 API",
+        "longDescription": "오타 허용, 의미론적 검색, 전문(Full-text) 검색을 지원하는 초고속 오픈소스 검색엔진입니다. 앱과 웹사이트에 쉽게 통합하여 실시간 검색 경험을 구현할 수 있습니다.",
+        "category": "지식·검색",
+        "tags": [
+          "검색엔진",
+          "API",
+          "벡터검색"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.meilisearch.com",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "Docker 또는 64비트 운영체제"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker로 실행",
+            "command": "docker run -it --rm -p 7700:7700 -v $(pwd)/meili_data:/meili_data getmeili/meilisearch:v1.11",
+            "note": "도커를 이용해 Meilisearch 인스턴스를 로컬에 띄웁니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 명령어로 Meilisearch 서버를 실행합니다.",
+          "포트 7700을 통해 API 엔드포인트에 접속합니다.",
+          "문서를 추가하고 검색 쿼리를 전송하여 결과를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프로덕션 환경에서는 마스터 키 설정이 필수적입니다.",
+        "stars": 59686,
+        "forks": 2762,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:48.055Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:51.907Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-27T11:07:01.333Z"
+    },
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "windmill",
+        "name": "Windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "워크플로우, 내부 앱, AI 에이전트를 구축하는 코드 중심 오픈소스 플랫폼",
+        "longDescription": "개발자는 20개 이상의 언어로 코드를 작성하고 Git과 연동할 수 있으며, 비즈니스 팀은 AI와 동일한 플랫폼을 활용해 앱과 파이프라인을 구축할 수 있습니다. n8n과 Retool의 강력한 오픈소스 대안입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "자동화",
+          "내부툴"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose 실행",
+            "command": "docker compose up",
+            "note": "Docker를 활용해 Windmill 서버를 로컬에 배포합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker Compose를 사용하여 Windmill 서비스를 실행합니다.",
+          "웹 UI에 접속하여 작업 공간을 구성합니다.",
+          "스크립트나 워크플로우를 작성하고 자동화 파이프라인을 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "데이터 지속성을 위해 PostgreSQL 설정이 권장됩니다.",
+        "stars": 18289,
+        "forks": 1128,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:48.384Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:52.170Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-27T11:07:04.888Z"
+    },
+    {
+      "id": "weaviate",
+      "name": "Weaviate",
+      "github": "https://github.com/weaviate/weaviate",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "weaviate",
+        "name": "Weaviate",
+        "github": "https://github.com/weaviate/weaviate",
+        "description": "구조화된 필터링과 벡터 검색을 결합한 클라우드 네이티브 오픈소스 벡터 데이터베이스입니다.",
+        "longDescription": "객체와 벡터를 동시에 저장하며, 대규모 프로덕션 환경에서 빠른 속도와 정확도를 제공하는 분산 벡터 검색 엔진입니다. 생성형 AI 및 RAG 파이프라인 구축에 널리 활용됩니다.",
+        "category": "지식·검색",
+        "tags": [
+          "벡터DB",
+          "시맨틱검색",
+          "RAG"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://weaviate.io/developers/weaviate/",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "Docker 또는 Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose 설치",
+            "command": "docker compose up -d",
+            "note": "Docker를 통해 로컬에 Weaviate 인스턴스를 구동합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker Compose 설정을 준비하고 실행합니다.",
+          "클라이언트 SDK를 통해 Weaviate 서버에 연결합니다.",
+          "데이터 객체를 임베딩과 함께 적재하고 하이브리드 검색을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "대규모 운영 환경에서는 Kubernetes 배포를 권장합니다.",
+        "stars": 16921,
+        "forks": 1429,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:48.621Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:52.460Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-27T11:07:05.737Z"
+    },
+    {
+      "id": "paradev",
+      "name": "Paradev",
+      "github": "https://github.com/ParadevAI/Paradev",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "paradev",
+        "name": "Paradev",
+        "github": "https://github.com/ParadevAI/Paradev",
+        "description": "100개 이상의 코딩 에이전트를 병렬로 관리하는 AI 기반 IDE",
+        "longDescription": "다양한 CLI 기반 코딩 에이전트를 터미널, 코드 리뷰, 브라우저 미리보기와 함께 하나의 작업 공간에서 통합 관리할 수 있는 데스크톱 앱입니다. 개발자는 여러 에이전트를 병렬로 오케스트레이션하여 효율적으로 코딩 작업을 수행할 수 있습니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI코딩",
+          "에이전트",
+          "IDE"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://paradev.com",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "macOS 또는 Linux 데스크톱 환경"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "macOS 앱 다운로드",
+            "command": "curl -L https://github.com/paradevai/paradev/releases/latest/download/Superset-arm64.dmg -o Paradev.dmg",
+            "note": "Apple Silicon용 데스크톱 애플리케이션 설치 파일을 다운로드합니다."
+          }
+        ],
+        "usageSteps": [
+          "릴리스 페이지에서 운영체제에 맞는 설치 파일을 다운로드하여 설치합니다.",
+          "원하는 AI 코딩 에이전트 및 구독 계정을 연결합니다.",
+          "통합 작업 공간에서 다중 에이전트를 병렬로 실행하고 코드를 검토합니다."
+        ],
+        "examplePrompt": "현재 프로젝트의 버그를 찾아 수정해줘",
+        "usageNote": "사용하려는 개별 AI 에이전트의 API 키나 구독이 필요합니다.",
+        "stars": 15621,
+        "forks": 1384,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:48.879Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:53.010Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-27T11:07:09.832Z"
+    },
+    {
+      "id": "orama",
+      "name": "Orama",
+      "github": "https://github.com/oramasearch/orama",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "orama",
+        "name": "Orama",
+        "github": "https://github.com/oramasearch/orama",
+        "description": "브라우저, 서버, 에지 네트워크에서 동작하는 가볍고 빠른 전문 및 벡터 검색 엔진입니다.",
+        "longDescription": "전문 검색(Full-text), 벡터 검색, 하이브리드 검색을 모두 지원하며 2kb 미만의 가벼운 용량을 자랑하는 검색 엔진 및 RAG 파이프라인 라이브러리입니다.",
+        "category": "지식·검색",
+        "tags": [
+          "JavaScript",
+          "TypeScript",
+          "검색엔진",
+          "벡터검색",
+          "RAG"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.orama.com/docs/orama-js",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "Node.js 또는 npm 패키지 매니저"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치",
+            "command": "npm i @orama/orama",
+            "note": "프로젝트에 Orama 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "npm을 통해 패키지를 설치합니다.",
+          "애플리케이션 코드에서 Orama 인스턴스를 생성합니다.",
+          "데이터를 삽입하고 실시간 검색 쿼리를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "브라우저와 서버 환경 모두에서 별도의 백엔드 없이 동작 가능합니다.",
+        "stars": 10586,
+        "forks": 409,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:49.101Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:53.499Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "ravendb",
+      "name": "RavenDB",
+      "github": "https://github.com/ravendb/ravendb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "ravendb",
+        "name": "RavenDB",
+        "github": "https://github.com/ravendb/ravendb",
+        "description": "개발자 친화적인 경험과 강력한 성능을 제공하는 ACID NoSQL 문서 데이터베이스입니다.",
+        "longDescription": "복잡한 데이터 관리를 최소화하고 뛰어난 성능을 제공하도록 설계된 NoSQL 문서 데이터베이스입니다. 최신 웹 UI, 시계열 데이터, 벡터 검색, 분산 샤딩을 지원합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "NoSQL",
+          "문서데이터베이스",
+          "ACID",
+          "C#",
+          "데이터베이스"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://ravendb.net",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "Docker 또는 .NET 런타임"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run --rm -it ravendb/ravendb:latest -p 8080:8080",
+            "note": "Docker를 통해 RavenDB 컨테이너를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker를 사용하여 RavenDB 서버를 시작합니다.",
+          "웹 브라우저를 통해 포트 8080의 웹 스튜디오에 접속합니다.",
+          "데이터베이스를 생성하고 애플리케이션 SDK를 통해 연동합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "개발자용 라이선스는 무료로 제공됩니다.",
+        "stars": 4013,
+        "forks": 867,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:49.326Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:54.167Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "tdf",
+      "name": "TDF (Tree Document Format)",
+      "github": "https://github.com/DO-SAY-GO/tdf",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "tdf",
+        "name": "TDF (Tree Document Format)",
+        "github": "https://github.com/DO-SAY-GO/tdf",
+        "description": "웹 컬렉션과 아카이빙을 위한 범용 파일 형식 및 캡처 아키텍처입니다.",
+        "longDescription": "웹사이트의 방대한 콘텐츠와 데이터를 캡처하여 .tdf 파일 형식으로 저장하고, 네이티브 앱인 Tree Grower와 Tree Player를 통해 탐색 및 재생할 수 있는 오픈소스 솔루션입니다.",
+        "category": "문서",
+        "tags": [
+          "웹아카이브",
+          "문서포맷",
+          "Bash",
+          "JavaScript",
+          "스크래핑"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://trees.dosaygo.com",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "curl 또는 PowerShell"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "macOS / Linux 설치",
+            "command": "curl -fsSL https://trees.dosaygo.com/install.sh | bash",
+            "note": "스크립트를 통해 시스템에 TDF 도구를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 실행하여 도구를 다운로드하고 설치합니다.",
+          "Tree Grower를 사용하여 웹 콘텐츠나 세션을 캡처합니다.",
+          "Tree Player로 생성된 .tdf 아카이브 파일을 열어 탐색합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "기존 DownloadNet(dn) 프로젝트의 후속 아키텍처입니다.",
+        "stars": 3907,
+        "forks": 145,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:49.605Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:54.789Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 개요 작성기를 대체하는 계층형 데이터 조직화 도구입니다.",
+        "longDescription": "할 일 목록, 일정 관리, 브레인스토밍, 아이디어 정리를 하나의 직관적인 인터페이스에서 수행할 수 있는 자유 형식의 계층형 데이터 오거나이저입니다.",
+        "category": "생산성",
+        "tags": [
+          "생산성",
+          "마인드맵",
+          "스프레드시트",
+          "지식관리",
+          "C++"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "데스크톱 환경"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "바이너리 다운로드",
+            "command": "https://github.com/aardappel/treesheets/releases",
+            "note": "GitHub 릴리스 페이지에서 운영체제에 맞는 사전 빌드된 바이너리를 다운로드합니다."
+          }
+        ],
+        "usageSteps": [
+          "공식 릴리스 페이지에서 실행 파일을 다운로드합니다.",
+          "프로그램을 실행하고 새로운 계층형 문서를 생성합니다.",
+          "표 형식의 셀 안에 데이터를 입력하고 구조화하여 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS에서는 최초 실행 시 보안 설정에서 앱 열기를 허용해야 할 수 있습니다.",
+        "stars": 3177,
+        "forks": 223,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:49.787Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:55.415Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "panhub-shenzjd-com",
+      "name": "PanHub",
+      "github": "https://github.com/wu529778790/panhub.shenzjd.com",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "panhub-shenzjd-com",
+        "name": "PanHub",
+        "github": "https://github.com/wu529778790/panhub.shenzjd.com",
+        "description": "여러 클라우드 스토리지 및 웹 자원을 하나의 검색창으로 통합 검색하는 오픈소스 어그리게이터입니다.",
+        "longDescription": "다양한 네트디스크 및 공유 자원을 하나의 검색창에서 통합 검색하고 중복을 제거하며 스마트 정렬을 제공합니다. 가벼운 배포가 가능하며 Vercel, Cloudflare, Docker를 지원합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "검색통합",
+          "클라우드저장소",
+          "Docker",
+          "Vercel",
+          "Vue"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://panhub.shenzjd.com/",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [
+          "Docker 또는 정적 호스팅 서비스"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Vercel 배포",
+            "command": "https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fwu529778790%2Fpanhub.shenzjd.com",
+            "note": "Vercel을 통해 원클릭으로 클라우드에 배포합니다."
+          }
+        ],
+        "usageSteps": [
+          "Vercel 또는 Cloudflare에 프로젝트를 클론하여 배포합니다.",
+          "웹 인터페이스의 통합 검색창에 검색어를 입력합니다.",
+          "검색 결과에서 필요한 자원을 확인하고 링크를 이용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "개인 호스팅 환경에 따라 플러그인 설정을 조정할 수 있습니다.",
+        "stars": 1773,
+        "forks": 714,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:49.989Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T11:06:55.753Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "beav",
+      "name": "Beav",
+      "github": "https://github.com/Jamailar/Beav",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "beav",
+        "name": "Beav",
+        "github": "https://github.com/Jamailar/Beav",
+        "description": "소셜미디어 콘텐츠 수집, AI 글쓰기 및 자동 편집을 지원하는 올인원 AI 미디어 워크벤치",
+        "longDescription": "소셜미디어 콘텐츠 크리에이터를 위한 로컬 우선 AI 작업 공간입니다. 링크 저장, 지식베이스 구축, 대화형 AI 글쓰기, 이미지 및 영상 편집을 지원합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "AI 에이전트",
+          "콘텐츠 생성",
+          "크롤러",
+          "데스크톱 앱",
+          "지식베이스"
+        ],
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://beav.pro/",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 웹사이트에서 앱을 다운로드하여 설치합니다.",
+          "수집하고 싶은 소셜미디어 링크를 입력하여 지식베이스에 저장합니다.",
+          "AI 어시스턴트를 통해 텍스트 작성 및 콘텐츠를 편집합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "일부 기능은 외부 API 키가 필요할 수 있습니다.",
+        "stars": 2180,
+        "forks": 283,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:50.219Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "webbrain",
+      "name": "WebBrain",
+      "github": "https://github.com/webbrain-one/webbrain",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "webbrain",
+        "name": "WebBrain",
+        "github": "https://github.com/webbrain-one/webbrain",
+        "description": "브라우저 사이드바에서 동작하며 웹페이지와 대화하고 반복 작업을 자동화하는 오픈소스 AI 브라우저 어시스턴트",
+        "longDescription": "크롬 및 파이어폭스 브라우저 확장 프로그램으로 제공되는 AI 에이전트입니다. 현재 보고 있는 페이지 요약, 폼 자동 입력, 멀티스텝 웹 탐색 작업을 수행할 수 있습니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "브라우저 확장",
+          "AI 어시스턴트",
+          "웹 자동화",
+          "로컬 LLM",
+          "사이드바"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://webbrain.one",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "브라우저 확장 프로그램을 설치합니다.",
+          "웹브라우저 사이드바에서 WebBrain 아이콘을 클릭합니다.",
+          "페이지 요약이나 폼 입력 등의 작업을 자연어로 요청합니다."
+        ],
+        "examplePrompt": "Summarize this page",
+        "usageNote": "",
+        "stars": 1561,
+        "forks": 192,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T11:06:50.517Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "rpa",
+      "name": "Ui.Vision RPA",
+      "github": "https://github.com/A9T9/RPA",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "rpa",
+        "name": "Ui.Vision RPA",
+        "github": "https://github.com/A9T9/RPA",
+        "description": "OCR, 이미지 인식 및 AI 에이전트 연동을 지원하는 브라우저 및 데스크톱 자동화 툴",
+        "longDescription": "매크로 기록, JavaScript 및 MCP(Model Context Protocol) 서버를 활용해 웹사이트와 데스크톱 애플리케이션 작업을 자동화할 수 있는 도구입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "브라우저 자동화",
+          "매크로",
+          "MCP",
+          "OCR",
+          "컴퓨터 사용"
+        ],
+        "platforms": [
+          "Web",
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://ui.vision/",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "브라우저 확장 프로그램 혹은 데스크톱 버전을 설치합니다.",
+          "매크로를 직접 기록하거나 JavaScript 코드를 작성합니다.",
+          "필요시 AI 어시스턴트와 연동하여 자동화 작업을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2091,
+        "forks": 420,
+        "starsUpdatedAt": "2026-10-27"
+      }
+    },
+    {
+      "id": "teampass",
+      "name": "TeamPass",
+      "github": "https://github.com/nilsteampassnet/TeamPass",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20"
+    },
+    {
+      "id": "bilibilisponsorblock",
+      "name": "BilibiliSponsorBlock",
+      "github": "https://github.com/hanydd/BilibiliSponsorBlock",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20"
+    },
+    {
+      "id": "i-still-dont-care-about-cookies",
+      "name": "I-Still-Dont-Care-About-Cookies",
+      "github": "https://github.com/OhMyGuus/I-Still-Dont-Care-About-Cookies",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20"
+    },
+    {
+      "id": "ghosttext",
+      "name": "GhostText",
+      "github": "https://github.com/fregante/GhostText",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20"
+    },
+    {
+      "id": "webscrapbook",
+      "name": "WebScrapBook",
+      "github": "https://github.com/danny0838/webscrapbook",
+      "license": "MPL-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20"
+    },
+    {
+      "id": "twittermediaharvest",
+      "name": "TwitterMediaHarvest",
+      "github": "https://github.com/EltonChou/TwitterMediaHarvest",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "twittermediaharvest",
+        "name": "TwitterMediaHarvest",
+        "github": "https://github.com/EltonChou/TwitterMediaHarvest",
+        "description": "클릭 한 번으로 트위터(X)의 이미지와 동영상 미디어를 간편하게 다운로드할 수 있는 브라우저 확장",
+        "longDescription": "트위터 피드에 다운로드 버튼을 추가하여 고화질 사진과 동영상을 원클릭으로 쉽게 저장할 수 있도록 지원하는 크롬 및 파이어폭스 확장 프로그램입니다.",
+        "category": "멀티미디어",
+        "tags": [
+          "브라우저 확장",
+          "트위터",
+          "동영상 다운로더",
+          "미디어 저장",
+          "HTML"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://mediaharvest.app",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "브라우저 확장 프로그램 스토어에서 설치합니다.",
+          "트위터(X) 피드에서 다운로드하고 싶은 미디어가 포함된 트윗을 확인합니다.",
+          "추가된 다운로드 버튼을 클릭하여 파일을 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1224,
+        "forks": 89,
+        "starsUpdatedAt": "2026-10-27"
+      }
+    },
+    {
+      "id": "spotify-lyrics",
+      "name": "Spotify Lyrics",
+      "github": "https://github.com/mantou132/Spotify-Lyrics",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T11:06:47.171Z",
+      "sourceRun": "2026-10-27T20",
+      "tool": {
+        "id": "spotify-lyrics",
+        "name": "Spotify Lyrics",
+        "github": "https://github.com/mantou132/Spotify-Lyrics",
+        "description": "스포티파이 웹 플레이어에서 실시간 싱크 가사를 PIP 창이나 화면 하단에 표시해 주는 브라우저 확장",
+        "longDescription": "스포티파이 웹 플레이어 인터페이스에 가사 버튼을 추가하여 음악 재생과 동시에 동기화된 가사를 실시간으로 감상할 수 있게 해주는 편리한 확장 프로그램입니다.",
+        "category": "음성·오디오",
+        "tags": [
+          "브라우저 확장",
+          "스포티파이",
+          "가사",
+          "음악",
+          "JavaScript"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://chromewebstore.google.com/detail/slyrics/mkjfooclbdgjdclepjeepbmmjaclipod",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T11:04:14.516Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "크롬 또는 엣지 웹스토어에서 확장 프로그램을 설치합니다.",
+          "스포티파이 웹 플레이어(Spotify Web Player)를 엽니다.",
+          "음악을 재생하고 하단에 추가된 가사 버튼을 클릭하여 가사를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1064,
+        "forks": 64,
+        "starsUpdatedAt": "2026-10-27"
+      }
+    },
     {
       "id": "prompts-chat",
       "name": "prompts.chat",
@@ -643,84 +1803,6 @@
       }
     },
     {
-      "id": "windmill",
-      "name": "windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T09:06:38.035Z",
-      "sourceRun": "2026-10-27T18",
-      "tool": {
-        "id": "windmill",
-        "name": "windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 코드로 빌드하고 오케스트레이션하는 플랫폼입니다.",
-        "longDescription": "Airflow나 Temporal의 대안이 되는 고성능 오픈소스 오케스트레이터로, Python, TypeScript 등 다양한 언어로 작성된 스크립트를 API, 크론 욥, UI로 자동 변환하며 AI 에이전트 루프와 통합할 수 있습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "업무자동화",
-          "워크플로우",
-          "오케스트레이션",
-          "Rust",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T09:04:14.669Z",
-        "requirements": [
-          "Docker 또는 PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker 또는 지원되는 환경을 통해 Windmill 인스턴스를 실행합니다.",
-          "웹 대시보드나 Git을 통해 스크립트와 워크플로우를 작성합니다.",
-          "스크립트를 UI나 API로 변환하고 에이전트 워크플로우를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 18286,
-        "forks": 1128,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T09:06:40.740Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T09:06:46.629Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "stanza",
       "name": "stanza",
       "github": "https://github.com/stanfordnlp/stanza",
@@ -803,80 +1885,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "paradev",
-      "name": "Paradev",
-      "github": "https://github.com/ParadevAI/Paradev",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T09:06:38.035Z",
-      "sourceRun": "2026-10-27T18",
-      "tool": {
-        "id": "paradev",
-        "name": "Paradev",
-        "github": "https://github.com/ParadevAI/Paradev",
-        "description": "다수의 코딩 에이전트를 병렬로 오케스트레이션할 수 있는 에이전트 기반 IDE입니다.",
-        "longDescription": "터미널, 코드 리뷰, 브라우저 미리보기를 단일 작업 공간에 통합하여 여러 CLI 코딩 에이전트를 병렬로 실행할 수 있는 개발 도구입니다. 사용자의 구독을 기반으로 다양한 AI 에이전트를 유연하게 오케스트레이션합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "개발 도구",
-          "AI",
-          "에이전트",
-          "IDE",
-          "터미널"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://paradev.com",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T09:04:14.669Z",
-        "requirements": [
-          "macOS 또는 Linux 운영체제"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "macOS 설치",
-            "command": "https://github.com/paradevai/paradev/releases/latest/download/Superset-arm64.dmg",
-            "note": "Apple Silicon용 데스크톱 앱 다운로드"
-          }
-        ],
-        "usageSteps": [
-          "공식 릴리스 페이지에서 운영체제에 맞는 데스크톱 앱을 다운로드합니다.",
-          "앱을 실행하고 작업할 프로젝트 디렉토리를 엽니다.",
-          "사용할 AI 코딩 에이전트와 설정을 구성합니다.",
-          "병렬로 에이전트를 실행하고 코드 리뷰 및 미리보기를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 15610,
-        "forks": 1382,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T09:06:41.187Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "chronos-forecasting",
@@ -1158,79 +2166,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-27T08:06:36.728Z"
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-27T08:06:28.265Z",
-      "sourceRun": "2026-10-27T17",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "스프레드시트, 마인드맵, 아웃라인을 대체하는 계층형 자유 형식 데이터 조직화 도구입니다.",
-        "longDescription": "할 일 목록, 일정, 프로젝트 관리 등 복잡하고 계층적인 데이터를 직관적으로 구조화할 수 있는 데스크톱 생산성 도구입니다. 기존 스프레드시트보다 다차원 데이터 관리에 용이하며 가볍고 컴팩트한 인터페이스를 제공합니다.",
-        "category": "생산성",
-        "tags": [
-          "생산성",
-          "마인드맵",
-          "지식 관리"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T08:04:16.534Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Release 페이지에서 TreeSheets 실행 파일을 다운로드합니다.",
-          "프로그램을 실행하고 새로운 계층형 문서를 생성합니다.",
-          "표 형식과 계층 구조를 활용하여 아이디어, 할 일, 프로젝트를 정리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3177,
-        "forks": 223,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T08:06:29.534Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T08:06:33.692Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T08:06:40.249Z"
     },
     {
       "id": "inbox",
@@ -10982,170 +11917,6 @@
       "reasons": [],
       "checkedAt": "2026-10-26T21:06:19.771Z",
       "sourceRun": "2026-10-27T06"
-    },
-    {
-      "id": "rpa",
-      "name": "Ui.Vision RPA",
-      "github": "https://github.com/A9T9/RPA",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T20:07:06.510Z",
-      "sourceRun": "2026-10-27T05",
-      "tool": {
-        "id": "rpa",
-        "name": "Ui.Vision RPA",
-        "github": "https://github.com/A9T9/RPA",
-        "description": "웹 및 데스크톱 자동화를 지원하는 오픈소스 도구",
-        "longDescription": "매크로 기록, JavaScript, OCR, 이미지 인식을 활용해 웹사이트 및 데스크톱 애플리케이션을 자동으로 테스트하고 제어하는 오픈소스 브라우저 확장 프로그램입니다. MCP 서버와 결합하여 AI 에이전트가 웹 및 데스크톱을 제어할 수 있는 기능을 제공합니다.",
-        "category": "브라우저 자동화",
-        "tags": [
-          "브라우저자동화",
-          "매크로",
-          "OCR"
-        ],
-        "platforms": [
-          "Web",
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://ui.vision/",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T20:04:11.425Z",
-        "requirements": [
-          "Node.js",
-          "지원되는 웹 브라우저"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "MCP 브리지 설치",
-            "command": "npm install -g uivision-mcp-bridge",
-            "note": "AI 어시스턴트 연동을 위한 MCP 서버 패키지 설치"
-          }
-        ],
-        "usageSteps": [
-          "브라우저 확장 프로그램을 설치합니다.",
-          "매크로를 직접 기록하거나 JavaScript 코드를 작성합니다.",
-          "MCP 서버를 통해 AI 어시스턴트와 연동하여 자동화 작업을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "데스크톱 네이티브 자동화 기능 사용 시 XModules 추가 설치가 필요합니다.",
-        "stars": 2091,
-        "forks": 420,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T20:07:08.286Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T20:07:14.469Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-26T20:07:23.063Z"
-    },
-    {
-      "id": "webbrain",
-      "name": "WebBrain",
-      "github": "https://github.com/webbrain-one/webbrain",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T20:07:06.510Z",
-      "sourceRun": "2026-10-27T05",
-      "tool": {
-        "id": "webbrain",
-        "name": "WebBrain",
-        "github": "https://github.com/webbrain-one/webbrain",
-        "description": "크롬과 파이어폭스 브라우저에서 대화와 작업 자동화를 지원하는 오픈소스 AI 브라우저 에이전트입니다.",
-        "longDescription": "사이드 패널에 상주하며 현재 웹페이지 요약, 폼 입력, 링크 탐색 등 멀티스텝 웹 워크플로우를 사용자가 선택한 LLM과 연동해 처리해 주는 브라우저 확장 프로그램입니다. 로컬 LLM 연동을 위해 Ollama 또는 llama.cpp 서버 구동이 필요할 수 있습니다.",
-        "category": "브라우저 자동화",
-        "tags": [
-          "AI에이전트",
-          "브라우저확장",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web",
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://webbrain.one",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T20:04:11.425Z",
-        "requirements": [
-          "Node.js",
-          "Chrome 또는 Firefox 브라우저"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "크롬 웹스토어 또는 소스 코드를 통해 브라우저에 확장 프로그램을 설치합니다.",
-          "사이드 패널을 열고 사용할 LLM(로컬 또는 클라우드)을 설정합니다.",
-          "웹페이지 요약이나 폼 자동 입력 등의 작업을 지시합니다."
-        ],
-        "examplePrompt": "이 페이지의 내용을 요약해 줘.",
-        "usageNote": "로컬 LLM 사용 시 Ollama 또는 llama.cpp 서버 구동이 필요합니다.",
-        "stars": 1559,
-        "forks": 189,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T20:07:08.717Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T20:07:14.902Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-26T20:07:23.859Z"
     },
     {
       "id": "open-scouts",
@@ -22854,89 +23625,6 @@
       }
     },
     {
-      "id": "ravendb",
-      "name": "RavenDB",
-      "github": "https://github.com/ravendb/ravendb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T06:06:27.231Z",
-      "sourceRun": "2026-10-26T15",
-      "tool": {
-        "id": "ravendb",
-        "name": "RavenDB",
-        "github": "https://github.com/ravendb/ravendb",
-        "description": "개발자 친화적인 경험을 제공하는 ACID 기반 고성능 NoSQL 문서 데이터베이스입니다.",
-        "longDescription": "강력한 웹 UI와 완전한 ACID 트랜잭션을 지원하며, 문서 모델링, 전문 검색, 시계열 데이터 및 벡터 검색 기능을 통합하여 제공하는 문서 데이터베이스입니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "NoSQL",
-          "데이터베이스",
-          "C#",
-          ".NET",
-          "문서 데이터베이스"
-        ],
-        "platforms": [
-          "Windows",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://ravendb.net",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T06:04:03.701Z",
-        "requirements": [
-          "Docker 또는 .NET 런타임"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run --rm -it ravendb/ravendb:latest -p 8080:8080",
-            "note": "Docker를 통해 RavenDB 최신 버전을 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 명령어를 사용하여 RavenDB 컨테이너를 실행합니다.",
-          "웹 브라우저를 통해 관리 콘솔(포트 8080)에 접속합니다.",
-          "데이터베이스를 생성하고 공식 SDK를 활용하여 애플리케이션과 연동합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 4011,
-        "forks": 867,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T06:06:29.424Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T06:06:34.012Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "iot-for-beginners",
       "name": "IoT-For-Beginners",
       "github": "https://github.com/microsoft/IoT-For-Beginners",
@@ -29791,427 +30479,6 @@
       "reasons": [],
       "checkedAt": "2026-10-25T22:05:52.531Z",
       "sourceRun": "2026-10-26T07"
-    },
-    {
-      "id": "elasticsearch",
-      "name": "Elasticsearch",
-      "github": "https://github.com/elastic/elasticsearch",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T21:06:11.257Z",
-      "sourceRun": "2026-10-26T06",
-      "tool": {
-        "id": "elasticsearch",
-        "name": "Elasticsearch",
-        "github": "https://github.com/elastic/elasticsearch",
-        "description": "대규모 프로덕션 워크로드에 최적화된 분산형 검색 및 분석 엔진입니다.",
-        "longDescription": "방대한 데이터셋을 대상으로 실시간 검색을 수행하며 벡터 검색과 생성형 AI 애플리케이션 통합을 지원합니다. Apache Lucene 기반으로 구축되어 다양한 데이터 포맷과 고성능 쿼리를 처리할 수 있습니다.",
-        "category": "지식·검색",
-        "tags": [
-          "검색엔진",
-          "벡터데이터베이스",
-          "Java"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.elastic.co/products/elasticsearch",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T21:04:07.162Z",
-        "requirements": [
-          "Docker",
-          "Java"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "로컬 테스트",
-            "command": "docker run -p 9200:9200 -p 5601:5601 ...",
-            "note": "Docker를 이용한 로컬 실행 방법입니다."
-          }
-        ],
-        "usageSteps": [
-          "도커 환경 또는 로컬에 Elasticsearch를 설치합니다.",
-          "REST API 또는 클라이언트 라이브러리를 통해 데이터를 색인합니다.",
-          "검색 쿼리나 벡터 검색을 실행하여 결과를 조회합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "프로덕션 환경 구축 시 보안 및 HTTPS 설정을 별도로 구성해야 합니다.",
-        "stars": 78375,
-        "forks": 26107,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T21:06:11.963Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T21:06:16.801Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-25T21:06:23.887Z"
-    },
-    {
-      "id": "meilisearch",
-      "name": "Meilisearch",
-      "github": "https://github.com/meilisearch/meilisearch",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T21:06:11.257Z",
-      "sourceRun": "2026-10-26T06",
-      "tool": {
-        "id": "meilisearch",
-        "name": "Meilisearch",
-        "github": "https://github.com/meilisearch/meilisearch",
-        "description": "웹사이트와 애플리케이션을 위한 AI 기반 하이브리드 검색 엔진 API입니다.",
-        "longDescription": "오타 교정, 전문 검색, 의미론적 검색을 고속으로 제공하며 간편하게 자체 호스팅하거나 클라우드로 배포할 수 있습니다.",
-        "category": "지식·검색",
-        "tags": [
-          "검색엔진",
-          "API",
-          "Rust"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.meilisearch.com",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T21:04:07.162Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run -it --rm -p 7700:7700 -v $(pwd)/data.ms:/data getmeili/meilisearch:v1.7",
-            "note": "도커를 이용해 Meilisearch 인스턴스를 즉시 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 명령어로 Meilisearch를 실행합니다.",
-          "REST API를 통해 문서를 추가하고 인덱스를 생성합니다.",
-          "검색 API를 호출하여 실시간 검색 결과를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 59666,
-        "forks": 2757,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T21:06:12.291Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T21:06:17.293Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-25T21:06:24.499Z"
-    },
-    {
-      "id": "weaviate",
-      "name": "Weaviate",
-      "github": "https://github.com/weaviate/weaviate",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T21:06:11.257Z",
-      "sourceRun": "2026-10-26T06",
-      "tool": {
-        "id": "weaviate",
-        "name": "Weaviate",
-        "github": "https://github.com/weaviate/weaviate",
-        "description": "구조화된 필터링과 벡터 검색을 결합하는 클라우드 네이티브 오픈소스 벡터 데이터베이스입니다.",
-        "longDescription": "구조화된 필터링과 벡터 검색을 결합하는 클라우드 네이티브 오픈소스 벡터 데이터베이스입니다. 고성능과 확장성을 갖추어 기계 학습 모델 및 대규모 언어 모델 기반의 검색 애플리케이션 구축에 적합합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "벡터데이터베이스",
-          "검색엔진",
-          "머신러닝"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://weaviate.io/developers/weaviate/",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T21:04:07.162Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 설치",
-            "command": "docker compose up -d",
-            "note": "도커를 통해 Weaviate 인스턴스를 백그라운드에서 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 컴포즈 설정을 통해 Weaviate를 실행합니다.",
-          "클라이언트 SDK를 사용하여 데이터 스키마를 정의합니다.",
-          "데이터를 벡터화하여 적재하고 하이브리드 검색을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 16910,
-        "forks": 1428,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T21:06:12.924Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T21:06:18.297Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-25T21:06:26.568Z"
-    },
-    {
-      "id": "orama",
-      "name": "Orama",
-      "github": "https://github.com/oramasearch/orama",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T21:06:11.257Z",
-      "sourceRun": "2026-10-26T06",
-      "tool": {
-        "id": "orama",
-        "name": "Orama",
-        "github": "https://github.com/oramasearch/orama",
-        "description": "브라우저와 서버 환경에서 동작하는 초고속 전문 및 벡터 검색 엔진",
-        "longDescription": "2kb 미만의 가벼운 용량으로 클라이언트 측이나 엣지 네트워크에서 하이브리드 검색과 RAG 파이프라인을 구현할 수 있습니다. 브라우저와 서버 환경 모두에서 고성능 검색 기능을 제공합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "검색엔진",
-          "벡터검색",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.orama.com/docs/orama-js",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T21:04:07.162Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NPM 설치",
-            "command": "npm i @orama/orama",
-            "note": "npm을 사용하여 Orama 패키지를 프로젝트에 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "패키지 관리자를 통해 Orama를 설치합니다.",
-          "애플리케이션 코드에서 데이터베이스 인스턴스를 생성합니다.",
-          "문서를 삽입하고 실시간 검색 쿼리를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 10585,
-        "forks": 408,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T21:06:13.238Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T21:06:19.016Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-25T21:06:27.247Z"
-    },
-    {
-      "id": "panhub-shenzjd-com",
-      "name": "PanHub",
-      "github": "https://github.com/wu529778790/panhub.shenzjd.com",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T21:06:11.258Z",
-      "sourceRun": "2026-10-26T06",
-      "tool": {
-        "id": "panhub-shenzjd-com",
-        "name": "PanHub",
-        "github": "https://github.com/wu529778790/panhub.shenzjd.com",
-        "description": "다양한 클라우드 스토리지와 파일 공유 플랫폼의 리소스를 통합 검색하는 어그리게이터입니다.",
-        "longDescription": "여러 검색 소스를 묶어 중복을 제거하고 지능형 정렬을 제공하며, 서버리스나 도커를 통해 가볍게 배포할 수 있습니다.",
-        "category": "지식·검색",
-        "tags": [
-          "검색어그리게이션",
-          "클라우드스토리지",
-          "Vue",
-          "TypeScript",
-          "Docker"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://panhub.shenzjd.com/",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T21:04:07.162Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Vercel 배포",
-            "command": "# Vercel 버튼을 통한 원클릭 배포",
-            "note": "Vercel 또는 Cloudflare를 통해 정적 페이지를 배포합니다."
-          }
-        ],
-        "usageSteps": [
-          "소스 코드를 클론하거나 Vercel 등 클라우드 플랫폼에 배포합니다.",
-          "웹 인터페이스의 통합 검색창에 키워드를 입력합니다.",
-          "결과로 나온 파일 링크를 확인하고 필요한 리소스에 접근합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1770,
-        "forks": 709,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T21:06:14.010Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T21:06:20.301Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "python-seo-analyzer",
@@ -39098,79 +39365,6 @@
       "sourceRun": "2026-10-25T15"
     },
     {
-      "id": "spotify-lyrics",
-      "name": "Spotify-Lyrics",
-      "github": "https://github.com/mantou132/Spotify-Lyrics",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T06:05:59.101Z",
-      "sourceRun": "2026-10-25T15",
-      "tool": {
-        "id": "spotify-lyrics",
-        "name": "Spotify-Lyrics",
-        "github": "https://github.com/mantou132/Spotify-Lyrics",
-        "description": "스포티파이 웹 플레이어 실시간 동기화 가사 브라우저 확장 프로그램",
-        "longDescription": "Spotify 웹 플레이어 하단에 가사 버튼을 추가하여 클릭 한 번으로 실시간 동기화 가사를 PIP 창 형태로 제공합니다. PWA 환경에서도 편리하게 이용할 수 있습니다.",
-        "category": "멀티미디어",
-        "tags": [
-          "스포티파이",
-          "가사",
-          "브라우저확장"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://chromewebstore.google.com/detail/slyrics/mkjfooclbdgjdclepjeepbmmjaclipod",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T06:04:02.251Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "크롬 또는 엣지 웹스토어에서 확장 프로그램을 설치합니다.",
-          "Spotify 웹 플레이어(또는 PWA)를 엽니다.",
-          "플레이어 하단의 가사 버튼을 눌러 동기화 가사 창을 활성화합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1064,
-        "forks": 64,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T06:06:00.282Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T06:06:03.933Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-25T06:06:09.949Z"
-    },
-    {
       "id": "faststream",
       "name": "FastStream",
       "github": "https://github.com/Andrews54757/FastStream",
@@ -39342,88 +39536,6 @@
       "reasons": [],
       "checkedAt": "2026-10-25T06:05:59.101Z",
       "sourceRun": "2026-10-25T15"
-    },
-    {
-      "id": "beav",
-      "name": "Beav",
-      "github": "https://github.com/Jamailar/Beav",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T06:05:59.101Z",
-      "sourceRun": "2026-10-25T15",
-      "tool": {
-        "id": "beav",
-        "name": "Beav",
-        "github": "https://github.com/Jamailar/Beav",
-        "description": "소셜 미디어를 위한 AI 크리에이터 및 콘텐츠 운영 워크벤치입니다.",
-        "longDescription": "콘텐츠 수집, 选题 자동 생성, AI 글쓰기, 이미지 자동 편집 및 숏폼 클립 편집 기능을 제공하여 자사 미디어 자산 관리와 운영을 자동화합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "AI 에이전트",
-          "콘텐츠 제작",
-          "스크래핑",
-          "Tauri",
-          "Rust"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://beav.pro/",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T06:04:02.251Z",
-        "requirements": [
-          "Node.js",
-          "Rust (소스 빌드 시)"
-        ],
-        "supportedAgents": [
-          "Codex",
-          "Claude Code"
-        ],
-        "install": [],
-        "usageSteps": [
-          "공식 홈페이지 또는 저장소에서 설치 파일을 다운로드합니다.",
-          "앱을 실행하여 로컬 작업 공간을 설정합니다.",
-          "관심 있는 크리에이터나 플랫폼 피드를 등록하여 데이터를 수집합니다.",
-          "AI 도구를 활용해 텍스트와 미디어 콘텐츠를 제작하고 일정에 맞게 관리합니다."
-        ],
-        "examplePrompt": "오늘 발행할 소셜 미디어 트렌드 选题 3가지를 추천해줘.",
-        "usageNote": "로컬 우선 방식으로 작동하여 개인 데이터를 안전하게 보관합니다.",
-        "stars": 2151,
-        "forks": 281,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T06:06:01.158Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T06:06:05.285Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "knockoff",
@@ -58171,93 +58283,6 @@
       "reasons": [],
       "checkedAt": "2026-10-23T16:06:32.317Z",
       "sourceRun": "2026-10-24T01"
-    },
-    {
-      "id": "tdf",
-      "name": "TDF (Tree Document Format)",
-      "github": "https://github.com/DO-SAY-GO/tdf",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T16:06:32.317Z",
-      "sourceRun": "2026-10-24T01",
-      "tool": {
-        "id": "tdf",
-        "name": "TDF (Tree Document Format)",
-        "github": "https://github.com/DO-SAY-GO/tdf",
-        "description": "웹 컬렉션과 아카이빙을 위한 범용 트레이 문서 포맷",
-        "longDescription": "웹사이트 캡처와 아카이빙을 위한 새로운 클라이언트 및 포맷(.tdf)입니다. Tree Grower와 Tree Player를 통해 브라우저 상호작용을 캡처하고 로컬에서 재생할 수 있습니다.",
-        "category": "지식·검색",
-        "tags": [
-          "웹아카이브",
-          "브라우저",
-          "스크랩",
-          "JavaScript"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://trees.dosaygo.com",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T16:04:06.466Z",
-        "requirements": [
-          "Bash 또는 PowerShell"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "macOS / Linux 설치",
-            "command": "curl -fsSL https://trees.dosaygo.com/install.sh | bash",
-            "note": "셸 스크립트를 통한 간편 설치"
-          },
-          {
-            "title": "Windows 설치",
-            "command": "irm https://trees.dosaygo.com/install.ps1 | iex",
-            "note": "PowerShell을 통한 설치"
-          }
-        ],
-        "usageSteps": [
-          "설치 스크립트를 실행하여 TDF 도구를 설치합니다.",
-          "Tree Grower를 통해 대상 웹사이트를 캡처합니다.",
-          "생성된 .tdf 파일을 Tree Player로 열어서 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3908,
-        "forks": 145,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T16:06:34.752Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T16:06:40.009Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "monocle",
