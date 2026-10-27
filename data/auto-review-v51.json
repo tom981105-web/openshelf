@@ -1,7 +1,82 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-27T07:06:42.206Z",
+  "updatedAt": "2026-10-27T08:06:42.423Z",
   "items": [
+    {
+      "id": "novu",
+      "name": "Novu",
+      "github": "https://github.com/novuhq/novu",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T08:06:28.264Z",
+      "sourceRun": "2026-10-27T17",
+      "tool": {
+        "id": "novu",
+        "name": "Novu",
+        "github": "https://github.com/novuhq/novu",
+        "description": "에이전트와 제품을 위한 오픈소스 커뮤니케이션 인프라 및 알림 센터입니다.",
+        "longDescription": "단일 API와 통합 대화 모델을 통해 인박스, 이메일, SMS, 슬랙, 텔레그램 등 다양한 채널에서 사용자 및 AI 에이전트와 소통할 수 있도록 지원합니다. 개발자가 복잡한 알림 시스템을 쉽게 구축하고 확장할 수 있는 오픈소스 인프라입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "알림",
+          "API",
+          "인프라"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://go.novu.co/github",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Novu 공식 대시보드에서 계정을 생성합니다.",
+          "프로젝트에 맞는 알림 채널(이메일, 슬랙 등)을 설정합니다.",
+          "Novu API를 애플리케이션에 연동하여 알림을 발송합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 40210,
+        "forks": 4518,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:28.892Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:32.318Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-27T08:06:36.728Z"
+    },
     {
       "id": "windmill",
       "name": "Windmill",
@@ -12,19 +87,19 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-10-27T07:06:31.559Z",
-      "sourceRun": "2026-10-27T16",
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
       "tool": {
         "id": "windmill",
         "name": "Windmill",
         "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 앱, AI 에이전트를 구축할 수 있는 오픈소스 오케스트레이션 플랫폼입니다.",
-        "longDescription": "Windmill은 엔지니어와 비즈니스 팀이 함께 워크플로우와 내부 도구를 만들 수 있는 자체 호스팅 가능한 오픈소스 플랫폼입니다. 스크립트를 공유 가능한 UI, API, 크론 잡 및 AI 에이전트로 자동 변환합니다.",
+        "description": "워크플로우, 앱, AI 에이전트를 위한 코드 중심의 오픈소스 오케스트레이션 플랫폼입니다.",
+        "longDescription": "엔지니어가 여러 언어로 스크립트를 작성하고 Git과 연동하는 동시에, 비즈니스 팀은 AI를 활용해 쉽게 워크플로우를 구축할 수 있는 고성능 플랫폼입니다. 스크립트를 자동으로 공유 가능한 UI, API, 크론 잡으로 변환하며, 내부 도구 및 에이전트 루프를 지원합니다.",
         "category": "업무 자동화",
         "tags": [
           "워크플로우",
-          "AI 에이전트",
-          "자체 호스팅"
+          "오케스트레이션",
+          "자동화"
         ],
         "platforms": [
           "Web",
@@ -38,22 +113,31 @@
         "website": "https://windmill.dev",
         "featured": 9,
         "added": "2026-10-27",
-        "addedAt": "2026-10-27T07:04:11.152Z",
-        "requirements": [],
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
         "supportedAgents": [],
-        "install": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -d --name windmill -p 8000:8000 ghcr.io/windmill-labs/windmill:main",
+            "note": "Docker를 통해 로컬 환경에 Windmill 서버를 구동합니다."
+          }
+        ],
         "usageSteps": [
-          "Windmill 인스턴스를 자체 서버나 로컬에 설치합니다.",
-          "웹 인터페이스에 접속하여 스크립트나 워크플로우를 작성합니다.",
-          "생성된 스크립트를 API나 UI로 배포하여 자동화 작업을 수행합니다."
+          "Docker를 사용하여 Windmill 서버를 실행합니다.",
+          "웹 인터페이스에 접속하여 Python, TypeScript 등으로 스크립트를 작성합니다.",
+          "스크립트를 조합하여 워크플로우나 AI 에이전트 파이프라인을 구성합니다."
         ],
         "examplePrompt": "",
         "usageNote": "",
-        "stars": 18284,
+        "stars": 18285,
         "forks": 1128,
         "starsUpdatedAt": "2026-10-27"
       },
-      "licenseEvidenceCheckedAt": "2026-10-27T07:06:32.216Z",
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:29.117Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -66,7 +150,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-10-27T07:06:34.816Z",
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:32.603Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -76,7 +160,7 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T07:06:39.023Z"
+      "recheckedAt": "2026-10-27T08:06:37.442Z"
     },
     {
       "id": "paradev",
@@ -88,19 +172,19 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-10-27T07:06:31.559Z",
-      "sourceRun": "2026-10-27T16",
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
       "tool": {
         "id": "paradev",
         "name": "Paradev",
         "github": "https://github.com/ParadevAI/Paradev",
-        "description": "100개 이상의 코딩 에이전트를 병렬로 오케스트레이션하는 IDE",
-        "longDescription": "Paradev는 Claude Code와 Codex 같은 CLI 코딩 에이전트를 통합 워크스페이스에서 병렬로 실행할 수 있는 개발자 도구입니다. 터미널, 코드 리뷰, 브라우저 미리보기 기능을 함께 제공합니다.",
+        "description": "100개 이상의 코딩 에이전트를 병렬로 오케스트레이션하는 에이전틱 IDE",
+        "longDescription": "다양한 CLI 기반 코딩 에이전트를 하나의 작업 공간에서 터미널, 코드 리뷰, 브라우저 미리보기와 함께 병렬로 실행할 수 있도록 지원합니다. 개발자가 자신의 구독을 활용하여 여러 에이전트를 효율적으로 제어할 수 있습니다.",
         "category": "개발 도구",
         "tags": [
-          "AI 코딩",
           "IDE",
-          "개발자 도구"
+          "AI 에이전트",
+          "TypeScript"
         ],
         "platforms": [
           "macOS",
@@ -112,7 +196,7 @@
         "website": "https://paradev.com",
         "featured": 9,
         "added": "2026-10-27",
-        "addedAt": "2026-10-27T07:04:11.152Z",
+        "addedAt": "2026-10-27T08:04:16.534Z",
         "requirements": [],
         "supportedAgents": [
           "Claude Code",
@@ -120,17 +204,17 @@
         ],
         "install": [],
         "usageSteps": [
-          "공식 릴리즈 페이지에서 데스크톱 앱을 다운로드합니다.",
-          "앱을 실행하고 사용할 코딩 에이전트 및 구독 정보를 연동합니다.",
-          "워크스페이스에서 여러 에이전트를 병렬로 실행하여 코드를 작성하고 리뷰합니다."
+          "Paradev 데스크톱 앱을 다운로드하여 설치합니다.",
+          "작업 공간에서 연동할 CLI 코딩 에이전트를 선택하고 설정합니다.",
+          "여러 에이전트를 병렬로 실행하며 코드 리뷰 및 미리보기를 수행합니다."
         ],
         "examplePrompt": "",
         "usageNote": "",
-        "stars": 15605,
+        "stars": 15607,
         "forks": 1381,
         "starsUpdatedAt": "2026-10-27"
       },
-      "licenseEvidenceCheckedAt": "2026-10-27T07:06:32.382Z",
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:29.350Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -143,7 +227,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-10-27T07:06:35.242Z",
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:33.081Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -153,7 +237,675 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T07:06:39.796Z"
+      "recheckedAt": "2026-10-27T08:06:38.267Z"
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 아웃라인을 대체하는 계층형 자유 형식 데이터 조직화 도구입니다.",
+        "longDescription": "할 일 목록, 일정, 프로젝트 관리 등 복잡하고 계층적인 데이터를 직관적으로 구조화할 수 있는 데스크톱 생산성 도구입니다. 기존 스프레드시트보다 다차원 데이터 관리에 용이하며 가볍고 컴팩트한 인터페이스를 제공합니다.",
+        "category": "생산성",
+        "tags": [
+          "생산성",
+          "마인드맵",
+          "지식 관리"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Release 페이지에서 TreeSheets 실행 파일을 다운로드합니다.",
+          "프로그램을 실행하고 새로운 계층형 문서를 생성합니다.",
+          "표 형식과 계층 구조를 활용하여 아이디어, 할 일, 프로젝트를 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3177,
+        "forks": 223,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:29.534Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:33.692Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-27T08:06:40.249Z"
+    },
+    {
+      "id": "inbox",
+      "name": "UnInbox",
+      "github": "https://github.com/un/inbox",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
+      "tool": {
+        "id": "inbox",
+        "name": "UnInbox",
+        "github": "https://github.com/un/inbox",
+        "description": "팀과 전문가를 위한 현대적인 오픈소스 이메일 및 커뮤니케이션 인프라",
+        "longDescription": "기존의 낙후된 이메일 기술을 대체하기 위해 팀 협업과 대화 중심의 인터페이스로 재구상된 오픈소스 커뮤니케이션 플랫폼입니다. 실시간 대화 흐름과 현대적인 웹 경험을 제공하여 이메일을 메신저처럼 다룰 수 있게 합니다.",
+        "category": "협업·소통",
+        "tags": [
+          "이메일",
+          "커뮤니케이션",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://uninbox.com",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [
+          "Docker",
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 복제",
+            "command": "git clone https://github.com/un/inbox.git",
+            "note": "소스 코드를 로컬에 복제합니다."
+          }
+        ],
+        "usageSteps": [
+          "GitHub 저장소를 클론하고 의존성을 설치합니다.",
+          "환경 변수를 설정하고 Docker 환경을 구성합니다.",
+          "애플리케이션을 실행하여 웹 인터페이스에서 이메일 및 팀 협업 기능을 사용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1760,
+        "forks": 128,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:29.836Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:34.010Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-27T08:06:42.423Z"
+    },
+    {
+      "id": "forwardemail-net",
+      "name": "Forward Email",
+      "github": "https://github.com/forwardemail/forwardemail.net",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
+      "tool": {
+        "id": "forwardemail-net",
+        "name": "Forward Email",
+        "github": "https://github.com/forwardemail/forwardemail.net",
+        "description": "개인정보 보호를 중시하는 100% 오픈소스 암호화 이메일 및 포워딩 서비스입니다.",
+        "longDescription": "사용자 커스텀 도메인을 위한 안전한 이메일 포워딩 및 수신/발신 서비스를 제공하며, 강력한 암호화(AES-256, ChaCha20)를 지원합니다. Gmail, 메일치프, 센드그리드를 대체할 수 있는 독립형 프라이버시 중심 메일 인프라입니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "JavaScript",
+          "이메일",
+          "보안",
+          "프라이버시",
+          "SMTP"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://forwardemail.net",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [
+          "Node.js",
+          "Ansible"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "PM2 전역 설치",
+            "command": "npm i -g pm2",
+            "note": "프로세스 관리를 위해 PM2를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "서버 환경에 Node.js 및 필수 패키지를 설치합니다.",
+          "Ansible 등을 활용하여 서버 인프라를 프로비저닝하고 배포합니다.",
+          "도메인 설정을 연동하여 암호화된 이메일 포워딩 및 서비스를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1691,
+        "forks": 207,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:30.042Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:34.583Z",
+      "documentEvidence": {
+        "license": "MPL-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "email-verifier",
+      "name": "email-verifier",
+      "github": "https://github.com/AfterShip/email-verifier",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "nox",
+      "name": "Nox",
+      "github": "https://github.com/wntrblm/nox",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "linkifyjs",
+      "name": "linkifyjs",
+      "github": "https://github.com/nfrasser/linkifyjs",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "rspamd",
+      "name": "Rspamd",
+      "github": "https://github.com/rspamd/rspamd",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
+      "tool": {
+        "id": "rspamd",
+        "name": "Rspamd",
+        "github": "https://github.com/rspamd/rspamd",
+        "description": "정규표현식, 통계 분석, 블랙리스트 등을 활용하는 고성능 스팸 필터링 시스템 및 이메일 처리 프레임워크입니다.",
+        "longDescription": "수신된 이메일을 실시간으로 분석하여 스팸 여부를 판별하고, DKIM 서명 검증이나 메시지 수정 제안 등의 기능을 제공하는 진보된 메일 서버 유틸리티입니다. 주요 리눅스 배포판 및 BSD 환경에서 고성능 메일 서버의 필수 부가 기능으로 활용됩니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "C",
+          "Lua",
+          "이메일",
+          "보안",
+          "스팸 필터"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/rspamd/rspamd",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "운영체제별 패키지 관리자를 통해 Rspamd를 설치합니다.",
+          "MTA(메일 전송 에이전트)와 연동하도록 설정 파일을 구성합니다.",
+          "서비스를 시작하고 웹 인터페이스나 로그를 통해 스팸 필터링 상태를 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2558,
+        "forks": 492,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:30.284Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:35.019Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "file-viewer",
+      "name": "File Viewer",
+      "github": "https://github.com/flyfish-dev/file-viewer",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "agentsmesh",
+      "name": "AgentsMesh",
+      "github": "https://github.com/AgentsMesh/AgentsMesh",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
+      "tool": {
+        "id": "agentsmesh",
+        "name": "AgentsMesh",
+        "github": "https://github.com/AgentsMesh/AgentsMesh",
+        "description": "여러 장비에 걸쳐 수백 개의 AI 코딩 에이전트를 스케줄링하고 격리하여 하나의 콘솔에서 관리할 수 있는 AI 에이전트 워크포스 플랫폼입니다.",
+        "longDescription": "분산된 환경에서 다수의 AI 코딩 에이전트를 동시에 실행하고 조율할 수 있도록 지원하는 셀프호스팅 플랫폼입니다. 작업 격리 및 중앙화된 콘솔을 제공합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 에이전트",
+          "오케스트레이션",
+          "멀티 에이전트",
+          "셀프호스팅"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://agentsmesh.ai",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [
+          "Docker",
+          "Go"
+        ],
+        "supportedAgents": [
+          "aider",
+          "claude-code",
+          "gemini-cli"
+        ],
+        "install": [
+          {
+            "title": "설치 스크립트 실행",
+            "command": "curl -fsSL https://agentsmesh.ai/install.sh | sh",
+            "note": "러너를 시스템에 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 통해 러너를 설치합니다.",
+          "CLI를 통해 계정에 로그인합니다.",
+          "콘솔에서 에이전트 작업을 스케줄링하고 실행합니다."
+        ],
+        "examplePrompt": "수백 개의 에이전트를 동시 구동하여 리팩토링 작업을 분산 수행해줘",
+        "usageNote": "",
+        "stars": 2361,
+        "forks": 248,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:30.502Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:35.300Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "logdy-core",
+      "name": "Logdy Core",
+      "github": "https://github.com/logdyhq/logdy-core",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "nao",
+      "name": "nao",
+      "github": "https://github.com/getnao/nao",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
+      "tool": {
+        "id": "nao",
+        "name": "nao",
+        "github": "https://github.com/getnao/nao",
+        "description": "데이터베이스 및 분석 스택과 연동하여 자연어로 질의하고 인사이트를 얻을 수 있는 오픈소스 분석 에이전트 프레임워크입니다.",
+        "longDescription": "데이터 팀이 데이터 웨어하우스와 문서 컨텍스트를 연결하여 누구나 쉽게 채팅 인터페이스로 데이터 분석을 수행할 수 있는 에이전트를 구축하도록 지원합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "데이터 분석",
+          "AI 에이전트",
+          "텍스트투SQL",
+          "Slack"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.getnao.io",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [
+          "Python 3.8+"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "pip 설치",
+            "command": "pip install nao-core",
+            "note": "nao-core 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "패키지를 설치하고 프로젝트를 초기화합니다.",
+          "데이터베이스 및 LLM 키를 연결합니다.",
+          "채팅 UI를 통해 데이터에 대해 질문합니다."
+        ],
+        "examplePrompt": "지난달 지역별 총 매출액과 전월 대비 증감률을 보여줘",
+        "usageNote": "",
+        "stars": 1957,
+        "forks": 299,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:30.719Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:35.565Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "transmute",
+      "name": "Transmute",
+      "github": "https://github.com/transmute-app/transmute",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "ollaya",
+      "name": "Ollaya",
+      "github": "https://github.com/ollaya-dev/ollaya",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "mirobody",
+      "name": "Mirobody",
+      "github": "https://github.com/thetahealth/mirobody",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "memory-os",
+      "name": "Memory OS",
+      "github": "https://github.com/ClaudioDrews/memory-os",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "domain-locker",
+      "name": "Domain Locker",
+      "github": "https://github.com/lissy93/domain-locker",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17"
+    },
+    {
+      "id": "geopulse",
+      "name": "GeoPulse",
+      "github": "https://github.com/tess1o/geopulse",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-27T08:06:28.265Z",
+      "sourceRun": "2026-10-27T17",
+      "tool": {
+        "id": "geopulse",
+        "name": "GeoPulse",
+        "github": "https://github.com/tess1o/geopulse",
+        "description": "자체 위치 데이터를 수집하여 방문 장소와 이동 경로를 타임라인으로 시각화해주는 구글 타임라인의 오픈소스 대안입니다.",
+        "longDescription": "OwnTracks, Traccar 등 다양한 소스로부터 GPS 데이터를 수집해 이동 패턴을 분석하고, Immich 및 날씨 서비스와 연동해 지도 위에 사진과 날씨 정보를 함께 표시합니다.",
+        "category": "공간정보",
+        "tags": [
+          "GPS",
+          "위치 추적",
+          "타임라인",
+          "Docker",
+          "셀프호스팅"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://geopulse.cc",
+        "featured": 9,
+        "added": "2026-10-27",
+        "addedAt": "2026-10-27T08:04:16.534Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "도커 컴포즈 설정 및 실행",
+            "command": "mkdir geopulse && cd geopulse && curl -L -o .env https://raw.githubusercontent.com/tess1o/GeoPulse/main/.env.example && curl -L -o docker-compose.yml https://raw.githubusercontent.com/tess1o/GeoPulse/main/docker-compose.yml && docker compose up -d",
+            "note": "설정 파일을 다운로드하고 컨테이너를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "디렉토리를 만들고 설정 파일을 다운로드합니다.",
+          "Docker Compose 명령어로 서비스를 시작합니다.",
+          "브라우저에서 `http://localhost:5555`로 접속하여 타임라인을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1461,
+        "forks": 66,
+        "starsUpdatedAt": "2026-10-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:30.929Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-27T08:06:35.874Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
     },
     {
       "id": "kedro",
@@ -421,79 +1173,6 @@
       "reasons": [],
       "checkedAt": "2026-10-27T07:06:31.559Z",
       "sourceRun": "2026-10-27T16"
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-27T07:06:31.559Z",
-      "sourceRun": "2026-10-27T16",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "스프레드시트, 마인드맵, 개요 작성기를 대체할 수 있는 자유 형식의 계층형 데이터 조직화 도구입니다.",
-        "longDescription": "TreeSheets는 할 일 목록, 프로젝트 관리, 아이디어 브레인스토밍 등 복잡한 계층 구조의 데이터를 직관적이고 컴팩트하게 정리할 수 있는 데스크톱 애플리케이션입니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "노트",
-          "생산성",
-          "C++"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T07:04:11.152Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리즈 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
-          "애플리케이션을 실행하여 새 문서를 생성합니다.",
-          "격자 구조 안에 계층형 데이터나 할 일 목록을 입력하여 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3177,
-        "forks": 223,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T07:06:33.057Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T07:06:36.717Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "fframes",
@@ -1032,7 +1711,20 @@
         "stars": 8049,
         "forks": 683,
         "starsUpdatedAt": "2026-10-27"
-      }
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:31.172Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
     },
     {
       "id": "waha",
@@ -1115,7 +1807,20 @@
         "stars": 3305,
         "forks": 744,
         "starsUpdatedAt": "2026-10-27"
-      }
+      },
+      "licenseEvidenceCheckedAt": "2026-10-27T08:06:31.389Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
     },
     {
       "id": "nango",
@@ -20068,81 +20773,6 @@
       "sourceRun": "2026-10-26T17"
     },
     {
-      "id": "novu",
-      "name": "Novu",
-      "github": "https://github.com/novuhq/novu",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T07:06:03.013Z",
-      "sourceRun": "2026-10-26T16",
-      "tool": {
-        "id": "novu",
-        "name": "Novu",
-        "github": "https://github.com/novuhq/novu",
-        "description": "에이전트 및 제품을 위한 오픈소스 커뮤니케이션 인프라",
-        "longDescription": "단일 API와 통합 대화 모델을 통해 인앱 받은편지함, 이메일, SMS, 푸시, 채팅, Slack 등 다양한 채널을 제품 및 AI 에이전트와 연결할 수 있는 오픈소스 통신 인프라를 제공합니다. 대시보드 가입 및 초기 설정이 필요합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "통신인프라",
-          "API",
-          "알림"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://go.novu.co/github",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T07:04:03.267Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "대시보드에서 무료 계정을 생성합니다.",
-          "제공되는 API와 SDK를 프로젝트에 연동합니다.",
-          "원하는 커뮤니케이션 채널을 설정하여 알림 및 메시지를 전송합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "대시보드 가입 및 초기 설정이 필요합니다.",
-        "stars": 40202,
-        "forks": 4519,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T09:01:34.521Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "GitHub API status 403"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T09:01:34.521Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-26T07:06:11.701Z",
-      "lastVerifiedAt": "2026-10-26T09:01:34.521Z"
-    },
-    {
       "id": "aboutsecurity",
       "name": "AboutSecurity",
       "github": "https://github.com/wgpsec/AboutSecurity",
@@ -20224,92 +20854,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-26T07:06:14.465Z"
-    },
-    {
-      "id": "inbox",
-      "name": "UnInbox",
-      "github": "https://github.com/un/inbox",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T07:06:03.013Z",
-      "sourceRun": "2026-10-26T16",
-      "tool": {
-        "id": "inbox",
-        "name": "UnInbox",
-        "github": "https://github.com/un/inbox",
-        "description": "팀과 전문가를 위한 현대적인 오픈소스 이메일 커뮤니케이션 플랫폼입니다.",
-        "longDescription": "기존 이메일 기술의 한계를 극복하고 팀 협업, 대화형 스레드, 실시간 커뮤니케이션 기능을 제공하도록 새롭게 설계된 오픈소스 이메일 클라이언트입니다. AGPLv3 라이선스를 준수해야 합니다.",
-        "category": "협업·소통",
-        "tags": [
-          "이메일",
-          "커뮤니케이션",
-          "협업"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://uninbox.com",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T07:04:03.267Z",
-        "requirements": [
-          "Node.js",
-          "Docker",
-          "pnpm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 클론",
-            "command": "git clone https://github.com/un/inbox.git",
-            "note": "프로젝트 소스코드를 클론합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 의존성을 설치합니다.",
-          "도커 및 환경 변수를 설정합니다.",
-          "웹 애플리케이션을 실행하여 팀 이메일 커뮤니케이션을 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "AGPLv3 라이선스를 준수해야 합니다.",
-        "stars": 1760,
-        "forks": 128,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T07:06:04.451Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T07:06:08.194Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-26T07:06:15.300Z"
     },
     {
       "id": "sceptre",
@@ -24517,92 +25061,6 @@
       "reasons": [],
       "checkedAt": "2026-10-26T03:06:00.280Z",
       "sourceRun": "2026-10-26T12"
-    },
-    {
-      "id": "geopulse",
-      "name": "GeoPulse",
-      "github": "https://github.com/tess1o/geopulse",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T02:06:04.445Z",
-      "sourceRun": "2026-10-26T11",
-      "tool": {
-        "id": "geopulse",
-        "name": "GeoPulse",
-        "github": "https://github.com/tess1o/geopulse",
-        "description": "자동 여행 감지와 풍부한 분석 기능을 제공하는 자체 호스팅 위치 타임라인 플랫폼",
-        "longDescription": "다양한 GPS 트래커 소스에서 원시 위치 데이터를 수집하여 검색 가능한 타임라인으로 변환합니다. 외부 서비스와 연동하여 지도 위에 사진과 날씨 정보를 함께 표시하는 기능을 제공합니다.",
-        "category": "공간정보",
-        "tags": [
-          "위치추적",
-          "자체호스팅",
-          "타임라인"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://geopulse.cc",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T02:04:02.571Z",
-        "requirements": [
-          "Docker",
-          "Docker Compose"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker Compose 설치",
-            "command": "mkdir geopulse && cd geopulse && curl -L -o .env https://raw.githubusercontent.com/tess1o/GeoPulse/main/.env.example && curl -L -o docker-compose.yml https://raw.githubusercontent.com/tess1o/GeoPulse/main/docker-compose.yml && docker compose up -d",
-            "note": "디렉터리를 생성하고 환경 파일과 컴포즈 파일을 다운로드하여 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "서버에 Docker와 Docker Compose를 설치합니다.",
-          "지정된 명령어로 설정 파일과 도커 컴포즈 파일을 다운로드합니다.",
-          "`.env` 파일을 수정하여 필요한 설정을 구성합니다.",
-          "브라우저에서 `http://localhost:5555`로 접속하여 타임라인을 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1462,
-        "forks": 66,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T02:06:05.390Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T02:06:08.279Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-26T02:06:18.753Z"
     },
     {
       "id": "jcorp-nomad",
@@ -29950,81 +30408,6 @@
         "starsUpdatedAt": "2026-10-25"
       },
       "licenseEvidenceCheckedAt": "2026-10-25T20:06:08.640Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "nao",
-      "name": "nao",
-      "github": "https://github.com/getnao/nao",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T20:06:04.766Z",
-      "sourceRun": "2026-10-26T05",
-      "tool": {
-        "id": "nao",
-        "name": "nao",
-        "github": "https://github.com/getnao/nao",
-        "description": "데이터 컨텍스트를 구성하고 누구나 채팅으로 데이터 분석을 수행할 수 있게 해주는 오픈소스 분석 에이전트입니다.",
-        "longDescription": "CLI를 통해 데이터베이스와 메타데이터 컨텍스트를 구축하고, 슬랙봇 및 웹 인터페이스를 통해 자연어로 데이터 웨어하우스에서 분석을 수행하도록 지원합니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "텍스트투SQL",
-          "데이터분석",
-          "비즈니스인텔리전스",
-          "TypeScript",
-          "MCP"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.getnao.io",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T20:04:04.417Z",
-        "requirements": [
-          "Python",
-          "pip"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "nao-core 설치",
-            "command": "pip install nao-core",
-            "note": "nao-core 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "nao init 명령어로 프로젝트를 초기화합니다.",
-          "데이터베이스 연결 및 에이전트 컨텍스트를 설정합니다.",
-          "채팅 인터페이스를 통해 데이터에 대한 질문을 던지고 분석 결과를 확인합니다."
-        ],
-        "examplePrompt": "지난달 국가별 매출 상위 5개 품목을 보여줘",
-        "usageNote": "",
-        "stars": 1952,
-        "forks": 295,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T21:06:15.419Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -58808,88 +59191,6 @@
       "reasons": [],
       "checkedAt": "2026-10-23T13:06:37.514Z",
       "sourceRun": "2026-10-23T22"
-    },
-    {
-      "id": "forwardemail-net",
-      "name": "Forward Email",
-      "github": "https://github.com/forwardemail/forwardemail.net",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-23T13:06:37.514Z",
-      "sourceRun": "2026-10-23T22",
-      "tool": {
-        "id": "forwardemail-net",
-        "name": "Forward Email",
-        "github": "https://github.com/forwardemail/forwardemail.net",
-        "description": "개인정보 보호를 최우선으로 하는 100% 오픈소스 암호화 이메일 및 포워딩 서비스입니다.",
-        "longDescription": "지메일, 메일침프 등의 대안으로 사용할 수 있는 프라이버시 중심의 이메일 서비스입니다. 커스텀 도메인 이메일 포워딩 및 암호화 기능을 제공합니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "JavaScript",
-          "이메일",
-          "보안",
-          "프라이버시"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://forwardemail.net",
-        "featured": 9,
-        "added": "2026-10-23",
-        "addedAt": "2026-10-23T13:04:04.898Z",
-        "requirements": [
-          "Node.js",
-          "Ansible"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "PM2 설치",
-            "command": "npm i -g pm2",
-            "note": "프로세스 관리를 위해 PM2를 전역 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "필수 도구와 패키지를 설치합니다.",
-          "Ansible을 통해 서버 인프라를 프로비저닝합니다.",
-          "서비스를 배포하고 설정합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1688,
-        "forks": 207,
-        "starsUpdatedAt": "2026-10-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-23T13:06:39.532Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-23T13:06:42.929Z",
-      "documentEvidence": {
-        "license": "MPL-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "socialscan",
