@@ -1,5 +1,334 @@
 [
   {
+    "id": "cdk",
+    "name": "CDK Container Penetration Toolkit",
+    "github": "https://github.com/cdk-team/CDK",
+    "description": "컨테이너 환경 및 Kubernetes 보안 테스트와 탈출 점검을 위한 툴킷입니다.",
+    "longDescription": "운영체제 의존성 없이 슬림한 컨테이너 환경에서 안정적으로 동작하는 오픈소스 컨테이너 침투 테스트 툴킷입니다. 취약점 점검, 컨테이너 탈출 및 Kubernetes 클러스터 권한 상승 테스트를 지원합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "침투테스트",
+      "컨테이너",
+      "Kubernetes",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/cdk-team/CDK/wiki",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T15:04:14.629Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "릴리즈 바이너리 다운로드",
+        "command": "wget https://github.com/cdk-team/CDK/releases/latest/download/cdk_linux_amd64",
+        "note": "대상 컨테이너 환경에 맞는 바이너리를 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "대상 컨테이너 내부에 바이너리를 업로드합니다.",
+      "취약점 평가 명령을 실행합니다 (`cdk eva`).",
+      "결과를 바탕으로 보안 설정 취약점을 점검합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "허가된 대상에 대한 보안 테스트 목적으로만 사용해야 합니다.",
+    "stars": 4778,
+    "forks": 610,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "kubernetes-best-practices",
+    "name": "Kubernetes Best Practices",
+    "github": "https://github.com/diegolnasc/kubernetes-best-practices",
+    "description": "Kubernetes 환경 구축 및 운영을 위한 모범 사례 모음집입니다.",
+    "longDescription": "프로덕션 환경에서 발생할 수 있는 문제를 예방하기 위해, 실제 비즈니스 요구사항과 오픈소스 표준에 기반한 쿠버네티스 아키텍처 및 보안 모범 사례를 제공하는 쿡북입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "DevOps",
+      "클라우드",
+      "모범사례",
+      "인프라"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/diegolnasc/kubernetes-best-practices",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T15:04:14.629Z",
+    "requirements": [
+      "Kubernetes 1.28+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "시크릿 관리 컨트롤러 설치 예시",
+        "command": "helm install sealed-secrets sealed-secrets/sealed-secrets -n kube-system",
+        "note": "Helm을 통해 시크릿 관리 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "문서 및 가이드라인을 참조하여 쿠버네티스 아키텍처를 검토합니다.",
+      "시크릿 관리 및 외부 시크릿 연동 설정을 적용합니다.",
+      "프로덕션 배포 전 모범 사례 준수 여부를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "참고용 가이드북 및 설정 예시 모음입니다.",
+    "stars": 1508,
+    "forks": 98,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "metarget",
+    "name": "Metarget",
+    "github": "https://github.com/Metarget/metarget",
+    "description": "클라우드 네이티브 취약점 인프라를 자동으로 구축하는 프레임워크입니다.",
+    "longDescription": "취약한 컨테이너, Kubernetes 및 커널 환경을 빠르고 자동으로 배포하여 보안 연구원들이 빠르게 PoC 및 ExP 테스트를 수행할 수 있도록 지원하는 프레임워크입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "클라우드보안",
+      "취약점",
+      "Docker",
+      "Kubernetes",
+      "Python"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/Metarget/metarget",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T15:04:14.629Z",
+    "requirements": [
+      "Ubuntu 20.04 / 22.04 / 24.04",
+      "Python = 3.7",
+      "pip3"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/Metarget/metarget.git",
+        "note": "소스 코드를 로컬 환경에 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 리눅스 환경에 Metarget을 설치합니다.",
+      "구축하고자 하는 취약한 컴포넌트나 시나리오를 선택합니다.",
+      "자동 배포 명령을 통해 테스트 환경을 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "인터넷에 직접 노출되는 환경에서의 배포는 권장되지 않습니다.",
+    "stars": 1426,
+    "forks": 203,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "notation",
+    "name": "Notation",
+    "github": "https://github.com/notaryproject/notation",
+    "description": "OCI 레지스트리 생태계에서 아티팩트를 서명하고 검증하기 위한 CLI 도구입니다.",
+    "longDescription": "컨테이너 이미지 및 기타 OCI 아티팩트에 표준 디지털 서명을 추가하고 무결성을 검증하여, 공급망 보안을 강화할 수 있도록 돕는 Cloud Native Computing Foundation(CNCF) 프로젝트입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "CLI",
+      "보안",
+      "컨테이너",
+      "서명",
+      "OCI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://notaryproject.dev",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T15:04:14.629Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 가이드를 참고하여 Notation CLI를 설치합니다.",
+      "서명 키를 등록하고 신뢰할 수 있는 루트를 설정합니다.",
+      "컨테이너 이미지에 서명을 추가하거나 검증을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 배포 전 이미지 신뢰성 검증 파이프라인에 통합하여 활용합니다.",
+    "stars": 502,
+    "forks": 104,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "connaisseur",
+    "name": "Connaisseur",
+    "github": "https://github.com/sse-secure-systems/connaisseur",
+    "description": "Kubernetes 클러스터 내에서 컨테이너 이미지 서명 검증을 수행하는 어드미션 컨트롤러입니다.",
+    "longDescription": "클러스터에 배포되는 모든 컨테이너 이미지의 서명 진위를 자동으로 검증하여, 신뢰할 수 없는 이미지가 실행되는 것을 방지하는 쿠버네티스 네이티브 보안 어드미션 컨트롤러입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Kubernetes",
+      "보안",
+      "이미지검증",
+      "Helm",
+      "컨테이너"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://sse-secure-systems.github.io/connaisseur/",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T15:04:14.629Z",
+    "requirements": [
+      "Kubernetes cluster",
+      "Helm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm을 이용한 설치",
+        "command": "helm install connaisseur helm --rollback-on-failure --create-namespace --namespace connaisseur",
+        "note": "Helm 차트를 사용하여 쿠버네티스에 Connaisseur를 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "Helm 차트를 통해 클러스터에 Connaisseur를 설치합니다.",
+      "정책 파일을 작성하여 신뢰할 수 있는 이미지 레지스트리 및 서명자를 정의합니다.",
+      "파드 배포 시 이미지 서명 검증이 자동으로 수행되는지 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정상적인 서명이 없는 이미지는 배포가 거부되므로 사전 키 설정이 필요합니다.",
+    "stars": 485,
+    "forks": 64,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "azure-ai-travel-agents",
+    "name": "Azure AI Travel Agents",
+    "github": "https://github.com/Azure-Samples/azure-ai-travel-agents",
+    "description": "Langchain.js, LlamaIndex, Microsoft Agent Framework 기반의 멀티 AI 에이전트 및 MCP 오케스트레이션 기업용 샘플 애플리케이션입니다.",
+    "longDescription": "여러 AI 에이전트가 협력하여 여행 관련 작업을 수행하는 엔터프라이즈 아키텍처 예제로, Model Context Protocol(MCP)을 활용하여 도구와 모델을 연동하고 Azure Container Apps에 배포할 수 있도록 구성되어 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI에이전트",
+      "MCP",
+      "Langchain",
+      "LlamaIndex",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://azure-samples.github.io/azure-ai-travel-agents/",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T15:04:14.629Z",
+    "requirements": [
+      "Node.js",
+      "Docker",
+      "Phi4 14B model (optional)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 패키지 설치 및 실행 준비",
+        "command": "npm install",
+        "note": "API 및 웹앱의 npm 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "필수 도구 및 환경 변수(.env)를 설정합니다.",
+      "MCP 서버를 위한 Docker 이미지를 빌드합니다.",
+      "로컬 또는 클라우드 환경에서 에이전트 오케스트레이션 애플리케이션을 실행합니다."
+    ],
+    "examplePrompt": "사용자의 요청에 맞춰 여러 AI 에이전트와 MCP 도구를 조율하여 최적의 여행 일정을 계획해줘.",
+    "usageNote": "대형 언어 모델 구동 및 API 연동을 위해 적절한 외부 크리덴셜이나 로컬 모델(예: Phi4)이 필요합니다.",
+    "stars": 481,
+    "forks": 181,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "tstl",
+    "name": "TypeScript-STL",
+    "github": "https://github.com/samchon/tstl",
+    "description": "C++의 STL(Standard Template Library)을 TypeScript 환경으로 이식한 자료구조 및 알고리즘 라이브러리입니다.",
+    "longDescription": "TypeScript 및 JavaScript 환경에서 C++ 스타일의 컨테이너(TreeMap, Vector 등), 반복자, 알고리즘, 그리고 동기화 유틸리티를 그대로 사용할 수 있도록 제공하는 고성능 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "STL",
+      "자료구조",
+      "알고리즘",
+      "NPM"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/samchon/tstl",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T15:04:14.629Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM을 통한 패키지 설치",
+        "command": "npm install --save tstl",
+        "note": "프로젝트에 TSTL 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 npm을 통해 tstl 패키지를 설치합니다.",
+      "필요한 컨테이너(예: std.TreeMap)나 알고리즘을 소스 코드에 임포트합니다.",
+      "C++ STL과 동일한 방식으로 데이터를 조작하고 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "TypeScript/JavaScript 환경에서 복잡한 자료구조를 다룰 때 유용합니다.",
+    "stars": 629,
+    "forks": 50,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
     "id": "teamlinker",
     "name": "Teamlinker",
     "github": "https://github.com/Teamlinker/Teamlinker",
