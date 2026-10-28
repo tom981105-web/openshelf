@@ -1,5 +1,369 @@
 [
   {
+    "id": "new-api",
+    "name": "New API",
+    "github": "https://github.com/QuantumNous/new-api",
+    "description": "오픈소스 AI 게이트웨이로 여러 LLM 모델 API와 라우팅, 비용 관리를 통합 관리합니다.",
+    "longDescription": "OpenAI, Claude, Gemini 등 다양한 상류 모델 서비스를 연동하여 일관된 API로 노출하며, 접근 제어, 사용량 추적 및 비용 회계를 자체 호스팅 환경에서 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 게이트웨이",
+      "API 관리",
+      "LLM",
+      "OpenAI",
+      "Claude"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://www.newapi.ai",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T08:04:14.856Z",
+    "requirements": [
+      "Docker 또는 Go 런타임"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트를 클론하고 설정 파일을 구성합니다.",
+      "Docker 또는 소스 코드를 통해 서비스를 빌드하고 실행합니다.",
+      "웹 콘솔에 접속하여 모델 채널 및 API 키를 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경 배포 시 자체 네트워크 보안 및 접근 제어 설정을 권장합니다.",
+    "stars": 50847,
+    "forks": 12316,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "claude-to-im-skill",
+    "name": "Claude-to-IM-skill",
+    "github": "https://github.com/op7418/Claude-to-IM-skill",
+    "description": "Claude Code 또는 Codex를 텔레그램, 디스코드, 페이슈 등 인앱 메시징 플랫폼과 연결하는 브릿지입니다.",
+    "longDescription": "AI 코딩 에이전트 세션과 IM 봇을 백그라운드 데몬으로 연결하여, 모바일이나 메신저 환경에서도 AI 코딩 에이전트와 대화하고 도구 실행 결과를 받아볼 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "Claude Code",
+      "Codex",
+      "텔레그램",
+      "디스코드",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/op7418/Claude-to-IM-skill",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T08:04:14.856Z",
+    "requirements": [
+      "Node.js",
+      "Claude Code 또는 Codex CLI"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "스킬 추가",
+        "command": "npx skills add op7418/Claude-to-IM-skill",
+        "note": "npx를 통해 Claude Code에 스킬을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "명령어를 통해 스킬을 설치합니다.",
+      "대화창에 설정 명령어를 입력하여 IM 봇을 연동합니다.",
+      "메신저 앱을 통해 AI 에이전트와 대화하며 작업을 지시합니다."
+    ],
+    "examplePrompt": "/claude-to-im setup",
+    "usageNote": "가벼운 CLI 기반 환경에서 메신저 연동을 선호하는 사용자에게 적합합니다.",
+    "stars": 2895,
+    "forks": 315,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "maid",
+    "name": "Maid",
+    "github": "https://github.com/Mobile-Artificial-Intelligence/maid",
+    "description": "로컬 GGUF 모델 및 원격 AI 서비스와 연동하여 대화할 수 있는 모바일 중심 오픈소스 챗봇 앱입니다.",
+    "longDescription": "스마트폰에서 직접 로컬 인공지능 모델을 구동하거나 Anthropic, DeepSeek, Ollama, OpenAI 등의 원격 API와 연결하여 사용할 수 있는 크로스플랫폼 클라이언트입니다.",
+    "category": "개인 도구",
+    "tags": [
+      "챗봇",
+      "LLM",
+      "Android",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Mobile-Artificial-Intelligence/maid",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T08:04:14.856Z",
+    "requirements": [
+      "Node.js",
+      "Yarn"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "yarn install",
+        "note": "프로젝트 의존성을 설치합니다."
+      },
+      {
+        "title": "앱 빌드",
+        "command": "yarn build-android",
+        "note": "안드로이드 APK 파일을 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "리포지토리를 클론하고 의존성을 설치합니다.",
+      "앱을 빌드하여 기기에 설치하거나 실행합니다.",
+      "선호하는 LLM 백엔드나 API 키를 설정하고 대화를 시작합니다."
+    ],
+    "examplePrompt": "안드로이드에서 사용할 수 있는 로컬 AI 모델과 대화를 시작해줘",
+    "usageNote": "",
+    "stars": 2744,
+    "forks": 306,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "oterm",
+    "name": "oterm",
+    "github": "https://github.com/ggozad/oterm",
+    "description": "Ollama, OpenAI, Anthropic 등 다양한 LLM을 터미널 환경에서 사용할 수 있는 텍스트 기반 클라이언트입니다.",
+    "longDescription": "터미널 인터페이스(TUI)를 통해 여러 대형 언어 모델과 대화하고 세션을 관리할 수 있는 가벼운 파이썬 기반 도구입니다. 원격 및 로컬 LLM 프로바이더를 유연하게 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "터미널",
+      "LLM",
+      "Ollama",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ggozad.github.io/oterm/",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T08:04:14.856Z",
+    "requirements": [
+      "uv 또는 Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "실행 및 설치",
+        "command": "uvx oterm",
+        "note": "uv를 통해 별도 설치 없이 바로 실행할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 실행 명령어를 입력합니다.",
+      "사용할 LLM 프로바이더와 모델을 선택합니다.",
+      "채팅 인터페이스에서 프롬프트를 입력하고 답변을 받습니다."
+    ],
+    "examplePrompt": "이 코드를 리팩토링해줘",
+    "usageNote": "",
+    "stars": 2447,
+    "forks": 140,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "magentic",
+    "name": "magentic",
+    "github": "https://github.com/jackmpcollins/magentic",
+    "description": "대형 언어 모델을 파이썬 함수와 매끄럽게 통합하여 구조화된 출력을 얻을 수 있게 해주는 라이브러리입니다.",
+    "longDescription": "데코레이터를 사용하여 LLM 프롬프트를 파이썬 함수로 정의하고, Pydantic 모델을 통해 타입이 지정된 구조화된 응답을 받아올 수 있습니다. 전통적인 파이썬 코드와 LLM 쿼리를 조합하여 복잡한 에이전트 시스템을 구축할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 에이전트",
+      "LLM",
+      "Python",
+      "Pydantic"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://magentic.dev/",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T08:04:14.856Z",
+    "requirements": [
+      "Python",
+      "OpenAI API Key"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install magentic",
+        "note": "pip를 사용하여 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "라이브러리를 설치하고 API 키를 환경 변수로 설정합니다.",
+      "파이썬 코드에서 @prompt 데코레이터를 사용하여 함수를 정의합니다.",
+      "함수를 호출하여 LLM으로부터 구조화된 결과를 반환받습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2428,
+    "forks": 131,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "conduit",
+    "name": "Conduit",
+    "github": "https://github.com/cogwheel0/conduit",
+    "description": "Open WebUI 및 다양한 OpenAI 호환 LLM 백엔드를 모바일 환경에서 사용할 수 있는 네이티브 클라이언트입니다.",
+    "longDescription": "데스크톱 위주로 사용되던 Open WebUI와 자체 호스팅 AI 에이전트를 모바일 기기에서 매끄럽게 이용할 수 있도록 플러터로 제작된 크로스플랫폼 모바일 앱입니다. 기기 내 로컬 중심의 데이터 관리를 지원합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "모바일 앱",
+      "LLM",
+      "Open WebUI",
+      "Flutter",
+      "Dart"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://conduit.mobile",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T08:04:14.856Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "앱스토어에서 앱을 설치하거나 소스 코드를 클론하여 빌드합니다.",
+      "연결할 Open WebUI 서버 주소나 API 엔드포인트를 입력합니다.",
+      "인증을 완료하고 모바일에서 대화를 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2386,
+    "forks": 265,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "botkube",
+    "name": "Botkube",
+    "github": "https://github.com/kubeshop/botkube",
+    "description": "쿠버네티스 클러스터를 모니터링하고 배포 문제를 디버깅하며 운영 모범 사례를 알려주는 메신저 봇입니다.",
+    "longDescription": "Slack, Discord, Mattermost 등의 협업 메신저와 연동되어 쿠버네티스 환경의 이벤트를 실시간으로 통보받고, 보안이 유지된 상태에서 직접 명령어를 실행하여 클러스터를 문제 해결할 수 있는 데브옵스 도구입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "DevOps",
+      "모니터링",
+      "챗봇",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://botkube.io",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T08:04:14.856Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "쿠버네티스 클러스터에 Botkube를 배포합니다.",
+      "사용 중인 협업 메신저(Slack 등)와 채널을 연동합니다.",
+      "메신저 명령어를 통해 클러스터 상태를 확인하고 디버깅을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2313,
+    "forks": 307,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "huixiangdou",
+    "name": "HuixiangDou",
+    "github": "https://github.com/InternLM/HuixiangDou",
+    "description": "대규모 언어 모델을 활용하여 단체 채팅방 내의 기술적 질문에 답변하고 지식을 검색하는 RAG 기반 어시스턴트입니다.",
+    "longDescription": "메시지 폭풍을 유발하지 않으면서 단체 채팅방의 맥락을 이해하고 관련 기술 문서나 지식 베이스를 참고해 정확한 답변을 제공하는 전문 지식 어시스턴트 파이프라인입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "RAG",
+      "LLM",
+      "챗봇",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://openxlab.org.cn/apps/detail/tpoisonooo/huixiangdou-web",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T08:04:14.856Z",
+    "requirements": [
+      "Python 3.8+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "웹 UI 실행",
+        "command": "python3 -m huixiangdou.gradio_",
+        "note": "Gradio 기반의 웹 인터페이스를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론하고 필수 패키지를 설치합니다.",
+      "참조할 문서와 지식 베이스 경로를 설정합니다.",
+      "웹 UI 또는 챗봇 파이프라인을 실행하여 질문에 대한 답변을 얻습니다."
+    ],
+    "examplePrompt": "설치 과정에서 발생한 오류를 해결하는 방법을 알려줘",
+    "usageNote": "",
+    "stars": 2500,
+    "forks": 180,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
     "id": "engineercms",
     "name": "EngineerCMS",
     "github": "https://github.com/3xxx/engineercms",
