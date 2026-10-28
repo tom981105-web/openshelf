@@ -1,5 +1,280 @@
 [
   {
+    "id": "cartero",
+    "name": "Cartero",
+    "github": "https://github.com/danirod/cartero",
+    "description": "프라이버시를 존중하는 가볍고 플랫폼 호환성이 좋은 그래픽 기반 HTTP 클라이언트입니다.",
+    "longDescription": "REST, SOAP, XML-RPC 등 다양한 웹 API를 테스트하고 HTTP 요청을 보낼 수 있는 GTK 기반의 오픈소스 데스크톱 개발 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API",
+      "HTTP",
+      "개발 도구",
+      "Rust",
+      "GTK"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://cartero.danirod.es",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T20:04:12.457Z",
+    "requirements": [
+      "GNOME SDK"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS Homebrew 설치",
+        "command": "brew tap SoloAntonio/cartero && brew install --cask cartero",
+        "note": "Homebrew를 통해 macOS에 설치합니다."
+      },
+      {
+        "title": "Windows Scoop 설치",
+        "command": "scoop bucket add extras && scoop install extras/cartero",
+        "note": "Scoop을 통해 Windows에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리자를 통해 Cartero를 설치합니다.",
+      "애플리케이션을 실행하고 테스트할 API 엔드포인트를 입력합니다.",
+      "요청 메서드와 헤더, 바디 페이로드를 설정하여 요청을 보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1052,
+    "forks": 61,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "mint",
+    "name": "Mint",
+    "github": "https://github.com/elixir-mint/mint",
+    "description": "HTTP/1 및 HTTP/2를 지원하는 엘릭서 함수형 HTTP 클라이언트",
+    "longDescription": "프로세스 없는 아키텍처를 기반으로 설계된 저수준 함수형 HTTP 클라이언트입니다. 불변 데이터 구조를 사용하여 안정적인 네트워크 통신을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Elixir",
+      "HTTP",
+      "HTTP/2",
+      "함수형"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/elixir-mint/mint",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T20:04:12.457Z",
+    "requirements": [
+      "Elixir"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "mix.exs에 추가",
+        "command": "mix deps.get",
+        "note": "의존성을 가져옵니다."
+      }
+    ],
+    "usageSteps": [
+      "mix.exs 파일의 deps에 mint를 추가합니다.",
+      "mix deps.get 명령어로 패키지를 설치합니다.",
+      "Mint 연결을 초기화하고 요청을 전송합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1418,
+    "forks": 129,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "lithium",
+    "name": "Lithium",
+    "github": "https://github.com/matt-42/lithium",
+    "description": "성능 저하 없는 사용하기 쉬운 C++17 HTTP 서버",
+    "longDescription": "비동기 처리를 지원하며 뛰어난 성능을 자랑하는 C++17 기반 HTTP 서버 및 SQL 드라이버 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C++",
+      "HTTP",
+      "웹서버",
+      "SQL"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://matt-42.github.io/lithium",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T20:04:12.457Z",
+    "requirements": [
+      "C++17",
+      "G++ 9.2+ 또는 Clang++ 9.0+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "지원되는 컴파일러 환경을 준비합니다.",
+      "프로젝트에 리튬 라이브러리를 포함합니다.",
+      "라우트와 핸들러를 정의하여 서버를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 Windows는 지원되지 않습니다.",
+    "stars": 1410,
+    "forks": 97,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "finch",
+    "name": "Finch",
+    "github": "https://github.com/sneako/finch",
+    "description": "성능에 초점을 맞춘 엘릭서 HTTP 클라이언트",
+    "longDescription": "Mint와 NimblePool을 기반으로 구축된 고성능 HTTP 클라이언트입니다. 효율적인 커넥션 풀링 전략과 메모리 복사 최소화를 통해 속도를 극대화합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Elixir",
+      "HTTP",
+      "성능",
+      "커넥션풀"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/sneako/finch",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T20:04:12.457Z",
+    "requirements": [
+      "Elixir"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "mix.exs에 추가",
+        "command": "{:finch, \"~ 0.24\"}",
+        "note": "의존성 목록에 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "mix.exs에 finch를 추가하고 의존성을 다운로드합니다.",
+      "애플리케이션 슈퍼바이저에 Finch 수퍼바이저를 등록합니다.",
+      "Finch.request를 통해 HTTP 요청을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1365,
+    "forks": 152,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "mande",
+    "name": "Mande",
+    "github": "https://github.com/posva/mande",
+    "description": "스마트한 기본 설정을 제공하는 초경량 fetch 래퍼 라이브러리",
+    "longDescription": "브라우저의 fetch API를 기반으로 REST API 통신을 더욱 쉽고 간결하게 만들어주는 800바이트 크기의 모던 타이식립트 래퍼입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "JavaScript",
+      "API",
+      "Fetch"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://mande.esm.is",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T20:04:12.457Z",
+    "requirements": [
+      "Fetch API 지원 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install mande",
+        "note": "npm을 통해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "mande 패키지를 설치합니다.",
+      "API 기본 경로와 옵션을 설정하여 인스턴스를 생성합니다.",
+      "get, post 등의 메서드를 호출하여 API와 통신합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1337,
+    "forks": 43,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
+    "id": "gout",
+    "name": "gout",
+    "github": "https://github.com/guonaihong/gout",
+    "description": "Go 언어로 작성된 가볍고 강력한 HTTP 클라이언트 라이브러리입니다.",
+    "longDescription": "다양한 HTTP 요청 메서드와 데이터 형식을 지원하며, 작업 효율성을 높이기 위해 설계된 Go 언어용 HTTP 클라이언트입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "HTTP",
+      "클라이언트",
+      "API",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/guonaihong/gout",
+    "featured": 9,
+    "added": "2026-10-28",
+    "addedAt": "2026-10-28T20:04:12.457Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 라이브러리를 추가합니다.",
+      "HTTP 요청 메서드와 URL을 설정합니다.",
+      "요청을 전송하고 응답을 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1326,
+    "forks": 113,
+    "starsUpdatedAt": "2026-10-28"
+  },
+  {
     "id": "veloren",
     "name": "Veloren",
     "github": "https://github.com/veloren/veloren",
