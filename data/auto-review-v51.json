@@ -1,7 +1,1190 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-28T16:08:48.540Z",
+  "updatedAt": "2026-10-28T17:08:04.442Z",
   "items": [
+    {
+      "id": "windmill",
+      "name": "windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "windmill",
+        "name": "windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "워크플로우, 앱, AI 에이전트를 구축할 수 있는 자체 호스팅 오케스트레이션 플랫폼",
+        "longDescription": "Airflow나 Prefect, Temporal의 대안으로 설계된 코드 중심의 워크플로우 엔진입니다. 내부 도구와 자동화 파이프라인을 구축하고 관리하는 데 유용합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "업무 자동화",
+          "오케스트레이션",
+          "TypeScript",
+          "Python"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -p 8000:8000 ghcr.io/windmill-labs/windmill:main",
+            "note": "Docker를 이용한 기본 실행 방법입니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker를 사용하여 윈드밀 컨테이너를 실행합니다.",
+          "웹 브라우저에서 대시보드에 접속합니다.",
+          "스크립트나 워크플로우를 작성하여 자동화를 설정합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프로덕션 환경에서는 PostgreSQL 데이터베이스 연결 설정이 필요합니다.",
+        "stars": 18307,
+        "forks": 1127,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:08.827Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:10.832Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckError": "The operation was aborted due to timeout"
+    },
+    {
+      "id": "paradev",
+      "name": "Paradev",
+      "github": "https://github.com/ParadevAI/Paradev",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "paradev",
+        "name": "Paradev",
+        "github": "https://github.com/ParadevAI/Paradev",
+        "description": "다수의 코딩 에이전트를 병렬로 오케스트레이션하는 에이전틱 IDE",
+        "longDescription": "여러 AI 코딩 에이전트를 동시에 실행하고 조율하여 개발 생산성을 높여주는 도구입니다. 터미널 및 워크트리 기반의 인터페이스를 제공합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 코딩",
+          "에이전트",
+          "IDE",
+          "개발 도구",
+          "CLI"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://paradev.com",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Node.js",
+          "TypeScript"
+        ],
+        "supportedAgents": [
+          "Claude Code",
+          "Cursor Agent"
+        ],
+        "install": [],
+        "usageSteps": [
+          "리포지토리를 클론하고 의존성을 설치합니다.",
+          "CLI 또는 앱을 실행하여 코딩 에이전트를 연결합니다.",
+          "병렬 작업을 수행할 에이전트 작업 지시를 입력합니다."
+        ],
+        "examplePrompt": "인증 모듈 리팩토링 작업을 두 개의 에이전트에 나누어 병렬로 실행해줘.",
+        "usageNote": "사용하려면 각 AI 에이전트의 자체 구독이나 API 키가 필요합니다.",
+        "stars": 15672,
+        "forks": 1399,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:08.964Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:11.344Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckError": "Gemini HTTP 503"
+    },
+    {
+      "id": "get-jobs",
+      "name": "get_jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "get-jobs",
+        "name": "get_jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "구직 플랫폼 자동 이력서 제출 AI 에이전트",
+        "longDescription": "다양한 구직 플랫폼에서 자동으로 구직 활동을 수행하고 이력서를 제출할 수 있도록 돕는 Java 기반의 자동화 도구입니다. 주요 플랫폼에서의 구직 과정을 효율화합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "구직",
+          "자동화",
+          "Java"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Java",
+          "Spring Boot"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트를 다운로드하고 설정 파일을 수정합니다.",
+          "구직 플랫폼 계정 정보를 구성합니다.",
+          "애플리케이션을 실행하여 자동 지원 프로세스를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "플랫폼 정책에 따라 계정 사용에 제약이 있을 수 있으니 주의해야 합니다.",
+        "stars": 9341,
+        "forks": 1073,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.061Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:11.713Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-28T17:07:51.899Z"
+    },
+    {
+      "id": "sphinx",
+      "name": "sphinx",
+      "github": "https://github.com/sphinx-doc/sphinx",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "sphinx",
+        "name": "sphinx",
+        "github": "https://github.com/sphinx-doc/sphinx",
+        "description": "파이썬 기반의 지능적이고 미려한 문서 생성 도구입니다.",
+        "longDescription": "프로젝트 문서를 HTML, PDF 등 다양한 형식으로 쉽게 변환해주는 업계 표준 문서 생성 도구입니다. reStructuredText와 Markdown을 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "문서 생성",
+          "파이썬",
+          "문서화"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.sphinx-doc.org/",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "pip 설치",
+            "command": "pip install sphinx",
+            "note": "파이썬 패키지 관리자를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "sphinx-quickstart 명령어로 프로젝트 템플릿을 초기화합니다.",
+          "reStructuredText 파일에 문서를 작성합니다.",
+          "make html 명령어로 HTML 문서를 빌드합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8083,
+        "forks": 2613,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.162Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:12.144Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-28T17:08:03.731Z"
+    },
+    {
+      "id": "documentation-2",
+      "name": "documentation",
+      "github": "https://github.com/documentationjs/documentation",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "documentation-2",
+        "name": "documentation",
+        "github": "https://github.com/documentationjs/documentation",
+        "description": "현대적인 자바스크립트 코드에서 문서를 추출하여 생성해주는 도구",
+        "longDescription": "JSDoc 주석 및 소스 코드 구조를 분석하여 읽기 쉬운 API 문서나 HTML 페이지를 생성해주는 자바스크립트 개발 유틸리티입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "JSDoc",
+          "자바스크립트",
+          "API문서"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://documentation.js.org/",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치",
+            "command": "npm install -g documentation",
+            "note": "전역으로 설치하여 CLI로 사용합니다."
+          }
+        ],
+        "usageSteps": [
+          "자바스크립트 소스 코드에 JSDoc 주석을 작성합니다.",
+          "documentation build 명령어를 실행하여 문서를 출력합니다.",
+          "생성된 문서를 웹 서버나 정적 호스팅에 배포합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5797,
+        "forks": 479,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.262Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:12.648Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-28T17:08:04.442Z"
+    },
+    {
+      "id": "adr-tools",
+      "name": "adr-tools",
+      "github": "https://github.com/npryce/adr-tools",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "adr-tools",
+        "name": "adr-tools",
+        "github": "https://github.com/npryce/adr-tools",
+        "description": "아키텍처 결정 기록(ADR)을 커맨드 라인에서 쉽게 관리할 수 있는 도구 모음",
+        "longDescription": "소프트웨어 아키텍처 결정 사항을 마크다운 문서로 체계적으로 기록하고 추적할 수 있도록 돕는 셸 기반의 커맨드 라인 유틸리티입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "아키텍처",
+          "문서화",
+          "CLI",
+          "셸 스크립트"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/npryce/adr-tools",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Bash"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트 디렉토리에서 adr-init 명령어로 초기화합니다.",
+          "adr-new 명령어로 새로운 아키텍처 결정 기록을 생성합니다.",
+          "생성된 마크다운 파일을 수정하여 결정 배경을 작성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5747,
+        "forks": 633,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.358Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:13.016Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "react-docgen",
+      "name": "react-docgen",
+      "github": "https://github.com/reactjs/react-docgen",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02"
+    },
+    {
+      "id": "express-typescript-boilerplate",
+      "name": "express-typescript-boilerplate",
+      "github": "https://github.com/w3tecch/express-typescript-boilerplate",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02"
+    },
+    {
+      "id": "kin-openapi",
+      "name": "kin-openapi",
+      "github": "https://github.com/getkin/kin-openapi",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02"
+    },
+    {
+      "id": "hugo-book",
+      "name": "hugo-book",
+      "github": "https://github.com/alex-shpak/hugo-book",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02"
+    },
+    {
+      "id": "the-art-of-command-line",
+      "name": "the-art-of-command-line",
+      "github": "https://github.com/jlevy/the-art-of-command-line",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "the-art-of-command-line",
+        "name": "the-art-of-command-line",
+        "github": "https://github.com/jlevy/the-art-of-command-line",
+        "description": "리눅스 및 유닉스 환경에서 명령어 라인을 능숙하게 다루기 위한 종합 가이드입니다.",
+        "longDescription": "초보자부터 숙련자까지 유용하게 활용할 수 있는 방대한 명령어 사용법과 팁을 한 페이지에 정리한 오픈소스 가이드입니다. 시스템 관리 및 개발 작업 시 생산성을 높여주는 다양한 명령어 기법을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Bash",
+          "Linux",
+          "macOS",
+          "CLI",
+          "유닉스"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/jlevy/the-art-of-command-line",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "웹사이트나 저장소의 문서를 방문합니다.",
+          "필요한 주제별 명령어 섹션을 확인합니다.",
+          "실무 및 학습에 적용하여 실습합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 162617,
+        "forks": 14894,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.477Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:13.485Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "wtfpython",
+      "name": "wtfpython",
+      "github": "https://github.com/satwikkansal/wtfpython",
+      "license": "WTFPL",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "wtfpython",
+        "name": "wtfpython",
+        "github": "https://github.com/satwikkansal/wtfpython",
+        "description": "파이썬 언어의 난해하고 예상치 못한 동작 방식을 탐구하는 교육용 저장소입니다.",
+        "longDescription": "파이썬 코드가 직관과 다르게 동작하는 흥미롭고 당황스러운 사례들을 모아 파이썬의 내부 메커니즘을 깊이 있게 이해할 수 있도록 돕습니다. 언어의 동작 원리를 파악하고자 하는 개발자에게 유용한 학습 자료를 제공합니다.",
+        "category": "교육·학습",
+        "tags": [
+          "Python",
+          "학습",
+          "코드분석",
+          "인터뷰",
+          "스니펫"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "WTFPL",
+        "website": "https://github.com/satwikkansal/wtfpython",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소의 예제 코드를 살펴봅니다.",
+          "출력 결과를 먼저 유추해 봅니다.",
+          "설명과 파이썬 내부 동작 원리를 읽고 이해합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 37133,
+        "forks": 2650,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.548Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:13.816Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "lkmpg",
+      "name": "lkmpg",
+      "github": "https://github.com/sysprog21/lkmpg",
+      "license": "OSL-3.0",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "lkmpg",
+        "name": "lkmpg",
+        "github": "https://github.com/sysprog21/lkmpg",
+        "description": "최신 리눅스 커널 버전을 위한 커널 모듈 프로그래밍 가이드북입니다.",
+        "longDescription": "리눅스 커널 모듈 작성법을 단계별로 설명하는 오픈소스 프로그래밍 가이드입니다. 최신 커널 환경에서 디바이스 드라이버와 커널 모듈을 개발하려는 개발자에게 필수적인 기초 지식을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "C",
+          "Linux",
+          "커널",
+          "드라이버",
+          "시스템"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "OSL-3.0",
+        "website": "https://sysprog21.github.io/lkmpg/",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "C 컴파일러",
+          "Linux 커널 헤더"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "가이드 문서의 챕터를 순서대로 학습합니다.",
+          "제공되는 샘플 커널 모듈 코드를 작성합니다.",
+          "make 명령어를 통해 모듈을 빌드하고 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "커널 모듈 실습 시 시스템 안정성에 주의해야 합니다.",
+        "stars": 8633,
+        "forks": 623,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.644Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:14.308Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "smart-contract-best-practices",
+      "name": "smart-contract-best-practices",
+      "github": "https://github.com/ConsenSysDiligence/smart-contract-best-practices",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "smart-contract-best-practices",
+        "name": "smart-contract-best-practices",
+        "github": "https://github.com/ConsenSysDiligence/smart-contract-best-practices",
+        "description": "안전하고 신뢰할 수 있는 스마트 계약 개발을 위한 보안 모범 사례 가이드입니다.",
+        "longDescription": "이더리움 및 블록체인 생태계에서 스마트 계약을 개발할 때 발생할 수 있는 보안 취약점을 방지하고 모범 사례를 따를 수 있도록 돕는 종합 보안 가이드라인입니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "스마트계약",
+          "Solidity",
+          "블록체인",
+          "이더리움"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://consensysdiligence.github.io/smart-contract-best-practices/",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "가이드 문서에서 권장하는 보안 패턴을 확인합니다.",
+          "스마트 계약 개발 프로세스에 보안 검체 항목을 적용합니다.",
+          "취약점 점검 도구와 함께 활용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7564,
+        "forks": 1461,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.743Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-28T17:07:14.687Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "bad-data-guide",
+      "name": "bad-data-guide",
+      "github": "https://github.com/Quartz/bad-data-guide",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "bad-data-guide",
+        "name": "bad-data-guide",
+        "github": "https://github.com/Quartz/bad-data-guide",
+        "description": "실제 데이터 분석 과정에서 마주치는 다양한 오류와 문제점을 정리한 참고서입니다.",
+        "longDescription": "현실 세계의 데이터셋에서 빈번히 발생하는 데이터 오염, 형식 오류, 누락 등을 식별하고 이를 해결하기 위한 실용적인 조언을 제공합니다. 데이터 분석가와 엔지니어의 데이터 정제 작업을 지원합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "데이터",
+          "분석",
+          "데이터정제",
+          "가이드",
+          "참고서"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/Quartz/bad-data-guide",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "보유한 데이터에서 발생한 문제를 식별합니다.",
+          "가이드에서 유사한 데이터 오류 유형을 찾습니다.",
+          "제안된 해결 방법을 데이터 파이프라인에 적용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4130,
+        "forks": 396,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.810Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "elements-of-python-style",
+      "name": "elements-of-python-style",
+      "github": "https://github.com/amontalenti/elements-of-python-style",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "elements-of-python-style",
+        "name": "elements-of-python-style",
+        "github": "https://github.com/amontalenti/elements-of-python-style",
+        "description": "PEP 8을 넘어 파이썬 코드를 더욱 우아하고 가독성 있게 작성하는 스타일 지침입니다.",
+        "longDescription": "단순한 문법 규정을 넘어 좋은 파이썬 코드의 철학과 가독성을 높이는 작성 기법을 다룹니다. 클린 코드를 지향하는 파이썬 개발자들을 위한 스타일 가이드입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Python",
+          "코드스타일",
+          "클린코드",
+          "가이드",
+          "가독성"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/amontalenti/elements-of-python-style",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "지침 문서를 통해 권장되는 코딩 스타일을 확인합니다.",
+          "프로젝트 코드 리뷰 시 스타일 가이드를 참고합니다.",
+          "가독성이 높은 파이썬 코드로 리팩토링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3466,
+        "forks": 260,
+        "starsUpdatedAt": "2026-10-28"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-28T17:07:09.905Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "GitHub API status 403"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "restful-api-guidelines",
+      "name": "restful-api-guidelines",
+      "github": "https://github.com/zalando/restful-api-guidelines",
+      "license": "CC-BY-4.0",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "restful-api-guidelines",
+        "name": "restful-api-guidelines",
+        "github": "https://github.com/zalando/restful-api-guidelines",
+        "description": "Zalando에서 정의한 일관성 있고 확장 가능한 RESTful API 설계 및 이벤트 가이드라인입니다.",
+        "longDescription": "표준화된 REST API를 설계하기 위한 모범 사례와 규칙을 모아놓은 명세입니다. API 디자인 일관성을 유지하고 협업 효율을 높이는 데 도움을 줍니다.",
+        "category": "개발 도구",
+        "tags": [
+          "API",
+          "RESTful",
+          "설계",
+          "가이드라인",
+          "HTTP"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "CC-BY-4.0",
+        "website": "https://opensource.zalando.com/restful-api-guidelines/",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "API 설계 지침 문서를 검토합니다.",
+          "엔드포인트 및 명세 작성 시 규칙을 적용합니다.",
+          "팀 내 API 리뷰 표준으로 활용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3262,
+        "forks": 447,
+        "starsUpdatedAt": "2026-10-28"
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "treesheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "treesheets",
+        "name": "treesheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 개요 작성을 통합한 자유 형식의 계층형 데이터 조직화 도구입니다.",
+        "longDescription": "전통적인 표 형식의 한계를 넘어 아이디어 브레인스토밍, 노트 정리, 일정 관리 등을 유연하게 처리할 수 있는 데스크톱 애플리케이션입니다. 복잡한 구조의 정보를 계층적으로 관리할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "스프레드시트",
+          "마인드맵",
+          "노트필기",
+          "생산성",
+          "데스크톱"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "다운로드",
+            "command": "https://strlen.com/treesheets/",
+            "note": "공식 웹사이트에서 운영체제에 맞는 설치 파일을 다운로드합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로그램을 실행하고 새 문서를 만듭니다.",
+          "계층 구조를 활용해 데이터를 입력하고 블록을 구성합니다.",
+          "문서를 저장하거나 필요한 형식으로 내보냅니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3178,
+        "forks": 223,
+        "starsUpdatedAt": "2026-10-28"
+      }
+    },
+    {
+      "id": "eventcatalog",
+      "name": "eventcatalog",
+      "github": "https://github.com/event-catalog/eventcatalog",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "eventcatalog",
+        "name": "eventcatalog",
+        "github": "https://github.com/event-catalog/eventcatalog",
+        "description": "소프트웨어 아키텍처와 이벤트 기반 시스템을 문서화하기 위한 시각화 도구입니다.",
+        "longDescription": "도메인, 서비스, 이벤트 및 스키마를 문서화하고 팀원과 AI 에이전트가 쉽게 파악할 수 있도록 지원하는 아키텍처 문서화 도구입니다. 분산 시스템의 구조를 한눈에 파악할 수 있게 돕습니다.",
+        "category": "문서",
+        "tags": [
+          "아키텍처",
+          "마이크로서비스",
+          "이벤트",
+          "문서화",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://eventcatalog.dev",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "프로젝트 생성",
+            "command": "npx @eventcatalog/create@latest",
+            "note": "새로운 EventCatalog 프로젝트를 초기화합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트 디렉터리에서 카탈로그를 설정합니다.",
+          "마크다운 및 설정 파일을 통해 서비스와벤트를 정의합니다.",
+          "개발 서버를 실행하여 아키텍처 문서를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2948,
+        "forks": 280,
+        "starsUpdatedAt": "2026-10-28"
+      }
+    },
+    {
+      "id": "pdoc",
+      "name": "pdoc",
+      "github": "https://github.com/mitmproxy/pdoc",
+      "license": "MIT-0",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-28T17:07:08.253Z",
+      "sourceRun": "2026-10-29T02",
+      "tool": {
+        "id": "pdoc",
+        "name": "pdoc",
+        "github": "https://github.com/mitmproxy/pdoc",
+        "description": "파이썬 프로젝트를 위한 깔끔하고 사용하기 쉬운 API 문서 자동 생성 도구입니다.",
+        "longDescription": "파이썬 소스 코드의 독스트링(Docstring)을 기반으로 정돈된 HTML 및 API 문서를 자동으로 생성해 주는 도구입니다. 별도의 복잡한 설정 없이 간편하게 실행할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Python",
+          "API문서",
+          "독스트링",
+          "문서화",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "MIT-0",
+        "website": "https://pdoc.dev",
+        "featured": 9,
+        "added": "2026-10-28",
+        "addedAt": "2026-10-28T17:04:14.959Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "pip 설치",
+            "command": "pip install pdoc",
+            "note": "파이썬 패키지 관리자를 통해 pdoc을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "파이썬 프로젝트 디렉터리에서 명령어를 실행합니다.",
+          "명령어: pdoc 패키지이름",
+          "생성된 HTML 문서를 확인하고 공유합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2520,
+        "forks": 234,
+        "starsUpdatedAt": "2026-10-28"
+      }
+    },
     {
       "id": "x64dbg",
       "name": "x64dbg",
@@ -590,89 +1773,6 @@
       }
     },
     {
-      "id": "windmill",
-      "name": "Windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-28T16:07:08.093Z",
-      "sourceRun": "2026-10-29T01",
-      "tool": {
-        "id": "windmill",
-        "name": "Windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 코드로 빌드하고 오케스트레이션하는 오픈소스 플랫폼입니다.",
-        "longDescription": "스크립트를 공유 가능한 UI와 API, 크론 잡으로 자동 변환하며, 다양한 언어(Python, TypeScript 등)를 지원하는 고성능 자가 호스팅 워크플로우 오케스트레이터입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "워크플로우",
-          "오케스트레이션",
-          "Rust",
-          "TypeScript",
-          "AI에이전트"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T16:04:16.459Z",
-        "requirements": [
-          "Docker 또는 PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run -p 8000:8000 ghcr.io/windmill-labs/windmill:main",
-            "note": "도커를 이용해 로컬에서 즉시 실행할 수 있습니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker를 통해 Windmill 인스턴스를 실행합니다.",
-          "웹 인터페이스에 접속하여 워크플로우 또는 스크립트를 작성합니다.",
-          "필요한 프로그래밍 언어로 로직을 구현하고 스케줄링 또는 API로 배포합니다."
-        ],
-        "examplePrompt": "API에서 데이터를 가져와 슬랙으로 전송하는 워크플로우를 생성해줘",
-        "usageNote": "",
-        "stars": 18307,
-        "forks": 1127,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T16:07:10.883Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-28T16:07:16.504Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "wazuh",
       "name": "Wazuh",
       "github": "https://github.com/wazuh/wazuh",
@@ -751,88 +1851,6 @@
         "verifiedLicense": null,
         "licenseSource": "unknown",
         "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "paradev",
-      "name": "Paradev",
-      "github": "https://github.com/ParadevAI/Paradev",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-28T16:07:08.093Z",
-      "sourceRun": "2026-10-29T01",
-      "tool": {
-        "id": "paradev",
-        "name": "Paradev",
-        "github": "https://github.com/ParadevAI/Paradev",
-        "description": "다수의 코딩 에이전트를 병렬로 오케스트레이션할 수 있는 AI 에이전트 기반 IDE입니다.",
-        "longDescription": "사용자가 보유한 구독을 활용하여 Claude Code, Codex 등 다양한 CLI 에이전트를 하나의 작업 공간에서 동시에 실행하고 코드 리뷰 및 브라우저 미리보기를 지원하는 개발 환경입니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI에이전트",
-          "IDE",
-          "개발도구",
-          "TypeScript",
-          "오케스트레이션"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://paradev.com",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T16:04:16.459Z",
-        "requirements": [
-          "macOS 또는 Linux 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "macOS 데스크톱 앱 다운로드",
-            "command": "https://github.com/paradevai/paradev/releases/latest",
-            "note": "최신 릴리스에서 운영체제에 맞는 설치 파일을 다운로드합니다."
-          }
-        ],
-        "usageSteps": [
-          "공식 저장소 또는 릴리스 페이지에서 애플리케이션을 다운로드하여 설치합니다.",
-          "원하는 AI 코딩 에이전트 및 API 키를 설정합니다.",
-          "작업 공간에서 여러 에이전트를 병렬로 실행하여 코드 개발 및 수정을 진행합니다."
-        ],
-        "examplePrompt": "현재 저장소의 버그를 분석하고 수정 에이전트를 실행해줘",
-        "usageNote": "",
-        "stars": 15670,
-        "forks": 1398,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T16:07:11.365Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-28T16:07:17.990Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
@@ -1528,83 +2546,6 @@
       "recheckedAt": "2026-10-28T15:09:14.290Z"
     },
     {
-      "id": "get-jobs",
-      "name": "Get Jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-28T15:08:03.561Z",
-      "sourceRun": "2026-10-29T00",
-      "tool": {
-        "id": "get-jobs",
-        "name": "Get Jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "AI 기반 구직 플랫폼 이력서 자동 제출 및 채용 정보 지원 도구",
-        "longDescription": "다양한 국내외 구직 플랫폼을 대상으로 이력서 자동 접수 및 AI 기반 직무 분석을 수행하여 취업 활동을 돕는 자동화 스크립트 도구입니다. 주요 구직 플랫폼의 이력서 자동 제출 및 채용 정보를 지원합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "구직",
-          "자동화",
-          "이력서"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T15:04:14.629Z",
-        "requirements": [
-          "Java"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트 소스를 클론하고 필요한 설정 파일을 작성합니다.",
-          "지원하고자 하는 구직 플랫폼 계정 정보를 구성합니다.",
-          "자동 이력서 제출 스크립트를 실행하여 구직 과정을 자동화합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9341,
-        "forks": 1073,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T15:08:05.219Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-28T15:08:09.214Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-28T15:09:29.348Z"
-    },
-    {
       "id": "redroid-doc",
       "name": "reDroid",
       "github": "https://github.com/remote-android/redroid-doc",
@@ -1763,79 +2704,6 @@
         "license": "Apache-2.0",
         "verifiedLicense": null,
         "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-28T15:08:03.561Z",
-      "sourceRun": "2026-10-29T00",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "아웃라인, 마인드맵, 스프레드시트를 대체하는 계층형 데이터 오가나이저입니다.",
-        "longDescription": "복잡한 데이터 구조, 할 일 목록, 브레인스토밍 아이디어, 프로젝트 계획 등을 한눈에 관리할 수 있도록 지원하는 자유 형식의 계층형 스프레드시트 소프트웨어입니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "지식관리",
-          "생산성",
-          "데스크톱 앱"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T15:04:14.629Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리즈 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
-          "프로그램을 실행하고 새로운 계층형 문서를 생성합니다.",
-          "표 형식 또는 계층 구조로 아이디어와 데이터를 입력하고 정리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3178,
-        "forks": 223,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T15:08:05.955Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-28T15:08:10.691Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
@@ -34136,90 +35004,6 @@
       "recheckedAt": "2026-10-26T12:11:18.416Z"
     },
     {
-      "id": "sphinx",
-      "name": "Sphinx",
-      "github": "https://github.com/sphinx-doc/sphinx",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T12:10:36.034Z",
-      "sourceRun": "2026-10-26T21",
-      "tool": {
-        "id": "sphinx",
-        "name": "Sphinx",
-        "github": "https://github.com/sphinx-doc/sphinx",
-        "description": "지능적이고 아름다운 문서를 손쉽게 생성할 수 있는 파이썬 문서화 도구입니다.",
-        "longDescription": "reStructuredText와 Markdown 형식을 지원하며, 파이썬 프로젝트뿐만 아니라 다양한 프로그래밍 언어의 기술 문서를 체계적으로 빌드할 수 있습니다.",
-        "category": "문서",
-        "tags": [
-          "문서화",
-          "파이썬",
-          "API",
-          "정적사이트생성기",
-          "기술문서"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.sphinx-doc.org/",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T12:07:59.847Z",
-        "requirements": [
-          "Python",
-          "pip"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "pip 설치",
-            "command": "pip install -U sphinx",
-            "note": "파이썬 환경에서 pip를 이용해 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "pip를 통해 Sphinx를 설치합니다.",
-          "sphinx-quickstart 명령어로 문서 프로젝트 구조를 초기화합니다.",
-          "문서 파일을 작성한 후 HTML 등의 포맷으로 빌드합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8082,
-        "forks": 2612,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T12:10:38.133Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T12:10:44.095Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "dendron",
       "name": "Dendron",
       "github": "https://github.com/dendronhq/dendron",
@@ -55525,230 +56309,6 @@
       "sourceRun": "2026-10-25T08"
     },
     {
-      "id": "the-art-of-command-line",
-      "name": "the-art-of-command-line",
-      "github": "https://github.com/jlevy/the-art-of-command-line",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T22:05:59.957Z",
-      "sourceRun": "2026-10-25T07",
-      "tool": {
-        "id": "the-art-of-command-line",
-        "name": "the-art-of-command-line",
-        "github": "https://github.com/jlevy/the-art-of-command-line",
-        "description": "리눅스 및 유닉스 명령줄 인터페이스 활용 가이드",
-        "longDescription": "초보자부터 숙련자까지 유용하게 활용할 수 있는 방대한 명령어 사용법과 팁을 제공합니다. 시스템 관리와 개발 작업에서 생산성을 높여주는 실무 중심의 노하우를 담고 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CLI",
-          "Linux",
-          "개발도구"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/jlevy/the-art-of-command-line",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T22:04:08.752Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "웹사이트나 README 문서를 통해 원하는 주제의 명령어를 확인합니다.",
-          "터미널 환경에서 직접 명령어를 입력하며 실습합니다.",
-          "자주 사용하는 팁을 요약하여 개인 작업에 응용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 162594,
-        "forks": 14838,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T22:06:00.655Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T22:06:04.911Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-24T22:06:11.234Z"
-    },
-    {
-      "id": "wtfpython",
-      "name": "wtfpython",
-      "github": "https://github.com/satwikkansal/wtfpython",
-      "license": "WTFPL",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-24T22:05:59.957Z",
-      "sourceRun": "2026-10-25T07",
-      "tool": {
-        "id": "wtfpython",
-        "name": "wtfpython",
-        "github": "https://github.com/satwikkansal/wtfpython",
-        "description": "파이썬의 이해하기 어렵거나 뜻밖의 동작을 모아둔 탐구 가이드",
-        "longDescription": "파이썬 코드 실행 시 직관에 어긋나거나 예상치 못한 결과를 보여주는 흥미로운 사례들을 코드 스니펫과 함께 설명합니다. 언어의 내부 동작 방식을 깊이 있게 이해하는 데 도움을 줍니다.",
-        "category": "교육·학습",
-        "tags": [
-          "파이썬",
-          "학습",
-          "프로그래밍"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "WTFPL",
-        "website": "https://github.com/satwikkansal/wtfpython",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T22:04:08.752Z",
-        "requirements": [
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "목록에서 관심 있는 파이썬 코드 예제를 살펴봅니다.",
-          "예측되는 결과와 실제 실행 결과를 비교합니다.",
-          "설명된 내부 메커니즘과 이유를 학습합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 37130,
-        "forks": 2650,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T22:06:01.013Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T22:06:05.559Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-24T22:06:11.999Z"
-    },
-    {
-      "id": "smart-contract-best-practices",
-      "name": "smart-contract-best-practices",
-      "github": "https://github.com/ConsenSysDiligence/smart-contract-best-practices",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T22:05:59.957Z",
-      "sourceRun": "2026-10-25T07",
-      "tool": {
-        "id": "smart-contract-best-practices",
-        "name": "smart-contract-best-practices",
-        "github": "https://github.com/ConsenSysDiligence/smart-contract-best-practices",
-        "description": "이더리움 스마트 컨트랙트 개발을 위한 보안 가이드",
-        "longDescription": "블록체인 개발자들이 취약점을 피하고 안전한 분산 애플리케이션을 구축할 수 있도록 검증된 보안 수칙과 패턴을 안내합니다. 솔리디티 개발 필수 지식을 다룹니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "블록체인",
-          "보안",
-          "스마트컨트랙트"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://consensysdiligence.github.io/smart-contract-best-practices/",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T22:04:08.752Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "가이드 문서에서 주요 보안 취약점 유형을 확인합니다.",
-          "스마트 컨트랙트 코드 작성 시 권장 패턴을 적용합니다.",
-          "배포 전 보안 감사 체크리스트로 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7563,
-        "forks": 1463,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T22:06:01.682Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T22:06:07.538Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-24T22:06:14.527Z"
-    },
-    {
       "id": "zensical",
       "name": "zensical",
       "github": "https://github.com/zensical/zensical",
@@ -55821,81 +56381,6 @@
         "오픈소스 또는 무료 조건 미확인"
       ],
       "documentEvidenceCheckedAt": "2026-10-24T22:06:08.230Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "adr-tools",
-      "name": "adr-tools",
-      "github": "https://github.com/npryce/adr-tools",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T22:05:59.957Z",
-      "sourceRun": "2026-10-25T07",
-      "tool": {
-        "id": "adr-tools",
-        "name": "adr-tools",
-        "github": "https://github.com/npryce/adr-tools",
-        "description": "아키텍처 결정 기록(ADR)을 명령줄에서 쉽게 생성하고 관리할 수 있는 도구입니다.",
-        "longDescription": "셸 스크립트 기반으로 제작되어 개발 프로젝트의 의사결정 이력을 파일로 남기고 추적하는 과정을 단순화합니다. 팀 내 표준화된 문서 관리를 돕습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CLI",
-          "아키텍처",
-          "문서화",
-          "셸스크립트"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/npryce/adr-tools",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T22:04:08.752Z",
-        "requirements": [
-          "Bash"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트 디렉토리에서 새 ADR 초기화 명령을 실행합니다.",
-          "생성된 마크다운 파일에 결정 사항을 기록합니다.",
-          "후속 결정 사항이 생길 때마다 새로운 기록을 추가합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5740,
-        "forks": 634,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T22:06:02.560Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-24T22:06:09.305Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -56087,77 +56572,6 @@
       "reasons": [],
       "checkedAt": "2026-10-24T22:05:59.957Z",
       "sourceRun": "2026-10-25T07"
-    },
-    {
-      "id": "eventcatalog",
-      "name": "eventcatalog",
-      "github": "https://github.com/event-catalog/eventcatalog",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-24T22:05:59.957Z",
-      "sourceRun": "2026-10-25T07",
-      "tool": {
-        "id": "eventcatalog",
-        "name": "eventcatalog",
-        "github": "https://github.com/event-catalog/eventcatalog",
-        "description": "소프트웨어 아키텍처 및 이벤트 기반 시스템 문서화 도구",
-        "longDescription": "마이크로서비스와 이벤트 기반 아키텍처의 도메인, 서비스, 이벤트, 스키마를 팀과 AI 에이전트가 함께 활용할 수 있도록 문서화하는 도구입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "소프트웨어아키텍처",
-          "마이크로서비스",
-          "AsyncAPI",
-          "문서화"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://eventcatalog.dev",
-        "featured": 9,
-        "added": "2026-10-24",
-        "addedAt": "2026-10-24T22:04:08.752Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "프로젝트 생성",
-            "command": "npx @eventcatalog/create@latest",
-            "note": "새로운 EventCatalog 프로젝트를 초기화합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트 초기화",
-          "마크다운 및 설정 파일에 서비스 및 이벤트 정의",
-          "npm run start로 카탈로그 실행"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2948,
-        "forks": 281,
-        "starsUpdatedAt": "2026-10-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-24T23:06:14.360Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "dokka",
@@ -73025,79 +73439,6 @@
       "reasons": [],
       "checkedAt": "2026-10-21T03:06:11.967Z",
       "sourceRun": "2026-10-21T12"
-    },
-    {
-      "id": "lkmpg",
-      "name": "lkmpg",
-      "github": "https://github.com/sysprog21/lkmpg",
-      "license": "OSL-3.0",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-21T03:06:11.967Z",
-      "sourceRun": "2026-10-21T12",
-      "tool": {
-        "id": "lkmpg",
-        "name": "lkmpg",
-        "github": "https://github.com/sysprog21/lkmpg",
-        "description": "최신 리눅스 커널 버전에 맞추어 업데이트된 리눅스 커널 모듈 프로그래밍 가이드",
-        "longDescription": "5.x 및 6.x 커널 버전을 지원하는 실제 동작하는 예제 코드와 함께 리눅스 커널 모듈 개발법을 배울 수 있는 가이드북입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Linux",
-          "커널",
-          "C언어",
-          "디바이스드라이버",
-          "시스템프로그래밍"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "OSL-3.0",
-        "website": "https://sysprog21.github.io/lkmpg/",
-        "featured": 9,
-        "added": "2026-10-21",
-        "addedAt": "2026-10-21T03:03:59.877Z",
-        "requirements": [
-          "Docker",
-          "LaTeX"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "가이드 문서나 PDF를 통해 커널 모듈 기본 개념을 학습합니다.",
-          "제공되는 예제 코드를 클론하고 컴파일하여 테스트합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8621,
-        "forks": 624,
-        "starsUpdatedAt": "2026-10-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-21T03:06:14.502Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-21T03:06:20.820Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "mm-wiki",
