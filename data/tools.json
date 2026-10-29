@@ -1,5 +1,149 @@
 [
   {
+    "id": "ttl",
+    "name": "ttl",
+    "github": "https://github.com/lance0/ttl",
+    "description": "실시간 TUI, 홉별 통계, ASN/지리적 위치 조회를 지원하는 현대적인 고속 네트워크 진단 도구입니다.",
+    "longDescription": "기존 traceroute를 대체하는 도구로, 지속적인 경로 추적과 함께 지연 시간, 지터, MTU 탐색, NAT 감지 기능을 제공합니다.",
+    "category": "네트워크",
+    "tags": [
+      "CLI",
+      "Traceroute",
+      "Rust",
+      "TUI",
+      "네트워크 진단"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/lance0/ttl",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T04:04:12.597Z",
+    "requirements": [
+      "Rust 1.88+",
+      "CAP_NET_RAW 권한 또는 sudo"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Cargo 설치",
+        "command": "cargo install ttl",
+        "note": "Rust 패키지 관리자를 통한 설치"
+      },
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install ttl",
+        "note": "macOS 및 Linux 홈브루 설치"
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 필요한 권한을 확인합니다.",
+      "ttl 명령어 뒤에 대상 호스트를 입력하여 실행합니다.",
+      "실시간 TUI 화면에서 경로별 통계와 지연 정보를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "원시 소켓(raw-socket) 권한이 필요합니다.",
+    "stars": 1489,
+    "forks": 93,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "lgtvcompanion",
+    "name": "LGTV Companion",
+    "github": "https://github.com/JPersson77/LGTVCompanion",
+    "description": "PC와 연동하여 웹OS 기반 LG 스마트 TV의 전원을 자동으로 켜고 끌 수 있는 Windows 유틸리티입니다.",
+    "longDescription": "PC의 상태 변화를 감지하여 네트워크를 통해 LG TV의 전원을 제어하며, Windows 서비스로 백그라운드에서 동작합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "Windows",
+      "C++",
+      "LG TV",
+      "WebOS",
+      "자동화"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/JPersson77/LGTVCompanion",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T04:04:12.597Z",
+    "requirements": [
+      "Windows 10 또는 Windows 11",
+      "네트워크 연결된 LG webOS TV"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Winget 설치",
+        "command": "winget install LGTVCompanion",
+        "note": "Windows 터미널 또는 PowerShell을 통한 설치"
+      }
+    ],
+    "usageSteps": [
+      "TV의 네트워크 전원 켜기 설정(TV On with Mobile)을 활성화합니다.",
+      "Winget 또는 설치 파일을 통해 프로그램을 설치합니다.",
+      "PC와 TV를 로컬 네트워크에 연결하고 설정을 완료합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Windows Defender SmartScreen이 차단할 경우 수동으로 허용해야 할 수 있습니다.",
+    "stars": 1475,
+    "forks": 65,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "androidnetworktools",
+    "name": "Android Network Tools",
+    "github": "https://github.com/stealthcopter/AndroidNetworkTools",
+    "description": "안드로이드 앱 개발을 위한 포트 스캔, 핑, 서브넷 탐색 등 유용한 네트워크 도구 모음 라이브러리입니다.",
+    "longDescription": "안드로이드 플랫폼에서 부족한 네트워킹 API를 보완하기 위해 만들어졌으며, 일상적인 네트워크 진단 기능을 쉽게 구현할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Android",
+      "Java",
+      "네트워크",
+      "포트 스캔",
+      "개발 라이브러리"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/stealthcopter/AndroidNetworkTools",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T04:04:12.597Z",
+    "requirements": [
+      "JitPack 리포지토리 설정"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "JitPack 저장소 추가",
+        "command": "maven { url 'https://jitpack.io' }",
+        "note": "프로젝트 수준의 Gradle 설정"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 JitPack 리포지토리를 추가합니다.",
+      "의존성 설정에 라이브러리를 추가합니다.",
+      "코드에서 필요한 네트워크 도구 클래스를 호출하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Maven Central에 등록되기 전이므로 JitPack을 통해 연동해야 합니다.",
+    "stars": 1500,
+    "forks": 298,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
     "id": "spotube",
     "name": "Spotube",
     "github": "https://github.com/team-spotube/spotube",
