@@ -1,5 +1,274 @@
 [
   {
+    "id": "clawprobench",
+    "name": "ClawProBench",
+    "github": "https://github.com/suyoumo/ClawProBench",
+    "description": "결정론적 채점과 반복 시도 신뢰성을 바탕으로 LLM 에이전트를 평가하는 라이브 벤치마크 하네스입니다.",
+    "longDescription": "ClawProBench는 OpenClaw 런타임 환경에서 LLM 에이전트의 성능을 실시간으로 평가하기 위한 라이브 벤치마크 하네스입니다. 정밀한 시나리오 카탈로그와 자동화된 채점 기능을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "벤치마크",
+      "LLM에이전트",
+      "평가",
+      "자동채점",
+      "Rust"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://suyoumo.github.io/bench/",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T20:04:13.467Z",
+    "requirements": [
+      "Python 3.11",
+      "uv"
+    ],
+    "supportedAgents": [
+      "OpenClaw"
+    ],
+    "install": [
+      {
+        "title": "가상환경 설정",
+        "command": "pip install uv && uv venv --python 3.11 && source .venv/bin/activate && uv pip install -r requirements.txt",
+        "note": "uv를 이용한 빠른 파이썬 환경 구축"
+      }
+    ],
+    "usageSteps": [
+      "파이썬 가상환경을 생성하고 요구사항 패키지를 설치합니다.",
+      "로컬 OpenClaw 런타임이 정상 작동하는지 확인합니다.",
+      "벤치마크 인벤토리를 확인하고 테스트 시나리오를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 828,
+    "forks": 54,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "cblue",
+    "name": "CBLUE",
+    "github": "https://github.com/CBLUEbenchmark/CBLUE",
+    "description": "중국어 생명과학 및 의료 정보 처리 능력을 평가하기 위한 자연어 이해 벤치마크입니다.",
+    "longDescription": "의료 분야의 인공지능 연구를 가속화하기 위해 개체명 인식, 관계 추출, 임상 의사결정 지원 등 8가지 의료 NLU 태스크와 기준 모델 코드를 제공하는 벤치마크입니다.",
+    "category": "AI 평가",
+    "tags": [
+      "의료AI",
+      "NLP",
+      "벤치마크",
+      "데이터셋",
+      "생명과학"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://tianchi.aliyun.com/dataset/dataDetail?dataId=95414&lang=en-us",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T20:04:13.467Z",
+    "requirements": [
+      "python3",
+      "pytorch 1.7",
+      "transformers 4.5.1"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "톈치(Tianchi) 플랫폼 등에서 데이터셋 다운로드",
+      "PyTorch 및 Transformers 환경 설정",
+      "제공된 베이스라인 코드를 실행하여 의료 NLU 태스크 학습 및 평가"
+    ],
+    "examplePrompt": "",
+    "usageNote": "의료 도메인 특화 언어 모델의 성능을 측정하는 데 사용됩니다.",
+    "stars": 860,
+    "forks": 143,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "gval",
+    "name": "gval",
+    "github": "https://github.com/PaesslerAG/gval",
+    "description": "Go 언어 환경에서 임의의 표현식을 안전하고 유연하게 평가할 수 있는 라이브러리입니다.",
+    "longDescription": "Go 언어로 작성된 표현식 평가기로, 사용자 정의 함수, 변수 및 연산자를 포함한 복잡한 수식과 논리 표현식을 런타임에 파싱하고 평가할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "표현식",
+      "파서",
+      "개발 도구",
+      "API"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/PaesslerAG/gval",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T20:04:13.467Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 모듈 추가",
+        "command": "go get github.com/PaesslerAG/gval",
+        "note": "Go 프로젝트에 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 gval 패키지 임포트",
+      "평가할 표현식 문자열과 매개변수 정의",
+      "gval.Evaluate 함수를 호출하여 결과 산출"
+    ],
+    "examplePrompt": "",
+    "usageNote": "동적 규칙 엔진이나 설정 기반 수식 계산에 유용합니다.",
+    "stars": 818,
+    "forks": 97,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "enterpriserag-bench",
+    "name": "EnterpriseRAG-Bench",
+    "github": "https://github.com/onyx-dot-app/EnterpriseRAG-Bench",
+    "description": "기업 내부 문서 검색 및 질의응답(RAG) 시스템 성능을 평가하기 위한 대규모 데이터셋과 벤치마크입니다.",
+    "longDescription": "50만 개 이상의 기업 내부 문서와 500개의 실제 질의응답 쌍으로 구성되어 있어, 기업 환경에 특화된 RAG 시스템의 검색 정확도와 에이전트 성능을 정밀하게 벤치마킹할 수 있습니다.",
+    "category": "AI 평가",
+    "tags": [
+      "RAG",
+      "기업용",
+      "검색",
+      "대규모언어모델",
+      "벤치마크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.onyx.app/",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T20:04:13.467Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Hugging Face 등에서 EnterpriseRAG-Bench 데이터셋 확인",
+      "제공된 벤치마크 파이프라인 스크립트 다운로드",
+      "사내 RAG 시스템에 데이터셋을 적용하여 성능 평가 수행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "실무 기업용 문서 검색 시스템의 성능을 객관적으로 검증할 때 사용합니다.",
+    "stars": 607,
+    "forks": 71,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "mmmu",
+    "name": "MMMU",
+    "github": "https://github.com/MMMU-Benchmark/MMMU",
+    "description": "전문가 수준의 다중 학문적 멀티모달 이해 및 추론 능력을 평가하는 벤치마크입니다.",
+    "longDescription": "대학 수준의 복잡한 이미지와 텍스트가 혼합된 문제들을 바탕으로 대형 멀티모달 모델(LMM)의 전문가적 추론 역량을 엄격하게 평가할 수 있는 평가 코드와 데이터셋을 제공합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "멀티모달",
+      "컴퓨터비전",
+      "벤치마크",
+      "대형언어모델",
+      "평가"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://mmmu-benchmark.github.io/",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T20:04:13.467Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Hugging Face에서 MMMU 데이터셋 다운로드",
+      "GitHub 리포지토리의 평가 코드 클론",
+      "평가 스크립트를 실행하여 멀티모달 모델의 정답률 측정"
+    ],
+    "examplePrompt": "",
+    "usageNote": "고급 비전-언어 모델의 학술적 추론 능력 평가에 표준으로 쓰입니다.",
+    "stars": 600,
+    "forks": 56,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "mmlu-pro",
+    "name": "MMLU-Pro",
+    "github": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+    "description": "기존 MMLU 벤치마크를 개선하여 더 복잡한 추론과 다중 선택 문항으로 구성된 LLM 평가 벤치마크입니다.",
+    "longDescription": "기존 MMLU의 한계를 극복하기 위해 추론 중심의 고난도 문항과 더 많은 선택지를 도입하여 대형 언어 모델의 실질적인 문제 해결 능력과 추론 깊이를 엄격하게 측정합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "MMLU",
+      "LLM",
+      "추론",
+      "벤치마크",
+      "대형언어모델"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/TIGER-AI-Lab/MMLU-Pro",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T20:04:13.467Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Hugging Face에서 MMLU-Pro 데이터셋 확인",
+      "리포지토리의 평가 소스코드 다운로드",
+      "평가 스크립트를 구동하여 대상 언어 모델 테스트 진행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "최신 고성능 대형 언어 모델의 추론 변별력을 높인 평가 지표입니다.",
+    "stars": 433,
+    "forks": 60,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
     "id": "dsh-purge",
     "name": "dsh-purge",
     "github": "https://github.com/kingcharleslzy-ai/dsh-purge",
