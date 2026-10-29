@@ -1,5 +1,561 @@
 [
   {
+    "id": "loongcollector",
+    "name": "LoongCollector",
+    "github": "https://github.com/alibaba/loongcollector",
+    "description": "클라우드 Native 환경을 위한 고성능 및 경량 옵저버빌리티 데이터 수집기",
+    "longDescription": "로그, 메트릭, 트레이스 등 다양한 관측 가능성 데이터를 빠르고 가볍게 수집하여 백엔드로 전달할 수 있도록 설계된 C++ 기반 오픈소스 에이전트입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "옵저버빌리티",
+      "로그 수집",
+      "Kubernetes",
+      "eBPF",
+      "C++"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://cnops.com.cn/projects/p0ddwzs2lutt63pe6e390hs4",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Linux 커널"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "설치 가이드를 참고하여 클러스터에 수집기를 배포합니다.",
+      "수집 대상 로그 및 메트릭 소스를 설정 파일에 정의합니다.",
+      "수집된 데이터가 원격 저장소로 전송되는지 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2211,
+    "forks": 456,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "logbook",
+    "name": "Logbook",
+    "github": "https://github.com/zalando/logbook",
+    "description": "HTTP 요청과 응답을 유연하게 로깅할 수 있는 확장 가능한 Java 라이브러리",
+    "longDescription": "다양한 HTTP 클라이언트와 서버 프레임워크에서 발생하는 요청 및 응답 데이터를 가로채어 깔끔하게 기록할 수 있도록 돕는 개발자 유틸리티입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "HTTP",
+      "로깅",
+      "Spring Boot",
+      "개발 도구"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/zalando/logbook",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Java",
+      "Maven 또는 Gradle"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트의 의존성 관리 도구에 Logbook 라이브러리를 추가합니다.",
+      "애플리케이션 설정에서 로깅 전략과 포맷을 지정합니다.",
+      "HTTP 요청 시 자동으로 콘솔이나 로그 파일에 기록되는 내용을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2069,
+    "forks": 291,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "evlog",
+    "name": "evlog",
+    "github": "https://github.com/evloghq/evlog",
+    "description": "TypeScript 환경을 위한 구조화된 와이드 이벤트(Wide Events) 기반 로깅 및 디버깅 라이브러리",
+    "longDescription": "단순한 텍스트 로그를 넘어 풍부한 문맥 정보와 구조화된 JSON 데이터를 기록하여 AI 코딜릴리티 및 애플리케이션 디버깅 효율을 높여주는 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TypeScript",
+      "로깅",
+      "디버깅",
+      "오류 처리",
+      "옵저버빌리티"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://evlog.dev",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm install evlog",
+        "note": "프로젝트에 evlog 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 루트에 설정 파일을 초기화합니다 (`npx evlog init`).",
+      "코드 내에서 로깅 함수를 호출하여 구조화된 이벤트를 기록합니다.",
+      "수집된 로그를 분석하여 오류 원인을 파악합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1906,
+    "forks": 68,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "elastdocker",
+    "name": "elastdocker",
+    "github": "https://github.com/sherifabdlnaby/elastdocker",
+    "description": "도커를 통해 Elastic Stack(ELK)을 단일 명령어로 손쉽게 구축하고 모니터링할 수 있는 도구입니다.",
+    "longDescription": "로깅, 메트릭, APM, 알림, 머신러닝, SIEM 기능이 기본 설정된 엘라스틱 스택을 Docker Compose로 빠르게 실행할 수 있습니다. 데모, MVP 및 소규모 프로덕션 환경에 적합합니다.",
+    "category": "개발 운영",
+    "tags": [
+      "Docker",
+      "Docker Compose",
+      "Elasticsearch",
+      "Kibana",
+      "Logstash"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://towardsdatascience.com/running-securing-and-deploying-elastic-stack-on-docker-f1a8ebf1dc5b",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose",
+      "mise"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 설정",
+        "command": "git clone https://github.com/sherifabdlnaby/elastdocker.git && cd elastdocker && mise trust",
+        "note": "저장소를 복제하고 mise 환경을 신뢰합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 mise 설정을 신뢰합니다.",
+      "Elasticsearch 키스토어 및 TLS 인증서를 초기화합니다.",
+      "Docker Compose를 사용하여 컨테이너를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2068,
+    "forks": 338,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "openchoreo",
+    "name": "openchoreo",
+    "github": "https://github.com/openchoreo/openchoreo",
+    "description": "쿠버네티스 환경을 위한 완전한 오픈소스 내부 개발자 플랫폼(IDP)입니다.",
+    "longDescription": "개발자와 AI 에이전트가 애플리케이션, 리소스, 에이전트 워크로드를 빌드, 배포 및 운영할 수 있도록 지원하며 Backstage 기반 포털, CI/CD, GitOps, 관측성을 통합 제공합니다.",
+    "category": "개발 운영",
+    "tags": [
+      "Kubernetes",
+      "CI/CD",
+      "GitOps",
+      "Backstage",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://openchoreo.dev",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Kubernetes",
+      "Go"
+    ],
+    "supportedAgents": [
+      "AI Agents"
+    ],
+    "install": [],
+    "usageSteps": [
+      "공식 설치 가이드를 참고하여 쿠버네티스 클러스터에 OpenChoreo를 배포합니다.",
+      "플랫폼 설정 및 배포 파이프라인을 구성합니다.",
+      "소스 코드 또는 AI 에이전트를 통해 애플리케이션을 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1720,
+    "forks": 271,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "superlog",
+    "name": "superlog",
+    "github": "https://github.com/superloglabs/superlog",
+    "description": "AI 에이전트를 활용해 소프트웨어의 문제를 자가 치유하는 오픈소스 관측성 작업공간입니다.",
+    "longDescription": "OpenTelemetry 데이터를 수집하고, 노이즈가 많은 신호를 인시던트로 그룹화하며, 코딩 에이전트용 스킬을 통해 프로젝트에 쉽게 통합할 수 있습니다.",
+    "category": "개발 운영",
+    "tags": [
+      "OpenTelemetry",
+      "AI Agents",
+      "TypeScript",
+      "React",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://superlog.sh",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Coding Agent"
+    ],
+    "install": [
+      {
+        "title": "스킬을 통한 설치",
+        "command": "npx skills add superloglabs/skills --all",
+        "note": "선호하는 코딩 에이전트에 Superlog 스킬을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "코딩 에이전트를 통해 Superlog 스킬을 추가합니다.",
+      "프로젝트에 관측성 데이터를 연동합니다.",
+      "인시던트 및 로그 모니터링을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1478,
+    "forks": 115,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "qtap",
+    "name": "qtap",
+    "github": "https://github.com/qpoint-io/qtap",
+    "description": "eBPF를 활용해 암호화 전후의 네트워크 트래픽을 캡처하고 아웃바운드 연결에 대한 상세 컨텍스트를 제공하는 에이전트입니다.",
+    "longDescription": "앱 수정이나 프록시 설치 없이 TLS/SSL 함수를 가로채어 암호화되지 않은 원본 트래픽을 가시화하며, 최소한의 오버헤드로 기존 관측성 파이프라인을 보강합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "eBPF",
+      "Kubernetes",
+      "Linux",
+      "TLS",
+      "Security"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://qpoint.io/products/qtap",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Linux Kernel",
+      "libbpf"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "지원되는 리눅스 커널 환경에서 에이전트를 실행합니다.",
+      "트래픽 캡처 플러그인을 구성합니다.",
+      "아웃바운드 네트워크 트래픽 모니터링을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1465,
+    "forks": 57,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "ongrid",
+    "name": "ongrid",
+    "github": "https://github.com/ongridio/ongrid",
+    "description": "인프라를 이해하고 Slack이나 Telegram에서 근본 원인을 찾아 해결해 주는 운영(Ops) AI 에이전트입니다.",
+    "longDescription": "메트릭, 로그, 트레이스, 토폴로지 분석을 기반으로 알림 발생 시 자동으로 조사를 수행하고, 전문가 하위 에이전트와 연계하여 SRE 작업을 지원합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI Agents",
+      "SRE",
+      "DevOps",
+      "ChatOps",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://ongrid.cloud",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [
+      "Coordinator",
+      "SRE Agent"
+    ],
+    "install": [],
+    "usageSteps": [
+      "Slack 또는 Telegram에 에이전트를 연동합니다.",
+      "인프라 모니터링 도구와 연결하여 알림 수신을 설정합니다.",
+      "알림 발생 시 자동 진단 및 원인 분석 리포트를 확인합니다."
+    ],
+    "examplePrompt": "지금 발생한 인시던트의 근본 원인을 분석해줘.",
+    "usageNote": "",
+    "stars": 1241,
+    "forks": 276,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "tracely-ai",
+    "name": "tracely",
+    "github": "https://github.com/jwuthri-cloud/Tracely-ai",
+    "description": "AI 에이전트를 위한 트레이스 기반 CI/CD 및 회귀 테스트 플랫폼입니다.",
+    "longDescription": "프로덕션 에이전트 트레이스를 실시간으로 평가하고 실패 사례를 군집화한 뒤, 재현 가능한 회귀 테스트 케이스로 변환하여 취약한 PR이 병합되는 것을 차단합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "AI Agents",
+      "CI/CD",
+      "LLMOPs",
+      "Python",
+      "ClickHouse"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://tracely-ai.com",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Docker",
+      "Python",
+      "Node.js",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 인프라 구동 및 설치",
+        "command": "cp .env.example .env && make infra-up && make install",
+        "note": "환경 변수를 설정하고 인프라(ClickHouse, Redis 등)를 구동한 뒤 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "환경 변수 파일을 설정하고 인프라 컨테이너를 실행합니다.",
+      "백엔드, 워커, 프론트엔드 서비스를 각각 실행합니다.",
+      "프로덕션 트레이스를 수집하고 회귀 테스트 게이트를 구성합니다."
+    ],
+    "examplePrompt": "최근 실패한 에이전트 트레이스를 분석하고 회귀 테스트로 추가해줘.",
+    "usageNote": "",
+    "stars": 1208,
+    "forks": 141,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "zoetrope",
+    "name": "zoetrope",
+    "github": "https://github.com/furkankly/zoetrope",
+    "description": "Claude Code 또는 Codex 세션을 터미널이나 브라우저에서 라이브 플로우 그래프로 시각화해 주는 도구입니다.",
+    "longDescription": "에이전트가 생성한 세션 트랜스크립트를 읽어 메인 에이전트, 하위 에이전트, 실행 중인 도구들을 실시간 그래프로 그려주며 완료된 실행은 타임스탬프에 맞춰 재생할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Rust",
+      "TUI",
+      "Claude Code",
+      "Agent Visualization",
+      "WASM"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "zoetrope.furkankly.dev",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Rust (선택 사항)"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "Homebrew를 이용한 설치",
+        "command": "brew install furkankly/tap/zoetrope",
+        "note": "macOS 및 Linux 환경에서 Homebrew로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Homebrew 또는 Cargo를 통해 zoetrope를 설치합니다.",
+      "Claude Code 또는 Codex 세션 로그 파일 경로를 지정해 실행합니다.",
+      "터미널 또는 웹 브라우저에서 라이브 플로우 그래프를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1119,
+    "forks": 81,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "pup",
+    "name": "pup",
+    "github": "https://github.com/DataDog/pup",
+    "description": "AI 에이전트와 개발자가 Datadog 플랫폼의 200개 이상 명령어를 CLI로 다룰 수 있게 해주는 동반자 도구입니다.",
+    "longDescription": "Datadog의 다양한 제품 영역을 아우르는 포괄적인 AI 에이전트 친화적 CLI를 제공하여 자율주행 에이전트가 인프라 및 모니터링 데이터에 쉽게 접근하도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "Datadog",
+      "Rust",
+      "Observability",
+      "AI Agent"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.datadoghq.com",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Rust (개발 시)"
+    ],
+    "supportedAgents": [
+      "AI Agent"
+    ],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl -fsSL https://raw.githubusercontent.com/DataDog/pup/main/install.sh | sh",
+        "note": "macOS, Linux, Windows 환경에서 설치 스크립트를 다운로드하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 통해 시스템에 Pup CLI를 설치합니다.",
+      "Datadog 계정 및 API 키를 구성합니다.",
+      "AI 에이전트 또는 터미널을 통해 Datadog 명령어와 상호작용합니다."
+    ],
+    "examplePrompt": "Datadog CLI를 통해 최근 오류 로그를 요약해줘.",
+    "usageNote": "",
+    "stars": 1036,
+    "forks": 135,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "httpdbg",
+    "name": "httpdbg",
+    "github": "https://github.com/cle-b/httpdbg",
+    "description": "파이썬 프로그램 내의 HTTP(S) 클라이언트 및 서버 요청을 쉽게 디버깅할 수 있는 개발 도구입니다.",
+    "longDescription": "기존 파이썬 실행 명령어를 `pyhttpdbg`로 대체하는 것만으로 HTTP/1.0, HTTP/1.1, HTTP/2 요청을 기록하고 웹 UI를 통해 간편하게 검사할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "HTTP",
+      "Debug",
+      "REST API",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://httpdbg.readthedocs.io/",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T07:04:16.128Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip을 이용한 설치",
+        "command": "pip install httpdbg",
+        "note": "파이썬 패키지 관리자를 통해 httpdbg를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 패키지를 설치합니다.",
+      "파이썬 프로그램을 실행할 때 `pyhttpdbg` 명령어를 사용합니다.",
+      "브라우저에서 지정된 로컬 주소로 접속하여 HTTP 요청 내역을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 907,
+    "forks": 28,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
     "id": "docker-homelab",
     "name": "docker-homelab",
     "github": "https://github.com/cbirkenbeul/docker-homelab",
