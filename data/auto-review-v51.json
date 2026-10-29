@@ -1,7 +1,91 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-29T05:06:31.776Z",
+  "updatedAt": "2026-10-29T06:07:19.237Z",
   "items": [
+    {
+      "id": "docker-practice",
+      "name": "docker_practice",
+      "github": "https://github.com/yeasy/docker_practice",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.491Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "docker-practice",
+        "name": "docker_practice",
+        "github": "https://github.com/yeasy/docker_practice",
+        "description": "도커와 컨테이너 기술을 쉽게 배우는 입문 가이드북",
+        "longDescription": "도커 엔진 최신 버전을 기반으로 컨테이너 기술의 기초부터 실무 활용까지 포괄적으로 다루는 오픈소스 가이드북입니다. 다양한 실습 예제와 모범 사례를 제공하여 개발자와 엔지니어가 컨테이너 환경을 빠르게 구축할 수 있도록 돕습니다.",
+        "category": "교육·학습",
+        "tags": [
+          "도커",
+          "데브옵스",
+          "컨테이너"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://yeasy.gitbook.io/docker_practice/",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "mdPress"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "로컬 실행",
+            "command": "brew tap yeasy/tap && brew install mdpress\nmdpress serve",
+            "note": "mdPress를 설치하고 로컬 문서 서버를 구동합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하거나 온라인 GitBook을 통해 문서를 엽니다.",
+          "원하는 Docker 및 Kubernetes 학습 장을 선택합니다.",
+          "제공되는 실습 예제를 로컬 환경에 적용해 봅니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "온라인 읽기 및 PDF 다운로드를 지원합니다.",
+        "stars": 26330,
+        "forks": 5776,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:53.245Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-29T06:06:57.630Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-29T06:07:03.982Z"
+    },
     {
       "id": "windmill",
       "name": "Windmill",
@@ -12,19 +96,19 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-10-29T05:06:18.277Z",
-      "sourceRun": "2026-10-29T14",
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
       "tool": {
         "id": "windmill",
         "name": "Windmill",
         "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우와 AI 에이전트를 개발하고 자체 호스팅할 수 있는 오픈소스 플랫폼",
-        "longDescription": "다양한 프로그래밍 언어로 스크립트를 작성하여 Git과 동기화하고 이를 UI, API, 크론 잡, AI 에이전트로 자동 변환합니다. 빠르고 확장 가능한 자체 호스팅 오케스트레이션 기능을 제공합니다.",
+        "description": "스크립트와 워크플로우를 구축하는 고성능 자가 호스팅 플랫폼입니다.",
+        "longDescription": "다양한 프로그래밍 언어로 코드를 작성하여 API, Cron 잡, 대화형 UI 등으로 자동 변환할 수 있는 개발자 중심의 오픈소스 플랫폼입니다. 복잡한 데이터 파이프라인과 자동화 워크플로우를 구축하는 데 활용됩니다.",
         "category": "업무 자동화",
         "tags": [
           "워크플로우",
-          "AI 에이전트",
-          "자체 호스팅"
+          "자동화",
+          "자가 호스팅"
         ],
         "platforms": [
           "Web",
@@ -38,22 +122,25 @@
         "website": "https://windmill.dev",
         "featured": 9,
         "added": "2026-10-29",
-        "addedAt": "2026-10-29T05:04:10.306Z",
-        "requirements": [],
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
         "supportedAgents": [],
         "install": [],
         "usageSteps": [
-          "인스턴스를 자체 호스팅 환경에 배포합니다.",
-          "Python, TypeScript, Go 등의 언어로 스크립트를 작성합니다.",
-          "워크플로우 및 AI 에이전트 파이프라인으로 조합합니다."
+          "Docker를 사용하여 Windmill 인스턴스를 실행합니다.",
+          "웹 UI 또는 Git 연동을 통해 스크립트와 워크플로우를 작성합니다.",
+          "필요한 언어로 코드를 구현하고 앱이나 AI 에이전트와 조합합니다."
         ],
         "examplePrompt": "",
         "usageNote": "",
-        "stars": 18309,
+        "stars": 18312,
         "forks": 1128,
         "starsUpdatedAt": "2026-10-29"
       },
-      "licenseEvidenceCheckedAt": "2026-10-29T05:06:19.003Z",
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:53.661Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -66,7 +153,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-10-29T05:06:22.679Z",
+      "documentEvidenceCheckedAt": "2026-10-29T06:06:58.065Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -76,7 +163,7 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-10-29T05:06:28.333Z"
+      "recheckedAt": "2026-10-29T06:07:05.009Z"
     },
     {
       "id": "paradev",
@@ -88,19 +175,19 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-10-29T05:06:18.278Z",
-      "sourceRun": "2026-10-29T14",
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
       "tool": {
         "id": "paradev",
         "name": "Paradev",
         "github": "https://github.com/ParadevAI/Paradev",
-        "description": "100개 이상의 코딩 에이전트를 병렬 오케스트레이션하는 에이전트 기반 IDE",
-        "longDescription": "Claude Code, Codex 등 다양한 CLI 코딩 에이전트를 터미널, 코드 리뷰, 브라우저 미리보기 기능과 함께 하나의 작업 공간에서 통합 관리할 수 있습니다. 100개 이상의 코딩 에이전트를 병렬로 오케스트레이션할 수 있는 기능을 제공합니다.",
+        "description": "수십 개의 코딩 에이전트를 병렬로 오케스트레이션할 수 있는 AI 에이전트 IDE입니다.",
+        "longDescription": "Claude Code, Codex 등 다양한 CLI 기반 AI 코딩 에이전트를 하나의 통합된 작업장에서 터미널, 코드 리뷰, 브라우저 미리보기와 함께 병렬로 실행할 수 있는 개발자 도구입니다. macOS 및 실험적 Linux 버전을 지원합니다.",
         "category": "AI 에이전트",
         "tags": [
-          "AI 에이전트",
-          "IDE",
-          "개발 도구"
+          "AI 코딩",
+          "에이전트 오케스트레이션",
+          "IDE"
         ],
         "platforms": [
           "macOS",
@@ -112,25 +199,31 @@
         "website": "https://paradev.com",
         "featured": 9,
         "added": "2026-10-29",
-        "addedAt": "2026-10-29T05:04:10.306Z",
+        "addedAt": "2026-10-29T06:04:14.059Z",
         "requirements": [],
         "supportedAgents": [
           "Claude Code",
           "Codex"
         ],
-        "install": [],
+        "install": [
+          {
+            "title": "macOS 데스크톱 앱 다운로드",
+            "command": "curl 또는 릴리즈 페이지에서 DMG 파일 다운로드",
+            "note": "Apple Silicon 또는 Intel용 데스크톱 앱을 설치합니다."
+          }
+        ],
         "usageSteps": [
           "데스크톱 앱을 다운로드하여 설치합니다.",
-          "선호하는 코딩 에이전트 구독을 연결합니다.",
-          "작업 공간에서 여러 에이전트를 병렬로 실행하고 코드를 검토합니다."
+          "사용 중인 AI 코딩 에이전트 구독 키나 CLI를 연동합니다.",
+          "여러 에이전트를 병렬로 실행하여 코드 편집과 리뷰를 진행합니다."
         ],
-        "examplePrompt": "작업 공간에서 에이전트를 실행하여 병렬로 코드를 수정해 주세요.",
-        "usageNote": "",
-        "stars": 15698,
+        "examplePrompt": "현재 작업 중인 브랜치에서 버그를 분석하고 수정 에이전트를 실행해줘",
+        "usageNote": "macOS 및 실험적 Linux 버전을 지원합니다.",
+        "stars": 15701,
         "forks": 1402,
         "starsUpdatedAt": "2026-10-29"
       },
-      "licenseEvidenceCheckedAt": "2026-10-29T05:06:19.239Z",
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:53.957Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -143,7 +236,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-10-29T05:06:23.206Z",
+      "documentEvidenceCheckedAt": "2026-10-29T06:06:58.794Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -153,11 +246,11 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-10-29T05:06:29.090Z"
+      "recheckedAt": "2026-10-29T06:07:06.492Z"
     },
     {
       "id": "get-jobs",
-      "name": "Get Jobs",
+      "name": "get_jobs",
       "github": "https://github.com/loks666/get_jobs",
       "license": "확인 필요",
       "status": "pending_review",
@@ -165,22 +258,21 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-10-29T05:06:18.278Z",
-      "sourceRun": "2026-10-29T14",
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
       "tool": {
         "id": "get-jobs",
-        "name": "Get Jobs",
+        "name": "get_jobs",
         "github": "https://github.com/loks666/get_jobs",
-        "description": "주요 구직 플랫폼의 이력서 제출과 구직 과정을 자동화하는 AI 기반 도구",
-        "longDescription": "다양한 구직 플랫폼을 지원하며, AI 분석을 활용하여 구직 활동을 효율적으로 보조합니다. Java 기반으로 개발되어 주요 취업 포털에서의 반복적인 업무를 자동화합니다.",
+        "description": "중국 주요 구직 플랫폼의 이력서 자동 제출을 지원하는 AI 구직 보조 도구입니다.",
+        "longDescription": "이 프로젝트는 Boss, 전성무우 등 주요 채용 플랫폼을 대상으로 구직 과정을 자동화하는 오픈소스 스크립트입니다. 이력서 관리 및 AI 기반 매칭 분석 기능을 통해 구직 활동의 효율성을 높여줍니다.",
         "category": "업무 자동화",
         "tags": [
-          "업무자동화",
+          "구직자동화",
           "이력서",
-          "Java"
+          "AI에이전트"
         ],
         "platforms": [
-          "Web",
           "Linux",
           "macOS",
           "Windows"
@@ -191,22 +283,25 @@
         "website": "https://loks666.github.io/get_jobs/",
         "featured": 9,
         "added": "2026-10-29",
-        "addedAt": "2026-10-29T05:04:10.306Z",
-        "requirements": [],
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Java",
+          "Spring Boot"
+        ],
         "supportedAgents": [],
         "install": [],
         "usageSteps": [
-          "저장소를 클론하고 프로젝트를 설정합니다.",
-          "구직 정보 및 이력서 설정을 입력합니다.",
-          "자동 지원 스크립트를 실행합니다."
+          "저장소 코드를 클론하고 Java 개발 환경을 설정합니다.",
+          "설정 파일에 구직 플랫폼 계정 및 이력서 정보를 입력합니다.",
+          "자동 지원 스크립트를 실행하여 채용 공고 지원을 시작합니다."
         ],
         "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9348,
+        "usageNote": "개인 구직 목적에 맞게 설정 및 사용해야 합니다.",
+        "stars": 9352,
         "forks": 1074,
         "starsUpdatedAt": "2026-10-29"
       },
-      "licenseEvidenceCheckedAt": "2026-10-29T05:06:19.435Z",
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:54.234Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -219,7 +314,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-10-29T05:06:23.533Z",
+      "documentEvidenceCheckedAt": "2026-10-29T06:06:59.196Z",
       "documentEvidence": {
         "license": "MIT",
         "verifiedLicense": null,
@@ -229,7 +324,973 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-10-29T05:06:30.112Z"
+      "recheckedAt": "2026-10-29T06:07:07.661Z"
+    },
+    {
+      "id": "osx-proxmox",
+      "name": "OSX-PROXMOX",
+      "github": "https://github.com/luchina-gabriel/OSX-PROXMOX",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "osx-proxmox",
+        "name": "OSX-PROXMOX",
+        "github": "https://github.com/luchina-gabriel/OSX-PROXMOX",
+        "description": "Proxmox VE에서 macOS를 쉽게 설치할 수 있는 스크립트",
+        "longDescription": "Proxmox VE 가상화 플랫폼 위에서 macOS를 손쉽게 구동할 수 있도록 지원하는 원클릭 설치 스크립트 및 가이드 모음입니다. AMD 및 Intel 프로세서를 모두 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Proxmox",
+          "macOS",
+          "가상화"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://osx-proxmox.com",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Proxmox VE 7.X ~ 9.X"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Proxmox 셸 설치",
+            "command": "/bin/bash -c \"$(curl -fsSL https://install.osx-proxmox.com)\"",
+            "note": "Proxmox 웹 콘솔의 셸에서 명령어를 실행하여 설치를 진행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Proxmox VE를 클린 설치합니다.",
+          "Proxmox 웹 콘솔의 셸에 접속합니다.",
+          "설치 스크립트 명령어를 복사하여 실행하고 안내에 따릅니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "AMD 및 Intel 프로세서 모두 지원합니다.",
+        "stars": 7870,
+        "forks": 635,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:54.421Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-29T06:06:59.955Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-29T06:07:19.237Z"
+    },
+    {
+      "id": "cloud-hypervisor",
+      "name": "Cloud Hypervisor",
+      "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "cloud-hypervisor",
+        "name": "Cloud Hypervisor",
+        "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
+        "description": "현대적인 클라우드 워크로드와 가상머신 관리를 위해 Rust로 작성된 고성능 가상화 모니터입니다.",
+        "longDescription": "KVM을 기반으로 하며 CPU, 메모리, 장치 핫플러그를 지원하고 가벼운 설치 공간과 뛰어난 보안성을 갖춘 오픈소스 가상머신 모니터(VMM)입니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Rust",
+          "KVM",
+          "가상화",
+          "VMM",
+          "클라우드"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.cloudhypervisor.org",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Linux KVM 지원 호스트"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "미리 빌드된 바이너리를 다운로드하거나 소스 코드로부터 빌드합니다.",
+          "Linux 커널 및 디스크 이미지를 준비합니다.",
+          "Cloud Hypervisor 명령어를 통해 게스트 가상머신을 부팅합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "보안과 성능이 중요한 클라우드 환경에 최적화되어 있습니다.",
+        "stars": 6440,
+        "forks": 819,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:54.688Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-29T06:07:00.765Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "unikraft",
+      "name": "Unikraft",
+      "github": "https://github.com/unikraft/unikraft",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "unikraft",
+        "name": "Unikraft",
+        "github": "https://github.com/unikraft/unikraft",
+        "description": "최고 수준의 성능, 보안 및 자원 효율성을 제공하는 차세대 클라우드 네이티브 유니커널 개발 키트입니다.",
+        "longDescription": "초경량 유니커널 기반의 가상머신을 빌드하고 실행할 수 있도록 돕는 도구 모음으로, 마이크로서비스와 클라우드 네이티브 애플리케이션의 성능을 극대화합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Unikernel",
+          "클라우드 네이티브",
+          "가상화",
+          "성능",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://unikraft.org",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "KraftKit CLI 설치",
+            "command": "curl -sSfL https://get.kraftkit.sh | sh",
+            "note": "macOS, Linux, Windows에서 KraftKit을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "KraftKit CLI를 설치합니다.",
+          "초경량 유니커널 가상머신을 실행합니다: `kraft run unikraft.org/helloworld:latest`",
+          "인스턴스 상태를 관리하고 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "최적화된 컨테이너 및 유니커널 배포에 적합합니다.",
+        "stars": 3910,
+        "forks": 1528,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:55.006Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-29T06:07:01.463Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "아웃라인, 마인드맵, 스프레드시트의 장점을 결합한 자유 형식의 계층형 데이터 조직화 도구입니다.",
+        "longDescription": "복잡한 데이터, 할 일 목록, 브레인스토밍 아이디어, 프로젝트 계획 등을 다차원적이고 체계적으로 관리할 수 있는 가벼운 데스크톱 생산성 소프트웨어입니다.",
+        "category": "지식·검색",
+        "tags": [
+          "스프레드시트",
+          "마인드맵",
+          "지식 관리",
+          "생산성",
+          "데스크톱 앱"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리즈 페이지에서 운영체제에 맞는 사전 빌드된 바이너리를 다운로드합니다.",
+          "프로그램을 실행하고 새로운 계층형 스프레드시트 문서를 생성합니다.",
+          "표 형식이나 계층 구조로 아이디어와 데이터를 입력하고 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS의 경우 최초 실행 시 보안 설정에서 열기를 허용해야 할 수 있습니다.",
+        "stars": 3179,
+        "forks": 223,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:55.260Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-29T06:07:02.185Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "geopulse",
+      "name": "GeoPulse",
+      "github": "https://github.com/tess1o/geopulse",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "geopulse",
+        "name": "GeoPulse",
+        "github": "https://github.com/tess1o/geopulse",
+        "description": "자체 호스팅이 가능한 위치 타임라인 플랫폼이자 Google Timeline의 오픈소스 대안입니다.",
+        "longDescription": "OwnTracks, Traccar 등 다양한 소스에서 수집한 원시 GPS 데이터를 활용하여 머문 장소, 이동 경로, 활동 패턴을 자동으로 분석하고 검색 가능한 타임라인으로 시각화해 주는 자가 호스팅 서비스입니다.",
+        "category": "지식·검색",
+        "tags": [
+          "GPS",
+          "타임라인",
+          "자가 호스팅",
+          "Docker",
+          "위치 추적"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://geopulse.cc",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose 설정 및 실행",
+            "command": "mkdir geopulse && cd geopulse\ncurl -L -o .env https://raw.githubusercontent.com/tess1o/GeoPulse/main/.env.example\ncurl -L -o docker-compose.yml https://raw.githubusercontent.com/tess1o/GeoPulse/main/docker-compose.yml\ndocker compose up -d",
+            "note": "디렉토리를 생성하고 환경 파일 및 컴포즈 파일을 다운로드한 뒤 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트 디렉토리를 만들고 설정 파일을 다운로드합니다.",
+          "docker-compose.yml 파일을 실행하여 서비스를 백그라운드에 구동합니다.",
+          "웹 브라우저에서 `http://localhost:5555`로 접속하여 위치 타임라인을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "Immich 및 Memos와 연동하여 사진과 메모를 지도 히스토리에 함께 표시할 수 있습니다.",
+        "stars": 1466,
+        "forks": 66,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:55.590Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-29T06:07:02.547Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "proxcenter-ui",
+      "name": "ProxCenter",
+      "github": "https://github.com/adminsyspro/proxcenter-ui",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "proxcenter-ui",
+        "name": "ProxCenter",
+        "github": "https://github.com/adminsyspro/proxcenter-ui",
+        "description": "Proxmox VE 환경을 위한 직관적이고 현대적인 VMware vCenter 대안 관리 플랫폼입니다.",
+        "longDescription": "여러 Proxmox VE 클러스터와 Proxmox Backup Server 인스턴스를 단일 대시보드에서 모니터링, 관리, 최적화할 수 있는 기업용 자가 호스팅 웹 인터페이스입니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Proxmox",
+          "클러스터",
+          "모니터링",
+          "자가 호스팅",
+          "Docker"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.proxcenter.io",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Docker Engine 24+",
+          "Docker Compose v2"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "커뮤니티 에디션 설치",
+            "command": "curl -fsSL https://proxcenter.io/install/community | sudo bash",
+            "note": "자동 설치 스크립트를 통해 Docker 스택과 필수 볼륨을 구성합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 실행하여 ProxCenter 및 관련 컨테이너를 배포합니다.",
+          "웹 브라우저를 통해 `http://your-server:3000`에 접속합니다.",
+          "관리자 계정을 생성하고 Proxmox VE 및 Backup Server 클러스터를 연동합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "Proxmox VE 8.x 및 9.x 버전을 지원합니다.",
+        "stars": 1745,
+        "forks": 116,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:55.848Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-29T06:07:02.893Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "awesome-homelab",
+      "name": "awesome-homelab",
+      "github": "https://github.com/AwesomeHomelab/awesome-homelab",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "awesome-homelab",
+        "name": "awesome-homelab",
+        "github": "https://github.com/AwesomeHomelab/awesome-homelab",
+        "description": "홈랩 애호가를 위한 엄선된 오픈소스 애플리케이션 및 홈서버 도구 모음입니다.",
+        "longDescription": "개인 서버 및 홈랩 환경을 구축하는 데 유용한 다양한 오픈소스 프로젝트를 카테고리별로 정리한 큐레이션 리스트입니다. 인프라, 미디어 서버, AI 등 다양한 목적의 셀프호스팅 소프트웨어를 쉽게 찾아볼 수 있습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "홈랩",
+          "셀프호스팅",
+          "오픈소스",
+          "큐레이션"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.awesome-homelab.com",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "웹사이트 또는 저장소에서 원하는 카테고리의 프로젝트를 탐색합니다.",
+          "목적에 맞는 오픈소스 애플리케이션의 상세 링크를 확인합니다.",
+          "해당 프로젝트의 공식 가이드에 따라 홈랩 환경에 배포합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "소프트웨어가 아닌 유용한 오픈소스 목록을 제공하는 가이드 저장소입니다.",
+        "stars": 2629,
+        "forks": 143,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:56.067Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "launchpad",
+      "name": "launchpad",
+      "github": "https://github.com/timothystewart6/launchpad",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "launchpad",
+        "name": "launchpad",
+        "github": "https://github.com/timothystewart6/launchpad",
+        "description": "Ansible, Kubernetes, Docker 등 홈랩 구축을 위한 빠른 시작 템플릿 모음입니다.",
+        "longDescription": "홈랩 환경을 구성하고 자동화하는 데 필요한 다양한 설정 파일과 퀵 스타터 스크립트를 제공합니다. TechnoTim 커뮤니티에서 관리하며 개발 및 인프라 학습을 돕습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Docker",
+          "Kubernetes",
+          "Ansible",
+          "홈랩",
+          "자동화"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://technotim.com",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Docker",
+          "Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소의 디렉토리 구조를 탐색하여 필요한 템플릿을 확인합니다.",
+          "원하는 도구(Docker, Ansible 등)의 설정 파일을 로컬 환경에 다운로드합니다.",
+          "가이드에 맞춰 설정을 수정하고 배포를 진행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "각 폴더별로 독립된 설정 및 문서가 포함되어 있습니다.",
+        "stars": 1737,
+        "forks": 493,
+        "starsUpdatedAt": "2026-10-29"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-29T06:06:56.304Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "pi-hosted",
+      "name": "pi-hosted",
+      "github": "https://github.com/novaspirit/pi-hosted",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "pi-hosted",
+        "name": "pi-hosted",
+        "github": "https://github.com/novaspirit/pi-hosted",
+        "description": "Raspberry Pi 및 리눅스 서버에서 Docker와 Portainer를 활용한 셀프호스팅 템플릿입니다.",
+        "longDescription": "라즈베리 파이 및 홈서버 환경에서 다양한 서버 애플리케이션을 Docker와 Portainer를 통해 쉽게 설치하고 관리할 수 있도록 돕는 템플릿 모음입니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Docker",
+          "Portainer",
+          "라즈베리파이",
+          "셀프호스팅",
+          "홈랩"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/novaspirit/pi-hosted",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Docker",
+          "Portainer"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 설치",
+            "command": "wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/install_docker.sh | bash",
+            "note": "Docker를 설치하고 현재 사용자를 docker 그룹에 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "제공된 스크립트를 실행하여 Docker를 설치합니다.",
+          "시스템을 재부팅하거나 로그아웃 후 다시 로그인합니다.",
+          "Portainer 템플릿 URL을 연동하여 원하는 서버 애플리케이션을 원클릭으로 배포합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "설치 후 변경 사항 적용을 위해 재부팅이 필요할 수 있습니다.",
+        "stars": 1414,
+        "forks": 370,
+        "starsUpdatedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "homedockos",
+      "name": "HomeDockOS",
+      "github": "https://github.com/BansheeTech/HomeDockOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "homedockos",
+        "name": "HomeDockOS",
+        "github": "https://github.com/BansheeTech/HomeDockOS",
+        "description": "개인 클라우드 및 홈서버 운영을 위한 직관적이고 강력한 셀프호스팅 운영체제입니다.",
+        "longDescription": "800개 이상의 셀프호스팅 앱과 브라우저 기반의 가상 데스크톱 환경을 제공하여 개인이 보유한 하드웨어에서 손쉽게 사설 클라우드를 구축할 수 있도록 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "셀프호스팅",
+          "개인클라우드",
+          "Docker",
+          "홈서버",
+          "웹OS"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.homedock.cloud",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "지원하는 하드웨어 및 운영체제에 HomeDock OS 환경을 준비합니다.",
+          "컨테이너 기반으로 서비스를 실행하여 웹 인터페이스에 접속합니다.",
+          "앱 스토어를 통해 원하는 셀프호스팅 애플리케이션을 추가합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "다양한 아키텍처와 플랫폼을 지원하는 개인용 클라우드 OS입니다.",
+        "stars": 925,
+        "forks": 58,
+        "starsUpdatedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "docker-homelab",
+      "name": "docker-homelab",
+      "github": "https://github.com/cbirkenbeul/docker-homelab",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15"
+    },
+    {
+      "id": "lytenyte",
+      "name": "lytenyte",
+      "github": "https://github.com/1771-Technologies/lytenyte",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "lytenyte",
+        "name": "lytenyte",
+        "github": "https://github.com/1771-Technologies/lytenyte",
+        "description": "의존성 없이 가벼우면서도 강력한 기능을 제공하는 고성능 React 데이터 그리드입니다.",
+        "longDescription": "웹 애플리케이션에서 대용량 데이터를 효율적으로 다룰 수 있도록 설계된 제로 의존성의 경량 React 데이터 그리드 라이브러리입니다. 150개 이상의 엔터프라이즈급 기능을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "React",
+          "TypeScript",
+          "데이터그리드",
+          "UI컴포넌트",
+          "프론트엔드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.1771technologies.com/",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Node.js",
+          "React"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "코어 패키지 설치",
+            "command": "npm install --save @1771technologies/lytenyte-core",
+            "note": "프로젝트에 LyteNyte Grid 코어 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "패키지 관리자를 통해 라이브러리를 설치합니다.",
+          "컴포넌트에서 데이터 그리드 모듈을 임포트합니다.",
+          "선언형 API를 사용하여 데이터 소스와 정렬·필터링 옵션을 설정합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "PRO 버전 사용 시 별도의 라이선스가 필요할 수 있으며, 미적용 시 워터마크가 표시됩니다.",
+        "stars": 1031,
+        "forks": 54,
+        "starsUpdatedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "react-virtualized-auto-sizer",
+      "name": "react-virtualized-auto-sizer",
+      "github": "https://github.com/bvaughn/react-virtualized-auto-sizer",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15"
+    },
+    {
+      "id": "journiv-app",
+      "name": "journiv-app",
+      "github": "https://github.com/journiv/journiv-app",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "journiv-app",
+        "name": "journiv-app",
+        "github": "https://github.com/journiv/journiv-app",
+        "description": "감정 추적과 심층 검색을 지원하는 셀프호스팅 기반의 프라이빗 저널링 애플리케이션입니다.",
+        "longDescription": "개인 일기 및 감정을 안전하게 기록할 수 있는 셀프호스팅 앱입니다. 미디어 업로드, 프롬프트 기반 글쓰기, 데이터 분석 기능을 깔끔하고 미니멀한 웹 인터페이스로 제공합니다.",
+        "category": "생산성",
+        "tags": [
+          "셀프호스팅",
+          "일기",
+          "노트",
+          "개인정보보호",
+          "웹앱"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.journiv.com",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker 환경을 준비합니다.",
+          "공식 가이드에 따라 컨테이너를 실행합니다.",
+          "웹 브라우저를 통해 접속하여 프라이빗 저널링을 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "현재 베타 버전으로 개발 중이므로 정기적인 데이터 백업을 권장합니다.",
+        "stars": 1244,
+        "forks": 54,
+        "starsUpdatedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "labca",
+      "name": "labca",
+      "github": "https://github.com/hakwerk/labca",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "labca",
+        "name": "labca",
+        "github": "https://github.com/hakwerk/labca",
+        "description": "Let's Encrypt ACME 오픈소스 구현을 기반으로 사내 테스트 환경용 사설 인증기관을 구축하는 도구입니다.",
+        "longDescription": "홈랩 및 내부 테스트 네트워크에서 TLS 인증서를 자동으로 발급하고 관리할 수 있도록 지원하는 프라이빗 ACME 인증기관 서버입니다. 웹 GUI를 통해 손쉽게 관리할 수 있습니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "ACME",
+          "SSL",
+          "TLS",
+          "인증서",
+          "홈랩"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://lab-ca.net",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "Docker",
+          "Boulder Engine"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "내부 네트워크의 DNS에 LabCA 호스트 이름을 설정합니다.",
+          "Boulder 엔진 기반의 컨테이너 환경을 배포합니다.",
+          "웹 GUI에 접속하여 내부 서비스용 인증서를 발급받고 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "라즈베리 파이 등 일부 저사양 아키텍처에서는 백엔드 엔진 실행이 제한될 수 있습니다.",
+        "stars": 798,
+        "forks": 59,
+        "starsUpdatedAt": "2026-10-29"
+      }
+    },
+    {
+      "id": "networkoptimizer",
+      "name": "NetworkOptimizer",
+      "github": "https://github.com/Ozark-Connect/NetworkOptimizer",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-29T06:06:52.492Z",
+      "sourceRun": "2026-10-29T15",
+      "tool": {
+        "id": "networkoptimizer",
+        "name": "NetworkOptimizer",
+        "github": "https://github.com/Ozark-Connect/NetworkOptimizer",
+        "description": "UniFi 네트워크 환경을 위한 자체 호스팅 최적화, 모니터링 및 보안 감사 도구입니다.",
+        "longDescription": "무선 네트워크 성능 점수 산정, 채널 최적화, 고급 DNS 및 방화벽 보안 검사, 속도 테스트 서버 기능을 통합 제공하여 네트워크 관리 효율을 높여주는 유틸리티입니다.",
+        "category": "네트워크",
+        "tags": [
+          "UniFi",
+          "네트워크모니터링",
+          "셀프호스팅",
+          "보안",
+          "Docker"
+        ],
+        "platforms": [
+          "Web",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://ozarkconnect.net/network-optimizer",
+        "featured": 9,
+        "added": "2026-10-29",
+        "addedAt": "2026-10-29T06:04:14.059Z",
+        "requirements": [
+          "UniFi Console API",
+          "Docker 또는 Windows 호스트"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "UniFi 콘솔 API 접근 권한을 준비합니다.",
+          "Docker 또는 지원되는 호스트 환경에 NetworkOptimizer를 배포합니다.",
+          "대시보드에 접속하여 네트워크 성능 및 보안 상태를 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "시계열 모니터링 기능을 사용하려면 InfluxDB 등 추가 호스팅 환경이 필요할 수 있습니다.",
+        "stars": 1213,
+        "forks": 41,
+        "starsUpdatedAt": "2026-10-29"
+      }
     },
     {
       "id": "velxio",
@@ -311,79 +1372,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-29T05:06:30.962Z"
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-29T05:06:18.278Z",
-      "sourceRun": "2026-10-29T14",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "스프레드시트, 마인드맵, 아웃라이너 기능을 결합한 계층형 데이터 조직화 도구",
-        "longDescription": "할 일 목록, 일정 관리, 브레인스토밍 등 복잡하고 계층적인 데이터를 한눈에 정리할 수 있도록 설계된 데스크톱 애플리케이션입니다. 스프레드시트와 마인드맵의 장점을 결합하여 자유 형식으로 데이터를 관리할 수 있습니다.",
-        "category": "생산성",
-        "tags": [
-          "생산성",
-          "스프레드시트",
-          "마인드맵"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-10-29",
-        "addedAt": "2026-10-29T05:04:10.306Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "릴리즈 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
-          "애플리케이션을 실행하고 새 문서를 생성합니다.",
-          "계층 구조로 아이디어와 데이터를 입력하고 정리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3179,
-        "forks": 223,
-        "starsUpdatedAt": "2026-10-29"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-29T05:06:19.941Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-29T05:06:24.528Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-29T05:06:31.776Z"
     },
     {
       "id": "cultivation-world-simulator",
@@ -11861,81 +12849,6 @@
       }
     },
     {
-      "id": "docker-practice",
-      "name": "Docker 從入門到實踐",
-      "github": "https://github.com/yeasy/docker_practice",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-28T15:08:03.561Z",
-      "sourceRun": "2026-10-29T00",
-      "tool": {
-        "id": "docker-practice",
-        "name": "Docker 從入門到實踐",
-        "github": "https://github.com/yeasy/docker_practice",
-        "description": "최신 Docker 컨테이너 기술과 실제 DevOps 사례를 다루는 실용 가이드북입니다.",
-        "longDescription": "Docker와 컨테이너 기술의 기초부터 실무 활용까지 다루며, 풍부한 예제와 함께 지속적인 업데이트를 제공합니다. 명령어, 이미지 관리, 오케스트레이션 등 핵심 내용을 체계적으로 학습할 수 있습니다.",
-        "category": "교육·학습",
-        "tags": [
-          "Docker",
-          "컨테이너",
-          "DevOps",
-          "Kubernetes",
-          "가이드북"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://yeasy.gitbook.io/docker_practice/",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T15:04:14.629Z",
-        "requirements": [
-          "mdPress"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "mdPress 설치 및 실행",
-            "command": "brew tap yeasy/tap && brew install mdpress\nmdpress serve",
-            "note": "로컬 환경에서 책을 서빙하기 위해 mdPress를 설치하고 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하거나 온라인 GitBook을 접속합니다.",
-          "mdPress를 사용하여 로컬에서 문서를 빌드하고 실행합니다.",
-          "각 장의 실제 DevOps 사례와 실습 코드를 따라 하며 학습합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "학습 및 참고용 문서 프로젝트입니다.",
-        "stars": 26329,
-        "forks": 5776,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T15:08:06.718Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
       "id": "cdk",
       "name": "CDK Container Penetration Toolkit",
       "github": "https://github.com/cdk-team/CDK",
@@ -20850,84 +21763,6 @@
       }
     },
     {
-      "id": "journiv-app",
-      "name": "Journiv",
-      "github": "https://github.com/journiv/journiv-app",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-28T02:06:14.677Z",
-      "sourceRun": "2026-10-28T11",
-      "tool": {
-        "id": "journiv-app",
-        "name": "Journiv",
-        "github": "https://github.com/journiv/journiv-app",
-        "description": "기분 추적, 프롬프트 일기, 미디어 업로드 등을 지원하는 셀프 호스팅 프라이빗 저널링 앱",
-        "longDescription": "Journiv는 개인 프라이버시를 최우선으로 하는 자체 호스팅 일기 애플리케이션입니다. 깔끔한 UI와 함께 기분 추적, 프롬프트 기반 글쓰기, 검색 및 분석 기능을 제공합니다.",
-        "category": "생산성",
-        "tags": [
-          "JavaScript",
-          "React",
-          "FastAPI",
-          "일기",
-          "셀프 호스팅"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.journiv.com",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T02:04:11.087Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker 및 관련 인프라를 준비합니다.",
-          "컨테이너를 배포하여 웹 인터페이스에 접속합니다.",
-          "프롬프트에 따라 일기를 작성하고 기분을 기록합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "베타 소프트웨어이므로 데이터 백업을 자주 수행하는 것이 좋습니다.",
-        "stars": 1244,
-        "forks": 55,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T02:06:16.912Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-28T02:06:21.972Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "inkstone",
       "name": "Inkstone",
       "github": "https://github.com/shuaiplus/inkstone",
@@ -29820,90 +30655,6 @@
       "sourceRun": "2026-10-27T17"
     },
     {
-      "id": "geopulse",
-      "name": "GeoPulse",
-      "github": "https://github.com/tess1o/geopulse",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T08:06:28.265Z",
-      "sourceRun": "2026-10-27T17",
-      "tool": {
-        "id": "geopulse",
-        "name": "GeoPulse",
-        "github": "https://github.com/tess1o/geopulse",
-        "description": "자체 위치 데이터를 수집하여 방문 장소와 이동 경로를 타임라인으로 시각화해주는 구글 타임라인의 오픈소스 대안입니다.",
-        "longDescription": "OwnTracks, Traccar 등 다양한 소스로부터 GPS 데이터를 수집해 이동 패턴을 분석하고, Immich 및 날씨 서비스와 연동해 지도 위에 사진과 날씨 정보를 함께 표시합니다.",
-        "category": "공간정보",
-        "tags": [
-          "GPS",
-          "위치 추적",
-          "타임라인",
-          "Docker",
-          "셀프호스팅"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://geopulse.cc",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T08:04:16.534Z",
-        "requirements": [
-          "Docker",
-          "Docker Compose"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "도커 컴포즈 설정 및 실행",
-            "command": "mkdir geopulse && cd geopulse && curl -L -o .env https://raw.githubusercontent.com/tess1o/GeoPulse/main/.env.example && curl -L -o docker-compose.yml https://raw.githubusercontent.com/tess1o/GeoPulse/main/docker-compose.yml && docker compose up -d",
-            "note": "설정 파일을 다운로드하고 컨테이너를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "디렉토리를 만들고 설정 파일을 다운로드합니다.",
-          "Docker Compose 명령어로 서비스를 시작합니다.",
-          "브라우저에서 `http://localhost:5555`로 접속하여 타임라인을 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1461,
-        "forks": 66,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T08:06:30.929Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T08:06:35.874Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "kedro",
       "name": "Kedro",
       "github": "https://github.com/kedro-org/kedro",
@@ -33625,331 +34376,6 @@
       "sourceRun": "2026-10-27T11"
     },
     {
-      "id": "osx-proxmox",
-      "name": "OSX-PROXMOX",
-      "github": "https://github.com/luchina-gabriel/OSX-PROXMOX",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T01:06:11.247Z",
-      "sourceRun": "2026-10-27T10",
-      "tool": {
-        "id": "osx-proxmox",
-        "name": "OSX-PROXMOX",
-        "github": "https://github.com/luchina-gabriel/OSX-PROXMOX",
-        "description": "Proxmox VE에서 macOS를 쉽게 설치하도록 돕는 가이드 및 자동화 스크립트",
-        "longDescription": "Intel 및 AMD 하드웨어 환경의 Proxmox VE에서 macOS 가상 머신을 손쉽게 구축할 수 있는 도구를 제공합니다. High Sierra부터 최신 버전까지 다양한 macOS 버전을 지원합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Proxmox",
-          "macOS",
-          "가상화"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://osx-proxmox.com",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T01:04:07.641Z",
-        "requirements": [
-          "Proxmox VE 7.x ~ 9.x"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "설치 스크립트 실행",
-            "command": "/bin/bash -c \"$(curl -fsSL https://install.osx-proxmox.com)\"",
-            "note": "Proxmox 웹 콘솔의 셸(Shell) 환경에서 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Proxmox VE를 신규 설치합니다.",
-          "Proxmox 웹 콘솔의 셸을 엽니다.",
-          "설치 스크립트를 복사하여 붙여넣고 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "AMD 및 Intel 시스템 모두 지원합니다.",
-        "stars": 7861,
-        "forks": 635,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T01:06:12.562Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T01:06:16.802Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T01:06:23.607Z"
-    },
-    {
-      "id": "unikraft",
-      "name": "Unikraft",
-      "github": "https://github.com/unikraft/unikraft",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T01:06:11.247Z",
-      "sourceRun": "2026-10-27T10",
-      "tool": {
-        "id": "unikraft",
-        "name": "Unikraft",
-        "github": "https://github.com/unikraft/unikraft",
-        "description": "최고 수준의 성능과 보안을 제공하는 차세대 클라우드 네이티브 유니커널 개발 키트입니다.",
-        "longDescription": "애플리케이션을 커널 라이브러리와 직접 번들링하여 불필요한 운영체제 오버헤드를 줄이고 초경량 가상 머신 환경을 구성할 수 있는 오픈소스 도구입니다. 고성능 컴퓨팅 및 마이크로서비스 환경에 최적화되어 있습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "유니커널",
-          "클라우드네이티브",
-          "가상화"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://unikraft.org",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T01:04:07.641Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "KraftKit 설치",
-            "command": "curl -sSfL https://get.kraftkit.sh | sh",
-            "note": "macOS, Linux, Windows 환경 공통 설치 명령어"
-          }
-        ],
-        "usageSteps": [
-          "KraftKit CLI를 설치합니다.",
-          "kraft run 명령어로 경량 유니커널 가상 머신을 실행합니다.",
-          "kraft ps 명령어로 인스턴스 상태를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "고성능 컴퓨팅 및 마이크로서비스 환경에 최적화되어 있습니다.",
-        "stars": 3907,
-        "forks": 1529,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T01:06:12.807Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T01:06:17.410Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T01:06:24.393Z"
-    },
-    {
-      "id": "proxcenter-ui",
-      "name": "ProxCenter",
-      "github": "https://github.com/adminsyspro/proxcenter-ui",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T01:06:11.247Z",
-      "sourceRun": "2026-10-27T10",
-      "tool": {
-        "id": "proxcenter-ui",
-        "name": "ProxCenter",
-        "github": "https://github.com/adminsyspro/proxcenter-ui",
-        "description": "Proxmox 환경을 위한 VMware vCenter 대안 오픈소스 관리 플랫폼입니다.",
-        "longDescription": "여러 Proxmox VE 클러스터와 Proxmox Backup Server 인스턴스를 단일 화면에서 모니터링, 관리, 최적화할 수 있는 현대적인 웹 인터페이스를 제공합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Proxmox",
-          "가상화",
-          "클러스터 관리",
-          "모니터링",
-          "Docker"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.proxcenter.io",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T01:04:07.641Z",
-        "requirements": [
-          "Docker Engine 24+",
-          "Docker Compose v2"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "커뮤니티 에디션 설치",
-            "command": "curl -sS https://proxcenter.io/install/community | sudo bash",
-            "note": "Docker 및 필수 스택을 자동으로 설정합니다."
-          }
-        ],
-        "usageSteps": [
-          "설치 스크립트를 실행하여 Docker 기반 스택을 구성합니다.",
-          "웹 브라우저를 통해 포트 3000에 접속합니다.",
-          "관리자 계정을 생성하고 Proxmox 클러스터를 연동합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "엔터프라이즈급 Proxmox 인프라 통합 관리에 적합합니다.",
-        "stars": 1741,
-        "forks": 116,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T01:06:13.250Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T01:06:18.322Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "lytenyte",
-      "name": "LyteNyte Grid",
-      "github": "https://github.com/1771-Technologies/lytenyte",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T01:06:11.247Z",
-      "sourceRun": "2026-10-27T10",
-      "tool": {
-        "id": "lytenyte",
-        "name": "LyteNyte Grid",
-        "github": "https://github.com/1771-Technologies/lytenyte",
-        "description": "종속성 없는 초고속 React 데이터 그리드 라이브러리입니다.",
-        "longDescription": "150개 이상의 엔터프라이즈급 기능을 제공하며 대규모 데이터를 처리할 때 뛰어난 성능을 발휘하는 가볍고 선언적인 React 그리드 컴포넌트입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "React",
-          "Data Grid",
-          "TypeScript",
-          "테이블",
-          "프론트엔드"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.1771technologies.com/",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T01:04:07.641Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NPM 패키지 설치 (Core)",
-            "command": "npm install --save @1771technologies/lytenyte-core",
-            "note": "코어 패키지를 프로젝트에 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트에 LyteNyte Grid 패키지를 설치합니다.",
-          "컴포넌트를 임포트하고 선언적 API를 사용하여 데이터를 전달합니다.",
-          "필터링, 정렬, 그룹화 등 필요한 엔터프라이즈 기능을 설정합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "PRO 버전의 경우 라이선스 없이 사용 시 워터마크가 표시됩니다.",
-        "stars": 1030,
-        "forks": 54,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T01:06:13.465Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T01:06:18.676Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "xen-orchestra",
       "name": "Xen Orchestra",
       "github": "https://github.com/vatesfr/xen-orchestra",
@@ -34170,73 +34596,6 @@
         "freeEvidence": "unverified",
         "notes": [
           "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "cloud-hypervisor",
-      "name": "Cloud Hypervisor",
-      "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T01:06:11.247Z",
-      "sourceRun": "2026-10-27T10",
-      "tool": {
-        "id": "cloud-hypervisor",
-        "name": "Cloud Hypervisor",
-        "github": "https://github.com/cloud-hypervisor/cloud-hypervisor",
-        "description": "현대 클라우드 워크로드에 특화된 Rust 기반의 경량 가상 머신 모니터(VMM)입니다.",
-        "longDescription": "CPU, 메모리, 장치 핫플러그를 지원하며 Windows 및 Linux 게스트를 구동할 수 있습니다. 보안에 강력한 초점을 맞추어 Rust 언어로 작성되었습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Rust",
-          "하이퍼바이저",
-          "클라우드",
-          "KVM",
-          "가상화"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.cloudhypervisor.org",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T01:04:07.641Z",
-        "requirements": [
-          "Rust 툴체인",
-          "KVM 지원 호스트"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "미리 빌드된 바이너리를 다운로드하거나 소스에서 빌드합니다.",
-          "커널과 디스크 이미지를 준비합니다.",
-          "Cloud Hypervisor 명령어로 게스트 VM을 부팅합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6432,
-        "forks": 816,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T01:06:14.350Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
         ]
       },
       "recheckReasons": [
@@ -47524,247 +47883,6 @@
       "recheckedAt": "2026-10-26T02:06:20.064Z"
     },
     {
-      "id": "networkoptimizer",
-      "name": "NetworkOptimizer",
-      "github": "https://github.com/Ozark-Connect/NetworkOptimizer",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T02:06:04.445Z",
-      "sourceRun": "2026-10-26T11",
-      "tool": {
-        "id": "networkoptimizer",
-        "name": "NetworkOptimizer",
-        "github": "https://github.com/Ozark-Connect/NetworkOptimizer",
-        "description": "UniFi 네트워크를 위한 자체 호스팅 최적화, 모니터링(NMS) 및 보안 감사 도구입니다.",
-        "longDescription": "무선 네트워크 건강 상태 점검, 채널 최적화, 고급 DNS 및 방화벽 보안 검사, 중앙 집중식 속도 측정 서버 기능을 제공하는 인프라 관리 도구입니다.",
-        "category": "네트워크",
-        "tags": [
-          "UniFi",
-          "네트워크 모니터링",
-          "보안 감사",
-          "자체 호스팅",
-          "Docker"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://ozarkconnect.net/network-optimizer",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T02:04:02.571Z",
-        "requirements": [
-          "Docker",
-          "UniFi Console API 접근 권한"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "배포 가이드를 참고하여 호스팅 환경에 Docker 컨테이너를 준비합니다.",
-          "UniFi 콘솔 API 접속 정보를 환경 변수에 설정합니다.",
-          "네트워크 최적화 도구 컨테이너를 실행합니다.",
-          "대스보드에 접속하여 Wi-Fi 성능 및 보안 감사 리포트를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "UniFi 게이트웨이 기기 자체에 직접 설치하지 말고 별도의 서버나 컨테이너 환경에 호스팅해야 합니다.",
-        "stars": 1202,
-        "forks": 40,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T02:06:05.957Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T02:06:09.663Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "homedockos",
-      "name": "HomeDockOS",
-      "github": "https://github.com/BansheeTech/HomeDockOS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T02:06:04.445Z",
-      "sourceRun": "2026-10-26T11",
-      "tool": {
-        "id": "homedockos",
-        "name": "HomeDockOS",
-        "github": "https://github.com/BansheeTech/HomeDockOS",
-        "description": "큐레이션된 앱 스토어와 멀티 플랫폼을 지원하는 직관적이고 강력한 개인용 클라우드 홈 서버 운영체제입니다.",
-        "longDescription": "라즈베리 파이부터 x86 시스템까지 다양한 하드웨어에서 실행 가능하며, 브라우저 안에서 동작하는 데스크톱 환경과 자동 SSL 인증서 발급 기능을 제공하는 자체 호스팅 플랫폼입니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "홈 서버",
-          "클라우드 OS",
-          "자체 호스팅",
-          "Docker",
-          "개인 클라우드"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.homedock.cloud",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T02:04:02.571Z",
-        "requirements": [
-          "Docker",
-          "Docker Compose"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "지원하는 운영체제나 라즈베리 파이에 시스템을 다운로드합니다.",
-          "Docker 환경을 통해 HomeDock OS를 실행합니다.",
-          "브라우저를 통해 시스템 대스보드에 접속합니다.",
-          "앱 스토어에서 원하는 자체 호스팅 애플리케이션을 원클릭으로 설치합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 922,
-        "forks": 58,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T02:06:06.142Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T02:06:10.171Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "labca",
-      "name": "LabCA",
-      "github": "https://github.com/hakwerk/labca",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T02:06:04.445Z",
-      "sourceRun": "2026-10-26T11",
-      "tool": {
-        "id": "labca",
-        "name": "LabCA",
-        "github": "https://github.com/hakwerk/labca",
-        "description": "Let's Encrypt의 ACME 자동화 프로토콜을 기반으로 내부망(랩) 환경에서 사용하는 사설 인증기관(CA) 도구입니다.",
-        "longDescription": "Boulder 엔진을 백엔드로 사용하여 내부망 기기 및 서비스에 대한 TLS 인증서 발급 과정을 웹 GUI를 통해 간편하게 관리할 수 있도록 지원하는 자체 호스팅 PKI 솔루션입니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "인증서",
-          "CA",
-          "ACME",
-          "TLS",
-          "자체 호스팅"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://lab-ca.net",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T02:04:02.571Z",
-        "requirements": [
-          "Docker",
-          "Boulder 엔진",
-          "로컬 DNS 설정"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "로컬 DNS 환경에 LabCA 호스트 이름을 등록합니다.",
-          "Boulder 엔진과 연동된 LabCA 도구 컨테이너를 실행합니다.",
-          "웹 관리 인터페이스에 접속합니다.",
-          "인증서 발급 요청을 생성하고 내부 서비스용 TLS 인증서를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "Boulder 엔진의 특성상 라즈베리 파이 같은 아키텍처에서는 실행할 수 없습니다.",
-        "stars": 798,
-        "forks": 59,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T02:06:06.332Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T02:06:10.704Z",
-      "documentEvidence": {
-        "license": "MPL-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "innoshop",
       "name": "InnoShop",
       "github": "https://github.com/innocommerce/innoshop",
@@ -48044,56 +48162,6 @@
       }
     },
     {
-      "id": "awesome-homelab",
-      "name": "awesome-homelab",
-      "github": "https://github.com/AwesomeHomelab/awesome-homelab",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T02:06:04.445Z",
-      "sourceRun": "2026-10-26T11",
-      "tool": {
-        "id": "awesome-homelab",
-        "name": "awesome-homelab",
-        "github": "https://github.com/AwesomeHomelab/awesome-homelab",
-        "description": "홈랩 애호가를 위한 인기 오픈소스 애플리케이션 큐레이션 목록입니다.",
-        "longDescription": "셀프호스팅과 홈랩 구축에 유용한 다양한 오픈소스 소프트웨어와 툴들을 카테고리별로 모아둔 참고용 디렉토리입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "홈랩",
-          "셀프호스팅",
-          "오픈소스",
-          "큐레이션"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.awesome-homelab.com",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T02:04:02.571Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "목록에서 필요한 카테고리(AI, 네트워크, 미디어 등)를 탐색합니다.",
-          "관심 있는 오픈소스 프로젝트 링크를 확인합니다.",
-          "각 프로젝트의 공식 가이드에 따라 홈랩에 배포합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2618,
-        "forks": 140,
-        "starsUpdatedAt": "2026-10-26"
-      }
-    },
-    {
       "id": "homelab-2",
       "name": "homelab",
       "github": "https://github.com/ChristianLempa/homelab",
@@ -48161,61 +48229,6 @@
         "usageNote": "",
         "stars": 2041,
         "forks": 854,
-        "starsUpdatedAt": "2026-10-26"
-      }
-    },
-    {
-      "id": "launchpad",
-      "name": "launchpad",
-      "github": "https://github.com/timothystewart6/launchpad",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T02:06:04.445Z",
-      "sourceRun": "2026-10-26T11",
-      "tool": {
-        "id": "launchpad",
-        "name": "launchpad",
-        "github": "https://github.com/timothystewart6/launchpad",
-        "description": "Ansible, Kubernetes, Docker 등을 위한 홈랩용 빠른 시작 템플릿 모음입니다.",
-        "longDescription": "홈랩 구축, 학습 및 자동화를 위해 자주 사용되는 다양한 도구와 플레이북 설정 파일들을 모아둔 유틸리티 모음입니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Ansible",
-          "Kubernetes",
-          "Docker",
-          "홈랩",
-          "자동화"
-        ],
-        "platforms": [
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://technotim.com",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T02:04:02.571Z",
-        "requirements": [
-          "Docker",
-          "Ansible"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "관심 있는 도구 또는 플레이북 폴더를 확인합니다.",
-          "제공되는 설정 파일을 환경에 맞게 조정합니다.",
-          "스크립트나 플레이북을 실행하여 환경을 구축합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1736,
-        "forks": 493,
         "starsUpdatedAt": "2026-10-26"
       }
     },
@@ -54924,88 +54937,6 @@
       "reasons": [],
       "checkedAt": "2026-10-25T11:06:15.630Z",
       "sourceRun": "2026-10-25T20"
-    },
-    {
-      "id": "pi-hosted",
-      "name": "pi-hosted",
-      "github": "https://github.com/novaspirit/pi-hosted",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-25T11:06:15.630Z",
-      "sourceRun": "2026-10-25T20",
-      "tool": {
-        "id": "pi-hosted",
-        "name": "pi-hosted",
-        "github": "https://github.com/novaspirit/pi-hosted",
-        "description": "Docker와 Portainer를 기반으로 라즈베리 파이 및 홈랩에서 다양한 서버 앱을 쉽게 호스팅할 수 있는 템플릿 모음입니다.",
-        "longDescription": "라즈베리 파이나 소형 서버 환경에서 홈랩을 구축할 때 필요한 다양한 오픈소스 서비스들을 Docker와 Portainer 템플릿 형태로 한 번에 구성할 수 있도록 지원합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "Docker",
-          "Portainer",
-          "라즈베리파이",
-          "홈랩",
-          "셀프호스팅"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/novaspirit/pi-hosted",
-        "featured": 9,
-        "added": "2026-10-25",
-        "addedAt": "2026-10-25T11:04:04.846Z",
-        "requirements": [
-          "Docker",
-          "Portainer"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 및 환경 설치",
-            "command": "wget -qO- https://raw.githubusercontent.com/pi-hosted/pi-hosted/master/install_docker.sh | bash",
-            "note": "Docker를 설치하고 현재 사용자를 도커 그룹에 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "제공되는 설치 스크립트를 실행하여 Docker 환경을 구축합니다.",
-          "시스템을 재부팅하여 권한 설정을 적용합니다.",
-          "Portainer에 앱 템플릿 URL을 등록하고 원하는 서비스를 클릭하여 배포합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1413,
-        "forks": 370,
-        "starsUpdatedAt": "2026-10-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-25T12:06:29.022Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-25T12:06:35.354Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "cbsd",
