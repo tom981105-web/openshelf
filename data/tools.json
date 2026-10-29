@@ -1,5 +1,281 @@
 [
   {
+    "id": "dsh-pocket",
+    "name": "dsh-pocket",
+    "github": "https://github.com/shaobeichen/dsh-pocket",
+    "description": "DeepSeek Harness를 모바일 기기에서 QR코드 스캔을 통해 실시간으로 원격 제어할 수 있는 도구입니다.",
+    "longDescription": "컴퓨터에서 실행 중인 DeepSeek Harness 웹 인터페이스를 스마트폰 화면으로 실시간 동기화하여, 외부에서도 모바일 브라우저를 통해 에이전트 태스크를 모니터링하고 제어할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "AI 에이전트",
+      "원격 제어",
+      "모바일 동기화",
+      "DeepSeek",
+      "CLI"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "https://github.com/shaobeichen/dsh-pocket",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T18:04:12.679Z",
+    "requirements": [
+      "Node.js",
+      "DeepSeek Harness"
+    ],
+    "supportedAgents": [
+      "DeepSeek Harness"
+    ],
+    "install": [
+      {
+        "title": "전역 설치 및 플러그인 추가",
+        "command": "npm install -g @deepseek-ai/dsh && dsh plugin --profile web add dsh-pocket -w",
+        "note": "dsh 패키지를 설치하고 포켓 플러그인을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "컴퓨터에서 dsh web 명령어로 서버를 실행합니다.",
+      "설정 페이지의 '폰 액세스' 메뉴에서 QR코드를 확인합니다.",
+      "모바일 기기로 QR코드를 스캔하여 동일한 인터페이스에 접속합니다."
+    ],
+    "examplePrompt": "지금 실행 중인 AI 에이전트 작업 상태를 요약해 줘.",
+    "usageNote": "동일한 로컬 네트워크 환경이거나 터널링 설정이 필요합니다.",
+    "stars": 2553,
+    "forks": 109,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "kubenav",
+    "name": "kubenav",
+    "github": "https://github.com/kubenav/kubenav",
+    "description": "스마트폰에서 쿠버네티스 클러스터를 관리하고 리소스 상태를 모니터링할 수 있는 모바일 네비게이터입니다.",
+    "longDescription": "워크로드 상태 확인, 리소스 사용량 모니터링, 실시간 로그 스트리밍, 컨테이너 터미널 접속 및 리소스 편집 기능을 모바일 환경에서 제공하여 언제 어디서나 클러스터를 관리할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "모바일 앱",
+      "클러스터 관리",
+      "Flutter",
+      "Go"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://kubenav.io",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T18:04:12.679Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "앱스토어에서 kubenav 앱을 설치합니다.",
+      "kubeconfig 파일이나 클라우드 제공자 계정을 통해 클러스터를 추가합니다.",
+      "대시보드를 통해 리소스 상태를 확인하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2292,
+    "forks": 150,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "labml",
+    "name": "labml",
+    "github": "https://github.com/labmlai/labml",
+    "description": "스마트폰이나 노트북에서 딥러닝 모델 학습 과정과 하드웨어 자원 사용량을 모니터링하는 도구입니다.",
+    "longDescription": "파이토치 및 텐서플로우 실험과 연동하여 GPU/CPU 사용량, 학습 지표를 실시간으로 추적하며, 코드에 몇 줄의 코드를 추가하는 것만으로 간편하게 실험 관리가 가능합니다.",
+    "category": "과학·연구",
+    "tags": [
+      "딥러닝",
+      "모니터링",
+      "머신러닝",
+      "PyTorch",
+      "TensorFlow"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://labml.ai",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T18:04:12.679Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "앱 서버 설치",
+        "command": "pip install labml-app",
+        "note": "labml-app 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip을 통해 labml-app을 설치합니다.",
+      "labml app-server 명령어로 모니터링 서버를 구동합니다.",
+      "딥러닝 코드에 실험 모니터링 코드를 추가하고 모바일에서 접속합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2326,
+    "forks": 152,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "shiny",
+    "name": "shiny",
+    "github": "https://github.com/rikschennink/shiny",
+    "description": "모바일 기기의 DeviceMotion 센서를 활용해 웹사이트에 동적 반사 효과(Shiny reflections)를 부여하는 자바스크립트 라이브러리입니다.",
+    "longDescription": "스마트폰을 기울이는 각도에 따라 텍스트, 배경, 테두리에 실시간 광채와 반사 효과를 시뮬레이션하여 모바일 웹사이트의 시각적 인터랙션을 향상시킵니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "CSS",
+      "DeviceMotion",
+      "UI 효과",
+      "JavaScript",
+      "모바일 웹"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pqina.nl/shiny/",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T18:04:12.679Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install @rikschennink/shiny --save",
+        "note": "패키지를 프로젝트에 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "npm을 통해 라이브러리를 설치하거나 스크립트를 포함합니다.",
+      "자바스크립트 코드에서 shiny() 함수를 호출하여 대상 요소에 적용합니다.",
+      "모바일 기기에서 페이지를 열고 기기를 기울여 반사 효과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "iOS 사파리 등 일부 브라우저 환경에서는 기기 센서 권한 설정이 필요할 수 있습니다.",
+    "stars": 2778,
+    "forks": 66,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "egjs-flicking",
+    "name": "egjs-flicking",
+    "github": "https://github.com/naver/egjs-flicking",
+    "description": "모바일과 데스크톱 환경 모두에서 안정적으로 작동하며 확장성이 뛰어난 네이버의 캐러셀(Carousel) 컴포넌트입니다.",
+    "longDescription": "서버 사이드 렌더링(SSR)을 지원하며, 무한 루프 순환 모드, 자연스러운 모멘텀 기반 자유 스크롤, 대용량 데이터를 위한 가상 스크롤 및 다양한 플러그인 확장 기능을 제공합니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "캐러셀",
+      "UI 컴포넌트",
+      "TypeScript",
+      "React",
+      "Vue"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://naver.github.io/egjs-flicking/",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T18:04:12.679Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install --save @egjs/flicking",
+        "note": "Flicking 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 프로젝트에 임포트합니다.",
+      "HTML 구조에 맞게 캐러셀 마크업을 작성합니다.",
+      "Flicking 인스턴스를 초기화하고 필요한 플러그인을 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2923,
+    "forks": 137,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
+    "id": "react-device-detect",
+    "name": "react-device-detect",
+    "github": "https://github.com/duskload/react-device-detect",
+    "description": "브라우저의 유저 아이언트(User Agent)를 분석하여 모바일, 태블릿, 데스크톱 등 기기 종류에 따라 뷰를 조건부 렌더링할 수 있는 리액트 라이브러리입니다.",
+    "longDescription": "사용 중인 기기의 유형을 간편하게 감지하고 특정 기기 환경에 맞는 컴포넌트를 분기하여 렌더링할 수 있도록 도와주는 가벼운 유틸리티 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "React",
+      "디바이스 감지",
+      "User Agent",
+      "JavaScript",
+      "프론트엔드"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/duskload/react-device-detect",
+    "featured": 9,
+    "added": "2026-10-29",
+    "addedAt": "2026-10-29T18:04:12.679Z",
+    "requirements": [
+      "Node.js",
+      "React"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install react-device-detect --save",
+        "note": "프로젝트에 디바이스 감지 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "코드에서 IsMobile 또는 BrowserView 컴포넌트를 임포트합니다.",
+      "기기 조건에 따라 렌더링할 요소를 분기 처리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2922,
+    "forks": 156,
+    "starsUpdatedAt": "2026-10-29"
+  },
+  {
     "id": "fanyi",
     "name": "Fānyì (命令行翻译)",
     "github": "https://github.com/afc163/fanyi",
