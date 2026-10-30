@@ -1,5 +1,193 @@
 [
   {
+    "id": "eac-design-world",
+    "name": "EAC-design-world",
+    "github": "https://github.com/Ebony-Vinyl/EAC-design-world",
+    "description": "DeepSeek Harness 환경을 위한 로컬 비디오 제작 및 디자인 스튜디오 플러그인입니다.",
+    "longDescription": "다트랙 편집, 템플릿, 디자인 시스템, 네이티브 미리보기 및 실제 파일 내보내기 기능을 제공하여 로컬 환경에서 원활한 콘텐츠 제작을 돕습니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "동영상편집",
+      "디자인툴",
+      "DeepSeek",
+      "Node.js",
+      "FFmpeg"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/Ebony-Vinyl/EAC-design-world",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T16:04:17.855Z",
+    "requirements": [
+      "Node.js 22+",
+      "PowerShell (Windows)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치 및 실행",
+        "command": "npm ci --omit=dev && node scripts/install-harness.mjs",
+        "note": "압축 해제된 디렉토리에서 실행하여 플러그인을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "릴리즈된 패키지를 다운로드하고 압축을 해제합니다.",
+      "터미널에서 의존성 설치 및 인스톨러 스크립트를 실행합니다.",
+      "Harness 설정에서 편집 또는 디자인 모드로 진입하여 작업합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "설치 과정에서 호스트 설정을 백업하며, 다른 플러그인 설정에 영향을 주지 않고 안전하게 연동됩니다.",
+    "stars": 352,
+    "forks": 16,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "nabla",
+    "name": "nabla",
+    "github": "https://github.com/nabla-ml/nabla",
+    "description": "Mojo 및 MAX 기반의 고성능 과학 연산 및 머신러닝 프레임워크입니다.",
+    "longDescription": "명령형 및 함수형 API를 결합하여 사용자 정의 Mojo 커널을 자동 미분 엔진에 원활하게 통합하고 분산 워크로드를 자동으로 샤딩합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "머신러닝",
+      "과학연산",
+      "Mojo",
+      "JAX",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.nablaml.com",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T16:04:17.855Z",
+    "requirements": [
+      "Modular nightly",
+      "Python 3.12+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "가상환경 생성 및 패키지 설치",
+        "command": "python -m venv venv && source venv/bin/activate && pip install --pre --extra-index-url https://whl.modular.com/nightly/simple/ modular nabla-ml",
+        "note": "Modular 나이트리 채널에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Python 가상 환경을 생성하고 활성화합니다.",
+      "Modular 및 nabla-ml 패키지를 설치합니다.",
+      "Mojo 및 Python을 활용하여 고성능 연산 코드를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "macOS Apple Silicon 환경에서는 Xcode Metal 툴체인 설치가 필요합니다.",
+    "stars": 348,
+    "forks": 16,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "freud",
+    "name": "freud",
+    "github": "https://github.com/glotzerlab/freud",
+    "description": "과학용 파이썬 환경에서 입자궤적 데이터를 강력하고 효율적으로 분석하는 라이브러리입니다.",
+    "longDescription": "분자 동역학 및 몬테카를로 시뮬레이션 결과물인 입자 시스템의 공간 분석, 구조 분석 등을 빠르게 수행할 수 있도록 C++로 구현된 백엔드를 제공합니다.",
+    "category": "과학·연구",
+    "tags": [
+      "데이터분석",
+      "분자시뮬레이션",
+      "공간분석",
+      "Python",
+      "C++"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://freud.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T16:04:17.855Z",
+    "requirements": [
+      "Python",
+      "C++ 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "conda-forge 또는 PyPI를 통해 freud 패키지를 설치합니다.",
+      "시뮬레이션 입자 좌표 데이터를 로드합니다.",
+      "분석 모듈을 호출하여 방사 분포 함수나 지표들을 계산합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 334,
+    "forks": 52,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "py-pde",
+    "name": "py-pde",
+    "github": "https://github.com/zwicker-group/py-pde",
+    "description": "유한 차분법을 사용하여 편미분 방정식을 풀기 위한 파이썬 패키지입니다.",
+    "longDescription": "동역학 시스템 및 다양한 과학적 현상에서 발생하는 편미분 방정식(PDE)을 직관적인 코드로 시뮬레이션하고 분석할 수 있게 돕습니다.",
+    "category": "과학·연구",
+    "tags": [
+      "편미분방정식",
+      "수치해석",
+      "시뮬레이션",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://py-pde.readthedocs.io",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T16:04:17.855Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI 설치",
+        "command": "pip install py-pde",
+        "note": "기본 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 py-pde 및 선택적 의존성을 설치합니다.",
+      "파이썬 스크립트에서 그리드와 필드 변수를 정의합니다.",
+      "PDE solver를 이용해 방정식을 풀고 결과를 시각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "고속 연산을 위해 numba 등의 추가 패키지 설치가 권장됩니다.",
+    "stars": 469,
+    "forks": 70,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
     "id": "quantumproxies-io",
     "name": "QuantumProxies Resources",
     "github": "https://github.com/quantumproxies/quantumproxies.io",
