@@ -1,5 +1,432 @@
 [
   {
+    "id": "radon",
+    "name": "Radon",
+    "github": "https://github.com/rubik/radon",
+    "description": "파이썬 소스 코드의 순환 복잡도 및 다양한 코드 메트릭을 계산해주는 도구입니다.",
+    "longDescription": "함수 및 클래스 단위의 순환 복잡도(McCabe's complexity)와 원시 메트릭(LOC, SLOC 등)을 측정하여 코드의 유지보수성을 객관적으로 평가할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "Python",
+      "코드 메트릭",
+      "복잡도 분석",
+      "품질 보증"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://radon.readthedocs.org/",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip으로 설치",
+        "command": "pip install radon",
+        "note": "파이썬 환경에 라돈 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 라돈을 설치합니다.",
+      "분석하려는 파이썬 파일이나 패키지를 대상으로 `radon cc` 명령을 실행합니다.",
+      "출력되는 복잡도 등급을 확인하고 리팩토링이 필요한 부분을 파악합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2037,
+    "forks": 143,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "phpmd",
+    "name": "PHPMD",
+    "github": "https://github.com/phpmd/phpmd",
+    "description": "PHP 코드의 잠재적 버그, 최적화되지 않은 구조, 지나치게 복잡한 코드를 감지하는 메스  detección 도구입니다.",
+    "longDescription": "유명한 자바 도구인 PMD의 PHP 버전으로, 정해진 규칙 세트에 따라 PHP 소스 코드를 분석하고 코드 스멜이나 설계 결함을 리포트합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "개발 도구",
+      "PHP",
+      "정적 분석",
+      "코드 품질",
+      "클린 코드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://phpmd.org",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "PHP"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 가이드를 참고하여 PHPMD를 설치합니다.",
+      "분석할 소스 코드 경로와 규칙 세트를 지정하여 명령어를 실행합니다.",
+      "발견된 코드 메스 및 경고 사항을 검토하여 개선합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "설정 파일을 통해 프로젝트에 맞는 커스텀 규칙을 적용할 수 있습니다.",
+    "stars": 2464,
+    "forks": 362,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "reek",
+    "name": "Reek",
+    "github": "https://github.com/troessner/reek",
+    "description": "Ruby 코드에서 코드 스멜(Code Smell)을 감지하는 정적 분석 도구입니다.",
+    "longDescription": "Reek은 Ruby 소스 코드를 검사하여 지나치게 복잡한 메서드, 긴 매개변수 목록, 중복 코드 등 설계상 결함인 코드 스멜을 찾아내고 개선 방안을 제시하는 리팩토링 지원 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Ruby",
+      "코드품질",
+      "정적분석",
+      "리팩토링",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/troessner/reek",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "Ruby 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gem 설치",
+        "command": "gem install reek",
+        "note": "루비 젬 명령어로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉터리에서 reek 명령어를 실행합니다.",
+      "탐지된 코드 스멜 경고 내역을 확인합니다.",
+      "안내에 따라 코드를 리팩토링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4137,
+    "forks": 283,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "soot",
+    "name": "Soot",
+    "github": "https://github.com/soot-oss/soot",
+    "description": "자바 바이트코드를 최적화하고 분석하기 위한 프레임워크입니다.",
+    "longDescription": "Soot은 자바 바이트코드를 조작, 분석, 최적화할 수 있는 강력한 자바 기반 프레임워크입니다. 프로그램 분석 연구 및 컴파일러 최적화 도구 개발에 널리 활용됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "바이트코드",
+      "최적화",
+      "정적분석",
+      "프레임워크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-2.1",
+    "website": "https://github.com/soot-oss/soot",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "Java 개발 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "클론 및 빌드",
+        "command": "git clone https://github.com/soot-oss/soot.git",
+        "note": "깃 저장소를 클론하여 소스코드를 가져옵니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 빌드 도구를 통해 프로젝트를 빌드합니다.",
+      "분석할 자바 클래스 파일 경로를 설정합니다.",
+      "Soot 메인 클래스를 실행하여 바이트코드 분석 및 변환을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 후속 프로젝트인 SootUp으로 전환이 진행 중입니다.",
+    "stars": 3103,
+    "forks": 726,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "find-sec-bugs",
+    "name": "Find Security Bugs",
+    "github": "https://github.com/find-sec-bugs/find-sec-bugs",
+    "description": "자바 웹 및 안드로이드 애플리케이션의 보안 감사를 위한 SpotBugs 플러그인입니다.",
+    "longDescription": "Find Security Bugs는 SpotBugs 기반의 보안 취약점 탐지 플러그인으로, 자바, 코틀린, 그루비 등으로 작성된 애플리케이션의 보안 결함과 OWASP Top 10 취약점을 정적 분석으로 찾아냅니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "보안",
+      "정적분석",
+      "Java",
+      "Android",
+      "플러그인"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-3.0",
+    "website": "https://find-sec-bugs.github.io/",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "Java 런타임",
+      "SpotBugs"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Maven 중앙 저장소 연동",
+        "command": "mvn clean compile",
+        "note": "프로젝트 설정에 플러그인을 추가하고 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "SpotBugs 환경에 본 플러그인을 설치하거나 빌드 파일에 의존성을 추가합니다.",
+      "애플리케이션 소스 코드 또는 빌드 결과물(바이트코드)을 대상으로 분석을 실행합니다.",
+      "보안 진단 보고서에서 발견된 취약점 항목을 검토합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2453,
+    "forks": 486,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "i18n-tasks",
+    "name": "i18n-tasks",
+    "github": "https://github.com/glebm/i18n-tasks",
+    "description": "정적 분석을 통해 Ruby i18n 번역 파일과 키를 관리하는 도구입니다.",
+    "longDescription": "i18n-tasks는 Ruby 애플리케이션의 소스 코드를 정적 분석하여 사용되지 않는 번역 키나 누락된 번역 항목을 찾아내고, 번역 파일 정리를 자동화해 주는 개발 유틸리티입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Ruby",
+      "다국어",
+      "정적분석",
+      "번역관리",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://glebm.github.io/i18n-tasks",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "Ruby 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gem 추가",
+        "command": "bundle add i18n-tasks",
+        "note": "번들러를 통해 프로젝트에 젬을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "설정 파일을 생성하기 위해 i18n-tasks 설정 명령어를 실행합니다.",
+      "터미널에서 누락된 번역을 찾기 위해 검사 명령어를 실행합니다.",
+      "보고된 누락 및 미사용 키를 정리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2159,
+    "forks": 284,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "tai-e",
+    "name": "Tai-e",
+    "github": "https://github.com/pascal-lab/Tai-e",
+    "description": "자바 및 안드로이드 프로그램을 위한 사용하기 쉬운 정적 분석 프레임워크입니다.",
+    "longDescription": "Tai-e는 자바와 안드로이드 애플리케이션 분석을 쉽게 배우고 적용할 수 있도록 설계된 교육 및 연구용 정적 분석 프레임워크로, 호출 그래프 구축 및 테인트 분석 등을 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "정적분석",
+      "Android",
+      "프레임워크",
+      "코드분석"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-3.0",
+    "website": "https://tai-e.pascal-lab.net/docs/index.html",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "Java 17 이상",
+      "Maven"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/pascal-lab/Tai-e.git",
+        "note": "깃허브에서 소스코드를 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 클론한 뒤 Maven을 통해 빌드합니다.",
+      "분석 대상 자바 프로그램과 설정 파일을 지정합니다.",
+      "정적 분석 파이프라인을 실행하여 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1828,
+    "forks": 203,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "appshark",
+    "name": "Appshark",
+    "github": "https://github.com/bytedance/appshark",
+    "description": "안드로이드 앱의 취약점을 스캔하기 위한 정적 테인트 분석 플랫폼입니다.",
+    "longDescription": "Appshark은 바이트코드 수준에서 안드로이드 애플리케이션의 보안 취약점과 컴플라이언스 위반 항목을 빠르게 탐지할 수 있는 대규모 정적 테인트(Taint) 분석 플랫폼입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Android",
+      "보안",
+      "정적분석",
+      "Kotlin",
+      "취약점검사"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/bytedance/appshark",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "JDK 11"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/bytedance/appshark.git",
+        "note": "소스 코드를 로컬에 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "JDK 11 환경을 구성합니다.",
+      "분석할 안드로이드 APK 파일 경로를 설정합니다.",
+      "분석 스크립트를 실행하여 취약점 검사 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1754,
+    "forks": 182,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "cfn-nag",
+    "name": "cfn-nag",
+    "github": "https://github.com/stelligent/cfn_nag",
+    "description": "AWS CloudFormation 템플릿의 보안 취약점과 인프라 설정을 검사하는 린팅 도구입니다.",
+    "longDescription": "cfn-nag은 AWS CloudFormation 템플릿 파일에서 과도하게 허용된 IAM 권한, 암호화 미적용, 보안 그룹 설정 오류 등 잠재적으로 안전하지 않은 인프라 패턴을 미리 감지해 주는 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AWS",
+      "CloudFormation",
+      "보안",
+      "린터",
+      "인프라"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/stelligent/cfn_nag",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T22:04:13.340Z",
+    "requirements": [
+      "Ruby 2.5 이상"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gem 설치",
+        "command": "gem install cfn-nag",
+        "note": "루비 젬을 통해 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "CloudFormation 템플릿 파일이 있는 디렉터리로 이동합니다.",
+      "터미널에서 cfn_nag_scan 명령어를 실행합니다.",
+      "출력된 보안 경고 및 권고 사항을 검토합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1312,
+    "forks": 208,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
     "id": "scope",
     "name": "Weave Scope",
     "github": "https://github.com/weaveworks/scope",

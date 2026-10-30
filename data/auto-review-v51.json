@@ -1,7 +1,968 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T21:06:32.158Z",
+  "updatedAt": "2026-10-30T22:06:31.717Z",
   "items": [
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "windmill",
+        "name": "Windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "워크플로우, 앱, AI 에이전트를 구축할 수 있는 오픈소스 코드 기반 오케스트레이션 플랫폼입니다.",
+        "longDescription": "다양한 프로그래밍 언어로 스크립트를 작성하여 API나 UI, 크론 잡, 데이터 파이프라인 등으로 자동 변환할 수 있습니다. AI 에이전트와 통합된 강력한 셀프 호스팅 워크플로우 엔진을 제공합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "자동화",
+          "AI에이전트"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker를 사용하여 인스턴스를 실행합니다.",
+          "웹 대시보드에 접속하여 새로운 워크플로우나 스크립트를 생성합니다.",
+          "Python, TypeScript 등 선호하는 언어로 코드를 작성하고 배포합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "셀프 호스팅 환경에서 실행 시 PostgreSQL 데이터베이스가 필요합니다.",
+        "stars": 18327,
+        "forks": 1132,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:19.888Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:23.111Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T22:06:28.422Z"
+    },
+    {
+      "id": "paradev",
+      "name": "Paradev",
+      "github": "https://github.com/ParadevAI/Paradev",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "paradev",
+        "name": "Paradev",
+        "github": "https://github.com/ParadevAI/Paradev",
+        "description": "다수의 CLI 코딩 에이전트를 병렬로 실행하고 관리할 수 있는 데스크톱 개발 환경입니다.",
+        "longDescription": "각 작업마다 별도의 Git 워크트리와 브랜치, 터미널을 할당하여 다양한 AI 코딩 에이전트를 동시에 구동하고 코드를 리뷰할 수 있습니다. 이를 통해 개발자는 여러 AI 작업을 체계적으로 관리하고 생산성을 높일 수 있습니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 에이전트",
+          "개발 도구",
+          "Git"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://paradev.com",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [],
+        "supportedAgents": [
+          "Claude Code",
+          "OpenCode",
+          "Gemini CLI",
+          "Cursor Agent"
+        ],
+        "install": [
+          {
+            "title": "macOS Apple Silicon 설치",
+            "command": "curl -L -o Superset-arm64.dmg https://github.com/paradevai/paradev/releases/latest/download/Superset-arm64.dmg",
+            "note": "최신 Apple Silicon용 DMG 파일을 다운로드합니다."
+          }
+        ],
+        "usageSteps": [
+          "공식 릴리즈 페이지에서 운영체제에 맞는 데스크톱 앱을 다운로드하여 설치합니다.",
+          "앱을 실행하고 작업할 Git 저장소를 불러옵니다.",
+          "수행할 태스크를 입력하고 원하는 CLI 코딩 에이전트를 지정하여 병렬 작업을 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "외부 AI 에이전트 사용을 위해 각 서비스의 API 키나 구독이 필요할 수 있습니다.",
+        "stars": 15759,
+        "forks": 1409,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:20.125Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:23.670Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T22:06:29.353Z"
+    },
+    {
+      "id": "get-jobs",
+      "name": "Get Jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "get-jobs",
+        "name": "Get Jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "구직 플랫폼 자동화 및 AI 이력서 지원 도구",
+        "longDescription": "다양한 주요 구직 플랫폼에서 구직 활동을 자동화하고 AI 분석을 통해 맞춤형 이력서 작성 및 제출을 지원합니다. 보스직핀, 전程无忧, 猎聘, 智联招聘 등의 플랫폼과 연동됩니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "업무 자동화",
+          "AI 에이전트",
+          "구직"
+        ],
+        "platforms": [
+          "Web",
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [
+          "Java"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 프로젝트를 설정합니다.",
+          "이력서 정보 및 구직 필터를 설정 파일에 입력합니다.",
+          "애플리케이션을 실행하여 자동 지원 프로세스를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "지원 플랫폼의 UI 변경에 따라 작동이 영향을 받을 수 있습니다.",
+        "stars": 9406,
+        "forks": 1078,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:20.339Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:23.959Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T22:06:30.214Z"
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 아웃라이너의 기능을 결합한 자유 형식의 계층형 데이터 정리 도구입니다.",
+        "longDescription": "복잡한 할 일 목록, 프로젝트 관리, 아이디어 브레인스토밍 등 다양한 구조화된 데이터를 2차원 계층 형태로 직관적으로 관리할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "생산성",
+          "스프레드시트",
+          "마인드맵"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 릴리즈 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
+          "프로그램을 실행하고 새로운 문서를 생성합니다.",
+          "격자 구조 안에 텍스트와 하위 표를 추가하여 데이터를 구조화합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS에서는 최초 실행 시 보안 설정으로 인해 직접 실행 허용이 필요할 수 있습니다.",
+        "stars": 3181,
+        "forks": 223,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:20.534Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:24.651Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T22:06:30.984Z"
+    },
+    {
+      "id": "qlty",
+      "name": "Qlty CLI",
+      "github": "https://github.com/qltysh/qlty",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "qlty",
+        "name": "Qlty CLI",
+        "github": "https://github.com/qltysh/qlty",
+        "description": "70개 이상의 정적 분석 도구를 통합하여 코드 품질을 진단하는 다목적 CLI 도구입니다.",
+        "longDescription": "프로젝트 전반의 코드 유지보수성과 보안 취약성을 일관되게 진단할 수 있으며, 간단한 설정 파일 하나로 다양한 언어의 정적 분석기를 통합 관리할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "개발 도구",
+          "코드 품질",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://qlty.sh/",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트 루트 디렉토리에 설정 파일을 구성합니다.",
+          "명령줄 인터페이스를 통해 분석 명령을 실행합니다.",
+          "출력되는 코드 품질 리포트를 확인하고 문제를 수정합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "상업적 프로젝트를 포함하여 모든 용도로 무료로 사용할 수 있습니다.",
+        "stars": 3210,
+        "forks": 275,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:20.726Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:25.198Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T22:06:31.717Z"
+    },
+    {
+      "id": "bearer",
+      "name": "Bearer",
+      "github": "https://github.com/Bearer/bearer",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "bearer",
+        "name": "Bearer",
+        "github": "https://github.com/Bearer/bearer",
+        "description": "소스 코드를 스캔하여 보안 및 개인정보 관련 위험을 식별하고 필터링하는 정적 애플리케이션 보안 테스트(SAST) 도구입니다.",
+        "longDescription": "데이터 흐름을 분석하여 애플리케이션 내 민감한 개인정보 처리나 OWASP Top 보안 취약점을 사전에 발견하고 조치할 수 있도록 돕습니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "SAST",
+          "취약점 분석",
+          "개인정보",
+          "DevSecOps"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.bearer.com",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Homebrew로 설치",
+            "command": "brew install bearer/tap/bearer",
+            "note": "macOS 환경에서 Homebrew를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트 또는 Homebrew를 통해 Bearer CLI를 설치합니다.",
+          "소스 코드 디렉토리로 이동하여 스캔 명령을 실행합니다.",
+          "감지된 보안 위험 및 프라이버시 이슈 리포트를 검토합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "대규모 코드베이스의 경우 초기 스캔에 다소 시간이 소요될 수 있습니다.",
+        "stars": 2778,
+        "forks": 155,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:20.928Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:25.810Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "flake8",
+      "name": "Flake8",
+      "github": "https://github.com/PyCQA/flake8",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "flake8",
+        "name": "Flake8",
+        "github": "https://github.com/PyCQA/flake8",
+        "description": "PyFlakes, pycodestyle, McCabe 순환 복잡도 검사기를 결합하여 파이썬 코드 스타일과 품질을 검사하는 툴입니다.",
+        "longDescription": "단일 명령어로 여러 파이썬 정적 분석 도구를 실행하고, 파일별로 병합된 경고 및 에러 목록을 제공하여 PEP 8 스타일 가이드 준수를 돕습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "개발 도구",
+          "Python",
+          "린터",
+          "코드 품질",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://flake8.pycqa.org",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Pip을 이용한 설치",
+            "command": "pip install flake8",
+            "note": "파이썬 패키지 관리자를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "pip을 통해 패키지를 설치합니다.",
+          "터미널에서 검사할 파이썬 파일이나 디렉토리 경로와 함께 `flake8` 명령을 실행합니다.",
+          "출력된 스타일 위반 및 오류 내역을 확인하고 코드를 수정합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프로젝트 루트에 `.flake8` 설정 파일을 두어 규칙을 커스텀할 수 있습니다.",
+        "stars": 3833,
+        "forks": 364,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:21.154Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:26.305Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "clj-kondo",
+      "name": "clj-kondo",
+      "github": "https://github.com/clj-kondo/clj-kondo",
+      "license": "EPL-1.0",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "clj-kondo",
+        "name": "clj-kondo",
+        "github": "https://github.com/clj-kondo/clj-kondo",
+        "description": "Clojure 및 ClojureScript 코드를 위한 매우 빠른 정적 분석기 겸 린터입니다.",
+        "longDescription": "코드를 실행하지 않고 정적 분석을 수행하여 문법 오류, 사용되지 않는 바인딩, 타입 불일치 등을 빠르게 감지하고 개발자에게 피드백을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "개발 도구",
+          "Clojure",
+          "린터",
+          "정적 분석",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "EPL-1.0",
+        "website": "https://github.com/clj-kondo/clj-kondo",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "시스템 환경에 맞게 clj-kondo 바이너리를 설치합니다.",
+          "프로젝트 디렉토리에서 분석할 파일 경로와 함께 린트 명령을 실행합니다.",
+          "경고 및 오류 메시지를 참고하여 코드를 수정합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "GraalVM 네이티브 이미지로 빌드되어 실행 속도가 매우 빠릅니다.",
+        "stars": 1865,
+        "forks": 312,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:21.391Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:26.657Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "radon",
+      "name": "Radon",
+      "github": "https://github.com/rubik/radon",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
+    {
+      "id": "phpmd",
+      "name": "PHPMD",
+      "github": "https://github.com/phpmd/phpmd",
+      "license": "BSD-3-Clause",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
+    {
+      "id": "brakeman",
+      "name": "Brakeman",
+      "github": "https://github.com/presidentbeef/brakeman",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "brakeman",
+        "name": "Brakeman",
+        "github": "https://github.com/presidentbeef/brakeman",
+        "description": "Ruby on Rails 애플리케이션의 보안 취약점을 검사하는 정적 분석 도구입니다.",
+        "longDescription": "Brakeman은 Ruby on Rails 웹 애플리케이션 코드를 정적 분석하여 잠재적인 보안 취약점과 위험 요소를 자동으로 탐지해 주는 도구입니다. 별도의 설정 없이 애플리케이션 루트 디렉터리에서 실행하여 신속하게 보안 감사를 수행할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "보안",
+          "정적분석",
+          "Ruby",
+          "CLI",
+          "Docker"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://brakemanscanner.org/",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [
+          "RubyGems 또는 Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "RubyGems 설치",
+            "command": "gem install brakeman",
+            "note": "Ruby 환경에서 젬을 직접 설치합니다."
+          },
+          {
+            "title": "Docker 실행",
+            "command": "docker pull presidentbeef/brakeman",
+            "note": "도커 이미지를 다운로드하여 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트의 루트 디렉터리로 이동합니다.",
+          "터미널에서 brakeman 명령어를 실행합니다.",
+          "출력된 보안 검사 보고서와 취약점 내역을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7290,
+        "forks": 778,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:21.604Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:27.105Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "pmd",
+      "name": "PMD",
+      "github": "https://github.com/pmd/pmd",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "pmd",
+        "name": "PMD",
+        "github": "https://github.com/pmd/pmd",
+        "description": "다양한 프로그래밍 언어를 지원하는 확장 가능한 소스 코드 분석기입니다.",
+        "longDescription": "PMD는 자바, 파이썬, Apex, 스칼라 등 여러 프로그래밍 언어의 소스 코드를 분석하여 미사용 변수, 잘못된 예외 처리, 비효율적인 코드 등 잠재적인 문제와 코드 스멜을 찾아내는 정적 분석 도구입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "코드품질",
+          "정적분석",
+          "Linter",
+          "Java",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pmd.github.io",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [
+          "Java 런타임 환경"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "바이너리 다운로드",
+            "command": "wget https://github.com/pmd/pmd/releases/latest/download/pmd-bin.zip",
+            "note": "릴리즈 페이지에서 최신 바이너리를 다운로드합니다."
+          }
+        ],
+        "usageSteps": [
+          "최신 바이너리 압축파일을 다운로드하여 적절한 경로에 팝니다.",
+          "터미널에서 bin/pmd check 명령어를 실행합니다.",
+          "분석 결과 보고서를 확인하고 지적된 코드 품질 문제를 개선합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5521,
+        "forks": 1608,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:21.791Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T22:06:27.471Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "reek",
+      "name": "Reek",
+      "github": "https://github.com/troessner/reek",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
+    {
+      "id": "ikos",
+      "name": "IKOS",
+      "github": "https://github.com/NASA-SW-VnV/ikos",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07",
+      "tool": {
+        "id": "ikos",
+        "name": "IKOS",
+        "github": "https://github.com/NASA-SW-VnV/ikos",
+        "description": "추상 해석 이론을 기반으로 하는 C/C++ 정적 분석기입니다.",
+        "longDescription": "IKOS는 미국항공우주국(NASA)에서 개발한 C 및 C++ 프로그램용 정적 분석 플랫폼으로, 추상 해석(Abstract Interpretation)을 활용하여 소프트웨어의 결함과 오류를 엄격하게 검증합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "C++",
+          "정적분석",
+          "소프트웨어검증",
+          "NASA",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/NASA-SW-VnV/ikos",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T22:04:13.340Z",
+        "requirements": [
+          "Homebrew (macOS/Linux)"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Homebrew 설치",
+            "command": "brew install nasa-sw-vnv/core/ikos",
+            "note": "Homebrew 패키지 관리자를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Homebrew를 통해 IKOS를 설치합니다.",
+          "분석할 C/C++ 소스 코드 및 빌드 파일을 준비합니다.",
+          "ikos 명령어를 사용하여 프로그램 분석을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3176,
+        "forks": 220,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:22.061Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "soot",
+      "name": "Soot",
+      "github": "https://github.com/soot-oss/soot",
+      "license": "LGPL-2.1",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
+    {
+      "id": "find-sec-bugs",
+      "name": "Find Security Bugs",
+      "github": "https://github.com/find-sec-bugs/find-sec-bugs",
+      "license": "LGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
+    {
+      "id": "i18n-tasks",
+      "name": "i18n-tasks",
+      "github": "https://github.com/glebm/i18n-tasks",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
+    {
+      "id": "tai-e",
+      "name": "Tai-e",
+      "github": "https://github.com/pascal-lab/Tai-e",
+      "license": "LGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
+    {
+      "id": "appshark",
+      "name": "Appshark",
+      "github": "https://github.com/bytedance/appshark",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
+    {
+      "id": "cfn-nag",
+      "name": "cfn-nag",
+      "github": "https://github.com/stelligent/cfn_nag",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T22:06:19.120Z",
+      "sourceRun": "2026-10-31T07"
+    },
     {
       "id": "sentry",
       "name": "sentry",
@@ -327,159 +1288,6 @@
       "recheckedAt": "2026-10-30T21:06:31.348Z"
     },
     {
-      "id": "windmill",
-      "name": "windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T21:06:19.943Z",
-      "sourceRun": "2026-10-31T06",
-      "tool": {
-        "id": "windmill",
-        "name": "windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "스크립트, 워크플로우, 내부 앱, AI 에이전트를 구축하는 오픈소스 플랫폼",
-        "longDescription": "다양한 프로그래밍 언어로 작성한 스크립트를 API, Cron 작업, 사용자 인터페이스 및 복잡한 워크플로우로 전환할 수 있는 고성능 셀프호스팅 오케스트레이터입니다. 스크립트와 워크플로우를 효율적으로 관리하고 자동화할 수 있는 기능을 제공합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "워크플로우",
-          "자동화",
-          "AI에이전트"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T21:04:12.787Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker 또는 지원되는 환경에서 Windmill 인스턴스를 배포합니다.",
-          "웹 대스보드에 접속하여 워크플로우나 스크립트를 작성합니다.",
-          "필요한 언어로 코드를 연동하고 자동화 파이프라인을 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 18327,
-        "forks": 1132,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T21:06:21.477Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T21:06:25.526Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T21:06:32.158Z"
-    },
-    {
-      "id": "paradev",
-      "name": "Paradev",
-      "github": "https://github.com/ParadevAI/Paradev",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T21:06:19.943Z",
-      "sourceRun": "2026-10-31T06",
-      "tool": {
-        "id": "paradev",
-        "name": "Paradev",
-        "github": "https://github.com/ParadevAI/Paradev",
-        "description": "100개 이상의 코딩 AI 에이전트를 병렬로 실행하고 조율할 수 있는 에이전틱 개발 환경",
-        "longDescription": "개별 Git 워크트리와 터미널을 할당하여 여러 AI 코딩 에이전트가 동시에 독립적인 작업을 수행할 수 있도록 지원하는 데스크톱 애플리케이션입니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI에이전트",
-          "IDE",
-          "개발도구",
-          "병렬처리"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://paradev.com",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T21:04:12.787Z",
-        "requirements": [],
-        "supportedAgents": [
-          "Claude Code",
-          "Codex",
-          "OpenCode",
-          "Cursor Agent"
-        ],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리스 페이지에서 데스크톱 애플리케이션을 다운로드하여 설치합니다.",
-          "작업할 저장소를 열고 각각의 태스크에 대한 에이전트를 할당합니다.",
-          "병렬로 진행되는 에이전트의 작업 결과를 검토하고 반영합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 15758,
-        "forks": 1408,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T21:06:21.937Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T21:06:26.333Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "keep",
       "name": "keep",
       "github": "https://github.com/keephq/keep",
@@ -615,153 +1423,6 @@
         "오픈소스 또는 무료 조건 미확인"
       ],
       "documentEvidenceCheckedAt": "2026-10-30T21:06:26.909Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "get-jobs",
-      "name": "get_jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T21:06:19.943Z",
-      "sourceRun": "2026-10-31T06",
-      "tool": {
-        "id": "get-jobs",
-        "name": "get_jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "주요 구직 플랫폼의 이력서 자동 제출 및 구직 과정을 돕는 AI 기반 구직 보조 스크립트",
-        "longDescription": "중국 주요 구직 및 채용 플랫폼을 대상으로 이력서 자동 제출과 구직 활동을 지원하여 구직자의 반복적인 지원 업무를 줄여주는 자동화 도구입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "구직",
-          "자동화",
-          "이력서",
-          "AI"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T21:04:12.787Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트 저장소를 클론하고 필요한 설정 파일을 작성합니다.",
-          "지원하고자 하는 구직 플랫폼 계정 정보를 연동합니다.",
-          "자동 지원 스크립트를 실행하여 구직 과정을 진행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9406,
-        "forks": 1078,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T21:06:22.511Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T21:06:27.112Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "treesheets",
-      "name": "treesheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-30T21:06:19.943Z",
-      "sourceRun": "2026-10-31T06",
-      "tool": {
-        "id": "treesheets",
-        "name": "treesheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "아웃라이너, 마인드맵, 스프레드시트의 장점을 결합한 자유로운 형식의 계층형 데이터 조직화 도구",
-        "longDescription": "복잡하고 다차원적인 데이터를 직관적으로 구조화할 수 있는 계층형 스프레드시트 프로그램으로, 아이디어 정리, 일정 관리, 노트 필기 등에 활용할 수 있습니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "지식관리",
-          "생산성"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T21:04:12.787Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리스 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
-          "애플리케이션을 실행하고 새로운 트리시츠 문서를 생성합니다.",
-          "계층 구조로 데이터를 입력하고 자유롭게 편집합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3181,
-        "forks": 223,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T21:06:22.680Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T21:06:27.578Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -979,7 +1640,20 @@
         "stars": 5718,
         "forks": 1864,
         "starsUpdatedAt": "2026-10-30"
-      }
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T22:06:22.268Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
     },
     {
       "id": "elasticsearch-hq",
@@ -28575,251 +29249,6 @@
       }
     },
     {
-      "id": "pmd",
-      "name": "PMD Source Code Analyzer",
-      "github": "https://github.com/pmd/pmd",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-29T08:06:32.097Z",
-      "sourceRun": "2026-10-29T17",
-      "tool": {
-        "id": "pmd",
-        "name": "PMD Source Code Analyzer",
-        "github": "https://github.com/pmd/pmd",
-        "description": "다양한 프로그래밍 언어를 지원하는 확장 가능한 다중 언어 정적 코드 분석기입니다.",
-        "longDescription": "소스 코드의 잠재적 버그, 사용되지 않는 변수, 최적화되지 않은 코드 구조 등을 미리 감지하여 코드 품질을 유지할 수 있도록 돕습니다. Java, Apex, JavaScript, Swift 등 수많은 언어를 지원합니다.",
-        "category": "테스트·품질",
-        "tags": [
-          "정적 분석",
-          "코드 품질",
-          "린터"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pmd.github.io",
-        "featured": 9,
-        "added": "2026-10-29",
-        "addedAt": "2026-10-29T08:04:17.460Z",
-        "requirements": [
-          "Java"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "바이너리 압축파일 다운로드",
-            "command": "wget https://github.com/pmd/pmd/releases/latest/download/pmd-bin.zip",
-            "note": "최신 바이너리 릴리스를 다운로드하여 압축을 해제합니다."
-          }
-        ],
-        "usageSteps": [
-          "최신 릴리스 바이너리를 다운로드하고 압축을 풉니다.",
-          "터미널에서 `bin/pmd check` 명령어를 실행하여 소스 코드를 분석합니다.",
-          "출력된 분석 리포트를 확인하고 코드 품질 문제를 수정합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5521,
-        "forks": 1607,
-        "starsUpdatedAt": "2026-10-29"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-29T08:06:33.419Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-29T08:06:36.725Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-29T08:06:44.455Z"
-    },
-    {
-      "id": "qlty",
-      "name": "Qlty CLI",
-      "github": "https://github.com/qltysh/qlty",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-29T08:06:32.097Z",
-      "sourceRun": "2026-10-29T17",
-      "tool": {
-        "id": "qlty",
-        "name": "Qlty CLI",
-        "github": "https://github.com/qltysh/qlty",
-        "description": "70개 이상의 정적 분석 도구를 통합하여 코드 품질을 검사하는 CLI",
-        "longDescription": "다양한 언어와 기술 스택을 사용하는 팀이 일관된 코드 품질 검사를 하나의 도구로 수행할 수 있게 해줍니다. 상용 프로젝트를 포함해 모든 사용 목적에 대해 무료로 제공됩니다.",
-        "category": "개발 도구",
-        "tags": [
-          "코드 품질",
-          "정적 분석",
-          "CLI"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://qlty.sh/",
-        "featured": 9,
-        "added": "2026-10-29",
-        "addedAt": "2026-10-29T08:04:17.460Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Qlty CLI 설치",
-            "command": "curl -sSL https://qlty.sh/install.sh | sh",
-            "note": "공식 설치 스크립트를 사용하여 최신 CLI를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "설치 스크립트를 통해 Qlty CLI를 설치합니다.",
-          "프로젝트 루트 디렉토리에 `.qlty/qlty.toml` 설정 파일을 생성합니다.",
-          "명령어를 통해 코드 품질 검사 및 포맷팅을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3208,
-        "forks": 275,
-        "starsUpdatedAt": "2026-10-29"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-29T08:06:33.584Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-29T08:06:37.154Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-29T08:06:47.956Z"
-    },
-    {
-      "id": "bearer",
-      "name": "Bearer",
-      "github": "https://github.com/Bearer/bearer",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-29T08:06:32.097Z",
-      "sourceRun": "2026-10-29T17",
-      "tool": {
-        "id": "bearer",
-        "name": "Bearer",
-        "github": "https://github.com/Bearer/bearer",
-        "description": "소스 코드의 보안 및 개인정보 리스크를 발견하고 우선순위를 지정하는 SAST(정적 애플리케이션 보안 테스트) 도구입니다.",
-        "longDescription": "개발자의 소스 코드를 스캔하고 데이터 흐름을 분석하여 OWASP Top 10 및 GDPR 관련 보안 취약점과 프라이버시 위험을 사전에 탐지합니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "보안",
-          "SAST",
-          "코드 분석",
-          "DevSecOps",
-          "개인정보"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.bearer.com",
-        "featured": 9,
-        "added": "2026-10-29",
-        "addedAt": "2026-10-29T08:04:17.460Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Bearer CLI 설치",
-            "command": "curl -sfL https://raw.githubusercontent.com/Bearer/bearer/main/contrib/install.sh | sh",
-            "note": "공식 설치 스크립트로 CLI를 다운로드하고 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "설치 스크립트를 실행하여 Bearer CLI를 설치합니다.",
-          "분석할 소스 코드 디렉토리로 이동합니다.",
-          "스캔 명령어를 실행하여 보안 및 프라이버시 리스크 리포트를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2775,
-        "forks": 156,
-        "starsUpdatedAt": "2026-10-29"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-29T08:06:33.988Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-29T08:06:38.212Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "codeanalysis",
       "name": "Tencent Cloud Code Analysis",
       "github": "https://github.com/Tencent/CodeAnalysis",
@@ -52328,95 +52757,6 @@
       "sourceRun": "2026-10-27T13"
     },
     {
-      "id": "brakeman",
-      "name": "Brakeman",
-      "github": "https://github.com/presidentbeef/brakeman",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T03:06:06.100Z",
-      "sourceRun": "2026-10-27T12",
-      "tool": {
-        "id": "brakeman",
-        "name": "Brakeman",
-        "github": "https://github.com/presidentbeef/brakeman",
-        "description": "Ruby on Rails 애플리케이션의 보안 취약점을 검사하는 정적 분석 도구입니다.",
-        "longDescription": "Brakeman은 Ruby on Rails 프로젝트를 실행하지 않고 소스 코드를 정적 분석하여 잠재적인 보안 취약점을 찾아내고 리포트를 생성해 주는 개발자 도구입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "보안",
-          "정적분석",
-          "Ruby"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://brakemanscanner.org/",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T03:04:09.752Z",
-        "requirements": [
-          "Ruby",
-          "RubyGems 또는 Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "RubyGems로 설치",
-            "command": "gem install brakeman",
-            "note": "Ruby 환경에서 직접 설치합니다."
-          },
-          {
-            "title": "Docker로 실행",
-            "command": "docker pull presidentbeef/brakeman",
-            "note": "컨테이너 환경에서 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Rails 애플리케이션의 루트 디렉터리로 이동합니다.",
-          "brakeman 명령어를 실행하여 소스 코드를 스캔합니다.",
-          "출력된 보안 취약점 리포트를 확인하고 수정합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7287,
-        "forks": 779,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T03:06:07.134Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T03:06:10.239Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T03:06:16.142Z"
-    },
-    {
       "id": "booster",
       "name": "Booster",
       "github": "https://github.com/didi/booster",
@@ -52425,89 +52765,6 @@
       "reasons": [],
       "checkedAt": "2026-10-27T03:06:06.100Z",
       "sourceRun": "2026-10-27T12"
-    },
-    {
-      "id": "flake8",
-      "name": "Flake8",
-      "github": "https://github.com/PyCQA/flake8",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T03:06:06.100Z",
-      "sourceRun": "2026-10-27T12",
-      "tool": {
-        "id": "flake8",
-        "name": "Flake8",
-        "github": "https://github.com/PyCQA/flake8",
-        "description": "파이썬 코드 스타일과 품질을 검사하는 린팅 통합 도구",
-        "longDescription": "Flake8은 여러 파이썬 린팅 도구를 하나의 명령어로 실행할 수 있게 묶어주는 래퍼 도구로, PEP 8 준수 여부와 코드 복잡성을 동시에 검사합니다. PyFlakes, pycodestyle, McCabe 판별기를 통합하여 제공합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Python",
-          "정적 분석",
-          "코드 스타일"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://flake8.pycqa.org",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T03:04:09.752Z",
-        "requirements": [
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Pip으로 설치",
-            "command": "pip install flake8",
-            "note": "파이썬 패키지 관리자를 통해 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "터미널에서 검사할 파이썬 파일이나 디렉터리 경로를 지정합니다.",
-          "flake8 명령어를 실행합니다.",
-          "출력된 스타일 경고 및 오류 내역을 확인하고 코드를 수정합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "pip install flake8 명령어로 설치한 뒤 터미널에서 flake8 [파일명] 형식으로 실행할 수 있습니다.",
-        "stars": 3832,
-        "forks": 362,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T03:06:07.493Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T03:06:10.915Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T03:06:17.649Z"
     },
     {
       "id": "rubycritic",
@@ -52562,86 +52819,6 @@
       }
     },
     {
-      "id": "ikos",
-      "name": "IKOS",
-      "github": "https://github.com/NASA-SW-VnV/ikos",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T03:06:06.100Z",
-      "sourceRun": "2026-10-27T12",
-      "tool": {
-        "id": "ikos",
-        "name": "IKOS",
-        "github": "https://github.com/NASA-SW-VnV/ikos",
-        "description": "추상 해석 이론을 기반으로 하는 C/C++용 정적 분석기입니다.",
-        "longDescription": "IKOS(Inference Kernel for Open Static Analyzers)는 C/C++ 소스 코드 및 바이너리의 소프트웨어 검증을 위해 추상 해석(Abstract Interpretation)을 활용하는 정적 분석 프레임워크입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C++",
-          "정적 분석",
-          "소프트웨어 검증",
-          "추상 해석"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/NASA-SW-VnV/ikos",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T03:04:09.752Z",
-        "requirements": [
-          "Homebrew (macOS/Linux)"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Homebrew 설치",
-            "command": "brew install nasa-sw-vnv/core/ikos",
-            "note": "Homebrew를 이용한 간편 설치"
-          }
-        ],
-        "usageSteps": [
-          "Homebrew를 통해 IKOS를 설치합니다.",
-          "분석할 C/C++ 프로젝트에 대해 IKOS 분석 명령어를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3174,
-        "forks": 221,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T03:06:08.482Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T03:06:13.656Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "cpp2il",
       "name": "Cpp2IL",
       "github": "https://github.com/SamboyCoding/Cpp2IL",
@@ -52690,68 +52867,6 @@
       "reasons": [],
       "checkedAt": "2026-10-27T03:06:06.100Z",
       "sourceRun": "2026-10-27T12"
-    },
-    {
-      "id": "clj-kondo",
-      "name": "clj-kondo",
-      "github": "https://github.com/clj-kondo/clj-kondo",
-      "license": "EPL-1.0",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-27T03:06:06.100Z",
-      "sourceRun": "2026-10-27T12",
-      "tool": {
-        "id": "clj-kondo",
-        "name": "clj-kondo",
-        "github": "https://github.com/clj-kondo/clj-kondo",
-        "description": "Clojure 및 ClojureScript 코드를 위한 빠르고 정밀한 정적 분석기 겸 린터입니다.",
-        "longDescription": "clj-kondo는 Clojure 소스 코드를 파싱하여 구문 오류, 사용되지 않는 바인딩, 인라인 정의 경고 등 다양한 코드 품질 문제를 실시간으로 검사해주는 고성능 린터입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Clojure",
-          "정적 분석",
-          "린터",
-          "GraalVM"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "EPL-1.0",
-        "website": "https://github.com/clj-kondo/clj-kondo",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T03:04:09.752Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "시스템에 clj-kondo를 설치합니다.",
-          "명령줄에서 대상 파일이나 표준 입력을 통해 린팅을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1864,
-        "forks": 311,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T03:06:08.638Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ]
     },
     {
       "id": "kubesec",
