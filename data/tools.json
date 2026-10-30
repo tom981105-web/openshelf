@@ -1,5 +1,206 @@
 [
   {
+    "id": "browser-extension",
+    "name": "LibRedirect",
+    "github": "https://github.com/libredirect/browser_extension",
+    "description": "유명 웹사이트를 프라이버시 친화적인 대체 프론트엔드로 자동 리디렉션해주는 브라우저 확장 프로그램입니다.",
+    "longDescription": "YouTube, Twitter, TikTok 등의 요청을 Nitter, Invidious와 같은 가볍고 추적 없는 오픈소스 프론트엔드로 자동 연결해 주는 브라우저 확장 프로그램입니다. 사용자의 웹 서핑 프라이버시를 대폭 향상시킵니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "브라우저 확장",
+      "프라이버시",
+      "리디렉션",
+      "Node.js",
+      "JSON"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://libredirect.manerakai.com",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T06:04:12.857Z",
+    "requirements": [
+      "Node.js",
+      "pnpm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/libredirect/browser_extension && cd browser_extension",
+        "note": "소스코드를 로컬에 다운로드합니다."
+      },
+      {
+        "title": "의존성 설치 및 빌드",
+        "command": "pnpm install && pnpm run html",
+        "note": "패키지 설치 후 빌드 스크립트를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "확장 프로그램을 브라우저에 로드합니다.",
+      "설정 메뉴에서 리디렉션할 대상 서비스와 대체 프론트엔드를 선택합니다.",
+      "평소처럼 웹서핑을 하면 자동으로 프라이버시 친화적 사이트로 연결됩니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4099,
+    "forks": 149,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "cc-gateway",
+    "name": "CC Gateway",
+    "github": "https://github.com/motiful/cc-gateway",
+    "description": "클라이언트 텔레메트리와 기기 지문 정보를 정규화하여 프라이버시를 보호하는 AI API 리버스 프록시입니다.",
+    "longDescription": "클로드 코드(Claude Code) 등 AI 도구가 과도하게 수집하는 기기 정보와 텔레메트리 데이터를 가로채고 정규화하여 프라이버시를 지켜주는 API 리버스 프록시 게이트웨이입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "API 게이트웨이",
+      "프라이버시",
+      "리버스 프록시",
+      "TypeScript",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/motiful/cc-gateway",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T06:04:12.857Z",
+    "requirements": [
+      "Node.js",
+      "TypeScript",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/motiful/cc-gateway.git",
+        "note": "소스코드를 로컬로 가져옵니다."
+      }
+    ],
+    "usageSteps": [
+      "게이트웨이 설정을 구성합니다.",
+      "클라이언트 애플리케이션과 API 사이에 프록시를 배치합니다.",
+      "텔레메트리 데이터가 정규화되어 전송되는지 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "알파 단계의 프로젝트이므로 보조 계정으로 테스트하는 것을 권장합니다.",
+    "stars": 3079,
+    "forks": 508,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "winscript",
+    "name": "WinScript",
+    "github": "https://github.com/flick9000/winscript",
+    "description": "Windows 시스템 최적화, 블로트웨어 제거, 프라이버시 설정 및 필수 앱 설치를 지원하는 오픈소스 툴입니다.",
+    "longDescription": "Windows 환경을 사용자에 맞게 가볍고 빠르게 커스텀할 수 있도록 돕는 경량 오픈소스 도구입니다. 원치 않는 기본 앱 제거, 텔레메트리 차단, 자동 설치 스크립트 생성을 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Windows",
+      "최적화",
+      "디블로트",
+      "PowerShell",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://winscript.cc/",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T06:04:12.857Z",
+    "requirements": [
+      "PowerShell",
+      "Windows 10/11"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PowerShell 직접 실행",
+        "command": "irm \"https://winscript.cc/irm\" | iex",
+        "note": "웹에서 직접 스크립트를 다운로드하여 실행합니다."
+      },
+      {
+        "title": "Winget을 통한 설치",
+        "command": "winget install winscript",
+        "note": "패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "관리자 권한으로 PowerShell을 엽니다.",
+      "설치 명령어를 입력하여 WinScript 인터페이스를 실행합니다.",
+      "원하는 최적화 옵션 및 제거할 앱을 선택한 뒤 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2977,
+    "forks": 187,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "altcha",
+    "name": "ALTCHA",
+    "github": "https://github.com/altcha-org/altcha",
+    "description": "작업증명(PoW) 메커니즘을 활용해 쿠키나 지문 수집 없이 개인정보를 보호하는 자체 호스팅 CAPTCHA 대안입니다.",
+    "longDescription": "웹사이트와 API를 스팸 및 악성 트래픽으로부터 보호하면서도 GDPR, WCAG 2.2 AA 등 글로벌 개인정보보호 및 접근성 규정을 완벽히 준수하는 프라이버시 중심의 보안 솔루션입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "CAPTCHA",
+      "보안",
+      "스팸 방지",
+      "TypeScript",
+      "Web Component"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://altcha.org",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T06:04:12.857Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm install altcha",
+        "note": "npm을 통해 ALTCHA 위젯 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프론트엔드 프로젝트에 altcha 패키지를 임포트하고 위젯 컴포넌트를 폼에 추가합니다.",
+      "백엔드 서버에 ALTCHA 검증 로직을 연동합니다.",
+      "사용자가 폼을 제출할 때 작업증명 방식으로 스팸 여부가 자동으로 검증되도록 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 2859,
+    "forks": 143,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
     "id": "ziwei-doushu",
     "name": "ziwei-doushu",
     "github": "https://github.com/Renhuai123/ziwei-doushu",
