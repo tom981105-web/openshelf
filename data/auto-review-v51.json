@@ -1,30 +1,30 @@
 {
   "version": 1,
-  "updatedAt": "2026-10-30T20:06:42.873Z",
+  "updatedAt": "2026-10-30T21:06:32.158Z",
   "items": [
     {
-      "id": "windmill",
-      "name": "Windmill",
-      "github": "https://github.com/windmill-labs/windmill",
+      "id": "sentry",
+      "name": "sentry",
+      "github": "https://github.com/getsentry/sentry",
       "license": "확인 필요",
       "status": "pending_review",
       "reasons": [
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-10-30T20:06:30.139Z",
-      "sourceRun": "2026-10-31T05",
+      "checkedAt": "2026-10-30T21:06:19.942Z",
+      "sourceRun": "2026-10-31T06",
       "tool": {
-        "id": "windmill",
-        "name": "Windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 구축할 수 있는 오픈소스 코드 중심 오케스트레이션 플랫폼입니다.",
-        "longDescription": "엔지니어는 여러 언어로 코드를 작성하고 Git과 동기화하며, 비즈니스 팀은 AI를 활용해 동일한 플랫폼에서 워크플로우를 구성할 수 있습니다. 스크립트를 자동으로 공유 가능한 UI와 API로 변환해 주는 강력한 오케스트레이션 도구입니다.",
-        "category": "업무 자동화",
+        "id": "sentry",
+        "name": "sentry",
+        "github": "https://github.com/getsentry/sentry",
+        "description": "애플리케이션의 오류를 감지하고 추적하는 에러 모니터링 플랫폼",
+        "longDescription": "실시간으로 소프트웨어 에러와 성능 저하를 추적하여 문제 해결 과정을 단축시켜 주는 개발자 중심의 에러 추적 및 성능 모니터링 플랫폼입니다. 공식 SDK를 통해 다양한 언어와 프레임워크를 지원합니다.",
+        "category": "개발 도구",
         "tags": [
-          "워크플로우",
-          "오케스트레이션",
-          "AI에이전트"
+          "오류추적",
+          "모니터링",
+          "디버깅"
         ],
         "platforms": [
           "Web",
@@ -35,34 +35,25 @@
         "free": true,
         "openSource": false,
         "license": "확인 필요",
-        "website": "https://windmill.dev",
+        "website": "https://sentry.io",
         "featured": 9,
         "added": "2026-10-30",
-        "addedAt": "2026-10-30T20:04:12.099Z",
-        "requirements": [
-          "Docker Engine 24+",
-          "Docker Compose v2"
-        ],
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [],
         "supportedAgents": [],
-        "install": [
-          {
-            "title": "도커로 실행",
-            "command": "docker compose up",
-            "note": "Docker Compose를 사용하여 Windmill 서버를 로컬에 실행합니다."
-          }
-        ],
+        "install": [],
         "usageSteps": [
-          "웹 브라우저를 통해 Windmill 대시보드에 접속합니다.",
-          "Python, TypeScript 또는 SQL 등으로 스크립트나 워크플로우를 작성합니다.",
-          "필요에 따라 AI 에이전트와 연동하여 반복 업무나 데이터 파이프라인을 자동화합니다."
+          "프로젝트에 맞는 공식 Sentry SDK를 설치합니다.",
+          "애플리케이션 초기화 코드에 DSN 설정을 추가합니다.",
+          "발생하는 에러 및 성능 지표를 Sentry 대시보드에서 모니터링합니다."
         ],
         "examplePrompt": "",
         "usageNote": "",
-        "stars": 18326,
-        "forks": 1132,
+        "stars": 45682,
+        "forks": 4960,
         "starsUpdatedAt": "2026-10-30"
       },
-      "licenseEvidenceCheckedAt": "2026-10-30T20:06:30.863Z",
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:20.696Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -75,7 +66,90 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-10-30T20:06:34.115Z",
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:23.762Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T21:06:28.644Z"
+    },
+    {
+      "id": "pm2",
+      "name": "pm2",
+      "github": "https://github.com/Unitech/pm2",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "pm2",
+        "name": "pm2",
+        "github": "https://github.com/Unitech/pm2",
+        "description": "로드 밸런서가 내장되어 있는 Node.js 및 TypeScript용 프로덕션 프로세스 관리자",
+        "longDescription": "애플리케이션을 무중단으로 재시작하고 항상 실행 상태로 유지할 수 있도록 돕는 Node.js 프로세스 관리 도구입니다. 손쉬운 명령어 인터페이스를 통해 프로덕션 환경의 서버 프로세스를 효율적으로 관리할 수 있습니다.",
+        "category": "개발 운영",
+        "tags": [
+          "프로세스관리",
+          "Node.js",
+          "로드밸런서"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pm2.keymetrics.io/docs/usage/quick-start/",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [
+          "Node.js 18+ 또는 Bun 1+"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "NPM을 통한 설치",
+            "command": "npm install pm2 -g",
+            "note": "전역으로 PM2를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "NPM 또는 Bun을 통해 PM2를 전역 설치합니다.",
+          "pm2 start app.js 명령어로 애플리케이션을 실행합니다.",
+          "pm2 status 또는 pm2 logs 명령어로 상태와 로그를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 43329,
+        "forks": 2732,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:20.917Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:24.018Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -85,7 +159,247 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T20:06:39.793Z"
+      "recheckedAt": "2026-10-30T21:06:29.442Z"
+    },
+    {
+      "id": "glances",
+      "name": "glances",
+      "github": "https://github.com/nicolargo/glances",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "glances",
+        "name": "glances",
+        "github": "https://github.com/nicolargo/glances",
+        "description": "다양한 운영체제를 지원하는 시스템 모니터링 도구",
+        "longDescription": "터미널 및 웹 인터페이스를 통해 CPU, 메모리, 네트워크, 디스크 등 시스템 리소스 사용량을 실시간으로 모니터링할 수 있는 파이썬 기반 도구입니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "모니터링",
+          "시스템",
+          "파이썬"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://nicolargo.github.io/glances/",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [
+          "Python 3"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "PyPI를 통한 설치",
+            "command": "pip install glances",
+            "note": "가상 환경에서 파이썬 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "가상 환경을 활성화합니다.",
+          "pip 명령어로 Glances를 설치합니다.",
+          "명령어 창에서 glances를 입력하여 모니터링 화면을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 33877,
+        "forks": 1838,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:21.096Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:24.720Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T21:06:30.555Z"
+    },
+    {
+      "id": "fail2ban",
+      "name": "fail2ban",
+      "github": "https://github.com/fail2ban/fail2ban",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "fail2ban",
+        "name": "fail2ban",
+        "github": "https://github.com/fail2ban/fail2ban",
+        "description": "반복되는 인증 실패와 무차별 대입 공격을 차단하는 보안 데몬",
+        "longDescription": "시스템 로그 파일을 스캔하여 과도한 로그인 실패를 일으키는 IP 주소를 식별하고 방화벽 규칙을 동적으로 업데이트합니다. 이를 통해 서버를 무차별 대입 공격으로부터 보호합니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "방화벽",
+          "로그분석"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://www.fail2ban.org",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [
+          "Python = 3.5 또는 PyPy3"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 관리자를 통한 설치",
+            "command": "sudo apt install fail2ban",
+            "note": "데비안 및 우분투 계열에서 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "배포판 패키지 관리자 또는 소스코드를 통해 Fail2Ban을 설치합니다.",
+          "설정 파일에서 모니터링할 로그와 차단 정책을 설정합니다.",
+          "서비스를 시작하고 상태를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18917,
+        "forks": 1512,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:21.275Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:25.261Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T21:06:31.348Z"
+    },
+    {
+      "id": "windmill",
+      "name": "windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "windmill",
+        "name": "windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "스크립트, 워크플로우, 내부 앱, AI 에이전트를 구축하는 오픈소스 플랫폼",
+        "longDescription": "다양한 프로그래밍 언어로 작성한 스크립트를 API, Cron 작업, 사용자 인터페이스 및 복잡한 워크플로우로 전환할 수 있는 고성능 셀프호스팅 오케스트레이터입니다. 스크립트와 워크플로우를 효율적으로 관리하고 자동화할 수 있는 기능을 제공합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "자동화",
+          "AI에이전트"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker 또는 지원되는 환경에서 Windmill 인스턴스를 배포합니다.",
+          "웹 대스보드에 접속하여 워크플로우나 스크립트를 작성합니다.",
+          "필요한 언어로 코드를 연동하고 자동화 파이프라인을 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18327,
+        "forks": 1132,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:21.477Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:25.526Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-10-30T21:06:32.158Z"
     },
     {
       "id": "paradev",
@@ -97,19 +411,20 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-10-30T20:06:30.139Z",
-      "sourceRun": "2026-10-31T05",
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
       "tool": {
         "id": "paradev",
         "name": "Paradev",
         "github": "https://github.com/ParadevAI/Paradev",
-        "description": "100개 이상의 코딩 에이전트를 병렬로 실행하는 데스크톱 AI IDE",
-        "longDescription": "Claude Code, Codex, OpenCode 등 다양한 CLI 코딩 에이전트를 하나의 워크스페이스에서 병렬로 관리할 수 있습니다. 각 작업에 독립적인 Git 워크트리와 터미널, 브라우저 미리보기를 제공하여 개발 생산성을 높입니다.",
+        "description": "100개 이상의 코딩 AI 에이전트를 병렬로 실행하고 조율할 수 있는 에이전틱 개발 환경",
+        "longDescription": "개별 Git 워크트리와 터미널을 할당하여 여러 AI 코딩 에이전트가 동시에 독립적인 작업을 수행할 수 있도록 지원하는 데스크톱 애플리케이션입니다.",
         "category": "AI 에이전트",
         "tags": [
-          "IDE",
           "AI에이전트",
-          "Git"
+          "IDE",
+          "개발도구",
+          "병렬처리"
         ],
         "platforms": [
           "macOS",
@@ -121,28 +436,27 @@
         "website": "https://paradev.com",
         "featured": 9,
         "added": "2026-10-30",
-        "addedAt": "2026-10-30T20:04:12.099Z",
+        "addedAt": "2026-10-30T21:04:12.787Z",
         "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "macOS 다운로드",
-            "command": "curl -L https://github.com/paradevai/paradev/releases/latest/download/Superset-arm64.dmg",
-            "note": "Apple Silicon 버전의 데스크톱 앱을 다운로드하여 설치합니다."
-          }
+        "supportedAgents": [
+          "Claude Code",
+          "Codex",
+          "OpenCode",
+          "Cursor Agent"
         ],
+        "install": [],
         "usageSteps": [
-          "Paradev 데스크톱 앱을 실행하고 작업할 레포지토리를 엽니다.",
-          "수행할 태스크를 입력하고 사용할 AI 코딩 CLI 에이전트를 선택합니다.",
-          "병렬로 생성된 터미널과 Git 워크트리에서 에이전트의 작업 결과를 검토하고 승인합니다."
+          "공식 릴리스 페이지에서 데스크톱 애플리케이션을 다운로드하여 설치합니다.",
+          "작업할 저장소를 열고 각각의 태스크에 대한 에이전트를 할당합니다.",
+          "병렬로 진행되는 에이전트의 작업 결과를 검토하고 반영합니다."
         ],
-        "examplePrompt": "로그인 페이지의 유효성 검사 버그를 수정해줘",
+        "examplePrompt": "",
         "usageNote": "",
-        "stars": 15756,
+        "stars": 15758,
         "forks": 1408,
         "starsUpdatedAt": "2026-10-30"
       },
-      "licenseEvidenceCheckedAt": "2026-10-30T20:06:31.167Z",
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:21.937Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -155,7 +469,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-10-30T20:06:34.600Z",
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:26.333Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -163,13 +477,156 @@
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
+      }
+    },
+    {
+      "id": "keep",
+      "name": "keep",
+      "github": "https://github.com/keephq/keep",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "keep",
+        "name": "keep",
+        "github": "https://github.com/keephq/keep",
+        "description": "다양한 모니터링 도구의 알람을 통합 관리하고 자동화하는 오픈소스 AIOps 플랫폼",
+        "longDescription": "여러 모니터링 시스템에서 발생하는 알림을 단일 대시보드에서 수집하고, 중복 제거 및 인공지능 기반 상관관계 분석을 통해 장애 대응 워크플로우를 자동화합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "AIOps",
+          "알림관리",
+          "모니터링",
+          "자동화"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://keephq.dev",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker 또는 Kubernetes 환경에 Keep을 배포합니다.",
+          "사용 중인 모니터링 툴과 연동 설정을 완료합니다.",
+          "웹 대시보드에서 통합된 알람 상태를 확인하고 워크플로우를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 12463,
+        "forks": 1541,
+        "starsUpdatedAt": "2026-10-30"
       },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T20:06:40.521Z"
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:22.173Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:26.577Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "nvtop",
+      "name": "nvtop",
+      "github": "https://github.com/Syllo/nvtop",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "nvtop",
+        "name": "nvtop",
+        "github": "https://github.com/Syllo/nvtop",
+        "description": "다양한 제조사의 GPU 및 가속기 프로세스 사용량을 실시간으로 모니터링하는 도구",
+        "longDescription": "htop과 유사한 인터페이스로 여러 GPU의 상태, 메모리 사용량, 온도 등을 실시간으로 표시해 주는 명령줄 기반 모니터링 유틸리티입니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "GPU",
+          "모니터링",
+          "CLI",
+          "하드웨어"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/Syllo/nvtop",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "패키지 관리자 또는 소스 빌드를 통해 시스템에 nvtop을 설치합니다.",
+          "터미널에서 nvtop 명령어를 실행합니다.",
+          "실시간으로 표시되는 GPU 프로세스 및 리소스 현황을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 11111,
+        "forks": 453,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:22.331Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:26.909Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
     },
     {
       "id": "get-jobs",
-      "name": "Get Jobs (工作无忧)",
+      "name": "get_jobs",
       "github": "https://github.com/loks666/get_jobs",
       "license": "확인 필요",
       "status": "pending_review",
@@ -177,21 +634,23 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-10-30T20:06:30.139Z",
-      "sourceRun": "2026-10-31T05",
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
       "tool": {
         "id": "get-jobs",
-        "name": "Get Jobs (工作无忧)",
+        "name": "get_jobs",
         "github": "https://github.com/loks666/get_jobs",
-        "description": "중국 주요 구직 플랫폼에서 이력서 자동 제출을 지원하는 AI 구직 보조 스크립트",
-        "longDescription": "다양한 중국 구직 플랫폼을 대상으로 이력서 투모 및 구직 과정을 자동화해 주는 도구입니다. AI 분석 및 스프링 부트 기반의 백엔드를 결합하여 구직 활동의 반복적인 수고를 덜어줍니다.",
+        "description": "주요 구직 플랫폼의 이력서 자동 제출 및 구직 과정을 돕는 AI 기반 구직 보조 스크립트",
+        "longDescription": "중국 주요 구직 및 채용 플랫폼을 대상으로 이력서 자동 제출과 구직 활동을 지원하여 구직자의 반복적인 지원 업무를 줄여주는 자동화 도구입니다.",
         "category": "업무 자동화",
         "tags": [
-          "AI 에이전트",
+          "구직",
           "자동화",
-          "이력서"
+          "이력서",
+          "AI"
         ],
         "platforms": [
+          "Web",
           "Linux",
           "macOS",
           "Windows"
@@ -202,30 +661,22 @@
         "website": "https://loks666.github.io/get_jobs/",
         "featured": 9,
         "added": "2026-10-30",
-        "addedAt": "2026-10-30T20:04:12.099Z",
-        "requirements": [
-          "Java 11+"
-        ],
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [],
         "supportedAgents": [],
-        "install": [
-          {
-            "title": "소스코드 클론",
-            "command": "git clone https://github.com/loks666/get_jobs.git",
-            "note": "레포지토리를 로컬에 클론한 후 설정을 진행합니다."
-          }
-        ],
+        "install": [],
         "usageSteps": [
-          "설정 파일에 구직 플랫폼 계정 정보 및 이력서 내용을 입력합니다.",
-          "원하는 직무 키워드와 필터 조건을 설정합니다.",
-          "스크립트를 실행하여 지원 프로세스를 자동화합니다."
+          "프로젝트 저장소를 클론하고 필요한 설정 파일을 작성합니다.",
+          "지원하고자 하는 구직 플랫폼 계정 정보를 연동합니다.",
+          "자동 지원 스크립트를 실행하여 구직 과정을 진행합니다."
         ],
         "examplePrompt": "",
-        "usageNote": "계정 보안 및 플랫폼 이용약관을 준수하여 사용해야 합니다.",
+        "usageNote": "",
         "stars": 9406,
         "forks": 1078,
         "starsUpdatedAt": "2026-10-30"
       },
-      "licenseEvidenceCheckedAt": "2026-10-30T20:06:31.457Z",
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:22.511Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -238,7 +689,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-10-30T20:06:34.906Z",
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:27.112Z",
       "documentEvidence": {
         "license": "MIT",
         "verifiedLicense": null,
@@ -246,9 +697,489 @@
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "treesheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "treesheets",
+        "name": "treesheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "아웃라이너, 마인드맵, 스프레드시트의 장점을 결합한 자유로운 형식의 계층형 데이터 조직화 도구",
+        "longDescription": "복잡하고 다차원적인 데이터를 직관적으로 구조화할 수 있는 계층형 스프레드시트 프로그램으로, 아이디어 정리, 일정 관리, 노트 필기 등에 활용할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "스프레드시트",
+          "마인드맵",
+          "지식관리",
+          "생산성"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 릴리스 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
+          "애플리케이션을 실행하고 새로운 트리시츠 문서를 생성합니다.",
+          "계층 구조로 데이터를 입력하고 자유롭게 편집합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3181,
+        "forks": 223,
+        "starsUpdatedAt": "2026-10-30"
       },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T20:06:41.415Z"
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:22.680Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-10-30T21:06:27.578Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "osquery",
+      "name": "osquery",
+      "github": "https://github.com/osquery/osquery",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "osquery",
+        "name": "osquery",
+        "github": "https://github.com/osquery/osquery",
+        "description": "SQL을 사용하여 운영체제 상태를 계측, 모니터링 및 분석할 수 있는 프레임워크입니다.",
+        "longDescription": "Facebook에서 개발한 오픈소스 도구로, 리눅스, macOS, 윈도우 등의 운영체제 정보를 표준 SQL 쿼리를 통해 조회할 수 있어 시스템 모니터링과 보안 감사에 유용합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "osquery",
+          "SQL",
+          "모니터링",
+          "보안",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://osquery.io",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 홈페이지에서 플랫폼별 패키지를 다운로드하여 설치합니다.",
+          "osqueryi를 실행하여 인터랙티브 SQL 셸을 엽니다.",
+          "SELECT * FROM processes; 등 원하는 테이블에 SQL 쿼리를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 23706,
+        "forks": 2629,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:22.873Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "oneuptime",
+      "name": "OneUptime",
+      "github": "https://github.com/OneUptime/oneuptime",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "oneuptime",
+        "name": "OneUptime",
+        "github": "https://github.com/OneUptime/oneuptime",
+        "description": "웹사이트, API, 서버 상태를 모니터링하고 인시던트를 관리할 수 있는 오픈소스 관찰 가능성 플랫폼입니다.",
+        "longDescription": "서버 가동 상태 점검, 로그 및 메트릭 수집, 장애 발생 시 담당자 호출(On-call), 고객용 상태 페이지(Status page) 기능을 하나의 통합 제품으로 제공합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "모니터링",
+          "인시던트",
+          "DevOps",
+          "Docker",
+          "Kubernetes"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://oneuptime.com",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Helm을 이용한 쿠버네티스 설치",
+            "command": "helm repo add oneuptime https://helm-chart.oneuptime.com/\nhelm install my-oneuptime oneuptime/oneuptime --set host=domain",
+            "note": "쿠버네티스 환경에 OneUptime을 배포합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker Compose 또는 Kubernetes Helm 차트를 사용하여 플랫폼을 배포합니다.",
+          "웹 대시보드에 접속하여 첫 관리자 계정을 생성합니다.",
+          "모니터링할 웹사이트 및 서버 엔드포인트를 등록하고 알림 규칙을 설정합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7771,
+        "forks": 482,
+        "starsUpdatedAt": "2026-10-30"
+      },
+      "licenseEvidenceCheckedAt": "2026-10-30T21:06:23.066Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "scope",
+      "name": "Weave Scope",
+      "github": "https://github.com/weaveworks/scope",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06"
+    },
+    {
+      "id": "sysmon-config",
+      "name": "sysmon-config",
+      "github": "https://github.com/SwiftOnSecurity/sysmon-config",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "sysmon-config",
+        "name": "sysmon-config",
+        "github": "https://github.com/SwiftOnSecurity/sysmon-config",
+        "description": "고품질 이벤트 로깅 및 시스템 변경 모니터링을 위한 Windows Sysmon 설정 파일 템플릿입니다.",
+        "longDescription": "마이크로소프트 Sysinternals Sysmon을 위한 기본 구성 템플릿으로, 침해 사고 조사 및 위협 헌팅에 필요한 상세한 시스템 이벤트 추적 규칙을 제공합니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "Sysmon",
+          "Windows",
+          "보안",
+          "로깅",
+          "모니터링"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/SwiftOnSecurity/sysmon-config",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [
+          "Windows",
+          "Sysmon"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Sysmon 설정 적용",
+            "command": "sysmon.exe -accepteula -i sysmonconfig-export.xml",
+            "note": "관리자 권한으로 실행하여 설정을 적용합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소에서 XML 설정 파일을 다운로드합니다.",
+          "관리자 권한으로 명령 프롬프트를 엽니다.",
+          "sysmon.exe 명령어로 설정을 설치 또는 업데이트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5718,
+        "forks": 1864,
+        "starsUpdatedAt": "2026-10-30"
+      }
+    },
+    {
+      "id": "elasticsearch-hq",
+      "name": "ElasticHQ",
+      "github": "https://github.com/ElasticHQ/elasticsearch-HQ",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "elasticsearch-hq",
+        "name": "ElasticHQ",
+        "github": "https://github.com/ElasticHQ/elasticsearch-HQ",
+        "description": "Elasticsearch 인스턴스 및 클러스터를 모니터링하고 관리하기 위한 웹 애플리케이션입니다.",
+        "longDescription": "클러스터의 상태, 노드 성능, 인덱스 정보 등을 직관적인 웹 GUI를 통해 실시간으로 확인하고 관리할 수 있도록 돕습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "Elasticsearch",
+          "모니터링",
+          "GUI",
+          "데이터베이스",
+          "Python"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://www.elastichq.org",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [
+          "Python 3.6+ 또는 Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "소스코드 설치",
+            "command": "pip install -r requirements.txt",
+            "note": "파이썬 의존성 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하거나 도커 이미지를 다운로드합니다.",
+          "서버를 실행하고 웹 브라우저로 접속합니다.",
+          "관리할 Elasticsearch 클러스터 엔드포인트를 연결합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프로젝트가 더 이상 적극적으로 유지보수되지 않을 수 있습니다.",
+        "stars": 4991,
+        "forks": 520,
+        "starsUpdatedAt": "2026-10-30"
+      }
+    },
+    {
+      "id": "securityonion",
+      "name": "Security Onion",
+      "github": "https://github.com/Security-Onion-Solutions/securityonion",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "securityonion",
+        "name": "Security Onion",
+        "github": "https://github.com/Security-Onion-Solutions/securityonion",
+        "description": "위협 헌팅, 기업 보안 모니터링 및 로그 관리를 위한 무료 오픈소스 Linux 배포판입니다.",
+        "longDescription": "네트워크 및 호스트 활동 가시성을 제공하기 위해 Suricata, Elastic Stack, osquery, Zeek 등 다양한 보안 도구가 통합된 포괄적인 플랫폼입니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "모니터링",
+          "SIEM",
+          "위협헌팅",
+          "Linux"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://securityonion.net",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [
+          "공식 하드웨어 권장 사양 참조"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 문서에서 하드웨어 요구사항을 확인합니다.",
+          "Security Onion ISO를 다운로드하여 시스템에 설치합니다.",
+          "Security Onion Console(SOC) 웹 인터페이스를 통해 이벤트를 분석합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4956,
+        "forks": 681,
+        "starsUpdatedAt": "2026-10-30"
+      }
+    },
+    {
+      "id": "tacticalrmm",
+      "name": "Tactical RMM",
+      "github": "https://github.com/amidaware/tacticalrmm",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06",
+      "tool": {
+        "id": "tacticalrmm",
+        "name": "Tactical RMM",
+        "github": "https://github.com/amidaware/tacticalrmm",
+        "description": "Django, Vue, Go 기반으로 구축된 원격 모니터링 및 관리(RMM) 도구입니다.",
+        "longDescription": "윈도우 및 리눅스 시스템의 실시간 원격 제어, 하드웨어/소프트웨어 인벤토리 관리, 자동화된 작업 스크립트 실행 기능을 제공합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "RMM",
+          "원격관리",
+          "Django",
+          "Vue",
+          "모니터링"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.tacticalrmm.com",
+        "featured": 9,
+        "added": "2026-10-30",
+        "addedAt": "2026-10-30T21:04:12.787Z",
+        "requirements": [
+          "Python",
+          "Django",
+          "Go"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "서버 환경에 Tactical RMM 백엔드와 대시보드를 구축합니다.",
+          "관리할 대상 기기에 에이전트를 설치합니다.",
+          "웹 대시보드에서 원격으로 시스템 상태를 모니터링하고 작업을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4526,
+        "forks": 683,
+        "starsUpdatedAt": "2026-10-30"
+      }
+    },
+    {
+      "id": "statsviz",
+      "name": "Statsviz",
+      "github": "https://github.com/arl/statsviz",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06"
+    },
+    {
+      "id": "nosqlclient",
+      "name": "Nosqlclient",
+      "github": "https://github.com/nosqlclient/nosqlclient",
+      "license": "AGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06"
+    },
+    {
+      "id": "kite",
+      "name": "Kite",
+      "github": "https://github.com/kite-org/kite",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-10-30T21:06:19.943Z",
+      "sourceRun": "2026-10-31T06"
     },
     {
       "id": "unikraft",
@@ -330,85 +1261,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-30T20:06:42.119Z"
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-30T20:06:30.139Z",
-      "sourceRun": "2026-10-31T05",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "스프레드시트, 마인드맵, 아웃라인을 결합한 계층형 데이터 조직화 도구입니다.",
-        "longDescription": "전통적인 스프레드시트의 친숙함과 마인드맵 및 아웃라인의 장점을 결합하여 복잡한 계층형 데이터를 한눈에 정리할 수 있습니다. 할 일 목록, 브레인스토밍, 프로젝트 관리 등 다양한 정보를 구조화하는 데 적합합니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "지식 관리"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T20:04:12.099Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "릴리스 다운로드",
-            "command": "# Releases 페이지에서 운영체제별 바이너리 다운로드",
-            "note": "GitHub Releases에서 사전 빌드된 바이너리를 다운로드하여 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로그램을 실행하고 새로운 그리드 문서를 생성합니다.",
-          "셀 안에 하위 그리드를 추가하여 계층적인 아이디어나 데이터를 작성합니다.",
-          "프로젝트 계획이나 할 일 목록 등으로 구조화하여 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "macOS에서는 최초 실행 시 보안 팝업이 나타날 수 있으며, 시스템 설정에서 허용해야 합니다.",
-        "stars": 3181,
-        "forks": 223,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T20:06:31.932Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T20:06:36.598Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T20:06:42.873Z"
     },
     {
       "id": "proxcenter-ui",
@@ -9472,89 +10324,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-30T10:06:43.778Z"
-    },
-    {
-      "id": "glances",
-      "name": "Glances",
-      "github": "https://github.com/nicolargo/glances",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T10:06:33.390Z",
-      "sourceRun": "2026-10-30T19",
-      "tool": {
-        "id": "glances",
-        "name": "Glances",
-        "github": "https://github.com/nicolargo/glances",
-        "description": "파이썬 기반의 크로스 플랫폼 시스템 모니터링 도구",
-        "longDescription": "top과 htop의 현대적인 대안으로 시스템 리소스를 실시간으로 모니터링할 수 있습니다. 터미널 및 웹 인터페이스를 통해 CPU, 메모리, 네트워크 등의 사용량을 확인할 수 있습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "모니터링",
-          "Python",
-          "시스템"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://nicolargo.github.io/glances/",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T10:04:12.496Z",
-        "requirements": [
-          "Python 3"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "PyPI를 통한 설치",
-            "command": "python3 -m pip install glances",
-            "note": "파이썬 가상 환경에서 실행을 권장합니다."
-          }
-        ],
-        "usageSteps": [
-          "터미널을 엽니다.",
-          "glances 명령어를 입력하여 모니터링 대시보드를 실행합니다.",
-          "필요에 따라 웹 서버 모드로 실행하여 브라우저에서 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 33873,
-        "forks": 1838,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T10:06:34.440Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T10:06:38.366Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T10:06:44.511Z"
     },
     {
       "id": "windterm",
@@ -28674,89 +29443,6 @@
       "recheckedAt": "2026-10-29T07:06:39.679Z"
     },
     {
-      "id": "oneuptime",
-      "name": "OneUptime",
-      "github": "https://github.com/OneUptime/oneuptime",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-29T07:06:27.401Z",
-      "sourceRun": "2026-10-29T16",
-      "tool": {
-        "id": "oneuptime",
-        "name": "OneUptime",
-        "github": "https://github.com/OneUptime/oneuptime",
-        "description": "웹사이트, API, 서버 모니터링 및 장애 대응을 통합 관리하는 오픈소스 옵저버빌리티 플랫폼",
-        "longDescription": "인프라 가용성 확인, 로그 및 메트릭 수집, 온콜(On-call) 알림 전송, 상태 페이지(Status Page) 운영 기능을 하나의 제품으로 통합 제공하는 모니터링 솔루션입니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "모니터링",
-          "DevOps",
-          "장애 관리",
-          "옵저버빌리티",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://oneuptime.com",
-        "featured": 9,
-        "added": "2026-10-29",
-        "addedAt": "2026-10-29T07:04:16.128Z",
-        "requirements": [
-          "Docker",
-          "Docker Compose 또는 Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Helm을 이용한 설치",
-            "command": "helm repo add oneuptime https://helm-chart.oneuptime.com/",
-            "note": "쿠버네티스 환경에 OneUptime Helm 차트를 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker Compose 또는 Helm 차트를 사용하여 플랫폼을 배포합니다.",
-          "관리자 계정으로 로그인한 뒤 모니터링할 도메인이나 API를 등록합니다.",
-          "알림 채널을 설정하여 장애 발생 시 즉각적인 경고를 수신합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7768,
-        "forks": 482,
-        "starsUpdatedAt": "2026-10-29"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-29T07:06:29.271Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-29T07:06:33.320Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "loongcollector",
       "name": "LoongCollector",
       "github": "https://github.com/alibaba/loongcollector",
@@ -31087,88 +31773,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-29T03:06:38.025Z"
-    },
-    {
-      "id": "fail2ban",
-      "name": "fail2ban",
-      "github": "https://github.com/fail2ban/fail2ban",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-29T03:06:27.775Z",
-      "sourceRun": "2026-10-29T12",
-      "tool": {
-        "id": "fail2ban",
-        "name": "fail2ban",
-        "github": "https://github.com/fail2ban/fail2ban",
-        "description": "반복되는 인증 실패 로그를 감지하고 방화벽 규칙을 업데이트해 공격 호스트를 차단하는 보안 데몬입니다.",
-        "longDescription": "SSH, Apache 등 다양한 서비스의 로그 파일을 모니터링하여 무차별 대입 공격이나 무단 접근 시도를 자동으로 탐지하고 차단 조치를 수행하는 필수 Linux 서버 보안 도구입니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "보안",
-          "방화벽",
-          "로그",
-          "Linux",
-          "서버차단"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://www.fail2ban.org",
-        "featured": 9,
-        "added": "2026-10-29",
-        "addedAt": "2026-10-29T03:04:14.452Z",
-        "requirements": [
-          "Python = 3.5"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "APT 기반 설치 (Ubuntu/Debian)",
-            "command": "sudo apt install fail2ban",
-            "note": "패키지 관리자를 통해 간편하게 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "패키지 관리자나 소스 코드를 통해 fail2ban을 설치합니다.",
-          "/etc/fail2ban/jail.local 파일을 생성하여 모니터링할 서비스와 차단 규칙을 설정합니다.",
-          "서비스를 시작하고 로그를 확인하여 정상 동작을 점검합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 18902,
-        "forks": 1510,
-        "starsUpdatedAt": "2026-10-29"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-29T03:06:29.790Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-29T03:06:34.030Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "xbmc",
@@ -36973,91 +37577,6 @@
         "오픈소스 또는 무료 조건 미확인"
       ],
       "documentEvidenceCheckedAt": "2026-10-28T16:07:14.564Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "The operation was aborted due to timeout"
-    },
-    {
-      "id": "osquery",
-      "name": "osquery",
-      "github": "https://github.com/osquery/osquery",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-28T16:07:08.093Z",
-      "sourceRun": "2026-10-29T01",
-      "tool": {
-        "id": "osquery",
-        "name": "osquery",
-        "github": "https://github.com/osquery/osquery",
-        "description": "SQL 쿼리를 통해 운영체제를 계측, 모니터링 및 분석하는 프레임워크입니다.",
-        "longDescription": "운영체제를 고성능 관계형 데이터베이스처럼 다룰 수 있게 해주는 도구로, SQL 쿼리를 작성하여 시스템 상태, 실행 중인 프로세스, 네트워크 연결 등을 실시간으로 모니터링할 수 있습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "모니터링",
-          "SQL",
-          "보안",
-          "C++",
-          "인프라"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://osquery.io",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T16:04:16.459Z",
-        "requirements": [
-          "지원되는 운영체제 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "공식 다운로드",
-            "command": "https://osquery.io/downloads",
-            "note": "공식 웹사이트에서 최신 패키지를 내려받아 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "운영체제에 맞는 osquery를 설치합니다.",
-          "osqueryi 셸을 실행하여 대화형으로 시스템 정보를 조회하는 SQL 쿼리를 실행합니다.",
-          "필요시 데몬(osqueryd)을 설정하여 정기적인 시스템 모니터링을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 23697,
-        "forks": 2628,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T16:07:10.103Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-28T16:07:14.947Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -48528,81 +49047,6 @@
       "sourceRun": "2026-10-28T03"
     },
     {
-      "id": "sentry",
-      "name": "Sentry",
-      "github": "https://github.com/getsentry/sentry",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T17:07:20.823Z",
-      "sourceRun": "2026-10-28T02",
-      "tool": {
-        "id": "sentry",
-        "name": "Sentry",
-        "github": "https://github.com/getsentry/sentry",
-        "description": "실시간 애플리케이션 에러 모니터링 및 추적 플랫폼",
-        "longDescription": "Sentry는 코드의 예외 상황과 성능 저하를 추적하여 문제 원인을 빠르게 진단할 수 있도록 돕는 디버깅 및 모니터링 플랫폼입니다. 다양한 프로그래밍 언어와 프레임워크를 공식 SDK를 통해 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "에러 추적",
-          "모니터링",
-          "디버깅"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://sentry.io",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T17:04:17.005Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트에 맞는 공식 Sentry SDK 설치",
-          "애플리케이션 초기화 코드에 Sentry DSN 설정",
-          "에러 발생 시 Sentry 대시보드에서 실시간 스택 트레이스 확인"
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 45664,
-        "forks": 4957,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T17:07:21.516Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T17:07:25.225Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T17:07:47.769Z"
-    },
-    {
       "id": "miller",
       "name": "Miller",
       "github": "https://github.com/johnkerl/miller",
@@ -52320,238 +52764,6 @@
       "sourceRun": "2026-10-27T12"
     },
     {
-      "id": "pm2",
-      "name": "PM2",
-      "github": "https://github.com/Unitech/pm2",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T02:06:11.539Z",
-      "sourceRun": "2026-10-27T11",
-      "tool": {
-        "id": "pm2",
-        "name": "PM2",
-        "github": "https://github.com/Unitech/pm2",
-        "description": "로드 밸런서가 내장되어 있어 노드 및 타입스크립트 애플리케이션을 무중단으로 관리하는 프로덕션 프로세스 매니저입니다.",
-        "longDescription": "PM2는 Node.js와 Bun 애플리케이션을 영구적으로 실행 상태로 유지하고 무중단 재로딩을 지원하는 강력한 프로세스 관리 도구입니다. 시스템 관리 작업을 간소화하고 다양한 환경에서 검증된 안정성을 제공합니다.",
-        "category": "개발 운영",
-        "tags": [
-          "프로세스관리",
-          "Node.js",
-          "배포"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pm2.keymetrics.io/docs/usage/quick-start/",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T02:04:09.869Z",
-        "requirements": [
-          "Node.js 18+ 또는 Bun 1+"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NPM을 통한 설치",
-            "command": "npm install pm2 -g",
-            "note": "전역 환경에 PM2를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "터미널에서 npm 또는 bun 명령어로 PM2를 전역 설치합니다.",
-          "pm2 start app.js 명령어로 애플리케이션을 백그라운드 프로세스로 시작합니다.",
-          "pm2 status 또는 pm2 monit 명령어로 실행 상태를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 43324,
-        "forks": 2733,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T02:06:12.333Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T02:06:15.268Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-27T02:06:19.965Z"
-    },
-    {
-      "id": "keep",
-      "name": "Keep",
-      "github": "https://github.com/keephq/keep",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T02:06:11.539Z",
-      "sourceRun": "2026-10-27T11",
-      "tool": {
-        "id": "keep",
-        "name": "Keep",
-        "github": "https://github.com/keephq/keep",
-        "description": "다양한 모니터링 도구의 경고(Alert)를 수집, 중복 제거 및 상관관계 분석하는 오픈소스 AIOps 플랫폼입니다.",
-        "longDescription": "Keep은 여러 모니터링 소스에서 발생하는 알람을 단일 대시보드에서 통합 관리할 수 있게 해주는 도구입니다. AI 기반의 요약 및 워크플로우 자동화를 통해 장애 대응 프로세스를 효율화합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "AIOps",
-          "모니터링",
-          "알람관리",
-          "Python"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://keephq.dev",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T02:04:09.869Z",
-        "requirements": [
-          "Docker 또는 Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker 또는 Kubernetes 환경에 Keep을 배포합니다.",
-          "사용 중인 모니터링 및 로깅 도구와 연동을 구성합니다.",
-          "통합 대시보드에서 알람 수신 상태를 확인하고 자동화 워크플로우를 설정합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 12446,
-        "forks": 1537,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T02:06:13.221Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T02:06:17.249Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "nvtop",
-      "name": "nvtop",
-      "github": "https://github.com/Syllo/nvtop",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T02:06:11.539Z",
-      "sourceRun": "2026-10-27T11",
-      "tool": {
-        "id": "nvtop",
-        "name": "nvtop",
-        "github": "https://github.com/Syllo/nvtop",
-        "description": "다양한 제조사의 GPU 및 가속기 상태와 프로세스를 htop 유사 인터페이스로 모니터링하는 도구입니다.",
-        "longDescription": "nvtop은 AMD, Apple, Intel, NVIDIA 등 여러 벤더의 GPU 장치 사용량, 온도, 메모리 상태를 실시간으로 시각화해 줍니다. 다중 GPU 환경에서 리소스를 효율적으로 추적하는 데 유용합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "GPU",
-          "모니터링",
-          "하드웨어",
-          "CLI"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/Syllo/nvtop",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T02:04:09.869Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "패키지 관리자를 통해 시스템에 nvtop을 설치합니다.",
-          "터미널에서 nvtop 명령어를 실행합니다.",
-          "실시간으로 갱신되는 GPU 사용률과 구동 중인 프로세스 목록을 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 11106,
-        "forks": 454,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T02:06:13.407Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-27T02:06:17.623Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "sitespeed-io",
       "name": "sitespeed.io",
       "github": "https://github.com/sitespeedio/sitespeed.io",
@@ -52620,79 +52832,6 @@
         "freeEvidence": "unverified",
         "notes": [
           "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "sysmon-config",
-      "name": "Sysmon Config",
-      "github": "https://github.com/SwiftOnSecurity/sysmon-config",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-27T02:06:11.539Z",
-      "sourceRun": "2026-10-27T11",
-      "tool": {
-        "id": "sysmon-config",
-        "name": "Sysmon Config",
-        "github": "https://github.com/SwiftOnSecurity/sysmon-config",
-        "description": "고품질 이벤트 트레이닝과 시스템 변경 모니터링을 위한 Microsoft Sysmon 설정 템플릿입니다.",
-        "longDescription": "Windows 시스템에서 강력한 이벤트 로깅과 위협 추적을 수행할 수 있도록 기본 설정이 최적화된 Microsoft Sysmon 설정 파일 템플릿을 제공합니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "Windows",
-          "Sysmon",
-          "로깅",
-          "모니터링",
-          "보안"
-        ],
-        "platforms": [
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/SwiftOnSecurity/sysmon-config",
-        "featured": 9,
-        "added": "2026-10-27",
-        "addedAt": "2026-10-27T02:04:09.869Z",
-        "requirements": [
-          "관리자 권한",
-          "Notepad++ (설정 편집 시 권장)"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "설정 설치",
-            "command": "sysmon.exe -accepteula -i sysmonconfig-export.xml",
-            "note": "관리자 권한으로 실행"
-          }
-        ],
-        "usageSteps": [
-          "저장소에서 Sysmon 설정 파일(sysmonconfig-export.xml)을 다운로드합니다.",
-          "관리자 권한으로 명령 프롬프트를 엽니다.",
-          "제공된 명령어 커맨드를 실행하여 Sysmon 설정을 적용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5709,
-        "forks": 1863,
-        "starsUpdatedAt": "2026-10-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-27T02:06:14.086Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
         ]
       },
       "recheckReasons": [
