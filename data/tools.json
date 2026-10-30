@@ -1,5 +1,212 @@
 [
   {
+    "id": "noirvisor",
+    "name": "NoirVisor",
+    "github": "https://github.com/Zero-Tang/NoirVisor",
+    "description": "AMD64 프로세서를 위한 Grimoire Type-1 하이퍼바이저 솔루션.",
+    "longDescription": "맞춤형 가상화 및 보안 컴퓨팅 서비스를 제공하기 위해 Rust로 작성된 블루필(Bluepill) 타입 하이퍼바이저입니다. AMD-V 가상화 기술을 활용하여 저수준 시스템 연구 및 보안 기능을 구현합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "하이퍼바이저",
+      "가상화",
+      "AMD-V",
+      "보안",
+      "Rust"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/Zero-Tang/NoirVisor",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T20:04:12.099Z",
+    "requirements": [
+      "AMD64 프로세서"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "드라이버 서비스 등록",
+        "command": "sc create NoirVisor type= kernel binPath= \"경로\\NoirVisor.sys\"",
+        "note": "Windows 커널 드라이버 서비스로 등록합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트를 빌드하여 드라이버 파일(.sys)을 준비합니다.",
+      "sc 명령어를 사용하여 NoirVisor 서비스를 생성하고 시작합니다.",
+      "필요 시 sc stop 명령어로 드라이버를 중지합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "시스템 커널 레벨에서 동작하므로 테스트 환경에서 주의하여 사용해야 합니다.",
+    "stars": 660,
+    "forks": 99,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "netbox-proxbox",
+    "name": "Proxbox",
+    "github": "https://github.com/emersonfelipesp/netbox-proxbox",
+    "description": "Proxmox 가상화 인프라의 데이터를 NetBox DCIM과 동기화해 주는 NetBox 플러그인입니다.",
+    "longDescription": "Proxmox 클러스터, 노드, 가상 머신, 컨테이너, 백업 등의 인벤토리 정보를 자동으로 감지하여 NetBox 데이터와 최신 상태로 유지해 줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "NetBox",
+      "Proxmox",
+      "Python",
+      "DCIM",
+      "API"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://emersonfelipesp.com/netbox-proxbox",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T20:04:12.099Z",
+    "requirements": [
+      "NetBox",
+      "Proxmox VE"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "NetBox 환경에 플러그인을 설치합니다.",
+      "Proxmox 클러스터 연결 정보를 설정 파일에 입력합니다.",
+      "동기화를 실행하여 인벤토리 정보를 최신 상태로 유지합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 606,
+    "forks": 66,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "bao-hypervisor",
+    "name": "Bao Hypervisor",
+    "github": "https://github.com/bao-project/bao-hypervisor",
+    "description": "임베디드 및 혼합 임계성 시스템을 위한 가볍고 정적인 파티셔닝 하이퍼바이저입니다.",
+    "longDescription": "ARM, RISC-V, x86 등 다양한 아키텍처를 지원하며, 고신뢰성이 요구되는 환경에서 리소스를 엄격하게 분할하여 안전하게 구동할 수 있도록 설계되었습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "하이퍼바이저",
+      "임베디드",
+      "ARM",
+      "RISC-V",
+      "가상화"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/bao-project/bao-hypervisor",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T20:04:12.099Z",
+    "requirements": [
+      "크로스 컴파일러 툴체인",
+      "지원되는 하드웨어 보드 또는 시뮬레이터"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "타겟 아키텍처에 맞는 툴체인을 설치합니다.",
+      "프로젝트를 클론하고 설정을 구성합니다.",
+      "빌드 후 타겟 보드나 에뮬레이터에서 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 588,
+    "forks": 192,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "keylime",
+    "name": "Keylime",
+    "github": "https://github.com/keylime/keylime",
+    "description": "TPM 기술을 활용하여 엣지, 클라우드, IoT 장치의 신뢰성을 부팅 및 유지하는 CNCF 프로젝트입니다.",
+    "longDescription": "원격 기기의 하드웨어 기반 암호화 신뢰성을 확보하고 암호화된 페이로드를 프로비저닝하며, 런타임 시스템 무결성을 모니터링하기 위한 엔드투엔드 솔루션을 제공합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "TPM",
+      "보안",
+      "클라우드",
+      "IoT",
+      "무결성"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://keylime.dev",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T20:04:12.099Z",
+    "requirements": [
+      "TPM 2.0 하드웨어 또는 에뮬레이터",
+      "Python 3"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "서버 및 에이전트 노드에 Keylime을 설치합니다.",
+      "TPM 2.0 설정을 구성하고 검증 기관(Verifier)을 시작합니다.",
+      "원격 기기의 무결성 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 571,
+    "forks": 198,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
+    "id": "juice-labs",
+    "name": "Juice Labs",
+    "github": "https://github.com/Juice-Labs/Juice-Labs",
+    "description": "TCP/IP 네트워크를 통해 원격 GPU를 공유하고 사용할 수 있게 해주는 GPU-over-IP 클라이언트/서버 소프트웨어입니다.",
+    "longDescription": "물리적 GPU가 장착된 서버에서 Juice 서버를 실행하고 표준 TCP/IP 네트워크를 통해 다른 클라이언트 기기에서 해당 GPU를 즉시 원격으로 활용할 수 있습니다. 이를 통해 개발 및 연산 환경에서 GPU 자원을 효율적으로 공유하고 가상화할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "GPU",
+      "네트워크",
+      "가상화",
+      "원격접속"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.juicelabs.co/",
+    "featured": 9,
+    "added": "2026-10-30",
+    "addedAt": "2026-10-30T20:04:12.099Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "GPU가 있는 장비에 Juice 서버를 설치하고 실행합니다.",
+      "클라이언트 기기에 Juice 클라이언트 소프트웨어를 설치합니다.",
+      "네트워크를 통해 서버에 연결하여 원격 GPU를 로컬처럼 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "안정적인 네트워크 환경과 TCP/IP 연결이 필요합니다.",
+    "stars": 659,
+    "forks": 63,
+    "starsUpdatedAt": "2026-10-30"
+  },
+  {
     "id": "alpaca-py",
     "name": "alpaca-py",
     "github": "https://github.com/alpacahq/alpaca-py",
