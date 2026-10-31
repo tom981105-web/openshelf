@@ -1,5 +1,200 @@
 [
   {
+    "id": "github-act-runner",
+    "name": "GitHub Act Runner",
+    "github": "https://github.com/ChristopherHX/github-act-runner",
+    "description": "nektos/act를 기반으로 구현된 GitHub Actions 호환 자체 호스팅 러너입니다.",
+    "longDescription": "GitHub Act Runner는 공식 actions/runner의 대안으로 리버스 엔지니어링되어 제작된 자체 호스팅 러너입니다. FreeBSD 등 공식 러너가 지원하지 않는 다양한 시스템에서도 GitHub Actions 워크플로우를 실행할 수 있습니다.",
+    "category": "개발 운영",
+    "tags": [
+      "GitHub Actions",
+      "CI/CD",
+      "DevOps",
+      "Docker",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/ChristopherHX/github-act-runner",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T16:04:15.658Z",
+    "requirements": [
+      "Go",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "APT 패키지 설치",
+        "command": "sudo apt install github-act-runner",
+        "note": "우분투 환경에서 러너를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "러너 패키지를 시스템에 설치합니다.",
+      "새 러너 등록 명령어를 실행하여 저장소 또는 조직 URL과 토큰을 입력합니다.",
+      "서비스를 시작하여 GitHub Actions 워크플로우 작업을 수신 대기 상태로 둡니다.",
+      "원격에서 워크플로우를 트리거하여 자체 호스팅 환경에서 실행 결과를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 397,
+    "forks": 28,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "ex-check",
+    "name": "Ex Check",
+    "github": "https://github.com/karolsluszniak/ex_check",
+    "description": "Elixir 프로젝트의 모든 코드 분석 및 테스트 도구를 단일 명령어로 효율적으로 실행하는 유틸리티입니다.",
+    "longDescription": "Ex Check는 Elixir 생태계에서 코드 스타일 검사, 정적 분석, 테스트 등의 품질 관리 도구들을 하나의 명령어로 통합 실행해 주는 도구입니다. 중복 빌드를 방지하고 실용적으로 프로젝트 품질을 유지하도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Elixir",
+      "코드 분석",
+      "테스트",
+      "CLI",
+      "생산성"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hex.pm/packages/ex_check",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T16:04:15.658Z",
+    "requirements": [
+      "Elixir"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 추가",
+        "command": "{:ex_check, \"~ 0.17\", only: [:dev, :test], runtime: false}",
+        "note": "mix.exs 파일의 deps에 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "mix.exs 파일에 ex_check 의존성을 추가합니다.",
+      "터미널에서 mix deps.get 명령어로 의존성을 가져옵니다.",
+      "프로젝트 루트에서 mix check 명령어를 실행합니다.",
+      "감지된 모든 분석 및 테스트 도구의 실행 결과를 검토합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "중복 빌드를 방지하기 위한 설정은 공식 트러블슈팅 문서를 참고하세요.",
+    "stars": 331,
+    "forks": 16,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "actions-template-sync",
+    "name": "Actions Template Sync",
+    "github": "https://github.com/AndreasAugustin/actions-template-sync",
+    "description": "템플릿 저장소의 변경 사항을 현재 저장소와 동기화해 주는 GitHub Actions 액션입니다.",
+    "longDescription": "Actions Template Sync는 원본 템플릿 저장소의 업데이트 내용을 사용 중인 대상 저장소로 자동 동기화해 주는 GitHub Action입니다. GitHub 외에도 GitLab, Gitea 등 다양한 Git 저장소 소스 원본을 지원합니다.",
+    "category": "개발 운영",
+    "tags": [
+      "GitHub Actions",
+      "CI/CD",
+      "템플릿",
+      "동기화",
+      "Git"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://andreasaugustin.github.io/actions-template-sync/",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T16:04:15.658Z",
+    "requirements": [
+      "GitHub Actions"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "워크플로우에 액션 추가",
+        "command": "uses: AndreasAugustin/actions-template-sync@v2",
+        "note": "YAML 워크플로우 파일 내 steps에 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소의 .github/workflows 디렉토리에 워크플로우 파일을 생성합니다.",
+      "소스 템플릿 저장소 경로 등필요한 환경 변수나 입력을 설정합니다.",
+      "정기적 또는 수동으로 워크플로우를 트리거하여 변경 사항을 가져옵니다.",
+      "생성된 동기화 풀 리퀘스트를 검토하고 병합합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "도커 이미지는 기본적으로 Alpine 컨테이너 기반으로 동작합니다.",
+    "stars": 327,
+    "forks": 57,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "postcat",
+    "name": "Postcat",
+    "github": "https://github.com/Postcatlab/postcat",
+    "description": "API 관리, 테스트, 플러그인 확장을 지원하는 오픈소스 API 개발 도구 플랫폼입니다.",
+    "longDescription": "Postcat은 REST 및 Websocket 등의 프로토콜을 지원하는 크로스플랫폼 API 테스트 클라이언트입니다. 가볍고 유연한 플러그인 시스템을 통해 API 개발 및 디버깅 업무를 효율화할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "API 테스트",
+      "REST",
+      "Electron",
+      "TypeScript",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.postcat.com",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T16:04:15.658Z",
+    "requirements": [
+      "Node.js",
+      "Yarn"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치 및 실행",
+        "command": "yarn install && yarn start",
+        "note": "Yarn을 사용하여 프로젝트를 설치하고 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 의존성을 설치합니다.",
+      "yarn start 명령어로 데스크톱 및 웹 클라이언트를 실행합니다.",
+      "새로운 API 요청을 생성하고 테스트를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 프로젝트는 유지보수가 중단되었으나 여전히 유용한 API 도구입니다.",
+    "stars": 5537,
+    "forks": 793,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
     "id": "blinkpy",
     "name": "Blinkpy",
     "github": "https://github.com/fronzbot/blinkpy",
