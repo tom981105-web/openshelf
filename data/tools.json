@@ -1,5 +1,441 @@
 [
   {
+    "id": "graph-nets",
+    "name": "Graph Nets",
+    "github": "https://github.com/google-deepmind/graph_nets",
+    "description": "TensorFlow와 Sonnet을 기반으로 그래프 네트워크를 구축할 수 있는 DeepMind의 라이브러리입니다.",
+    "longDescription": "입력 그래프를 받아 엣지, 노드, 글로벌 수준의 속성을 업데이트한 후 새로운 그래프를 반환하는 그래프 신경망을 구성할 수 있도록 지원합니다. 다양한 그래프 구조 기반의 인공지능 연구 및 구현에 활용됩니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TensorFlow",
+      "그래프 신경망",
+      "Python",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://arxiv.org/abs/1806.01261",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "Python",
+      "TensorFlow"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install graph_nets",
+        "note": "파이썬 환경에 Graph Nets 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "TensorFlow와 Python 환경을 준비합니다.",
+      "pip를 통해 graph_nets 패키지를 설치합니다.",
+      "그래프 네트워크 모델 구조를 정의하고 학습 코드를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "TensorFlow가 별도로 설치되어 있어야 합니다.",
+    "stars": 5408,
+    "forks": 778,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "gluonts",
+    "name": "GluonTS",
+    "github": "https://github.com/awslabs/gluonts",
+    "description": "파이썬 기반의 확률적 시계열 모델링 및 딥러닝 예측 라이브러리입니다.",
+    "longDescription": "PyTorch를 기반으로 딥러닝 모델을 활용한 시계열 예측과 확률적 모델링을 수행할 수 있는 도구를 제공합니다. 시계열 데이터 분석 및 미래 예측 연구에 널리 활용됩니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "시계열",
+      "PyTorch",
+      "Python",
+      "머신러닝",
+      "예측"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://ts.gluon.ai",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "Python 3.10-3.14",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uv를 이용한 PyTorch 모델 지원 설치",
+        "command": "uv pip install \"gluonts[torch]\"",
+        "note": "PyTorch 백엔드를 포함하여 GluonTS를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 가상환경 및 uv 도구를 준비합니다.",
+      "명령어를 통해 PyTorch 지원 버전을 설치합니다.",
+      "시계열 데이터를 로드하고 예측 모델을 학습 및 평가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 5257,
+    "forks": 843,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "kaolin",
+    "name": "Kaolin",
+    "github": "https://github.com/NVIDIAGameWorks/kaolin",
+    "description": "3D 딥러닝 연구 가속화를 위한 NVIDIA의 재사용 가능하고 GPU에 최적화된 PyTorch 라이브러리입니다.",
+    "longDescription": "메시, 스플랫, 점군 등 표현 비독립적인 물리 시뮬레이션, 미분 가능한 렌더링, 3D 가우스 스플래팅, 옥트리 가속 구조 등의 기능을 PyTorch 환경에서 제공하여 3D 인공지능 연구를 가속합니다.",
+    "category": "3D·CAD",
+    "tags": [
+      "3D",
+      "PyTorch",
+      "NVIDIA",
+      "컴퓨터 비전",
+      "딥러닝"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/NVIDIAGameWorks/kaolin",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "PyTorch",
+      "CUDA"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "사전 빌드된 wheel 설치",
+        "command": "pip install kaolin==0.18.0 -f https://nvidia-kaolin.s3.us-east-2.amazonaws.com/torch-2.8.0_cu128.html",
+        "note": "사용 중인 PyTorch 및 CUDA 버전에 맞는 Kaolin wheel을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "시스템의 PyTorch 및 CUDA 버전을 확인합니다.",
+      "호환되는 Kaolin 사전 빌드 버전을 선택하여 설치합니다.",
+      "3D 데이터(PLY, USD 등)를 불러와 미분 렌더링 및 딥러닝 모델에 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "토치 및 쿠다 버전 호환성을 맞춰야 합니다.",
+    "stars": 5192,
+    "forks": 628,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "pytorch-forecasting",
+    "name": "PyTorch Forecasting",
+    "github": "https://github.com/sktime/pytorch-forecasting",
+    "description": "최첨단 딥러닝 아키텍처를 이용한 시계열 예측을 지원하는 PyTorch 기반 패키지입니다.",
+    "longDescription": "PyTorch Lightning을 기반으로 구축되어 단일 또는 다중 GPU 환경에서 시계열 예측 모델의 학습을 확장하고 자동 로깅 기능을 제공하는 고수준 API를 지원합니다.",
+    "category": "데이터 분석",
+    "tags": [
+      "PyTorch",
+      "시계열",
+      "딥러닝",
+      "예측",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pytorch-forecasting.readthedocs.io/",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "PyTorch Lightning"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install pytorch-forecasting",
+        "note": "pip를 사용하여 PyTorch Forecasting 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "PyTorch 및 필수 의존성 패키지를 설치합니다.",
+      "pip를 통해 pytorch-forecasting을 설치합니다.",
+      "시계열 데이터셋 클래스를 구성하고 모델 학습 및 예측을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Windows 환경에서는 PyTorch를 먼저 수동 설치해야 할 수 있습니다.",
+    "stars": 5008,
+    "forks": 936,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "dalle-pytorch",
+    "name": "DALLE-pytorch",
+    "github": "https://github.com/lucidrains/DALLE-pytorch",
+    "description": "OpenAI의 텍스트-이미지 변환 모델인 DALL-E를 파이토치로 구현 및 복제한 오픈소스 라이브러리입니다.",
+    "longDescription": "텍스트 설명을 바탕으로 이미지를 생성하는 Transformer 기반의 DALL-E 모델을 파이토치 환경에서 구현할 수 있도록 지원하며, 생성 결과 순위 지정을 위한 CLIP 연동 등을 포함합니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "PyTorch",
+      "생성형AI",
+      "이미지 생성",
+      "Transformer",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lucidrains/DALLE-pytorch",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "Deepspeed"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Deepspeed 및 Sparse Attention 설치",
+        "command": "sh install_deepspeed.sh",
+        "note": "효율적인 어텐션 연산을 위해 Deepspeed와 스파스 어텐션을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 의존성 패키지를 설치합니다.",
+      "이미지 토크나이저와 데이터셋을 준비합니다.",
+      "스크립트를 실행하여 모델 학습 또는 텍스트 기반 이미지 생성을 수행합니다."
+    ],
+    "examplePrompt": "An armchair in the shape of an avocado",
+    "usageNote": "충분한 GPU 자원과 대규모 이미지 데이터셋이 학습에 필요합니다.",
+    "stars": 5629,
+    "forks": 638,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "baichuan-7b",
+    "name": "Baichuan-7B",
+    "github": "https://github.com/baichuan-inc/Baichuan-7B",
+    "description": "백천 스마트(Baichuan-Inc)에서 개발한 대규모 70억 파라미터 사전 학습 언어 모델입니다.",
+    "longDescription": "Transformer 구조를 기반으로 약 1.2조 개의 토큰으로 학습되었으며, 중영 2개 국어를 지원하고 4096 토큰의 컨텍스트 윈도우를 제공하는 오픈소스 상용 모델입니다.",
+    "category": "AI 모델",
+    "tags": [
+      "대형 언어 모델",
+      "LLM",
+      "Transformer",
+      "Python",
+      "Hugging Face"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://huggingface.co/baichuan-inc/baichuan-7B",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "DeepSpeed"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 패키지 설치",
+        "command": "pip install -r requirements.txt",
+        "note": "모델 실행 및 학습에 필요한 파이썬 패키지들을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소 코드를 클론하고 의존성 패키지를 설치합니다.",
+      "Hugging Face 등에서 tokenizer.model 파일을 다운로드하여 배치합니다.",
+      "DeepSpeed 및 평가 스크립트를 활용해 모델을 구동하거나 평가합니다."
+    ],
+    "examplePrompt": "인공지능의 미래에 대해 설명해주세요.",
+    "usageNote": "고성능 GPU 환경이 필요합니다.",
+    "stars": 5646,
+    "forks": 501,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "swift-ai",
+    "name": "Swift AI",
+    "github": "https://github.com/Swift-AI/Swift-AI",
+    "description": "Swift 언어로 작성된 고성능 머신러닝 및 딥러닝 라이브러리입니다.",
+    "longDescription": "Apple 플랫폼에 최적화되어 완전한 Swift 언어로 구현된 인공지능 및 과학용 도구 모음입니다. 신경망 구성과 고급 병렬 처리를 지원하여 애플 생태계에서의 머신러닝 활용을 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Swift",
+      "머신러닝",
+      "딥러닝",
+      "macOS",
+      "iOS"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Swift-AI/Swift-AI",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "Swift"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Swift 패키지 매니저 활용",
+        "command": "swift build",
+        "note": "프로젝트 디렉토리에서 스위프트 패키지를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "Swift 개발 환경을 준비합니다.",
+      "프로젝트를 클론하고 Swift Package Manager를 통해 빌드합니다.",
+      "예제 프로젝트 또는 사용자 코드에서 NeuralNet 모듈을 임포트하여 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6030,
+    "forks": 550,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "easypr",
+    "name": "EasyPR",
+    "github": "https://github.com/liuruoze/EasyPR",
+    "description": "오픈소스 OpenCV 라이브러리를 기반으로 비제한 환경에서 중국 번호판을 인식하는 시스템입니다.",
+    "longDescription": "다양한 실생활 환경에서 촬영된 자동차 번호판의 위치를 검출하고 문자를 인식하여 추출하는 C++ 기반의 컴퓨터 비전 라이브러리입니다. 높은 인식 정확도와 크로스 플랫폼 지원을 목표로 합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "OpenCV",
+      "컴퓨터 비전",
+      "번호판 인식",
+      "C++",
+      "머신러닝"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/liuruoze/EasyPR",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "OpenCV 3.x"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "OpenCV 구성 확인 및 빌드",
+        "command": "cmake .",
+        "note": "CMake를 통해 프로젝트를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "OpenCV 라이브러리를 시스템에 설치합니다.",
+      "프로젝트 소스코드를 다운로드하고 빌드 설정을 구성합니다.",
+      "번호판 이미지를 입력하여 문자열 인식 결과 출력을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "OpenCV 버전(3.2 이상 권장)에 따라 설정 파일을 일부 수정해야 할 수 있습니다.",
+    "stars": 6429,
+    "forks": 2463,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "optimate",
+    "name": "OptiMate",
+    "github": "https://github.com/nebuly-ai/optimate",
+    "description": "대형 언어 모델 및 인공지능 모델의 성능을 최적화하기 위한 라이브러리 모음입니다.",
+    "longDescription": "대형 언어 모델(LLM) 기반 제품을 사용하는 사용자의 행동을 대규모로 분석하고 모델의 성능과 효율성을 높이기 위한 최적화 도구 및 분석 라이브러리를 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "LLM",
+      "모델 최적화",
+      "Python",
+      "인공지능",
+      "성능 분석"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.nebuly.com/",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T04:04:11.164Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/nebuly-ai/optimate.git",
+        "note": "깃 저장소를 클론하여 소스코드를 가져옵니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 저장소를 클론합니다.",
+      "공식 문서 및 가이드를 참고하여 최적화 모듈을 프로젝트에 적용합니다.",
+      "LLM 모델 성능 측정 및 분석을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재 레거시 단계로 전환되어 추가 업데이트나 공식 지원은 제공되지 않습니다.",
+    "stars": 8327,
+    "forks": 610,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
     "id": "striker",
     "name": "Striker",
     "github": "https://github.com/s0md3v/Striker",
