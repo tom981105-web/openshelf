@@ -1,5 +1,142 @@
 [
   {
+    "id": "neo4j",
+    "name": "Neo4j",
+    "github": "https://github.com/neo4j/neo4j",
+    "description": "노드와 관계 중심의 고성능 오픈소스 그래프 데이터베이스",
+    "longDescription": "정적 테이블 대신 유연한 네트워크 구조의 노드와 관계를 사용하여 복잡하고 연결된 데이터를 빠르게 처리할 수 있는 세계적인 그래프 데이터베이스입니다. ACID 트랜잭션과 Cypher 쿼리 언어를 지원합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "그래프",
+      "데이터베이스",
+      "NoSQL",
+      "Cypher",
+      "Java"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "http://neo4j.com",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T20:04:10.039Z",
+    "requirements": [
+      "Java 21",
+      "Maven"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS에서 Maven 설치",
+        "command": "brew install maven",
+        "note": "Homebrew를 통한 빌드 도구 설치"
+      }
+    ],
+    "usageSteps": [
+      "JAVA_HOME 환경 변수가 Java 21 JDK를 가리키도록 설정합니다.",
+      "Maven을 사용하여 소스코드를 빌드하거나 패키지를 다운로드합니다.",
+      "Neo4j 서버를 실행하고 Cypher 쿼리를 통해 그래프 데이터를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 17380,
+    "forks": 2809,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "libsql",
+    "name": "libSQL",
+    "github": "https://github.com/tursodatabase/libsql",
+    "description": "임베디드 복제와 원격 접근을 지원하는 SQLite 호환 데이터베이스",
+    "longDescription": "SQLite의 오픈소스 및 오픈 기여 포크 버전으로, 임베디드 레플리카와 원격 접속 등의 확장 기능을 제공하면서도 SQLite C API와의 호환성을 유지합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "SQLite",
+      "데이터베이스",
+      "임베디드",
+      "Rust",
+      "C"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://turso.tech/libsql",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T20:04:10.039Z",
+    "requirements": [
+      "Cargo",
+      "Rust"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "C 라이브러리 및 도구 빌드",
+        "command": "cargo xtask build",
+        "note": "카고를 이용한 빌드 수행"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론한 후 Cargo를 통해 빌드 명령어를 실행합니다.",
+      "libSQL SQL 쉘 디렉터리로 이동합니다.",
+      "libsql 프로그램을 실행하여 SQL 쿼리를 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "SQLite와 호환되지만 단일 라이터 모델 등의 제약 사항을 상속합니다.",
+    "stars": 17305,
+    "forks": 554,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
+    "id": "nebula",
+    "name": "NebulaGraph",
+    "github": "https://github.com/vesoft-inc/nebula",
+    "description": "밀리초 지연과 수평적 확장을 지원하는 분산 그래프 데이터베이스",
+    "longDescription": "대규모 데이터를 처리할 수 있는 고성능 오픈소스 분산 그래프 데이터베이스입니다. 저장과 연산을 분리하고 Raft 프로토콜을 통한 데이터 일관성을 제공하며 소셜 미디어, 지식 그래프 등에 활용됩니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "그래프",
+      "데이터베이스",
+      "분산시스템",
+      "지식그래프",
+      "C++"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://nebula-graph.io",
+    "featured": 9,
+    "added": "2026-10-31",
+    "addedAt": "2026-10-31T20:04:10.039Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 문서의 설치 가이드를 참조하여 분산 클러스터를 배포합니다.",
+      "OpenCypher 호환 쿼리 언어를 사용하여 그래프 구조를 정의합니다.",
+      "대규모 그래프 데이터 분석 및 쿼리를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 12465,
+    "forks": 1342,
+    "starsUpdatedAt": "2026-10-31"
+  },
+  {
     "id": "google-research",
     "name": "Google Research",
     "github": "https://github.com/google-research/google-research",
