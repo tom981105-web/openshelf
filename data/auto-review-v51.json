@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01T04:06:26.934Z",
+  "updatedAt": "2026-11-01T05:06:29.561Z",
   "items": [
     {
       "id": "windmill",
@@ -12,14 +12,14 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-01T04:06:13.562Z",
-      "sourceRun": "2026-11-01T13",
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
       "tool": {
         "id": "windmill",
         "name": "Windmill",
         "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 구축하고 실행하는 오픈소스 코드 기반 플랫폼",
-        "longDescription": "다양한 프로그래밍 언어로 스크립트를 작성하여 UI, API, 크론 잡으로 변환하고 이를 연결할 수 있습니다. 복잡한 데이터 파이프라인과 AI 에이전트 워크플로우를 효율적으로 구성할 수 있도록 지원합니다.",
+        "description": "다양한 언어의 스크립트와 AI 에이전트를 자동화하고 웹 앱으로 배포할 수 있는 오픈소스 오케스트레이션 플랫폼입니다.",
+        "longDescription": "엔지니어는 20개 이상의 언어로 코드를 작성하고 Git과 연동할 수 있으며, 비즈니스 팀은 AI를 활용해 워크플로우를 구축할 수 있습니다. Airflow나 Celery, Temporal 등의 대안으로 활용 가능한 고성능 자체 호스팅 워크플로우 엔진입니다.",
         "category": "업무 자동화",
         "tags": [
           "업무 자동화",
@@ -38,26 +38,31 @@
         "website": "https://windmill.dev",
         "featured": 9,
         "added": "2026-11-01",
-        "addedAt": "2026-11-01T04:04:13.890Z",
+        "addedAt": "2026-11-01T05:04:13.695Z",
         "requirements": [
-          "PostgreSQL",
-          "Docker"
+          "Docker",
+          "PostgreSQL"
         ],
         "supportedAgents": [],
-        "install": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -p 8000:8000 ghcr.io/windmill-labs/windmill:main",
+            "note": "Docker를 통해 Windmill 서버를 로컬에서 즉시 실행합니다."
+          }
+        ],
         "usageSteps": [
-          "Windmill 인스턴스를 셀프 호스팅하거나 클라우드 버전에 접속합니다.",
-          "지원되는 언어로 스크립트나 워크플로우 로직을 작성합니다.",
-          "스크립트를 UI 및 API로 자동 변환하여 배포합니다.",
-          "필요에 따라 AI 세션 및 에이전트 기능을 연동하여 실행합니다."
+          "Docker 또는 자체 호스팅 환경에 Windmill을 설치합니다.",
+          "웹 UI 또는 CLI를 통해 Python, TypeScript 등으로 스크립트를 작성합니다.",
+          "작성한 스크립트를 조합하여 워크플로우나 API 엔드포인트로 변환합니다."
         ],
         "examplePrompt": "",
-        "usageNote": "로컬 개발 시 wmill 클라이언트 라이브러리를 통해 환경 변수를 설정하여 리소스를 가져올 수 있습니다.",
+        "usageNote": "프로덕션 환경에서는 PostgreSQL 데이터베이스 연결 설정이 필요합니다.",
         "stars": 18343,
         "forks": 1135,
         "starsUpdatedAt": "2026-11-01"
       },
-      "licenseEvidenceCheckedAt": "2026-11-01T04:06:14.250Z",
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:17.961Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -70,7 +75,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-01T04:06:16.913Z",
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:21.090Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -80,7 +85,7 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-11-01T04:06:22.526Z"
+      "recheckedAt": "2026-11-01T05:06:26.447Z"
     },
     {
       "id": "paradev",
@@ -92,19 +97,19 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-01T04:06:13.562Z",
-      "sourceRun": "2026-11-01T13",
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
       "tool": {
         "id": "paradev",
         "name": "Paradev",
         "github": "https://github.com/ParadevAI/Paradev",
-        "description": "여러 CLI 코딩 에이전트를 병렬로 실행하고 관리하는 데스크톱 개발 환경",
-        "longDescription": "각 작업에 개별 Git 워크트리와 브랜치, 터미널을 할당하여 여러 CLI 코딩 에이전트를 동시에 실행할 수 있습니다. 코드 리뷰 및 브라우저 미리보기 기능을 제공하여 효율적인 에이전트 기반 개발을 지원합니다.",
-        "category": "AI 에이전트",
+        "description": "수십 개의 코딩 에이전트를 병렬로 오케스트레이션하여 작업할 수 있는 에이전트 기반 IDE",
+        "longDescription": "다양한 CLI 코딩 에이전트를 하나의 작업 공간에서 동시에 실행할 수 있습니다. 각 태스크마다 독립적인 Git 워크트리와 브랜치, 터미널을 할당하여 여러 작업을 안전하게 병렬 처리합니다.",
+        "category": "개발 도구",
         "tags": [
-          "AI 에이전트",
           "개발 도구",
-          "CLI"
+          "AI 코딩",
+          "에이전트 오케스트레이션"
         ],
         "platforms": [
           "macOS",
@@ -116,10 +121,8 @@
         "website": "https://paradev.com",
         "featured": 9,
         "added": "2026-11-01",
-        "addedAt": "2026-11-01T04:04:13.890Z",
-        "requirements": [
-          "macOS 또는 Linux 환경"
-        ],
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [],
         "supportedAgents": [
           "Claude Code",
           "Codex",
@@ -127,20 +130,25 @@
           "Gemini CLI",
           "Cursor Agent"
         ],
-        "install": [],
+        "install": [
+          {
+            "title": "macOS 데스크톱 앱 다운로드",
+            "command": "curl -L https://github.com/paradevai/paradev/releases/latest/download/Superset-arm64.dmg",
+            "note": "Apple Silicon Mac용 데스크톱 앱을 다운로드하여 설치합니다."
+          }
+        ],
         "usageSteps": [
-          "릴리즈 페이지에서 데스크톱 앱을 다운로드하여 설치합니다.",
-          "앱 내에서 작업할 저장소를 엽니다.",
-          "동시에 수행할 코딩 작업을 생성하여 각 작업별 워크트리와 에이전트를 지정합니다.",
-          "에이전트가 수행한 작업 결과를 터미널과 브라우저 미리보기를 통해 검토합니다."
+          "Paradev 데스크톱 앱을 다운로드하고 실행합니다.",
+          "관리할 Git 저장소를 열고 연동할 코딩 에이전트(Claude Code 등)를 선택합니다.",
+          "각각의 태스크에 대해 독립된 워크트리 환경에서 에이전트를 병렬로 실행합니다."
         ],
         "examplePrompt": "",
-        "usageNote": "각 에이전트 실행 시 사용자 개인의 구독 계정이나 API 키가 필요할 수 있습니다.",
-        "stars": 15798,
+        "usageNote": "사용하려는 개별 CLI 코딩 에이전트의 구독 및 API 키가 필요합니다.",
+        "stars": 15799,
         "forks": 1411,
         "starsUpdatedAt": "2026-11-01"
       },
-      "licenseEvidenceCheckedAt": "2026-11-01T04:06:14.486Z",
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:18.172Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -153,7 +161,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-01T04:06:17.347Z",
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:21.565Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -163,7 +171,7 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-11-01T04:06:23.458Z"
+      "recheckedAt": "2026-11-01T05:06:27.254Z"
     },
     {
       "id": "get-jobs",
@@ -175,21 +183,22 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-01T04:06:13.562Z",
-      "sourceRun": "2026-11-01T13",
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
       "tool": {
         "id": "get-jobs",
         "name": "Get Jobs",
         "github": "https://github.com/loks666/get_jobs",
-        "description": "구직 플랫폼 자동화 및 AI 이력서 제출 도구",
-        "longDescription": "다양한 주요 구직 플랫폼에서 구인 정보를 수집하고 이력서를 자동으로 제출하는 자바 기반의 자동화 스크립트입니다. AI 분석 기능을 결합하여 구직 활동의 효율성을 높여줍니다.",
+        "description": "AI 기반 구직 플랫폼 자동 채용 지원 도구",
+        "longDescription": "주요 구직 플랫폼에서 AI 분석을 활용해 적합한 공고를 찾아 이력서를 자동으로 제출합니다. Java와 Spring Boot 기반으로 개발되었습니다.",
         "category": "업무 자동화",
         "tags": [
-          "업무자동화",
-          "구직",
-          "AI에이전트"
+          "업무 자동화",
+          "이력서",
+          "구직"
         ],
         "platforms": [
+          "Web",
           "Windows",
           "macOS",
           "Linux"
@@ -200,26 +209,31 @@
         "website": "https://loks666.github.io/get_jobs/",
         "featured": 9,
         "added": "2026-11-01",
-        "addedAt": "2026-11-01T04:04:13.890Z",
+        "addedAt": "2026-11-01T05:04:13.695Z",
         "requirements": [
-          "Java",
+          "Java 17+",
           "Spring Boot"
         ],
         "supportedAgents": [],
-        "install": [],
+        "install": [
+          {
+            "title": "소스코드 클론",
+            "command": "git clone https://github.com/loks666/get_jobs.git",
+            "note": "저장소를 클론하여 로컬 개발 환경을 구성합니다."
+          }
+        ],
         "usageSteps": [
-          "프로젝트 소스 코드를 클론합니다.",
-          "설정 파일에 구직 플랫폼 계정 정보를 입력합니다.",
-          "이력서 및 타겟 직무 조건을 구성합니다.",
-          "스크립트를 실행하여 자동 지원 프로세스를 시작합니다."
+          "프로젝트를 클론하고 필요한 설정 파일을 작성합니다.",
+          "지원하고자 하는 구직 플랫폼 계정 정보를 연동합니다.",
+          "이력서 및 필터링 조건을 설정한 뒤 자동 지원 스크립트를 실행합니다."
         ],
         "examplePrompt": "",
-        "usageNote": "플랫폼 정책 변경에 따라 자동화 스크립트 실행 시 주의가 필요합니다.",
-        "stars": 9429,
+        "usageNote": "타겟 플랫폼의 정책 변경에 따라 스크립트 선택자 조정이 필요할 수 있습니다.",
+        "stars": 9430,
         "forks": 1079,
         "starsUpdatedAt": "2026-11-01"
       },
-      "licenseEvidenceCheckedAt": "2026-11-01T04:06:14.667Z",
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:18.374Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -232,7 +246,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-01T04:06:17.565Z",
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:21.849Z",
       "documentEvidence": {
         "license": "MIT",
         "verifiedLicense": null,
@@ -242,7 +256,934 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-11-01T04:06:24.507Z"
+      "recheckedAt": "2026-11-01T05:06:28.063Z"
+    },
+    {
+      "id": "snoop",
+      "name": "Snoop Project",
+      "github": "https://github.com/snooppr/snoop",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "snoop",
+        "name": "Snoop Project",
+        "github": "https://github.com/snooppr/snoop",
+        "description": "공개 오픈소스 데이터(OSINT)를 기반으로 사용자 이름과 관련된 계정 정보를 전 세계 플랫폼에서 탐색하는 도구입니다.",
+        "longDescription": "CIS 지역 및 글로벌 웹사이트에서 닉네임이나 사용자 이름을 조회하여 연관된 소셜 미디어 및 웹 계정 존재 여부를 확인합니다. Python 기반 또는 독립 실행형 빌드로 제공됩니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "정보수집",
+          "OSINT"
+        ],
+        "platforms": [
+          "Windows",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/snooppr/snoop/releases",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "릴리즈 다운로드",
+            "command": "curl -s https://api.github.com/repos/snooppr/snoop/releases/latest",
+            "note": "최신 빌드 버전을 다운로드하여 바로 실행할 수 있습니다."
+          }
+        ],
+        "usageSteps": [
+          "Snoop 최신 릴리즈 버전을 다운로드합니다.",
+          "터미널에서 검색할 닉네임 또는 사용자 이름을 인수로 전달하여 실행합니다.",
+          "결과로 출력되는 일치하는 계정 목록과 링크를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "공개된 웹 데이터만을 활용하므로 대상 사이트의 차단 정책에 영향을 받을 수 있습니다.",
+        "stars": 4056,
+        "forks": 467,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:18.552Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:22.350Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-01T05:06:28.828Z"
+    },
+    {
+      "id": "wppconnect",
+      "name": "WPPConnect",
+      "github": "https://github.com/wppconnect-team/wppconnect",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "wppconnect",
+        "name": "WPPConnect",
+        "github": "https://github.com/wppconnect-team/wppconnect",
+        "description": "Puppeteer 기반 Node.js 및 TypeScript용 WhatsApp Web 자동화 및 봇 구축 라이브러리",
+        "longDescription": "WhatsApp 세션 관리, 메시지 송수신, 미디어 핸들링 및 챗봇 구축 기능을 제공합니다. WPPConnect 생태계의 일부로 안정적인 오픈소스 메시징 자동화를 지원합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "브라우저자동화",
+          "챗봇",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://wppconnect.io/wppconnect/",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [
+          "Node.js",
+          "Puppeteer"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 설치",
+            "command": "npm install @wppconnect-team/wppconnect",
+            "note": "npm을 통해 프로젝트에 WPPConnect 라이브러리를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 패키지를 설치하고 TypeScript/Node.js 환경을 설정합니다.",
+          "클라이언트 인스턴스를 생성하고 QR 코드를 스캔하여 WhatsApp Web에 로그인합니다.",
+          "메시지 수신 이벤트 리스너를 등록하거나 자동 메시지 전송 로직을 작성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "WhatsApp Web의 업데이트에 따라 패키지 버전을 주기적으로 확인해야 합니다.",
+        "stars": 3517,
+        "forks": 585,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:18.782Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:22.818Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-01T05:06:29.561Z"
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "아웃라인, 마인드맵, 스프레드시트의 기능을 결합한 자유로운 계층형 데이터 조직화 도구입니다.",
+        "longDescription": "할 일 목록, 일정, 프로젝트 관리, 브레인스토밍 등 복잡한 데이터를 다차원 구조로 깔끔하게 정리할 수 있습니다. 기존의 2차원 스프레드시트보다 직관적이고 컴팩트하게 대규모 정보를 관리할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "생산성",
+          "지식 관리",
+          "마인드맵",
+          "스프레드시트",
+          "C++"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Release 페이지 이용",
+            "command": "echo 'Download pre-built binary from GitHub Releases'",
+            "note": "운영체제별 사전 빌드된 바이너리를 다운로드하여 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "GitHub Release 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
+          "프로그램을 실행하고 새로운 계층형 문서를 생성합니다.",
+          "셀 안에 텍스트나 하위 표를 중첩하여 아이디어와 데이터를 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS에서는 최초 실행 시 보안 경고가 나타날 수 있으며 시스템 설정에서 허용해야 합니다.",
+        "stars": 3184,
+        "forks": 223,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:18.975Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:23.403Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "open-scouts",
+      "name": "Open Scouts",
+      "github": "https://github.com/firecrawl/open-scouts",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "open-scouts",
+        "name": "Open Scouts",
+        "github": "https://github.com/firecrawl/open-scouts",
+        "description": "지정한 웹사이트나 키워드를 24시간 모니터링하고 변경 사항을 이메일로 알려주는 AI 기반 웹 모니터링 플랫폼입니다.",
+        "longDescription": "정해진 일정에 따라 웹을 탐색하는 '스카우트'를 생성하여 최신 뉴스, 가격 변동, 특정 키워드 등을 추적합니다. Next.js, Supabase, Firecrawl을 기반으로 구축되었습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "웹 모니터링",
+          "업무 자동화",
+          "스크래핑",
+          "Next.js",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://openscouts.firecrawl.dev",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [
+          "Bun 또는 Node.js",
+          "Supabase",
+          "Resend API 키"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 클론 및 패키지 설치",
+            "command": "git clone https://github.com/firecrawl/open-scouts && cd open-scouts && bun install",
+            "note": "프로젝트를 클론하고 의존성을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 Supabase 데이터베이스를 설정합니다.",
+          ".env 파일에 필요한 API 키(Supabase, Resend 등)를 설정합니다.",
+          "애플리케이션을 실행하고 웹에서 새로운 모니터링 스카우트를 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "이메일 알림 기능 사용을 위해 Resend 또는 지원되는 이메일 서비스 계정이 필요합니다.",
+        "stars": 1370,
+        "forks": 188,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:19.172Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:24.037Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "google-search",
+      "name": "Google Search Tool",
+      "github": "https://github.com/web-agent-master/google-search",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "google-search",
+        "name": "Google Search Tool",
+        "github": "https://github.com/web-agent-master/google-search",
+        "description": "안티스크래핑 메커니즘을 우회하여 Google 검색을 수행하고 결과를 추출하는 Playwright 기반의 노드 도구입니다.",
+        "longDescription": "유료 SERP API를 대체할 수 있는 로컬 오픈소스 솔루션으로, 명령줄 도구로 직접 사용하거나 Claude 등의 AI 어시스턴트에 Model Context Protocol(MCP) 서버로 연동하여 실시간 검색 기능을 제공합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "지식·검색",
+          "MCP",
+          "AI 어시스턴트",
+          "Playwright",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/web-agent-master/google-search",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [
+          "Node.js",
+          "Playwright"
+        ],
+        "supportedAgents": [
+          "Claude"
+        ],
+        "install": [
+          {
+            "title": "소스 빌드 및 설치",
+            "command": "git clone https://github.com/web-agent-master/google-search.git && cd google-search && npm install && npm run build",
+            "note": "소스 코드를 클론하고 빌드합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 의존성을 설치한 뒤 빌드합니다.",
+          "CLI를 통해 직접 검색 명령어를 실행하거나 MCP 서버로 등록합니다.",
+          "AI 어시스턴트(Claude 등)와 연동하여 실시간 웹 검색 결과를 가져옵니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "봇 탐지 우회를 위해 브라우저 상태 저장 및 복원 기능을 적절히 활용해야 합니다.",
+        "stars": 625,
+        "forks": 102,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:19.443Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:24.612Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "fortress",
+      "name": "Fortress",
+      "github": "https://github.com/tiliondev/fortress",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "fortress",
+        "name": "Fortress",
+        "github": "https://github.com/tiliondev/fortress",
+        "description": "스크래퍼와 브라우저 에이전트가 안티봇 시스템에 차단되지 않도록 고유한 브라우저 지문과 봇 감지를 보완하는 스텔스 Chromium 엔진입니다.",
+        "longDescription": "Chromium 소스 코드 레벨에서 브라우저 지문(Canvas, WebGL 등)을 수정하여 일반적인 Chrome 브라우저처럼 보이게 합니다. Playwright나 Puppeteer에 CDP를 통해 한 줄 코드 변경으로 연동할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "개발 도구",
+          "브라우저 자동화",
+          "스크래핑",
+          "Chromium",
+          "Python"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://fortress.tilion.com/",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [
+          "Docker 또는 Python/Playwright"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 이미지 풀",
+            "command": "docker pull tilion/fortress",
+            "note": "Docker를 통해 스텔스 Chromium 엔진 컨테이너를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 또는 지원되는 방식으로 Fortress 엔진을 실행합니다.",
+          "기존 Playwright 또는 Puppeteer 코드의 CDP 연결 주소를 Fortress 인스턴스로 변경합니다.",
+          "안티봇 보호가 적용된 웹사이트에서 차단 없이 브라우저 자동화 스크립트를 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "고급 봇 탐지 사이트에서는 프록시 설정과 함께 사용하는 것이 효과적입니다.",
+        "stars": 785,
+        "forks": 54,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:19.669Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:24.940Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "social-media-profile-scrapers",
+      "name": "Social Media Profile Scrapers",
+      "github": "https://github.com/shaikhsajid1111/social-media-profile-scrapers",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14"
+    },
+    {
+      "id": "awesome-web-scraping",
+      "name": "awesome-web-scraping",
+      "github": "https://github.com/lorien/awesome-web-scraping",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "awesome-web-scraping",
+        "name": "awesome-web-scraping",
+        "github": "https://github.com/lorien/awesome-web-scraping",
+        "description": "웹 스크래핑 및 데이터 처리를 위한 유용한 라이브러리, 도구, API 모음입니다.",
+        "longDescription": "다양한 프로그래밍 언어별 웹 스크래핑 패키지, 명령어 도구, 크롤링 프레임워크 등을 종합적으로 정리한 오픈소스 큐레이션 저장소입니다. 웹 크롤링 및 데이터 수집 프로젝트를 시작할 때 필요한 리소스를 빠르게 탐색할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "웹 스크래핑",
+          "크롤러",
+          "파이썬",
+          "자바스크립트",
+          "API"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/lorien/awesome-web-scraping",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소의 언어별 문서 링크를 확인합니다.",
+          "필요한 스크래핑 라이브러리나 도구를 선택합니다.",
+          "해당 프로젝트의 안내에 따라 패키지를 설치하고 활용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8205,
+        "forks": 968,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:19.828Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T05:06:25.176Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "rvest",
+      "name": "rvest",
+      "github": "https://github.com/tidyverse/rvest",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "rvest",
+        "name": "rvest",
+        "github": "https://github.com/tidyverse/rvest",
+        "description": "R 언어에서 간편하게 웹 페이지 데이터를 수집할 수 있는 스크래핑 패키지입니다.",
+        "longDescription": "tidyverse 생태계의 일부로 설계된 rvest는 직관적인 파이프 연산자를 활용해 HTML 파싱 및 웹 크롤링 작업을 쉽게 처리할 수 있도록 돕습니다. 웹 페이지에서 데이터를 추출하고 구조화하는 과정을 간소화합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "R",
+          "HTML",
+          "웹 스크래핑",
+          "데이터 수집"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://rvest.tidyverse.org",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [
+          "R 3.8 이상"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 설치",
+            "command": "install.packages(\"rvest\")",
+            "note": "R 콘솔에서 실행하여 rvest를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "R 환경에서 rvest 라이브러리를 불러옵니다.",
+          "read_html() 함수로 대상 웹 페이지를 읽습니다.",
+          "html_elements() 등의 함수로 원하는 요소를 추출합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1526,
+        "forks": 349,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:20.079Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "user-agents",
+      "name": "user-agents",
+      "github": "https://github.com/intoli/user-agents",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "user-agents",
+        "name": "user-agents",
+        "github": "https://github.com/intoli/user-agents",
+        "description": "실제 사용 빈도를 기반으로 무작위 User Agent 문자열을 생성하는 자바스크립트 라이브러리입니다.",
+        "longDescription": "매일 업데이트되는 통계 데이터를 바탕으로 실제 브라우저와 유사한 User-Agent 및 관련 핑거프린트 속성을 생성합니다. 웹 스크래핑 시 차단을 우회하고 자연스러운 브라우저 환경을 흉내 내는 데 유용합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "JavaScript",
+          "브라우저 자동화",
+          "User-Agent",
+          "웹 스크래핑"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/intoli/user-agents",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트에 라이브러리를 포함합니다.",
+          "필터링 조건을 설정하여 무작위 User-Agent를 생성합니다.",
+          "HTTP 요청 헤더에 적용하여 사용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1193,
+        "forks": 59,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T05:06:20.300Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "scrapfly-scrapers",
+      "name": "scrapfly-scrapers",
+      "github": "https://github.com/scrapfly/scrapfly-scrapers",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "scrapfly-scrapers",
+        "name": "scrapfly-scrapers",
+        "github": "https://github.com/scrapfly/scrapfly-scrapers",
+        "description": "주요 인기 도메인을 대상으로 하는 확장 가능한 파이썬 웹 스크래핑 예제 스크립트 모음입니다.",
+        "longDescription": "Scrapfly API와 Python을 활용하여 안티봇, 캡차 우회, 비동기 처리를 포함한 실전 웹 스크래핑 구조를 학습할 수 있습니다. 여러 인기 웹사이트를 대상으로 하는 40개 이상의 교육용 스크래퍼가 포함되어 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "파이썬",
+          "웹 스크래핑",
+          "크롤러",
+          "자동화"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://scrapfly.io",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [
+          "Python 3.10+",
+          "Poetry"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 복제 및 설치",
+            "command": "git clone https://github.com/scrapfly/scrapfly-scrapers.git\ncd scrapfly-scrapers\npoetry install --no-root",
+            "note": "Poetry를 사용하여 의존성을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "원하는 대상 사이트 폴더로 이동합니다.",
+          "환경 변수에 Scrapfly API 키를 설정합니다.",
+          "시작 스크립트를 실행하여 스크래핑 결과를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1116,
+        "forks": 204,
+        "starsUpdatedAt": "2026-11-01"
+      }
+    },
+    {
+      "id": "web-scraping",
+      "name": "web-scraping",
+      "github": "https://github.com/je-suis-tm/web-scraping",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14"
+    },
+    {
+      "id": "fingerprint-browser",
+      "name": "fingerprint-browser",
+      "github": "https://github.com/zhaotoday/fingerprint-browser",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "fingerprint-browser",
+        "name": "fingerprint-browser",
+        "github": "https://github.com/zhaotoday/fingerprint-browser",
+        "description": "안티버스/지문 브라우저와 프록시 IP 选型 정보 및 관련 오픈소스 리소스를 정리한 가이드입니다.",
+        "longDescription": "다중 계정 관리, 마케팅 자동화, 웹 스크래핑 시 봇 탐지를 우회하기 위한 27가지 상용 지纹 브라우저와 프록시 서비스 정보를 비교합니다. 크로미움 기반의 오픈소스 반탐지 자동화 도구 및 관련 개발 자료를 수록하고 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "지문 브라우저",
+          "안티봇",
+          "자동화",
+          "프록시"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/zhaotoday/fingerprint-browser",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트 문서에서 필요한 브라우저 및 프록시 정보를 확인합니다.",
+          "목적에 맞는 안티디텍트 도구 또는 오픈소스 라이브러리를 선택합니다.",
+          "가이드에 따라 다중 계정 및 자동화 환경을 구축합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 767,
+        "forks": 104,
+        "starsUpdatedAt": "2026-11-01"
+      }
+    },
+    {
+      "id": "cctvvideodownloader",
+      "name": "CCTVVideoDownloader",
+      "github": "https://github.com/letr007/CCTVVideoDownloader",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14",
+      "tool": {
+        "id": "cctvvideodownloader",
+        "name": "CCTVVideoDownloader",
+        "github": "https://github.com/letr007/CCTVVideoDownloader",
+        "description": "웹 기반으로 央视网(CCTV) 동영상 스트림을 파싱하고 다운로드할 수 있는 데스크톱 및 CLI 응용 프로그램입니다.",
+        "longDescription": "CCTV 웹사이트의栏目, 专辑, 单集 페이지를 분석하여 멀티스레드로 동영상 분할 파일을 가져오고 TS 합병 및 MP4 패키징을 지원합니다. GUI 환경 외에도 서버나 컨테이너에서 사용할 수 있는 `cctv-dl` CLI 도구를 함께 제공합니다.",
+        "category": "멀티미디어",
+        "tags": [
+          "C++",
+          "Qt6",
+          "동영상 다운로더",
+          "FFmpeg",
+          "CLI"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/letr007/CCTVVideoDownloader",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T05:04:13.695Z",
+        "requirements": [
+          "FFmpeg"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로그램을 실행하거나 명령줄 도구를 준비합니다.",
+          "대상 CCTV 웹사이트 링크를 입력하여 영상을 불러옵니다.",
+          "내려받을 해상도와 포맷을 선택한 후 다운로드를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 732,
+        "forks": 89,
+        "starsUpdatedAt": "2026-11-01"
+      }
+    },
+    {
+      "id": "phpscraper",
+      "name": "PHPScraper",
+      "github": "https://github.com/spekulatius/PHPScraper",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14"
+    },
+    {
+      "id": "stealth-requests",
+      "name": "Stealth-Requests",
+      "github": "https://github.com/jpjacobpadilla/Stealth-Requests",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14"
+    },
+    {
+      "id": "wreq-js",
+      "name": "wreq-js",
+      "github": "https://github.com/sqdshguy/wreq-js",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T05:06:17.257Z",
+      "sourceRun": "2026-11-01T14"
     },
     {
       "id": "sql-mother",
@@ -404,161 +1345,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-01T04:06:26.934Z"
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-01T04:06:13.562Z",
-      "sourceRun": "2026-11-01T13",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "아웃라인, 마인드맵, 스프레드시트를 대체할 수 있는 자유 형식의 계층형 데이터 조직화 도구입니다.",
-        "longDescription": "할 일 목록, 일정 관리, 브레인스토밍, 아이디어 정리 등 복잡한 계층적 데이터를 표 형식으로 직관적이고 컴팩트하게 관리할 수 있는 크로스플랫폼 데스크톱 애플리케이션입니다.",
-        "category": "생산성",
-        "tags": [
-          "생산성",
-          "지식·검색",
-          "데스크톱",
-          "C++"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T04:04:13.890Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "릴리즈 페이지에서 운영체제에 맞는 미리 빌드된 바이너리를 다운로드합니다.",
-          "애플리케이션을 실행하고 새로운 트리시트 문서를 생성합니다.",
-          "셀을 추가하고 계층 구조로 데이터를 입력하여 정리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "macOS의 경우 최초 실행 시 보안 설정으로 인해 열리지 않을 수 있으므로 한 번 허용 처리가 필요합니다.",
-        "stars": 3184,
-        "forks": 223,
-        "starsUpdatedAt": "2026-11-01"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-01T04:06:15.190Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-01T04:06:19.026Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "wppconnect",
-      "name": "WPPConnect",
-      "github": "https://github.com/wppconnect-team/wppconnect",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T04:06:13.562Z",
-      "sourceRun": "2026-11-01T13",
-      "tool": {
-        "id": "wppconnect",
-        "name": "WPPConnect",
-        "github": "https://github.com/wppconnect-team/wppconnect",
-        "description": "Node.js와 TypeScript 환경에서 WhatsApp Web을 자동화할 수 있는 라이브러리입니다.",
-        "longDescription": "세션 관리, 메시지 송수신, 미디어 처리 등을 지원하며 Puppeteer를 기반으로 챗봇 및 자동화 메시징 시스템을 구축할 수 있습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "업무 자동화",
-          "챗봇",
-          "Node.js",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://wppconnect.io/wppconnect/",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T04:04:13.890Z",
-        "requirements": [
-          "Node.js",
-          "Puppeteer"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "패키지 설치",
-            "command": "npm i @wppconnect-team/wppconnect",
-            "note": "프로젝트에 WPPConnect 라이브러리를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트에 패키지를 설치하고 코드를 작성합니다.",
-          "WhatsApp Web 세션을 초기화하고 QR 코드를 스캔하여 로그인합니다.",
-          "메시지 수신 이벤트 리스너를 등록하거나 메시지 전송 로직을 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "WhatsApp Web의 업데이트에 따라 패키지 버전을 주기적으로 확인하고 업데이트해야 합니다.",
-        "stars": 3517,
-        "forks": 585,
-        "starsUpdatedAt": "2026-11-01"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-01T04:06:15.393Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-01T04:06:19.435Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "canvas-ui",
@@ -27455,90 +28241,6 @@
       }
     },
     {
-      "id": "user-agents",
-      "name": "user-agents",
-      "github": "https://github.com/intoli/user-agents",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T15:07:38.371Z",
-      "sourceRun": "2026-10-31T00",
-      "tool": {
-        "id": "user-agents",
-        "name": "user-agents",
-        "github": "https://github.com/intoli/user-agents",
-        "description": "매일 업데이트되는 실제 사용 통계 데이터를 바탕으로 무작위 사용자 에이전트 문자열을 생성하는 JavaScript 라이브러리입니다.",
-        "longDescription": "웹 스크래핑 및 브라우저 자동화 작업 시 탐지를 우회하기 위해 실제 브라우저 환경과 유사한 다양한 지문 속성과 필터링 기능을 갖춘 사용자 에이전트를 프로그래밍 방식으로 생성합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "웹 스크래핑",
-          "JavaScript",
-          "개발 도구",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/intoli/user-agents",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T15:04:14.674Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "패키지 설치",
-            "command": "npm install user-agents",
-            "note": "프로젝트에 라이브러리를 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트에 라이브러리를 설치합니다.",
-          "코드 내에서 유저 아전트 모듈을 불러옵니다.",
-          "필요한 조건(브라우저 종류, 기기 등)을 지정하여 무작위 사용자 에이전트 객체를 생성합니다.",
-          "스크래퍼나 HTTP 클라이언트의 요청 헤더에 적용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1191,
-        "forks": 59,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T15:07:41.018Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T15:07:47.509Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "wharttest",
       "name": "WHartTest",
       "github": "https://github.com/MGdaasLab/WHartTest",
@@ -27700,150 +28402,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "fortress",
-      "name": "Fortress",
-      "github": "https://github.com/tiliondev/fortress",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T15:07:38.371Z",
-      "sourceRun": "2026-10-31T00",
-      "tool": {
-        "id": "fortress",
-        "name": "Fortress",
-        "github": "https://github.com/tiliondev/fortress",
-        "description": "스크래퍼와 브라우저 에이전트가 탐지되거나 차단되는 것을 방지하기 위해 C++ 소스 레벨에서 브라우저 지문을 교정하는 스텔스 크로미움 엔진입니다.",
-        "longDescription": "기존의 Playwright나 Puppeteer 스크립트를 CDP(Chrome DevTools Protocol)를 통해 그대로 연동할 수 있으며, 일반적인 데이터센터 IP 환경에서도 엄격한 안티봇 검사를 통과할 수 있도록 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "브라우저 자동화",
-          "웹 스크래핑",
-          "안티봇",
-          "Python",
-          "Chromium"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://fortress.tilion.com/",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T15:04:14.674Z",
-        "requirements": [
-          "Python",
-          "Docker 또는 호환 환경"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Fortress 스텔스 크로미움 엔진이나 Docker 이미지를 실행합니다.",
-          "기존 Playwright 또는 Puppeteer 코드에서 브라우저 연결 주소를 CDP 포트로 지정합니다.",
-          "코드 수정 없이 기존 자동화 스크립트를 실행하여 웹 페이지에 접근합니다.",
-          "안티봇 검사를 우회하며 안정적으로 데이터를 수집합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 781,
-        "forks": 53,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T15:07:42.021Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T15:07:48.887Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "snoop",
-      "name": "Snoop Project",
-      "github": "https://github.com/snooppr/snoop",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T15:07:38.371Z",
-      "sourceRun": "2026-10-31T00",
-      "tool": {
-        "id": "snoop",
-        "name": "Snoop Project",
-        "github": "https://github.com/snooppr/snoop",
-        "description": "공개 데이터 기반(OSINT)으로 닉네임, 계정 및 관련 정보를 조회하는 수색 도구입니다.",
-        "longDescription": "다양한 웹사이트와 플랫폼에서 닉네임 기반으로 사용자를 탐색할 수 있도록 돕는 오픈소스 OSINT(공개 출처 정보) 정찰 도구입니다. 명령어 인터페이스와 준비된 릴리스 패키지를 통해 신속하게 계정 존재 여부를 확인할 수 있습니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "OSINT",
-          "보안",
-          "정찰",
-          "CLI",
-          "Python"
-        ],
-        "platforms": [
-          "Windows",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/snooppr/snoop/releases",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T15:04:14.674Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "릴리스 페이지에서 OS에 맞는 실행 파일을 다운로드합니다.",
-          "터미널에서 툴을 실행하여 타겟 닉네임을 검색합니다.",
-          "결과로 수집된 프로필 링크와 일치 여부를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "정당한 보안 연구 및 공개 정보 확인 목적으로만 사용해야 합니다.",
-        "stars": 4056,
-        "forks": 467,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T15:07:42.365Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "how-to-scrape-google-scholar",
@@ -28030,128 +28588,6 @@
       }
     },
     {
-      "id": "open-scouts",
-      "name": "Open Scouts",
-      "github": "https://github.com/firecrawl/open-scouts",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T15:07:38.371Z",
-      "sourceRun": "2026-10-31T00",
-      "tool": {
-        "id": "open-scouts",
-        "name": "Open Scouts",
-        "github": "https://github.com/firecrawl/open-scouts",
-        "description": "웹을 지속적으로 모니터링하고 변경 사항을 감지하면 이메일 알림을 보내주는 AI 기반 웹 모니터링 플랫폼입니다.",
-        "longDescription": "정해진 스케줄에 따라 웹을 검색하고 필요한 정보를 추적하는 '스카우트'를 생성할 수 있는 오픈소스 플랫폼입니다. Supabase와 Next.js를 기반으로 구축되어 실시간 알림과 데이터 수집 자동화를 지원합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "Next.js",
-          "TypeScript",
-          "웹모니터링",
-          "Supabase",
-          "AI"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://openscouts.firecrawl.dev",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T15:04:14.674Z",
-        "requirements": [
-          "Node.js",
-          "Bun 또는 npm",
-          "Supabase 계정"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 클론 및 패키지 설치",
-            "command": "git clone https://github.com/firecrawl/open-scouts && cd open-scouts && bun install",
-            "note": "의존성 패키지 설치"
-          }
-        ],
-        "usageSteps": [
-          "Supabase 프로젝트를 생성하고 데이터베이스 확장을 활성화합니다.",
-          "환경 변수 파일을 설정하고 애플리케이션을 빌드합니다.",
-          "웹 인터페이스에 접속하여 모니터링할 스카우트 작업을 생성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "API 키 및 외부 서비스 연동 비용이 발생할 수 있습니다.",
-        "stars": 1370,
-        "forks": 188,
-        "starsUpdatedAt": "2026-10-30"
-      }
-    },
-    {
-      "id": "scrapfly-scrapers",
-      "name": "ScrapFly Scrapers",
-      "github": "https://github.com/scrapfly/scrapfly-scrapers",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T15:07:38.371Z",
-      "sourceRun": "2026-10-31T00",
-      "tool": {
-        "id": "scrapfly-scrapers",
-        "name": "ScrapFly Scrapers",
-        "github": "https://github.com/scrapfly/scrapfly-scrapers",
-        "description": "주요 웹사이트들을 대상으로 안티봇 우회와 비동기 처리가 포함된 확장 가능한 파이썬 스크래핑 예제 모음입니다.",
-        "longDescription": "ScrapFly API와 Python을 활용하여 차단이 심한 인기 웹사이트에서 데이터를 안전하게 수집하는 방법을 보여주는 교육용 스크래퍼 모음입니다. 비동기 처리와 파서 설정을 포함하고 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Python",
-          "웹스크래핑",
-          "자동화",
-          "Poetry"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://scrapfly.io",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T15:04:14.674Z",
-        "requirements": [
-          "Python 3.10+",
-          "Poetry"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 클론",
-            "command": "git clone https://github.com/scrapfly/scrapfly-scrapers.git",
-            "note": "프로젝트 소스 코드 다운로드"
-          }
-        ],
-        "usageSteps": [
-          "원하는 타겟 스크래퍼 폴더로 이동합니다.",
-          "ScrapFly API 키를 환경 변수로 설정합니다.",
-          "Poetry를 통해 의존성을 설치하고 스크립트를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "원활한 실행을 위해 ScrapFly 계정 및 API 키가 필요합니다.",
-        "stars": 1111,
-        "forks": 204,
-        "starsUpdatedAt": "2026-10-30"
-      }
-    },
-    {
       "id": "quantumproxies-io",
       "name": "QuantumProxies Resources",
       "github": "https://github.com/quantumproxies/quantumproxies.io",
@@ -28229,70 +28665,6 @@
       "reasons": [],
       "checkedAt": "2026-10-30T15:07:38.371Z",
       "sourceRun": "2026-10-31T00"
-    },
-    {
-      "id": "google-search",
-      "name": "Google Search MCP Tool",
-      "github": "https://github.com/web-agent-master/google-search",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T15:07:38.371Z",
-      "sourceRun": "2026-10-31T00",
-      "tool": {
-        "id": "google-search",
-        "name": "Google Search MCP Tool",
-        "github": "https://github.com/web-agent-master/google-search",
-        "description": "안티스크래핑 메커니즘을 우회하여 구글 검색을 수행하고 결과를 추출하는 Node.js 기반의 로컬 SERP 도구입니다.",
-        "longDescription": "유료 검색 엔진 API에 의존하지 않고 Playwright를 기반으로 로컬에서 안전하게 구글 검색을 실행하는 오픈소스 도구입니다. MCP 서버를 지원하여 Claude 등 AI 어시스턴트에게 실시간 검색 능력을 제공합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "TypeScript",
-          "Playwright",
-          "MCP",
-          "검색",
-          "AI"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/web-agent-master/google-search",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T15:04:14.674Z",
-        "requirements": [
-          "Node.js",
-          "npm"
-        ],
-        "supportedAgents": [
-          "Claude"
-        ],
-        "install": [
-          {
-            "title": "저장소 클론 및 빌드",
-            "command": "git clone https://github.com/web-agent-master/google-search.git && cd google-search && npm install && npm run build",
-            "note": "프로젝트 설치 및 빌드"
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 의존성을 설치합니다.",
-          "타입스크립트 코드를 빌드하고 전역 링크를 설정합니다.",
-          "MCP 서버로 구동하여 AI 어시스턴트와 연동합니다."
-        ],
-        "examplePrompt": "최근 AI 웹 스크래핑 트렌드를 구글에서 검색해줘",
-        "usageNote": "검색 엔진의 정책 변경에 따라 안티봇 우회 설정 조정이 필요할 수 있습니다.",
-        "stars": 624,
-        "forks": 103,
-        "starsUpdatedAt": "2026-10-30"
-      }
     },
     {
       "id": "snappysnippet",
@@ -53307,83 +53679,6 @@
       "sourceRun": "2026-10-28T20"
     },
     {
-      "id": "cctvvideodownloader",
-      "name": "CCTV Video Downloader",
-      "github": "https://github.com/letr007/CCTVVideoDownloader",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-28T10:06:56.613Z",
-      "sourceRun": "2026-10-28T19",
-      "tool": {
-        "id": "cctvvideodownloader",
-        "name": "CCTV Video Downloader",
-        "github": "https://github.com/letr007/CCTVVideoDownloader",
-        "description": "중국 중앙방송(CCTV) 웹사이트의 영상 스트림을 탐색하고 다운로드할 수 있는 데스크톱 및 CLI 도구입니다.",
-        "longDescription": "프로그램 내에서 栏目(칼럼), 앨범, 단편 영상을 월별로 탐색하고 다중 스레드로 비디오 청크를 다운로드하여 H5E 복호화, TS 병합 및 MP4 패키징을 지원합니다.",
-        "category": "멀티미디어",
-        "tags": [
-          "비디오 다운로더",
-          "CCTV",
-          "FFmpeg",
-          "Qt6",
-          "C++"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/letr007/CCTVVideoDownloader",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T10:04:11.381Z",
-        "requirements": [
-          "FFmpeg"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "애플리케이션을 실행하거나 소스 코드를 빌드하여 `cctv-dl` CLI 도구를 준비합니다.",
-          "상단 입력란에 CCTV 웹사이트 링크를 입력하고 프로그램을 임포트합니다.",
-          "다운로드할 회차를 선택하고 저장 경로 및 화질을 설정한 뒤 다운로드를 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 721,
-        "forks": 86,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T10:06:58.832Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-28T10:07:04.503Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "agent-skills",
       "name": "Oxylabs Agent Skills",
       "github": "https://github.com/oxylabs/agent-skills",
@@ -53402,77 +53697,6 @@
       "reasons": [],
       "checkedAt": "2026-10-28T10:06:56.613Z",
       "sourceRun": "2026-10-28T19"
-    },
-    {
-      "id": "rvest",
-      "name": "rvest",
-      "github": "https://github.com/tidyverse/rvest",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-28T10:06:56.613Z",
-      "sourceRun": "2026-10-28T19",
-      "tool": {
-        "id": "rvest",
-        "name": "rvest",
-        "github": "https://github.com/tidyverse/rvest",
-        "description": "R 언어 환경에서 웹 페이지의 데이터를 간편하게 수집하고 파싱할 수 있는 패키지입니다.",
-        "longDescription": "tidyverse 생태계의 일부로 동작하며, BeautifulSoup 등에서 영감을 받아 R 사용자가 직관적으로 웹 스크레이핑을 수행할 수 있도록 돕습니다. 파이프 연산자와 결합하여 가독성 높은 데이터 수집 코드를 작성할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "R",
-          "웹 스크레이핑",
-          "HTML",
-          "데이터 수집"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://rvest.tidyverse.org",
-        "featured": 9,
-        "added": "2026-10-28",
-        "addedAt": "2026-10-28T10:04:11.381Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "R 패키지 설치",
-            "command": "install.packages(\"rvest\")",
-            "note": "R 콘솔에서 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "R 환경에서 패키지를 불러옵니다.",
-          "read_html() 함수로 대상 웹페이지를 읽어옵니다.",
-          "html_elements() 및 관련 함수로 필요한 요소를 추출합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1526,
-        "forks": 349,
-        "starsUpdatedAt": "2026-10-28"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-28T10:07:00.119Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "chatgpt-scraper-api",
@@ -59634,78 +59858,6 @@
       "reasons": [],
       "checkedAt": "2026-10-26T20:07:06.510Z",
       "sourceRun": "2026-10-27T05"
-    },
-    {
-      "id": "awesome-web-scraping",
-      "name": "awesome-web-scraping",
-      "github": "https://github.com/lorien/awesome-web-scraping",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-26T20:07:06.510Z",
-      "sourceRun": "2026-10-27T05",
-      "tool": {
-        "id": "awesome-web-scraping",
-        "name": "awesome-web-scraping",
-        "github": "https://github.com/lorien/awesome-web-scraping",
-        "description": "웹 스크래핑과 데이터 처리를 위한 라이브러리, 도구, API 모음입니다.",
-        "longDescription": "파이썬, PHP, 루비, 자바스크립트, Go 등 다양한 프로그래밍 언어별 웹 스크래핑 패키지와 커맨드라인 도구 정보를 체계적으로 정리한 큐레이션 저장소입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "웹스크래핑",
-          "크롤러",
-          "파이썬",
-          "개발도구"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/lorien/awesome-web-scraping",
-        "featured": 9,
-        "added": "2026-10-26",
-        "addedAt": "2026-10-26T20:04:11.425Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소의 언어별 카테고리 문서를 확인합니다.",
-          "목적에 맞는 스크래핑 라이브러리나 도구를 선택합니다.",
-          "제공된 링크를 통해 공식 문서 및 소스 코드를 참고합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8194,
-        "forks": 964,
-        "starsUpdatedAt": "2026-10-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-26T20:07:10.525Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-26T20:07:17.535Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "untidetect-tools",
@@ -105553,88 +105705,6 @@
       "id": "microk8s",
       "name": "MicroK8s",
       "github": "https://github.com/canonical/microk8s",
-      "license": "Apache-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T21:06:33.661Z",
-      "sourceRun": "2026-10-15T06"
-    },
-    {
-      "id": "wasm-micro-runtime",
-      "name": "WAMR",
-      "github": "https://github.com/wasm-micro-runtime/wasm-micro-runtime",
-      "license": "Apache-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T21:06:33.661Z",
-      "sourceRun": "2026-10-15T06"
-    },
-    {
-      "id": "ruview",
-      "name": "RuView",
-      "github": "https://github.com/ruvnet/RuView",
-      "license": "MIT",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T21:06:33.661Z",
-      "sourceRun": "2026-10-15T06"
-    },
-    {
-      "id": "salt",
-      "name": "Salt",
-      "github": "https://github.com/saltstack/salt",
-      "license": "Apache-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T21:06:33.661Z",
-      "sourceRun": "2026-10-15T06"
-    },
-    {
-      "id": "rt-thread",
-      "name": "RT-Thread",
-      "github": "https://github.com/RT-Thread/rt-thread",
-      "license": "Apache-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T21:06:33.661Z",
-      "sourceRun": "2026-10-15T06"
-    },
-    {
-      "id": "esphome",
-      "name": "ESPHome",
-      "github": "https://github.com/esphome/esphome",
-      "license": "확인 필요",
-      "status": "auto_approved_after_document_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-14T21:06:33.661Z",
-      "sourceRun": "2026-10-15T06",
-      "licenseEvidenceCheckedAt": "2026-10-14T21:06:35.737Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [],
-      "documentEvidenceCheckedAt": "2026-10-14T21:06:39.104Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": "MIT",
-        "licenseSource": "LICENSE complete MIT provisions (text match)",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "platformio-core",
-      "name": "PlatformIO Core",
-      "github": "https://github.com/platformio/platformio-core",
       "license": "Apache-2.0",
       "status": "auto_approved",
       "reasons": [],
