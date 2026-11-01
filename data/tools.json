@@ -1,5 +1,271 @@
 [
   {
+    "id": "fonoster",
+    "name": "Fonoster",
+    "github": "https://github.com/fonoster/fonoster",
+    "description": "실제 전화선과 연동하여 음성 에이전트를 빌드, 테스트, 실행할 수 있는 오픈소스 통신 플랫폼입니다.",
+    "longDescription": "프로그래머블 보이스 및 AI 기반 음성 응대 시스템을 구축할 수 있도록 지원하는 CPaaS 오픈소스 솔루션입니다. OpenAI 등 LLM과 연동하여 전화 통화로 상호작용하는 지능형 음성 봇을 쉽게 만들 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성 에이전트",
+      "VoIP",
+      "Telephony",
+      "TypeScript",
+      "AI"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://fonoster.com",
+    "featured": 9,
+    "added": "2026-11-01",
+    "addedAt": "2026-11-01T07:04:09.920Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Fonoster CLI 설치",
+        "command": "npm install -g @fonoster/ctl",
+        "note": "npm을 통해 전역으로 CLI 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "CLI를 통해 Fonoster 명령줄 도구를 설치합니다.",
+      "워크스페이스에 로그인하고 에이전트 설정 파일(agent.yaml)을 작성합니다.",
+      "애플리케이션을 생성하고 전화번호와 연동하여 음성 서비스를 개시합니다."
+    ],
+    "examplePrompt": "고객 전화를 받아 질문에 답할 수 있는 AI 음성 에이전트를 설정해줘",
+    "usageNote": "프로젝트가 활발히 업그레이드 중이므로 일부 변경 사항이 있을 수 있습니다.",
+    "stars": 8158,
+    "forks": 566,
+    "starsUpdatedAt": "2026-11-01"
+  },
+  {
+    "id": "sealed-secrets",
+    "name": "Sealed Secrets",
+    "github": "https://github.com/bitnami/sealed-secrets",
+    "description": "Git 저장소 안전 저장을 위한 Kubernetes 단방향 암호화 시크릿 도구",
+    "longDescription": "Kubernetes 시크릿을 Git에 안전하게 저장할 수 있도록 클러스터 내부에서만 복호화 가능한 단방향 암호화 형태로 변환해 주는 컨트롤러 및 CLI 도구입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Kubernetes",
+      "암호화",
+      "GitOps",
+      "시크릿"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/bitnami/sealed-secrets",
+    "featured": 9,
+    "added": "2026-11-01",
+    "addedAt": "2026-11-01T07:04:09.920Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install kubeseal",
+        "note": "macOS 환경에서 kubeseal CLI 설치"
+      }
+    ],
+    "usageSteps": [
+      "kubeseal CLI를 설치합니다.",
+      "일반 Kubernetes 시크릿을 SealedSecret 리소스로 암호화합니다.",
+      "암호화된 파일을 Git 저장소에 커밋하고 클러스터에 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9325,
+    "forks": 786,
+    "starsUpdatedAt": "2026-11-01"
+  },
+  {
+    "id": "external-dns",
+    "name": "ExternalDNS",
+    "github": "https://github.com/kubernetes-sigs/external-dns",
+    "description": "Kubernetes 리소스 변경에 맞춰 외부 DNS 서버를 자동으로 구성하는 컨트롤러",
+    "longDescription": "Kubernetes 내의 Ingress나 Service 리소스를 감시하고, AWS Route53, Google Cloud DNS 등 외부 DNS 공급자의 레코드를 자동으로 동기화해 주는 컨트롤러입니다.",
+    "category": "네트워크",
+    "tags": [
+      "DNS",
+      "Kubernetes",
+      "Ingress",
+      "네트워크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kubernetes-sigs.github.io/external-dns/",
+    "featured": 9,
+    "added": "2026-11-01",
+    "addedAt": "2026-11-01T07:04:09.920Z",
+    "requirements": [
+      "Kubernetes 클러스터",
+      "지원되는 외부 DNS 제공자 계정"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "외부 DNS 제공자의 API 자격 증명을 준비합니다.",
+      "Helm 또는 매니페스트를 사용하여 ExternalDNS를 Kubernetes에 배포합니다.",
+      "Ingress 또는 Service에 DNS 호스트네임 어노테이션을 추가하여 자동 레코드 생성을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 9145,
+    "forks": 2949,
+    "starsUpdatedAt": "2026-11-01"
+  },
+  {
+    "id": "patroni",
+    "name": "Patroni",
+    "github": "https://github.com/patroni/patroni",
+    "description": "Etcd, Consul 또는 Kubernetes를 활용한 PostgreSQL 고가용성 템플릿",
+    "longDescription": "분산 설정 저장소를 활용하여 PostgreSQL 고가용성(HA) 클러스터를 손쉽게 구축, 관리 및 장애 조치할 수 있도록 지원하는 Python 기반 템플릿입니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "PostgreSQL",
+      "고가용성",
+      "Failover",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/patroni/patroni",
+    "featured": 9,
+    "added": "2026-11-01",
+    "addedAt": "2026-11-01T07:04:09.920Z",
+    "requirements": [
+      "Python",
+      "PostgreSQL",
+      "Etcd 또는 Consul"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS 요구사항 설치",
+        "command": "brew install postgresql etcd haproxy libyaml python",
+        "note": "Homebrew를 통한 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "필수 패키지 및 분산 저장소를 설치합니다.",
+      "Patroni 설정 파일을 작성하여 클러스터 노드 정보를 정의합니다.",
+      "Patroni 서비스를 실행하여 PostgreSQL 고가용성 클러스터를 구동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8813,
+    "forks": 1034,
+    "starsUpdatedAt": "2026-11-01"
+  },
+  {
+    "id": "longhorn",
+    "name": "Longhorn",
+    "github": "https://github.com/longhorn/longhorn",
+    "description": "Kubernetes를 위한 가볍고 안정적인 클라우드 네이티브 분산 블록 스토리지",
+    "longDescription": "컨테이너 환경에서 안정적으로 영구 볼륨을 관리할 수 있도록 설계된 CNCF 기반의 Kubernetes 분산 블록 스토리지 시스템입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "스토리지",
+      "Kubernetes",
+      "CNCF",
+      "분산 시스템"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://longhorn.io",
+    "featured": 9,
+    "added": "2026-11-01",
+    "addedAt": "2026-11-01T07:04:09.920Z",
+    "requirements": [
+      "Kubernetes 클러스터",
+      "지원되는 Linux 노드 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Kubernetes 클러스터 내 노드 요구사항을 확인합니다.",
+      "공식 배포 매니페스트 또는 Helm을 통해 Longhorn을 클러스터에 설치합니다.",
+      "StorageClass를 통해 영구 볼륨(PVC)을 생성하여 애플리케이션에 마운트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8052,
+    "forks": 748,
+    "starsUpdatedAt": "2026-11-01"
+  },
+  {
+    "id": "laf",
+    "name": "Laf",
+    "github": "https://github.com/labring/laf",
+    "description": "블로그를 쓰듯 코딩하는 오픈소스 서버리스 클라우드 개발 플랫폼",
+    "longDescription": "클라우드 함수, 데이터베이스, 스토리지 등 서버리스 인프라를 웹 환경에서 즉시 제공하여 개발자가 서버 관리 없이 비즈니스 로직에만 집중할 수 있게 돕는 플랫폼입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Serverless",
+      "FaaS",
+      "TypeScript",
+      "클라우드 개발"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://sealos.run",
+    "featured": 9,
+    "added": "2026-11-01",
+    "addedAt": "2026-11-01T07:04:09.920Z",
+    "requirements": [
+      "Kubernetes 또는 Sealer 환경"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Laf 플랫폼에 접속하거나 자체 인프라에 배포합니다.",
+      "새로운 애플리케이션을 생성하고 웹 IDE를 엽니다.",
+      "클라우드 함수와 데이터베이스를 활용하여 코드를 작성하고 즉시 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7550,
+    "forks": 666,
+    "starsUpdatedAt": "2026-11-01"
+  },
+  {
     "id": "teaser-plusplus",
     "name": "TEASER++",
     "github": "https://github.com/MIT-SPARK/TEASER-plusplus",

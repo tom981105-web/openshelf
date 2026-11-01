@@ -1,7 +1,332 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-01T06:06:32.774Z",
+  "updatedAt": "2026-11-01T07:06:24.377Z",
   "items": [
+    {
+      "id": "portainer",
+      "name": "Portainer",
+      "github": "https://github.com/portainer/portainer",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "portainer",
+        "name": "Portainer",
+        "github": "https://github.com/portainer/portainer",
+        "description": "Docker 및 Kubernetes 환경을 쉽게 관리할 수 있는 가벼운 컨테이너 관리 웹 UI입니다.",
+        "longDescription": "홈랩 사용자, 개발자, 초보자가 Docker, Swarm, Podman, Kubernetes 클러스터를 시각적으로 관리할 수 있도록 돕는 직관적인 대시보드 도구입니다. 복잡한 명령어 없이 컨테이너와 이미지를 손쉽게 제어할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Docker",
+          "Kubernetes",
+          "컨테이너관리"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://www.portainer.io",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Portainer CE 설치",
+            "command": "docker volume create portainer_data && docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest",
+            "note": "Docker 환경에서 실행하는 표준 명령어입니다."
+          }
+        ],
+        "usageSteps": [
+          "도커 환경에서 설치 명령어를 실행합니다.",
+          "웹 브라우저로 접속하여 관리자 계정을 생성합니다.",
+          "로컬 또는 원격 컨테이너 및 클러스터 노드를 연결하여 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 38757,
+        "forks": 2931,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:13.813Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:16.751Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-01T07:06:21.403Z"
+    },
+    {
+      "id": "authentik",
+      "name": "Authentik",
+      "github": "https://github.com/goauthentik/authentik",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "authentik",
+        "name": "Authentik",
+        "github": "https://github.com/goauthentik/authentik",
+        "description": "다양한 애플리케이션을 위한 오픈소스 통합 인증 및 인가 관리 솔루션",
+        "longDescription": "OAuth2, OIDC, SAML 등을 지원하여 기존의 상용 인증 서비스를 대체할 수 있는 오픈소스 인증 솔루션입니다. 쿠버네티스와 도커 환경에서 대규모 사용자 및 권한 관리를 효율적으로 수행합니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "인증",
+          "SSO",
+          "보안"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://goauthentik.io",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [
+          "Docker Compose",
+          "Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose 설치",
+            "command": "docker compose up -d",
+            "note": "도커 컴포즈를 사용하여 간편하게 실행할 수 있습니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker Compose 또는 Helm을 이용해 Authentik 서버를 배포합니다.",
+          "관리자 대시보드에 로그인하여 프로바이더와 애플리케이션을 연동합니다.",
+          "SSO 인증 체계를 통해 서비스 접근을 제어합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 26182,
+        "forks": 2098,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:14.050Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:17.011Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-01T07:06:22.196Z"
+    },
+    {
+      "id": "kuboard-press",
+      "name": "Kuboard",
+      "github": "https://github.com/eip-work/kuboard-press",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "kuboard-press",
+        "name": "Kuboard",
+        "github": "https://github.com/eip-work/kuboard-press",
+        "description": "쿠버네티스를 시각적으로 쉽게 관리할 수 있는 다중 클러스터 컨테이너 관리 플랫폼입니다.",
+        "longDescription": "복잡한 쿠버네티스 클러스터와 마이크로서비스를 웹 UI를 통해 직관적으로 관리할 수 있도록 돕습니다. 워크로드, 네트워크, 스토리지뿐만 아니라 내장 터미널과 문제 진단 기능을 제공하여 운영 효율성을 높여줍니다.",
+        "category": "개발 도구",
+        "tags": [
+          "쿠버네티스",
+          "컨테이너",
+          "대시보드"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kuboard.cn/",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [
+          "Docker",
+          "Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "도커 컴포즈 실행",
+            "command": "docker compose up -d",
+            "note": "공식 문서 및 가이드를 참고하여 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Kuboard를 도커 또는 쿠버네티스 환경에 배포합니다.",
+          "웹 UI 대시보드에 접속하여 기존 쿠버네티스 클러스터를 연동합니다.",
+          "시각적 인터페이스를 통해 워크로드 및 리소스를 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 25276,
+        "forks": 1594,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:14.236Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:17.586Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-01T07:06:22.833Z"
+    },
+    {
+      "id": "sealos",
+      "name": "Sealos",
+      "github": "https://github.com/labring/sealos",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "sealos",
+        "name": "Sealos",
+        "github": "https://github.com/labring/sealos",
+        "description": "Kubernetes 기반 애플리케이션 수명 주기 통합 관리 클라우드 운영 체제",
+        "longDescription": "클라우드 네이티브 환경에서 개발, 배포, 확장을 원스톱으로 처리할 수 있는 플랫폼입니다. AI 애플리케이션, 데이터베이스, 마이크로서비스 아키텍처를 쉽게 구축하고 운영할 수 있도록 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "쿠버네티스",
+          "클라우드",
+          "데브옵스"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://sealos.io",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [
+          "Linux",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 설치 가이드에 따라 클라우드 환경에 Sealos를 구성합니다.",
+          "웹 기반 인터페이스 또는 CLI를 통해 프로젝트와 데이터베이스를 배포합니다.",
+          "애플리케이션 상태를 모니터링하고 확장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18387,
+        "forks": 2483,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:14.517Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:18.091Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-01T07:06:23.683Z"
+    },
     {
       "id": "windmill",
       "name": "Windmill",
@@ -12,19 +337,19 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-01T06:06:17.752Z",
-      "sourceRun": "2026-11-01T15",
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
       "tool": {
         "id": "windmill",
         "name": "Windmill",
         "github": "https://github.com/windmill-labs/windmill",
-        "description": "엔지니어와 비즈니스 팀을 위한 오픈소스 코드 기반 워크플로우 및 AI 에이전트 오케스트레이션 플랫폼입니다.",
-        "longDescription": "다양한 프로그래밍 언어로 스크립트를 작성하고 Git과 연동하여 관리할 수 있으며, 자동으로 UI와 API 및 크론 럽으로 전환합니다. n8n이나 Retool 등의 오픈소스 대안으로 활용됩니다.",
+        "description": "워크플로우, 내부 앱, AI 에이전트를 코드로 빌드하고 오케스트레이션하는 오픈소스 플랫폼입니다.",
+        "longDescription": "Python, TypeScript 등 다양한 언어로 작성된 스크립트를 공유 가능한 UI, API, 크론잡으로 자동 변환해 줍니다. Airflow, Retool, n8n의 강력한 오픈소스 대안으로 엔지니어와 비즈니스 팀 모두 활용할 수 있습니다.",
         "category": "업무 자동화",
         "tags": [
           "워크플로우",
-          "AI에이전트",
-          "오케스트레이션"
+          "자동화",
+          "AI 에이전트"
         ],
         "platforms": [
           "Web",
@@ -37,24 +362,25 @@
         "website": "https://windmill.dev",
         "featured": 9,
         "added": "2026-11-01",
-        "addedAt": "2026-11-01T06:04:15.135Z",
+        "addedAt": "2026-11-01T07:04:09.920Z",
         "requirements": [
+          "Docker",
           "PostgreSQL"
         ],
         "supportedAgents": [],
         "install": [],
         "usageSteps": [
-          "서버 인스턴스를 셀프 호스팅 환경에 배포합니다.",
-          "Python 또는 TypeScript 등으로 스크립트와 워크플로우를 작성합니다.",
-          "웹 대시보드나 클라이언트를 통해 워크플로우를 실행하고 모니터링합니다."
+          "Docker를 사용하여 Windmill 인스턴스를 실행합니다.",
+          "웹 인터페이스나 코드 에디터를 통해 스크립트와 워크플로우를 작성합니다.",
+          "작성한 스크립트를 API나 자동화 파이프라인으로 배포합니다."
         ],
-        "examplePrompt": "데이터 파이프라인과 연동되는 AI 에이전트 루프를 생성해줘",
+        "examplePrompt": "",
         "usageNote": "",
-        "stars": 18343,
+        "stars": 18344,
         "forks": 1135,
         "starsUpdatedAt": "2026-11-01"
       },
-      "licenseEvidenceCheckedAt": "2026-11-01T06:06:18.581Z",
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:14.719Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -67,7 +393,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-01T06:06:22.664Z",
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:18.414Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -77,7 +403,158 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-11-01T06:06:28.325Z"
+      "recheckedAt": "2026-11-01T07:06:24.377Z"
+    },
+    {
+      "id": "kubesphere",
+      "name": "KubeSphere",
+      "github": "https://github.com/kubesphere/kubesphere",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "kubesphere",
+        "name": "KubeSphere",
+        "github": "https://github.com/kubesphere/kubesphere",
+        "description": "쿠버네티스를 커널로 사용하여 멀티클라우드와 엣지 관리를 지원하는 분산 컨테이너 플랫폼입니다.",
+        "longDescription": "플러그앤플레이 아키텍처를 지원하며, 멀티테넌시, 풀스택 자동화 IT 운영, 간소화된 DevOps 워크플로우를 마법사 형태의 웹 UI로 제공합니다. 기업 환경에서 강력하고 확장 가능한 클라우드 네이티브 플랫폼 구축을 돕습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Kubernetes",
+          "DevOps",
+          "멀티클라우드",
+          "클라우드 네이티브"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kubesphere.io",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [
+          "Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "기존에 구축된 Kubernetes 클러스터에 KubeSphere 설치 스크립트를 실행합니다.",
+          "웹 대시보드에 접속하여 멀티 클러스터 및 개발 파이프라인을 설정합니다.",
+          "앱 배포 및 모니터링을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 17074,
+        "forks": 2755,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:14.942Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:18.732Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "docker-android",
+      "name": "Docker Android",
+      "github": "https://github.com/budtmo/docker-android",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "docker-android",
+        "name": "Docker Android",
+        "github": "https://github.com/budtmo/docker-android",
+        "description": "noVNC, 비디오 녹화, MCP 서버, AI 에이전트를 지원하는 도커 기반 안드로이드 에뮬레이터입니다.",
+        "longDescription": "도커 컨테이너 내부에서 안드로이드 에뮬레이터를 구동할 수 있게 해주는 솔루션입니다. 웹 브라우저를 통한 실시간 제어(noVNC)를 지원하며, 자동화 테스트 및 AI 에이전트 연동 작업에 유용하게 활용됩니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Android",
+          "Docker",
+          "에뮬레이터",
+          "AI 에이전트",
+          "자동화"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/budtmo/docker-android",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [
+          "Docker",
+          "Ubuntu (권장)"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "가상화가 지원되는 환경에서 도커를 준비합니다.",
+          "적절한 안드로이드 이미지 버전을 도커로 실행합니다.",
+          "제공되는 noVNC 포트를 통해 브라우저로 에뮬레이터에 접속하여 조작합니다."
+        ],
+        "examplePrompt": "안드로이드 에뮬레이터에서 앱을 설치하고 UI 테스트를 자동으로 수행해줘",
+        "usageNote": "Windows 및 macOS 호스트의 경우 가상화를 지원하는 Ubuntu 가상 머신 환경이 필요할 수 있습니다.",
+        "stars": 16074,
+        "forks": 1783,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:15.116Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:19.126Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
     },
     {
       "id": "paradev",
@@ -89,19 +566,21 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-01T06:06:17.752Z",
-      "sourceRun": "2026-11-01T15",
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
       "tool": {
         "id": "paradev",
         "name": "Paradev",
         "github": "https://github.com/ParadevAI/Paradev",
-        "description": "수십 개의 코딩 에이전트를 병렬로 실행하고 관리할 수 있는 데스크톱 에이전틱 IDE입니다.",
-        "longDescription": "각 태스크별로 격리된 Git 워이트리, 브랜치, 터미널을 할당하여 Claude Code, Codex 등 다양한 CLI 기반 AI 코딩 에이전트를 동시에 구동합니다. 코드 리뷰와 브라우저 미리보기를 한 화면에서 지원합니다.",
-        "category": "개발 도구",
+        "description": "100개 이상의 코딩 에이전트를 병렬로 오케스트레이션할 수 있는 에이전틱 개발 환경(IDE)입니다.",
+        "longDescription": "Claude Code, Codex, OpenCode 등 다양한 CLI 기반 코딩 에이전트를 하나의 작업 공간에서 동시에 실행할 수 있습니다. 각 태스크마다 독립적인 Git worktree와 터미널, 브라우저 미리보기를 제공하여 개발 생산성을 극대화합니다.",
+        "category": "AI 에이전트",
         "tags": [
-          "IDE",
           "AI 에이전트",
-          "개발자 도구"
+          "IDE",
+          "코딩 보조",
+          "CLI",
+          "Git"
         ],
         "platforms": [
           "macOS",
@@ -113,24 +592,24 @@
         "website": "https://paradev.com",
         "featured": 9,
         "added": "2026-11-01",
-        "addedAt": "2026-11-01T06:04:15.135Z",
+        "addedAt": "2026-11-01T07:04:09.920Z",
         "requirements": [
-          "Git"
+          "macOS 또는 Linux"
         ],
         "supportedAgents": [],
         "install": [],
         "usageSteps": [
-          "공식 릴리즈 페이지에서 운영체제에 맞는 데스크톱 앱을 다운로드하여 설치합니다.",
-          "앱을 실행하고 작업할 Git 저장소를 엽니다.",
-          "병렬로 실행할 코딩 에이전트 태스크를 추가하고 진행 상황을 모니터링합니다."
+          "데스크톱 애플리케이션을 다운로드하여 설치합니다.",
+          "작업할 레포지토리를 열고 여러 개의 코딩 에이전트 태스크를 생성합니다.",
+          "각 에이전트가 수행하는 코딩 작업과 브라우저 미리보기를 모니터링하고 검토합니다."
         ],
-        "examplePrompt": "",
+        "examplePrompt": "이 레포지토리의 로그인 버그를 수정하는 코딩 에이전트를 실행해줘",
         "usageNote": "",
-        "stars": 15799,
+        "stars": 15800,
         "forks": 1411,
         "starsUpdatedAt": "2026-11-01"
       },
-      "licenseEvidenceCheckedAt": "2026-11-01T06:06:18.791Z",
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:15.289Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -143,7 +622,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-01T06:06:23.295Z",
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:19.512Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -151,9 +630,469 @@
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
+      }
+    },
+    {
+      "id": "get-jobs",
+      "name": "Get Jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "get-jobs",
+        "name": "Get Jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "보스직핀, 전程无忧, 猎聘, 智联招聘 등 주요 구직 플랫폼의 이력서 자동 제출을 지원하는 AI 구직 보조 도구입니다.",
+        "longDescription": "구직 활동의 반복적인 이력서 제출 과정을 자동화하고 AI 분석을 통해 최적의 일자리를 탐색할 수 있도록 돕는 스크립트 기반 도구입니다. 구직자의 시간 소모를 줄이고 효율적인 구직 프로세스를 지원합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "AI",
+          "구직",
+          "자동화",
+          "이력서",
+          "Spring Boot"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [
+          "Java",
+          "Spring Boot"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트 소스를 클론하고 필요한 설정 파일을 작성합니다.",
+          "구직 플랫폼 계정 정보와 검색 조건을 구성합니다.",
+          "자동 이력서 제출 스크립트를 실행하여 구직 과정을 자동화합니다."
+        ],
+        "examplePrompt": "내 이력서를 분석하고 조건에 맞는 일자리에 자동으로 지원해줘",
+        "usageNote": "",
+        "stars": 9431,
+        "forks": 1079,
+        "starsUpdatedAt": "2026-11-01"
       },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-01T06:06:29.218Z"
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:15.507Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:19.742Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "fonoster",
+      "name": "Fonoster",
+      "github": "https://github.com/fonoster/fonoster",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T07:06:13.174Z",
+      "sourceRun": "2026-11-01T16"
+    },
+    {
+      "id": "novu",
+      "name": "Novu",
+      "github": "https://github.com/novuhq/novu",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "novu",
+        "name": "Novu",
+        "github": "https://github.com/novuhq/novu",
+        "description": "에이전트와 제품을 위한 오픈소스 커뮤니케이션 인프라",
+        "longDescription": "이메일, SMS, 푸시 알림, 슬랙, 텔레그램 등 다양한 채널을 단일 API와 대화 모델로 통합하여 제품과 AI 에이전트가 사용자와 소통할 수 있도록 지원하는 커뮤니케이션 인프라입니다.",
+        "category": "협업·소통",
+        "tags": [
+          "알림",
+          "API",
+          "인프라",
+          "TypeScript",
+          "Node.js"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://go.novu.co/github",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "대시보드에서 무료 계정을 생성합니다.",
+          "제공되는 API 키를 발급받습니다.",
+          "애플리케이션에 Novu SDK를 연동하여 알림 워크플로우를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 40247,
+        "forks": 4523,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:15.703Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-01T07:06:20.258Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "consul",
+      "name": "Consul",
+      "github": "https://github.com/hashicorp/consul",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "consul",
+        "name": "Consul",
+        "github": "https://github.com/hashicorp/consul",
+        "description": "분산 환경에서 애플리케이션 연결과 설정을 관리하는 서비스",
+        "longDescription": "동적으로 분산된 인프라 전반에서 애플리케이션을 연결하고 구성할 수 있도록 지원하는 고가용성 분산 서비스 디스커버리 및 API 게이트웨이 솔루션입니다.",
+        "category": "네트워크",
+        "tags": [
+          "서비스 디스커버리",
+          "API 게이트웨이",
+          "Kubernetes",
+          "Go"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.consul.io",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 가이드를 참고하여 바이너리를 다운로드하거나 Kubernetes/Minikube에 설치합니다.",
+          "Consul 서버 에이전트를 실행합니다.",
+          "서비스 등록 및 설정을 적용하여 서비스 간 통신을 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 30098,
+        "forks": 4631,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:15.930Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "redpanda",
+      "name": "Redpanda",
+      "github": "https://github.com/redpanda-data/redpanda",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "redpanda",
+        "name": "Redpanda",
+        "github": "https://github.com/redpanda-data/redpanda",
+        "description": "Kafka API 호환 고성능 스트리밍 데이터 플랫폼",
+        "longDescription": "JVM과 ZooKeeper 없이 동작하여 가볍고 빠르게 대용량 스트리밍 데이터를 처리할 수 있는 아파치 카프카 호환 데이터 플랫폼입니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "Kafka",
+          "스트리밍",
+          "데이터 플랫폼",
+          "Kubernetes"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://redpanda.com",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [
+          "Docker (macOS 환경)"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Debian/Ubuntu 설치",
+            "command": "curl -1sLf 'https://linux.pkg.redpanda.com/setup-redpanda.deb.sh' | sudo -E bash && sudo apt-get install redpanda",
+            "note": "데비안 및 우분투 계열 설치"
+          },
+          {
+            "title": "macOS 설치",
+            "command": "brew install redpanda-data/tap/redpanda && rpk container start",
+            "note": "Homebrew를 이용한 macOS 설치"
+          }
+        ],
+        "usageSteps": [
+          "패키지 관리자를 통해 Redpanda를 설치합니다.",
+          "rpk 명령어를 사용하여 로컬 컨테이너 클러스터를 시작합니다.",
+          "Kafka 호환 API를 통해 스트리밍 데이터 송수신을 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 12650,
+        "forks": 799,
+        "starsUpdatedAt": "2026-11-01"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-01T07:06:16.103Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "tyk",
+      "name": "Tyk API Gateway",
+      "github": "https://github.com/TykTechnologies/tyk",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "tyk",
+        "name": "Tyk API Gateway",
+        "github": "https://github.com/TykTechnologies/tyk",
+        "description": "REST, GraphQL, gRPC 및 MCP를 지원하는 오픈소스 API 및 AI 게이트웨이",
+        "longDescription": "다양한 프로토콜과 LLM, Model Context Protocol(MCP)을 지원하여 마이크로서비스와 AI 에이전트의 트래픽을 안전하게 제어하고 관리할 수 있는 오픈소스 API 게이트웨이입니다.",
+        "category": "네트워크",
+        "tags": [
+          "API 게이트웨이",
+          "LLM",
+          "MCP",
+          "GraphQL",
+          "Kubernetes"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://tyk.io/docs/getting-started/quick-start",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker 또는 Kubernetes 환경에서 Tyk 오픈소스 차트를 배포합니다.",
+          "대시보드 또는 설정 파일을 통해 API 엔드포인트와 라우팅 규칙을 정의합니다.",
+          "클라이언트 요청을 게이트웨이를 통해 안전하게 라우팅합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 10872,
+        "forks": 1169,
+        "starsUpdatedAt": "2026-11-01"
+      }
+    },
+    {
+      "id": "yugabyte-db",
+      "name": "YugabyteDB",
+      "github": "https://github.com/yugabyte/yugabyte-db",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16",
+      "tool": {
+        "id": "yugabyte-db",
+        "name": "YugabyteDB",
+        "github": "https://github.com/yugabyte/yugabyte-db",
+        "description": "미션 크리티컬 애플리케이션을 위한 클라우드 네이티브 분산 SQL 데이터베이스",
+        "longDescription": "PostgreSQL과 호환되면서도 고가용성과 수평 확장성을 제공하는 클라우드 네이티브 분산 SQL 데이터베이스입니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "분산 SQL",
+          "PostgreSQL",
+          "데이터베이스",
+          "Kubernetes"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.yugabyte.com",
+        "featured": 9,
+        "added": "2026-11-01",
+        "addedAt": "2026-11-01T07:04:09.920Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 문서의 빠른 시작 가이드를 참고하여 데이터베이스 패키지를 다운로드하거나 컨테이너로 실행합니다.",
+          "데이터베이스 클러스터를 초기화합니다.",
+          "Standard PostgreSQL 드라이버 및 툴을 통해 데이터베이스에 접속하여 쿼리를 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 10644,
+        "forks": 1478,
+        "starsUpdatedAt": "2026-11-01"
+      }
+    },
+    {
+      "id": "sealed-secrets",
+      "name": "Sealed Secrets",
+      "github": "https://github.com/bitnami/sealed-secrets",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16"
+    },
+    {
+      "id": "external-dns",
+      "name": "ExternalDNS",
+      "github": "https://github.com/kubernetes-sigs/external-dns",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16"
+    },
+    {
+      "id": "patroni",
+      "name": "Patroni",
+      "github": "https://github.com/patroni/patroni",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16"
+    },
+    {
+      "id": "longhorn",
+      "name": "Longhorn",
+      "github": "https://github.com/longhorn/longhorn",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16"
+    },
+    {
+      "id": "laf",
+      "name": "Laf",
+      "github": "https://github.com/labring/laf",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-01T07:06:13.175Z",
+      "sourceRun": "2026-11-01T16"
     },
     {
       "id": "bullet3",
@@ -321,84 +1260,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-01T06:06:30.742Z"
-    },
-    {
-      "id": "get-jobs",
-      "name": "Get Jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T06:06:17.753Z",
-      "sourceRun": "2026-11-01T15",
-      "tool": {
-        "id": "get-jobs",
-        "name": "Get Jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "구직 플랫폼 이력서 자동 제출 및 구직 보조 AI 스크립트",
-        "longDescription": "Spring Boot와 Next.js 기반으로 제작되어 여러 구직 플랫폼의 반복적인 지원 업무를 자동화합니다. 이력서 관리 및 맞춤형 채용 공고 분석 기능을 제공합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "구직자동화",
-          "AI에이전트",
-          "이력서"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T06:04:15.135Z",
-        "requirements": [
-          "Java",
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소 코드를 클론하고 필요한 설정 파일을 작성합니다.",
-          "구직 플랫폼 계정 정보와 이력서 데이터를 입력합니다.",
-          "자동 지원 스크립트를 실행하여 채용 공고 접수를 진행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9431,
-        "forks": 1079,
-        "starsUpdatedAt": "2026-11-01"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-01T06:06:19.571Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-01T06:06:25.043Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-01T06:06:32.774Z"
     },
     {
       "id": "openmower",
@@ -10250,84 +11111,6 @@
       "recheckedAt": "2026-10-31T18:06:29.743Z"
     },
     {
-      "id": "novu",
-      "name": "novu",
-      "github": "https://github.com/novuhq/novu",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-31T18:06:20.017Z",
-      "sourceRun": "2026-11-01T03",
-      "tool": {
-        "id": "novu",
-        "name": "novu",
-        "github": "https://github.com/novuhq/novu",
-        "description": "애플리케이션과 AI 에이전트를 위한 통합 오픈소스 커뮤니케이션 및 알림 인프라",
-        "longDescription": "Novu는 이메일, SMS, Slack 등 다양한 채널을 단일 API와 통합 대화 모델로 연결해 주는 오픈소스 인프라입니다. 제품과 에이전트 전반의 알림 및 메시징 처리를 간소화합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "알림",
-          "API",
-          "인프라"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://go.novu.co/github",
-        "featured": 9,
-        "added": "2026-10-31",
-        "addedAt": "2026-10-31T18:04:13.593Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Novu 무료 계정을 생성합니다.",
-          "대시보드 지침에 따라 API 키를 발급받습니다.",
-          "프로젝트에 SDK를 연동하여 메시지를 전송합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 40244,
-        "forks": 4524,
-        "starsUpdatedAt": "2026-10-31"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-31T18:06:21.061Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-31T18:06:24.832Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-31T18:06:30.428Z"
-    },
-    {
       "id": "mattermost",
       "name": "mattermost",
       "github": "https://github.com/mattermost/mattermost",
@@ -12044,67 +12827,6 @@
         "usageNote": "자체 호스팅 시 보안을 위해 Sqlite 디렉토리 접근을 차단해야 합니다.",
         "stars": 12867,
         "forks": 2213,
-        "starsUpdatedAt": "2026-10-31"
-      }
-    },
-    {
-      "id": "tyk",
-      "name": "Tyk API Gateway",
-      "github": "https://github.com/TykTechnologies/tyk",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-31T16:06:25.636Z",
-      "sourceRun": "2026-11-01T01",
-      "tool": {
-        "id": "tyk",
-        "name": "Tyk API Gateway",
-        "github": "https://github.com/TykTechnologies/tyk",
-        "description": "REST, GraphQL, gRPC 및 MCP를 지원하는 오픈소스 API 및 AI 게이트웨이입니다.",
-        "longDescription": "Tyk는 API 트래픽 관리, 보안, 인증, 레이트 리미팅을 처리할 수 있는 클라우드 네이티브 API 게이트웨이로, 최신 AI 모델 및 LLM 라우팅을 위한 게이트웨이 기능도 함께 제공합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "API 게이트웨이",
-          "AI 게이트웨이",
-          "Go",
-          "Kubernetes",
-          "GraphQL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://tyk.io/docs/getting-started/quick-start",
-        "featured": 9,
-        "added": "2026-10-31",
-        "addedAt": "2026-10-31T16:04:15.658Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 설치",
-            "command": "docker run -d --name tyk-gateway ...",
-            "note": "도커를 이용해 Tyk 게이트웨이를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 또는 Helm을 이용해 Tyk 환경을 구성합니다.",
-          "API 엔드포인트 및 라우팅 규칙을 정의합니다.",
-          "대시보드를 통해 API 트래픽을 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "상세한 퀵스타트 가이드는 공식 문서를 참고하세요.",
-        "stars": 10871,
-        "forks": 1169,
         "starsUpdatedAt": "2026-10-31"
       }
     },
@@ -14723,73 +15445,6 @@
         "starsUpdatedAt": "2026-10-31"
       },
       "licenseEvidenceCheckedAt": "2026-10-31T12:06:43.554Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "kubesphere",
-      "name": "KubeSphere",
-      "github": "https://github.com/kubesphere/kubesphere",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-31T12:06:40.508Z",
-      "sourceRun": "2026-10-31T21",
-      "tool": {
-        "id": "kubesphere",
-        "name": "KubeSphere",
-        "github": "https://github.com/kubesphere/kubesphere",
-        "description": "쿠버네티스 멀티클라우드 및 엣지 관리를 위해 설계된 분산형 컨테이너 플랫폼입니다.",
-        "longDescription": "쿠버네티스를 커널로 사용하여 플러그앤플레이 아키텍처를 제공하는 클라우드 네이티브 운영 체제입니다. 웹 기반 사용자 인터페이스와 GitOps 기반 CI/CD 워크플로우를 지원합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Kubernetes",
-          "컨테이너",
-          "DevOps",
-          "클라우드",
-          "웹 UI"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kubesphere.io",
-        "featured": 9,
-        "added": "2026-10-31",
-        "addedAt": "2026-10-31T12:04:13.179Z",
-        "requirements": [
-          "Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "기존 쿠버네티스 클러스터를 준비합니다.",
-          "KubeSphere 설치러를 다운로드합니다.",
-          "설정 파일을 수정하여 클러스터에 배포합니다.",
-          "웹 UI에 접속하여 클러스터를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 17073,
-        "forks": 2755,
-        "starsUpdatedAt": "2026-10-31"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-31T12:06:43.750Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -21185,88 +21840,6 @@
       "recheckedAt": "2026-10-31T02:06:26.900Z"
     },
     {
-      "id": "docker-android",
-      "name": "Docker Android",
-      "github": "https://github.com/budtmo/docker-android",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-31T02:06:17.037Z",
-      "sourceRun": "2026-10-31T11",
-      "tool": {
-        "id": "docker-android",
-        "name": "Docker Android",
-        "github": "https://github.com/budtmo/docker-android",
-        "description": "noVNC, 비디오 녹화, MCP 서버 및 AI 에이전트를 지원하는 도커 기반 안드로이드 에뮬레이터 솔루션입니다.",
-        "longDescription": "Docker Android는 도커 컨테이너 내부에서 안드로이드 에뮬레이터를 실행할 수 있게 해주며, 웹 브라우저를 통한 제어, 자동화 테스트 및 AI 에이전트 연동 기능을 제공합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Docker",
-          "Android",
-          "에뮬레이터",
-          "Python",
-          "AI 에이전트"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/budtmo/docker-android",
-        "featured": 9,
-        "added": "2026-10-31",
-        "addedAt": "2026-10-31T02:04:07.614Z",
-        "requirements": [
-          "Docker",
-          "가상화 지원 CPU"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "도커 이미지 실행",
-            "command": "docker run -d -p 6080:6080 budtmo/docker-android:nexus_5_v11.0",
-            "note": "넥서스 5 안드로이드 11 에뮬레이터 컨테이너를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "호스트 시스템에 Docker를 설치하고 가상화 기능을 활성화합니다.",
-          "안드로이드 도커 이미지를 실행합니다.",
-          "브라우저에서 noVNC 포트로 접속하여 에뮬레이터를 제어합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "macOS 및 Windows 호스트의 경우 가상화를 지원하는 리눅스 가상 머신 환경이 필요합니다.",
-        "stars": 16071,
-        "forks": 1783,
-        "starsUpdatedAt": "2026-10-31"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-31T02:06:19.017Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-31T02:06:22.892Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "cc-haha",
       "name": "cc-haha",
       "github": "https://github.com/NanmiCoder/cc-haha",
@@ -27092,88 +27665,6 @@
       "recheckedAt": "2026-10-30T17:07:05.432Z"
     },
     {
-      "id": "portainer",
-      "name": "Portainer",
-      "github": "https://github.com/portainer/portainer",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-10-30T17:06:54.107Z",
-      "sourceRun": "2026-10-31T02",
-      "tool": {
-        "id": "portainer",
-        "name": "Portainer",
-        "github": "https://github.com/portainer/portainer",
-        "description": "도커와 쿠버네티스 등 컨테이너 환경을 관리하는 가벼운 웹 UI",
-        "longDescription": "컨테이너 환경을 시각적으로 관리할 수 있는 오픈소스 웹 기반 UI를 제공합니다. 홈랩 운영자부터 기업 환경까지 컨테이너 배포 및 모니터링을 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Docker",
-          "Kubernetes",
-          "컨테이너"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://www.portainer.io",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T17:04:15.037Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Portainer CE 실행",
-            "command": "docker volume create portainer_data && docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest",
-            "note": "도커 환경에서 포테이너 에디션 실행"
-          }
-        ],
-        "usageSteps": [
-          "호스트 시스템에서 Docker를 실행합니다.",
-          "설치 명령어를 통해 Portainer 컨테이너를 구동합니다.",
-          "웹 브라우저로 접속하여 관리자 계정을 설정하고 컨테이너를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 38751,
-        "forks": 2929,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T17:06:55.204Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T17:06:59.123Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T17:07:06.090Z"
-    },
-    {
       "id": "chatwoot",
       "name": "Chatwoot",
       "github": "https://github.com/chatwoot/chatwoot",
@@ -27248,229 +27739,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-10-30T17:07:06.966Z"
-    },
-    {
-      "id": "consul",
-      "name": "Consul",
-      "github": "https://github.com/hashicorp/consul",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T17:06:54.107Z",
-      "sourceRun": "2026-10-31T02",
-      "tool": {
-        "id": "consul",
-        "name": "Consul",
-        "github": "https://github.com/hashicorp/consul",
-        "description": "분산 인프라 전반에서 애플리케이션을 연결하고 구성하기 위한 분산 서비스 디스커버리 및 서비스 Mesh 솔루션입니다.",
-        "longDescription": "동적 인프라 환경에서 고가용성을 제공하며, 서비스 검색, 구성 및 API 게이트웨이 기능을 수행하는 분산 데이터센터 인식 솔루션입니다.",
-        "category": "네트워크",
-        "tags": [
-          "서비스 디스커버리",
-          "서비스 Mesh",
-          "분산 시스템"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.consul.io",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T17:04:15.037Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 문서의 가이드를 따라 바이너리 또는 쿠버네티스 환경에 설치합니다.",
-          "서비스 등록 및 구성을 위한 설정을 적용합니다.",
-          "분산 환경 간 통신 및 상태를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 30097,
-        "forks": 4633,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T17:06:55.694Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T17:07:00.092Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T17:07:07.752Z"
-    },
-    {
-      "id": "authentik",
-      "name": "Authentik",
-      "github": "https://github.com/goauthentik/authentik",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T17:06:54.107Z",
-      "sourceRun": "2026-10-31T02",
-      "tool": {
-        "id": "authentik",
-        "name": "Authentik",
-        "github": "https://github.com/goauthentik/authentik",
-        "description": "대규모 환경을 위한 오픈소스 통합 인증 및 권한 관리 솔루션입니다.",
-        "longDescription": "Okta, Auth0 등의 상용 IdP를 대체하기 위한 유연한 오픈소스 인증 플랫폼으로, 쿠버네티스 및 도커 환경에서 쉽게 연동할 수 있습니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "SSO",
-          "인증",
-          "보안"
-        ],
-        "platforms": [
-          "Web",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://goauthentik.io",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T17:04:15.037Z",
-        "requirements": [
-          "Docker Compose 또는 Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker Compose 또는 Helm을 사용하여 Authentik을 배포합니다.",
-          "관리자 패널에서 애플리케이션 및 인증 제공자(OIDC/SAML)를 설정합니다.",
-          "사용자 및 그룹 권한을 구성하여 로그인 연동을 완료합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 26178,
-        "forks": 2097,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T17:06:55.931Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T17:07:00.584Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-30T17:07:08.693Z"
-    },
-    {
-      "id": "sealos",
-      "name": "Sealos",
-      "github": "https://github.com/labring/sealos",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T17:06:54.107Z",
-      "sourceRun": "2026-10-31T02",
-      "tool": {
-        "id": "sealos",
-        "name": "Sealos",
-        "github": "https://github.com/labring/sealos",
-        "description": "쿠버네티스 기반으로 애플리케이션 수명주기를 통합 관리하는 AI 네이티브 클라우드 운영 체제입니다.",
-        "longDescription": "개발부터 프로덕션 배포, 데이터베이스 관리까지 원스톱으로 지원하며, 클라우드 환경에서 확장성 있는 분산 아키텍처를 구축할 수 있습니다.",
-        "category": "개발 운영",
-        "tags": [
-          "Kubernetes",
-          "클라우드",
-          "컨테이너",
-          "DevOps"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://sealos.io",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T17:04:15.037Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 웹사이트 및 가이드를 참고하여 클러스터 환경을 준비합니다.",
-          "Sealos CLI를 통해 애플리케이션 또는 데이터베이스를 배포합니다.",
-          "클라우드 운영 체제 인터페이스를 통해 리소스를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 18386,
-        "forks": 2482,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T17:06:56.162Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-30T17:07:01.279Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "winapps",
@@ -27548,80 +27816,6 @@
       }
     },
     {
-      "id": "kuboard-press",
-      "name": "Kuboard",
-      "github": "https://github.com/eip-work/kuboard-press",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T17:06:54.107Z",
-      "sourceRun": "2026-10-31T02",
-      "tool": {
-        "id": "kuboard-press",
-        "name": "Kuboard",
-        "github": "https://github.com/eip-work/kuboard-press",
-        "description": "쿠버네티스를 위한 직관적이고 강력한 다중 클러스터 컨테이너 관리 플랫폼입니다.",
-        "longDescription": "쿠버네티스 클러스터의 시각적 관리와 마이크로서비스 운영을 지원하는 오픈소스 관리 플랫폼입니다. 웹 기반 인터페이스를 통해 워크로드, 스토리지, 네트워크 등을 쉽게 제어할 수 있습니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "Kubernetes",
-          "Docker",
-          "VitePress",
-          "컨테이너관리",
-          "마이크로서비스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kuboard.cn/",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T17:04:15.037Z",
-        "requirements": [
-          "Node.js",
-          "pnpm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "의존성 설치 및 개발 서버 실행",
-            "command": "pnpm install && pnpm docs:dev",
-            "note": "로컬 문서 사이트 실행 명령어"
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 패키지를 설치합니다.",
-          "pnpm docs:dev 명령어로 로컬 개발 서버를 실행합니다.",
-          "웹 브라우저에서 문서 및 관리 인터페이스를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 25277,
-        "forks": 1594,
-        "starsUpdatedAt": "2026-10-30"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-30T17:06:57.426Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
       "id": "caprover",
       "name": "CapRover",
       "github": "https://github.com/caprover/caprover",
@@ -27693,72 +27887,6 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ]
-    },
-    {
-      "id": "redpanda",
-      "name": "Redpanda",
-      "github": "https://github.com/redpanda-data/redpanda",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T17:06:54.107Z",
-      "sourceRun": "2026-10-31T02",
-      "tool": {
-        "id": "redpanda",
-        "name": "Redpanda",
-        "github": "https://github.com/redpanda-data/redpanda",
-        "description": "아파치 카프카와 완벽 호환되며 ZooKeeper와 JVM이 필요 없는 고성능 스트리밍 데이터 플랫폼입니다.",
-        "longDescription": "C++ 기반으로 개발되어 기존 카프카 대비 압도적인 성능과 낮은 지연 시간을 자랑하는 스트리밍 데이터 플랫폼입니다. 운영이 단순하며 실시간 데이터 파이프라인 구축에 적합합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "Kafka",
-          "C++",
-          "스트리밍",
-          "데이터플랫폼",
-          "API호환"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://redpanda.com",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T17:04:15.037Z",
-        "requirements": [
-          "Docker (macOS)",
-          "curl"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "macOS 설치",
-            "command": "brew install redpanda-data/tap/redpanda && rpk container start",
-            "note": "Homebrew를 통한 설치 및 로컬 컨테이너 시작"
-          },
-          {
-            "title": "Debian/Ubuntu 설치",
-            "command": "curl -1sLf 'https://linux.pkg.redpanda.com/setup-redpanda.deb.sh' | sudo -E bash && sudo apt-get install redpanda",
-            "note": "패키지 저장소 등록 후 설치"
-          }
-        ],
-        "usageSteps": [
-          "운영체제에 맞는 설치 명령어를 실행합니다.",
-          "rpk CLI를 사용하여 스트리밍 클러스터와 토픽을 관리합니다.",
-          "Kafka 호환 API를 통해 데이터를 생산하고 소비합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 12649,
-        "forks": 799,
-        "starsUpdatedAt": "2026-10-30"
-      }
     },
     {
       "id": "orbstack",
@@ -27886,60 +28014,6 @@
       "reasons": [],
       "checkedAt": "2026-10-30T17:06:54.107Z",
       "sourceRun": "2026-10-31T02"
-    },
-    {
-      "id": "yugabyte-db",
-      "name": "YugabyteDB",
-      "github": "https://github.com/yugabyte/yugabyte-db",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-30T17:06:54.107Z",
-      "sourceRun": "2026-10-31T02",
-      "tool": {
-        "id": "yugabyte-db",
-        "name": "YugabyteDB",
-        "github": "https://github.com/yugabyte/yugabyte-db",
-        "description": "미션 크리티컬 애플리케이션을 위한 클라우드 네이티브 분산 SQL 데이터베이스입니다.",
-        "longDescription": "PostgreSQL과 호환되면서도 고가용성과 수평적 확장을 지원하는 분산 SQL 데이터베이스입니다. 멀티 클라우드 환경에서 트랜잭션 일관성과 뛰어난 성능을 보장합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "SQL",
-          "분산데이터베이스",
-          "PostgreSQL",
-          "클라우드네이티브",
-          "고가용성"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.yugabyte.com",
-        "featured": 9,
-        "added": "2026-10-30",
-        "addedAt": "2026-10-30T17:04:15.037Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "도커 또는 쿠버네티스 환경에 데이터베이스 노드를 배포합니다.",
-          "PostgreSQL 호환 클라이언트를 사용하여 데이터베이스에 연결합니다.",
-          "분산 SQL 쿼리를 실행하여 데이터를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 10638,
-        "forks": 1456,
-        "starsUpdatedAt": "2026-10-30"
-      }
     },
     {
       "id": "data-engineering-zoomcamp",
@@ -105586,138 +105660,6 @@
       "reasons": [],
       "checkedAt": "2026-10-14T22:06:22.259Z",
       "sourceRun": "2026-10-15T07"
-    },
-    {
-      "id": "nickel",
-      "name": "Nickel",
-      "github": "https://github.com/nickel-lang/nickel",
-      "license": "MIT",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T22:06:22.259Z",
-      "sourceRun": "2026-10-15T07"
-    },
-    {
-      "id": "cloudpods",
-      "name": "Cloudpods",
-      "github": "https://github.com/yunionio/cloudpods",
-      "license": "Apache-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T22:06:22.259Z",
-      "sourceRun": "2026-10-15T07"
-    },
-    {
-      "id": "vigil",
-      "name": "Vigil",
-      "github": "https://github.com/valeriansaliou/vigil",
-      "license": "MPL-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T22:06:22.259Z",
-      "sourceRun": "2026-10-15T07"
-    },
-    {
-      "id": "agent",
-      "name": "Stakpak Agent",
-      "github": "https://github.com/stakpak/agent",
-      "license": "Apache-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T22:06:22.259Z",
-      "sourceRun": "2026-10-15T07"
-    },
-    {
-      "id": "rackpeek",
-      "name": "RackPeek",
-      "github": "https://github.com/Timmoth/RackPeek",
-      "license": "AGPL-3.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-14T22:06:22.259Z",
-      "sourceRun": "2026-10-15T07"
-    },
-    {
-      "id": "kryvora-node",
-      "name": "Kryvora Node",
-      "github": "https://github.com/kryvora-network/kryvora-node",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-10-14T22:06:22.259Z",
-      "sourceRun": "2026-10-15T07",
-      "tool": {
-        "id": "kryvora-node",
-        "name": "Kryvora Node",
-        "github": "https://github.com/kryvora-network/kryvora-node",
-        "description": "Kryvora 네트워크 노드용 참조 클라이언트 데몬 및 검증 워커",
-        "longDescription": "탈중앙화 인프라 네트워크에서 원격 텔레메트리 프로브를 수행하고 노드 검증 작업을 처리하는 Go 기반의 데몬 프로그램입니다. DePIN 인프라 구축을 위한 분산 시스템 기능을 제공합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "DePIN",
-          "분산시스템",
-          "Go"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/kryvora-network/kryvora-node",
-        "featured": 9,
-        "added": "2026-10-14",
-        "addedAt": "2026-10-14T22:03:59.773Z",
-        "requirements": [
-          "Go = 1.22",
-          "systemd"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "자동 설치 스크립트",
-            "command": "curl -sSL https://raw.githubusercontent.com/kryvora-network/kryvora-node/main/install.sh | bash",
-            "note": "바이너리를 다운로드하고 systemd 서비스를 등록합니다."
-          }
-        ],
-        "usageSteps": [
-          "설치 스크립트를 실행하여 노드 바이너리를 내려받습니다.",
-          "프롬프트가 나타나면 제네시스 노드 키 토큰을 입력합니다.",
-          "systemctl status kryvora-node 명령어로 노드 데몬의 실행 상태를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1369,
-        "forks": 72,
-        "starsUpdatedAt": "2026-10-14"
-      },
-      "licenseEvidenceCheckedAt": "2026-10-14T22:06:23.429Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-10-14T22:06:26.285Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-10-14T22:06:29.656Z"
     }
   ]
 }
