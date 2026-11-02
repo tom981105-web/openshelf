@@ -1,5 +1,192 @@
 [
   {
+    "id": "lazyrsync",
+    "name": "lazyrsync",
+    "github": "https://github.com/westpoint-io/lazyrsync",
+    "description": "Rust로 작성된 rsync용 터미널 사용자 인터페이스(TUI) 도구입니다.",
+    "longDescription": "rsync 명령어를 직관적인 TUI 환경에서 사용할 수 있도록 돕습니다. 재사용 가능한 프로필 관리, 정직한 dry-run diff 미리보기, 실시간 전송 진행 상황 표시 등을 SSH 연결 환경에서도 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "rsync",
+      "Rust",
+      "터미널",
+      "파일 동기화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://lazyrsync.westpoint.io/",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T14:04:17.435Z",
+    "requirements": [
+      "rsync"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Crates.io 설치",
+        "command": "cargo install lazyrsync",
+        "note": "Cargo를 사용하여 도구를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "cargo 명령어로 lazyrsync를 설치하거나 바이너리를 다운로드합니다.",
+      "터미널에서 `lazyrsync`를 실행합니다.",
+      "동기화할 소스와 대상 경로를 설정하여 프로필을 만듭니다.",
+      "dry-run으로 변경 사항을 미리 확인한 후 전송을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 984,
+    "forks": 25,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "xgp-save-extractor",
+    "name": "XGP-save-extractor",
+    "github": "https://github.com/Z1ni/XGP-save-extractor",
+    "description": "Xbox Game Pass for PC 게임의 세이브 파일을 추출하고 백업하는 Python 스크립트입니다.",
+    "longDescription": "시스템에 설치된 지원 대상 Xbox Game Pass 게임의 저장 데이터를 감지하여 ZIP 파일로 묶어줍니다. 추출된 파일은 대다수 Steam 또는 Epic Games 버전 게임의 세이브 경로로 옮겨 호환해서 사용할 수 있습니다.",
+    "category": "개인 도구",
+    "tags": [
+      "게임",
+      "백업",
+      "Xbox",
+      "Python",
+      "유틸리티"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Z1ni/XGP-save-extractor",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T14:04:17.435Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소에서 최신 파이썬 스크립트나 실행파일을 준비합니다.",
+      "스크립트를 실행하여 시스템에 설치된 지원 게임을 스캔합니다.",
+      "생성된 ZIP 형식의 세이브 파일 백업을 확인합니다.",
+      "필요시 타 플랫폼 게임 디렉토리에 세이브 파일을 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "일부 백신 프로그램에서 PyInstaller로 빌드된 실행 파일을 오인 탐지할 수 있습니다.",
+    "stars": 991,
+    "forks": 92,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "urbackup-backend",
+    "name": "UrBackup",
+    "github": "https://github.com/uroni/urbackup_backend",
+    "description": "Windows, macOS, Linux 환경을 지원하는 빠르고 간편한 오픈소스 네트워크 백업 클라이언트/서버 시스템입니다.",
+    "longDescription": "이미지 및 파일 기반의 백업을 동시에 지원하며, 백업 진행 상황을 웹 인터페이스를 통해 실시간으로 모니터링하고 복원할 수 있습니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "네트워크",
+      "백업",
+      "C++",
+      "클라이언트",
+      "서버"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "http://www.urbackup.org",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T14:04:17.435Z",
+    "requirements": [
+      "C++ 컴파일러",
+      "Autotools"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드",
+        "command": "autoreconf --install && ./configure && make -j8",
+        "note": "소스 코드를 설정하고 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버 또는 클라이언트 소스코드를 클론합니다.",
+      "빌드 명령어를 실행하여 바이너리를 컴파일합니다.",
+      "서비스를 시작하고 백업 대상 클라이언트를 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 942,
+    "forks": 178,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "wikiteam",
+    "name": "WikiTeam",
+    "github": "https://github.com/WikiTeam/wikiteam",
+    "description": "위키백과를 비롯한 다양한 MediaWiki 기반 위키 데이터를 다운로드하고 보존하기 위한 오픈소스 도구 모음입니다.",
+    "longDescription": "사라질 위기의 인터넷 위키 사이트들을 백업하여 디지털 문화유산으로 보존할 수 있도록 XML 덤프 및 미디어 파일 다운로드 기능을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "위키",
+      "아카이브",
+      "Python",
+      "MediaWiki",
+      "백업"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/WikiTeam",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T14:04:17.435Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "pip install --upgrade -r requirements.txt",
+        "note": "필수 파이썬 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 요구되는 파이썬 패키지를 설치합니다.",
+      "백업하고자 하는 위키의 URL을 확인합니다.",
+      "dumpgenerator.py 스크립트를 실행하여 위키 데이터를 다운로드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 875,
+    "forks": 177,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
     "id": "turtlebot3",
     "name": "TurtleBot3",
     "github": "https://github.com/ROBOTIS-GIT/turtlebot3",
