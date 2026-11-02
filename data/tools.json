@@ -1,5 +1,398 @@
 [
   {
+    "id": "gito",
+    "name": "Gito",
+    "github": "https://github.com/Nayjest/Gito",
+    "description": "대형 언어 모델을 활용하여 GitHub 풀 리퀘스트 및 코드 변경 사항의 보안 취약점과 버그를 자동으로 검토하는 오픈소스 AI 코드 리뷰어입니다.",
+    "longDescription": "벤더 종속성 없이 모든 LLM 제공자와 연동할 수 있으며, 코드 변경 시 고신뢰도의 유지보수성 문제와 버그를 몇 초 안에 탐지합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 코드 리뷰",
+      "GitHub Actions",
+      "정적 분석",
+      "보안 감사",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://gito.bot/",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T03:04:12.566Z",
+    "requirements": [
+      "Python 3.7+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP로 설치",
+        "command": "pip install gito.bot",
+        "note": "파이썬 패키지 관리자를 통해 Gito를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 Gito를 설치합니다.",
+      "환경 변수에 LLM API 키를 설정합니다.",
+      "GitHub Actions 워크플로우에 통합하거나 로컬에서 코드 분석을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "사용할 AI 모델의 API 키가 필요합니다.",
+    "stars": 459,
+    "forks": 45,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "codecompass",
+    "name": "CodeCompass",
+    "github": "https://github.com/Ericsson/CodeCompass",
+    "description": "대규모 C/C++, C#, Python 소스 코드를 웹 기반 UI로 시각화하고 심층 분석할 수 있는 코드 이해 도구입니다.",
+    "longDescription": "대용량 코드베이스를 빠르게 탐색하고, 호출 관계, 상속 구조, 함수 의존성 등을 웹 인터페이스를 통해 직관적으로 파악할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "코드 분석",
+      "C++",
+      "정적 분석",
+      "웹 UI",
+      "시각화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://codecompass.net",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T03:04:12.566Z",
+    "requirements": [
+      "C++ 컴파일러",
+      "Thrift"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "소스 코드를 클론하고 빌드 가이드에 따라 프로젝트를 컴파일합니다.",
+      "분석할 소스 코드베이스를 지정하여 CodeCompass 데이터베이스를 생성합니다.",
+      "웹 서버를 실행하고 브라우저로 접속하여 소스 코드 구조를 탐색합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 614,
+    "forks": 114,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "vet",
+    "name": "Vet",
+    "github": "https://github.com/imbue-ai/vet",
+    "description": "코드 변경 사항과 AI 에이전트의 작업 의도를 검증하는 독립형 코드 리뷰 도구입니다.",
+    "longDescription": "에이전트의 대화 내용이 목표에 부합하는지, 실제 코드 변경이 올바르게 이루어졌는지 검증하며 터미널, CI 또는 에이전트 스킬로 활용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 코드 리뷰",
+      "코드 품질",
+      "에이전트 스킬",
+      "CLI",
+      "보안"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/imbue-ai/vet",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T03:04:12.566Z",
+    "requirements": [
+      "Git",
+      "LLM API 키"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "OpenCode",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "설치 및 로그인",
+        "command": "npm install -g vet",
+        "note": "글로벌 패키지로 Vet을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 Vet을 초기화하거나 에이전트 스킬로 등록합니다.",
+      "코드 변경 사항이나 에이전트 세션을 대상으로 검증 명령을 실행합니다.",
+      "리포트를 통해 에이전트의 목표 달성 여부와 코드 정확성을 확인합니다."
+    ],
+    "examplePrompt": "현재 변경된 코드와 에이전트의 작업 의도가 올바르게 일치하는지 검증해줘.",
+    "usageNote": "",
+    "stars": 514,
+    "forks": 20,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "simplify-codebase",
+    "name": "simplify-codebase",
+    "github": "https://github.com/tt-a1i/simplify-codebase",
+    "description": "코드베이스의 우발적 복잡성을 증명하고 안전하게 제거하기 위한 AI 에이전트 스킬입니다.",
+    "longDescription": "단순히 코드를 지우는 것에 그치지 않고 런타임 소비자, 동적 등록, 공유 자원 등을 추적하여 팀이 지속적으로 관리해야 할 부담을 줄여주는 리팩토링 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "리팩토링",
+      "코드 품질",
+      "에이전트 스킬",
+      "복잡성 관리"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/tt-a1i/simplify-codebase",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T03:04:12.566Z",
+    "requirements": [
+      "Git",
+      "Codex 또는 호환되는 AI 에이전트"
+    ],
+    "supportedAgents": [
+      "Codex",
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "수동 설치",
+        "command": "git clone https://github.com/tt-a1i/simplify-codebase.git ~/.codex/skills/simplify-codebase",
+        "note": "Codex 스킬 디렉토리에 레포지토리를 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "에이전트 환경에 simplify-codebase 스킬을 설치합니다.",
+      "새로운 작업 세션을 시작하여 코드베이스의 불필요한 복잡성 분석을 요청합니다.",
+      "제안된 맵과 리팩토링 지침에 따라 안전하게 코드를 정리합니다."
+    ],
+    "examplePrompt": "코드베이스에서 사용되지 않거나 중복된 복잡성을 찾아 안전하게 제거해줘.",
+    "usageNote": "",
+    "stars": 510,
+    "forks": 26,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "mancode",
+    "name": "mancode",
+    "github": "https://github.com/whitelonng/mancode",
+    "description": "AI 코딩 에이전트의 과도한 설계를 막고 깔끔한 작업 수행을 돕는 로컬 우선 워크플로우调度 프레임워크입니다.",
+    "longDescription": "Solo 모드부터 다중 에이전트 협업 및 季后赛(플레이오프) 수준의 엄격한 검토 모드까지 제공하여, AI가 불필요한 코드를 생성하지 않고 간결하게 코딩하도록 제어합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 코딩",
+      "에이전트 워크플로우",
+      "코드 리뷰",
+      "CLI",
+      "TypeScript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://whitelonng.github.io/mancode/",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T03:04:12.566Z",
+    "requirements": [
+      "Node.js",
+      "Git"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Cursor",
+      "GitHub Copilot",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "전역 설치",
+        "command": "npm install -g mancode",
+        "note": "npm을 통해 mancode를 전역에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리로 이동하여 초기화 명령을 실행합니다.",
+      "대화형 마법사를 통해 사용할 AI 플랫폼(Cursor, Claude Code 등)을 선택합니다.",
+      "원하는 작업 모드를 지정하여 AI 에이전트의 과도한 설계를 방지하고 구조화된 작업을 진행합니다."
+    ],
+    "examplePrompt": "mancode 초기화를 실행하고 현재 프로젝트에 맞는 엄격한 코딩 워크플로우를 설정해줘.",
+    "usageNote": "",
+    "stars": 360,
+    "forks": 20,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "nexpath",
+    "name": "Nexpath CLI",
+    "github": "https://github.com/hi0001234d/nexpath",
+    "description": "바이브 코딩 및 인디 해커를 위한 누락된 테스트와 안전성 검사를 보완하는 로컬 우선 AI 코딩 워크플로우 도구입니다.",
+    "longDescription": "Claude Code, Cursor, Windsurf, Replit 등 다양한 AI 코딩 환경에서 테스트 누락이나 보안 취약점을 점검하고 신속하게 안전한 배포를 준비할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 코딩",
+      "소프트웨어 테스트",
+      "코드 리뷰",
+      "개발자 생산성",
+      "CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/hi0001234d/nexpath",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T03:04:12.566Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Cursor",
+      "Windsurf"
+    ],
+    "install": [],
+    "usageSteps": [
+      "지원되는 IDE 확장 프로그램이나 CLI 도구를 설치합니다.",
+      "AI 코딩 작업 중 누락된 테스트나 보안 체크리스트를 점검합니다.",
+      "결과 리포트를 참고하여 프로덕션 배포 전 코드의 신뢰성을 확보합니다."
+    ],
+    "examplePrompt": "현재 작업 중인 코드에서 누락된 테스트 케이스와 보안 검사 항목을 확인해줘.",
+    "usageNote": "",
+    "stars": 360,
+    "forks": 20,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "perch",
+    "name": "Perch",
+    "github": "https://github.com/lakeday-org/perch",
+    "description": "소스 코드의 잠재적 결함과 보안 취약점을 빠르게 찾아내는 시맨틱 코드 및 보안 스캐너입니다.",
+    "longDescription": "Tree-sitter 기반의 정적 분석을 통해 코드의 의미를 파악하고, 로컬 및 클라우드 환경에서 풀 리퀘스트와 코드베이스의 문제를 감지합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "시맨틱 분석",
+      "보안 스캐너",
+      "정적 분석",
+      "코드 리뷰",
+      "CLI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://perchscan.com",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T03:04:12.566Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "전역 설치",
+        "command": "npm install -g @lakeday/perch",
+        "note": "npm을 통해 Perch CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "명령줄에서 계정에 로그인합니다 (perch login).",
+      "프로젝트 디렉토리에서 스캔 명령을 실행합니다 (perch scan).",
+      "출력된 결함 및 보안 문제 리포트를 확인하고 코드를 수정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 358,
+    "forks": 22,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "cyclomatic-complexity-skill",
+    "name": "Cyclomatic Complexity Skill",
+    "github": "https://github.com/saurabhkumar8112/cyclomatic-complexity-skill",
+    "description": "AI가 생성한 코드의 순환 복잡도를 측정한 후 리팩토링하여 유지보수성을 높여주는 Claude 에이전트 스킬입니다.",
+    "longDescription": "함수별 순환 복잡도를 분석하고 가드 클로즈, 함수 추출, 룩업 테이블 활용 등의 방식으로 복잡한 분기 구조를 개선하도록 Claude를 안내합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "순환 복잡도",
+      "리팩토링",
+      "에이전트 스킬",
+      "Claude",
+      "코드 품질"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/saurabhkumar8112/cyclomatic-complexity-skill",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T03:04:12.566Z",
+    "requirements": [
+      "Claude Code 또는 Claude.ai 계정"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Claude.ai"
+    ],
+    "install": [
+      {
+        "title": "Claude Code 플러그인 추가",
+        "command": "/plugin marketplace add saurabhkumar8112/cyclomatic-complexity-skill",
+        "note": "Claude Code 마켓플레이스에서 스킬을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Claude Code 또는 Claude 환경에 스킬을 설치합니다.",
+      "복잡도가 높은 코드 파일을 지정하여 리팩토링을 요청합니다.",
+      "리팩토링 전후의 복잡도 비교 표를 확인하고 변경 사항을 적용합니다."
+    ],
+    "examplePrompt": "이 파일의 순환 복잡도를 측정하고 가드 클로즈와 함수 분리를 통해 복잡도를 낮춰줘.",
+    "usageNote": "",
+    "stars": 408,
+    "forks": 10,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
     "id": "tsw",
     "name": "TSW",
     "github": "https://github.com/Tencent/TSW",
