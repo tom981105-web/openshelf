@@ -1,5 +1,331 @@
 [
   {
+    "id": "tsw",
+    "name": "TSW",
+    "github": "https://github.com/Tencent/TSW",
+    "description": "웹 개발자를 위한 0 침투 방식의 요청 분석 및 홀로그램 로그 수집 Node.js 인프라입니다.",
+    "longDescription": "Node.js 기반 웹 애플리케이션에서 요청을 캡처하고 상세한 홀로그램 로그를 제공하여 문제 해결 효율을 높여주는 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Node.js",
+      "모니터링",
+      "로깅",
+      "디버깅"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://tswjs.org/",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T02:04:17.308Z",
+    "requirements": [
+      "Node.js = 24"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install --save @tswjs/tsw",
+        "note": "프로젝트에 TSW 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치합니다.",
+      "프로젝트 루트에 설정 파일을 생성합니다.",
+      "애플리케이션 구동 시 설정을 로드하여 모니터링을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Node.js 24 이상 버전이 필요합니다.",
+    "stars": 1805,
+    "forks": 184,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "gigapipe",
+    "name": "Gigapipe",
+    "github": "https://github.com/metrico/gigapipe",
+    "description": "로그, 지표, 추적, 프로파일링을 모두 지원하는 가볍고 빠른 오픈소스 통합 관측성 웨어하우스입니다.",
+    "longDescription": "Grafana LGTMP 스택의 드롭인 대안으로 설계되어 ClickHouse 백엔드 기반으로 대규모 텔레메트리 데이터를 고성능으로 수집하고 분석할 수 있는 오픈소스 솔루션입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Grafana",
+      "ClickHouse",
+      "모니터링",
+      "로그",
+      "Go"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://gigapipe.com",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T02:04:17.308Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 환경을 준비합니다.",
+      "설정 파일을 바탕으로 Gigapipe 컨테이너를 실행합니다.",
+      "OpenTelemetry 또는 호환 수집기를 통해 텔레메트리 데이터를 전송합니다.",
+      "Grafana 등과 연동하여 대시보드에서 데이터를 시각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1722,
+    "forks": 105,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "measure",
+    "name": "Measure",
+    "github": "https://github.com/measure-sh/measure",
+    "description": "모바일 앱의 크래시, ANR, 버그 및 성능 문제를 모니터링하고 분석하는 오픈소스 오류 추적 도구입니다.",
+    "longDescription": "Firebase Crashlytics의 오픈소스 대안으로 설계되었으며, 자동화된 화면 세션 리플레이와 터치, 내비게이션, HTTP 요청 추적 기능을 통해 모바일 앱의 근본 원인을 빠르게 파악할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "모바일",
+      "크래시리포트",
+      "모니터링",
+      "Android",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://measure.sh",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T02:04:17.308Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Measure 클라우드를 이용하거나 자체 서버에 Docker로 호스팅합니다.",
+      "모바일 프로젝트에 Measure SDK를 연동합니다.",
+      "앱을 빌드하여 배포하고 사용자 세션 데이터를 수집합니다.",
+      "웹 대시보드에서 크래시 리포트와 세션 리플레이를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1426,
+    "forks": 91,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "fastapi-observability",
+    "name": "fastapi-observability",
+    "github": "https://github.com/blueswen/fastapi-observability",
+    "description": "OpenTelemetry를 활용하여 Grafana에서 FastAPI 앱의 트레이스, 메트릭, 로그를 모니터링하는 예제입니다.",
+    "longDescription": "Tempo, Prometheus, Loki를 결합하여 FastAPI 애플리케이션의 관측성을 구축하고 Grafana로 시각화하는 방법을 제공하는 가이드 프로젝트입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "FastAPI",
+      "Grafana",
+      "OpenTelemetry",
+      "모니터링"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/blueswen/fastapi-observability",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T02:04:17.308Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Loki Docker 드라이버 설치",
+        "command": "docker plugin install grafana/loki-docker-driver:3.3.2-amd64 --alias loki --grant-all-permissions",
+        "note": "로그 수집을 위한 Docker 플러그인을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 드라이버를 설치합니다.",
+      "Docker Compose를 사용하여 모든 서비스를 실행합니다.",
+      "Grafana 대시보드에 접속하여 메트릭과 로그를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1125,
+    "forks": 144,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "pmm",
+    "name": "Percona Monitoring and Management",
+    "github": "https://github.com/percona/pmm",
+    "description": "MySQL, PostgreSQL, MongoDB, Redis 등의 데이터베이스를 위한 오픈소스 모니터링 및 쿼리 분석 도구입니다.",
+    "longDescription": "데이터베이스의 성능 저하 원인과 느린 쿼리를 실시간으로 분석하고 모니터링할 수 있는 셀프 호스팅 관리 플랫폼입니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "데이터베이스",
+      "모니터링",
+      "PostgreSQL",
+      "MySQL",
+      "MongoDB"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://www.percona.com/software/database-tools/percona-monitoring-and-management",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T02:04:17.308Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PMM 서버 시작",
+        "command": "curl -fsSL https://www.percona.com/get/pmm | /bin/bash",
+        "note": "Docker를 활용하여 PMM 서버를 설치하고 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 PMM 서버를 구동합니다.",
+      "웹 브라우저로 관리자 페이지에 접속합니다.",
+      "모니터링할 데이터베이스 호스트에 클라이언트 도구를 연결합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1123,
+    "forks": 238,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "k8spacket",
+    "name": "k8spacket",
+    "github": "https://github.com/k8spacket/k8spacket",
+    "description": "eBPF를 활용해 쿠버네티스 클러스터 내 TCP 트래픽 및 TLS 연결을 수집하고 Grafana로 시각화하는 도구입니다.",
+    "longDescription": "쿠버네티스 환경에서 패킷 스니핑 없이 eBPF 기술을 이용해 네트워킹 상태를 파악하고 노드 그래프 형태로 시각화합니다.",
+    "category": "네트워크",
+    "tags": [
+      "Kubernetes",
+      "eBPF",
+      "네트워크",
+      "모니터링",
+      "Grafana"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/k8spacket/k8spacket",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T02:04:17.308Z",
+    "requirements": [
+      "Helm",
+      "Kubernetes",
+      "Linux Kernel = 5.4"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm 차트 설치",
+        "command": "helm install k8spacket --namespace k8spacket k8spacket/k8spacket --create-namespace",
+        "note": "Helm을 통해 클러스터에 k8spacket을 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "Helm 레지스트리를 추가하고 업데이트합니다.",
+      "Helm을 이용해 k8spacket을 배포합니다.",
+      "Grafana에 관련 데이터소스 및 플러그인을 설정하여 트래픽을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "리눅스 커널 5.4 이상 버전과 BTF 활성화가 필요합니다.",
+    "stars": 1097,
+    "forks": 60,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
+    "id": "golf",
+    "name": "Golf",
+    "github": "https://github.com/golf-mcp/golf",
+    "description": "보안, 인증, 관측성이 포함된 프로덕션 급 MCP 서버 애플리케이션 구축용 Python 프레임워크입니다.",
+    "longDescription": "간단한 디렉토리 구조와 파이썬 파일을 통해 AI 에이전트가 사용하는 MCP(Model Context Protocol) 서버의 도구와 리소스를 쉽게 정의하고 확장할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "MCP",
+      "AI 에이전트",
+      "Python",
+      "프레임워크"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://golf.dev/",
+    "featured": 9,
+    "added": "2026-11-02",
+    "addedAt": "2026-11-02T02:04:17.308Z",
+    "requirements": [
+      "Python = 3.10",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Golf 설치",
+        "command": "pip install golf-mcp",
+        "note": "pip를 사용하여 Golf 프레임워크를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Golf 패키지를 설치합니다.",
+      "CLI를 이용해 새 프로젝트를 초기화합니다.",
+      "파이썬 파일로 에이전트 도구와 리소스를 작성하고 서버를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Python 3.10 이상 버전이 필요합니다.",
+    "stars": 841,
+    "forks": 75,
+    "starsUpdatedAt": "2026-11-02"
+  },
+  {
     "id": "proxlb",
     "name": "ProxLB",
     "github": "https://github.com/gyptazy/ProxLB",
