@@ -1,5 +1,191 @@
 [
   {
+    "id": "cerlab-uav-autonomy",
+    "name": "CERLAB-UAV-Autonomy",
+    "github": "https://github.com/Zhefan-Xu/CERLAB-UAV-Autonomy",
+    "description": "무인 항공기(UAV)의 자율 주행, 탐색 및 경로 계획을 위한 모듈형 C++/ROS 프레임워크입니다.",
+    "longDescription": "이 프레임워크는 드론 및 무인 항공기의 자율 비행을 위한 지도 작성, 상태 추정, 경로 계획, 제어 모듈을 통합 제공합니다. 시뮬레이션 및 실제 비행 환경을 모두 지원합니다.",
+    "category": "공간정보",
+    "tags": [
+      "C++",
+      "ROS",
+      "드론",
+      "경로 계획",
+      "로보틱스"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Zhefan-Xu/CERLAB-UAV-Autonomy",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T19:04:55.204Z",
+    "requirements": [
+      "Ubuntu 20.04",
+      "ROS Noetic",
+      "PX4"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "ROS Noetic 환경 및 의존성 패키지를 설치합니다.",
+      "작업 공간(Workspace)에 저장소를 클론하고 빌드합니다.",
+      "시뮬레이터 또는 PX4 연동 환경에서 자율 비행 데모를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 885,
+    "forks": 116,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "polygon-coverage-planning",
+    "name": "polygon_coverage_planning",
+    "github": "https://github.com/ethz-asl/polygon_coverage_planning",
+    "description": "구멍이 있는 일반 다각형 영역에서 최적의 커버리지 경로를 생성하는 C++ ROS 패키지입니다.",
+    "longDescription": "드론 항공 사진측량, 청소 로봇, 농업용 방제 등 다양한 분야에서 활용할 수 있도록 다각형 영역 내부를 빠짐없이 탐색하기 위한 최단 경로 및 커버리지 패턴을 계산합니다.",
+    "category": "공간정보",
+    "tags": [
+      "C++",
+      "ROS",
+      "경로 계획",
+      "로보틱스",
+      "드론"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/ethz-asl/polygon_coverage_planning",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T19:04:55.204Z",
+    "requirements": [
+      "Ubuntu 20.04",
+      "ROS Noetic",
+      "Mono"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "작업 공간 생성 및 클론",
+        "command": "cd ~ && mkdir -p catkin_ws/src && cd catkin_ws && catkin init",
+        "note": "캣킨 워크스페이스를 초기화합니다."
+      }
+    ],
+    "usageSteps": [
+      "ROS Noetic 및 의존성 라이브러리를 설치합니다.",
+      "캣킨 워크스페이스에 패키지를 클론하고 빌드합니다.",
+      "RVIZ 환경에서 커버리지 계획 알고리즘을 실행하고 결과를 시각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 670,
+    "forks": 168,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "kiss-slam",
+    "name": "kiss-slam",
+    "github": "https://github.com/PRBonn/kiss-slam",
+    "description": "복잡한 설정 없이 간편하게 동작하는 가볍고 정확한 3D 라이다 SLAM 시스템입니다.",
+    "longDescription": "KISS-SLAM은 3D 라이다 데이터를 활용하여 별도의 복잡한 파라미터 조정 없이도 강인하고 정확하게 위치 추정 및 지도 제작을 수행할 수 있는 파이프라인을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "라이다",
+      "SLAM",
+      "로보틱스",
+      "위치 추정"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.ipb.uni-bonn.de/wp-content/papercite-data/pdf/kiss2025iros.pdf",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T19:04:55.204Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PIP 설치",
+        "command": "pip install kiss-slam",
+        "note": "파이썬 패키지 관리자를 통해 KISS-SLAM을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "kiss_slam_pipeline --help 명령을 통해 사용법과 옵션을 확인합니다.",
+      "라이다 데이터셋을 입력하여 SLAM 파이프라인을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 549,
+    "forks": 67,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "iridescence",
+    "name": "iridescence",
+    "github": "https://github.com/koide3/iridescence",
+    "description": "3D 알고리즘 및 포인트 클라우드 연구 개발을 빠르게 프로토타이핑하기 위한 경량 시각화 라이브러리입니다.",
+    "longDescription": "C++ 및 Python을 지원하며, 로보틱스, SLAM, 포인트 클라우드 처리 연구에서 개인 프로젝트나 알고리즘의 빠른 시각화와 디버깅을 돕기 위해 제작된 OpenGL 기반 도구입니다.",
+    "category": "디자인·시각화",
+    "tags": [
+      "C++",
+      "Python",
+      "포인트 클라우드",
+      "OpenGL",
+      "시각화"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://koide3.github.io/iridescence/",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T19:04:55.204Z",
+    "requirements": [
+      "C++ 또는 Python 환경"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Ubuntu PPA 설치",
+        "command": "sudo add-apt-repository -y ppa:koide3/iridescence && sudo apt install libiridescence-dev",
+        "note": "Ubuntu 환경에서 PPA를 통해 C++ 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "PPA 또는 PyPI를 통해 라이브러리를 설치합니다.",
+      "C++ 또는 Python 코드에서 3D 뷰어 창을 생성합니다.",
+      "포인트 클라우드 및 기하학적 데이터를 전달하여 실시간으로 렌더링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 542,
+    "forks": 68,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
     "id": "image-actions",
     "name": "image-actions",
     "github": "https://github.com/calibreapp/image-actions",
