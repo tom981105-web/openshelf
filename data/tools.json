@@ -1,5 +1,88 @@
 [
   {
+    "id": "runc",
+    "name": "runc",
+    "github": "https://github.com/opencontainers/runc",
+    "description": "OCI 표준 규격에 따라 리눅스 시스템에서 컨테이너를 생성하고 실행하는 CLI 도구입니다.",
+    "longDescription": "Open Container Initiative(OCI) 컨테이너 사양을 구현한 저수준 런타임입니다. 도커 등 상위 컨테이너 엔진의 내부에서 직접 컨테이너 프로세스를 구동하는 핵심 역할을 담당합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "컨테이너",
+      "OCI",
+      "Docker",
+      "CLI",
+      "Linux"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.opencontainers.org/",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T12:04:19.255Z",
+    "requirements": [
+      "Go",
+      "Rust 1.63+ (libpathrs 빌드 시)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "소스코드를 클론하거나 패키지 관리자를 통해 빌드 환경을 준비합니다.",
+      "OCI 사양에 맞는 config.json 파일과 루트 파일시스템 디렉토리를 준비합니다.",
+      "runc run 명령어를 통해 컨테이너 인스턴스를 생성하고 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "주로 컨테이너 엔진 내부에서 사용되므로 직접 다룰 때는 OCI 규격 설정에 주의해야 합니다.",
+    "stars": 13526,
+    "forks": 2349,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "docker-openvpn",
+    "name": "docker-openvpn",
+    "github": "https://github.com/kylemanna/docker-openvpn",
+    "description": "EasyRSA PKI 인증서 관리 기능이 포함된 안전한 OpenVPN 서버를 도커 컨테이너로 손쉽게 구축합니다.",
+    "longDescription": "Docker 환경에서 OpenVPN 서버를 단 몇 줄의 명령어로 구축하고 운영할 수 있게 해주는 도구입니다. 내장된 EasyRSA를 통해 클라이언트 인증서 생성과 관리가 간편합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Docker",
+      "OpenVPN",
+      "VPN",
+      "Security",
+      "EasyRSA"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hub.docker.com/r/kylemanna/openvpn/",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T12:04:19.255Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "VPN 설정을 저장할 데이터 볼륨 디렉토리를 생성합니다.",
+      "환경 변수를 설정하고 OpenVPN 서버 컨테이너를 초기화합니다.",
+      "클라이언트 인증서를 생성하여 사용자의 기기에 설정 파일을 내보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "방화벽 환경에서 UDP 포트 1194 개방과 NET_ADMIN 권한 부여가 필요합니다.",
+    "stars": 9085,
+    "forks": 2408,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
     "id": "simpeg",
     "name": "SimPEG",
     "github": "https://github.com/simpeg/simpeg",
