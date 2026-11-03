@@ -1,5 +1,134 @@
 [
   {
+    "id": "macsubsystemforandroid",
+    "name": "MacSubsystemForAndroid",
+    "github": "https://github.com/harkhowalia-1/MacSubsystemForAndroid",
+    "description": "Apple Silicon Mac에서 Android 앱을 네이티브 앱처럼 개별 창으로 실행할 수 있는 도구입니다.",
+    "longDescription": "Apple의 Hypervisor 프레임워크와 QEMU, LineageOS 기반을 활용하여 Mac에서 Android 앱을 창별로 각각 실행할 수 있게 해줍니다. 알림, 복사/붙여넣기, 게임 패드 지원 등 macOS 환경에 통합된 사용자 경험을 제공합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "macOS",
+      "Android",
+      "Apple Silicon",
+      "가상화",
+      "에뮬레이터"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://harkhowalia-1.github.io/MacSubsystemForAndroid/",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T15:04:17.421Z",
+    "requirements": [
+      "Apple Silicon Mac"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스 페이지에서 프로그램을 다운로드하여 설치합니다.",
+      "실행하고자 하는 Android 앱의 APK 파일을 더블 클릭합니다.",
+      "독(Dock)에 생성된 아이콘을 통해 개별 창으로 실행된 앱을 이용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Google 앱이 포함되지 않은 LineageOS 기반으로 동작합니다.",
+    "stars": 533,
+    "forks": 25,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "virtnbdbackup",
+    "name": "virtnbdbackup",
+    "github": "https://github.com/abbbi/virtnbdbackup",
+    "description": "Libvirt 및 KVM 가상 머신을 위한 변경 블록 추적(CBT) 기반의 에이전트리스 백업 유틸리티입니다.",
+    "longDescription": "KVM/QEMU 기반 가상 머신의 온라인 상태에서 전체 백업뿐만 아니라 증분 및 차등 백업을 수행할 수 있게 해줍니다. 게스트 내부에 별도의 에이전트를 설치할 필요 없이 가상화 계층에서 효율적인 백업과 즉각적인 복구를 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "KVM",
+      "QEMU",
+      "Libvirt",
+      "백업",
+      "가상화"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "http://libvirtbackup.grinser.de/",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T15:04:17.421Z",
+    "requirements": [
+      "Python",
+      "Libvirt",
+      "QEMU"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "시스템 환경에 맞춰 Python 패키지 또는 배포판 패키지를 설치합니다.",
+      "백업 대상 가상 머신과 저장소 경로를 확인합니다.",
+      "명령어를 통해 전체 또는 증분 백업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 526,
+    "forks": 56,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "ubuntu-cloudinit-docs",
+    "name": "Ubuntu-CloudInit-Docs",
+    "github": "https://github.com/UntouchedWagons/Ubuntu-CloudInit-Docs",
+    "description": "CloudInit을 활용하여 Proxmox에서 Ubuntu VM 템플릿을 스크립트 기반으로 손쉽게 생성하는 가이드입니다.",
+    "longDescription": "Proxmox 환경에서 최신 Ubuntu 서버(LTS 버전 등)의 가상 머신 템플릿을 CloudInit을 이용해 자동화된 방식으로 빠르게 구성할 수 있도록 돕는 스크립트와 가이드를 제공합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Proxmox",
+      "Ubuntu",
+      "CloudInit",
+      "가상화",
+      "자동화"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/UntouchedWagons/Ubuntu-CloudInit-Docs",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T15:04:17.421Z",
+    "requirements": [
+      "Proxmox VE",
+      "Bash"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Ubuntu 24.04 템플릿 생성 스크립트 실행",
+        "command": "export VMID=8200 STORAGE=local-zfs\ncurl -fsSL https://raw.githubusercontent.com/UntouchedWagons/Ubuntu-CloudInit-Docs/main/samples/ubuntu/ubuntu-noble-cloudinit.sh | bash",
+        "note": "Proxmox 쉘에서 환경 변수 설정 후 실행"
+      }
+    ],
+    "usageSteps": [
+      "Proxmox 노드의 쉘에 접속합니다.",
+      "원하는 VM ID와 스토리지 이름을 환경 변수로 지정합니다.",
+      "제공되는 쉘 스크립트를 다운로드하여 실행하면 자동으로 템플릿이 구성됩니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 555,
+    "forks": 81,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
     "id": "math-php",
     "name": "MathPHP",
     "github": "https://github.com/markrogoyski/math-php",
