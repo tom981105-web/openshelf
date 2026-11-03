@@ -1,5 +1,381 @@
 [
   {
+    "id": "kanzo",
+    "name": "Kanzo",
+    "github": "https://github.com/emanuele-em/kanzo",
+    "description": "개발자와 AI 에이전트가 동일한 칸반 보드를 공유하여 협업할 수 있는 초경량 자체 호스팅 칸반 도구입니다.",
+    "longDescription": "브라우저에서 실행되는 칸반 보드와 MCP 서버가 단일 바이너리 안에 포함되어 있어, 별도의 복잡한 설정 없이 사용자와 코딩 에이전트가 실시간으로 태스크를 관리하고 카드를 이동하며 의견을 교환할 수 있는 로컬 퍼스트 도구입니다.",
+    "category": "협업·소통",
+    "tags": [
+      "칸반",
+      "프로젝트 관리",
+      "MCP",
+      "Rust",
+      "로컬 퍼스트"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/emanuele-em/kanzo",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T06:04:14.618Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl -LsSf https://github.com/emanuele-em/kanzo/releases/latest/download/kanzo-installer.sh | sh",
+        "note": "macOS 및 Linux용 자동 설치"
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 kanzo 바이너리를 설치합니다.",
+      "터미널에서 `kanzo` 명령어를 실행하여 서버를 시작합니다.",
+      "브라우저에서 보드 화면을 열어 태스크를 생성합니다.",
+      "AI 에이전트에게 MCP를 통해 칸반 작업을 할당하고 관리합니다."
+    ],
+    "examplePrompt": "칸반 보드에서 다음으로 처리할 태스크를 가져와서 진행해줘.",
+    "usageNote": "바이너리 크기가 매우 작고 메모리를 적게 소모합니다.",
+    "stars": 907,
+    "forks": 57,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "minima",
+    "name": "Minima",
+    "github": "https://github.com/Minima-AI-Inc/minima",
+    "description": "설정이 간편한 컨테이너 기반 온프레미스 대화형 RAG 시스템입니다.",
+    "longDescription": "외부 종속성 없이 완전히 격리된 환경이나 자체 배포된 LLM과 연동하여 로컬에서 RAG 및 임베디드 검색을 수행할 수 있습니다. Ollama 및 OpenAI 호환 API를 지원합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "AI",
+      "RAG",
+      "Docker",
+      "Ollama",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MPL-2.0",
+    "website": "https://github.com/Minima-AI-Inc/minima",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T06:04:14.618Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 복제합니다.",
+      "compose 설정 파일을 환경에 맞게 수정합니다.",
+      "컨테이너를 빌드하고 실행합니다.",
+      "로컬 LLM 및 RAG 인터페이스에 접속하여 사용합니다."
+    ],
+    "examplePrompt": "로컬 문서를 기반으로 질문에 답변해줘.",
+    "usageNote": "완전한 온프레미스 실행을 위해 로컬 추론 엔진 설정이 필요합니다.",
+    "stars": 1056,
+    "forks": 108,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "mcp-bridge",
+    "name": "MCP-Bridge",
+    "github": "https://github.com/SecretiveShell/MCP-Bridge",
+    "description": "Model Context Protocol(MCP) 도구를 OpenAI API 인터페이스를 통해 호출할 수 있도록 변환해주는 미들웨어입니다.",
+    "longDescription": "OpenAI 호환 API 엔드포인트를 제공하여, OpenAI API를 지원하는 다양한 애플리케이션이나 자체 호스팅 LLM 엔진에서 MCP 도구를 원활하게 사용할 수 있게 합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI",
+      "OpenAI API",
+      "MCP",
+      "미들웨어",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/SecretiveShell/MCP-Bridge",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T06:04:14.618Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/SecretiveShell/MCP-Bridge.git",
+        "note": "저장소를 로컬에 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 compose.yml 파일을 수정합니다.",
+      "Docker를 사용하여 브릿지 서버를 실행합니다.",
+      "OpenAI 호환 클라이언트에서 MCP-Bridge 엔드포인트를 지정합니다.",
+      "LLM을 통해 MCP 도구를 호출합니다."
+    ],
+    "examplePrompt": "사용 가능한 MCP 도구를 이용해 웹 검색을 수행해줘.",
+    "usageNote": "일부 스트리밍 완료 기능은 구현되지 않았을 수 있습니다.",
+    "stars": 922,
+    "forks": 117,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "concord-mcp",
+    "name": "Concord MCP",
+    "github": "https://github.com/Get-Concord-AI/concord-mcp",
+    "description": "여러 AI 코딩 에이전트 간의 실시간 메시징 및 작업 조율을 지원하는 오픈소스 로컬퍼스트 통신 레이어입니다.",
+    "longDescription": "Claude Code, Codex, Cursor 등 서로 다른 에이전트 환경 간에 실시간으로 메시지를 교환하고, 편집 작업의 충돌을 미리 감지하며, 결정을 공유하고 작업을 인계할 수 있는 MCP 서버입니다.",
+    "category": "협업·소통",
+    "tags": [
+      "AI 에이전트",
+      "개발 도구",
+      "MCP",
+      "코드 리뷰",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://getconcord.ai",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T06:04:14.618Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Concord MCP 서버를 설정합니다.",
+      "사용 중인 각 AI 코딩 에이전트에 서버를 연결합니다.",
+      "에이전트 간에 작업 영역과 변경 사항을 동기화합니다.",
+      "중복 작업이나 충돌 여부를 확인하며 협업을 진행합니다."
+    ],
+    "examplePrompt": "현재 다른 에이전트가 수정 중인 파일 목록을 확인해줘.",
+    "usageNote": "사용 및 조정 과정에서 제품 조정 텔레메트리 데이터가 수집될 수 있습니다.",
+    "stars": 872,
+    "forks": 52,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "open-agent-connector",
+    "name": "Open Agent Connector",
+    "github": "https://github.com/Anil-matcha/open-agent-connector",
+    "description": "AI 에이전트를 위한 오픈소스 자체 호스팅 API 통합 및 게이트웨이 솔루션입니다.",
+    "longDescription": "GitHub, Slack, Hacker News 등 다양한 외부 서비스 API와 계정 연동을 자체 런타임에서 안전하게 관리하며, MCP 또는 REST API를 통해 에이전트가 작업을 수행할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 에이전트",
+      "API 통합",
+      "FastAPI",
+      "자체 호스팅",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/Anil-matcha/open-agent-connector",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T06:04:14.618Z",
+    "requirements": [
+      "Python",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "서버 실행",
+        "command": "cd server && python -m venv venv && source venv/bin/activate && pip install -r requirements.txt",
+        "note": "가상환경을 생성하고 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 서버 디렉토리로 이동합니다.",
+      "파이썬 가상환경을 활성화하고 의존성 패키지를 설치합니다.",
+      "Uvicorn을 통해 API 서버를 실행합니다.",
+      "MCP 또는 REST API를 통해 에이전트와 연동합니다."
+    ],
+    "examplePrompt": "Slack 채널에 최근 빌드 결과를 전송해줘.",
+    "usageNote": "안정적인 자격 증명 관리를 위해 초기 실행 시 보안 키 설정이 필요합니다.",
+    "stars": 849,
+    "forks": 322,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "mcp-client-for-ollama",
+    "name": "MCP Client for Ollama",
+    "github": "https://github.com/jonigl/mcp-client-for-ollama",
+    "description": "로컬 LLM과 Ollama를 활용하여 MCP 서버의 모든 핵심 기능을 제어할 수 있는 TUI 기반 클라이언트입니다.",
+    "longDescription": "도구(Tools), 프롬프트(Prompts), 리소스(Resources) 등 핵심 MCP 프리미티브를 지원하며, 에이전트 모드, 멀티 서버, 모델 전환, 스트리밍 응답 기능을 갖춘 명령줄 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "로컬 LLM",
+      "Ollama",
+      "CLI",
+      "TUI",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/jonigl/mcp-client-for-ollama",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T06:04:14.618Z",
+    "requirements": [
+      "Python 3.11+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install mcp-client-for-ollama",
+        "note": "PyPI를 통해 클라이언트를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 mcp-client-for-ollama를 설치합니다.",
+      "Ollama 및 연동할 MCP 서버를 구성합니다.",
+      "명령줄에서 클라이언트를 실행합니다.",
+      "로컬 모델과 상호작용하며 MCP 도구를 활용합니다."
+    ],
+    "examplePrompt": "로컬 파일을 읽어서 요약해줘.",
+    "usageNote": "Ollama 등 로컬 추론 제공자가 사전에 실행되어 있어야 합니다.",
+    "stars": 833,
+    "forks": 125,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "scira-mcp-chat",
+    "name": "Scira MCP Chat",
+    "github": "https://github.com/zaidmukaddam/scira-mcp-chat",
+    "description": "Model Context Protocol(MCP)을 지원하는 미니멀리즘 오픈소스 AI 챗봇 애플리케이션입니다.",
+    "longDescription": "Next.js와 Vercel AI SDK를 기반으로 구축되었으며, 다양한 AI 제공자와 MCP 서버를 간편하게 연동하여 스트리밍 응답 및 도구 확장 기능을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Next.js",
+      "AI 챗봇",
+      "MCP",
+      "TypeScript",
+      "Vercel AI SDK"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://mcpchat.scira.ai",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T06:04:14.618Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 프로젝트 의존성을 설치합니다.",
+      "환경 변수 파일을 설정합니다.",
+      "개발 서버를 실행합니다.",
+      "웹 인터페이스에서 MCP 서버 및 AI 제공자를 연결합니다."
+    ],
+    "examplePrompt": "웹 검색 도구를 사용해 최신 기술 동향을 알려줘.",
+    "usageNote": "원활한 사용을 위해 유효한 AI API 키 또는 MCP 서버 설정이 필요합니다.",
+    "stars": 825,
+    "forks": 212,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "maverick-mcp",
+    "name": "MaverickMCP",
+    "github": "https://github.com/wshobson/maverick-mcp",
+    "description": "야후 파이낸스 데이터를 활용한 주식 시장 분석, 포트폴리오 추적 및 파이썬 백테스팅을 지원하는 MCP 서버입니다.",
+    "longDescription": "핵심 도구 사용 시 API 키가 필요 없으며, 로컬 컴퓨터에서 실행되어 포트폴리오와 관심 종목을 관리하고 AI 비서와 연동하여 양적 금융 분석을 수행할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "금융",
+      "주식 분석",
+      "백테스팅",
+      "Python",
+      "MCP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://sethhobson.com",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T06:04:14.618Z",
+    "requirements": [
+      "Python 3.12+",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 동기화",
+        "command": "git clone https://github.com/wshobson/maverick-mcp.git && cd maverick-mcp && uv sync",
+        "note": "저장소를 복제하고 uv를 통해 의존성을 동기화합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 프로젝트 디렉토리로 이동합니다.",
+      "uv sync 명령어로 코어 도구 의존성을 설치합니다.",
+      "필요에 따라 백테스팅 또는 리서치 추가 패키지를 설치합니다.",
+      "AI 비서의 MCP 설정에 서버를 등록하여 주식 데이터를 조회합니다."
+    ],
+    "examplePrompt": "애플(AAPL) 주식의 최근 기술적 지표를 분석해줘.",
+    "usageNote": "고급 백테스팅 및 연구 기능을 사용하려면 추가 패키지 설치가 필요합니다.",
+    "stars": 717,
+    "forks": 169,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
     "id": "musikcube",
     "name": "musikcube",
     "github": "https://github.com/clangen/musikcube",
