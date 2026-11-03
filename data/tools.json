@@ -1,5 +1,246 @@
 [
   {
+    "id": "mailcheap",
+    "name": "MailCheap",
+    "github": "https://github.com/marclou/mailcheap",
+    "description": "구독자 수가 아닌 실제 발송한 이메일 양에 따라 비용을 지불하는 오픈소스 뉴스레터 플랫폼입니다.",
+    "longDescription": "MailCheap는 구독자 수 기준으로 과금하는 기존 뉴스레터 서비스의 대안으로, 사용자가 직접 호스팅하거나 클라우드 서비스를 통해 뉴스레터를 작성하고 발송할 수 있는 애플리케이션입니다. AI 에이전트 연동 및 웹 퍼블리싱 기능을 제공합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "뉴스레터",
+      "이메일",
+      "Node.js",
+      "MongoDB",
+      "Next.js"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://mailcheap.ai",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T22:04:36.488Z",
+    "requirements": [
+      "Node.js 22+",
+      "MongoDB"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 패키지 설치",
+        "command": "git clone https://github.com/marclou/mailcheap.git && cd mailcheap && npm install",
+        "note": "프로젝트를 클론하고 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "환경 변수(.env.local)에 MongoDB URI 및 관리자 설정을 입력합니다.",
+      "개발 서버를 실행하여 대시보드에 접속합니다.",
+      "뉴스레터를 작성하고 발송 대상을 지정하여 발행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Amazon SES 또는 PostShiba 등을 백엔드 이메일러로 연동하여 사용할 수 있습니다.",
+    "stars": 1610,
+    "forks": 404,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "vmail",
+    "name": "Vmail",
+    "github": "https://github.com/oiov/vmail",
+    "description": "Cloudflare Worker와 D1 데이터베이스를 활용하여 수신/발신이 가능한 임시 이메일 서비스 구축 도구입니다.",
+    "longDescription": "Vmail은 사용자의 커스텀 도메인을 이용해 Cloudflare Worker 위에서 동작하는 풀기능 임시 이메일 서비스입니다. D1 데이터베이스를 통한 데이터 저장, 다중 도메인 접미사, 비밀번호 찾기 및 오픈 API 인터페이스를 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Cloudflare Workers",
+      "이메일",
+      "TypeScript",
+      "D1",
+      "임시이메일"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://vmail.dev",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T22:04:36.488Z",
+    "requirements": [
+      "Node.js 22+",
+      "pnpm",
+      "Cloudflare 계정"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론 및 의존성 설치",
+        "command": "git clone https://github.com/oiov/vmail && cd vmail && pnpm install --frozen-lockfile",
+        "note": "프로젝트를 클론하고 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "`.env.example`을 `.env`로 복사하고 Cloudflare D1 및 도메인 정보를 설정합니다.",
+      "설정에 따라 GitHub Action 또는 수동 배포 명령어로 Cloudflare에 배포합니다.",
+      "웹 콘솔을 통해 이메일 수발신 및 API 키를 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Cloudflare Email Worker 기능을 활용하므로 해당 설정이 필요합니다.",
+    "stars": 1497,
+    "forks": 394,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "deltachat-desktop",
+    "name": "Delta Chat Desktop",
+    "github": "https://github.com/deltachat/deltachat-desktop",
+    "description": "이메일 서버를 백엔드로 사용하는 탈중앙화 사생활 보호 데스크톱 메신저",
+    "longDescription": "Delta Chat은 기존 표준 이메일(IMAP/SMTP) 프로토콜을 백엔드로 활용하여 안전하고 탈중앙화된 채팅 경험을 제공하는 데스크톱 메신저 애플리케이션입니다. 중앙 서버에 의존하지 않고 종단간 암호화를 지원합니다.",
+    "category": "협업·소통",
+    "tags": [
+      "Electron",
+      "TypeScript",
+      "메신저",
+      "이메일",
+      "암호화"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/deltachat/deltachat-desktop",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T22:04:36.488Z",
+    "requirements": [
+      "Electron"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install --cask deltachat",
+        "note": "macOS 환경"
+      }
+    ],
+    "usageSteps": [
+      "애플리케이션 설치 및 실행",
+      "기존 이메일 계정 정보 입력하여 로그인",
+      "이메일 기반 연락처와 안전한 메시지 교환"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1634,
+    "forks": 253,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "python-email-validator",
+    "name": "Python Email Validator",
+    "github": "https://github.com/JoshData/python-email-validator",
+    "description": "이메일 주소의 구문 정확성과 실제 수신 가능 여부를 검증하는 Python 라이브러리",
+    "longDescription": "사용자 입력 이메일 주소가 올바른 형식을 갖추었는지 확인하고, DNS 조회 등을 통해 실제로 메일을 수신할 수 있는 도메인인지 검증해주는 강력한 파이썬 라이브러리입니다. 회원가입 폼 검증 등에 유용합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "이메일",
+      "검증",
+      "DNS"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Unlicense",
+    "website": "https://github.com/JoshData/python-email-validator",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T22:04:36.488Z",
+    "requirements": [
+      "Python 3.10+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install email-validator",
+        "note": "패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 라이브러리 설치",
+      "코드 내에서 validate_email 함수 호출",
+      "반환된 정규화된 이메일 주소 및 예외 처리 활용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1458,
+    "forks": 147,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
+    "id": "email-oauth2-proxy",
+    "name": "Email OAuth2 Proxy",
+    "github": "https://github.com/simonrob/email-oauth2-proxy",
+    "description": "OAuth 2.0 미지원 레거시 이메일 클라이언트에서 인증을 지원하도록 돕는 로컬 프록시",
+    "longDescription": "최신 이메일 서비스들이 IMAP/POP/SMTP 연결 시 OAuth 2.0 인증을 필수로 요구할 때, 기존 레거시 이메일 클라이언트가 계속 작동할 수 있도록 중간에서 인증을 중계해주는 로컬 프록시 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "OAuth2",
+      "프록시",
+      "이메일",
+      "IMAP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/simonrob/email-oauth2-proxy",
+    "featured": 9,
+    "added": "2026-11-03",
+    "addedAt": "2026-11-03T22:04:36.488Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/simonrob/email-oauth2-proxy.git",
+        "note": "소스 코드 다운로드"
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 저장소 클론 및 설정 파일 작성",
+      "프록시 실행 및 OAuth 계정 인증 수행",
+      "이메일 클라이언트의 서버 주소를 로컬 프록시로 변경"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1495,
+    "forks": 153,
+    "starsUpdatedAt": "2026-11-03"
+  },
+  {
     "id": "fastapi-langgraph-agent-production-ready-template",
     "name": "FastAPI LangGraph Agent Template",
     "github": "https://github.com/wassim249/fastapi-langgraph-agent-production-ready-template",
