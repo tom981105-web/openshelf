@@ -1,5 +1,150 @@
 [
   {
+    "id": "sourcerer-app",
+    "name": "Sourcerer App",
+    "github": "https://github.com/sourcerer-io/sourcerer-app",
+    "description": "GitHub 및 로컬 Git 저장소 데이터를 분석하여 시각적인 개발자 프로필을 생성하는 도구입니다.",
+    "longDescription": "사용자의 Git 저장소를 분석하여 사용 언어, 라이브러리 활용도, 커리어 통계 등을 시각적인 프로필 페이지로 만들어주는 개발자 포트폴리오 생성 앱입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Git",
+      "포트폴리오",
+      "프로필",
+      "시각화",
+      "개발자"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://sourcerer.io/start",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T00:04:19.261Z",
+    "requirements": [
+      "Java",
+      "Bash"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Bash 설치",
+        "command": "curl -s https://sourcerer.io/app/install | bash",
+        "note": "셸을 통해 Sourcerer 앱을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 애플리케이션을 설치합니다.",
+      "명령줄에서 `sourcerer` 명령을 실행해 마법사를 시작합니다.",
+      "생성된 시각적 프로필과 통계를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6735,
+    "forks": 268,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "litlyx",
+    "name": "Litlyx",
+    "github": "https://github.com/Litlyx/litlyx",
+    "description": "쿠키 없이 빠르고 가볍게 동작하며 AI 대시보드를 제공하는 오픈소스 웹 분석 솔루션입니다.",
+    "longDescription": "Google Analytics의 대안으로 설계되었으며, 30초 만에 설치하여 웹사이트 방문자 통계와 지표를 GDPR 준수 환경에서 안전하게 수집하고 AI 기반으로 분석할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "웹 분석",
+      "대시보드",
+      "통계",
+      "개인정보 보호",
+      "오픈소스"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://litlyx.com",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T00:04:19.261Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "npm i litlyx-js",
+        "note": "npm을 통해 프론트엔드 프로젝트에 분석 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Litlyx 클라우드 또는 자체 호스팅 서버에서 프로젝트를 생성합니다.",
+      "발급받은 워크스페이스 ID를 이용해 HTML 또는 JS 프로젝트에 스크립트를 삽입합니다.",
+      "대시보드에서 실시간 방문자 및 트래픽 지표를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1748,
+    "forks": 116,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "trench",
+    "name": "Trench",
+    "github": "https://github.com/FrigadeHQ/trench",
+    "description": "ClickHouse와 Kafka를 기반으로 구축된 고성능 오픈소스 이벤트 추적 및 분석 인프라입니다.",
+    "longDescription": "프로덕션 환경에서 대규모 이벤트를 실시간으로 처리할 수 있는 단일 Docker 이미지 기반의 분석 백엔드로, GDPR을 준수하며 제품 분석 및 RAG 파이프라인에 활용할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "분석",
+      "ClickHouse",
+      "Kafka",
+      "이벤트 추적",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://trench.dev",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T00:04:19.261Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "로컬 개발 서버 실행",
+        "command": "git clone https://github.com/frigadehq/trench.git && cd trench/apps/trench && cp .env.example .env",
+        "note": "저장소를 복제하고 환경 변수 파일을 생성합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 복제하고 환경 설정 파일을 준비합니다.",
+      "Docker Compose를 사용하여 인프라 컨테이너를 실행합니다.",
+      "이벤트 추적 API를 연동하여 실시간 데이터 수집을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1666,
+    "forks": 66,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
     "id": "dm-control",
     "name": "dm_control",
     "github": "https://github.com/google-deepmind/dm_control",
