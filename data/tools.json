@@ -1,5 +1,382 @@
 [
   {
+    "id": "cicada",
+    "name": "cicada",
+    "github": "https://github.com/wquguru/cicada",
+    "description": "Mac에서 모든 화상회의나 실시간 스트림의 자막, 동시통계, AI 회의록을 제공하는 메뉴바 앱입니다.",
+    "longDescription": "시스템 오디오를 직접 읽어와 로컬에서 음성을 인식하며, 회의 중 주요 요점과 할 일 목록을 정리하고 마이크 입력 시 음성 번역 송출 기능을 지원합니다.",
+    "category": "생산성",
+    "tags": [
+      "macOS",
+      "실시간자막",
+      "회의록",
+      "Swift",
+      "동시통역"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "cicada.indaloop.app",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T17:04:14.914Z",
+    "requirements": [
+      "Xcode Command Line Tools"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "개발판 빌드",
+        "command": "scripts/build.sh",
+        "note": "개발용 앱을 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "Xcode Command Line Tools 설치",
+      "스크립트를 통한 앱 빌드 및 실행",
+      "회의 및 스트리밍 시 실시간 자막 및 요약 기능 사용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1042,
+    "forks": 208,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "mimi",
+    "name": "Mimi",
+    "github": "https://github.com/yuxino/Mimi",
+    "description": "컴퓨터나 마이크 소리를 실시간으로 번역하여 자막으로 보여주는 데스크톱 앱입니다.",
+    "longDescription": "외국어 영상, 실시간 방송, 온라인 강의 등을 시청할 때 원본 오디오나 마이크 입력을 캡처하여 실시간 번역 자막을 오버레이로 제공합니다. 다양한 AI API 및 로컬 서비스와 연동할 수 있습니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "실시간번역",
+      "자막",
+      "음성인식",
+      "데스크톱앱",
+      "Tauri"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://mimi.yuxino.cn",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T17:04:14.914Z",
+    "requirements": [
+      "Node.js 또는 Rust (개발 시)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Mimi 앱을 설치하고 실행합니다.",
+      "번역에 사용할 API 키 또는 로컬 모델을 설정합니다.",
+      "오디오 소스를 선택하고 실시간 자막 기능을 켭니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 821,
+    "forks": 48,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "crispasr",
+    "name": "CrispASR",
+    "github": "https://github.com/CrispStrobe/CrispASR",
+    "description": "다양한 음성 인식 및 음성 합성 모델을 지원하는 고성능 C++ 런타임 허브입니다.",
+    "longDescription": "whisper.cpp를 기반으로 확장된 단일 C++ 바이너리 엔진으로, Python 및 PyTorch 종속성 없이 145개 이상의 ASR 및 TTS 백엔드를 실행할 수 있습니다. GGUF 형식의 모델을 자동 감지하여 고속 추론을 수행합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "ASR",
+      "TTS",
+      "GGUF",
+      "C++",
+      "오디오"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/CrispStrobe/CrispASR",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T17:04:14.914Z",
+    "requirements": [
+      "C++ 컴파일러",
+      "CMake"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드",
+        "command": "cmake -B build && cmake --build build",
+        "note": "CMake를 사용하여 프로젝트를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "빌드된 바이너리 또는 WebAssembly 버전을 준비합니다.",
+      "원하는 GGUF 모델 파일을 다운로드합니다.",
+      "명령줄에서 crispasr 명령을 실행하여 음성 인식 또는 합성을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 793,
+    "forks": 121,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "whisper-playground",
+    "name": "Whisper Playground",
+    "github": "https://github.com/saharmor/whisper-playground",
+    "description": "OpenAI Whisper를 활용하여 실시간 음성-텍스트 변환 웹 앱을 구축하는 툴킷입니다.",
+    "longDescription": "faster-whisper, Diart, Pyannote 등을 결합하여 99개 이상의 언어를 지원하는 실시간 음성 인식 및 화자 분리 웹 애플리케이션을 손쉽게 구축할 수 있는 환경을 제공합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Whisper",
+      "음성인식",
+      "웹앱",
+      "실시간",
+      "Python"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/saharmor/whisper-playground",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T17:04:14.914Z",
+    "requirements": [
+      "Conda",
+      "Yarn"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "sh install_playground.sh",
+        "note": "백엔드 및 프론트엔드 환경을 자동으로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론합니다.",
+      "설치 스크립트를 실행하여 의존성을 설치합니다.",
+      "config.py 및 config.js 설정 파일을 검토한 후 앱을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 836,
+    "forks": 143,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "lobe-tts",
+    "name": "Lobe TTS",
+    "github": "https://github.com/lobehub/lobe-tts",
+    "description": "서버와 브라우저 환경을 모두 지원하는 고품질 음성 합성 및 인식 라이브러리입니다.",
+    "longDescription": "React 훅과 오디오 컴포넌트를 제공하여 웹 애플리케이션에 음성 인식(STT) 및 텍스트 음성 변환(TTS) 기능을 손쉽게 통합할 수 있도록 돕는 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "TTS",
+      "STT",
+      "React",
+      "TypeScript",
+      "음성합성"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://tts.lobehub.com",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T17:04:14.914Z",
+    "requirements": [
+      "Bun 또는 Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 클론 및 설치",
+        "command": "git clone https://github.com/lobehub/lobe-tts.git && cd lobe-tts && bun install",
+        "note": "Bun 패키지 매니저를 사용하여 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성을 설치합니다.",
+      "bun run docs:dev 명령으로 개발 서버를 실행합니다.",
+      "React 컴포넌트나 훅을 프로젝트에 임포트하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 809,
+    "forks": 104,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "whisper-rn",
+    "name": "whisper.rn",
+    "github": "https://github.com/mybigday/whisper.rn",
+    "description": "whisper.cpp를 기반으로 한 React Native용 음성 인식 바인딩 라이브러리입니다.",
+    "longDescription": "모바일 앱 개발 시 OpenAI Whisper 모델을 활용할 수 있도록 whisper.cpp를 React Native 환경에서 고성능으로 동작하게 해주는 바인딩 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "React-Native",
+      "Whisper",
+      "모바일",
+      "음성인식",
+      "TypeScript"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mybigday/whisper.rn",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T17:04:14.914Z",
+    "requirements": [
+      "React Native",
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install whisper.rn",
+        "note": "postinstall 단계에서 필요한 바인딩 바이너리를 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 패키지를 설치합니다.",
+      "필요한 Whisper 모델 파일을 프로젝트에 추가합니다.",
+      "React Native 코드에서 모듈을 불러와 음성 인식을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 807,
+    "forks": 66,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "whisper-mic",
+    "name": "Whisper Mic",
+    "github": "https://github.com/mallorbc/whisper_mic",
+    "description": "마이크 입력을 받아 OpenAI Whisper로 실시간 음성 인식을 수행하는 파이썬 패키지입니다.",
+    "longDescription": "간단한 파이썬 라이브러리 형태로 마이크를 통한 오디오 입력을 실시간으로 캡처하고 OpenAI Whisper 모델을 호출하여 텍스트로 변환해주는 도구입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Whisper",
+      "마이크",
+      "음성인식",
+      "Python",
+      "STT"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mallorbc/whisper_mic",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T17:04:14.914Z",
+    "requirements": [
+      "Python",
+      "PyAudio"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install whisper-mic",
+        "note": "pip를 통해 간편하게 패키지를 설치할 수 있습니다."
+      }
+    ],
+    "usageSteps": [
+      "가상 환경을 생성하고 활성화합니다.",
+      "pip install whisper-mic 명령으로 패키지를 설치합니다.",
+      "파이썬 스크립트에서 마이크 인식을 호출하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 788,
+    "forks": 171,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
+    "id": "june",
+    "name": "June",
+    "github": "https://github.com/mezbaul-h/june",
+    "description": "Ollama, Hugging Face, Coqui TTS를 결합한 로컬 음성 챗봇입니다.",
+    "longDescription": "외부 서버로 데이터를 전송하지 않고 로컬 환경에서 프라이버시를 보장하며 동작하는 음성 챗봇입니다. 음성 인식, 언어 모델(Ollama), 텍스트 음성 변환(Coqui TTS)을 통합하여 자연스러운 대화가 가능합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "챗봇",
+      "Ollama",
+      "로컬AI",
+      "음성대화",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mezbaul-h/june",
+    "featured": 9,
+    "added": "2026-11-04",
+    "addedAt": "2026-11-04T17:04:14.914Z",
+    "requirements": [
+      "Python",
+      "Ollama"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/mezbaul-h/june.git",
+        "note": "소스 코드를 클론하여 로컬 환경에 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 필요한 파이썬 의존성을 설치합니다.",
+      "Ollama 및 관련 로컬 모델을 실행합니다.",
+      "CLI를 통해 음성 대화 챗봇을 시작합니다."
+    ],
+    "examplePrompt": "안녕, 오늘 날씨 어때?",
+    "usageNote": "",
+    "stars": 788,
+    "forks": 54,
+    "starsUpdatedAt": "2026-11-04"
+  },
+  {
     "id": "keep-it-markdown",
     "name": "keep-it-markdown",
     "github": "https://github.com/djsudduth/keep-it-markdown",
