@@ -1,5 +1,186 @@
 [
   {
+    "id": "kube-bench",
+    "name": "kube-bench",
+    "github": "https://github.com/aquasecurity/kube-bench",
+    "description": "CIS Kubernetes Benchmark 가이드라인에 따라 쿠버네티스 보안 설정 상태를 진단하는 도구입니다.",
+    "longDescription": "마스터 노드와 워커 노드의 설정 파일을 검사하여 보안 모범 사례를 따르고 있는지 확인하고, 취약점과 개선 사항을 리포트로 제공합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Kubernetes",
+      "보안",
+      "CIS Benchmark",
+      "진단 도구"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/aquasecurity/kube-bench",
+    "featured": 9,
+    "added": "2026-11-05",
+    "addedAt": "2026-11-05T02:04:09.096Z",
+    "requirements": [
+      "Kubernetes 클러스터 접근 권한"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Kubernetes Job으로 실행",
+        "command": "kubectl apply -f job.yaml",
+        "note": "제공되는 쿠버네티스 잡 설정 파일을 클러스터에 적용합니다."
+      }
+    ],
+    "usageSteps": [
+      "kube-bench 저장소의 job.yaml 파일 다운로드",
+      "kubectl apply 명령으로 클러스터에 보안 진단 작업 실행",
+      "kubectl logs 명령을 통해 진단 결과 확인"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8246,
+    "forks": 1348,
+    "starsUpdatedAt": "2026-11-05"
+  },
+  {
+    "id": "boilerplates",
+    "name": "boilerplates",
+    "github": "https://github.com/ChristianLempa/boilerplates",
+    "description": "홈랩 및 자체 호스팅 인프라 구성을 위한 재사용 가능한 설정 템플릿과 CLI 도구입니다.",
+    "longDescription": "Docker, Kubernetes, Terraform, Ansible 등 다양한 인프라 도구에 필요한 설정 파일을 템플릿화하고, 대화형 마법사를 통해 쉽게 맞춤형 워크로드를 생성할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "템플릿",
+      "인프라",
+      "Docker",
+      "Ansible",
+      "홈랩"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://getboilerplates.app/",
+    "featured": 9,
+    "added": "2026-11-05",
+    "addedAt": "2026-11-05T02:04:09.096Z",
+    "requirements": [
+      "Bash 또는 cURL"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "자동 설치 스크립트",
+        "command": "curl -fsSL https://raw.githubusercontent.com/christianlempa/boilerplates/main/scripts/install.sh | bash",
+        "note": "최신 버전의 Boilerplates CLI를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 통해 CLI 도구 다운로드",
+      "제공되는 템플릿 목록 탐색",
+      "마법사 가이드에 따라 변수 및 시크릿 설정 후 대상 환경에 적용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 8000,
+    "forks": 1821,
+    "starsUpdatedAt": "2026-11-05"
+  },
+  {
+    "id": "kubevela",
+    "name": "KubeVela",
+    "github": "https://github.com/kubevela/kubevela",
+    "description": "쿠버네티스 환경에서 애플리케이션 배포와 운영을 단순화하는 현대적인 애플리케이션 플랫폼입니다.",
+    "longDescription": "복잡한 마이크로서비스와 클라우드 네이티브 애플리케이션의 배포를 일관성 있게 정의하고 자동화할 수 있는 확장 가능한 제어 평면을 제공합니다.",
+    "category": "개발 운영",
+    "tags": [
+      "쿠버네티스",
+      "애플리케이션 플랫폼",
+      "CD",
+      "CNCF"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://kubevela.io",
+    "featured": 9,
+    "added": "2026-11-05",
+    "addedAt": "2026-11-05T02:04:09.096Z",
+    "requirements": [
+      "Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 설치 가이드 참조",
+      "KubeVela 코어 컨트롤러 클러스터에 설치",
+      "애플리케이션 컴포넌트 정의 및 배포 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7920,
+    "forks": 1081,
+    "starsUpdatedAt": "2026-11-05"
+  },
+  {
+    "id": "youki",
+    "name": "Youki",
+    "github": "https://github.com/youki-dev/youki",
+    "description": "러스트(Rust) 언어로 구현된 OCI 규격 호환 컨테이너 런타임입니다.",
+    "longDescription": "안전성과 성능이 뛰어난 러스트 언어를 활용하여 도커 및 쿠버네티스 등과 연동할 수 있는 경량 컨테이너 런타임 환경을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "컨테이너",
+      "런타임",
+      "Rust",
+      "OCI"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://youki-dev.github.io/youki/",
+    "featured": 9,
+    "added": "2026-11-05",
+    "addedAt": "2026-11-05T02:04:09.096Z",
+    "requirements": [
+      "Rust",
+      "Clang",
+      "libseccomp-dev"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "시스템 패키지 설치 (Debian/Ubuntu)",
+        "command": "sudo apt-get install pkg-config libsystemd-dev build-essential libelf-dev libseccomp-dev libclang-dev libssl-dev",
+        "note": "필수 개발 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "필수 의존성 패키지 설치",
+      "저장소 클론 후 빌드 도구 실행",
+      "OCI 규격에 맞는 컨테이너 실행 테스트"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7668,
+    "forks": 485,
+    "starsUpdatedAt": "2026-11-05"
+  },
+  {
     "id": "agent-native",
     "name": "Agent-Native",
     "github": "https://github.com/BuilderIO/agent-native",
