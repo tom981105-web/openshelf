@@ -1,5 +1,190 @@
 [
   {
+    "id": "blossom",
+    "name": "Blossom",
+    "github": "https://github.com/blossom-editor/blossom",
+    "description": "개인 서버에 직접 배포하여 클라우드 저장과 기기 간 동기화를 지원하는 마크다운 양방향 링크 노트 소프트웨어입니다.",
+    "longDescription": "마크다운 기반으로 작성되며 강력한 이미지 관리 및 이중 링크 관계를 제공합니다. Docker를 통해 쉽게 자체 호스팅할 수 있습니다.",
+    "category": "생산성",
+    "tags": [
+      "마크다운",
+      "노트",
+      "Docker",
+      "자체호스팅"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.wangyunf.com/blossom-doc/index",
+    "featured": 9,
+    "added": "2026-11-06",
+    "addedAt": "2026-11-06T21:04:14.570Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose로 실행",
+        "command": "docker compose -f docker/compose/blossom-mysql8.yaml up -d",
+        "note": "Docker 환경에서 MySQL과 함께 서비스를 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버에 Docker 및 Docker Compose를 설치합니다.",
+      "컴포즈 파일을 사용하여 Blossom 컨테이너를 실행합니다.",
+      "웹 클라이언트나 전용 앱을 통해 접속하여 노트를 작성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3801,
+    "forks": 335,
+    "starsUpdatedAt": "2026-11-06"
+  },
+  {
+    "id": "glamour",
+    "name": "Glamour",
+    "github": "https://github.com/charmbracelet/glamour",
+    "description": "터미널 환경에서 스타일시트를 기반으로 마크다운 문서를 렌더링하는 Go 라이브러리입니다.",
+    "longDescription": "ANSI 호환 터미널에서 마크다운 텍스트를 아름답게 출력할 수 있도록 기본 스타일 또는 커스텀 스타일을 지원하는 개발 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "마크다운",
+      "Go",
+      "TUI"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/charmbracelet/glamour",
+    "featured": 9,
+    "added": "2026-11-06",
+    "addedAt": "2026-11-06T21:04:14.570Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Go 프로젝트에 패키지를 임포트합니다.",
+      "마크다운 문자열과 적용할 스타일 이름을 지정합니다.",
+      "렌더링된 결과를 터미널에 출력합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3748,
+    "forks": 347,
+    "starsUpdatedAt": "2026-11-06"
+  },
+  {
+    "id": "html-to-markdown",
+    "name": "html-to-markdown",
+    "github": "https://github.com/JohannesKaufmann/html-to-markdown",
+    "description": "HTML 문서를 깔끔하고 가독성 좋은 마크다운으로 변환해 주는 강력한 Go 라이브러리 및 CLI 도구입니다.",
+    "longDescription": "복잡한 웹 페이지 구조와 서식을 유지하면서 마크다운으로 변환하며, 규칙 확장을 통해 맞춤형 변환 처리가 가능합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "CLI",
+      "HTML",
+      "변환기"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://html-to-markdown.com",
+    "featured": 9,
+    "added": "2026-11-06",
+    "addedAt": "2026-11-06T21:04:14.570Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 라이브러리 설치",
+        "command": "go get -u github.com/JohannesKaufmann/html-to-markdown/v2",
+        "note": "프로젝트에 v2 라이브러리를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "명령어 또는 Go 코드를 통해 패키지를 설치합니다.",
+      "변환할 HTML 입력 데이터를 지정합니다.",
+      "마크다운으로 변환된 결과를 출력하거나 저장합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3839,
+    "forks": 230,
+    "starsUpdatedAt": "2026-11-06"
+  },
+  {
+    "id": "oscp-exam-report-template-markdown",
+    "name": "OSCP Exam Report Template in Markdown",
+    "github": "https://github.com/noraj/OSCP-Exam-Report-Template-Markdown",
+    "description": "공격적 보안(Offensive Security) 자격증 시험 보고서를 마크다운으로 작성하고 PDF로 변환할 수 있는 템플릿입니다.",
+    "longDescription": "OSCP, OSWE 등 침투 테스트 시험 보고서를 구조화된 마크다운으로 작성하고 Pandoc과 LaTeX를 통해 전문적인 PDF 문서로 출력할 수 있습니다.",
+    "category": "문서",
+    "tags": [
+      "마크다운",
+      "보안",
+      "보고서",
+      "Pandoc"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://noraj.github.io/OSCP-Exam-Report-Template-Markdown/",
+    "featured": 9,
+    "added": "2026-11-06",
+    "addedAt": "2026-11-06T21:04:14.570Z",
+    "requirements": [
+      "p7zip",
+      "pandoc",
+      "texlive"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Ubuntu 필수 패키지 설치",
+        "command": "apt install texlive-latex-recommended pandoc p7zip-full",
+        "note": "보고서 컴파일에 필요한 도구들을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "리포지토리 템플릿을 클론합니다.",
+      "마크다운 파일에 시험 결과와 취약점 분석 내용을 작성합니다.",
+      "제공된 스크립트나 Pandoc을 이용해 PDF 보고서로 빌드합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4219,
+    "forks": 834,
+    "starsUpdatedAt": "2026-11-06"
+  },
+  {
     "id": "formfilla",
     "name": "FormFilla",
     "github": "https://github.com/AhmadHassan-BTed/FormFilla",
