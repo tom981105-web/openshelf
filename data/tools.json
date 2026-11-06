@@ -1,5 +1,179 @@
 [
   {
+    "id": "convoviz",
+    "name": "convoviz",
+    "github": "https://github.com/mohamed-chs/convoviz",
+    "description": "ChatGPT 대화 기록을 Obsidian 등에서 읽을 수 있는 Markdown 노트와 시각화 차트로 변환합니다.",
+    "longDescription": "ChatGPT 데이터 내보내기 파일(ZIP)을 로컬에서 처리하여 가독성 좋은 마크다운 파일로 변환하고, 사용 패턴을 분석하는 워드 클라우드와 차트를 생성합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "ChatGPT",
+      "Markdown",
+      "Obsidian",
+      "Python",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mohamed-chs/convoviz",
+    "featured": 9,
+    "added": "2026-11-06",
+    "addedAt": "2026-11-06T09:04:08.362Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "macOS / Linux 설치",
+        "command": "curl -LsSf https://raw.githubusercontent.com/mohamed-chs/convoviz/main/install.sh | sh",
+        "note": "셸 스크립트를 통한 자동 설치"
+      }
+    ],
+    "usageSteps": [
+      "ChatGPT 설정에서 데이터 내보내기 후 ZIP 파일 다운로드",
+      "convoviz 명령어 실행",
+      "생성된 마크다운 노트를 Obsidian 등에서 열어 활용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 890,
+    "forks": 53,
+    "starsUpdatedAt": "2026-11-06"
+  },
+  {
+    "id": "lazywarden",
+    "name": "Lazywarden",
+    "github": "https://github.com/querylab/lazywarden",
+    "description": "Bitwarden 및 Vaultwarden 금고 데이터를 안전하게 자동 백업하는 파이썬 도구입니다.",
+    "longDescription": "AES-256 암호화와 Argon2 키 유도를 지원하여 보안성이 높으며, 금고 데이터와 첨부파일을 여러 클라우드 스토리지에 자동으로 백업할 수 있는 자동화 솔루션입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Bitwarden",
+      "백업",
+      "암호화",
+      "Python",
+      "보안"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://lazywarden.com",
+    "featured": 9,
+    "added": "2026-11-06",
+    "addedAt": "2026-11-06T09:04:08.362Z",
+    "requirements": [
+      "Python",
+      "Docker (선택 사항)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/querylab/lazywarden.git\ncd lazywarden",
+        "note": "프로젝트 소스코드를 클론하고 디렉터리로 이동합니다."
+      }
+    ],
+    "usageSteps": [
+      ".env.sample 파일을 참고하여 환경 변수 설정 파일을 작성합니다.",
+      "필요한 Bitwarden 계정 정보 및 클라우드 저장소 자격 증명을 입력합니다.",
+      "자동 백업 스크립트를 실행하여 정기 백업을 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "정기적인 무인 백업을 위해 크론잡(Cron) 등과 연동하여 활용할 수 있습니다.",
+    "stars": 832,
+    "forks": 25,
+    "starsUpdatedAt": "2026-11-06"
+  },
+  {
+    "id": "zfs-autobackup",
+    "name": "ZFS Autobackup",
+    "github": "https://github.com/psy0rz/zfs_autobackup",
+    "description": "ZFS 파일시스템을 다른 위치로 주기적으로 백업하고 복제하기 위한 신뢰할 수 있는 파이썬 도구입니다.",
+    "longDescription": "ZFS의 스냅샷 및 복제 기능을 활용하여 효율적인 증분 백업을 수행합니다. 복잡한 설정 파일 없이 명령줄 옵션을 통해 간편하게 제어할 수 있으며 상세한 로깅을 제공합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "ZFS",
+      "백업",
+      "스토리지",
+      "Python",
+      "복제"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/psy0rz/zfs_autobackup",
+    "featured": 9,
+    "added": "2026-11-06",
+    "addedAt": "2026-11-06T09:04:08.362Z",
+    "requirements": [
+      "Python",
+      "ZFS"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "pip을 통해 zfs-autobackup 패키지를 설치합니다.",
+      "소스 ZFS 파일시스템과 대상 저장소 경로를 확인합니다.",
+      "자동백업 명령어를 실행하거나 스케줄러에 등록합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "백업을 수행할 시스템 한 곳에만 파이썬 패키지로 설치하면 동작합니다.",
+    "stars": 798,
+    "forks": 69,
+    "starsUpdatedAt": "2026-11-06"
+  },
+  {
+    "id": "sms-ie",
+    "name": "SMS Import / Export",
+    "github": "https://github.com/tmo1/sms-ie",
+    "description": "안드로이드 기기의 문자 메시지, 통화 기록, 연락처 등을 JSON 및 NDJSON 파일로 백업하고 복원하는 앱입니다.",
+    "longDescription": "스마트폰의 SMS, MMS, 통화 로그, 차단 번호 및 연락처 데이터를 간편하게 파일 형태로 내보내거나 가져올 수 있는 오픈소스 안드로이드 애플리케이션입니다.",
+    "category": "개인 도구",
+    "tags": [
+      "안드로이드",
+      "백업",
+      "문자메시지",
+      "Kotlin",
+      "JSON"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/tmo1/sms-ie",
+    "featured": 9,
+    "added": "2026-11-06",
+    "addedAt": "2026-11-06T09:04:08.362Z",
+    "requirements": [
+      "Android 기기"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "F-Droid 또는 GitHub 릴리스에서 앱을 다운로드하여 안드로이드 기기에 설치합니다.",
+      "앱에 필요한 권한(연락처, 통화 기록, SMS 접근 등)을 허용합니다.",
+      "내보내기 또는 가져오기 기능을 선택하여 데이터 백업 파일을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 746,
+    "forks": 65,
+    "starsUpdatedAt": "2026-11-06"
+  },
+  {
     "id": "weex",
     "name": "Weex",
     "github": "https://github.com/alibaba/weex",
