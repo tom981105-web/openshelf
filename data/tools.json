@@ -1,5 +1,190 @@
 [
   {
+    "id": "thephish",
+    "name": "ThePhish",
+    "github": "https://github.com/emalderson/ThePhish",
+    "description": "피싱 이메일 분석을 자동화하는 오픈소스 웹 애플리케이션입니다.",
+    "longDescription": "TheHive, Cortex, MISP와 연동되어 피싱 이메일의 헤더와 본문에서 관측 지점을 자동으로 추출하고, 분석 과정을 거쳐 최종 판정을 도출하는 사고 대응 도구입니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "피싱",
+      "보안",
+      "분석",
+      "Python",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/emalderson/ThePhish",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T17:04:14.035Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose",
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 실행",
+        "command": "docker-compose up -d",
+        "note": "도커를 이용해 애플리케이션을 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 설정 파일을 수정합니다.",
+      "Docker Compose를 사용하여 서비스를 빌드하고 실행합니다.",
+      "웹 인터페이스에 접속하여 의심스러운 이메일 파일을 업로드하고 분석을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "TheHive 및 Cortex 등 연동 서비스의 사전 설정이 필요합니다.",
+    "stars": 1382,
+    "forks": 201,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "deltachat-android",
+    "name": "Delta Chat Android",
+    "github": "https://github.com/deltachat/deltachat-android",
+    "description": "표준 이메일 프로토콜을 백엔드로 사용하는 탈중앙화 프라이버시 메신저의 안드로이드 클라이언트입니다.",
+    "longDescription": "Delta Chat은 기존의 메신저 서버 대신 표준 IMAP/SMTP 이메일 서버를 활용하여 채팅을 주고받는 탈중앙화 메신저 앱입니다. 안드로이드 환경에서 안전하고 프라이버시가 보호되는 커뮤니케이션을 지원합니다.",
+    "category": "협업·소통",
+    "tags": [
+      "메신저",
+      "안드로이드",
+      "이메일",
+      "프라이버시",
+      "탈중앙화"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/deltachat/deltachat-android",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T17:04:14.035Z",
+    "requirements": [
+      "Android SDK"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 코드 클론",
+        "command": "git clone https://github.com/deltachat/deltachat-android.git",
+        "note": "저장소를 로컬에 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "Android Studio에서 프로젝트를 엽니다.",
+      "필요한 의존성을 동기화하고 빌드를 수행합니다.",
+      "기기나 에뮬레이터에 앱을 설치하고 이메일 계정으로 로그인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1864,
+    "forks": 242,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "premailer-rails",
+    "name": "Premailer Rails",
+    "github": "https://github.com/fphilipe/premailer-rails",
+    "description": "Ruby on Rails에서 HTML 이메일의 CSS를 인라인으로 자동 변환해 주는 젬입니다.",
+    "longDescription": "대부분의 웹 이메일 클라이언트는 별도의 link 태그나 외부 스타일시트를 무시합니다. Premailer Rails는 CSS 규칙을 각 HTML 태그의 style 속성에 자동으로 인라인 처리하여 어느 메일 클라이언트에서나 디자인이 깨지지 않도록 도와줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Ruby",
+      "Rails",
+      "CSS",
+      "이메일"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/fphilipe/premailer-rails",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T17:04:14.035Z",
+    "requirements": [
+      "Ruby",
+      "Ruby on Rails"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Gemfile 추가",
+        "command": "gem 'premailer-rails'",
+        "note": "Gemfile에 추가 후 bundle install을 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Gemfile에 젬을 추가하고 설치합니다.",
+      "Rails 애플리케이션에서 평소처럼 CSS와 함께 이메일 뷰를 작성합니다.",
+      "이메일 발송 시 자동으로 CSS가 인라인으로 적용됩니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1766,
+    "forks": 256,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "aws-lambda-ses-forwarder",
+    "name": "AWS Lambda SES Forwarder",
+    "github": "https://github.com/arithmetric/aws-lambda-ses-forwarder",
+    "description": "AWS SES와 Lambda를 활용하여 별도의 메일 서버 없이 서버리스로 이메일을 포워딩하는 스크립트입니다.",
+    "longDescription": "EC2 인스턴스에 별도의 메일 서버를 구축하지 않고, AWS Simple Email Service(SES)로 수신된 이메일을 AWS Lambda 함수를 통해 지정된 목적지로 자동 전달(포워딩)해 주는 Node.js 스크립트입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "AWS",
+      "Lambda",
+      "SES",
+      "서버리스",
+      "이메일"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/arithmetric/aws-lambda-ses-forwarder",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T17:04:14.035Z",
+    "requirements": [
+      "Node.js",
+      "AWS 계정"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NPM 설치",
+        "command": "npm install aws-lambda-ses-forwarder",
+        "note": "패키지를 설치하여 Lambda 함수 배포 패키지를 구성합니다."
+      }
+    ],
+    "usageSteps": [
+      "AWS SES에서 도메인 및 이메일 수신 규칙을 설정합니다.",
+      "Lambda 함수를 생성하고 본 스크립트 코드를 업로드합니다.",
+      "설정 파일에 수신 및 포워딩할 이메일 주소 매핑을 지정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1727,
+    "forks": 439,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
     "id": "a2ui",
     "name": "A2UI",
     "github": "https://github.com/a2ui-project/a2ui",
