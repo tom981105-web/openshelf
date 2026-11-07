@@ -1,5 +1,278 @@
 [
   {
+    "id": "eternalterminal",
+    "name": "EternalTerminal",
+    "github": "https://github.com/MisterTea/EternalTerminal",
+    "description": "네트워크 연결이 끊겨도 세션이 종료되지 않고 자동으로 재연결되는 원격 셸 도구입니다.",
+    "longDescription": "SSH와 유사하지만 IP 변경이나 네트워크 중단 상황에서도 기존 터미널 작업 세션을 끊김 없이 유지하고 복구해 줍니다.",
+    "category": "네트워크",
+    "tags": [
+      "원격셸",
+      "SSH",
+      "터미널",
+      "자동재연결",
+      "C++"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://mistertea.github.io/EternalTerminal/",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T00:04:11.220Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치 (macOS)",
+        "command": "brew install et",
+        "note": "macOS 환경에서 홈브루를 통해 클라이언트를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "서버와 클라이언트에 EternalTerminal을 설치합니다.",
+      "et [원격주소] 명령어로 원격 서버에 접속합니다.",
+      "네트워크가 끊기거나 이동하더라도 세션이 유지되는지 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3943,
+    "forks": 240,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "psmux",
+    "name": "psmux",
+    "github": "https://github.com/psmux/psmux",
+    "description": "Rust 기반으로 Windows 환경에 최적화된 고성능 터미널 멀티플렉서입니다.",
+    "longDescription": "PowerShell 및 Windows 터미널에서 tmux와 유사한 멀티태스킹과 창 분할 환경을 네이티브로 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "tmux",
+      "PowerShell",
+      "터미널",
+      "멀티플렉서",
+      "Rust"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://psmux.pages.dev/",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T00:04:11.220Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "WinGet 설치",
+        "command": "winget install psmux",
+        "note": "윈도우 패키지 관리자를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "지원되는 패키지 관리자나 Cargo를 통해 psmux를 설치합니다.",
+      "터미널에서 tmux 또는 psmux 명령어를 실행합니다.",
+      "단축키를 이용해 화면을 분할하고 세션을 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3807,
+    "forks": 245,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "agent-of-empires",
+    "name": "agent-of-empires",
+    "github": "https://github.com/agent-of-empires/agent-of-empires",
+    "description": "여러 AI 코딩 에이전트를 TUI 또는 웹 대시보드에서 병렬로 관리하는 세션 매니저입니다.",
+    "longDescription": "Claude Code, OpenCode 등 다양한 AI 코딩 도구를 백그라운드나 컨테이너 환경에서 동시에 실행하고 모바일이나 브라우저로 모니터링할 수 있습니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI코딩",
+      "오케스트레이터",
+      "CLI",
+      "TUI",
+      "웹대시보드"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://www.agent-of-empires.com/",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T00:04:11.220Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude Code",
+      "OpenCode",
+      "Mistral Vibe",
+      "Codex CLI",
+      "Gemini CLI",
+      "GitHub Copilot CLI"
+    ],
+    "install": [
+      {
+        "title": "쉘 스크립트 설치",
+        "command": "curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/agent-of-empires/agent-of-empires/main/scripts/install.sh | bash",
+        "note": "공식 설치 스크립트를 다운로드하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "명령어 'aoe'를 입력하여 TUI 대시보드를 실행합니다.",
+      "'aoe add --cmd claude' 명령어로 새로운 AI 에이전트 세션을 추가합니다.",
+      "'aoe serve' 명령어로 웹 대시보드를 실행하여 브라우저에서 모니터링합니다."
+    ],
+    "examplePrompt": "aoe add --cmd claude",
+    "usageNote": "",
+    "stars": 3662,
+    "forks": 399,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "walk",
+    "name": "walk",
+    "github": "https://github.com/antonmedv/walk",
+    "description": "키보드 탐색에 최적화된 빠르고 편리한 Go 기반 터미널 파일 관리자입니다.",
+    "longDescription": "기존의 cd 및 ls 명령어를 대체하여 화살표나 vi 키맵으로 디렉터리를 빠르게 탐색하고 이동할 수 있도록 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "파일관리자",
+      "터미널",
+      "CLI",
+      "Go",
+      "네비게이터"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/antonmedv/walk",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T00:04:11.220Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew 설치",
+        "command": "brew install walk",
+        "note": "맥OS 환경에서 홈브루를 이용해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설정 파일에 lk 함수를 등록하여 디렉터리 이동 기능을 연동합니다.",
+      "터미널에서 'lk'를 입력하여 파일 탐색기를 실행합니다.",
+      "방향쇠나 키보드로 원하는 폴더를 선택하고 이동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3650,
+    "forks": 110,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "surge",
+    "name": "Surge",
+    "github": "https://github.com/SurgeDM/Surge",
+    "description": "파워 유저를 위해 키보드 중심 워크플로우로 제작된 고성능 TUI 다운로드 매니저입니다.",
+    "longDescription": "복잡한 GUI 없이 터미널 환경에서 빠르고 효율적으로 대용량 파일을 다운로드하고 진행 상태를 모니터링할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "다운로드매니저",
+      "TUI",
+      "CLI",
+      "Go",
+      "터미널"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://surgedm.github.io",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T00:04:11.220Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리스 페이지에서 바이너리를 다운로드하거나 패키지 매니저로 설치합니다.",
+      "다운로드할 주소와 함께 Surge를 실행합니다.",
+      "키보드 단축키를 이용해 다운로드 목록과 속도를 제어합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3625,
+    "forks": 159,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "bullet",
+    "name": "bullet",
+    "github": "https://github.com/bchao1/bullet",
+    "description": "파이썬 CLI 도구에서 다채롭고 직관적인 대화형 프롬프트를 쉽게 만들 수 있는 라이브러리입니다.",
+    "longDescription": "체크박스, 비밀번호 입력, 메뉴 선택 등 다양한 형태의 커스텀 프롬프트를 터미널 상에서 손쉽게 구현할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "프롬프트",
+      "CLI",
+      "인터랙티브",
+      "유틸리티"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://pypi.org/project/bullet/",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T00:04:11.220Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "PyPI 패키지 설치",
+        "command": "pip install bullet",
+        "note": "파이썬 패키지 관리자를 통해 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 프로젝트에 bullet 패키지를 임포트합니다.",
+      "Bullet 또는 Check 등의 프롬프트 객체를 생성하고 선택 항목을 정의합니다.",
+      "스크립트를 실행하여 터미널에서 대화형 선택 메뉴를 조작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3613,
+    "forks": 117,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
     "id": "awesome-3d-printing",
     "name": "Awesome 3D Printing",
     "github": "https://github.com/ad-si/awesome-3d-printing",
