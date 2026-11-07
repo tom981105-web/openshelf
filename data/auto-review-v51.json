@@ -1,7 +1,1246 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-07T18:06:27.676Z",
+  "updatedAt": "2026-11-07T19:06:25.185Z",
   "items": [
+    {
+      "id": "metabase",
+      "name": "Metabase",
+      "github": "https://github.com/metabase/metabase",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "metabase",
+        "name": "Metabase",
+        "github": "https://github.com/metabase/metabase",
+        "description": "누구나 쉽게 데이터 질문을 던지고 분석할 수 있는 오픈소스 비즈니스 인텔리전스 도구",
+        "longDescription": "조직 내 모든 구성원이 SQL을 몰라도 직관적으로 데이터를 탐색하고 시각화 대시보드를 구축할 수 있는 비즈니스 인텔리전스 도구입니다. 5분 만에 설치할 수 있으며 임베디드 분석과 슬랙 연동 등을 지원합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "비즈니스 인텔리전스",
+          "대시보드",
+          "데이터 시각화"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://metabase.com",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Docker 또는 Java"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -d -p 3000:3000 --name metabase metabase/metabase",
+            "note": "Docker를 통해 메타베이스를 로컬에서 간편하게 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "도커 컨테이너를 실행하여 서비스에 접속합니다.",
+          "관리자 계정을 생성하고 데이터베이스 연결 정보를 입력합니다.",
+          "시각적 쿼리 빌더를 통해 데이터를 조회하고 대시보드를 만듭니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프로덕션 환경에서는 공식 가이드에 따라 전용 데이터베이스를 설정하는 것이 좋습니다.",
+        "stars": 50223,
+        "forks": 6993,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:15.068Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:18.366Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-07T19:06:22.386Z"
+    },
+    {
+      "id": "posthog",
+      "name": "PostHog",
+      "github": "https://github.com/PostHog/posthog",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "posthog",
+        "name": "PostHog",
+        "github": "https://github.com/PostHog/posthog",
+        "description": "통합 제품 분석 및 사용자 행동 관찰 플랫폼",
+        "longDescription": "제품 분석, 세션 리플레이, 기능 플래그 및 A/B 테스트 기능을 제공하는 종합 개발자 플랫폼입니다. AI 에이전트 연동을 위한 제품 컨텍스트 레이어를 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "제품분석",
+          "세션리플레이",
+          "A/B테스트"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://posthog.com",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 클라우드에 가입하거나 자체 호스팅 환경을 구성합니다.",
+          "애플리케이션에 PostHog SDK를 연동합니다.",
+          "대시보드에서 사용자 이벤트와 세션 리플레이를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 40688,
+        "forks": 3600,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:15.286Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:18.607Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-07T19:06:23.075Z"
+    },
+    {
+      "id": "timescaledb",
+      "name": "TimescaleDB",
+      "github": "https://github.com/timescale/timescaledb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "timescaledb",
+        "name": "TimescaleDB",
+        "github": "https://github.com/timescale/timescaledb",
+        "description": "고성능 실시간 시계열 분석을 위한 PostgreSQL 확장 데이터베이스",
+        "longDescription": "PostgreSQL 기반으로 구축된 시계열 및 이벤트 데이터 전용 데이터베이스 확장 기능입니다. 표준 SQL의 편리함을 유지하면서 대규모 시계열 데이터를 고속으로 처리할 수 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "시계열 데이터베이스",
+          "PostgreSQL",
+          "실시간 분석"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.tigerdata.com/",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "로컬 개발용 스크립트 실행",
+            "command": "curl -sL https://tsdb.co/start-local | sh",
+            "note": "로컬 테스트 및 개발용 TimescaleDB 인스턴스를 빠르게 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 실행하거나 PostgreSQL에 확장을 추가합니다.",
+          "하이퍼테이블(Hypertable)을 생성하여 시계열 데이터를 적재합니다.",
+          "SQL 쿼리를 통해 실시간 분석 및 집계를 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "로컬 시작 스크립트는 개발 및 테스트 용도로만 사용해야 합니다.",
+        "stars": 23821,
+        "forks": 1185,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:15.503Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:18.870Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-07T19:06:23.811Z"
+    },
+    {
+      "id": "cube",
+      "name": "Cube",
+      "github": "https://github.com/cube-js/cube",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "cube",
+        "name": "Cube",
+        "github": "https://github.com/cube-js/cube",
+        "description": "AI 및 BI 분석을 위한 오픈소스 시맨틱 레이어",
+        "longDescription": "데이터 웨어하우스와 애플리케이션 사이에 위치하여 일관된 지표와 정의를 제공하는 시맨틱 레이어입니다. 빠른 캐싱과 접근 제어를 통해 대화형 분석과 BI 대시보드를 지원합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "시맨틱 레이어",
+          "비즈니스 인텔리전스",
+          "대화형 분석"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://cube.dev",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker로 Cube Core 실행",
+            "command": "docker run -p 4000:4000 -p 15432:15432 -v ${PWD}:/cube/conf -e CUBEJS_DEV_MODE=true cubejs/cube",
+            "note": "로컬 환경에서 개발 모드로 Cube 서버를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트 디렉토리에서 Docker 컨테이너를 실행합니다.",
+          "브라우저에서 설정 페이지에 접속해 데이터 소스를 연결합니다.",
+          "데이터 모델 파일을 작성하여 지표와 차원을 정의합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "개발 모드(CUBEJS_DEV_MODE=true)는 인증을 우회하므로 프로덕션에서는 비활성화해야 합니다.",
+        "stars": 21190,
+        "forks": 2183,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:15.694Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:19.229Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-07T19:06:24.496Z"
+    },
+    {
+      "id": "companyos",
+      "name": "CompanyOS",
+      "github": "https://github.com/kortix-ai/CompanyOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "companyos",
+        "name": "CompanyOS",
+        "github": "https://github.com/kortix-ai/CompanyOS",
+        "description": "기업을 위한 오픈소스 멀티플레이어 AI 에이전트 운영 체제",
+        "longDescription": "병렬로 실행되고 기업의 메모리를 공유하는 상시 가동형 AI 에이전트 하네스입니다. 웹훅, 이벤트, 팀 메시지에 반응하여 독립된 클라우드 환경에서 작업을 수행하고 깃(Git)을 통해 변경 사항을 관리합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 에이전트",
+          "오픈소스",
+          "업무 자동화"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kortix.com",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Docker",
+          "Git"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 필요한 환경 변수를 설정합니다.",
+          "에이전트와 스킬 규칙을 Git 저장소에 구성합니다.",
+          "이벤트나 메시지에 따라 에이전트 스웜이 작업을 수행하도록 실행합니다."
+        ],
+        "examplePrompt": "고객 지원 티켓을 분석하고 자동 답변을 생성해줘",
+        "usageNote": "",
+        "stars": 20508,
+        "forks": 3449,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:15.919Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:19.480Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-07T19:06:25.185Z"
+    },
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "windmill",
+        "name": "Windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "워크플로우, 앱, AI 에이전트를 코드로 빌드하는 고성능 오픈소스 오케스트레이션 플랫폼",
+        "longDescription": "파이썬, 타입스크립트, Go 등 다양한 언어로 스크립트를 작성하고 이를 UI, API, 크론잡, 워크플로우로 자동 변환하는 플랫폼입니다. AI 통합 기능을 제공하며 Retool이나 n8n의 오픈소스 대안으로 활용됩니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우 자동화",
+          "오케스트레이션",
+          "AI 에이전트",
+          "내부 도구",
+          "셀프 호스팅"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker Compose 등을 이용해 Windmill 인스턴스를 실행합니다.",
+          "지원되는 언어로 필요한 스크립트나 파이프라인을 작성합니다.",
+          "스크립트를 조합하여 자동화 워크플로우와 공유 가능한 UI를 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18456,
+        "forks": 1143,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:16.202Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:19.795Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "get-jobs",
+      "name": "Get Jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "get-jobs",
+        "name": "Get Jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "주요 구직 플랫폼에서 이력서 자동 제출 및 구직 활동을 지원하는 AI 구직 보조 도구",
+        "longDescription": "보스직핀, 전程无忧, 猎聘, 智联招聘 등 중국의 주요 구직 플랫폼에서 이력서를 자동으로 제출하고 구직 과정을 관리해주는 자동화 스크립트 및 에이전트 도구입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "구직 자동화",
+          "이력서",
+          "AI 에이전트",
+          "Spring Boot",
+          "자동화"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Java",
+          "Spring Boot"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트 저장소를 클론하고 설정 파일을 편집합니다.",
+          "구직 플랫폼 계정 정보와 이력서 데이터를 입력합니다.",
+          "자동 지원 스크립트를 실행하여 구직 과정을 진행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "플랫폼 정책에 따라 계정 제재 위험이 있을 수 있으므로 주의해서 사용해야 합니다.",
+        "stars": 9623,
+        "forks": 1095,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:16.412Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:20.121Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "growthbook",
+      "name": "GrowthBook",
+      "github": "https://github.com/growthbook/growthbook",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "growthbook",
+        "name": "GrowthBook",
+        "github": "https://github.com/growthbook/growthbook",
+        "description": "기능 플래그, A/B 테스트, 제품 분석을 통합 제공하는 오픈소스 실험 플랫폼",
+        "longDescription": "제품 기능 플래그 관리와 사용자 실험(A/B 테스팅), 그리고 데이터 웨어하우스 기반의 제품 분석을 결합한 오픈소스 플랫폼입니다. 자체 인프라에 직접 설치하여 데이터 소유권을 유지하며 사용할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "기능 플래그",
+          "A/B 테스트",
+          "제품 분석",
+          "실험",
+          "데이터 분석"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.growthbook.io",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose로 실행",
+            "command": "git clone https://github.com/growthbook/growthbook.git && cd growthbook && docker compose up -d",
+            "note": "소스코드를 클론한 후 도커 컴포즈를 통해 백엔드와 프론트엔드를 함께 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "도커를 통해 GrowthBook 컨테이너를 실행합니다.",
+          "웹 브라우저로 접속해 초기 관리자 계정을 생성합니다.",
+          "데이터 웨어하우스를 연결하고 기능 플래그나 실험을 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8573,
+        "forks": 896,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:16.600Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:20.396Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "pinot",
+      "name": "Apache Pinot",
+      "github": "https://github.com/apache/pinot",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04"
+    },
+    {
+      "id": "chartbrew",
+      "name": "Chartbrew",
+      "github": "https://github.com/chartbrew/chartbrew",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "chartbrew",
+        "name": "Chartbrew",
+        "github": "https://github.com/chartbrew/chartbrew",
+        "description": "데이터베이스와 API에 직접 연결하여 실시간 차트와 대시보드를 구축하는 오픈소스 보고 플랫폼",
+        "longDescription": "SQL, NoSQL 데이터베이스 및 REST API에서 데이터를 가져와 시각적인 대시보드를 만들 수 있는 오픈소스 웹 애플리케이션입니다. AI 보조 기능을 포함하고 있어 손쉽게 쿼리를 작성하고 차트를 공유할 수 있습니다.",
+        "category": "지식·검색",
+        "tags": [
+          "대시보드",
+          "데이터 시각화",
+          "SQL",
+          "API",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://chartbrew.com",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Node.js 22.23.4 이상"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "백엔드 개발 서버 실행",
+            "command": "cd server/ && npm run start-dev",
+            "note": "서버 디렉토리에서 개발 모드 백엔드를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 데이터베이스 또는 API 연결 정보를 설정합니다.",
+          "프론트엔드와 백엔드 개발 서버를 각각 실행합니다.",
+          "웹 인터페이스에서 데이터를 연결하고 대시보드와 차트를 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4086,
+        "forks": 457,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:16.820Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:20.814Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 아웃라이너의 기능을 결합한 자유 형식의 계층형 데이터 조직화 도구입니다.",
+        "longDescription": "복잡한 데이터, 할 일 목록, 일정, 브레인스토밍 등을 계층 구조로 깔끔하게 정리할 수 있는 데스크톱 생산성 도구입니다. 기존의 단조로운 스프레드시트나 텍스트 편집기와 달리 다차원적인 정보 구조화를 지원합니다.",
+        "category": "생산성",
+        "tags": [
+          "계층형스프레드시트",
+          "마인드맵",
+          "아웃라이너",
+          "일정관리",
+          "생산성"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리즈 페이지에서 운영체제에 맞는 프로그램을 다운로드합니다.",
+          "프로그램을 실행하여 새 시트를 생성합니다.",
+          "그리드 내에 계층형으로 데이터를 입력하고 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS에서는 최초 실행 시 서명되지 않은 앱 경고가 발생할 수 있습니다.",
+        "stars": 3192,
+        "forks": 225,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:17.014Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-07T19:06:21.290Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "wppconnect",
+      "name": "WPPConnect",
+      "github": "https://github.com/wppconnect-team/wppconnect",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "wppconnect",
+        "name": "WPPConnect",
+        "github": "https://github.com/wppconnect-team/wppconnect",
+        "description": "Puppeteer 기반으로 Node.js 및 TypeScript 환경에서 왓츠앱 웹(WhatsApp Web)을 자동화하고 봇을 구축하는 라이브러리입니다.",
+        "longDescription": "왓츠앱 웹 세션을 관리하고, 메시지를 송수신하며, 미디어를 처리하여 간편하게 챗봇과 자동화 워크플로우를 만들 수 있는 오픈소스 생태계 도구입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "Node.js",
+          "TypeScript",
+          "Puppeteer",
+          "왓츠앱",
+          "챗봇"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://wppconnect.io/wppconnect/",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 설치",
+            "command": "npm install @wppconnect-team/wppconnect",
+            "note": "프로젝트 디렉토리에서 의존성을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 패키지를 설치합니다.",
+          "코드에서 왓츠앱 세션을 초기화하고 클라이언트를 생성합니다.",
+          "QR 코드를 스캔하여 인증을 완료하고 메시지 송수신 및 봇 로직을 구현합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "왓츠앱 웹 업데이트에 따라 패키지 버전을 주기적으로 확인해야 합니다.",
+        "stars": 3523,
+        "forks": 587,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:17.209Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "pretzelai",
+      "name": "Pretzel",
+      "github": "https://github.com/pretzelai/pretzelai",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "pretzelai",
+        "name": "Pretzel",
+        "github": "https://github.com/pretzelai/pretzelai",
+        "description": "Jupyter Notebook을 기반으로 AI 코드 생성 및 자동 완성 기능을 추가한 현대적인 오픈소스 데이터 분석 도구입니다.",
+        "longDescription": "기존 주피터 노트북의 모든 설정과 확장 기능을 그대로 유지하면서 AI 코드 생성, 인라인 탭 완성, 사이드바 채팅 기능을 제공하여 데이터 분석 생산성을 대폭 높여줍니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Jupyter",
+          "AI",
+          "데이터분석",
+          "Python",
+          "SQL"
+        ],
+        "platforms": [
+          "Web",
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://withpretzel.com",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Python",
+          "pip"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "pip 설치",
+            "command": "pip install pretzelai",
+            "note": "파이썬 패키지 관리자를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "명령어 창에서 설치 명령을 실행합니다.",
+          "터미널에 `pretzel lab`을 입력하여 웹 인터페이스를 엽니다.",
+          "셀에 코드를 입력하거나 AI에게 질문하여 분석을 수행합니다."
+        ],
+        "examplePrompt": "이 데이터셋의 결측치를 처리하고 시각화하는 코드를 작성해줘",
+        "usageNote": "",
+        "stars": 2189,
+        "forks": 159,
+        "starsUpdatedAt": "2026-11-07"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-07T19:06:17.454Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "nao",
+      "name": "Nao",
+      "github": "https://github.com/getnao/nao",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "nao",
+        "name": "Nao",
+        "github": "https://github.com/getnao/nao",
+        "description": "데이터 웨어하우스와 연동해 자연어로 데이터를 분석하고 대화할 수 있는 오픈소스 에이전틱 비즈니스 인텔리전스(BI) 도구입니다.",
+        "longDescription": "데이터 팀이 컨텍스트 계층을 구축하고, 전사 직원이 웹 앱이나 슬랙(Slack) 등을 통해 일상 언어로 데이터를 조회하고 인사이트를 도출할 수 있도록 지원하는 에이전트 기반 분석 플랫폼입니다.",
+        "category": "지식·검색",
+        "tags": [
+          "BI",
+          "데이터분석",
+          "SQL",
+          "Slack",
+          "Text-to-SQL"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.getnao.io",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Docker",
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "nao-core CLI를 이용해 데이터 웨어하우스와 컨텍스트를 연결합니다.",
+          "웹 인터페이스나 슬랙 봇을 배포합니다.",
+          "자연어로 질문하여 데이터를 분석하고 리포트를 생성합니다."
+        ],
+        "examplePrompt": "지난 분기 지역별 매출 상위 5개 제품을 보여줘",
+        "usageNote": "",
+        "stars": 1995,
+        "forks": 302,
+        "starsUpdatedAt": "2026-11-07"
+      }
+    },
+    {
+      "id": "anyquery",
+      "name": "Anyquery",
+      "github": "https://github.com/julien040/anyquery",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "anyquery",
+        "name": "Anyquery",
+        "github": "https://github.com/julien040/anyquery",
+        "description": "GitHub, Notion, Airtable 등 60개 이상의 외부 도구와 서비스를 단일 SQL 인터페이스로 통합 조회할 수 있는 도구입니다.",
+        "longDescription": "다양한 SaaS 및 파일 형식 데이터를 표준 SQL 쿼리로 조회할 수 있게 해 주며, MCP(Model Context Protocol)를 통해 좋아하는 LLM과 연동하여 대화형으로 데이터를 다룰 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "SQL",
+          "데이터베이스",
+          "API",
+          "MCP",
+          "LLM"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://anyquery.dev",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "서버 실행 및 접속",
+            "command": "anyquery server & mysql -u root -h 127.0.0.1 -P 8070",
+            "note": "MySQL 호환 클라이언트로 연동하여 쿼리를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Homebrew, APT 등 패키지 매니저나 바이너리를 통해 Anyquery를 설치합니다.",
+          "서버를 실행하고 MySQL 호환 클라이언트로 접속합니다.",
+          "SQL 문법을 사용하여 연동된 서비스의 데이터를 조회합니다."
+        ],
+        "examplePrompt": "SELECT * FROM github_issues WHERE state = 'open';",
+        "usageNote": "",
+        "stars": 1791,
+        "forks": 141,
+        "starsUpdatedAt": "2026-11-07"
+      }
+    },
+    {
+      "id": "llmgateway",
+      "name": "LLM Gateway",
+      "github": "https://github.com/theopenco/llmgateway",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "llmgateway",
+        "name": "LLM Gateway",
+        "github": "https://github.com/theopenco/llmgateway",
+        "description": "여러 LLM 제공자의 요청을 통합 관리, 라우팅하고 비용 및 토큰 사용량을 분석할 수 있는 오픈소스 API 게이트웨이입니다.",
+        "longDescription": "OpenAI API 형식과 호환되는 단일 인터페이스를 제공하여 여러 AI 모델 제공사로의 트래픽 라우팅, API 키 중앙 관리, 성능 메트릭 및 비용 추적을 손쉽게 처리할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "LLM",
+          "API게이트웨이",
+          "OpenAI",
+          "Anthropic",
+          "모니터링"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://llmgateway.io",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Node.js",
+          "pnpm",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "개발 환경 설정 및 의존성 설치",
+            "command": "pnpm i && pnpm run setup",
+            "note": "의존성 설치 후 Docker 서비스 및 데이터베이스를 초기화합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 복제하고 패키지를 설치합니다.",
+          "도커 환경 및 개발 서버를 구동합니다.",
+          "통합 API 엔드포인트를 통해 LLM 요청을 라우팅하고 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "WSL2 환경에서는 Docker Desktop 연동이 활성화되어 있어야 합니다.",
+        "stars": 1729,
+        "forks": 201,
+        "starsUpdatedAt": "2026-11-07"
+      }
+    },
+    {
+      "id": "bruin",
+      "name": "Bruin",
+      "github": "https://github.com/bruin-data/bruin",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04"
+    },
+    {
+      "id": "sql-explorer",
+      "name": "SQL Explorer",
+      "github": "https://github.com/explorerhq/sql-explorer",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04",
+      "tool": {
+        "id": "sql-explorer",
+        "name": "SQL Explorer",
+        "github": "https://github.com/explorerhq/sql-explorer",
+        "description": "Django 애플리케이션 내에서 빠르게 SQL 쿼리를 작성, 실행하고 팀원들과 공유할 수 있는 간편한 리포팅 도구입니다.",
+        "longDescription": "복잡한 설정 없이 직관적인 웹 기반 SQL 에디터를 통해 데이터를 탐색하고 시각화하며, AI 보조 기능을 활용해 안전하고 빠르게 쿼리를 작성할 수 있도록 지원합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "SQL",
+          "Django",
+          "리포팅",
+          "데이터분석",
+          "대시보드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.sqlexplorer.io",
+        "featured": 9,
+        "added": "2026-11-07",
+        "addedAt": "2026-11-07T19:04:15.519Z",
+        "requirements": [
+          "Docker",
+          "Docker Compose"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "도커 컴포즈 실행",
+            "command": "docker compose up",
+            "note": "포함된 테스트 프로젝트를 도커로 즉시 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 복제하고 도커 컴포즈 명령을 실행합니다.",
+          "브라우저에서 `127.0.0.1:8000/explorer/`로 접속합니다.",
+          "관리자 계정으로 로그인하여 SQL 쿼리를 작성하고 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2876,
+        "forks": 372,
+        "starsUpdatedAt": "2026-11-07"
+      }
+    },
+    {
+      "id": "clickvisual",
+      "name": "ClickVisual",
+      "github": "https://github.com/clickvisual/clickvisual",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04"
+    },
+    {
+      "id": "aptabase",
+      "name": "Aptabase",
+      "github": "https://github.com/aptabase/aptabase",
+      "license": "AGPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-07T19:06:14.351Z",
+      "sourceRun": "2026-11-08T04"
+    },
     {
       "id": "prompts-chat",
       "name": "prompts.chat",
@@ -407,84 +1646,6 @@
       "recheckedAt": "2026-11-07T18:06:27.676Z"
     },
     {
-      "id": "companyos",
-      "name": "CompanyOS",
-      "github": "https://github.com/kortix-ai/CompanyOS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-07T18:06:14.458Z",
-      "sourceRun": "2026-11-08T03",
-      "tool": {
-        "id": "companyos",
-        "name": "CompanyOS",
-        "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "멀티플레이어 AI 에이전트와 회사 운영 시스템을 코드로 구축할 수 있는 오픈소스 플랫폼입니다.",
-        "longDescription": "기업 내에서 다양한 AI 에이전트들이 병렬로 협업하며 메모리를 공유하고 3,000개 이상의 외부 앱과 연동되도록 지원하는 클라우드 네이티브 에이전트 하네스 시스템입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "TypeScript",
-          "AI에이전트",
-          "자동화",
-          "오픈소스",
-          "클라우드"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kortix.com",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T18:04:10.372Z",
-        "requirements": [
-          "Node.js",
-          "Git"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하여 로컬 또는 서버 환경에 설정합니다.",
-          "필요한 에이전트 규칙과 연동할 앱을 구성합니다.",
-          "웹 인터페이스를 통해 에이전트 스웜을 실행하고 업무를 자동화합니다."
-        ],
-        "examplePrompt": "고객 지원 티켓을 분석하고 요약하는 에이전트를 설정해줘",
-        "usageNote": "",
-        "stars": 20505,
-        "forks": 3449,
-        "starsUpdatedAt": "2026-11-07"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-07T18:06:16.365Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-07T18:06:21.717Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "gun",
       "name": "gun",
       "github": "https://github.com/amark/gun",
@@ -645,85 +1806,6 @@
       }
     },
     {
-      "id": "windmill",
-      "name": "windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-07T18:06:14.458Z",
-      "sourceRun": "2026-11-08T03",
-      "tool": {
-        "id": "windmill",
-        "name": "windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 코드로 작성하고 오케스트레이션할 수 있는 고성능 플랫폼입니다.",
-        "longDescription": "엔지니어가 다양한 프로그래밍 언어로 스크립트를 작성하고 Git과 연동할 수 있으며, 비즈니스 팀은 AI를 활용해 워크플로우를 구성할 수 있는 자체 호스팅 가능한 오픈소스 플랫폼입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "Rust",
-          "TypeScript",
-          "Python",
-          "워크플로우",
-          "오케스트레이션"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T18:04:10.372Z",
-        "requirements": [
-          "Docker",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker를 사용하여 윈드밀 인스턴스를 로컬 또는 서버에 실행합니다.",
-          "웹 UI 또는 CLI를 통해 스크립트나 워크플로우를 작성합니다.",
-          "작성된 스크립트를 API나 정기 작업(Cron)으로 배포합니다."
-        ],
-        "examplePrompt": "매일 아침 이메일로 수신된 데이터를 분석하고 요약하는 파이프라인을 만들어줘",
-        "usageNote": "",
-        "stars": 18455,
-        "forks": 1143,
-        "starsUpdatedAt": "2026-11-07"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-07T18:06:17.041Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-07T18:06:22.965Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "stanza",
       "name": "stanza",
       "github": "https://github.com/stanfordnlp/stanza",
@@ -806,73 +1888,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "get-jobs",
-      "name": "Get Jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-07T18:06:14.458Z",
-      "sourceRun": "2026-11-08T03",
-      "tool": {
-        "id": "get-jobs",
-        "name": "Get Jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "다양한 채용 플랫폼에서 이력서 자동 제출 및 구직 과정을 돕는 AI 기반 일자리 탐색 보조 도구입니다.",
-        "longDescription": "국내 주요 채용 플랫폼(Boss, 전程无忧, 猎聘, 智联招聘 등)을 대상으로 이력서 자동 제출과 구직 활동을 지원하는 Java 기반 스크립트 도구입니다. 구직자의 반복적인 구직 과정을 자동화하여 시간과 노력을 절약해 줍니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "이력서 자동화",
-          "구직 도구",
-          "Java",
-          "업무 자동화"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T18:04:10.372Z",
-        "requirements": [
-          "Java 17+"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하고 프로젝트를 설정합니다.",
-          "지원하고자 하는 플랫폼의 계정 정보를 설정 파일에 입력합니다.",
-          "이력서 및 구직 조건을 구성한 후 실행 스크립트를 구동합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "타겟 채용 플랫폼의 이용 약관 및 자동화 정책을 준수하여 사용해야 합니다.",
-        "stars": 9624,
-        "forks": 1095,
-        "starsUpdatedAt": "2026-11-07"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-07T18:06:17.482Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "fastrtc",
@@ -1379,79 +2394,6 @@
       }
     },
     {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-07T17:06:12.153Z",
-      "sourceRun": "2026-11-08T02",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "아웃라인, 마인드맵, 스프레드시트를 대체하는 계층형 데이터 조직화 도구입니다.",
-        "longDescription": "자유로운 형식의 계층형 스프레드시트로, 할 일 목록, 프로젝트 관리, 브레인스토밍, 노트 필기 등 복잡한 데이터를 구조적으로 정리하는 데 최적화되어 있습니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "노트",
-          "생산성",
-          "C++"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T17:04:14.035Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리스 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
-          "프로그램을 실행하고 새로운 시트를 생성합니다.",
-          "계층 구조에 맞춰 항목과 데이터를 입력하고 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "macOS에서는 최초 실행 시 보안 설정에서 허용이 필요할 수 있습니다.",
-        "stars": 3192,
-        "forks": 225,
-        "starsUpdatedAt": "2026-11-07"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-07T17:06:14.275Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-07T17:06:18.702Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "kanmail",
       "name": "Kanmail",
       "github": "https://github.com/Oxygem/Kanmail",
@@ -1753,81 +2695,6 @@
         "starsUpdatedAt": "2026-11-07"
       },
       "licenseEvidenceCheckedAt": "2026-11-07T17:06:15.075Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "wppconnect",
-      "name": "WPPConnect",
-      "github": "https://github.com/wppconnect-team/wppconnect",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-07T17:06:12.153Z",
-      "sourceRun": "2026-11-08T02",
-      "tool": {
-        "id": "wppconnect",
-        "name": "WPPConnect",
-        "github": "https://github.com/wppconnect-team/wppconnect",
-        "description": "Puppeteer 기반으로 Node.js에서 왓츠앱 웹(WhatsApp Web)을 제어하는 자동화 라이브러리입니다.",
-        "longDescription": "WPPConnect는 개발자가 Node.js 및 TypeScript를 사용하여 왓츠앱 세션을 관리하고, 메시지를 송수신하며, 챗봇을 빌드할 수 있도록 돕는 강력한 자동화 라이브러리입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "챗봇",
-          "자동화",
-          "Node.js",
-          "TypeScript",
-          "메시징"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://wppconnect.io/wppconnect/",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T17:04:14.035Z",
-        "requirements": [
-          "Node.js",
-          "Puppeteer"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NPM 설치",
-            "command": "npm i @wppconnect-team/wppconnect",
-            "note": "프로젝트에 패키지를 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "패키지를 프로젝트에 설치합니다.",
-          "create 세션 함수를 호출하여 브라우저를 구동하고 QR 코드를 스캔합니다.",
-          "수신된 메시지를 핸들링하거나 자동으로 메시지를 전송하는 로직을 작성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3523,
-        "forks": 587,
-        "starsUpdatedAt": "2026-11-07"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-07T17:06:15.298Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -23523,90 +24390,6 @@
       "recheckedAt": "2026-11-06T15:07:12.622Z"
     },
     {
-      "id": "timescaledb",
-      "name": "TimescaleDB",
-      "github": "https://github.com/timescale/timescaledb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "timescaledb",
-        "name": "TimescaleDB",
-        "github": "https://github.com/timescale/timescaledb",
-        "description": "PostgreSQL 기반의 고성능 실시간 시계열 데이터 분석 및 이벤트 처리용 확장 데이터베이스입니다.",
-        "longDescription": "대규모 시계열 데이터와 IoT 데이터를 빠르게 처리할 수 있도록 최적화된 PostgreSQL 확장 기능입니다. 표준 SQL을 사용하여 시계열 분석을 수행할 수 있습니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "PostgreSQL",
-          "시계열",
-          "SQL",
-          "데이터베이스",
-          "분석"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.tigerdata.com/",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "로컬 개발용 빠른 시작",
-            "command": "curl -sL https://tsdb.co/start-local | sh",
-            "note": "로컬 테스트용 TimescaleDB 인스턴스를 다운로드하고 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "설치 스크립트를 통해 로컬 환경에 TimescaleDB를 실행합니다.",
-          "포트 6543을 통해 PostgreSQL 인스턴스에 접속합니다.",
-          "SQL 쿼리를 사용하여 시계열 데이터를 적재하고 분석합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "로컬 시작 스크립트는 개발 및 테스트 용도로만 권장됩니다.",
-        "stars": 23812,
-        "forks": 1184,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T15:07:02.508Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T15:07:06.809Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
-    },
-    {
       "id": "thingsboard",
       "name": "ThingsBoard",
       "github": "https://github.com/thingsboard/thingsboard",
@@ -30195,91 +30978,6 @@
       "recheckError": "Gemini HTTP 429"
     },
     {
-      "id": "growthbook",
-      "name": "GrowthBook",
-      "github": "https://github.com/growthbook/growthbook",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T05:11:18.469Z",
-      "sourceRun": "2026-11-06T14",
-      "tool": {
-        "id": "growthbook",
-        "name": "GrowthBook",
-        "github": "https://github.com/growthbook/growthbook",
-        "description": "기능 플래그, A/B 테스트, 제품 분석을 통합 제공하는 오픈소스 플랫폼입니다.",
-        "longDescription": "제품 기능 제어와 데이터 분석을 결합하여 웹 및 앱 서비스에서 실험을 수행하고 사용자의 반응을 통계적으로 분석할 수 있는 오픈소스 솔루션입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "A/B 테스트",
-          "기능 플래그",
-          "데이터 분석",
-          "TypeScript",
-          "Docker"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.growthbook.io",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T05:04:13.833Z",
-        "requirements": [
-          "Docker",
-          "Docker Compose"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker Compose로 실행",
-            "command": "git clone https://github.com/growthbook/growthbook.git && cd growthbook && docker compose up -d",
-            "note": "Docker를 이용해 로컬 서버를 백그라운드에서 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker Compose로 GrowthBook 인스턴스를 실행합니다.",
-          "웹 브라우저에서 로컬 주소에 접속하여 관리자 계정을 생성합니다.",
-          "기능 플래그를 생성하고 프로젝트 코드에 연동합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8571,
-        "forks": 895,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T05:11:20.587Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T05:11:24.010Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "lakefs",
       "name": "lakeFS",
       "github": "https://github.com/treeverse/lakeFS",
@@ -32120,92 +32818,6 @@
       "reasons": [],
       "checkedAt": "2026-11-05T21:12:04.008Z",
       "sourceRun": "2026-11-06T06"
-    },
-    {
-      "id": "llmgateway",
-      "name": "LLM Gateway",
-      "github": "https://github.com/theopenco/llmgateway",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-05T21:12:04.008Z",
-      "sourceRun": "2026-11-06T06",
-      "tool": {
-        "id": "llmgateway",
-        "name": "LLM Gateway",
-        "github": "https://github.com/theopenco/llmgateway",
-        "description": "단일 API 인터페이스로 여러 LLM 제공자의 요청을 라우팅, 관리 및 분석하는 오픈소스 API 게이트웨이입니다.",
-        "longDescription": "OpenAI, Anthropic 등 다양한 LLM 공급자 간의 요청을 통합 관리하고, API 키 중앙화, 토큰 사용량 및 비용 추적, 성능 지표 분석 기능을 제공하는 미들웨어입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "LLM",
-          "API 게이트웨이",
-          "프락시",
-          "OpenAI",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://llmgateway.io",
-        "featured": 9,
-        "added": "2026-11-05",
-        "addedAt": "2026-11-05T21:04:12.686Z",
-        "requirements": [
-          "Docker",
-          "pnpm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "개발 환경 설정 및 의존성 설치",
-            "command": "pnpm i && pnpm run setup",
-            "note": "의존성 설치 및 도커 서비스 구동"
-          }
-        ],
-        "usageSteps": [
-          "저장소를 복제하고 의존성을 설치합니다.",
-          "환경 변수를 설정하고 도커 서비스를 시작합니다.",
-          "게이트웨이를 통해 OpenAI 호환 형식으로 LLM 요청을 전송합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1725,
-        "forks": 201,
-        "starsUpdatedAt": "2026-11-05"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-05T21:12:05.699Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-05T21:12:09.805Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 429"
     },
     {
       "id": "cv-santiago",
@@ -41525,92 +42137,6 @@
       "sourceRun": "2026-11-05T01"
     },
     {
-      "id": "metabase",
-      "name": "Metabase",
-      "github": "https://github.com/metabase/metabase",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-04T15:07:33.678Z",
-      "sourceRun": "2026-11-05T00",
-      "tool": {
-        "id": "metabase",
-        "name": "Metabase",
-        "github": "https://github.com/metabase/metabase",
-        "description": "누구나 손쉽게 데이터를 분석하고 시각화할 수 있는 오픈소스 비즈니스 인텔리전스(BI) 도구입니다.",
-        "longDescription": "Metabase는 직관적인 대시보드와 질문 작성 인터페이스를 제공하여 SQL을 몰라도 팀 누구나 데이터에서 인사이트를 얻을 수 있도록 돕습니다. 다양한 데이터베이스와 쉽게 연동됩니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "BI",
-          "대시보드",
-          "데이터시각화",
-          "SQL",
-          "Clojure"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://metabase.com",
-        "featured": 9,
-        "added": "2026-11-04",
-        "addedAt": "2026-11-04T15:04:09.280Z",
-        "requirements": [
-          "Java 11 이상 또는 Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run -d -p 3000:3000 --name metabase metabase/metabase",
-            "note": "도커를 통한 간편 설치"
-          }
-        ],
-        "usageSteps": [
-          "Metabase를 실행하고 관리자 계정을 설정합니다.",
-          "사용 중인 데이터베이스(PostgreSQL, MySQL 등) 연결 정보를 입력합니다.",
-          "시각화 대시보드를 생성하고 팀원과 공유합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 50156,
-        "forks": 6979,
-        "starsUpdatedAt": "2026-11-04"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-04T15:07:36.166Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-04T15:07:41.706Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
-    },
-    {
       "id": "dragonfly",
       "name": "Dragonfly",
       "github": "https://github.com/dragonflydb/dragonfly",
@@ -48552,402 +49078,6 @@
       }
     },
     {
-      "id": "cube",
-      "name": "Cube",
-      "github": "https://github.com/cube-js/cube",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-04T00:06:33.467Z",
-      "sourceRun": "2026-11-04T09",
-      "tool": {
-        "id": "cube",
-        "name": "Cube",
-        "github": "https://github.com/cube-js/cube",
-        "description": "AI, BI, 임베디드 분석을 위한 오픈소스 시맨틱 레이어 플랫폼",
-        "longDescription": "데이터 웨어하우스와 애플리케이션 또는 BI 도구 사이에서 일관된 지표 정의와 접근 제어를 제공합니다. AI 에이전트와 대화형 분석 환경을 구축하는 데 적합합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "시맨틱레이어",
-          "데이터분석",
-          "BI"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://cube.dev",
-        "featured": 9,
-        "added": "2026-11-04",
-        "addedAt": "2026-11-04T00:04:19.261Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker로 실행",
-            "command": "docker run -p 4000:4000 -p 15432:15432 -v ${PWD}:/cube/conf -e CUBEJS_DEV_MODE=true cubejs/cube",
-            "note": "Cube 코어 서비스를 로컬 환경에 도커로 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트 디렉터리를 생성하고 도커 명령어를 실행합니다.",
-          "브라우저에서 `http://localhost:4000`에 접속하여 초기 설정을 진행합니다.",
-          "데이터 스키마를 정의하고 API 또는 BI 도구를 통해 데이터를 조회합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "개발 모드(CUBEJS_DEV_MODE=true)는 인증을 우회하므로 프로덕션 환경에서는 주의해야 합니다.",
-        "stars": 21156,
-        "forks": 2182,
-        "starsUpdatedAt": "2026-11-04"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-04T00:06:34.782Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-04T00:06:39.352Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-04T00:06:44.904Z"
-    },
-    {
-      "id": "chartbrew",
-      "name": "Chartbrew",
-      "github": "https://github.com/chartbrew/chartbrew",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-04T00:06:33.467Z",
-      "sourceRun": "2026-11-04T09",
-      "tool": {
-        "id": "chartbrew",
-        "name": "Chartbrew",
-        "github": "https://github.com/chartbrew/chartbrew",
-        "description": "데이터베이스와 API에 직접 연결하여 실시간 대시보드와 리포트를 구축하는 오픈소스 웹 애플리케이션입니다.",
-        "longDescription": "SQL, NoSQL 데이터베이스 및 REST API를 소스로 활용하여 아름다운 차트와 대시보드를 만들 수 있습니다. 내장된 AI 어시스턴트를 통해 손쉽게 쿼리를 작성하고 데이터를 시각화할 수 있습니다.",
-        "category": "지식·검색",
-        "tags": [
-          "대시보드",
-          "데이터 시각화",
-          "차트",
-          "API",
-          "SQL"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://chartbrew.com",
-        "featured": 9,
-        "added": "2026-11-04",
-        "addedAt": "2026-11-04T00:04:19.261Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "프론트엔드 및 백엔드 실행",
-            "command": "cd client/ && npm run start",
-            "note": "클라이언트 및 서버를 각각 실행하여 로컬 환경에서 개발을 시작합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트를 클론하고 의존성을 설치합니다.",
-          "프론트엔드와 백엔드 서버를 각각 실행합니다.",
-          "브라우저에서 `http://localhost:4018`에 접속하여 계정을 만들고 데이터 소스를 연결합니다."
-        ],
-        "examplePrompt": "연결된 데이터베이스의 최근 사용자 가입 추이를 보여주는 차트를 만들어줘.",
-        "usageNote": "",
-        "stars": 4062,
-        "forks": 457,
-        "starsUpdatedAt": "2026-11-04"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-04T00:06:36.059Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-04T00:06:41.543Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "pretzelai",
-      "name": "Pretzel",
-      "github": "https://github.com/pretzelai/pretzelai",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-04T00:06:33.467Z",
-      "sourceRun": "2026-11-04T09",
-      "tool": {
-        "id": "pretzelai",
-        "name": "Pretzel",
-        "github": "https://github.com/pretzelai/pretzelai",
-        "description": "AI 코드 생성, 인라인 자동완성, 사이드바 채팅 기능이 추가된 모던 오픈소스 주피터 노트북(Jupyter) 대안입니다.",
-        "longDescription": "기존 주피터 노트북의 환경과 설정을 그대로 유지하면서 AI 기반의 편집 및 오류 수정 기능을 제공합니다. 데이터 분석가와 연구원이 더 빠르게 코드를 작성하고 인사이트를 도출할 수 있도록 돕습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "주피터 노트북",
-          "AI 보조",
-          "데이터 분석",
-          "파이썬",
-          "코드 편집기"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://withpretzel.com",
-        "featured": 9,
-        "added": "2026-11-04",
-        "addedAt": "2026-11-04T00:04:19.261Z",
-        "requirements": [
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "PIP 설치",
-            "command": "pip install pretzelai",
-            "note": "파이썬 패키지 관리자를 통해 Pretzel을 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "터미널에서 `pip install pretzelai` 명령어로 패키지를 설치합니다.",
-          "`pretzel lab` 명령어를 실행하여 웹 인터페이스를 엽니다.",
-          "노트북 셀에서 코드를 작성하거나 AI에게 질문하여 분석을 수행합니다."
-        ],
-        "examplePrompt": "판다스 데이터프레임의 결측치를 처리하는 코드를 작성해줘.",
-        "usageNote": "",
-        "stars": 2188,
-        "forks": 159,
-        "starsUpdatedAt": "2026-11-04"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-04T00:06:36.343Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-04T00:06:41.911Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "nao",
-      "name": "nao",
-      "github": "https://github.com/getnao/nao",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-04T00:06:33.467Z",
-      "sourceRun": "2026-11-04T09",
-      "tool": {
-        "id": "nao",
-        "name": "nao",
-        "github": "https://github.com/getnao/nao",
-        "description": "데이터 팀이 정의한 컨텍스트 레이어를 바탕으로 누구나 자연어로 데이터를 분석할 수 있는 오픈소스 에이전틱 BI입니다.",
-        "longDescription": "데이터 웨어하우스와 문서, dbt 모델을 연동하여 신뢰할 수 있는 분석 컨텍스트를 구축합니다. 웹 앱, 슬랙(Slack), 팀즈(Teams) 등 다양한 채널에서 자연어 질문으로 데이터를 조회하고 리포트를 생성할 수 있습니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI 에이전트",
-          "BI",
-          "데이터 분석",
-          "텍스트 투 SQL",
-          "슬랙봇"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.getnao.io",
-        "featured": 9,
-        "added": "2026-11-04",
-        "addedAt": "2026-11-04T00:04:19.261Z",
-        "requirements": [
-          "Node.js 또는 Docker"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "nao-core CLI를 사용하여 데이터 컨텍스트 레이어를 구축하고 동기화합니다.",
-          "nao 채팅 인터페이스 또는 슬랙 봇을 배포합니다.",
-          "평문 질문을 통해 데이터를 분석하고 대화형 스토리를 공유합니다."
-        ],
-        "examplePrompt": "이번 달 지역별 판매 실적 상위 5개 제품을 보여줘.",
-        "usageNote": "",
-        "stars": 1982,
-        "forks": 303,
-        "starsUpdatedAt": "2026-11-04"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-04T00:06:36.660Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-04T00:06:42.266Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "posthog",
-      "name": "PostHog",
-      "github": "https://github.com/PostHog/posthog",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-04T00:06:33.467Z",
-      "sourceRun": "2026-11-04T09",
-      "tool": {
-        "id": "posthog",
-        "name": "PostHog",
-        "github": "https://github.com/PostHog/posthog",
-        "description": "제품 분석, 에러 추적, 세션 리플레이 등을 제공하는 오픈소스 개발자 분석 플랫폼입니다.",
-        "longDescription": "제품 분석, 웹 분석, 세션 리플레이, 기능 플래그, 실험 및 에러 추적 기능을 통합 제공하여 제품 사용자의 행동과 에이전트 진단에 필요한 맥락 데이터를 수집합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "분석",
-          "제품 분석",
-          "세션 리플레이",
-          "개발자 도구",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://posthog.com",
-        "featured": 9,
-        "added": "2026-11-04",
-        "addedAt": "2026-11-04T00:04:19.261Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "PostHog 공식 웹사이트 또는 자체 호스팅 환경을 설정합니다.",
-          "웹 또는 앱 프로젝트에 관련 SDK나 추적 코드를 연동합니다.",
-          "대시보드에서 사용자 이벤트, 에러 로그 및 세션 리플레이를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 40625,
-        "forks": 3586,
-        "starsUpdatedAt": "2026-11-04"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-04T00:06:36.978Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
       "id": "sourcerer-app",
       "name": "Sourcerer App",
       "github": "https://github.com/sourcerer-io/sourcerer-app",
@@ -48956,122 +49086,6 @@
       "reasons": [],
       "checkedAt": "2026-11-04T00:06:33.467Z",
       "sourceRun": "2026-11-04T09"
-    },
-    {
-      "id": "sql-explorer",
-      "name": "SQL Explorer",
-      "github": "https://github.com/explorerhq/sql-explorer",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-04T00:06:33.467Z",
-      "sourceRun": "2026-11-04T09",
-      "tool": {
-        "id": "sql-explorer",
-        "name": "SQL Explorer",
-        "github": "https://github.com/explorerhq/sql-explorer",
-        "description": "AI 지원 기능을 포함하여 쉽고 빠르게 SQL 쿼리를 작성하고 공유할 수 있는 Django용 SQL 리포팅 도구입니다.",
-        "longDescription": "개발자와 비즈니스 사용자가 직관적인 웹 인터페이스에서 데이터베이스 쿼리를 작성하고, 결과를 시각화하며, AI 보조 기능을 통해 간편하게 보고서를 생성할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "SQL",
-          "Django",
-          "리포팅",
-          "데이터베이스",
-          "AI"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.sqlexplorer.io",
-        "featured": 9,
-        "added": "2026-11-04",
-        "addedAt": "2026-11-04T00:04:19.261Z",
-        "requirements": [
-          "Docker",
-          "Docker Compose"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker Compose 실행",
-            "command": "docker compose up",
-            "note": "테스트 프로젝트 환경을 도커로 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker Compose를 사용하여 로컬 환경을 구동합니다.",
-          "브라우저에서 `127.0.0.1:8000/explorer/`에 접속합니다.",
-          "관리자 계정으로 로그인하여 SQL 쿼리를 작성하고 탐색합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2877,
-        "forks": 374,
-        "starsUpdatedAt": "2026-11-04"
-      }
-    },
-    {
-      "id": "anyquery",
-      "name": "Anyquery",
-      "github": "https://github.com/julien040/anyquery",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-04T00:06:33.467Z",
-      "sourceRun": "2026-11-04T09",
-      "tool": {
-        "id": "anyquery",
-        "name": "Anyquery",
-        "github": "https://github.com/julien040/anyquery",
-        "description": "GitHub, Notion, Airtable 등 60개 이상의 외부 도구와 데이터를 단일 SQL 인터페이스로 조회할 수 있는 도구입니다.",
-        "longDescription": "다양한 SaaS 서비스 및 파일 포맷을 표준 SQL로 쿼리할 수 있게 해 주며, MCP(Model Context Protocol)를 통해 다양한 LLM과 연동하여 데이터 분석을 수행할 수 있습니다.",
-        "category": "지식·검색",
-        "tags": [
-          "SQL",
-          "데이터베이스",
-          "LLM",
-          "MCP",
-          "API"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://anyquery.dev",
-        "featured": 9,
-        "added": "2026-11-04",
-        "addedAt": "2026-11-04T00:04:19.261Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 문서의 안내에 따라 시스템에 Anyquery를 설치합니다.",
-          "서버를 실행하고 MySQL 호환 클라이언트로 접속합니다.",
-          "원하는 외부 서비스의 데이터를 SQL 문으로 조회합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1789,
-        "forks": 141,
-        "starsUpdatedAt": "2026-11-04"
-      }
     },
     {
       "id": "litlyx",
@@ -109107,46 +109121,6 @@
       "name": "Task",
       "github": "https://github.com/go-task/task",
       "license": "MIT",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T08:06:15.594Z",
-      "sourceRun": "2026-10-16T17"
-    },
-    {
-      "id": "semaphore",
-      "name": "Semaphore UI",
-      "github": "https://github.com/semaphoreui/semaphore",
-      "license": "MIT",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T08:06:15.594Z",
-      "sourceRun": "2026-10-16T17"
-    },
-    {
-      "id": "unleash",
-      "name": "Unleash",
-      "github": "https://github.com/Unleash/unleash",
-      "license": "AGPL-3.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T08:06:15.594Z",
-      "sourceRun": "2026-10-16T17"
-    },
-    {
-      "id": "infracost",
-      "name": "Infracost",
-      "github": "https://github.com/infracost/infracost",
-      "license": "Apache-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T08:06:15.594Z",
-      "sourceRun": "2026-10-16T17"
-    },
-    {
-      "id": "kubeshark",
-      "name": "Kubeshark",
-      "github": "https://github.com/kubeshark/kubeshark",
-      "license": "Apache-2.0",
       "status": "auto_approved",
       "reasons": [],
       "checkedAt": "2026-10-16T08:06:15.594Z",
