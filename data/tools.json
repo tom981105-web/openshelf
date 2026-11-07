@@ -1,5 +1,132 @@
 [
   {
+    "id": "ganeti",
+    "name": "Ganeti",
+    "github": "https://github.com/ganeti/ganeti",
+    "description": "기존 가상화 기술을 기반으로 구축된 가상 머신 클러스터 관리 도구입니다.",
+    "longDescription": "Ganeti는 Xen이나 KVM 등의 가상화 기술 위에 구축되어 중소규모(3~100 노드) 클러스터 환경에서 고가용성과 신뢰성을 제공하는 가상 머신 관리 도구입니다. 자체 포함형 오픈 소스 솔루션입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "클러스터",
+      "가상화",
+      "KVM",
+      "Xen",
+      "Python"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "http://www.ganeti.org",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T10:04:10.206Z",
+    "requirements": [
+      "Linux",
+      "KVM 또는 Xen"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Debian 또는 Ubuntu 패키지 관리자를 통해 Ganeti 패키지를 설치합니다.",
+      "클러스터 초기화 명령을 실행하여 노드들을 연결합니다.",
+      "가상 머신 인스턴스를 생성하고 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "프로덕션 환경에서는 공식 설치 가이드 및 의존성을 철저히 확인해야 합니다.",
+    "stars": 590,
+    "forks": 129,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "sheepdog",
+    "name": "Sheepdog",
+    "github": "https://github.com/sheepdog/sheepdog",
+    "description": "QEMU를 위한 분산 스토리지 시스템으로 가상 머신에 고가용성 블록 스토리지를 제공합니다.",
+    "longDescription": "Sheepdog는 QEMU 가상 머신에 고가용성 블록 레벨 스토리지 볼륨을 제공하는 분산 스토리지 시스템입니다. 스냅샷, 클론, 씬 프로비저닝 등 고급 볼륨 관리 기능을 지원합니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "분산스토리지",
+      "QEMU",
+      "블록저장소",
+      "C"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "http://sheepdog.github.io/sheepdog/",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T10:04:10.206Z",
+    "requirements": [
+      "x86-64 머신 3대 이상",
+      "Corosync"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "최소 3대의 x86-64 리눅스 노드와 Corosync 클러스터 엔진을 준비합니다.",
+      "소스 코드 또는 패키지를 통해 Sheepdog를 설치합니다.",
+      "클러스터 백엔드를 설정하고 스토리지 볼륨을 구성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "초보자의 경우 공식 위키 문서를 참고하여 클러스터 백엔드를 구성하는 것이 권장됩니다.",
+    "stars": 1019,
+    "forks": 263,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
+    "id": "ansible-role-proxmox",
+    "name": "Ansible Role Proxmox",
+    "github": "https://github.com/lae/ansible-role-proxmox",
+    "description": "Proxmox VE 클러스터 배포 및 구성을 위한 Ansible 인프라 코드(IaC) 역할입니다.",
+    "longDescription": "이 Ansible 역할은 Debian 서버 상에 Proxmox Virtual Environment(PVE)를 설치하고 구성할 수 있도록 지원합니다. 단일 노드 및 3노드 이상의 PVE 클러스터 배포, RBAC, 스토리지 정의, HTTPS 인증서 설정 등을 자동화합니다.",
+    "category": "개발 운영",
+    "tags": [
+      "Ansible",
+      "Proxmox",
+      "IaC",
+      "자동화"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/lae/ansible-role-proxmox",
+    "featured": 9,
+    "added": "2026-11-07",
+    "addedAt": "2026-11-07T10:04:10.206Z",
+    "requirements": [
+      "Ansible",
+      "Debian 서버"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Ansible Galaxy 설치",
+        "command": "ansible-galaxy install lae.proxmox",
+        "note": "Galaxy를 통해 역할을 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "Ansible 환경에서 해당 역할을 플레이북에 추가합니다.",
+      "변수 파일에 PVE 스토리지, 사용자, 네트워크 등의 구성을 정의합니다.",
+      "ansible-playbook 명령을 실행하여 Proxmox 환경을 자동으로 배포 및 설정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "지원되는 Debian 버전을 사전에 확인해야 합니다.",
+    "stars": 697,
+    "forks": 180,
+    "starsUpdatedAt": "2026-11-07"
+  },
+  {
     "id": "vela",
     "name": "Vela",
     "github": "https://github.com/LuxAlgo/Vela",
