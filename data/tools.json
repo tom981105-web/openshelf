@@ -1,5 +1,279 @@
 [
   {
+    "id": "spicedb",
+    "name": "SpiceDB",
+    "github": "https://github.com/authzed/spicedb",
+    "description": "구글 Zanzibar 모델에 영감을 받은, 대규모 세밀한 권한 제어를 위한 오픈소스 데이터베이스입니다.",
+    "longDescription": "복잡한 권한 및 접근 제어 요구사항을 확장성 있게 처리할 수 있는 오픈소스 데이터베이스입니다. 개발자는 스키마와 관계를 정의하여 세밀한 권한 쿼리를 수행할 수 있습니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "데이터베이스",
+      "보안",
+      "Go",
+      "Kubernetes"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://authzed.com/docs",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T21:04:16.961Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Homebrew를 이용한 설치",
+        "command": "brew install authzed/tap/spicedb authzed/tap/zed",
+        "note": "macOS 또는 Linux 환경에서 홈브루를 통해 SpiceDB 바이너리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "바이너리 또는 홈브루를 통해 SpiceDB를 설치합니다.",
+      "애플리케이션에 맞는 권한 스키마를 정의합니다.",
+      "데이터베이스에 관계 정보를 저장하고 접근 권한 여부를 쿼리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7206,
+    "forks": 444,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "external-secrets",
+    "name": "External Secrets Operator",
+    "github": "https://github.com/external-secrets/external-secrets",
+    "description": "외부 비밀 관리 서비스의 정보를 자동으로 쿠버네티스 시크릿으로 주입해 주는 쿠버네티스 오퍼레이터입니다.",
+    "longDescription": "AWS Secrets Manager 등 외부 서드파티 서비스에 저장된 민감 정보를 안전하게 읽어와 쿠버네티스 네이티브 시크릿으로 동기화하고 주입하는 오퍼레이터입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "보안",
+      "Go",
+      "Helm"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://external-secrets.io/main",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T21:04:16.961Z",
+    "requirements": [
+      "Kubernetes",
+      "Helm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm을 이용한 설치",
+        "command": "helm repo add external-secrets https://charts.external-secrets.io && helm install external-secrets external-secrets/external-secrets",
+        "note": "Helm 차트를 추가하고 클러스터에 오퍼레이터를 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "Helm을 사용하여 클러스터에 External Secrets 오퍼레이터를 설치합니다.",
+      "외부 비밀 저장소와의 연동을 위한 SecretStore 리소스를 정의합니다.",
+      "ExternalSecret 리소스를 생성하여 외부 비밀을 쿠버네티스 시크릿으로 가져옵니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6941,
+    "forks": 1480,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "actions-runner-controller",
+    "name": "Actions Runner Controller",
+    "github": "https://github.com/actions/actions-runner-controller",
+    "description": "GitHub Actions 자체 호스팅 러너를 쿠버네티스 클러스터에서 동적으로 관리하고 확장하는 오퍼레이터입니다.",
+    "longDescription": "쿠버네티스 환경에서 GitHub Actions의 Self-hosted Runner 풀을 오케스트레이션하고 부하에 따라 자동으로 확장(Autoscale)할 수 있도록 지원하는 컨트롤러입니다.",
+    "category": "개발 운영",
+    "tags": [
+      "GitHub Actions",
+      "Kubernetes",
+      "Go",
+      "Helm"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/actions/actions-runner-controller",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T21:04:16.961Z",
+    "requirements": [
+      "Kubernetes",
+      "Helm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm을 이용한 설치",
+        "command": "helm install arc --namespace arc-systems --create-namespace oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller",
+        "note": "Helm 차트를 사용하여 컨트롤러를 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "쿠버네티스 클러스터와 Helm을 준비합니다.",
+      "ARC 컨트롤러를 클러스터에 배포합니다.",
+      "GitHub 조직 또는 리포지토리와 연동되는 러너 세트 리소스를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6636,
+    "forks": 1507,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "k3d",
+    "name": "k3d",
+    "github": "https://github.com/k3d-io/k3d",
+    "description": "Docker 컨테이너 내부에서 CNCF k3s(경량 쿠버네티스)를 쉽게 실행할 수 있도록 돕는 도구입니다.",
+    "longDescription": "로컬 환경에서 도커를 이용해 가볍고 빠르게 단일 또는 다중 노드 쿠버네티스 클러스터를 구성하고 테스트할 수 있도록 지원하는 명령줄 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "Docker",
+      "Go",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://k3d.io/",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T21:04:16.961Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "릴리스 스크립트를 통한 설치",
+        "command": "curl -s https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh | bash",
+        "note": "공식 설치 스크립트를 다운로드하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker가 실행 중인지 확인합니다.",
+      "k3d cluster create 클러스터명 명령어로 새 클러스터를 생성합니다.",
+      "kubectl을 사용하여 생성된 로컬 클러스터를 제어합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 6614,
+    "forks": 549,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "rancher-desktop",
+    "name": "Rancher Desktop",
+    "github": "https://github.com/rancher-sandbox/rancher-desktop",
+    "description": "데스크톱 환경에서 쿠버네티스와 컨테이너 관리를 손쉽게 수행할 수 있게 해주는 오픈소스 앱입니다.",
+    "longDescription": "Windows, macOS, Linux 환경에서 쿠버네티스와 컨테이너 이미지 관리를 직관적으로 처리할 수 있는 일렉트론 기반의 데스크톱 애플리케이션입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Kubernetes",
+      "Docker",
+      "TypeScript",
+      "Electron"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://rancherdesktop.io",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T21:04:16.961Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 웹사이트에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+      "애플리케이션을 실행하고 원하는 쿠버네티스 버전을 선택합니다.",
+      "컨테이너 런타임 및 쿠버네티스 환경이 준비되면 개발 작업을 시작합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7407,
+    "forks": 392,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "telepresence",
+    "name": "Telepresence",
+    "github": "https://github.com/telepresenceio/telepresence",
+    "description": "로컬 개발 환경을 원격 쿠버네티스 클러스터와 연결하여 빠르게 디버깅할 수 있도록 돕는 도구입니다.",
+    "longDescription": "컨테이너 빌드 및 배포 주기를 거치지 않고, 로컬 IDE에서 원격 클러스터의 트래픽을 직접 받으며 실시간으로 코드를 디버깅하고 테스트할 수 있는 CNCF 프로젝트입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Kubernetes",
+      "Go",
+      "CLI",
+      "프록시"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.telepresence.io",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T21:04:16.961Z",
+    "requirements": [
+      "Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "클라이언트 설치",
+        "command": "curl -fL https://app.getambassador.io/download/tel2/releases/download/v2.18.0/telepresence-v2.18.0-$(uname -s | tr '[:upper:]' '[:lower:]')-amd64 -o /usr/local/bin/telepresence",
+        "note": "리눅스/맥 환경에서 텔레프레젠스 CLI 바이너리를 다운로드하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "telepresence connect 명령어로 원격 쿠버네티스 클러스터에 연결합니다.",
+      "로컬에서 개발 중인 서비스 프로세스를 실행합니다.",
+      "클러스터 내부의 실제 트래픽을 로컬 서비스로 라우팅하여 디버깅합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 7327,
+    "forks": 585,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
     "id": "starvla",
     "name": "starVLA",
     "github": "https://github.com/starVLA/starVLA",
