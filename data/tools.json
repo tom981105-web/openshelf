@@ -1,5 +1,371 @@
 [
   {
+    "id": "kaldi-gstreamer-server",
+    "name": "Kaldi GStreamer Server",
+    "github": "https://github.com/alumae/kaldi-gstreamer-server",
+    "description": "Kaldi 툴킷과 GStreamer 프레임워크를 기반으로 구축된 실시간 전이중 음성 인식 서버입니다.",
+    "longDescription": "네트워크를 통해 실시간으로 오디오 스트림을 받아 텍스트로 변환하는 ASR 서버를 구축할 수 있습니다. 도커 환경을 지원하여 복잡한 의존성 설치 없이 쉽게 배포할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "Kaldi",
+      "GStreamer",
+      "ASR",
+      "Python"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-2-Clause",
+    "website": "https://github.com/alumae/kaldi-gstreamer-server",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T12:04:07.319Z",
+    "requirements": [
+      "Python",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "도커 이미지 또는 관련 소스 코드를 준비합니다.",
+      "설정 파일(YAML)에 모델 경로 및 후처리 스크립트를 지정합니다.",
+      "서버를 실행하고 클라이언트에서 오디오 스트림을 전송하여 인식을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1096,
+    "forks": 337,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "tensorflowasr",
+    "name": "TensorFlowASR",
+    "github": "https://github.com/TensorSpeech/TensorFlowASR",
+    "description": "TensorFlow 2를 기반으로 고성능 자동 음성 인식(ASR) 아키텍처를 구현하고 학습하는 프레임워크입니다.",
+    "longDescription": "Conformer, ContextNet, DeepSpeech2 등 최신 음성 인식 모델들을 제공하며, 모바일 및 엣지 장치 배포를 위해 모델을 TFLite로 변환하는 기능을 지원합니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음성인식",
+      "TensorFlow",
+      "ASR",
+      "Conformer",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://huylenguyen.com/asr",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T12:04:07.319Z",
+    "requirements": [
+      "Python",
+      "TensorFlow 2"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "저장소를 클론하고 파이썬 환경을 설정합니다.",
+      "음성 데이터셋을 준비하고 특징 추출(Feature Extraction)을 수행합니다.",
+      "원하는 모델 아키텍처를 선택하여 학습 및 추론을 진행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1017,
+    "forks": 238,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "sincnet",
+    "name": "SincNet",
+    "github": "https://github.com/mravanelli/SincNet",
+    "description": "원시 오디오 파형을 효율적으로 처리하기 위한 신경망 아키텍처입니다.",
+    "longDescription": "컨볼루션 신경망의 첫 번째 레이어에서 의미 있는 대역 통과 필터를 직접 학습하도록 설계된 오디오 처리용 아키텍처입니다. 화자 식별 및 음성 처리 작업에서 뛰어난 효율을 보여줍니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "오디오처리",
+      "PyTorch",
+      "딥러닝",
+      "화자인증"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/mravanelli/SincNet",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T12:04:07.319Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "conda install -c conda-forge pysoundfile",
+        "note": "pysoundfile 및 의존성을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "아나콘다 환경에서 Python과 PyTorch를 준비합니다.",
+      "저장소를 다운로드하고 필요한 파이썬 라이브러리를 설치합니다.",
+      "예제 스크립트를 실행하여 화자 식별 모델을 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "원시 오디오 샘플 처리에 특화되어 있습니다.",
+    "stars": 1246,
+    "forks": 272,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "conformer",
+    "name": "Conformer PyTorch 구현",
+    "github": "https://github.com/sooftware/conformer",
+    "description": "음성 인식을 위한 컨볼루션 증강 Transformer 모델의 PyTorch 구현체입니다.",
+    "longDescription": "콘볼루션 신경망의 지역적 특징 추출 능력과 Transformer의 전역적 상호작용 포착 능력을 결합하여 뛰어난 음성 인식 성능을 내는 Conformer 모델의 비공식 PyTorch 구현 코드입니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Conformer",
+      "음성인식",
+      "PyTorch",
+      "Transformer"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/sooftware/conformer",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T12:04:07.319Z",
+    "requirements": [
+      "Python",
+      "PyTorch",
+      "Numpy"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 설치",
+        "command": "pip install numpy",
+        "note": "Numpy 및 PyTorch를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "가상 환경을 생성하고 PyTorch와 Numpy를 설치합니다.",
+      "모델 코드를 프로젝트에 포함하거나 openspeech와 연동하여 사용합니다.",
+      "음성 데이터로 학습 및 추론을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "순수 모델 코드 중심이므로 학습을 위해 openspeech 등과 함께 사용하는 것이 좋습니다.",
+    "stars": 1137,
+    "forks": 192,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "pykaldi",
+    "name": "PyKaldi",
+    "github": "https://github.com/pykaldi/pykaldi",
+    "description": "Kaldi 음성 인식 툴킷을 위한 Python 스크립팅 레이어 및 래퍼입니다.",
+    "longDescription": "C++ 기반의 Kaldi 및 OpenFst 라이브러리를 Python에서 쉽고 가볍게 사용할 수 있도록 지원하는 고성능 래퍼입니다. C++ 코드를 직접 작성하지 않고도 저수준의 Kaldi 함수와 객체를 Python으로 제어할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Kaldi",
+      "Python",
+      "음성인식",
+      "래퍼"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://pykaldi.github.io",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T12:04:07.319Z",
+    "requirements": [
+      "Python",
+      "Kaldi",
+      "OpenFst"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Kaldi와 OpenFst를 사전에 설치합니다.",
+      "PyKaldi 소스를 다운로드하고 빌드 지침에 따라 설치합니다.",
+      "Python 환경에서 모듈을 임포트하여 사용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "설치 과정에서 Kaldi 및 C++ 빌드 도구가 필요합니다.",
+    "stars": 1041,
+    "forks": 245,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "chaplin",
+    "name": "Chaplin",
+    "github": "https://github.com/amanvirparhar/chaplin",
+    "description": "실시간으로 입술 모양을 읽어 텍스트로 변환하는 조용한 음성 인식 도구입니다.",
+    "longDescription": "카메라를 통해 사용자의 입술 움직임을 실시간으로 인식하여 소리 없이도 텍스트를 입력해 주는 시각적 음성 인식(VSR) 도구입니다. Ollama 및 로컬 모델을 활용하여 완전히 로컬 환경에서 구동됩니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "입술읽기",
+      "VSR",
+      "오프라인",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/amanvirparhar/chaplin",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T12:04:07.319Z",
+    "requirements": [
+      "Python 3.12",
+      "Ollama",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/amanvirparhar/chaplin && cd chaplin",
+        "note": "저장소를 클론하고 디렉토리로 이동합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 설정 스크립트를 실행합니다.",
+      "Ollama를 설치하고 관련 모델을 다운로드합니다.",
+      "uv 명령어를 통해 메인 스크립트를 실행하여 웹캠 입력을 시작합니다."
+    ],
+    "examplePrompt": "실시간 웹캠 화면을 통해 소리 없이 입모양으로 텍스트를 입력해 줘.",
+    "usageNote": "웹캠과 로컬 LLM 구동을 위한 충분한 하드웨어 사양이 필요합니다.",
+    "stars": 773,
+    "forks": 91,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "whisper-unity",
+    "name": "Whisper Unity",
+    "github": "https://github.com/Macoron/whisper.unity",
+    "description": "Unity3D 엔진에서 로컬 머신 기반의 Whisper 음성 인식 모델을 실행하기 위한 바인딩입니다.",
+    "longDescription": "OpenAI Whisper의 C++ 포팅 버전인 whisper.cpp를 Unity3D 환경에서 고성능으로 실행할 수 있도록 지원하는 패키지입니다. 게임 및 애플리케이션 내에서 로컬 음성 인식을 손쉽게 구현할 수 있습니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "Unity",
+      "Whisper",
+      "음성인식",
+      "C#"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Macoron/whisper.unity",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T12:04:07.319Z",
+    "requirements": [
+      "Unity3D"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 추가",
+        "command": "https://github.com/Macoron/whisper.unity.git?path=/Packages/com.whisper.unity",
+        "note": "Unity 패키지 관리자를 통해 Git URL로 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Unity 프로젝트를 엽니다.",
+      "패키지 관리자를 통해 저장소 URL을 입력하여 패키지를 추가합니다.",
+      "제공된 예제와 모델 가중치를 활용하여 씬에 음성 인식을 적용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "사용하는 모델 파일 크기에 따라 기기 성능에 영향을 줄 수 있습니다.",
+    "stars": 760,
+    "forks": 187,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
+    "id": "allosaurus",
+    "name": "Allosaurus",
+    "github": "https://github.com/xinjli/allosaurus",
+    "description": "2000개 이상의 언어를 지원하는 사전 훈련된 범용 음소 인식기입니다.",
+    "longDescription": "다국어 음소 시스템을 기반으로 음성 파일에서 다양한 언어의 음소 시퀀스를 인식할 수 있는 파이썬 라이브러리입니다. 음성 처리 및 언어학 연구에서 폭넓게 활용됩니다.",
+    "category": "음성·오디오",
+    "tags": [
+      "음소인식",
+      "다국어",
+      "Python",
+      "음성인식"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/xinjli/allosaurus",
+    "featured": 9,
+    "added": "2026-11-08",
+    "addedAt": "2026-11-08T12:04:07.319Z",
+    "requirements": [
+      "Python",
+      "PyTorch"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install allosaurus",
+        "note": "PyPI를 통해 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 allosaurus를 설치합니다.",
+      "오디오 파일(.wav)을 준비합니다.",
+      "명령줄 인터페이스 또는 파이썬 코드를 통해 음소 인식을 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "다양한 소수 언어의 음소 분석에 유용합니다.",
+    "stars": 754,
+    "forks": 100,
+    "starsUpdatedAt": "2026-11-08"
+  },
+  {
     "id": "floorplan",
     "name": "Floorplan",
     "github": "https://github.com/haydenschmitty/floorplan",
