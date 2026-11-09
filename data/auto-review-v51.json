@@ -1,7 +1,1297 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-09T08:06:46.733Z",
+  "updatedAt": "2026-11-09T09:06:40.012Z",
   "items": [
+    {
+      "id": "metabase",
+      "name": "Metabase",
+      "github": "https://github.com/metabase/metabase",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "metabase",
+        "name": "Metabase",
+        "github": "https://github.com/metabase/metabase",
+        "description": "기업 내 모든 사용자가 쉽게 데이터베이스를 질문하고 시각화할 수 있는 오픈소스 비즈니스 인텔리전스(BI) 도구입니다.",
+        "longDescription": "5분 만에 설치가 가능한 오픈소스 BI 솔루션으로, SQL 작성 없이도 누구나 직관적으로 데이터를 탐색하고 대시보드를 구성할 수 있습니다. 자체 호스팅 및 클라우드 환경을 모두 지원하여 데이터 기반 의사결정을 돕습니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "비즈니스 인텔리전스",
+          "대시보드",
+          "데이터 시각화"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://metabase.com",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "Java 11+",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -d -p 3000:3000 --name metabase metabase/metabase",
+            "note": "도커를 이용해 가장 빠르게 메타베이스를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "컨테이너 실행 후 웹 브라우저에서 포트 3000으로 접속합니다.",
+          "관리자 계정을 생성하고 초기 설정을 완료합니다.",
+          "사용 중인 데이터베이스(MySQL, PostgreSQL 등) 연결 정보를 입력합니다.",
+          "데이터를 바탕으로 질문을 만들고 대시보드를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 50246,
+        "forks": 6994,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:28.544Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:32.457Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-09T09:06:36.921Z"
+    },
+    {
+      "id": "directus",
+      "name": "Directus",
+      "github": "https://github.com/directus/directus",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "directus",
+        "name": "Directus",
+        "github": "https://github.com/directus/directus",
+        "description": "SQL 데이터베이스를 헤드리스 CMS와 API로 변환하는 백엔드 플랫폼입니다.",
+        "longDescription": "기존 SQL 데이터베이스 위에 REST 및 GraphQL API 계층과 직관적인 시각적 스튜디오를 제공합니다. AI 에이전트를 위한 네이티브 MCP 서버를 지원하며 개발자와 비즈니스 협업을 모두 만족시킵니다.",
+        "category": "개발 도구",
+        "tags": [
+          "헤드리스CMS",
+          "API",
+          "데이터베이스"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://directus.com",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "Node.js",
+          "SQL 데이터베이스"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Npx를 이용한 실행",
+            "command": "npx directus@latest init",
+            "note": "로컬 환경에서 다이렉투스를 대화형으로 초기화하고 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "터미널에서 초기화 명령어를 실행합니다.",
+          "연동할 SQL 데이터베이스 종류와 접속 정보를 입력합니다.",
+          "관리자 계정을 설정하고 다이렉투스 Studio에 접속합니다.",
+          "생성된 API와 관리 패널을 활용해 데이터를 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 38667,
+        "forks": 4997,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:28.787Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:33.250Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-09T09:06:37.546Z"
+    },
+    {
+      "id": "dataease",
+      "name": "DataEase",
+      "github": "https://github.com/dataease/dataease",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "dataease",
+        "name": "DataEase",
+        "github": "https://github.com/dataease/dataease",
+        "description": "누구나 손쉽게 사용할 수 있는 오픈소스 대안 BI 및 데이터 시각화 도구입니다.",
+        "longDescription": "마우스 드래그 앤 드롭 방식으로 다양한 데이터 소스에서 데이터를 불러와 시각화 차트를 만들고 공유할 수 있습니다. 다양한 OLTP 및 OLAP 데이터베이스와 연동되어 비즈니스 인사이트를 빠르게 도출합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "비즈니스 인텔리전스",
+          "데이터 시각화",
+          "대시보드"
+        ],
+        "platforms": [
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://dataease.cn/",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "2코어 4GB 이상의 Linux 서버"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "원클릭 셸 설치",
+            "command": "curl -sSL https://github.com/dataease/dataease/releases/latest/download/install.sh | bash",
+            "note": "리눅스 서버에서 스크립트를 다운로드하여 자동으로 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "사양에 맞는 리눅스 서버에 접속하여 설치 스크립트를 실행합니다.",
+          "설치 완료 후 안내되는 웹 주소로 브라우저에 접속합니다.",
+          "기본 계정으로 로그인한 뒤 데이터 소스를 연결합니다.",
+          "드래그 앤 드롭으로 대시보드와 차트를 작성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 24684,
+        "forks": 4258,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:29.026Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:33.614Z",
+      "documentEvidence": {
+        "license": "GPL-3.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-09T09:06:38.409Z"
+    },
+    {
+      "id": "pandas-ai",
+      "name": "PandasAI",
+      "github": "https://github.com/sinaptik-ai/pandas-ai",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "pandas-ai",
+        "name": "PandasAI",
+        "github": "https://github.com/sinaptik-ai/pandas-ai",
+        "description": "LLM과 RAG를 활용해 데이터베이스와 CSV를 대화형으로 분석하는 파이썬 라이브러리",
+        "longDescription": "사용자가 자연어로 질문하면 LLM을 통해 파이썬 코드나 SQL로 변환하여 데이터를 분석하고 시각화합니다. 판다스 데이터프레임과 연동되어 복잡한 데이터 조작을 쉽게 처리할 수 있습니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "데이터 분석",
+          "파이썬",
+          "LLM"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pandas-ai.com",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "Python 3.8+ =3.11"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Pip 설치",
+            "command": "pip install pandasai pandasai-litellm",
+            "note": "파이썬 환경에서 pip 명령어로 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "라이브러리를 임포트하고 LLM 클라이언트를 초기화합니다.",
+          "분석할 데이터(CSV, 데이터프레임 등)를 로드합니다.",
+          "SmartDataframe 객체에 자연어 질문을 입력합니다.",
+          "결과로 나온 데이터나 시각화를 확인합니다."
+        ],
+        "examplePrompt": "이 데이터셋에서 연도별 매출 총액을 계산해 줘",
+        "usageNote": "유효한 LLM API 키(OpenAI 등)가 필요합니다.",
+        "stars": 23944,
+        "forks": 2347,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:29.297Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:33.919Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-09T09:06:39.202Z"
+    },
+    {
+      "id": "companyos",
+      "name": "CompanyOS",
+      "github": "https://github.com/kortix-ai/CompanyOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "companyos",
+        "name": "CompanyOS",
+        "github": "https://github.com/kortix-ai/CompanyOS",
+        "description": "멀티플레이어 AI 에이전트와 코드로 정의된 기업 업무를 지원하는 오픈소스 운영체제입니다.",
+        "longDescription": "웹훅이나 팀 메시지 등의 이벤트에 반응해 병렬로 실행되는 상시 운영 AI 에이전트들을 제공합니다. 각 에이전트는 독립된 가상 환경에서 동작하며 3,000개 이상의 앱과 연동해 반복적인 비즈니스 업무를 자동으로 수행합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 에이전트",
+          "업무 자동화",
+          "셀프호스팅"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kortix.com",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "Node.js",
+          "TypeScript"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소에서 코드를 클론하고 프로젝트를 설정합니다.",
+          "필요한 환경 변수와 LLM API 키를 구성합니다.",
+          "조직에서 사용할 AI 에이전트 스크립트와 규칙을 정의합니다.",
+          "에이전트를 실행하여 자동화 작업을 시작합니다."
+        ],
+        "examplePrompt": "신규 고객 문의가 들어오면 자동으로 분류해서 슬랙에 요약해 줘",
+        "usageNote": "",
+        "stars": 20584,
+        "forks": 3465,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:29.503Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:34.238Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-09T09:06:40.012Z"
+    },
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "windmill",
+        "name": "Windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "워크플로우, 내부 앱, AI 에이전트를 코드로 빌드하고 실행할 수 있는 고성능 오픈소스 오케스트레이션 플랫폼입니다.",
+        "longDescription": "파이썬, TypeScript, Go 등 다양한 언어로 작성된 스크립트를 즉시 공유 가능한 UI, API, 크론잡으로 변환해 줍니다. Airflow, Prefect 등의 대안으로 사용되며 비즈니스 팀은 AI로, 엔지니어는 코드로 안전하게 시스템을 관리할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "업무 자동화",
+          "오케스트레이션",
+          "Rust",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker를 통해 Windmill 서버와 인프라를 실행합니다.",
+          "웹 대시보드에 접속하여 스크립트 또는 워크플로우를 생성합니다.",
+          "파이썬이나 TypeScript 등으로 필요한 로직을 작성합니다.",
+          "트리거(웹훅, 스케줄 등)를 설정하여 자동 실행을 구성합니다."
+        ],
+        "examplePrompt": "매일 오전 9시에 주요 지표를 집계하여 슬랙으로 리포트해 주는 흐름을 만들어 줘",
+        "usageNote": "",
+        "stars": 18473,
+        "forks": 1145,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:29.756Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:34.551Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "weflow",
+      "name": "WeFlow",
+      "github": "https://github.com/hicccc77/WeFlow",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "weflow",
+        "name": "WeFlow",
+        "github": "https://github.com/hicccc77/WeFlow",
+        "description": "로컬 환경에서 실시간으로 챗봇 및 채팅 기록을 확인, 분석, 내보내기할 수 있는 데스크톱 애플리케이션입니다.",
+        "longDescription": "메신저 채팅 데이터를 로컬 환경에서 안전하게 복호화하여 시각적 통계와 연말 결산 보고서 등을 생성해 줍니다. 윈도우, 맥OS, 리눅스를 모두 지원하며 개발자를 위한 HTTP API도 제공합니다.",
+        "category": "개인 도구",
+        "tags": [
+          "데이터 분석",
+          "데이터 시각화",
+          "메시지",
+          "TypeScript",
+          "데스크톱 앱"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://weflow.top",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "Node.js",
+          "npm"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "소스코드 클론 및 빌드",
+            "command": "git clone https://github.com/hicccc77/WeFlow.git && cd WeFlow && npm install && npm run dev",
+            "note": "저장소를 클론한 후 의존성을 설치하고 개발 모드로 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 패키지를 설치합니다.",
+          "개발 모드로 애플리케이션을 실행합니다.",
+          "로컬에 저장된 메신저 데이터 경로를 연동합니다.",
+          "채팅 통계를 확인하거나 HTML 등의 형식으로 내보냅니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "타사 복호화 컴포넌트가 필요할 수 있습니다.",
+        "stars": 15923,
+        "forks": 851,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:30.003Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:34.844Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "snow-apps",
+      "name": "Snow Shot",
+      "github": "https://github.com/mg-chao/snow-apps",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "snow-apps",
+        "name": "Snow Shot",
+        "github": "https://github.com/mg-chao/snow-apps",
+        "description": "윈도우와 맥OS를 지원하는 무료 오픈소스 캡처, 스크롤 캡처, OCR 및 화면 녹화 도구입니다.",
+        "longDescription": "화면 캡처와 주석 작성뿐만 아니라 긴 스크롤 캡처, 로컬 기반의 OCR 문자 인식, 이미지 고정(핀) 기능을 제공합니다. 가볍고 직관적인 인터페이스로 개인 생산성을 극대화해 줍니다.",
+        "category": "생산성",
+        "tags": [
+          "스크린샷",
+          "OCR",
+          "화면 녹화",
+          "생산성",
+          "C++"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://snowshot.top",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "Windows 10+ 또는 macOS"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Homebrew 설치 (macOS)",
+            "command": "brew install --cask mg-chao/tap/snow-shot",
+            "note": "Homebrew를 통해 맥OS에 손쉽게 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "애플리케이션을 실행하고 시스템 권한을 허용합니다.",
+          "단축키를 이용해 화면 캡처 또는 스크롤 캡처를 진행합니다.",
+          "필요시 주석을 추가하거나 내장된 OCR로 텍스트를 추출합니다.",
+          "결과물을 저장하거나 클립보드에 복사합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6830,
+        "forks": 440,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:30.203Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:35.205Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "lieflat-charts",
+      "name": "Lieflat Charts",
+      "github": "https://github.com/larashero3-dotcom/lieflat-charts",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "lieflat-charts",
+        "name": "Lieflat Charts",
+        "github": "https://github.com/larashero3-dotcom/lieflat-charts",
+        "description": "AI 에이전트가 데이터를 세련되고 인터랙티브한 HTML 차트와 프레젠테이션으로 변환할 수 있게 해주는 에이전트 스킬입니다.",
+        "longDescription": "Claude Code, Codex 등 호환되는 AI 에이전트와 연동하여 통일된 타이포그래피, 여백, 애니메이션이 적용된 데이터 시각화 결과물을 생성합니다. 일반 차트 외에도 PPT 모드와 전체 보고서 모드를 지원합니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "AI 에이전트",
+          "데이터 시각화",
+          "HTML",
+          "차트",
+          "생성형 AI"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/larashero3-dotcom/lieflat-charts",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "SKILL.md 호환 AI 에이전트 클라이언트"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "AI 에이전트 환경에 Lieflat Charts 스킬을 장착합니다.",
+          "에이전트에게 시각화할 데이터와 요구사항을 자연어로 전달합니다.",
+          "에이전트가 생성한 인터랙티브 HTML 차트나 리포트를 확인합니다.",
+          "필요에 따라 결과물을 수정하거나 웹에 배포합니다."
+        ],
+        "examplePrompt": "이 데이터를 바탕으로 Lupi 스타일의 편집형 데이터 시각화 HTML 보고서를 만들어 줘",
+        "usageNote": "",
+        "stars": 6777,
+        "forks": 412,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:30.419Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:35.556Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "lightdash",
+      "name": "Lightdash",
+      "github": "https://github.com/lightdash/lightdash",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "lightdash",
+        "name": "Lightdash",
+        "github": "https://github.com/lightdash/lightdash",
+        "description": "코드 기반의 버전 관리와 Git 연동을 지원하는 오픈소스 Agentic BI 및 데이터 분석 플랫폼입니다.",
+        "longDescription": "dbt 기반의 메트릭 정의를 활용하여 대시보드 구축, AI 에이전트 연동, 임베디드 분석을 수행할 수 있습니다. 터미널과 풀 리퀘스트 기반의 CI/CD 워크플로우를 통해 데이터 분석을 소프트웨어 개발처럼 체계적으로 관리합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "비즈니스 인텔리전스",
+          "데이터 분석",
+          "dbt",
+          "대시보드",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://lightdash.com",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "Docker 또는 Kubernetes",
+          "dbt 프로젝트"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker나 Kubernetes를 사용하여 라이트대시를 셀프 호스팅하거나 클라우드에 가입합니다.",
+          "기존 dbt 프로젝트와 데이터베이스를 연동합니다.",
+          "메트릭 계층을 정의하고 팀원들과 공유합니다.",
+          "대시보드를 구성하거나 AI 에이전트를 통해 자연어로 데이터에 질문합니다."
+        ],
+        "examplePrompt": "이번 분기 지역별 매출 상위 5개 항목을 보여주는 대시보드를 만들어 줘",
+        "usageNote": "",
+        "stars": 6222,
+        "forks": 801,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:30.601Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-09T09:06:35.873Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "matplotlib",
+      "name": "Matplotlib",
+      "github": "https://github.com/matplotlib/matplotlib",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "matplotlib",
+        "name": "Matplotlib",
+        "github": "https://github.com/matplotlib/matplotlib",
+        "description": "파이썬 기반의 다양한 형태의 데이터 시각화 및 플롯 생성을 지원하는 라이브러리입니다.",
+        "longDescription": "파이썬 스크립트, 웹 애플리케이션 서버, 다양한 GUI 툴킷 등에서 고품질의 2D 그래프와 시각화를 손쉽게 만들 수 있도록 돕는 표준 플롯 라이브러리입니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "디자인·시각화",
+          "Python",
+          "데이터 분석",
+          "그래프"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://matplotlib.org/stable/",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "PyPI",
+            "command": "pip install matplotlib",
+            "note": "pip를 이용한 설치"
+          }
+        ],
+        "usageSteps": [
+          "파이썬 환경에서 pip 명령어로 패키지를 설치합니다.",
+          "matplotlib.pyplot 모듈을 임포트합니다.",
+          "데이터를 정의하고 plot 함수를 호출하여 그래프를 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 23435,
+        "forks": 8542,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:30.811Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "apexcharts-js",
+      "name": "ApexCharts.js",
+      "github": "https://github.com/apexcharts/apexcharts.js",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "apexcharts-js",
+        "name": "ApexCharts.js",
+        "github": "https://github.com/apexcharts/apexcharts.js",
+        "description": "대시보드와 웹 애플리케이션을 위한 모던하고 인터랙티브한 자바스크립트 SVG 차트 라이브러리입니다.",
+        "longDescription": "다양한 차트 유형을 지원하며 서버 사이드 렌더링(SSR)과 타입스크립트를 기본으로 지원하는 가벼운 웹용 시각화 도구입니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "디자인·시각화",
+          "JavaScript",
+          "TypeScript",
+          "차트",
+          "대시보드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://apexcharts.com",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트에 필요한 차트 패키지를 설치합니다.",
+          "컴포넌트나 스크립트에서 ApexCharts를 불러옵니다.",
+          "옵션 객체에 데이터와 설정값을 전달하여 차트를 렌더링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 15187,
+        "forks": 1390,
+        "starsUpdatedAt": "2026-11-09"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-09T09:06:31.143Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "vectorbt",
+      "name": "VectorBT",
+      "github": "https://github.com/polakowo/vectorbt",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "vectorbt",
+        "name": "VectorBT",
+        "github": "https://github.com/polakowo/vectorbt",
+        "description": "대규모 트레이딩 전략 연구와 백테스팅을 고속으로 수행할 수 있는 파이썬 툴킷입니다.",
+        "longDescription": "NumPy 배열과 Numba 가속, Rust 엔진을 활용하여 수천 가지의 트레이딩 아이디어나 포트폴리오 최적화 실험을 몇 줄의 파이썬 코드로 빠르게 처리합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "데이터 분석",
+          "Python",
+          "금융",
+          "백테스팅"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://vectorbt.dev",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "파이썬 환경에서 관련 패키지를 설치합니다.",
+          "시장 데이터를 불러와 지표와 신호를 구축합니다.",
+          "백테스팅을 실행하고 인터랙티브 차트로 성과를 분석합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 9774,
+        "forks": 1280,
+        "starsUpdatedAt": "2026-11-09"
+      }
+    },
+    {
+      "id": "get-jobs",
+      "name": "Get Jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "get-jobs",
+        "name": "Get Jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "주요 채용 플랫폼에서 이력서 자동 제출과 구직 활동을 지원하는 AI 기반 구직 보조 도구입니다.",
+        "longDescription": "중국 및 글로벌 주요 구직 플랫폼에서 반복적인 이력서 제출 및 구직 과정을 자동화하여 구직자의 피로도를 낮춰주는 자바 기반 스크립트입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "업무 자동화",
+          "Java",
+          "AI 에이전트",
+          "구직"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 프로젝트를 로컬에 설정합니다.",
+          "이력서 및 플랫폼 계정 정보를 구성합니다.",
+          "자동 구직 스크립트를 실행하여 지원 과정을 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 9643,
+        "forks": 1098,
+        "starsUpdatedAt": "2026-11-09"
+      }
+    },
+    {
+      "id": "react-map-gl",
+      "name": "React Map GL",
+      "github": "https://github.com/visgl/react-map-gl",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "react-map-gl",
+        "name": "React Map GL",
+        "github": "https://github.com/visgl/react-map-gl",
+        "description": "React 환경에서 Mapbox 및 MapLibre 기반의 지도 시각화를 손쉽게 구현할 수 있는 컴포넌트 모음입니다.",
+        "longDescription": "React 애플리케이션 안에서 고성능 웹GL 지도를 매끄럽게 다룰 수 있도록 감싸며, 다양한 스타일과 오버레이 기능을 제공합니다.",
+        "category": "공간정보",
+        "tags": [
+          "공간정보",
+          "TypeScript",
+          "React",
+          "지도"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://visgl.github.io/react-map-gl/",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [
+          "react = 16.3"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치 (Maplibre)",
+            "command": "npm install react-map-gl maplibre-gl",
+            "note": "Maplibre 기반 설치"
+          }
+        ],
+        "usageSteps": [
+          "npm을 통해 패키지와 지도 라이브러리를 설치합니다.",
+          "React 컴포넌트 파일에 Map 요소를 임포트합니다.",
+          "토큰 및 지도 스타일 설정을 포함하여 렌더링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8514,
+        "forks": 1346,
+        "starsUpdatedAt": "2026-11-09"
+      }
+    },
+    {
+      "id": "gojs",
+      "name": "GoJS",
+      "github": "https://github.com/NorthwoodsSoftware/GoJS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "gojs",
+        "name": "GoJS",
+        "github": "https://github.com/NorthwoodsSoftware/GoJS",
+        "description": "인터랙티브 순서도, 조직도, 플랜 도구 등을 웹 상에서 만들 수 있는 자바스크립트 다이어그램 라이브러리입니다.",
+        "longDescription": "HTML 캔버스와 SVG를 활용해 복잡한 그래프, 네트워크 구조, 시각적 언어 에디터를 고성능으로 구현할 수 있는 상용 및 오픈소스 지원 다이어그램 도구입니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "디자인·시각화",
+          "JavaScript",
+          "TypeScript",
+          "다이어그램"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://gojs.net",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치",
+            "command": "npm install gojs",
+            "note": "기본 라이브러리 설치"
+          }
+        ],
+        "usageSteps": [
+          "npm을 통해 gojs 패키지를 설치합니다.",
+          "HTML에 캔버스 요소를 배치합니다.",
+          "스크립트에서 다이어그램 인스턴스를 생성하고 노드 데이터를 연결합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8503,
+        "forks": 2823,
+        "starsUpdatedAt": "2026-11-09"
+      }
+    },
+    {
+      "id": "folium",
+      "name": "Folium",
+      "github": "https://github.com/python-visualization/folium",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "folium",
+        "name": "Folium",
+        "github": "https://github.com/python-visualization/folium",
+        "description": "파이썬에서 처리한 지리 데이터를 Leaflet.js 지도를 통해 인터랙티브하게 시각화해주는 라이브러리입니다.",
+        "longDescription": "파이썬의 데이터 조작 강점과 Leaflet 웹 지도 라이브러리의 기능을 결합하여, 코드 몇 줄로 마커나 히트맵이 포함된 지도를 HTML 파일로 내보낼 수 있습니다.",
+        "category": "공간정보",
+        "tags": [
+          "공간정보",
+          "Python",
+          "지도",
+          "데이터 분석"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://python-visualization.github.io/folium/",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "pip 설치",
+            "command": "pip install folium",
+            "note": "pip를 이용한 패키지 설치"
+          }
+        ],
+        "usageSteps": [
+          "터미널에서 pip로 folium을 설치합니다.",
+          "파이썬에서 folium을 임포트하고 중심 좌표를 지정해 지도를 생성합니다.",
+          "마커나 경로 등 시각화 요소를 추가한 뒤 html 파일로 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7416,
+        "forks": 2269,
+        "starsUpdatedAt": "2026-11-09"
+      }
+    },
+    {
+      "id": "orange3",
+      "name": "Orange3",
+      "github": "https://github.com/biolab/orange3",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18",
+      "tool": {
+        "id": "orange3",
+        "name": "Orange3",
+        "github": "https://github.com/biolab/orange3",
+        "description": "프로그래밍 없이 시각적 드래그 앤 드롭으로 데이터 마이닝과 머신러닝을 수행하는 도구입니다.",
+        "longDescription": "워크플로우 기반의 직관적인 인터페이스를 제공하여 초보자와 전문가 모두 복잡한 코드 작성 없이 데이터를 탐색하고 시각화하며 예측 모델을 구축할 수 있습니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "데이터 분석",
+          "Python",
+          "데이터 마이닝",
+          "머신러닝"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://orangedatamining.com",
+        "featured": 9,
+        "added": "2026-11-09",
+        "addedAt": "2026-11-09T09:04:16.027Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 홈페이지 또는 conda를 통해 프로그램 및 환경을 설치합니다.",
+          "캔버스 인터페이스를 실행합니다.",
+          "원하는 데이터 위젯을 드래그하여 연결하고 분석 결과를 시각적으로 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5744,
+        "forks": 1117,
+        "starsUpdatedAt": "2026-11-09"
+      }
+    },
+    {
+      "id": "davinci",
+      "name": "Davinci",
+      "github": "https://github.com/edp963/davinci",
+      "license": "Apache-2.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18"
+    },
+    {
+      "id": "running-page",
+      "name": "Running Page",
+      "github": "https://github.com/yihong0618/running_page",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-09T09:06:27.659Z",
+      "sourceRun": "2026-11-09T18"
+    },
     {
       "id": "prompts-chat",
       "name": "prompts.chat",
@@ -479,88 +1769,6 @@
       }
     },
     {
-      "id": "pandas-ai",
-      "name": "PandasAI",
-      "github": "https://github.com/sinaptik-ai/pandas-ai",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-09T08:06:36.126Z",
-      "sourceRun": "2026-11-09T17",
-      "tool": {
-        "id": "pandas-ai",
-        "name": "PandasAI",
-        "github": "https://github.com/sinaptik-ai/pandas-ai",
-        "description": "LLM과 RAG를 활용하여 대화형으로 데이터 분석과 SQL 질의를 수행할 수 있는 Python 라이브러리입니다.",
-        "longDescription": "데이터프레임, CSV, SQL 데이터베이스 등과 자연어로 대화하며 데이터를 분석하고 시각화할 수 있는 도구입니다. 복잡한 파이썬 코드를 직접 작성하지 않고도 데이터 인사이트를 도출할 수 있습니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "데이터분석",
-          "Pandas",
-          "Python",
-          "LLM"
-        ],
-        "platforms": [
-          "macOS",
-          "Windows",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pandas-ai.com",
-        "featured": 9,
-        "added": "2026-11-09",
-        "addedAt": "2026-11-09T08:04:14.418Z",
-        "requirements": [
-          "Python 3.8+"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "라이브러리 설치",
-            "command": "pip install pandasai pandasai-litellm",
-            "note": "pip를 이용한 패키지 및 LiteLLM 모듈 설치"
-          }
-        ],
-        "usageSteps": [
-          "파이썬 환경에서 라이브러리를 임포트하고 데이터프레임을 로드합니다.",
-          "LLM 연동 설정을 완료하고 PandasAI 인스턴스를 초기화합니다.",
-          "자연어로 데이터 관련 질문을 입력하여 분석 결과를 확인합니다."
-        ],
-        "examplePrompt": "매출 데이터프레임에서 지역별 총 매출액을 구하고 막대그래프로 시각화해 줘.",
-        "usageNote": "",
-        "stars": 23944,
-        "forks": 2347,
-        "starsUpdatedAt": "2026-11-09"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-09T08:06:37.934Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-09T08:06:41.266Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "screenpipe",
       "name": "screenpipe",
       "github": "https://github.com/screenpipe/screenpipe",
@@ -704,82 +1912,6 @@
         "license": "Apache-2.0",
         "verifiedLicense": null,
         "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "windmill",
-      "name": "Windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-09T08:06:36.126Z",
-      "sourceRun": "2026-11-09T17",
-      "tool": {
-        "id": "windmill",
-        "name": "Windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "스크립트를 공유 가능한 UI와 API로 변환하고 워크플로우 및 AI 에이전트를 오케스트레이션하는 플랫폼입니다.",
-        "longDescription": "다양한 프로그래밍 언어로 작성된 스크립트를 Git과 연동하여 관리하고, 이를 시각적 워크플로우나 에이전트 시스템으로 결합할 수 있는 고성능 오픈소스 오케스트레이터입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "워크플로우",
-          "자동화",
-          "Rust",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-11-09",
-        "addedAt": "2026-11-09T08:04:14.418Z",
-        "requirements": [
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Windmill 인스턴스를 자체 서버 또는 Docker로 배포합니다.",
-          "파이썬이나 타입스크립트 등으로 자동화 스크립트를 작성합니다.",
-          "스크립트를 조합하여 복잡한 데이터 파이프라인이나 AI 에이전트 플로우를 구성합니다."
-        ],
-        "examplePrompt": "매일 아침 웹사이트를 크롤링하여 요약 리포트를 생성하고 메일로 발송하는 워크플로우를 만들어 줘.",
-        "usageNote": "",
-        "stars": 18473,
-        "forks": 1145,
-        "starsUpdatedAt": "2026-11-09"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-09T08:06:38.527Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-09T08:06:42.111Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
@@ -1392,163 +2524,6 @@
       }
     },
     {
-      "id": "companyos",
-      "name": "CompanyOS",
-      "github": "https://github.com/kortix-ai/CompanyOS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-09T07:06:14.519Z",
-      "sourceRun": "2026-11-09T16",
-      "tool": {
-        "id": "companyos",
-        "name": "CompanyOS",
-        "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "기업 운영을 위한 오픈소스 멀티플레이어 AI 에이전트 및 클라우드 네이티브 오케스트레이션 플랫폼입니다.",
-        "longDescription": "조직 내 다양한 업무를 병렬로 처리하는 자율형 AI 에이전트 시스템입니다. 3,000개 이상의 앱과 연동되며 자체 인프라에 직접 설치해 사용할 수 있습니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI 에이전트",
-          "오픈소스",
-          "클라우드"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kortix.com",
-        "featured": 9,
-        "added": "2026-11-09",
-        "addedAt": "2026-11-09T07:04:09.193Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "리포지토리를 클론하고 환경 설정을 구성합니다.",
-          "자체 인프라 또는 지원 환경에 인스턴스를 배포합니다.",
-          "웹 인터페이스를 통해 맞춤형 AI 에이전트와 워크플로우를 연결합니다."
-        ],
-        "examplePrompt": "주간 보고서를 자동으로 작성하고 팀원들의 피드백을 수집해줘",
-        "usageNote": "",
-        "stars": 20583,
-        "forks": 3464,
-        "starsUpdatedAt": "2026-11-09"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-09T07:06:15.173Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-09T07:06:18.500Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-09T07:06:24.169Z"
-    },
-    {
-      "id": "snow-apps",
-      "name": "Snow Shot",
-      "github": "https://github.com/mg-chao/snow-apps",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-09T07:06:14.519Z",
-      "sourceRun": "2026-11-09T16",
-      "tool": {
-        "id": "snow-apps",
-        "name": "Snow Shot",
-        "github": "https://github.com/mg-chao/snow-apps",
-        "description": "Windows와 macOS를 지원하는 무료 오픈소스 화면 캡처, 스크롤 캡처, OCR 및 녹화 도구입니다.",
-        "longDescription": "화면 캡처와 주석 기능 외에도 긴 웹페이지를 한 번에 캡처하는 스크롤 캡처, 이미지에서 텍스트를 추출하는 로컬 OCR, 화면 녹화 기능을 제공합니다. Windows와 macOS 플랫폼을 모두 지원합니다.",
-        "category": "생산성",
-        "tags": [
-          "스크린샷",
-          "OCR",
-          "화면 녹화"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://snowshot.top",
-        "featured": 9,
-        "added": "2026-11-09",
-        "addedAt": "2026-11-09T07:04:09.193Z",
-        "requirements": [
-          "macOS 화면 기록 권한"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Homebrew 설치 (macOS)",
-            "command": "brew install --cask mg-chao/tap/snow-shot",
-            "note": "Homebrew를 통한 간편 설치"
-          }
-        ],
-        "usageSteps": [
-          "Snow Shot을 실행하고 필요한 시스템 권한을 허용합니다.",
-          "단축키를 이용해 화면 캡처, 롤링 캡처 또는 영역 녹화를 수행합니다.",
-          "내장된 도구로 주석을 달거나 OCR 텍스트 추출 기능을 사용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6818,
-        "forks": 440,
-        "starsUpdatedAt": "2026-11-09"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-09T07:06:15.648Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-09T07:06:19.366Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-09T07:06:25.708Z"
-    },
-    {
       "id": "wppconnect",
       "name": "WPPConnect",
       "github": "https://github.com/wppconnect-team/wppconnect",
@@ -1958,84 +2933,6 @@
         "license": null,
         "verifiedLicense": null,
         "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "get-jobs",
-      "name": "get Jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-09T07:06:14.520Z",
-      "sourceRun": "2026-11-09T16",
-      "tool": {
-        "id": "get-jobs",
-        "name": "get Jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "다양한 구직 플랫폼에서 이력서 제출을 자동화해 주는 AI 구직 보조 스크립트입니다.",
-        "longDescription": "중국 주요 구직 플랫폼을 지원하며, AI 분석을 활용해 맞춤형 구직 및 이력서 관리 작업을 자동화할 수 있도록 돕습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "업무 자동화",
-          "AI 에이전트",
-          "스크립트",
-          "구직"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-11-09",
-        "addedAt": "2026-11-09T07:04:09.193Z",
-        "requirements": [
-          "Java",
-          "Spring Boot"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하고 프로젝트를 설정합니다.",
-          "설정 파일에 구직 플랫폼 계정 정보를 입력합니다.",
-          "스크립트를 실행하여 자동 지원 프로세스를 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "타인의 계정 정보 보호 및 플랫폼 이용 약관을 준수하여 사용하세요.",
-        "stars": 9634,
-        "forks": 1098,
-        "starsUpdatedAt": "2026-11-09"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-09T07:06:17.149Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-09T07:06:22.583Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
@@ -13985,82 +14882,6 @@
       "recheckedAt": "2026-11-08T16:06:24.310Z"
     },
     {
-      "id": "directus",
-      "name": "Directus",
-      "github": "https://github.com/directus/directus",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-08T16:06:16.175Z",
-      "sourceRun": "2026-11-09T01",
-      "tool": {
-        "id": "directus",
-        "name": "Directus",
-        "github": "https://github.com/directus/directus",
-        "description": "SQL 데이터베이스를 헤드리스 CMS, 관리자 패널, API로 즉시 전환해주는 협업 백엔드 플랫폼입니다.",
-        "longDescription": "기존 SQL 데이터베이스 위에 REST 및 GraphQL API 레이어와 시각적 관리 스튜디오를 제공하여 빌더와 AI 에이전트가 쉽게 데이터를 연동할 수 있도록 돕습니다. TypeScript 기반으로 개발되었습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "데이터베이스",
-          "CMS",
-          "API"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://directus.com",
-        "featured": 9,
-        "added": "2026-11-08",
-        "addedAt": "2026-11-08T16:04:12.735Z",
-        "requirements": [
-          "Node.js",
-          "SQL Database"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "기존 SQL 데이터베이스에 Directus를 연결합니다.",
-          "시각적 스튜디오를 통해 데이터를 관리하고 스키마를 구성합니다.",
-          "자동 생성된 API를 활용해 애플리케이션을 개발합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "연간 매출 5백만 달러 미만 조직에는 무료로 제공됩니다.",
-        "stars": 38691,
-        "forks": 4995,
-        "starsUpdatedAt": "2026-11-08"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-08T16:06:17.083Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-08T16:06:20.552Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-08T16:06:25.090Z"
-    },
-    {
       "id": "zola",
       "name": "Zola",
       "github": "https://github.com/getzola/zola",
@@ -18499,85 +19320,6 @@
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-08T10:11:13.940Z",
       "lastVerifiedAt": "2026-11-08T10:28:07.569Z"
-    },
-    {
-      "id": "metabase",
-      "name": "Metabase",
-      "github": "https://github.com/metabase/metabase",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-08T10:11:04.697Z",
-      "sourceRun": "2026-11-08T19",
-      "tool": {
-        "id": "metabase",
-        "name": "Metabase",
-        "github": "https://github.com/metabase/metabase",
-        "description": "누구나 쉽게 데이터를 시각화하고 대시보드를 구축할 수 있는 오픈소스 BI 도구",
-        "longDescription": "Metabase는 복잡한 SQL 작성 없이도 팀 내 누구나 데이터베이스에 질문을 던지고 인사이트를 얻을 수 있도록 돕는 직관적인 BI 도구입니다. 임베디드 분석 기능과 다양한 데이터베이스 연동을 지원합니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "BI",
-          "대시보드",
-          "데이터시각화"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://metabase.com",
-        "featured": 9,
-        "added": "2026-11-08",
-        "addedAt": "2026-11-08T10:04:04.053Z",
-        "requirements": [
-          "Java",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker 또는 JAR 파일을 통해 Metabase를 실행합니다.",
-          "웹 브라우저로 접속하여 초기 관리자 계정을 설정합니다.",
-          "사용 중인 데이터베이스(MySQL, PostgreSQL 등)를 연결하고 대시보드를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 50229,
-        "forks": 6992,
-        "starsUpdatedAt": "2026-11-08"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-08T10:28:08.500Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-08T10:28:08.500Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-08T10:11:14.568Z",
-      "lastVerifiedAt": "2026-11-08T10:28:08.500Z"
     },
     {
       "id": "sqlitebrowser",
@@ -35873,75 +36615,6 @@
         "starsUpdatedAt": "2026-11-07"
       },
       "licenseEvidenceCheckedAt": "2026-11-07T09:06:01.050Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "vectorbt",
-      "name": "vectorbt",
-      "github": "https://github.com/polakowo/vectorbt",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-07T09:05:58.446Z",
-      "sourceRun": "2026-11-07T18",
-      "tool": {
-        "id": "vectorbt",
-        "name": "vectorbt",
-        "github": "https://github.com/polakowo/vectorbt",
-        "description": "수천 가지의 트레이딩 아이디어를 빠르고 대규모로 시뮬레이션하고 분석할 수 있는 파이썬 연구 엔진입니다.",
-        "longDescription": "NumPy와 Numba 가속을 활용하여 방대한 시장 데이터와 지표 신호를 효율적으로 처리하며, 데이터 분석과 백테스팅을 하나의 워크플로우로 통합합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Python",
-          "백테스팅",
-          "데이터 분석",
-          "시뮬레이션",
-          "금융 공학"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://vectorbt.dev",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T09:04:04.353Z",
-        "requirements": [
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "파이썬 환경에서 vectorbt 라이브러리를 설치합니다.",
-          "시장 가격 데이터를 불러와 판다스 데이터프레임으로 준비합니다.",
-          "매매 신호와 지표를 정의하고 벡터화 연산을 수행합니다.",
-          "포트폴리오 성과와 드로다운을 시각화하여 분석합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9724,
-        "forks": 1266,
-        "starsUpdatedAt": "2026-11-07"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-07T09:06:01.267Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -63074,248 +63747,6 @@
       "sourceRun": "2026-11-02T05"
     },
     {
-      "id": "dataease",
-      "name": "DataEase",
-      "github": "https://github.com/dataease/dataease",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "dataease",
-        "name": "DataEase",
-        "github": "https://github.com/dataease/dataease",
-        "description": "드래그 앤 드롭 방식을 지원하는 오픈소스 BI 데이터 시각화 도구입니다.",
-        "longDescription": "DataEase는 다양한 OLTP 및 OLAP 데이터베이스와 연동하여 데이터를 빠르게 분석하고 시각화할 수 있는 대안적 BI 도구입니다. 직관적인 인터페이스를 통해 사용자가 쉽게 대시보드를 제작하고 데이터 인사이트를 도출할 수 있도록 지원합니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "BI",
-          "데이터시각화",
-          "대시보드"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://dataease.cn/",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [
-          "Linux 서버 (2코어 4GB 이상)",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "설치 스크립트 실행",
-            "command": "curl -sSL https://github.com/dataease/dataease/releases/latest/download/install.sh | bash",
-            "note": "Linux 환경에서 원클릭으로 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "권장 사양의 Linux 서버를 준비합니다.",
-          "설치 스크립트를 다운로드하여 실행합니다.",
-          "웹 브라우저를 통해 관리자 페이지에 접속합니다.",
-          "데이터소스를 연동하고 드래그 앤 드롭으로 대시보드를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 24664,
-        "forks": 4257,
-        "starsUpdatedAt": "2026-11-01"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-01T19:06:13.387Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-01T19:06:16.573Z",
-      "documentEvidence": {
-        "license": "GPL-3.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-01T19:06:22.246Z"
-    },
-    {
-      "id": "weflow",
-      "name": "WeFlow",
-      "github": "https://github.com/hicccc77/WeFlow",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "weflow",
-        "name": "WeFlow",
-        "github": "https://github.com/hicccc77/WeFlow",
-        "description": "완전한 로컬 환경에서 실시간으로 微信(WeChat) 대화 내용을 조회, 분석, 백업할 수 있는 도구입니다.",
-        "longDescription": "WeFlow는 메신저 데이터의 실시간 조회 및 내보내기, 미디어 파일 복호화, 통계 분석 및 연말 보고서 생성 등의 기능을 오프라인 환경에서 안전하게 제공합니다.",
-        "category": "개인 도구",
-        "tags": [
-          "데이터분석",
-          "메신저",
-          "백업",
-          "TypeScript",
-          "Electron"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://weflow.top",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [
-          "Node.js",
-          "타사 복호화 컴포넌트 (필요 시)"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 복제 및 설치",
-            "command": "git clone https://github.com/hicccc77/WeFlow.git && cd WeFlow && npm install",
-            "note": "소스 코드를 클론한 후 의존성을 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트를 클론하고 의존성을 설치합니다.",
-          "개발 모드 실행 명령어를 통해 애플리케이션을 구동합니다.",
-          "필요한 복호화 컴포넌트를 연동하여 메신저 데이터베이스를 불러옵니다.",
-          "채팅 내역을 조회하거나 분석 보고서를 생성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "책임감 있게 사용해야 하며 관련 규정을 준수해야 합니다.",
-        "stars": 15706,
-        "forks": 801,
-        "starsUpdatedAt": "2026-11-01"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-01T19:06:14.168Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-01T19:06:17.689Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "lieflat-charts",
-      "name": "Lieflat Charts",
-      "github": "https://github.com/larashero3-dotcom/lieflat-charts",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "lieflat-charts",
-        "name": "Lieflat Charts",
-        "github": "https://github.com/larashero3-dotcom/lieflat-charts",
-        "description": "데이터를 깔끔하고 인터랙티브한 HTML 차트, 보고서, 프레젠테이션으로 변환해 주는 AI 에이전트용 시각화 Skill입니다.",
-        "longDescription": "Lieflat Charts는 폰트, 여백, 선, 애니메이션 등 일관된 시각 문법을 따르는 데이터 시각화 스킬입니다. 모스크(moxt), Claude Code 등 SKILL.md를 지원하는 AI 에이전트와 연동하여 차트나 PPT를 즉시 생성할 수 있습니다.",
-        "category": "디자인·시각화",
-        "tags": [
-          "에이전트스킬",
-          "데이터시각화",
-          "HTML",
-          "차트",
-          "프레젠테이션"
-        ],
-        "platforms": [],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/larashero3-dotcom/lieflat-charts",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [
-          "SKILL.md 호환 AI 에이전트 (Claude Code 등)"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "지원되는 AI 에이전트 환경에 Lieflat Charts 스킬을 추가합니다.",
-          "AI에게 시각화할 데이터와 함께 차트 생성을 요청합니다.",
-          "에이전트가 자동 생성한 인터랙티브 HTML 차트 또는 PPT 화면을 확인합니다.",
-          "필요에 따라 레이아웃이나 색상 프리셋을 조정합니다."
-        ],
-        "examplePrompt": "최근 3년간 분기별 매출 데이터를 세련된 HTML 차트로 만들어줘",
-        "usageNote": "",
-        "stars": 6539,
-        "forks": 392,
-        "starsUpdatedAt": "2026-11-01"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-01T19:06:14.506Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-01T19:06:18.238Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "radzen-blazor",
       "name": "Radzen Blazor",
       "github": "https://github.com/radzenhq/radzen-blazor",
@@ -63324,430 +63755,6 @@
       "reasons": [],
       "checkedAt": "2026-11-01T19:06:12.253Z",
       "sourceRun": "2026-11-02T04"
-    },
-    {
-      "id": "matplotlib",
-      "name": "matplotlib",
-      "github": "https://github.com/matplotlib/matplotlib",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "matplotlib",
-        "name": "matplotlib",
-        "github": "https://github.com/matplotlib/matplotlib",
-        "description": "파이썬 기반의 강력한 2D 데이터 시각화 및 플롯 라이브러리입니다.",
-        "longDescription": "Matplotlib은 파이썬 스크립트, 셸, 웹 서버 및 다양한 GUI 툴킷에서 활용할 수 있는 포괄적인 2D 그래프 생성 라이브러리입니다. 고품질의 출판용 그래픽을 손쉽게 그릴 수 있도록 다양한 차트와 커스터마이징 옵션을 제공합니다.",
-        "category": "디자인·시각화",
-        "tags": [
-          "데이터 시각화",
-          "플롯",
-          "그래프",
-          "파이썬"
-        ],
-        "platforms": [
-          "Web",
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://matplotlib.org/stable/",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "파이썬 환경에 라이브러리를 설치합니다.",
-          "pyplot 모듈을 임포트합니다.",
-          "데이터를 정의하고 plot 함수를 호출하여 그래프를 생성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 23409,
-        "forks": 8538,
-        "starsUpdatedAt": "2026-11-01"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-01T19:06:14.640Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-01T19:06:18.678Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "apexcharts-js",
-      "name": "apexcharts.js",
-      "github": "https://github.com/apexcharts/apexcharts.js",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "apexcharts-js",
-        "name": "apexcharts.js",
-        "github": "https://github.com/apexcharts/apexcharts.js",
-        "description": "대시보드와 데이터 중심 UI를 위한 모던하고 인터랙티브한 자바스크립트 SVG 차트 라이브러리입니다.",
-        "longDescription": "ApexCharts는 웹 애플리케이션과 대시보드에서 활용하기 좋은 18종 이상의 다양한 차트 유형을 제공합니다. 타입스크립트를 지원하며 런타임 의존성이 없어 다양한 프레임워크와 바닐라 자바스크립트 환경에서 유연하게 동작합니다.",
-        "category": "디자인·시각화",
-        "tags": [
-          "자바스크립트",
-          "차트",
-          "대시보드",
-          "SVG"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://apexcharts.com",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "패키지 매니저를 통해 프로젝트에 라이브러리를 추가합니다.",
-          "원하는 차트 유형과 옵션을 설정합니다.",
-          "HTML 요소에 차트를 렌더링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 15186,
-        "forks": 1389,
-        "starsUpdatedAt": "2026-11-01"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-01T19:06:14.876Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "react-map-gl",
-      "name": "react-map-gl",
-      "github": "https://github.com/visgl/react-map-gl",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "react-map-gl",
-        "name": "react-map-gl",
-        "github": "https://github.com/visgl/react-map-gl",
-        "description": "Mapbox GL 및 Maplibre GL을 리액트 환경에서 손쉽게 사용하도록 지원하는 컴포넌트 모음입니다.",
-        "longDescription": "react-map-gl은 React 애플리케이션에서 고성능 웹GL 기반 지도를 간편하게 구현할 수 있는 React 친화적인 API 래퍼를 제공합니다. Mapbox와 Maplibre 백엔드를 모두 지원하여 인터랙티브한 지도 시각화 앱 개발에 유용합니다.",
-        "category": "공간정보",
-        "tags": [
-          "React",
-          "지도",
-          "WebGL",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://visgl.github.io/react-map-gl/",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [
-          "react = 16.3"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Maplibre 기반 설치",
-            "command": "npm install react-map-gl maplibre-gl",
-            "note": "Maplibre를 사용할 때의 설치 명령어입니다."
-          },
-          {
-            "title": "Mapbox 기반 설치",
-            "command": "npm install react-map-gl mapbox-gl",
-            "note": "Mapbox를 사용할 때의 설치 명령어입니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트에 react-map-gl과 호환되는 지도 라이브러리를 함께 설치합니다.",
-          "컴포넌트 파일에서 Map 컴포넌트를 임포트합니다.",
-          "API 키 및 지도 초기 속성을 설정하여 렌더링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8515,
-        "forks": 1347,
-        "starsUpdatedAt": "2026-11-01"
-      }
-    },
-    {
-      "id": "gojs",
-      "name": "GoJS",
-      "github": "https://github.com/NorthwoodsSoftware/GoJS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "gojs",
-        "name": "GoJS",
-        "github": "https://github.com/NorthwoodsSoftware/GoJS",
-        "description": "인터랙티브 플로우차트와 조직도, 다이어그램을 웹에 구현하기 위한 자바스크립트/타입스크립트 라이브러리입니다.",
-        "longDescription": "GoJS는 HTML 다이어그램, 차트, 그래프를 생성하고 조작할 수 있는 강력한 도구입니다. 복잡한 노드 연결과 레이아웃 알고리즘을 지원하여 시각적 계획 도구, 워크플로우 디자이너 등을 개발할 때 유용합니다.",
-        "category": "디자인·시각화",
-        "tags": [
-          "JavaScript",
-          "TypeScript",
-          "플로우차트",
-          "다이어그램"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://gojs.net",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "GoJS 라이브러리 설치",
-            "command": "npm install gojs",
-            "note": "npm을 통해 코어 라이브러리를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "npm을 통해 패키지를 설치합니다.",
-          "HTML에 다이어그램이 표시될 컨테이너 요소를 준비합니다.",
-          "자바스크립트 코드로 모델과 다이어그램 인스턴스를 초기화합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8500,
-        "forks": 2824,
-        "starsUpdatedAt": "2026-11-01"
-      }
-    },
-    {
-      "id": "folium",
-      "name": "folium",
-      "github": "https://github.com/python-visualization/folium",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "folium",
-        "name": "folium",
-        "github": "https://github.com/python-visualization/folium",
-        "description": "파이썬 데이터 조작 능력과 Leaflet.js 지도의 강력한 시각화 기능을 결합한 라이브러리입니다.",
-        "longDescription": "Folium은 파이썬에서 지리 공간 데이터를 다룬 뒤 이를 인터랙티브한 Leaflet 지도로 시각화할 수 있도록 돕습니다. 마커, 히트맵, Choropleth 등 다양한 지도 기반 시각화 옵션을 간편하게 구현할 수 있습니다.",
-        "category": "공간정보",
-        "tags": [
-          "파이썬",
-          "지도",
-          "데이터 시각화",
-          "Leaflet"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://python-visualization.github.io/folium/",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "pip 설치",
-            "command": "pip install folium",
-            "note": "PyPI를 통해 패키지를 설치합니다."
-          },
-          {
-            "title": "conda 설치",
-            "command": "conda install -c conda-forge folium",
-            "note": "Conda 환경에서 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "파이썬 환경에서 패키지를 설치합니다.",
-          "folium 모듈을 임포트하고 중심 좌표를 지정하여 지도를 생성합니다.",
-          "필요한 레이어나 마커를 추가한 뒤 HTML 파일로 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7413,
-        "forks": 2268,
-        "starsUpdatedAt": "2026-11-01"
-      }
-    },
-    {
-      "id": "lightdash",
-      "name": "lightdash",
-      "github": "https://github.com/lightdash/lightdash",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "lightdash",
-        "name": "lightdash",
-        "github": "https://github.com/lightdash/lightdash",
-        "description": "코드 기반 컨텍스트 레이어를 활용하는 오픈소스 에이전틱 BI 및 데이터 분석 플랫폼입니다.",
-        "longDescription": "Lightdash는 Git, CI, MCP, CLI를 통해 분석 작업을 소프트웨어 개발처럼 관리할 수 있게 해주는 비즈니스 인텔리전스 플랫폼입니다. 대시보드 구성부터 AI 에이전트 연동까지 거버넌스가 확보된 메트릭을 일관되게 제공합니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "비즈니스 인텔리전스",
-          "대시보드",
-          "데이터 분석",
-          "dbt"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://lightdash.com",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [
-          "Docker 또는 Kubernetes (셀프 호스팅 시)"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Lightdash 클라우드를 이용하거나 Docker 및 Kubernetes를 통해 자체 인프라에 배포합니다.",
-          "dbt 프로젝트와 연결하여 메트릭과 데이터 모델을 정의합니다.",
-          "대시보드를 구축하고 AI 에이전트나 웹 인터페이스를 통해 데이터를 탐색합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6218,
-        "forks": 801,
-        "starsUpdatedAt": "2026-11-01"
-      }
-    },
-    {
-      "id": "orange3",
-      "name": "orange3",
-      "github": "https://github.com/biolab/orange3",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-01T19:06:12.253Z",
-      "sourceRun": "2026-11-02T04",
-      "tool": {
-        "id": "orange3",
-        "name": "orange3",
-        "github": "https://github.com/biolab/orange3",
-        "description": "프로그래밍 지식 없이도 시각적 워크플로우를 통해 데이터 마이닝과 머신러닝을 수행하는 도구입니다.",
-        "longDescription": "Orange3는 초보자와 전문가 모두 데이터 분석과 시각화를 쉽게 다룰 수 있도록 돕는 비주얼 프로그래밍 기반의 도구입니다. 위젯을 드래그앤드롭하여 데이터 전처리, 분류, 클러스터링 모델을 직관적으로 구성할 수 있습니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "데이터 마이닝",
-          "머신러닝",
-          "비주얼 프로그래밍",
-          "파이썬"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://orangedatamining.com",
-        "featured": 9,
-        "added": "2026-11-01",
-        "addedAt": "2026-11-01T19:04:11.813Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 홈페이지 또는 콘다를 통해 Orange3를 설치합니다.",
-          "캔버스 앱을 실행하여 시각적 작업 공간을 엽니다.",
-          "데이터 셋 위젯과 분석 위젯을 연결하여 파이프라인을 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5737,
-        "forks": 1117,
-        "starsUpdatedAt": "2026-11-01"
-      }
     },
     {
       "id": "chartgpu",
@@ -110058,26 +110065,6 @@
       "status": "auto_approved",
       "reasons": [],
       "checkedAt": "2026-10-16T16:08:25.894Z",
-      "sourceRun": "2026-10-17T01"
-    },
-    {
-      "id": "dbeaver",
-      "name": "DBeaver",
-      "github": "https://github.com/dbeaver/dbeaver",
-      "license": "Apache-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T16:08:25.895Z",
-      "sourceRun": "2026-10-17T01"
-    },
-    {
-      "id": "drawdb",
-      "name": "drawDB",
-      "github": "https://github.com/drawdb-io/drawdb",
-      "license": "AGPL-3.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T16:08:25.895Z",
       "sourceRun": "2026-10-17T01"
     }
   ]
