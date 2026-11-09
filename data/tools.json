@@ -1,5 +1,318 @@
 [
   {
+    "id": "rustrak",
+    "name": "Rustrak",
+    "github": "https://github.com/rustrak/rustrak",
+    "description": "Sentry SDK와 호환되는 자체 호스팅 기반의 가벼운 오픈소스 오류 추적 및 성능 모니터링 플랫폼입니다.",
+    "longDescription": "Rust로 작성되어 단일 컨테이너 환경에서 실행되며, 애플리케이션 오류 추적, 성능 지표, 로그, AI 에이전트 트레이스 데이터를 수집하고 분석할 수 있는 Sentry의 대안 도구입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "모니터링",
+      "에러 추적",
+      "Sentry",
+      "Rust",
+      "Docker"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://rustrak.dev",
+    "featured": 9,
+    "added": "2026-11-09",
+    "addedAt": "2026-11-09T16:04:22.769Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 혹은 Docker Compose를 이용하여 Rustrak 컨테이너를 실행합니다.",
+      "웹 대시보드에서 새로운 프로젝트를 생성하고 발급된 DSN을 확인합니다.",
+      "기존 애플리케이션의 Sentry SDK 설정에서 DSN을 Rustrak 인스턴스 주소로 변경합니다.",
+      "애플리케이션에서 발생하는 오류와 성능 로그를 대시보드에서 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 856,
+    "forks": 57,
+    "starsUpdatedAt": "2026-11-09"
+  },
+  {
+    "id": "langkit",
+    "name": "LangKit",
+    "github": "https://github.com/whylabs/langkit",
+    "description": "거대언어모델(LLM)의 프롬프트와 응답에서 텍스트 품질, 보안 및 관련성 지표를 추출하는 오픈소스 툴킷입니다.",
+    "longDescription": "LLM 프로덕션 환경에서 발생할 수 있는 프롬프트 인젝션, 감정 변화, 텍스트 품질 저하 등을 모니터링하기 위해 다양한 텍스트 신호를 추출하고 분석합니다.",
+    "category": "AI 평가",
+    "tags": [
+      "LLM",
+      "프롬프트",
+      "머신러닝",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://whylabs.ai",
+    "featured": 9,
+    "added": "2026-11-09",
+    "addedAt": "2026-11-09T16:04:22.769Z",
+    "requirements": [
+      "Python",
+      "Jupyter"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "패키지 설치",
+        "command": "pip install langkit",
+        "note": "파이썬 환경에 langkit을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "langkit 라이브러리를 임포트합니다.",
+      "LLM의 입력 및 출력 텍스트를 대상으로 메트릭 추출 함수를 실행합니다.",
+      "추출된 지표를 모니터링 대시보드에 연동합니다."
+    ],
+    "examplePrompt": "입력된 프롬프트의 보안 위험도와 감정 분석 지표를 추출해줘.",
+    "usageNote": "",
+    "stars": 1005,
+    "forks": 77,
+    "starsUpdatedAt": "2026-11-09"
+  },
+  {
+    "id": "watchalert",
+    "name": "WatchAlert",
+    "github": "https://github.com/opsre/WatchAlert",
+    "description": "Prometheus, Loki, Elasticsearch 등 다양한 데이터 소스를 지원하는 클라우드 네이티브 모니터링 및 알림 엔진입니다.",
+    "longDescription": "메트릭, 로그, 트레이스 등 다양한 관측성 데이터를 통합 수집하고 분석하여 지능형 알림을 생성하며, 장애 대응 효율을 높여주는 가벼운 모니터링 플랫폼입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "모니터링",
+      "Prometheus",
+      "Elasticsearch",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://cairry.github.io",
+    "featured": 9,
+    "added": "2026-11-09",
+    "addedAt": "2026-11-09T16:04:22.769Z",
+    "requirements": [
+      "Docker",
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker를 사용하여 WatchAlert 컨테이너를 실행합니다.",
+      "웹 UI에 접속하여 모니터링할 데이터 소스를 추가합니다.",
+      "알림 규칙을 설정하고 채널을 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 956,
+    "forks": 180,
+    "starsUpdatedAt": "2026-11-09"
+  },
+  {
+    "id": "agentacct",
+    "name": "agentacct",
+    "github": "https://github.com/mikehasa/agentacct",
+    "description": "코딩 에이전트의 작업 내역, 사용된 도구, 변경된 파일 및 소모된 토큰 비용을 추적하는 로컬 대시보드입니다.",
+    "longDescription": "Claude Code, Codex, OpenCode 등의 코딩 에이전트가 수행한 작업 단계를 로컬 환경에서 안전하게 기록하고, 프로젝트별 사용량과 비용을 한눈에 확인할 수 있는 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "AI 에이전트",
+      "비용 추적",
+      "개발자 도구",
+      "Python"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://trytofu.ai",
+    "featured": 9,
+    "added": "2026-11-09",
+    "addedAt": "2026-11-09T16:04:22.769Z",
+    "requirements": [
+      "Python = 3.11",
+      "pipx"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CLI 설치",
+        "command": "pipx install agentacct",
+        "note": "파이썬 환경에 agentacct를 전역 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "툴을 설치한 뒤 온보딩 명령어를 실행합니다.",
+      "에이전트 작업 기록을 로컬 스토어에 동기화합니다.",
+      "터미널 대시보드를 실행하여 작업 내역을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 755,
+    "forks": 80,
+    "starsUpdatedAt": "2026-11-09"
+  },
+  {
+    "id": "overmind",
+    "name": "Overmind",
+    "github": "https://github.com/overmind-core/overmind",
+    "description": "프로덕션 트레이스 데이터를 활용해 특화된 AI 에이전트를 지속적으로 학습시키고 개선하는 플랫폼입니다.",
+    "longDescription": "에이전트의 실제 실행 데이터를 바탕으로 미세 조정 데이터셋을 구축하고, 정의된 평가 지표를 통해 모델을 벤치마킹하며 단일 API로 서빙할 수 있도록 지원합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "LLM",
+      "미세 조정",
+      "AI 학습",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://overmindlab.ai",
+    "featured": 9,
+    "added": "2026-11-09",
+    "addedAt": "2026-11-09T16:04:22.769Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "SDK 설치",
+        "command": "pip install overmind",
+        "note": "오버마인드 파이썬 SDK를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지를 설치하고 에이전트 코드베이스와 연동합니다.",
+      "프로덕션 트레이스 데이터를 수집합니다.",
+      "평가 메트릭을 정의하고 모델 최적화를 실행합니다."
+    ],
+    "examplePrompt": "수집된 트레이스 데이터를 바탕으로 에이전트의 응답 정확도를 평가해줘.",
+    "usageNote": "",
+    "stars": 754,
+    "forks": 76,
+    "starsUpdatedAt": "2026-11-09"
+  },
+  {
+    "id": "trinity",
+    "name": "Trinity",
+    "github": "https://github.com/Abilityai/trinity",
+    "description": "기업 내부 인프라에 직접 구축하여 Claude Code 및 다양한 코딩 에이전트를 안전하게 운영할 수 있는 AI 에이전트 플랫폼입니다.",
+    "longDescription": "조직 내에서 에이전트의 상태, 권한, 감사 로그를 관리하며 여러 부서의 에이전트가 학습한 내용을 공유하고 협업할 수 있도록 돕는 오픈소스 자율 에이전트 운영 체제입니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "오픈소스",
+      "Docker",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://www.ability.ai/trinity",
+    "featured": 9,
+    "added": "2026-11-09",
+    "addedAt": "2026-11-09T16:04:22.769Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose v2"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "설치 스크립트 실행",
+        "command": "curl -fsSL https://raw.githubusercontent.com/abilityai/trinity/main/install.sh | bash",
+        "note": "트리니티 플랫폼을 자동 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 컨테이너를 배포합니다.",
+      "웹 브라우저로 접속하여 관리자 계정을 설정합니다.",
+      "사용할 AI 모델을 연결하고 에이전트를 실행합니다."
+    ],
+    "examplePrompt": "새로운 코딩 에이전트를 생성하고 지정된 저장소 작업을 할당해줘.",
+    "usageNote": "",
+    "stars": 751,
+    "forks": 147,
+    "starsUpdatedAt": "2026-11-09"
+  },
+  {
+    "id": "parca-agent",
+    "name": "Parca Agent",
+    "github": "https://github.com/parca-dev/parca-agent",
+    "description": "eBPF 기술을 활용하여 쿠버네티스 및 시스템 환경에서 코드 변경이나 재시작 없이 CPU와 GPU 성능을 상시 프로파일링하는 도구입니다.",
+    "longDescription": "운영 중인 애플리케이션의 성능 저하나 병목 현상을 커널 레벨에서 안전하게 수집하고 분석할 수 있도록 pprof 형식의 프로파일링 데이터를 생성합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "eBPF",
+      "프로파일링",
+      "성능 분석",
+      "Go"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://parca.dev/",
+    "featured": 9,
+    "added": "2026-11-09",
+    "addedAt": "2026-11-09T16:04:22.769Z",
+    "requirements": [
+      "Linux Kernel 5.3+ (BTF 지원)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "쿠버네티스 환경에 Parca Agent를 배포합니다.",
+      "대시보드에서 타겟 애플리케이션이 자동으로 발견되는지 확인합니다.",
+      "CPU 및 GPU 사용량 프로파일링 데이터를 분석합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 750,
+    "forks": 93,
+    "starsUpdatedAt": "2026-11-09"
+  },
+  {
     "id": "covid19-scenarios",
     "name": "COVID-19 Scenarios",
     "github": "https://github.com/neherlab/covid19_scenarios",
