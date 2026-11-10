@@ -1,5 +1,152 @@
 [
   {
+    "id": "kraken-cli",
+    "name": "Kraken CLI",
+    "github": "https://github.com/krakenfx/kraken-cli",
+    "description": "터미널 및 AI 어시스턴트에서 암호화폐, 주식, 외환 등을 거래할 수 있는 CLI 및 MCP 서버 도구",
+    "longDescription": "Kraken 거래소의 다양한 자산을 터미널 환경에서 직접 거래하거나 Claude, Cursor 등의 AI 에이전트와 연동하여 자동화할 수 있는 강력한 트레이딩 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "CLI",
+      "트레이딩",
+      "암호화폐",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://kraken.com/kraken-cli",
+    "featured": 9,
+    "added": "2026-11-10",
+    "addedAt": "2026-11-10T20:04:18.588Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude",
+      "Cursor",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "바이너리 다운로드",
+        "command": "curl --proto '=https' --tlsv1.2 -sSf https://github.com/krakenfx/kraken-cli",
+        "note": "공식 스크립트를 통해 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "툴을 설치하고 Kraken 계정 API 자격 증명을 설정합니다.",
+      "터미널에서 명령어 형태로 시세 조회 및 주문을 실행합니다.",
+      "필요시 내장된 MCP 서버 설정을 통해 AI 에이전트와 연동합니다.",
+      "실시간 가격을 기반으로 페이퍼 트레이딩을 테스트합니다."
+    ],
+    "examplePrompt": "비트코인 현재 시세를 조회하고 매수 주문 가능 여부를 알려줘.",
+    "usageNote": "실제 자산 거래 시 API 권한 설정에 주의해야 합니다.",
+    "stars": 807,
+    "forks": 113,
+    "starsUpdatedAt": "2026-11-10"
+  },
+  {
+    "id": "mcp-3",
+    "name": "Phone Harness MCP",
+    "github": "https://github.com/phone-harness/mcp",
+    "description": "AI 에이전트가 실제 iPhone이나 클라우드 안드로이드 에뮬레이터를 제어할 수 있게 해주는 MCP 서버",
+    "longDescription": "Claude, Cursor, ChatGPT 등 MCP 클라이언트를 사용하는 AI 에이전트가 실제 스마트폰 화면을 보고 탭, 타이핑, 스와이프 등의 모바일 자동화 작업을 수행할 수 있도록 지원하는 도구입니다.",
+    "category": "브라우저 자동화",
+    "tags": [
+      "모바일 자동화",
+      "MCP",
+      "안드로이드",
+      "iPhone"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://phone-harness.com",
+    "featured": 9,
+    "added": "2026-11-10",
+    "addedAt": "2026-11-10T20:04:18.588Z",
+    "requirements": [],
+    "supportedAgents": [
+      "Claude",
+      "Cursor",
+      "ChatGPT",
+      "Codex"
+    ],
+    "install": [],
+    "usageSteps": [
+      "지원하는 MCP 클라이언트 설정에서 새로운 커넥터를 추가합니다.",
+      "Phone Harness MCP의 원격 URL을 입력하고 인증을 완료합니다.",
+      "AI에게 모바일 기기 제어 권한을 부여합니다.",
+      "채팅을 통해 스마트폰 화면 조작 및 앱 실행을 지시합니다."
+    ],
+    "examplePrompt": "연결된 스마트폰에서 설정 앱을 열고 Wi-Fi 상태를 확인해 줘.",
+    "usageNote": "",
+    "stars": 782,
+    "forks": 67,
+    "starsUpdatedAt": "2026-11-10"
+  },
+  {
+    "id": "hippo-memory",
+    "name": "Hippo Memory",
+    "github": "https://github.com/kitfunso/hippo-memory",
+    "description": "코딩 에이전트가 반복 실수를 줄이고 시간이 지남에 따라 학습할 수 있도록 돕는 로컬 우선 장기 기억 레이어",
+    "longDescription": "Cursor나 Claude Code 등 다양한 AI 하니스와 연동되어 에이전트의 기억을 관리하며, 성공한 기억은 강화하고 실수는 자연스럽게 감쇠시켜 에이전트의 지능을 지속적으로 향상시키는 로컬 우선 메모리 도구입니다.",
+    "category": "지식·검색",
+    "tags": [
+      "AI 메모리",
+      "코딩 에이전트",
+      "로컬 우선",
+      "MCP"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hippo-memory.com",
+    "featured": 9,
+    "added": "2026-11-10",
+    "addedAt": "2026-11-10T20:04:18.588Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [
+      "Claude Code",
+      "Cursor",
+      "Codex"
+    ],
+    "install": [
+      {
+        "title": "NPM 패키지 설치",
+        "command": "npm install hippo-memory",
+        "note": "프로젝트 환경에 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트에 Hippo 패키지를 설치합니다.",
+      "설명서에 따라 지원하는 AI 에이전트 하니스와 연동 설정을 완료합니다.",
+      "에이전트가 작업하는 동안 자동으로 학습 내용이 로컬 데이터베이스에 기록됩니다.",
+      "`hippo doctor` 명령어로 상태를 진단하고 메모리 무결성을 확인합니다."
+    ],
+    "examplePrompt": "이전 세션에서 수정했던 인증 관련 버그 해결 방식을 기억해 줘.",
+    "usageNote": "",
+    "stars": 791,
+    "forks": 47,
+    "starsUpdatedAt": "2026-11-10"
+  },
+  {
     "id": "asciimatics",
     "name": "asciimatics",
     "github": "https://github.com/peterbrittain/asciimatics",
