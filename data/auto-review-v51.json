@@ -1,7 +1,1386 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T09:07:09.268Z",
+  "updatedAt": "2026-11-10T10:07:02.413Z",
   "items": [
+    {
+      "id": "raylib",
+      "name": "raylib",
+      "github": "https://github.com/raysan5/raylib",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "raylib",
+        "name": "raylib",
+        "github": "https://github.com/raysan5/raylib",
+        "description": "비디오 게임 프로그래밍 학습과 프로토타이핑을 위한 가벼운 C언어 그래픽 라이브러리",
+        "longDescription": "Borland BGI와 XNA 프레임워크에서 영감을 받아 제작된 게임 프로그래밍 라이브러리입니다. 복잡한 인터페이스 없이 순수하게 코딩만으로 그래픽 애플리케이션과 임베디드 시스템, 교육용 프로그램을 개발할 수 있도록 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "게임 개발",
+          "그래픽",
+          "C언어"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "http://www.raylib.com",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "GitHub 릴리즈 페이지에서 바이너리를 다운로드하거나 패키지 매니저를 통해 설치합니다.",
+          "제공되는 C언어 코드 예제를 참고하여 창 생성 및 그래픽 루프를 작성합니다.",
+          "컴파일러를 이용해 코드를 빌드하고 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 35623,
+        "forks": 3380,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:48.063Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:52.918Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-10T10:06:59.652Z"
+    },
+    {
+      "id": "timescaledb",
+      "name": "TimescaleDB",
+      "github": "https://github.com/timescale/timescaledb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "timescaledb",
+        "name": "TimescaleDB",
+        "github": "https://github.com/timescale/timescaledb",
+        "description": "PostgreSQL 확장 기능으로 제공되는 고성능 실시간 분석용 시계열 데이터베이스입니다.",
+        "longDescription": "시계열 및 이벤트 데이터 처리에 특화된 고성능 실시간 분석 데이터베이스입니다. 표준 SQL을 지원하며 PostgreSQL의 안정성과 확장성을 그대로 유지하면서 대규모 시계열 데이터를 효율적으로 관리합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "시계열 데이터베이스",
+          "PostgreSQL",
+          "분석",
+          "SQL"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.tigerdata.com/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "로컬 개발용 빠른 설치",
+            "command": "curl -sL https://tsdb.co/start-local | sh",
+            "note": "로컬 테스트용 TimescaleDB 인스턴스를 다운로드하고 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 실행하여 로컬에 TimescaleDB를 구동합니다.",
+          "PostgreSQL 클라이언트나 선호하는 SQL 도구를 사용하여 포트 6543에 연결합니다.",
+          "시계열 테이블을 생성하고 데이터를 적재하여 실시간 분석 쿼리를 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "제공되는 빠른 시작 스크립트는 로컬 개발 및 테스트용입니다.",
+        "stars": 23836,
+        "forks": 1184,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:48.407Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:53.566Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckError": "Gemini HTTP 503"
+    },
+    {
+      "id": "thingsboard",
+      "name": "ThingsBoard",
+      "github": "https://github.com/thingsboard/thingsboard",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "thingsboard",
+        "name": "ThingsBoard",
+        "github": "https://github.com/thingsboard/thingsboard",
+        "description": "장치 관리, 데이터 수집, 처리 및 시각화를 지원하는 올인원 오픈소스 사물인터넷(IoT) 플랫폼입니다.",
+        "longDescription": "수많은 IoT 기기와 센서를 연결하고 원격으로 관리할 수 있는 오픈소스 플랫폼입니다. 강력한 규칙 엔진을 통해 데이터를 실시간으로 처리하고, 사용자 정의 대시보드를 통해 시각화할 수 있습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "IoT",
+          "대시보드",
+          "디바이스관리"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://thingsboard.io",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Java",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 문서의 온프레미스 설치 가이드를 참고하여 서버 환경에 배포합니다.",
+          "웹 관리자 콘솔에 접속하여 기본 계정으로 로그인합니다.",
+          "새로운 IoT 디바이스를 등록하고 MQTT 또는 HTTP를 통해 데이터를 전송합니다.",
+          "대시보드 디자이너를 통해 실시간 데이터를 시각화하는 위젯을 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 22660,
+        "forks": 6556,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:48.744Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:54.074Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-10T10:07:00.858Z"
+    },
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "windmill",
+        "name": "Windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "파이썬, 타입스크립트 코드로 워크플로우와 AI 에이전트를 구축하는 오픈소스 플랫폼입니다.",
+        "longDescription": "다양한 언어로 스크립트를 작성하여 공유 가능한 UI, API, 크론 잡 및 오케스트레이션 파이프라인으로 전환할 수 있습니다. Airflow나 Temporal 등의 대안으로 설계되었습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "오케스트레이션",
+          "AI 에이전트"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker를 사용하여 Windmill 서버 인스턴스를 실행합니다.",
+          "웹 UI에 접속하여 프로젝트 워크스페이스를 생성합니다.",
+          "파이썬 또는 타입스크립트로 필요한 스크립트나 자동화 로직을 작성합니다.",
+          "스크립트를 조합하여 복잡한 데이터 파이프라인이나 AI 에이전트 워크플로우를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18483,
+        "forks": 1145,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:49.096Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:54.508Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-10T10:07:01.644Z"
+    },
+    {
+      "id": "emqx",
+      "name": "EMQX",
+      "github": "https://github.com/emqx/emqx",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "emqx",
+        "name": "EMQX",
+        "github": "https://github.com/emqx/emqx",
+        "description": "확장성과 신뢰성이 뛰어난 고성능 MQTT 메시지 브로커입니다.",
+        "longDescription": "대규모 IoT 기기 연결과 실시간 메시지 처리를 지원하는 분산형 MQTT 브로커입니다. MQTT v5.0 및 v3.1.1을 완벽히 지원하며 고성능 분산 클러스터링 기능을 제공합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "MQTT",
+          "메시지 브로커",
+          "IoT"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.emqx.com",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 다운로드 페이지에서 운영체제에 맞는 최신 버전을 다운로드합니다.",
+          "설치 문서에 따라 브로커 서비스를 시작합니다.",
+          "MQTT 클라이언트 애플리케이션을 통해 브로커에 연결하고 퍼블리시/서브스크라이브 테스트를 진행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 16898,
+        "forks": 2580,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:49.401Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:54.966Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-10T10:07:02.413Z"
+    },
+    {
+      "id": "mongoose",
+      "name": "Mongoose",
+      "github": "https://github.com/cesanta/mongoose",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "mongoose",
+        "name": "Mongoose",
+        "github": "https://github.com/cesanta/mongoose",
+        "description": "TCP/IP 네트워크 스택, MQTT, 웹소켓을 지원하는 임베디드용 C/C++ 웹 서버 라이브러리입니다.",
+        "longDescription": "마이크로컨트롤러 및 임베디드 Linux 기기에서 간편하게 네트워킹 기능을 구현할 수 있는 풀스택 임베디드 네트워킹 라이브러리입니다. 웹 서버, 웹소켓, MQTT 클라이언트/서버 기능을 단 몇 줄의 코드로 구현할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "웹 서버",
+          "임베디드",
+          "C",
+          "네트워크"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://mongoose.ws",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "C 컴파일러"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트에 mongoose.h와 mongoose.c 파일을 포함합니다.",
+          "이벤트 핸들러 함수를 작성하여 HTTP 요청이나 웹소켓 이벤트를 처리하도록 설정합니다.",
+          "컴파일러(예: cc main.c mongoose.c)를 사용하여 프로그램을 빌드하고 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 13130,
+        "forks": 2957,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:49.728Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:55.413Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "mosquitto",
+      "name": "Eclipse Mosquitto",
+      "github": "https://github.com/eclipse-mosquitto/mosquitto",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "mosquitto",
+        "name": "Eclipse Mosquitto",
+        "github": "https://github.com/eclipse-mosquitto/mosquitto",
+        "description": "MQTT 프로토콜 버전 5.0, 3.1.1, 3.1을 지원하는 가볍고 오픈소스인 메시지 브로커입니다.",
+        "longDescription": "가정용 자동화부터 대규모 IoT 배치까지 널리 사용되는 가벼운 MQTT 브로커입니다. 발행/구독(Pub/Sub) 유틸리티와 클라이언트 라이브러리를 함께 제공하여 빠르고 안정적인 메시징 환경을 구축할 수 있습니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "MQTT",
+          "메시지 브로커",
+          "IoT",
+          "C"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://mosquitto.org",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "패키지 매니저를 통해 Mosquitto를 설치합니다.",
+          "터미널에서 `mosquitto` 명령어를 실행하여 브로커를 시작합니다.",
+          "다른 터미널에서 `mosquitto_sub -t 'test/topic' -v` 명령어로 토픽을 구독합니다.",
+          "`mosquitto_pub -t 'test/topic' -m 'hello'` 명령어로 메시지를 발행하여 동작을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 11355,
+        "forks": 2664,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:50.042Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:56.335Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "snow-shot",
+      "name": "Snow Shot",
+      "github": "https://github.com/mg-chao/snow-shot",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "snow-shot",
+        "name": "Snow Shot",
+        "github": "https://github.com/mg-chao/snow-shot",
+        "description": "오프라인 OCR, 스크롤 캡처, 주석 및 화면 녹화를 지원하는 무료 오픈소스 Windows 및 macOS용 스크린샷 도구입니다.",
+        "longDescription": "직관적인 화면 캡처와 다양한 편집 기능을 제공하는 오픈소스 데스크톱 애플리케이션입니다. 영역 캡처, 창 캡처뿐만 아니라 긴 웹페이지를 한 번에 담는 스크롤 캡처, 이미지 고정, 오프라인 텍스트 추출(OCR) 기능을 제공합니다.",
+        "category": "생산성",
+        "tags": [
+          "스크린샷",
+          "OCR",
+          "화면 녹화",
+          "생산성"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://snowshot.top",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "GitHub 릴리즈 페이지에서 운영체제에 맞는 설치 파일이나 포터블 버전을 다운로드합니다.",
+          "애플리케이션을 실행하고 단축키를 이용해 원하는 영역을 캡처합니다.",
+          "필요에 따라 주석을 추가하거나 오프라인 OCR 기능을 통해 텍스트를 추출합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6876,
+        "forks": 441,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:50.490Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:57.108Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 개요 작성기를 대체하는 계층형 자유 형식 데이터 정리 도구입니다.",
+        "longDescription": "전통적인 스프레드시트의 친숙함과 마인드맵, 아웃라이너의 장점을 결합한 계층형 데이터 오일게니제이션 툴입니다. 할 일 목록, 프로젝트 관리, 브레인스토밍 및 복잡한 정보 구조화를 단일 화면에서 효율적으로 처리할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "스프레드시트",
+          "마인드맵",
+          "지식 관리",
+          "생산성"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "GitHub 릴리즈 페이지에서 사용 중인 운영체제용 빌드 버전을 다운로드합니다.",
+          "애플리케이션을 실행하고 새로운 그리드 문서를 생성합니다.",
+          "셀 안에 계층적으로 텍스트나 데이터를 입력하여 아이디어나 프로젝트를 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS의 경우 최초 실행 시 서명 문제로 인해 보안 설정에서 열기 허용이 필요할 수 있습니다.",
+        "stars": 3197,
+        "forks": 226,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:50.891Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:57.978Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "shelf-nu",
+      "name": "Shelf",
+      "github": "https://github.com/Shelf-nu/shelf.nu",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "shelf-nu",
+        "name": "Shelf",
+        "github": "https://github.com/Shelf-nu/shelf.nu",
+        "description": "물리적 자산, 장비, 도구 및 재고를 추적하고 예약할 수 있는 무료 오픈소스 자산 관리 시스템입니다.",
+        "longDescription": "팀과 기업이 보유한 장비와 자산의 위치, 사용자를 실시간으로 파악할 수 있는 오픈소스 자산 관리 플랫폼입니다. QR 코드 태그 생성, 장비 예약 및 대여 관리, 역할 기반 접근 제어 기능을 제공합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "자산 관리",
+          "재고 관리",
+          "QR 코드",
+          "예약"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.shelf.nu",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Node.js",
+          "pnpm",
+          "Supabase"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 복제 및 의존성 설치",
+            "command": "git clone https://github.com/Shelf-nu/shelf.nu.git && cd shelf.nu && pnpm install",
+            "note": "프로젝트 소스코드를 받고 필요한 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "환경 변수 파일(.env)을 설정하고 Supabase 크리덴셜을 입력합니다.",
+          "데이터베이스 마이그레이션을 실행하여 Prisma 클라이언트를 생성합니다.",
+          "`pnpm webapp:dev` 명령어로 개발 서버를 실행하고 웹 브라우저에서 접속합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3054,
+        "forks": 387,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:51.234Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T10:06:58.440Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "companyos",
+      "name": "CompanyOS",
+      "github": "https://github.com/kortix-ai/CompanyOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "companyos",
+        "name": "CompanyOS",
+        "github": "https://github.com/kortix-ai/CompanyOS",
+        "description": "기업 운영을 위한 멀티플레이어 AI 에이전트 기반 오픈소스 운영체제입니다.",
+        "longDescription": "클라우드 네이티브 환경에서 병렬로 실행되는 AI 에이전트들을 통해 기업의 업무를 자동화하고 관리할 수 있는 오픈소스 솔루션입니다. 3,000개 이상의 앱과 연동되며 Git 기반으로 에이전트와 규칙을 관리할 수 있습니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 에이전트",
+          "오픈소스",
+          "TypeScript",
+          "업무 자동화",
+          "LLM"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kortix.com",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Git",
+          "Node.js",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 프로젝트를 설정합니다.",
+          "필요한 API 키와 환경 변수를 구성합니다.",
+          "에이전트 스웜을 실행하여 업무 자동화를 시작합니다."
+        ],
+        "examplePrompt": "우리 팀의 주간 회의록을 요약하고 다음 주 일정을 에이전트들에게 할당해줘.",
+        "usageNote": "셀프 호스팅 시 충분한 클라우드 리소스가 필요합니다.",
+        "stars": 20623,
+        "forks": 3468,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:51.520Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "get-jobs",
+      "name": "get_jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "get-jobs",
+        "name": "get_jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "주요 구직 플랫폼에서 이력서 자동 제출 및 채용 정보를 수집하는 AI 구직 도우미입니다.",
+        "longDescription": "중국 주요 구직 사이트(BOSS, 전청무우, 猎聘, 智联招聘 등)를 대상으로 이력서를 자동으로 제출하고 채용 공고를 분석해 주는 Java 기반 자동화 스크립트입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "AI",
+          "자동화",
+          "구직",
+          "Java",
+          "Spring Boot"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Java 17+",
+          "Maven"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트 코드를 다운로드하고 빌드합니다.",
+          "설정 파일에 구직 플랫폼 계정 정보를 입력합니다.",
+          "자동 지원 스크립트를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "구직 플랫폼의 이용 약관 및 자동화 제한 정책을 준수해야 합니다.",
+        "stars": 9666,
+        "forks": 1099,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T10:06:51.842Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "serial-studio",
+      "name": "Serial-Studio",
+      "github": "https://github.com/Serial-Studio/Serial-Studio",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "serial-studio",
+        "name": "Serial-Studio",
+        "github": "https://github.com/Serial-Studio/Serial-Studio",
+        "description": "UART, BLE, MQTT, Modbus 등 다양한 프로토콜을 지원하는 오픈소스 원격 측정 대시보드입니다.",
+        "longDescription": "마이크로컨트롤러 및 IoT 기기의 데이터를 실시간으로 시각화할 수 있는 임베디드용 지상국 및 대시보드 소프트웨어입니다. Qt 기반으로 제작되어 다양한 플랫폼에서 실행됩니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "대시보드",
+          "IoT",
+          "MQTT",
+          "Modbus",
+          "C"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://serial-studio.com/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Qt 라이브러리"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 릴리스 페이지에서 설치 파일을 다운로드합니다.",
+          "기기나 시뮬레이터를 직렬 통신 또는 네트워크로 연결합니다.",
+          "프로젝트 에디터에서 시각화 레이아웃을 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7319,
+        "forks": 1103,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "ejabberd",
+      "name": "ejabberd",
+      "github": "https://github.com/processone/ejabberd",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "ejabberd",
+        "name": "ejabberd",
+        "github": "https://github.com/processone/ejabberd",
+        "description": "XMPP, MQTT, SIP 서비스를 지원하는 확장 가능하고 강력한 실시간 메시징 플랫폼입니다.",
+        "longDescription": "Erlang/OTP 기반으로 구축되어 대규모 분산 환경에서도 안정적으로 동작하는 오픈소스 메시징 서버입니다. 실시간 채팅, 그룹챗, IoT 브로커 용도로 널리 사용됩니다.",
+        "category": "네트워크",
+        "tags": [
+          "XMPP",
+          "MQTT",
+          "SIP",
+          "채팅",
+          "Erlang"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.process-one.net/ejabberd/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Erlang/OTP"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Debian 패키지 설치",
+            "command": "apt-get install ejabberd",
+            "note": "Debian 기반 시스템에서의 설치 방법"
+          }
+        ],
+        "usageSteps": [
+          "소스 코드 컴파일 또는 패키지를 통해 설치합니다.",
+          "설정 파일에서 도메인 및 포트를 구성합니다.",
+          "ejabberd 서비스를 시작하고 클라이언트를 연결합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6749,
+        "forks": 1553,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "freeswitch",
+      "name": "freeswitch",
+      "github": "https://github.com/signalwire/freeswitch",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "freeswitch",
+        "name": "freeswitch",
+        "github": "https://github.com/signalwire/freeswitch",
+        "description": "다양한 하드웨어에서 실행 가능한 소프트웨어 정의 텔레콤 및 VoIP 스택입니다.",
+        "longDescription": "라즈베리 파이부터 고성능 멀티코어 서버까지 범용 하드웨어에서 통신 인프라를 구축할 수 있는 오픈소스 통신 플랫폼입니다. SIP 및 WebRTC를 지원합니다.",
+        "category": "네트워크",
+        "tags": [
+          "VoIP",
+          "SIP",
+          "통신",
+          "WebRTC",
+          "C"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://freeswitch.com/#getting-started",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "C 컴파일러",
+          "Make"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Debian 패키지 설치",
+            "command": "apt-get install freeswitch",
+            "note": "패키지를 통한 기본 설치"
+          }
+        ],
+        "usageSteps": [
+          "패키지 또는 소스 코드를 통해 FreeSWITCH를 설치합니다.",
+          "설정 파일에서 사용자 및 게이트웨이를 정의합니다.",
+          "서비스를 실행하고 SIP 클라이언트를 연동합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5294,
+        "forks": 1910,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "ravendb",
+      "name": "ravendb",
+      "github": "https://github.com/ravendb/ravendb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "ravendb",
+        "name": "ravendb",
+        "github": "https://github.com/ravendb/ravendb",
+        "description": "개발자 친화적인 경험과 강력한 성능을 제공하는 ACID 문서형 NoSQL 데이터베이스입니다.",
+        "longDescription": "데이터 관리의 부담을 줄이고 뛰어난 성능과 웹 기반 관리 UI를 제공하는 오픈소스 NoSQL 데이터베이스입니다. 풀텍스트 검색, 시계열 데이터 및 벡터 검색을 지원합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "NoSQL",
+          "데이터베이스",
+          "ACID",
+          "C#",
+          "문서형"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://ravendb.net",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Docker 또는 .NET 어셈블리"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run --rm -it ravendb/ravendb:latest -p 8080:8080",
+            "note": "도커를 이용한 빠른 실행"
+          }
+        ],
+        "usageSteps": [
+          "Docker를 사용하여 RavenDB 컨테이너를 실행합니다.",
+          "웹 브라우저로 8080 포트에 접속하여 관리 UI를 확인합니다.",
+          "제공되는 SDK를 통해 애플리케이션과 연동합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4017,
+        "forks": 866,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "anthias",
+      "name": "Anthias",
+      "github": "https://github.com/Screenly/Anthias",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "anthias",
+        "name": "Anthias",
+        "github": "https://github.com/Screenly/Anthias",
+        "description": "라즈베리 파이 및 PC를 위한 세계에서 가장 인기 있는 오픈소스 디지털 사이니지 솔루션입니다.",
+        "longDescription": "화면에 미디어 콘텐츠, 웹페이지, 비디오 등을 원격으로 제어하고 송출할 수 있는 디지털 사이니지 플랫폼입니다. 기존 Screenly OSE에서 리브랜딩되었습니다.",
+        "category": "생산성",
+        "tags": [
+          "디지털 사이니지",
+          "라즈베리 파이",
+          "Python",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://anthias.screenly.io",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Docker",
+          "BalenaOS"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "지원되는 기기에 운영체제 이미지를 설치합니다.",
+          "Anthias 컨테이너 또는 패키지를 배포합니다.",
+          "웹 대시보드에 접속하여 재생할 콘텐츠를 업로드합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3726,
+        "forks": 731,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "wppconnect",
+      "name": "wppconnect",
+      "github": "https://github.com/wppconnect-team/wppconnect",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "wppconnect",
+        "name": "wppconnect",
+        "github": "https://github.com/wppconnect-team/wppconnect",
+        "description": "Puppeteer 기반의 Node.js 및 TypeScript용  WhatsApp 웹 자동화 라이브러리입니다.",
+        "longDescription": "WhatsApp 웹을 프로그래밍 방식으로 제어하여 세션 관리, 메시지 송수신, 미디어 처리 및 챗봇 구축을 가능하게 하는 오픈소스 라이브러리입니다.",
+        "category": "브라우저 자동화",
+        "tags": [
+          "WhatsApp",
+          "자동화",
+          "챗봇",
+          "TypeScript",
+          "Node.js"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://wppconnect.io/wppconnect/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Node.js",
+          "Puppeteer"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치",
+            "command": "npm i @wppconnect-team/wppconnect",
+            "note": "패키지 설치"
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 패키지를 설치합니다.",
+          "클라이언트 인스턴스를 생성하고 초기화합니다.",
+          "QR 코드를 스캔하여 세션을 연결하고 메시지 핸들러를 작성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "WhatsApp 정책에 따라 계정 제재 위험이 있을 수 있습니다.",
+        "stars": 3524,
+        "forks": 588,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "zenoh",
+      "name": "zenoh",
+      "github": "https://github.com/eclipse-zenoh/zenoh",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "zenoh",
+        "name": "zenoh",
+        "github": "https://github.com/eclipse-zenoh/zenoh",
+        "description": "데이터 전송, 저장, 연산을 지리적 분산 환경에서 통합하는 고성능 통신 프로토콜 및 프레임워크입니다.",
+        "longDescription": "전통적인 발행/구독 모델과 분산 저장소, 쿼리를 결합하여 매우 낮은 지연 시간과 높은 공간 효율성을 제공하는 Rust 기반의 엣지 컴퓨팅 및 로보틱스 통신 스택입니다.",
+        "category": "네트워크",
+        "tags": [
+          "분산 시스템",
+          "엣지 컴퓨팅",
+          "IoT",
+          "Rust",
+          "프로토콜"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://zenoh.io",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "Rust 툴체인"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "소스 코드를 클론합니다.",
+          "Cargo를 사용하여 프로젝트를 빌드합니다.",
+          "Zenoh 라우터 및퍼블리셔/서브스크라이버 노드를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3331,
+        "forks": 415,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "kamailio",
+      "name": "kamailio",
+      "github": "https://github.com/kamailio/kamailio",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T10:06:47.231Z",
+      "sourceRun": "2026-11-10T19",
+      "tool": {
+        "id": "kamailio",
+        "name": "kamailio",
+        "github": "https://github.com/kamailio/kamailio",
+        "description": "대규모 VoIP 및 실시간 통신 플랫폼을 위한 고성능 오픈소스 SIP 서버입니다.",
+        "longDescription": "유연성, 보안성, 확장성에 초점을 맞춰 대규모 실시간 통신 시스템을 구축할 수 있는 오픈소스 SIP 시그널링 서버입니다.",
+        "category": "네트워크",
+        "tags": [
+          "SIP",
+          "VoIP",
+          "텔레포니",
+          "C",
+          "서버"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.kamailio.org",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T10:04:21.483Z",
+        "requirements": [
+          "C 컴파일러",
+          "Make"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "소스 코드 클론",
+            "command": "git clone https://github.com/kamailio/kamailio.git",
+            "note": "소스 코드를 통한 설치 준비"
+          }
+        ],
+        "usageSteps": [
+          "필요한 의존성을 설치하고 소스코드를 다운로드합니다.",
+          "컴파일 및 설치를 진행합니다.",
+          "설정 파일을 수정하고 Kamailio 데몬을 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2994,
+        "forks": 1175,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
     {
       "id": "mineru",
       "name": "MinerU",
@@ -84,165 +1463,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-10T09:07:04.581Z"
-    },
-    {
-      "id": "companyos",
-      "name": "CompanyOS",
-      "github": "https://github.com/kortix-ai/CompanyOS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T09:06:54.249Z",
-      "sourceRun": "2026-11-10T18",
-      "tool": {
-        "id": "companyos",
-        "name": "CompanyOS",
-        "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "기업을 위한 오픈소스 AI 에이전트 운영 체제입니다.",
-        "longDescription": "멀티플레이어 AI 에이전트와 코드 기반 조직 운영을 지원하며, 자체 인프라에 직접 설치하여 병렬로 동작하는 에이전트들을 관리할 수 있습니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI 에이전트",
-          "오픈소스",
-          "협업",
-          "인프라"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kortix.com",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T09:04:22.766Z",
-        "requirements": [
-          "TypeScript"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하고 프로젝트 의존성을 설치합니다.",
-          "환경 변수를 설정하고 인프라에 맞게 구성합니다.",
-          "에이전트 설정을 정의하고 시스템을 실행합니다."
-        ],
-        "examplePrompt": "우리 팀의 주간 회의록을 요약하고 다음 주 일정을 에이전트들에게 배분해 줘.",
-        "usageNote": "셀프 호스팅 환경에서 실행하기 전에 충분한 보안 검토가 필요합니다.",
-        "stars": 20621,
-        "forks": 3468,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T09:06:55.108Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-10T09:06:59.586Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
-    },
-    {
-      "id": "windmill",
-      "name": "Windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T09:06:54.249Z",
-      "sourceRun": "2026-11-10T18",
-      "tool": {
-        "id": "windmill",
-        "name": "Windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 개발할 수 있는 코드 중심 플랫폼입니다.",
-        "longDescription": "다양한 프로그래밍 언어로 스크립트를 작성하여 API, 크론 잡, UI, 데이터 파이프라인 및 AI 에이전트 워크플로우를 빠르고 안정적으로 자동화할 수 있습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "워크플로우",
-          "업무 자동화",
-          "내부 도구",
-          "오케스트레이션"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T09:04:22.766Z",
-        "requirements": [
-          "Rust",
-          "TypeScript"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker 또는 소스를 통해 인스턴스를 실행합니다.",
-          "웹 인터페이스에 접속하여 새로운 스크립트나 워크플로우를 생성합니다.",
-          "필요한 트리거와 연동하여 자동화를 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "대규모 분산 처리를 위해 PostgreSQL 등의 데이터베이스 연동이 필요합니다.",
-        "stars": 18481,
-        "forks": 1145,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T09:06:55.401Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-10T09:07:00.018Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
     },
     {
       "id": "kkfileview",
@@ -652,81 +1872,6 @@
       }
     },
     {
-      "id": "snow-shot",
-      "name": "Snow Shot",
-      "github": "https://github.com/mg-chao/snow-shot",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T09:06:54.249Z",
-      "sourceRun": "2026-11-10T18",
-      "tool": {
-        "id": "snow-shot",
-        "name": "Snow Shot",
-        "github": "https://github.com/mg-chao/snow-shot",
-        "description": "스크린샷, 주석, 스크롤 캡처, 오프라인 OCR을 지원하는 오픈소스 캡처 도구입니다.",
-        "longDescription": "Windows 및 macOS를 지원하며, 영역 캡처, 스크롤 캡처, 이미지 핀(고정), 상세한 주석 편집 및 로컬 기반의 정확한 오프라인 OCR 기능을 제공하는 생산성 소프트웨어입니다.",
-        "category": "생산성",
-        "tags": [
-          "스크린샷",
-          "OCR",
-          "생산성",
-          "데스크톱 앱"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://snowshot.top",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T09:04:22.766Z",
-        "requirements": [
-          "C++"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "GitHub 릴리스에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
-          "프로그램을 실행하고 단축키를 이용해 화면을 캡처합니다.",
-          "주석 달기, OCR 추출 또는 이미지 고정 기능을 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "전체 설치 버전을 사용하면 오프라인 OCR 리소스가 기본 포함됩니다.",
-        "stars": 6873,
-        "forks": 441,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T09:06:57.195Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-10T09:07:02.793Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "naps2",
       "name": "NAPS2",
       "github": "https://github.com/cyanfish/naps2",
@@ -865,75 +2010,6 @@
       },
       "recheckReasons": [
         "명확히 검증되지 않은 라이선스"
-      ]
-    },
-    {
-      "id": "get-jobs",
-      "name": "Get Jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T09:06:54.249Z",
-      "sourceRun": "2026-11-10T18",
-      "tool": {
-        "id": "get-jobs",
-        "name": "Get Jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "다양한 구직 플랫폼에서 이력서 자동 투여 및 채용 공고를 관리하는 AI 도구입니다.",
-        "longDescription": "보스직핀, 전程无忧 등 주요 구직 플랫폼을 대상으로 이력서 자동 제출 및 구직 과정을 자동화하는 스크립트 기반 도구입니다. Next.js와 Spring Boot를 기반으로 구현되어 있습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "AI",
-          "구직",
-          "자동화",
-          "스크립트"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T09:04:22.766Z",
-        "requirements": [
-          "Java",
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하고 환경 설정을 구성합니다.",
-          "지원하고자 하는 플랫폼 계정 정보를 입력합니다.",
-          "자동 구직 스크립트를 실행하여 이력서 투여를 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9666,
-        "forks": 1100,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T09:06:58.027Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
       ]
     },
     {
@@ -1274,57 +2350,6 @@
       }
     },
     {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-10T09:06:54.249Z",
-      "sourceRun": "2026-11-10T18",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "아웃라이너, 마인드맵, 스프레드시트의 장점을 결합한 계층형 데이터 조직화 도구입니다.",
-        "longDescription": "할 일 목록, 일정 관리, 브레인스토밍, 프로젝트 기획 등 복잡한 정보를 2차원 계층 구조로 깔끔하게 정리할 수 있는 데스크톱 애플리케이션입니다. 가볍고 직관적인 인터페이스를 제공합니다.",
-        "category": "생산성",
-        "tags": [
-          "마인드맵",
-          "스프레드시트",
-          "노트필기",
-          "C++"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T09:04:22.766Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리스 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
-          "애플리케이션을 실행하고 새로운 계층형 문서를 생성합니다.",
-          "표 형태 또는 계층 구조로 아이디어와 데이터를 입력하고 정리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3197,
-        "forks": 226,
-        "starsUpdatedAt": "2026-11-10"
-      }
-    },
-    {
       "id": "pdf-bot",
       "name": "pdf-bot",
       "github": "https://github.com/esbenp/pdf-bot",
@@ -1489,89 +2514,6 @@
         "verifiedLicense": null,
         "licenseSource": "LICENSE header only, unverified",
         "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "wppconnect",
-      "name": "WPPConnect",
-      "github": "https://github.com/wppconnect-team/wppconnect",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T08:07:09.197Z",
-      "sourceRun": "2026-11-10T17",
-      "tool": {
-        "id": "wppconnect",
-        "name": "WPPConnect",
-        "github": "https://github.com/wppconnect-team/wppconnect",
-        "description": "Node.js와 TypeScript 환경에서 왓츠앱 웹(WhatsApp Web)을 제어하고 자동화할 수 있는 라이브러리입니다.",
-        "longDescription": "세션 관리, 메시지 송수신, 미디어 처리 및 챗봇 구축 기능을 제공하며 Puppeteer를 기반으로 동작합니다. WPPConnect 생태계의 일부로 개발되어 다양한 왓츠앱 자동화 작업에 활용됩니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "왓츠앱",
-          "자동화",
-          "챗봇",
-          "Node.js",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://wppconnect.io/wppconnect/",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T08:04:21.924Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "패키지 설치",
-            "command": "npm install @wppconnect-team/wppconnect",
-            "note": "npm을 통해 패키지를 프로젝트에 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트 디렉토리에서 npm 명령어로 패키지를 설치합니다.",
-          "코드에서 클라이언트를 초기화하고 QR 코드를 스캔하여 세션을 연결합니다.",
-          "메시지 송수신 및 챗봇 로직을 구현하여 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "WhatsApp Web 업데이트에 따라 패키지 버전을 주기적으로 확인해야 합니다.",
-        "stars": 3524,
-        "forks": 588,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T08:07:11.988Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-10T08:07:16.655Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
@@ -7145,81 +8087,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "ravendb",
-      "name": "RavenDB",
-      "github": "https://github.com/ravendb/ravendb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T01:06:44.098Z",
-      "sourceRun": "2026-11-10T10",
-      "tool": {
-        "id": "ravendb",
-        "name": "RavenDB",
-        "github": "https://github.com/ravendb/ravendb",
-        "description": "고성능과 사용 편의성에 초점을 맞춘 현대적인 ACID NoSQL 문서 데이터베이스입니다.",
-        "longDescription": "복잡한 데이터 관리의 부담을 줄여주며, 강력한 웹 기반 UI와 뛰어난 개발자 경험을 제공하는 NoSQL 문서 데이터베이스입니다. 풀텍스트 검색, 지리공간 검색, 벡터 검색 등을 기본 지원합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "NoSQL",
-          "데이터베이스",
-          "ACID",
-          "C#",
-          "문서 저장소"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://ravendb.net",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T01:04:21.075Z",
-        "requirements": [
-          "Docker 또는 .NET 런타임"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run --rm -it ravendb/ravendb:latest -p 8080:8080",
-            "note": "Docker를 이용해 RavenDB 최신 버전을 로컬에서 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 또는 패키지를 통해 RavenDB를 설치하고 실행합니다.",
-          "브라우저에서 관리 웹 UI(포트 8080)에 접속합니다.",
-          "데이터베이스를 생성하고 문서 및 인덱스를 구성하여 개발에 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "AGPLv3 라이선스를 따르며 상업적 사용 시 라이선스 범위를 확인하세요.",
-        "stars": 4017,
-        "forks": 866,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T01:06:47.698Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "tdf",
@@ -16566,61 +17433,6 @@
       }
     },
     {
-      "id": "zenoh",
-      "name": "zenoh",
-      "github": "https://github.com/eclipse-zenoh/zenoh",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-09T13:06:36.391Z",
-      "sourceRun": "2026-11-09T22",
-      "tool": {
-        "id": "zenoh",
-        "name": "zenoh",
-        "github": "https://github.com/eclipse-zenoh/zenoh",
-        "description": "에지 컴퓨팅과 IoT를 위한 고성능 분산 데이터 통신 및 저장 프레임워크입니다.",
-        "longDescription": "전통적인 발행/구독(pub/sub) 모델과 분산 스토리지, 쿼리 기능을 결합하여 초저지연 데이터 통신을 제공하는 차세대 에지 및 IoT 통신 프로토콜입니다.",
-        "category": "네트워크",
-        "tags": [
-          "IoT",
-          "에지컴퓨팅",
-          "분산시스템",
-          "Rust",
-          "프로토콜"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://zenoh.io",
-        "featured": 9,
-        "added": "2026-11-09",
-        "addedAt": "2026-11-09T13:04:27.436Z",
-        "requirements": [
-          "Rust 툴체인"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Zenoh 라우터 바이너리를 다운로드하거나 실행합니다.",
-          "클라이언트 라이브러리를 사용하여 데이터를 발행하고 구독합니다.",
-          "분산 환경 간 데이터 동기화 및 쿼리를 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3328,
-        "forks": 415,
-        "starsUpdatedAt": "2026-11-09"
-      }
-    },
-    {
       "id": "tquic",
       "name": "tquic",
       "github": "https://github.com/Tencent/tquic",
@@ -17419,71 +18231,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "raylib",
-      "name": "raylib",
-      "github": "https://github.com/raysan5/raylib",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-09T12:06:28.904Z",
-      "sourceRun": "2026-11-09T21",
-      "tool": {
-        "id": "raylib",
-        "name": "raylib",
-        "github": "https://github.com/raysan5/raylib",
-        "description": "비디오게임 프로그래밍과 그래픽 애플리케이션 개발을 위한 가볍고 사용하기 쉬운 C 라이브러리입니다.",
-        "longDescription": "보랜드 BGI 및 XNA 프레임워크에서 영감을 받아 제작된 게임 개발 및 프로토타이핑용 라이브러리입니다. 복잡한 인터페이스 없이 순수하게 코딩에 집중할 수 있는 환경을 제공합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C",
-          "게임 개발",
-          "그래픽",
-          "프로그래밍"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "http://www.raylib.com",
-        "featured": 9,
-        "added": "2026-11-09",
-        "addedAt": "2026-11-09T12:04:10.997Z",
-        "requirements": [
-          "C 컴파일러"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "소스 코드 또는 사전 빌드된 바이너리를 다운로드합니다.",
-          "프로젝트에 raylib 헤더와 라이브러리를 연결합니다.",
-          "창을 열고 렌더링 루프를 작성하여 그래픽 애플리케이션을 빌드합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 35608,
-        "forks": 3379,
-        "starsUpdatedAt": "2026-11-09"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-09T12:06:32.371Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ]
     },
     {
       "id": "notable",
@@ -35708,86 +36455,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "timescaledb",
-      "name": "TimescaleDB",
-      "github": "https://github.com/timescale/timescaledb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-08T10:11:04.698Z",
-      "sourceRun": "2026-11-08T19",
-      "tool": {
-        "id": "timescaledb",
-        "name": "TimescaleDB",
-        "github": "https://github.com/timescale/timescaledb",
-        "description": "PostgreSQL 확장으로 제공되는 고성능 실시간 분석용 시계열 데이터베이스입니다.",
-        "longDescription": "시계열 및 이벤트 데이터를 고속으로 처리하기 위한 PostgreSQL 확장 기능입니다. 관계형 데이터베이스의 유연성과 시계열 데이터 최적화 성능을 동시에 제공합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "시계열",
-          "PostgreSQL",
-          "데이터베이스",
-          "분석",
-          "SQL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.tigerdata.com/",
-        "featured": 9,
-        "added": "2026-11-08",
-        "addedAt": "2026-11-08T10:04:04.053Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "로컬 빠른 설치 (Linux/Mac)",
-            "command": "curl -sL https://tsdb.co/start-local | sh",
-            "note": "개발 및 테스트용 로컬 인스턴스를 빠르게 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "스크립트 또는 공식 설치 가이드를 통해 TimescaleDB를 설치합니다.",
-          "PostgreSQL 클라이언트를 사용하여 포트 6543에 접속합니다.",
-          "하이퍼테이블(Hypertable)을 생성하여 시계열 데이터를 적재하고 조회합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "로컬 설치 스크립트는 개발 및 테스트 용도로만 사용하는 것을 권장합니다.",
-        "stars": 23826,
-        "forks": 1184,
-        "starsUpdatedAt": "2026-11-08"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-08T10:28:14.994Z",
-      "documentEvidenceCheckedAt": "2026-11-08T10:28:14.994Z",
-      "lastVerifiedAt": "2026-11-08T10:28:14.994Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "arangodb",
@@ -54564,315 +55231,6 @@
       "sourceRun": "2026-11-07T01"
     },
     {
-      "id": "thingsboard",
-      "name": "ThingsBoard",
-      "github": "https://github.com/thingsboard/thingsboard",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "thingsboard",
-        "name": "ThingsBoard",
-        "github": "https://github.com/thingsboard/thingsboard",
-        "description": "오픈소스 IoT 플랫폼으로 데이터 수집, 처리, 시각화 및 디바이스 관리를 통합 지원합니다.",
-        "longDescription": "대규모 IoT 기기를 연결하고 실시간 대시보드를 구성할 수 있는 올인원 미들웨어 플랫폼입니다. MQTT, CoAP, HTTP 등의 다양한 프로토콜을 지원합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "IoT",
-          "대시보드",
-          "MQTT"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://thingsboard.io",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [
-          "Java",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "온프레미스 환경 또는 클라우드에 ThingsBoard를 배포합니다.",
-          "웹 대시보드에 접속하여 관리자 계정으로 로그인합니다.",
-          "IoT 디바이스를 등록하고 원격 데이터 수집을 설정합니다.",
-          "시각화 위젯을 추가하여 실시간 모니터링 대시보드를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 22644,
-        "forks": 6552,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T15:07:02.819Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T15:07:07.215Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-06T15:07:15.786Z"
-    },
-    {
-      "id": "emqx",
-      "name": "EMQX",
-      "github": "https://github.com/emqx/emqx",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "emqx",
-        "name": "EMQX",
-        "github": "https://github.com/emqx/emqx",
-        "description": "AI, IoT, 커넥티드 카 환경을 위한 확장성과 신뢰성이 뛰어난 MQTT 메시지 브로커입니다.",
-        "longDescription": "대규모 분산 환경에서 초고속으로 메시지를 처리할 수 있는 오픈소스 MQTT 브로커입니다. 다양한 산업 표준 프로토콜과 클라우드 연동을 지원합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "MQTT",
-          "메시징",
-          "IoT",
-          "브로커",
-          "Erlang"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.emqx.com",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 다운로드 페이지 또는 패키지를 통해 EMQX를 설치합니다.",
-          "설정 파일을 통해 포트 및 인증 방식을 구성합니다.",
-          "브로커를 실행하고 MQTT 클라이언트 기기를 연결합니다.",
-          "대시보드를 통해 메시지 트래픽과 클라이언트 상태를 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 16886,
-        "forks": 2579,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T15:07:03.821Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T15:07:08.526Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "mongoose",
-      "name": "Mongoose",
-      "github": "https://github.com/cesanta/mongoose",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "mongoose",
-        "name": "Mongoose",
-        "github": "https://github.com/cesanta/mongoose",
-        "description": "TCP/IP 네트워크 스택, MQTT, 웹소켓을 내장한 풀스택 C/C++ 임베디드 웹 서버 라이브러리입니다.",
-        "longDescription": "마이크로컨트롤러 및 임베디드 리눅스 기기에서 손쉽게 네트워킹과 웹 서버 기능을 구현할 수 있도록 돕는 경량 라이브러리입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "C",
-          "웹 서버",
-          "임베디드",
-          "MQTT",
-          "웹소켓"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://mongoose.ws",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [
-          "C/C++ Compiler"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트에 `mongoose.c`와 `mongoose.h` 파일을 추가합니다.",
-          "이벤트 핸들러 함수를 작성하여 HTTP 요청이나 웹소켓 이벤트를 처리합니다.",
-          "컴파일러를 사용하여 애플리케이션을 빌드합니다.",
-          "서버를 실행하고 지정된 포트로 접속합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 13124,
-        "forks": 2956,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T15:07:04.061Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T15:07:08.890Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "mosquitto",
-      "name": "Eclipse Mosquitto",
-      "github": "https://github.com/eclipse-mosquitto/mosquitto",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "mosquitto",
-        "name": "Eclipse Mosquitto",
-        "github": "https://github.com/eclipse-mosquitto/mosquitto",
-        "description": "MQTT v5.0, v3.1.1, v3.1 표준을 지원하는 가볍고 성숙한 오픈소스 MQTT 메시지 브로커입니다.",
-        "longDescription": "발행/구독(Pub/Sub) 모델 기반의 메시징을 지원하며, 클라이언트 유틸리티와 C/C++ 라이브러리를 함께 제공합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "MQTT",
-          "브로커",
-          "메시징",
-          "C",
-          "IoT"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://mosquitto.org",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "시스템 패키지 관리자를 통해 Mosquitto 바이너리를 설치합니다.",
-          "기본 설정으로 브로커를 백그라운드 또는 포그라운드에서 실행합니다.",
-          "`mosquitto_sub` 유틸리티를 사용하여 특정 토픽을 구독합니다.",
-          "`mosquitto_pub` 유틸리티를 사용하여 메시지를 발행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 11341,
-        "forks": 2663,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T15:07:04.327Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T15:07:09.687Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "flutter-server-box",
       "name": "ServerBox",
       "github": "https://github.com/lollipopkit/flutter_server_box",
@@ -54881,254 +55239,6 @@
       "reasons": [],
       "checkedAt": "2026-11-06T15:07:01.384Z",
       "sourceRun": "2026-11-07T00"
-    },
-    {
-      "id": "serial-studio",
-      "name": "Serial-Studio",
-      "github": "https://github.com/Serial-Studio/Serial-Studio",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "serial-studio",
-        "name": "Serial-Studio",
-        "github": "https://github.com/Serial-Studio/Serial-Studio",
-        "description": "다양한 통신 프로토콜을 지원하는 오픈소스 원격 측정 대시보드입니다.",
-        "longDescription": "UART, BLE, MQTT, Modbus 등 다양한 프로토콜과 마이크로컨트롤러 데이터를 실시간으로 시각화하고 분석할 수 있는 대시보드 소프트웨어입니다.",
-        "category": "디자인·시각화",
-        "tags": [
-          "대시보드",
-          "텔레메트리",
-          "IoT",
-          "임베디드",
-          "시리얼"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://serial-studio.com/",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [
-          "Qt 기반 빌드 환경 또는 사전 빌드된 바이너리"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리즈 페이지에서 설치 파일을 다운로드합니다.",
-          "장치(아두이노, ESP32 등)를 컴퓨터에 연결합니다.",
-          "프로젝트 에디터를 사용하여 대시보드 레이아웃을 구성합니다.",
-          "실시간으로 데이터를 시각화합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7314,
-        "forks": 1102,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T15:07:05.451Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "ejabberd",
-      "name": "ejabberd",
-      "github": "https://github.com/processone/ejabberd",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "ejabberd",
-        "name": "ejabberd",
-        "github": "https://github.com/processone/ejabberd",
-        "description": "Erlang/OTP로 구현된 고성능 실시간 메시징 플랫폼 및 XMPP 서버입니다.",
-        "longDescription": "XMPP 서버, MQTT 브로커, SIP 서비스를 통합하여 대규모 확장성과 견고성을 제공하는 오픈소스 실시간 통신 플랫폼입니다.",
-        "category": "네트워크",
-        "tags": [
-          "XMPP",
-          "MQTT",
-          "SIP",
-          "채팅",
-          "메시징"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.process-one.net/ejabberd/",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [
-          "Erlang/OTP"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "소스 코드를 컴파일하거나 공식 다운로드 페이지에서 설치 버전을 선택합니다.",
-          "설정 파일에 서버 도메인 및 데이터베이스 설정을 구성합니다.",
-          "ejabberd 서비스를 시작합니다.",
-          "클라이언트 애플리케이션을 연결하여 메시징을 테스트합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6750,
-        "forks": 1553,
-        "starsUpdatedAt": "2026-11-06"
-      }
-    },
-    {
-      "id": "anthias",
-      "name": "Anthias",
-      "github": "https://github.com/Screenly/Anthias",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "anthias",
-        "name": "Anthias",
-        "github": "https://github.com/Screenly/Anthias",
-        "description": "라즈베리파이 및 PC를 위한 오픈소스 디지털 사이니지 플랫폼입니다.",
-        "longDescription": "웹 기반 콘텐츠와 미디어를 원격으로 제어하고 화면에 송출할 수 있도록 지원하는 인기 디지털 사이니지 솔루션입니다.",
-        "category": "생산성",
-        "tags": [
-          "디지털사이니지",
-          "라즈베리파이",
-          "미디어",
-          "Python",
-          "화면송출"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://anthias.screenly.io",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [
-          "Raspberry Pi 또는 지원되는 PC 환경"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 문서의 설치 가이드를 참고하여 장치에 Anthias를 설치합니다.",
-          "웹 인터페이스에 접속하여 관리자 계정을 설정합니다.",
-          "송출할 이미지, 영상, 웹페이지 등의 콘텐츠를 업로드합니다.",
-          "재생 목록을 구성하고 화면 송출을 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3718,
-        "forks": 731,
-        "starsUpdatedAt": "2026-11-06"
-      }
-    },
-    {
-      "id": "shelf-nu",
-      "name": "shelf.nu",
-      "github": "https://github.com/Shelf-nu/shelf.nu",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T15:07:01.384Z",
-      "sourceRun": "2026-11-07T00",
-      "tool": {
-        "id": "shelf-nu",
-        "name": "shelf.nu",
-        "github": "https://github.com/Shelf-nu/shelf.nu",
-        "description": "QR 코드와 장비 예약 기능을 지원하는 오픈소스 IT 자산 및 장비 관리 시스템입니다.",
-        "longDescription": "조직 내 물리적 자산, 장비, 도구 등의 위치와 사용자 정보를 추적하고 QR 코드로 간편하게 관리할 수 있는 웹 기반 플랫폼입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "자산관리",
-          "QR코드",
-          "재고관리",
-          "TypeScript",
-          "웹 애플리케이션"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.shelf.nu",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T15:04:13.867Z",
-        "requirements": [
-          "Node.js",
-          "pnpm",
-          "Supabase"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 클론",
-            "command": "git clone https://github.com/Shelf-nu/shelf.nu.git",
-            "note": "프로젝트 소스코드를 로컬에 복제합니다."
-          },
-          {
-            "title": "의존성 설치",
-            "command": "pnpm install",
-            "note": "필요한 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 의존성을 설치합니다.",
-          "환경 변수 파일을 설정하고 Supabase 크리덴셜을 입력합니다.",
-          "데이터베이스 마이그레이션을 실행합니다.",
-          "개발 서버를 시작하여 자산 관리를 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3051,
-        "forks": 385,
-        "starsUpdatedAt": "2026-11-06"
-      }
     },
     {
       "id": "nanomq",
@@ -109936,26 +110046,6 @@
       "name": "thefuck",
       "github": "https://github.com/nvbn/thefuck",
       "license": "MIT",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T20:06:17.297Z",
-      "sourceRun": "2026-10-17T05"
-    },
-    {
-      "id": "mole",
-      "name": "Mole",
-      "github": "https://github.com/tw93/Mole",
-      "license": "GPL-3.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T20:06:17.297Z",
-      "sourceRun": "2026-10-17T05"
-    },
-    {
-      "id": "acme-sh",
-      "name": "acme.sh",
-      "github": "https://github.com/acmesh-official/acme.sh",
-      "license": "GPL-3.0",
       "status": "auto_approved",
       "reasons": [],
       "checkedAt": "2026-10-16T20:06:17.297Z",
