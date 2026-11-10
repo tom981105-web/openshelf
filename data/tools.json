@@ -1,5 +1,191 @@
 [
   {
+    "id": "qq-history-backup",
+    "name": "QQ History Backup",
+    "github": "https://github.com/Yiyiyimu/QQ-History-Backup",
+    "description": "GUI 인터페이스를 제공하여 키보드 입력 없이 QQ 채팅 기록과 이미지를 백업 및 내보내기 하는 도구입니다.",
+    "longDescription": "기본적으로 독립적으로 열 수 없는 QQ 채팅 기록을 쉽게 백업할 수 있도록 제작되었습니다. 비밀번호 없이 이모지와 이미지를 함께 내보낼 수 있습니다.",
+    "category": "개인 도구",
+    "tags": [
+      "채팅백업",
+      "QQ",
+      "Python",
+      "GUI",
+      "데이터추출"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Yiyiyimu/QQ-History-Backup",
+    "featured": 9,
+    "added": "2026-11-10",
+    "addedAt": "2026-11-10T04:04:18.104Z",
+    "requirements": [
+      "Python 3+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "릴리즈 페이지에서 프로그램을 다운로드합니다.",
+      "모바일 기기에서 QQ 데이터 폴더를 추출합니다.",
+      "프로그램을 실행하고 폴더를 지정하여 내보내기를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "개인 정보 및 데이터 보안에 유의하여 사용하세요.",
+    "stars": 1069,
+    "forks": 73,
+    "starsUpdatedAt": "2026-11-10"
+  },
+  {
+    "id": "paperback",
+    "name": "paperback",
+    "github": "https://github.com/cyphar/paperback",
+    "description": "중요한 비밀 정보를 암호화하여 종이 문서 형태로 안전하게 장기 보관할 수 있도록 변환해 주는 백업 생성기입니다.",
+    "longDescription": "샤미르 비밀 공유(Shamir's Secret Sharing) 등의 암호학적 설계를 활용하여, 중요 데이터를 인쇄 가능한 암호화 문서로 만들어 줍니다. 디지털 저장매체가 손상되거나 접근 불가능할 때 종이를 통해 복원할 수 있습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Rust",
+      "백업",
+      "암호화",
+      "보안",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/cyphar/paperback",
+    "featured": 9,
+    "added": "2026-11-10",
+    "addedAt": "2026-11-10T04:04:18.104Z",
+    "requirements": [
+      "Rust",
+      "Cargo"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "릴리스 빌드",
+        "command": "cargo build --release",
+        "note": "Cargo를 사용하여 소스 코드를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "Cargo를 이용해 프로젝트를 빌드합니다.",
+      "보관할 시크릿 파일과 설정을 준비합니다.",
+      "백업 명령을 내려 인쇄 가능한 형식의 암호화 문서를 생성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1494,
+    "forks": 60,
+    "starsUpdatedAt": "2026-11-10"
+  },
+  {
+    "id": "douban-backup",
+    "name": "douban-backup",
+    "github": "https://github.com/zcyoung2000/douban-backup",
+    "description": "더블유(Douban) 계정의 책, 영화, 음악, 게임, 드라마 기록을 백업하여 Excel 및 SQLite로 저장하는 CLI 도구입니다.",
+    "longDescription": "브라우저 쿠키를 자동으로 읽어와 豆瓣(도우반)의 '想看/在看/看过' 등 모든 활동 기록을 수집합니다. 단일 Python 파일로 구성되어 있으며 수집된 데이터를 SQLite에 저장하고 크롬 확장프로그램과 호환되는 엑셀 파일로 내보냅니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "Python",
+      "CLI",
+      "백업",
+      "Excel",
+      "SQLite"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/zcyoung2000/douban-backup",
+    "featured": 9,
+    "added": "2026-11-10",
+    "addedAt": "2026-11-10T04:04:18.104Z",
+    "requirements": [
+      "Python",
+      "uv"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uv로 실행",
+        "command": "uv run douban_backup.py",
+        "note": "uv 패키지 러너를 사용하여 별도의 설정 없이 즉시 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "브라우저에서 도우반(douban.com)에 로그인합니다.",
+      "터미널에서 백업 스크립트를 실행합니다.",
+      "생성된 엑셀 파일(`douban_interests.xlsx`)과 데이터베이스 파일을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 782,
+    "forks": 301,
+    "starsUpdatedAt": "2026-11-10"
+  },
+  {
+    "id": "vykar",
+    "name": "vykar",
+    "github": "https://github.com/borgbase/vykar",
+    "description": "친근한 YAML 설정과 데스크톱 GUI를 지원하며 S3, SFTP 등을 활용하는 빠르고 암호화된 Rust 기반 백업 도구입니다.",
+    "longDescription": "BorgBackup과 Restic 등에서 영감을 받아 Rust로 작성된 고성능 백업 소프트웨어입니다. AES-256-GCM 또는 ChaCha20-Poly1305 암호화를 지원하며 중복 제거 기능을 통해 효율적으로 데이터를 안전하게 보관합니다.",
+    "category": "생산성",
+    "tags": [
+      "Rust",
+      "백업",
+      "암호화",
+      "CLI",
+      "시스템"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://vykar.borgbase.com",
+    "featured": 9,
+    "added": "2026-11-10",
+    "addedAt": "2026-11-10T04:04:18.104Z",
+    "requirements": [],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "쉘 스크립트 설치",
+        "command": "curl -fsSL https://vykar.borgbase.com/install.sh | sh",
+        "note": "공식 설치 스크립트를 다운로드하여 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 바이너리를 설치합니다.",
+      "`vykar config` 명령어로 기본 설정 파일을 생성하고 수정합니다.",
+      "`vykar init` 및 `vykar backup` 명령어로 백업 저장소를 초기화하고 백업을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 723,
+    "forks": 22,
+    "starsUpdatedAt": "2026-11-10"
+  },
+  {
     "id": "harpy",
     "name": "harpy",
     "github": "https://github.com/robertodoering/harpy",
