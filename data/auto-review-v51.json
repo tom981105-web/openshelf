@@ -1,31 +1,30 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-10T08:07:23.208Z",
+  "updatedAt": "2026-11-10T09:07:09.268Z",
   "items": [
     {
-      "id": "companyos",
-      "name": "CompanyOS",
-      "github": "https://github.com/kortix-ai/CompanyOS",
+      "id": "mineru",
+      "name": "MinerU",
+      "github": "https://github.com/opendatalab/MinerU",
       "license": "확인 필요",
       "status": "pending_review",
       "reasons": [
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-10T08:07:09.197Z",
-      "sourceRun": "2026-11-10T17",
+      "checkedAt": "2026-11-10T09:06:54.248Z",
+      "sourceRun": "2026-11-10T18",
       "tool": {
-        "id": "companyos",
-        "name": "CompanyOS",
-        "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "클라우드 네이티브 환경에서 여러 AI 에이전트가 협업하여 업무를 수행할 수 있는 오픈소스 운영 체제입니다.",
-        "longDescription": "조직의 에이전트, 스킬, 규칙을 깃 저장소로 관리하며 이벤트나 웹훅에 맞춰 멀티플레이어 AI 에이전트가 병렬로 작업을 처리합니다. 각 에이전트는 독립된 클라우드 가상환경에서 터미널, 브라우저 등의 도구를 활용해 업무를 수행합니다.",
-        "category": "AI 에이전트",
+        "id": "mineru",
+        "name": "MinerU",
+        "github": "https://github.com/opendatalab/MinerU",
+        "description": "PDF 및 Office 문서를 LLM 친화적인 마크다운 및 JSON 형식으로 변환하는 도구입니다.",
+        "longDescription": "PDF, 스캔 이미지, Word, PowerPoint, Excel 등 복잡한 레이아웃의 문서를 고품질로 파싱하고 OCR 처리하여 AI 워크플로우에 활용할 수 있도록 지원합니다.",
+        "category": "문서",
         "tags": [
-          "AI에이전트",
-          "클라우드",
-          "오픈소스",
-          "TypeScript"
+          "문서파서",
+          "OCR",
+          "PDF"
         ],
         "platforms": [
           "Linux",
@@ -35,25 +34,33 @@
         "free": true,
         "openSource": false,
         "license": "확인 필요",
-        "website": "https://kortix.com",
+        "website": "https://opendatalab.github.io/MinerU/",
         "featured": 9,
         "added": "2026-11-10",
-        "addedAt": "2026-11-10T08:04:21.924Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "깃 레포지토리에 커스텀 에이전트와 규칙을 정의합니다.",
-          "웹훅이나 이벤트를 설정하여 에이전트 작업을 트리거합니다.",
-          "병렬로 실행되는 에이전트의 작업 결과를 팀원과 함께 검토합니다."
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Python"
         ],
-        "examplePrompt": "회사 내 반복 작업을 처리할 AI 에이전트 스웜을 설정해줘",
-        "usageNote": "",
-        "stars": 20619,
-        "forks": 3468,
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "pip 설치",
+            "command": "pip install mineru",
+            "note": "Python 패키지 관리자를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "패키지 설치를 완료합니다.",
+          "명령어 도구를 사용하여 대상 문서 파일을 지정합니다.",
+          "파싱된 마크다운 또는 JSON 결과물을 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "대용량 문서 처리 시 로컬 컴퓨팅 자원이 충분한지 확인하는 것이 좋습니다.",
+        "stars": 83416,
+        "forks": 6918,
         "starsUpdatedAt": "2026-11-10"
       },
-      "licenseEvidenceCheckedAt": "2026-11-10T08:07:10.013Z",
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:54.863Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -66,7 +73,86 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-10T08:07:14.137Z",
+      "documentEvidenceCheckedAt": "2026-11-10T09:06:59.176Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-10T09:07:04.581Z"
+    },
+    {
+      "id": "companyos",
+      "name": "CompanyOS",
+      "github": "https://github.com/kortix-ai/CompanyOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "companyos",
+        "name": "CompanyOS",
+        "github": "https://github.com/kortix-ai/CompanyOS",
+        "description": "기업을 위한 오픈소스 AI 에이전트 운영 체제입니다.",
+        "longDescription": "멀티플레이어 AI 에이전트와 코드 기반 조직 운영을 지원하며, 자체 인프라에 직접 설치하여 병렬로 동작하는 에이전트들을 관리할 수 있습니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 에이전트",
+          "오픈소스",
+          "협업",
+          "인프라"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kortix.com",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "TypeScript"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 프로젝트 의존성을 설치합니다.",
+          "환경 변수를 설정하고 인프라에 맞게 구성합니다.",
+          "에이전트 설정을 정의하고 시스템을 실행합니다."
+        ],
+        "examplePrompt": "우리 팀의 주간 회의록을 요약하고 다음 주 일정을 에이전트들에게 배분해 줘.",
+        "usageNote": "셀프 호스팅 환경에서 실행하기 전에 충분한 보안 검토가 필요합니다.",
+        "stars": 20621,
+        "forks": 3468,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:55.108Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T09:06:59.586Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -88,27 +174,26 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-10T08:07:09.197Z",
-      "sourceRun": "2026-11-10T17",
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
       "tool": {
         "id": "windmill",
         "name": "Windmill",
         "github": "https://github.com/windmill-labs/windmill",
-        "description": "다양한 프로그래밍 언어를 지원하며 워크플로우, 내부 애플리케이션, AI 에이전트를 구축할 수 있는 오픈소스 플랫폼입니다.",
-        "longDescription": "엔지니어가 파이썬, 타입스크립트, 고(Go) 등으로 스크립트를 작성하고 Git과 연동하여 관리할 수 있습니다. 비즈니스 팀은 AI를 활용해 같은 플랫폼에서 UI와 API, 워크플로우를 쉽게 구성할 수 있습니다.",
+        "description": "워크플로우, 내부 앱, AI 에이전트를 개발할 수 있는 코드 중심 플랫폼입니다.",
+        "longDescription": "다양한 프로그래밍 언어로 스크립트를 작성하여 API, 크론 잡, UI, 데이터 파이프라인 및 AI 에이전트 워크플로우를 빠르고 안정적으로 자동화할 수 있습니다.",
         "category": "업무 자동화",
         "tags": [
           "워크플로우",
-          "자동화",
-          "내부도구",
-          "오픈소스",
-          "Rust"
+          "업무 자동화",
+          "내부 도구",
+          "오케스트레이션"
         ],
         "platforms": [
+          "Web",
           "Linux",
           "macOS",
-          "Windows",
-          "Web"
+          "Windows"
         ],
         "free": true,
         "openSource": false,
@@ -116,24 +201,25 @@
         "website": "https://windmill.dev",
         "featured": 9,
         "added": "2026-11-10",
-        "addedAt": "2026-11-10T08:04:21.924Z",
+        "addedAt": "2026-11-10T09:04:22.766Z",
         "requirements": [
-          "PostgreSQL"
+          "Rust",
+          "TypeScript"
         ],
         "supportedAgents": [],
         "install": [],
         "usageSteps": [
-          "선호하는 프로그래밍 언어로 스크립트를 작성합니다.",
-          "Windmill 인터페이스에서 스크립트를 조합해 워크플로우나 API를 생성합니다.",
-          "생성된 워크플로우를 배포하고 UI로 자동 실행합니다."
+          "Docker 또는 소스를 통해 인스턴스를 실행합니다.",
+          "웹 인터페이스에 접속하여 새로운 스크립트나 워크플로우를 생성합니다.",
+          "필요한 트리거와 연동하여 자동화를 시작합니다."
         ],
         "examplePrompt": "",
-        "usageNote": "",
+        "usageNote": "대규모 분산 처리를 위해 PostgreSQL 등의 데이터베이스 연동이 필요합니다.",
         "stars": 18481,
         "forks": 1145,
         "starsUpdatedAt": "2026-11-10"
       },
-      "licenseEvidenceCheckedAt": "2026-11-10T08:07:10.287Z",
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:55.401Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -146,7 +232,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-10T08:07:14.479Z",
+      "documentEvidenceCheckedAt": "2026-11-10T09:07:00.018Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -157,6 +243,1096 @@
       },
       "recheckAttempts": 1,
       "recheckError": "Gemini HTTP 503"
+    },
+    {
+      "id": "kkfileview",
+      "name": "kkFileView",
+      "github": "https://github.com/kekingcn/kkFileView",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "kkfileview",
+        "name": "kkFileView",
+        "github": "https://github.com/kekingcn/kkFileView",
+        "description": "Spring Boot 기반의 범용 파일 온라인 미리보기 솔루션입니다.",
+        "longDescription": "Office 문서, PDF, 압축파일, 미디어 등 다양한 포맷의 파일을 별도의 클라이언트 설치 없이 웹 브라우저에서 바로 미리 볼 수 있도록 지원합니다. Java 환경에서 간편하게 통합하여 사용할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "파일 미리보기",
+          "Spring Boot",
+          "Office"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kkview.cn",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Java",
+          "Spring Boot",
+          "LibreOffice"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "소스 클론 및 실행",
+            "command": "git pull https://github.com/kekingcn/kkFileView.git",
+            "note": "저장소를 복제한 후 Main 메서드를 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트 소스를 클론하고 빌드합니다.",
+          "ServerMain 실행 파일을 구동합니다.",
+          "웹 브라우저로 접속하여 파일을 업로드하거나 URL을 통해 미리보기를 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "Linux 환경에서는 LibreOffice가 자동으로 설치되지만, macOS 등에서는 수동 설치가 필요할 수 있습니다.",
+        "stars": 14839,
+        "forks": 3340,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:55.645Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T09:07:00.424Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-10T09:07:07.994Z"
+    },
+    {
+      "id": "questpdf",
+      "name": "QuestPDF",
+      "github": "https://github.com/QuestPDF/QuestPDF",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "questpdf",
+        "name": "QuestPDF",
+        "github": "https://github.com/QuestPDF/QuestPDF",
+        "description": "C# 개발자를 위한 모던 PDF 문서 생성 라이브러리입니다.",
+        "longDescription": "직관적이고 타입 안전한 C# 코드를 사용하여 HTML-to-PDF 변환의 한계를 극복하고 픽셀 단위로 정밀한 리포트, 인송장, 문서 등을 프로그래밍 방식으로 생성할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "PDF생성",
+          "C#",
+          ".NET"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.questpdf.com",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          ".NET"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "NuGet 패키지 설치",
+            "command": "dotnet add package QuestPDF",
+            "note": ".NET CLI를 통해 프로젝트에 패키지를 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 QuestPDF NuGet 패키지를 추가합니다.",
+          "C# 코드로 문서 레이아웃과 컴포넌트를 정의합니다.",
+          "PDF 파일로 문서를 컴파일하여 내보냅니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "상업적 이용 시 연매출 1백만 달러 미만인 조직과 오픈소스 프로젝트 등에는 무료로 제공됩니다.",
+        "stars": 14222,
+        "forks": 774,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:56.058Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T09:07:00.976Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-10T09:07:09.268Z"
+    },
+    {
+      "id": "pdfpatcher",
+      "name": "PDFPatcher",
+      "github": "https://github.com/wmjordan/PDFPatcher",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "pdfpatcher",
+        "name": "PDFPatcher",
+        "github": "https://github.com/wmjordan/PDFPatcher",
+        "description": "PDF 북마크 편집, 페이지 조작, 변환 및 추출을 지원하는 종합 PDF 툴박스입니다.",
+        "longDescription": "PDF 문서의 책갈피 수정, 페이지 회전 및 자르기, 보안 제한 해제, 문서 구조 탐색, 이미지 무손실 추출 및 이미지로의 변환 등 다양한 유틸리티 기능을 제공합니다.",
+        "category": "개인 도구",
+        "tags": [
+          "PDF",
+          "문서 편집",
+          "유틸리티",
+          "Windows"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pdfpatcher.cnblogs.com/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Windows"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리스 페이지에서 프로그램을 다운로드합니다.",
+          "실행 파일을 열고 처리할 PDF 파일을 불러옵니다.",
+          "원하는 작업(북마크 편집, 페이지 분할/합병 등)을 선택하고 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "주로 Windows 운영체제를 대상으로 제작된 데스크톱 유틸리티입니다.",
+        "stars": 12763,
+        "forks": 1586,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:56.303Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T09:07:01.609Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "pypdf",
+      "name": "pypdf",
+      "github": "https://github.com/py-pdf/pypdf",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "pypdf",
+        "name": "pypdf",
+        "github": "https://github.com/py-pdf/pypdf",
+        "description": "순수 Python으로 작성된 PDF 분할, 병합, 변환용 라이브러리입니다.",
+        "longDescription": "외부 의존성 없이 Python 코드만으로 PDF 문서의 페이지를 자르고, 합치고, 회전하고, 암호화하거나 텍스트를 추출할 수 있는 가볍고 강력한 도구입니다.",
+        "category": "개발 도구",
+        "tags": [
+          "Python",
+          "PDF",
+          "라이브러리",
+          "문서 처리"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pypdf.readthedocs.io/en/latest/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "pip 설치",
+            "command": "pip install pypdf",
+            "note": "기본 기능을 포함한 pypdf를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "pip 명령어로 pypdf 라이브러리를 설치합니다.",
+          "Python 스크립트에서 pypdf를 임포트합니다.",
+          "PDF 파일 객체를 열어 병합, 분할 등 필요한 작업을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "암호화된 PDF를 다루려면 추가 의존성을 설치해야 할 수 있습니다.",
+        "stars": 10291,
+        "forks": 1697,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:56.594Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T09:07:01.929Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "papermark",
+      "name": "Papermark",
+      "github": "https://github.com/papermark/papermark",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "papermark",
+        "name": "Papermark",
+        "github": "https://github.com/papermark/papermark",
+        "description": "문서 공유 분석 및 커스텀 도메인을 지원하는 오픈소스 DocSend 대안 서비스입니다.",
+        "longDescription": "안전한 공유 링크를 통해 문서를 공유하고, 상세한 조회 통계와 분석 데이터를 확인할 수 있으며 셀프 호스팅이 가능한 문서 협업 플랫폼입니다.",
+        "category": "협업·소통",
+        "tags": [
+          "문서 공유",
+          "애널리틱스",
+          "TypeScript",
+          "Next.js"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.papermark.com",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Node.js",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 복제",
+            "command": "git clone https://github.com/mfts/papermark.git",
+            "note": "프로젝트 소스코드를 로컬에 클론합니다."
+          },
+          {
+            "title": "의존성 설치",
+            "command": "npm install",
+            "note": "필요한 npm 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "소스 코드를 클론하고 의존성을 설치합니다.",
+          "환경 변수 설정 파일을 구성하고 데이터베이스를 초기화합니다.",
+          "개발 서버를 실행하고 브라우저에서 접속합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "정상적인 구동을 위해 PostgreSQL 데이터베이스 연결이 필요합니다.",
+        "stars": 9319,
+        "forks": 1420,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:56.929Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T09:07:02.284Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "snow-shot",
+      "name": "Snow Shot",
+      "github": "https://github.com/mg-chao/snow-shot",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "snow-shot",
+        "name": "Snow Shot",
+        "github": "https://github.com/mg-chao/snow-shot",
+        "description": "스크린샷, 주석, 스크롤 캡처, 오프라인 OCR을 지원하는 오픈소스 캡처 도구입니다.",
+        "longDescription": "Windows 및 macOS를 지원하며, 영역 캡처, 스크롤 캡처, 이미지 핀(고정), 상세한 주석 편집 및 로컬 기반의 정확한 오프라인 OCR 기능을 제공하는 생산성 소프트웨어입니다.",
+        "category": "생산성",
+        "tags": [
+          "스크린샷",
+          "OCR",
+          "생산성",
+          "데스크톱 앱"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://snowshot.top",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "C++"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "GitHub 릴리스에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+          "프로그램을 실행하고 단축키를 이용해 화면을 캡처합니다.",
+          "주석 달기, OCR 추출 또는 이미지 고정 기능을 활용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "전체 설치 버전을 사용하면 오프라인 OCR 리소스가 기본 포함됩니다.",
+        "stars": 6873,
+        "forks": 441,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:57.195Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T09:07:02.793Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "naps2",
+      "name": "NAPS2",
+      "github": "https://github.com/cyanfish/naps2",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "naps2",
+        "name": "NAPS2",
+        "github": "https://github.com/cyanfish/naps2",
+        "description": "WIA, TWAIN 스캐너를 지원하고 PDF 등으로 문서를 간편하게 스캔하는 프로그램입니다.",
+        "longDescription": "직관적인 인터페이스로 문서를 빠르고 간편하게 스캔하며, 페이지 순서 정렬, Tesseract 기반의 광학 문자 인식(OCR)을 거쳐 PDF, TIFF, JPEG 등으로 저장할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "스캐너",
+          "PDF 변환",
+          "OCR",
+          "데스크톱 앱"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.naps2.com",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "스캐너 하드웨어 및 드라이버"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 홈페이지 또는 릴리스에서 프로그램을 설치합니다.",
+          "연결된 스캐너 장치를 선택하고 문서를 스캔합니다.",
+          "필요에 따라 페이지를 정리하고 OCR 처리 후 PDF나 이미지로 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "운영체제에 따라 호환되는 스캐너 드라이버(SANE, WIA, TWAIN 등)가 필요합니다.",
+        "stars": 4768,
+        "forks": 488,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:57.497Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-10T09:07:03.101Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "awesome-cv",
+      "name": "Awesome CV",
+      "github": "https://github.com/posquit0/Awesome-CV",
+      "license": "LPPL-1.3c",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "awesome-cv",
+        "name": "Awesome CV",
+        "github": "https://github.com/posquit0/Awesome-CV",
+        "description": "이력서, 자기소개서 등을 위한 깔끔하고 세련된 LaTeX 템플릿입니다.",
+        "longDescription": "개발자와 구직자들이 전문적인 이력서와 커버레터를 쉽게 작성할 수 있도록 지원하는 LaTeX 문서 템플릿입니다. 깔끔하고 시맨틱한 마크업을 사용하여 쉽게 커스터마이징할 수 있습니다.",
+        "category": "문서",
+        "tags": [
+          "LaTeX",
+          "이력서",
+          "템플릿",
+          "PDF"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "LPPL-1.3c",
+        "website": "https://github.com/posquit0/Awesome-CV",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "TeX 패키지 및 컴파일러"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "TeX 환경에 프로젝트를 클론합니다.",
+          "resume.tex 또는 coverletter.tex 파일을 수정합니다.",
+          "LaTeX 컴파일러를 통해 PDF로 빌드합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 28915,
+        "forks": 5283,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:57.719Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ]
+    },
+    {
+      "id": "get-jobs",
+      "name": "Get Jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "get-jobs",
+        "name": "Get Jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "다양한 구직 플랫폼에서 이력서 자동 투여 및 채용 공고를 관리하는 AI 도구입니다.",
+        "longDescription": "보스직핀, 전程无忧 등 주요 구직 플랫폼을 대상으로 이력서 자동 제출 및 구직 과정을 자동화하는 스크립트 기반 도구입니다. Next.js와 Spring Boot를 기반으로 구현되어 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "AI",
+          "구직",
+          "자동화",
+          "스크립트"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Java",
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 환경 설정을 구성합니다.",
+          "지원하고자 하는 플랫폼 계정 정보를 입력합니다.",
+          "자동 구직 스크립트를 실행하여 이력서 투여를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 9666,
+        "forks": 1100,
+        "starsUpdatedAt": "2026-11-10"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-10T09:06:58.027Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "dolphin",
+      "name": "Dolphin",
+      "github": "https://github.com/bytedance/Dolphin",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "dolphin",
+        "name": "Dolphin",
+        "github": "https://github.com/bytedance/Dolphin",
+        "description": "문서 이미지에서 텍스트, 표, 수식을 고성능으로 파싱하는 비전 언어 모델 기반 도구입니다.",
+        "longDescription": "디지털 문서와 촬영된 문서 모두를 완벽하게 지원하는 범용 문서 파싱 모델입니다. 이기종 앵커 프롬프팅(Heterogeneous Anchor Prompting) 아키텍처를 사용하여 복잡한 레이아웃과 수식, 표를 정확하게 추출합니다.",
+        "category": "문서",
+        "tags": [
+          "OCR",
+          "문서 파싱",
+          "Python",
+          "VLM"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/bytedance/Dolphin",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Python 3.8+"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 클론",
+            "command": "git clone https://github.com/ByteDance/Dolphin.git && cd Dolphin",
+            "note": "프로젝트 소스 코드를 다운로드합니다."
+          },
+          {
+            "title": "의존성 설치",
+            "command": "pip install -r requirements.txt",
+            "note": "필요한 파이썬 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 의존성을 설치합니다.",
+          "Hugging Face에서 사전 훈련된 모델 가중치를 다운로드합니다.",
+          "파이썬 스크립트를 통해 문서 이미지 파싱을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 9066,
+        "forks": 773,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "flyingmouse-format",
+      "name": "FlyingMouse Format",
+      "github": "https://github.com/LaoFeng-mouse/flyingmouse-format",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "flyingmouse-format",
+        "name": "FlyingMouse Format",
+        "github": "https://github.com/LaoFeng-mouse/flyingmouse-format",
+        "description": "다양한 파일 형식 변환과 OCR, 일괄 처리를 지원하는 Windows 데스크톱 도구입니다.",
+        "longDescription": "이미지, 문서, 스프레드시트, PPT, PDF, 오디오 및 비디오 간의 상호 변환을 지원하는 완전 오프라인 파일 형식 변환기입니다. FFmpeg, LibreOffice, Tesseract 등의 엔진을 내장하고 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "파일 변환",
+          "OCR",
+          "Electron",
+          "Windows"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/LaoFeng-mouse/flyingmouse-format",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Windows 10/11 x64"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리스 페이지에서 최신 Windows 설치 파일을 다운로드합니다.",
+          "프로그램을 실행하고 변환할 파일을 선택합니다.",
+          "원하는 출력 형식을 지정하고 일괄 변환을 수행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "개인 무료 사용만 가능하며 상업적 판매나 리패키징이 금지됩니다.",
+        "stars": 7072,
+        "forks": 576,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "pdf2htmlex",
+      "name": "pdf2htmlEX",
+      "github": "https://github.com/pdf2htmlEX/pdf2htmlEX",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "pdf2htmlex",
+        "name": "pdf2htmlEX",
+        "github": "https://github.com/pdf2htmlEX/pdf2htmlEX",
+        "description": "PDF 문서를 텍스트나 서식 손실 없이 깔끔한 HTML 파일로 변환하는 도구입니다.",
+        "longDescription": "PDF 문서의 원래 레이아웃, 폰트, 벡터 그래픽을 웹 표준에 맞는 HTML로 정확하게 변환해 주는 고성능 문서 처리기입니다. 웹사이트에 PDF 내용을 그대로 임베드하거나 게시할 때 유용합니다.",
+        "category": "문서",
+        "tags": [
+          "PDF",
+          "HTML 변환",
+          "문서 처리",
+          "CLI"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pdf2htmlEX.github.io/pdf2htmlEX/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Cairo",
+          "Fontconfig"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "패키지 관리자를 통해 pdf2htmlEX를 설치합니다.",
+          "명령줄 인터페이스에서 변환할 PDF 파일을 지정합니다.",
+          "생성된 HTML 파일을 웹 브라우저나 서버에서 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5612,
+        "forks": 527,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "hermes-agent-orange-book",
+      "name": "Hermes Agent Orange Book",
+      "github": "https://github.com/alchaincyf/hermes-agent-orange-book",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "hermes-agent-orange-book",
+        "name": "Hermes Agent Orange Book",
+        "github": "https://github.com/alchaincyf/hermes-agent-orange-book",
+        "description": "Nous Research의 오픈소스 AI Agent 프레임워크를 심층적으로 다루는 실전 가이드북입니다.",
+        "longDescription": "최신 Hermes Agent 프레임워크의 사용법, 아키텍처, 데스크톱 앱 연동 및 다양한 메시징 플랫폼 통합 방법을 상세히 설명하는 오픈소스 가이드북입니다.",
+        "category": "교육·학습",
+        "tags": [
+          "AI 에이전트",
+          "가이드북",
+          "프레임워크",
+          "Python"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/alchaincyf/hermes-agent-orange-book",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [],
+        "supportedAgents": [
+          "Hermes Agent"
+        ],
+        "install": [],
+        "usageSteps": [
+          "저장소의 문서 및 가이드 내용을 웹이나 로컬에서 열어봅니다.",
+          "Hermes Agent v0.16.0 이상의 아키텍처 설명과 예제를 참고합니다.",
+          "실제 에이전트 구축 실습에 가이드를 적용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5064,
+        "forks": 501,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "embed-pdf-viewer",
+      "name": "EmbedPDF",
+      "github": "https://github.com/embedpdf/embed-pdf-viewer",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "embed-pdf-viewer",
+        "name": "EmbedPDF",
+        "github": "https://github.com/embedpdf/embed-pdf-viewer",
+        "description": "웹 애플리케이션에 완벽하게 통합할 수 있는 고성능 오픈소스 PDF 뷰어 라이브러리입니다.",
+        "longDescription": "React, Vue, Svelte, Angular 및 순수 HTML 환경에서 사용할 수 있는 모던 PDF 뷰어입니다. WebAssembly 기반의 PDFium 엔진을 사용하여 브라우저 내에서 직접 PDF 읽기, 주석 작성, 서명 등의 기능을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "PDF 뷰어",
+          "TypeScript",
+          "WebAssembly",
+          "React"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.embedpdf.com",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "React 패키지 설치",
+            "command": "npm install @embedpdf/viewer-react",
+            "note": "React 프로젝트에 PDF 뷰어를 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 맞는 패키지(React, Vue 등)를 설치합니다.",
+          "컴포넌트 형태로 애플리케이션 코드에 뷰어를 삽입합니다.",
+          "원하는 설정과 스타일을 적용하여 PDF 뷰어 기능을 활성화합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4589,
+        "forks": 328,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "crx-selection-translate",
+      "name": "划词翻译 (Crx Selection Translate)",
+      "github": "https://github.com/hcfyapp/crx-selection-translate",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "crx-selection-translate",
+        "name": "划词翻译 (Crx Selection Translate)",
+        "github": "https://github.com/hcfyapp/crx-selection-translate",
+        "description": "웹서핑 중 드래그, 캡처, 전체 페이지 및 멀티미디어를 AI로 번역해 주는 브라우저 확장 프로그램입니다.",
+        "longDescription": "Chrome, Firefox, Edge 브라우저를 지원하는 올인원 번역 확장 프로그램입니다. 다양한 다국어 웹사이트 탐색 시 간편한 드래그 번역과 스크린샷 번역 기능을 제공하여 언어 장벽을 낮춰줍니다.",
+        "category": "개인 도구",
+        "tags": [
+          "브라우저 확장",
+          "AI 번역",
+          "Chrome",
+          "JavaScript"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://hcfy.ai",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [
+          "Chrome 또는 호환 브라우저"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "브라우저 웹스토어에서 확장 프로그램을 설치합니다.",
+          "웹페이지에서 텍스트를 드래그하거나 단축키를 입력합니다.",
+          "팝업으로 제공되는 AI 번역 결과를 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 4140,
+        "forks": 525,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "아웃라이너, 마인드맵, 스프레드시트의 장점을 결합한 계층형 데이터 조직화 도구입니다.",
+        "longDescription": "할 일 목록, 일정 관리, 브레인스토밍, 프로젝트 기획 등 복잡한 정보를 2차원 계층 구조로 깔끔하게 정리할 수 있는 데스크톱 애플리케이션입니다. 가볍고 직관적인 인터페이스를 제공합니다.",
+        "category": "생산성",
+        "tags": [
+          "마인드맵",
+          "스프레드시트",
+          "노트필기",
+          "C++"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-11-10",
+        "addedAt": "2026-11-10T09:04:22.766Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 릴리스 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+          "애플리케이션을 실행하고 새로운 계층형 문서를 생성합니다.",
+          "표 형태 또는 계층 구조로 아이디어와 데이터를 입력하고 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3197,
+        "forks": 226,
+        "starsUpdatedAt": "2026-11-10"
+      }
+    },
+    {
+      "id": "pdf-bot",
+      "name": "pdf-bot",
+      "github": "https://github.com/esbenp/pdf-bot",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-10T09:06:54.249Z",
+      "sourceRun": "2026-11-10T18"
     },
     {
       "id": "convex-backend",
@@ -233,159 +1409,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-10T08:07:21.631Z"
-    },
-    {
-      "id": "get-jobs",
-      "name": "Get Jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T08:07:09.197Z",
-      "sourceRun": "2026-11-10T17",
-      "tool": {
-        "id": "get-jobs",
-        "name": "Get Jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "주요 중국 구직 플랫폼의 이력서 제출 및 구직 과정을 보조하는 AI 자동화 도구입니다.",
-        "longDescription": "보스직핀, 전정오우 등 다양한 플랫폼에서 반복적인 구직 지원 업무를 자동화합니다. AI 분석 기능을 활용해 맞춤형 일자리 탐색과 이력서 작성을 지원합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "자동화",
-          "구직",
-          "이력서"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T08:04:21.924Z",
-        "requirements": [
-          "Java"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트를 로컬 환경에 클론하고 자바 환경을 구성합니다.",
-          "설정 파일에 구직 플랫폼 계정 정보와 이력서 데이터를 입력합니다.",
-          "자동 지원 스크립트를 실행하여 구직 과정을 진행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9663,
-        "forks": 1100,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T08:07:10.866Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-10T08:07:15.426Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-10T08:07:22.874Z"
-    },
-    {
-      "id": "snow-shot",
-      "name": "Snow Shot",
-      "github": "https://github.com/mg-chao/snow-shot",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T08:07:09.197Z",
-      "sourceRun": "2026-11-10T17",
-      "tool": {
-        "id": "snow-shot",
-        "name": "Snow Shot",
-        "github": "https://github.com/mg-chao/snow-shot",
-        "description": "윈도우와 macOS를 지원하며 캡처, 주석, 스크롤 캡처, 오프라인 OCR, 이미지 고정을 제공하는 무료 오픈소스 화면 캡처 도구입니다.",
-        "longDescription": "원하는 영역이나 활성 창을 깔끔하게 캡처할 수 있으며 화살표, 도형, 텍스트, 모자이크 등의 다양한 주석 도구를 제공합니다. 또한 긴 페이지를 한 번에 담는 스크롤 캡처와 오프라인 환경에서 작동하는 OCR 기능을 지원합니다.",
-        "category": "생산성",
-        "tags": [
-          "스크린샷",
-          "OCR",
-          "생산성",
-          "C++",
-          "Windows"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://snowshot.top",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T08:04:21.924Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "GitHub Releases에서 운영체제에 맞는 설치 파일이나 포터블 버전을 다운로드합니다.",
-          "단축키를 사용하여 원하는 화면 영역을 캡처합니다.",
-          "주석 도구로 이미지를 편집하거나 OCR 및 핀 기능으로 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6867,
-        "forks": 440,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T08:07:11.179Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-10T08:07:15.850Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
     },
     {
       "id": "readyset",
@@ -544,79 +1567,6 @@
         "오픈소스 또는 무료 조건 미확인"
       ],
       "documentEvidenceCheckedAt": "2026-11-10T08:07:16.655Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-10T08:07:09.197Z",
-      "sourceRun": "2026-11-10T17",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "아웃라인, 마인드맵, 스프레드시트의 기능을 결합한 자유 형식의 계층형 데이터 조직화 도구입니다.",
-        "longDescription": "할 일 목록, 일정 관리, 브레인스토밍, 프로젝트 계획 등 복잡하고 다차원적인 데이터를 체계적으로 정리할 수 있습니다. 기존 스프레드시트와 유사하게 친숙하면서도 계층 구조를 지원하여 복잡한 정보를 한눈에 관리하기에 적합합니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "생산성",
-          "지식관리",
-          "C++"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T08:04:21.924Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리즈 페이지에서 운영체제에 맞는 실행 파일을 다운로드합니다.",
-          "새 문서를 생성하고 셀을 추가하여 계층형 데이터 구조를 만듭니다.",
-          "텍스트, 할 일, 아이디어 등을 입력하고 프로젝트별로 정리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3197,
-        "forks": 226,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T08:07:12.253Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-10T08:07:17.379Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -36632,91 +37582,6 @@
       }
     },
     {
-      "id": "kkfileview",
-      "name": "kkFileView",
-      "github": "https://github.com/kekingcn/kkFileView",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-08T04:06:10.484Z",
-      "sourceRun": "2026-11-08T13",
-      "tool": {
-        "id": "kkfileview",
-        "name": "kkFileView",
-        "github": "https://github.com/kekingcn/kkFileView",
-        "description": "스프링 부트 기반의 범용 문서 온라인 미리보기 솔루션",
-        "longDescription": "오피스 문서, PDF, 압축파일 등 다양한 포맷의 문서를 별도의 클라이언트 설치 없이 웹 브라우저에서 바로 미리 볼 수 있도록 지원합니다. 스프링 부트와 자바를 기반으로 개발된 오픈소스 문서 뷰어 프로젝트입니다.",
-        "category": "문서",
-        "tags": [
-          "문서미리보기",
-          "스프링부트",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web",
-          "Windows",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kkview.cn",
-        "featured": 9,
-        "added": "2026-11-08",
-        "addedAt": "2026-11-08T04:04:12.317Z",
-        "requirements": [
-          "Java JDK",
-          "LibreOffice"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 클론",
-            "command": "git clone https://github.com/kekingcn/kkFileView.git",
-            "note": "소스 코드를 로컬에 다운로드합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트를 클론하고 의존성을 설치합니다.",
-          "ServerMain.java 파일을 실행하여 서버를 시작합니다.",
-          "웹 브라우저에서 http://localhost:8012 에 접속하여 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 14834,
-        "forks": 3341,
-        "starsUpdatedAt": "2026-11-08"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-08T04:06:11.678Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-08T04:06:15.370Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-08T04:06:20.900Z"
-    },
-    {
       "id": "minipdf",
       "name": "MiniPdf",
       "github": "https://github.com/mini-software/MiniPdf",
@@ -38809,85 +39674,6 @@
         "forks": 322,
         "starsUpdatedAt": "2026-11-07"
       }
-    },
-    {
-      "id": "flyingmouse-format",
-      "name": "FlyingMouse Format",
-      "github": "https://github.com/LaoFeng-mouse/flyingmouse-format",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-07T22:06:04.536Z",
-      "sourceRun": "2026-11-08T07",
-      "tool": {
-        "id": "flyingmouse-format",
-        "name": "FlyingMouse Format",
-        "github": "https://github.com/LaoFeng-mouse/flyingmouse-format",
-        "description": "다양한 파일 형식을 오프라인에서 상호 변환해주는 Windows 데스크톱 도구입니다.",
-        "longDescription": "인터넷 연결 없이 로컬에서 안전하게 파일 포맷을 변환할 수 있으며, OCR 기능과 대량 일괄 변환을 지원하는 Electron 기반 유틸리티입니다.",
-        "category": "문서",
-        "tags": [
-          "파일 변환",
-          "오프라인 도구",
-          "유틸리티"
-        ],
-        "platforms": [
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/LaoFeng-mouse/flyingmouse-format",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T22:04:06.280Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "GitHub Releases",
-            "command": "https://github.com/LaoFeng-mouse/flyingmouse-format/releases",
-            "note": "Releases 페이지에서 Windows x64 설치 버전을 다운로드합니다."
-          }
-        ],
-        "usageSteps": [
-          "Releases 페이지에서 최신 설치 프로그램을 다운로드하여 설치합니다.",
-          "변환할 파일들을 프로그램 창으로 드래그 앤 드롭합니다.",
-          "출력 포맷을 선택하고 변환 버튼을 눌러 완료합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "개인 무료 사용으로 제한되며 상업적 판매나 재판매는 금지되어 있습니다.",
-        "stars": 7055,
-        "forks": 575,
-        "starsUpdatedAt": "2026-11-07"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-07T22:06:06.076Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-07T22:06:09.797Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-07T22:06:16.190Z"
     },
     {
       "id": "reqable-app",
@@ -52063,90 +52849,6 @@
       }
     },
     {
-      "id": "papermark",
-      "name": "Papermark",
-      "github": "https://github.com/papermark/papermark",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T19:06:26.381Z",
-      "sourceRun": "2026-11-07T04",
-      "tool": {
-        "id": "papermark",
-        "name": "Papermark",
-        "github": "https://github.com/papermark/papermark",
-        "description": "문서 공유, 상세한 분석, 커스텀 도메인을 지원하는 오픈소스 DocSend 대안 플랫폼입니다.",
-        "longDescription": "Papermark는 보안 문서 공유와 실시간 열람 분석 기능을 제공하는 오픈소스 데이터룸 솔루션입니다. 링크 기반으로 문서를 안전하게 공유하고 사용자의 반응을 추적할 수 있습니다.",
-        "category": "문서",
-        "tags": [
-          "데이터룸",
-          "문서공유",
-          "Next.js",
-          "TypeScript",
-          "TailwindCSS"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.papermark.com",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T19:04:11.324Z",
-        "requirements": [
-          "Node.js",
-          "npm",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 클론",
-            "command": "git clone https://github.com/mfts/papermark.git",
-            "note": "프로젝트 코드를 로컬로 복제합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론한 후 npm install로 의존성을 설치합니다.",
-          "환경 변수 설정 파일(.env)을 복사하고 값을 구성합니다.",
-          "데이터베이스를 초기화하고 개발 서버를 실행합니다.",
-          "브라우저에서 접속하여 안전한 문서 링크 공유를 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9304,
-        "forks": 1419,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T19:06:29.605Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T19:06:35.954Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "system-prompts-and-models-of-ai-tools",
       "name": "System Prompts and Models of AI Tools",
       "github": "https://github.com/x1xhlol/system-prompts-and-models-of-ai-tools",
@@ -54439,538 +55141,6 @@
       "sourceRun": "2026-11-07T00"
     },
     {
-      "id": "mineru",
-      "name": "MinerU",
-      "github": "https://github.com/opendatalab/MinerU",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T14:06:42.365Z",
-      "sourceRun": "2026-11-06T23",
-      "tool": {
-        "id": "mineru",
-        "name": "MinerU",
-        "github": "https://github.com/opendatalab/MinerU",
-        "description": "PDF 및 Office 문서를 LLM 학습용 마크다운과 JSON으로 변환하는 도구",
-        "longDescription": "PDF, 스캔 이미지, Word, PPT 등 다양한 포맷의 복잡한 레이아웃과 표, 수식을 정밀하게 파싱합니다. 인공지능 워크플로우에 활용할 수 있도록 데이터를 효과적으로 추출합니다.",
-        "category": "문서",
-        "tags": [
-          "PDF",
-          "OCR",
-          "문서 파서"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://opendatalab.github.io/MinerU/",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T14:04:15.251Z",
-        "requirements": [
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하고 의존성을 설치합니다.",
-          "파싱할 문서 파일을 지정하여 실행 명령을 입력합니다.",
-          "추출된 마크다운 또는 JSON 결과를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 83222,
-        "forks": 6890,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T14:06:43.108Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T14:06:47.034Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-06T14:06:53.631Z"
-    },
-    {
-      "id": "questpdf",
-      "name": "QuestPDF",
-      "github": "https://github.com/QuestPDF/QuestPDF",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T14:06:42.365Z",
-      "sourceRun": "2026-11-06T23",
-      "tool": {
-        "id": "questpdf",
-        "name": "QuestPDF",
-        "github": "https://github.com/QuestPDF/QuestPDF",
-        "description": "C# 개발자를 위한 현대적이고 유연한 PDF 문서 생성 라이브러리입니다.",
-        "longDescription": "가독성 높은 C# 코드를 통해 HTML 변환 과정 없이 복잡한 레이아웃의 리포트와 인보이스를 정교하게 설계할 수 있습니다. .NET 환경에서 유연하고 효율적인 문서 생성 기능을 제공합니다.",
-        "category": "문서",
-        "tags": [
-          "C#",
-          ".NET",
-          "PDF"
-        ],
-        "platforms": [
-          "Windows",
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.questpdf.com",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T14:04:15.251Z",
-        "requirements": [
-          ".NET Core"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NuGet 패키지 설치",
-            "command": "dotnet add package QuestPDF",
-            "note": "프로젝트에 QuestPDF 패키지를 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "NuGet을 통해 QuestPDF 패키지를 설치합니다.",
-          "C# 코드로 문서 레이아웃과 컴포넌트를 정의합니다.",
-          "문서를 PDF 파일로 컴파일하여 내보냅니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 14220,
-        "forks": 776,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T14:06:44.149Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T14:06:48.462Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-06T14:06:56.757Z"
-    },
-    {
-      "id": "pdfpatcher",
-      "name": "PDFPatcher",
-      "github": "https://github.com/wmjordan/PDFPatcher",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T14:06:42.365Z",
-      "sourceRun": "2026-11-06T23",
-      "tool": {
-        "id": "pdfpatcher",
-        "name": "PDFPatcher",
-        "github": "https://github.com/wmjordan/PDFPatcher",
-        "description": "PDF 파일의 책갈피 수정, 페이지 편집, 변환 및 추출을 지원하는 다기능 PDF 유틸리티입니다.",
-        "longDescription": "PDF 문서의 책갈피 편집, 문서 분할 및 병합, 보안 제한 해제, 고속 이미지 추출 및 페이지 이미지 변환 등 다양한 문서 관리 작업을 수행할 수 있습니다.",
-        "category": "문서",
-        "tags": [
-          "PDF",
-          "C#",
-          "유틸리티",
-          "Windows"
-        ],
-        "platforms": [
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pdfpatcher.cnblogs.com/",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T14:04:15.251Z",
-        "requirements": [
-          ".NET"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 채널을 통해 프로그램을 다운로드하고 실행합니다.",
-          "처리할 PDF 파일을 불러옵니다.",
-          "원하는 작업(책갈피 수정, 병합, 이미지 추출 등)을 선택하여 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 12761,
-        "forks": 1586,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T14:06:44.400Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T14:06:49.060Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "pypdf",
-      "name": "pypdf",
-      "github": "https://github.com/py-pdf/pypdf",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T14:06:42.365Z",
-      "sourceRun": "2026-11-06T23",
-      "tool": {
-        "id": "pypdf",
-        "name": "pypdf",
-        "github": "https://github.com/py-pdf/pypdf",
-        "description": "순수 Python으로 작성된 PDF 분할, 병합, 자르기 및 변환 라이브러리입니다.",
-        "longDescription": "외부 의존성 없이 Python 환경에서 PDF 문서의 페이지 조작, 텍스트 추출, 암호화 및 복호화 작업을 손쉽게 처리할 수 있습니다.",
-        "category": "문서",
-        "tags": [
-          "Python",
-          "PDF",
-          "라이브러리",
-          "파서"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pypdf.readthedocs.io/en/latest/",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T14:04:15.251Z",
-        "requirements": [
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Pip 설치",
-            "command": "pip install pypdf",
-            "note": "파이썬 패키지 관리자를 통해 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "pip 명령어로 패키지를 설치합니다.",
-          "파이썬 스크립트에서 pypdf 모듈을 임포트합니다.",
-          "PDF 파일을 로드하여 병합, 분할 등의 조작을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 10288,
-        "forks": 1689,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T14:06:44.662Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T14:06:49.380Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "naps2",
-      "name": "NAPS2",
-      "github": "https://github.com/cyanfish/naps2",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T14:06:42.365Z",
-      "sourceRun": "2026-11-06T23",
-      "tool": {
-        "id": "naps2",
-        "name": "NAPS2",
-        "github": "https://github.com/cyanfish/naps2",
-        "description": "문서 스캔을 PDF, TIFF, JPEG 등의 형식으로 간편하게 저장할 수 있는 스캐너 애플리케이션입니다.",
-        "longDescription": "WIA, TWAIN, SANE, ESCL 스캐너를 지원하며, 스캔한 페이지를 자유롭게 정리하고 Tesseract 기반의 광학 문자 인식(OCR)을 수행할 수 있습니다.",
-        "category": "생산성",
-        "tags": [
-          "스캐너",
-          "PDF",
-          "OCR",
-          "C#",
-          "문서 관리"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.naps2.com",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T14:04:15.251Z",
-        "requirements": [
-          ".NET"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 사이트에서 애플리케이션을 다운로드하여 설치합니다.",
-          "연결된 스캐너를 선택하고 문서를 스캔합니다.",
-          "페이지를 정리한 후 PDF 또는 이미지 파일로 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 4741,
-        "forks": 485,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T14:06:45.569Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T14:06:52.540Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "awesome-cv",
-      "name": "Awesome CV",
-      "github": "https://github.com/posquit0/Awesome-CV",
-      "license": "LPPL-1.3c",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-06T14:06:42.365Z",
-      "sourceRun": "2026-11-06T23",
-      "tool": {
-        "id": "awesome-cv",
-        "name": "Awesome CV",
-        "github": "https://github.com/posquit0/Awesome-CV",
-        "description": "이력서 및 자기소개서 작성을 위한 깔끔하고 전문적인 LaTeX 템플릿입니다.",
-        "longDescription": "지원서, 이력서, 커버레터 등을 시맨틱 마크업과 깔끔한 디자인으로 작성할 수 있도록 돕는 LaTeX 템플릿입니다. 구조화된 레이아웃을 제공하여 개발자나 연구원이 세련된 문서를 쉽게 만들 수 있습니다.",
-        "category": "문서",
-        "tags": [
-          "LaTeX",
-          "이력서",
-          "템플릿",
-          "PDF"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "LPPL-1.3c",
-        "website": "https://github.com/posquit0/Awesome-CV",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T14:04:15.251Z",
-        "requirements": [
-          "TeX 환경"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "TeX 환경이 설치된 시스템에서 저장소를 클론하거나 Overleaf에 임포트합니다.",
-          "resume.tex 또는 해당 템플릿 파일을 본인의 경력 사항에 맞게 수정합니다.",
-          "LaTeX 컴파일러를 통해 PDF 결과물을 생성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "커스텀 폰트 사용 시 시스템에 해당 폰트가 설치되어 있어야 합니다.",
-        "stars": 28881,
-        "forks": 5286,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T14:06:45.782Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ]
-    },
-    {
-      "id": "dolphin",
-      "name": "Dolphin",
-      "github": "https://github.com/bytedance/Dolphin",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T14:06:42.365Z",
-      "sourceRun": "2026-11-06T23",
-      "tool": {
-        "id": "dolphin",
-        "name": "Dolphin",
-        "github": "https://github.com/bytedance/Dolphin",
-        "description": "문서 이미지 파싱과 OCR을 지원하는 범용 문서 분석 모델 저장소입니다.",
-        "longDescription": "디지털 생성 문서부터 사진으로 촬영된 문서까지 복잡한 레이아웃, 표, 수식, 텍스트를 고성능으로 파싱하는 문서 분석 모델입니다. 2단계 아키텍처와 앵커 프롬프팅 기법을 활용하여 OCR 및 문서 변환 성능을 대폭 향상시켰습니다.",
-        "category": "문서",
-        "tags": [
-          "OCR",
-          "PDF",
-          "문서파서",
-          "Python"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/bytedance/Dolphin",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T14:04:15.251Z",
-        "requirements": [
-          "Python 3.8+",
-          "PyTorch"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 클론 및 패키지 설치",
-            "command": "git clone https://github.com/ByteDance/Dolphin.git && cd Dolphin && pip install -r requirements.txt",
-            "note": "필수 의존성 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 requirements.txt를 통해 의존성을 설치합니다.",
-          "Hugging Face 모델 카드 등에서 사전 학습된 Dolphin-v2 모델 가중치를 다운로드합니다.",
-          "파이썬 스크립트를 통해 문서 이미지나 PDF 파싱 작업을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "대형 모델 실행을 위해 GPU 환경을 권장합니다.",
-        "stars": 9067,
-        "forks": 773,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T14:06:46.011Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
       "id": "phpword",
       "name": "PHPWord",
       "github": "https://github.com/PHPOffice/PHPWord",
@@ -55021,58 +55191,6 @@
         "usageNote": "대용량 문서 처리 시 메모리 한도 설정을 확인하세요.",
         "stars": 7589,
         "forks": 2731,
-        "starsUpdatedAt": "2026-11-06"
-      }
-    },
-    {
-      "id": "pdf2htmlex",
-      "name": "pdf2htmlEX",
-      "github": "https://github.com/pdf2htmlEX/pdf2htmlEX",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T14:06:42.365Z",
-      "sourceRun": "2026-11-06T23",
-      "tool": {
-        "id": "pdf2htmlex",
-        "name": "pdf2htmlEX",
-        "github": "https://github.com/pdf2htmlEX/pdf2htmlEX",
-        "description": "PDF 파일의 텍스트와 레이아웃 손실 없이 정밀하게 HTML로 변환하는 도구입니다.",
-        "longDescription": "PDF 문서의 고유한 레이아웃, 폰트, 서식을 웹 브라우저에서 완벽히 볼 수 있도록 HTML 파일로 변환해 주는 변환기입니다. 모던 웹 표준을 준수하며 문서 원본의 시각적 요소를 유지합니다.",
-        "category": "문서",
-        "tags": [
-          "HTML",
-          "PDF",
-          "변환기",
-          "CLI"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pdf2htmlEX.github.io/pdf2htmlEX/",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T14:04:15.251Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "패키지 관리자를 통해 pdf2htmlEX를 시스템에 설치합니다.",
-          "터미널에서 변환할 PDF 파일을 대상으로 명령어를 실행합니다.",
-          "생성된 HTML 파일을 웹 브라우저에서 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "복잡한 벡터 그래픽이 포함된 경우 변환 시간에 영향을 줄 수 있습니다.",
-        "stars": 5612,
-        "forks": 527,
         "starsUpdatedAt": "2026-11-06"
       }
     },
@@ -56015,79 +56133,6 @@
         "stars": 8013,
         "forks": 610,
         "starsUpdatedAt": "2026-11-06"
-      }
-    },
-    {
-      "id": "crx-selection-translate",
-      "name": "Hcfy Selection Translate",
-      "github": "https://github.com/hcfyapp/crx-selection-translate",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-06T07:11:36.326Z",
-      "sourceRun": "2026-11-06T16",
-      "tool": {
-        "id": "crx-selection-translate",
-        "name": "Hcfy Selection Translate",
-        "github": "https://github.com/hcfyapp/crx-selection-translate",
-        "description": "웹서핑 중 텍스트 선택, 스크린샷, 전체 페이지, 음성 및 영상 AI 번역을 지원하는 브라우저 확장 프로그램입니다.",
-        "longDescription": "브라우저 환경에서 언어 장벽 없이 외국어 사이트를 탐색할 수 있도록 돕는 올인원 번역기입니다. 다양한 오픈소스 및 상용 번역 엔진을 지원합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "Chrome 확장 프로그램",
-          "Firefox",
-          "Edge",
-          "번역",
-          "AI"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://hcfy.ai",
-        "featured": 9,
-        "added": "2026-11-06",
-        "addedAt": "2026-11-06T07:04:07.531Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "브라우저 웹스토어에서 확장 프로그램을 설치합니다.",
-          "설정에서 사용할 번역 서비스 및 API를 구성합니다.",
-          "웹페이지에서 텍스트를 드래그하거나 단축키를 눌러 번역을 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 4138,
-        "forks": 526,
-        "starsUpdatedAt": "2026-11-06"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-06T07:11:38.747Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-06T07:11:45.180Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
       }
     },
     {
@@ -63055,59 +63100,6 @@
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
-      }
-    },
-    {
-      "id": "embed-pdf-viewer",
-      "name": "EmbedPDF",
-      "github": "https://github.com/embedpdf/embed-pdf-viewer",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-02T19:06:38.151Z",
-      "sourceRun": "2026-11-03T04",
-      "tool": {
-        "id": "embed-pdf-viewer",
-        "name": "EmbedPDF",
-        "github": "https://github.com/embedpdf/embed-pdf-viewer",
-        "description": "모든 JavaScript 프로젝트에 매끄럽게 통합되는 프레임워크 독립적 PDF 뷰어입니다.",
-        "longDescription": "React, Vue, Svelte, 바닐라 JS 등 어떤 자바스크립트 환경에서든 손쉽게 임베드하여 사용할 수 있는 모던 PDF 뷰어 라이브러리입니다. 부드러운 읽기 경험과 깔끔한 개발자 API를 제공합니다.",
-        "category": "문서",
-        "tags": [
-          "PDF 뷰어",
-          "JavaScript",
-          "TypeScript",
-          "React",
-          "Vue"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.embedpdf.com",
-        "featured": 9,
-        "added": "2026-11-02",
-        "addedAt": "2026-11-02T19:04:18.164Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "패키지 매니저를 통해 EmbedPDF 라이브러리를 설치합니다.",
-          "원하는 프레임워크 컴포넌트 내에 뷰어를 불러옵니다.",
-          "PDF 파일 소스 경로를 설정하여 뷰어를 렌더링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "v3 버전은 현재 활발히 개발 중이므로 프로덕션 환경에서는 v2 브랜치 확인을 권장합니다.",
-        "stars": 4581,
-        "forks": 326,
-        "starsUpdatedAt": "2026-11-02"
       }
     },
     {
@@ -109964,26 +109956,6 @@
       "name": "acme.sh",
       "github": "https://github.com/acmesh-official/acme.sh",
       "license": "GPL-3.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T20:06:17.297Z",
-      "sourceRun": "2026-10-17T05"
-    },
-    {
-      "id": "atuin",
-      "name": "atuin",
-      "github": "https://github.com/atuinsh/atuin",
-      "license": "MIT",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-16T20:06:17.297Z",
-      "sourceRun": "2026-10-17T05"
-    },
-    {
-      "id": "cmder",
-      "name": "Cmder",
-      "github": "https://github.com/cmderdev/cmder",
-      "license": "MIT",
       "status": "auto_approved",
       "reasons": [],
       "checkedAt": "2026-10-16T20:06:17.297Z",
