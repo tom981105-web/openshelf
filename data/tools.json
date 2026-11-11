@@ -1,5 +1,102 @@
 [
   {
+    "id": "media-preview-generator",
+    "name": "Media Preview Generator",
+    "github": "https://github.com/stevezau/media_preview_generator",
+    "description": "GPU 가속을 활용해 Plex, Emby, Jellyfin의 미리보기 썸네일과 인트로 건너뛰기 마커를 생성하는 자체 호스팅 도구.",
+    "longDescription": "미디어 서버의 무거운 자원 소모 작업을 GPU로 빠르게 처리하여 미리보기 썸네일과 '인트로 스킵' 마커를 만들어 주는 애플리케이션입니다. Sonarr 및 Radarr와 연동되어 미디어가 임포트되는 즉시 처리합니다.",
+    "category": "멀티미디어",
+    "tags": [
+      "미디어서버",
+      "GPU가속",
+      "FFmpeg",
+      "도커"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://mediapreviewgenerator.dev/",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T20:04:31.923Z",
+    "requirements": [
+      "Docker",
+      "NVIDIA GPU"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose",
+        "command": "docker compose up -d",
+        "note": "도커 컴포즈를 사용하여 미디어 미리보기 생성기를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "도커 구성 파일에 미디어 서버 연결 정보를 입력합니다.",
+      "GPU 패스스루 설정을 포함하여 컨테이너를 실행합니다.",
+      "Sonarr/Radarr 웹훅을 연동하여 자동 생성을 활성화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 314,
+    "forks": 40,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
+    "id": "holyarrs",
+    "name": "HolyArrs",
+    "github": "https://github.com/HolyArrs/HolyArrs",
+    "description": "미디어 스트리밍 및 다운로드 관리를 통합한 셀프 호스팅 미디어 서버 솔루션.",
+    "longDescription": "영화, TV 쇼, 음악 등의 미디어 라이브러리와 토렌트 다운로더를 하나의 웹 인터페이스에서 통합 관리할 수 있는 미디어 서버 도구입니다.",
+    "category": "멀티미디어",
+    "tags": [
+      "미디어",
+      "셀프호스팅",
+      "스트리밍",
+      "Docker",
+      "서버"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://holyarrs.com",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T20:04:31.923Z",
+    "requirements": [
+      "Docker",
+      "Docker Desktop"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 업데이트",
+        "command": "docker compose pull && docker compose up -d",
+        "note": "Docker를 통해 최신 버전을 가져와 백그라운드에서 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "Docker 및 Docker Compose 환경을 준비합니다.",
+      "설정 파일 및 볼륨 경로를 구성하여 컨테이너를 실행합니다.",
+      "웹 인터페이스에 접속하여 미디어 라이브러리 및 다운로더를 연동합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "설정 폴더 내의 master key 파일은 비밀번호 복구에 필수적이므로 안전하게 백업해야 합니다.",
+    "stars": 788,
+    "forks": 38,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
     "id": "benchmark-radar",
     "name": "Benchmark Radar",
     "github": "https://github.com/ktwu01/benchmark-radar",
