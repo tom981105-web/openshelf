@@ -1,5 +1,151 @@
 [
   {
+    "id": "e2e-2",
+    "name": "e2e",
+    "github": "https://github.com/e2e-inc/e2e",
+    "description": "자연어 기반 명령으로 웹 및 모바일 앱을 테스트하는 차세대 에이전트 E2E 테스트 프레임워크입니다.",
+    "longDescription": "사람이 자연어로 목표를 기술하면 AI 에이전트가 직접 애플리케이션을 구동하며 테스트를 수행하고, 로케이터와 어설션을 통해 결과를 검증합니다.",
+    "category": "테스트·품질",
+    "tags": [
+      "E2E",
+      "테스트 자동화",
+      "AI",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://e2e.com",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T22:04:20.899Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "초기화",
+        "command": "npx e2e init",
+        "note": "프로젝트에 테스트 설정을 초기화합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 디렉토리에서 초기화 명령을 실행합니다.",
+      "엔진(웹 또는 모바일)과 사용할 모델 제공자를 선택합니다.",
+      "자연어 에이전트 단계를 포함한 테스트 스크립트를 작성하고 실행합니다."
+    ],
+    "examplePrompt": "워크스페이스를 Pro 플랜으로 업그레이드해줘",
+    "usageNote": "",
+    "stars": 13702,
+    "forks": 721,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
+    "id": "factory-boy",
+    "name": "factory_boy",
+    "github": "https://github.com/FactoryBoy/factory_boy",
+    "description": "파이썬 및 장고(Django) 애플리케이션을 위한 테스트 픽스처 대체 도구",
+    "longDescription": "복잡한 객체 생성 과정을 단순화하여 테스트용 더미 데이터와 모델 인스턴스를 쉽고 유연하게 생성할 수 있도록 지원하는 파이썬 테스트 유틸리티입니다.",
+    "category": "테스트·품질",
+    "tags": [
+      "Python",
+      "Django",
+      "테스트",
+      "픽스처",
+      "SQLAlchemy"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://factoryboy.readthedocs.io/",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T22:04:20.899Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install factory_boy",
+        "note": "pip 명령어로 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 factory_boy를 설치합니다.",
+      "테스트에 사용할 모델 팩토리 클래스를 정의합니다.",
+      "테스트 코드 내에서 팩토리를 호출하여 더미 데이터 인스턴스를 생성합니다.",
+      "생성된 데이터를 바탕으로 유닛 테스트를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3811,
+    "forks": 426,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
+    "id": "vcrpy",
+    "name": "vcrpy",
+    "github": "https://github.com/kevin1024/vcrpy",
+    "description": "HTTP 상호작용을 자동으로 기록하고 모킹하여 파이썬 테스트 속도를 높여주는 라이브러리",
+    "longDescription": "파이썬 테스트 중 발생하는 외부 HTTP 요청과 응답을 파일(카세트)로 기록해 두고, 이후 테스트에서는 실제 네트워크 요청 대신 기록된 데이터를 사용하여 테스트 실행을 빠르고 안정적으로 만들어 줍니다.",
+    "category": "테스트·품질",
+    "tags": [
+      "Python",
+      "HTTP",
+      "모킹",
+      "테스트",
+      "자동화"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/kevin1024/vcrpy",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T22:04:20.899Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install vcrpy",
+        "note": "pip 명령어로 vcrpy를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 vcrpy 패키지를 설치합니다.",
+      "테스트 코드에 @vcr.use_cassette 데코레이터를 적용합니다.",
+      "테스트를 실행하여 최초 1회 실제 HTTP 응답을 파일로 저장합니다.",
+      "이후 테스트 실행 시 네트워크 차단 환경에서도 저장된 응답을 이용해 빠르게 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3023,
+    "forks": 449,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
     "id": "media-preview-generator",
     "name": "Media Preview Generator",
     "github": "https://github.com/stevezau/media_preview_generator",
