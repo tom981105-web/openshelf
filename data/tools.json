@@ -1,5 +1,196 @@
 [
   {
+    "id": "pyscn",
+    "name": "pyscn",
+    "github": "https://github.com/ludo-technologies/pyscn",
+    "description": "AI 코딩 시대에 맞춰 파이썬 코드의 구조와 품질을 분석하는 도구입니다.",
+    "longDescription": "pyscn은 AI가 생성한 파이썬 코드를 유지보수 가능한 상태로 유지하기 위해 구조적 분석을 수행하는 코드 품질 분석기입니다. 단 하나의 명령어로 데드 코드, 중복 코드, 복잡도 등을 종합하여 0-100점의 점수와 HTML 리포트를 생성합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "코드 품질",
+      "정적 분석",
+      "CLI"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://docs.codescan.dev/",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T07:04:20.982Z",
+    "requirements": [
+      "uvx 또는 pipx"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "uvx 실행",
+        "command": "uvx pyscn@latest analyze .",
+        "note": "설치 과정 없이 uvx를 통해 즉시 실행할 수 있습니다."
+      },
+      {
+        "title": "pipx 실행",
+        "command": "pipx run pyscn analyze .",
+        "note": "pipx를 사용하여 분석을 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "파이썬 프로젝트 디렉터리로 이동합니다.",
+      "분석 실행 명령어(uvx 또는 pipx)를 입력합니다.",
+      "생성된 HTML 리포트를 확인하여 개선이 필요한 부분을 파악합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1109,
+    "forks": 80,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
+    "id": "dagda",
+    "name": "Dagda",
+    "github": "https://github.com/eliasgranderubio/dagda",
+    "description": "도커 이미지 및 컨테이너의 취약점, 악성코드, 멀웨어를 정적 분석하고 모니터링하는 보안 도구입니다.",
+    "longDescription": "Dagda는 도커 이미지와 컨테이너 내의 알려진 취약점(CVE), 트로이 목마, 바이러스, 멀웨어 등을 정적 분석하고, 도커 데몬 및 실행 중인 컨테이너의 이상 행위를 모니터링하여 시스템 안전성을 확보합니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "Docker",
+      "보안",
+      "멀웨어 탐지",
+      "취약점 진단"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/eliasgranderubio/dagda",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T07:04:20.982Z",
+    "requirements": [
+      "Python 3.8",
+      "Docker",
+      "MongoDB"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "MongoDB 및 Docker 환경을 구축합니다.",
+      "취약점 데이터베이스를 채우고 초기화합니다.",
+      "도커 이미지 혹은 컨테이너를 대상으로 분석 명령어를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1253,
+    "forks": 176,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
+    "id": "security-code-scan",
+    "name": "Security Code Scan",
+    "github": "https://github.com/security-code-scan/security-code-scan",
+    "description": "C# 및 VB.NET 코드를 위한 취약점 패턴 탐지 및 보안 분석기입니다.",
+    "longDescription": "Security Code Scan은 Roslyn 기반의 .NET 소스 코드 보안 분석 도구입니다. C# 및 VB.NET 프로젝트에서 OWASP Top 10 취약점 패턴과 보안 약점을 탐지하여 안전한 코딩을 돕습니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "C#",
+      ".NET",
+      "보안",
+      "Roslyn",
+      "SAST"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "LGPL-3.0",
+    "website": "https://security-code-scan.github.io",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T07:04:20.982Z",
+    "requirements": [
+      ".NET SDK"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "NuGet 패키지 다운로드",
+        "command": "dotnet add package security-scan",
+        "note": "NuGet을 통해 프로젝트에 스캐너를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Visual Studio 또는 .NET 프로젝트에 패키지를 추가합니다.",
+      "프로젝트 빌드 시 자동으로 보안 스캔이 수행되도록 설정합니다.",
+      "감지된 보안 취약점 경고를 확인하고 코드를 수정합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 974,
+    "forks": 161,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
+    "id": "reark",
+    "name": "ReArk",
+    "github": "https://github.com/lkimuk/ReArk",
+    "description": "다양한 모바일 및 네이티브 바이너리를 위한 AI 지원 지능형 리버스 엔지니어링 분석 도구입니다.",
+    "longDescription": "ReArk는 HarmonyOS NEXT, Android, iOS 애플리케이션 패키지 및 PE, ELF, Mach-O 네이티브 바이너리를 분석할 수 있는 데스크톱 리버스 엔지니어링 및 AI 지원 분석 도구입니다. 단일 워크스페이스에서 코드, 메타데이터, 서명 등을 종합적으로 검토할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "C++",
+      "리버스 엔지니어링",
+      "멀웨어 분석",
+      "AI 분석",
+      "보안"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/lkimuk/ReArk",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T07:04:20.982Z",
+    "requirements": [
+      "Windows 10+ x64"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "릴리즈 다운로드",
+        "command": "https://github.com/lkimuk/ReArk/releases/latest",
+        "note": "공식 릴리즈 페이지에서 설치 파일을 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "공식 릴리즈 페이지에서 운영체제에 맞는 설치 프로그램을 다운로드하여 설치합니다.",
+      "분석할 모바일 앱 패키지(APK, HAP, IPA 등)나 바이너리 파일을 불러옵니다.",
+      "ReArk Agent와 정적 분석 기능을 연동하여 애플리케이션 로직과 보안을 조사합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 962,
+    "forks": 173,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
     "id": "kdash",
     "name": "kdash",
     "github": "https://github.com/kdash-rs/kdash",
