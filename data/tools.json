@@ -1,5 +1,146 @@
 [
   {
+    "id": "lidar-slam-detection",
+    "name": "자율주행 차량 및 로봇을 위한 오픈소스 라이다 기반 인지 및 맵핑 아키텍처입니다.",
+    "github": "https://github.com/w111liang222/lidar-slam-detection",
+    "description": "다중 라이다, 카메라, IMU 센서 융합을 지원하며 3D 객체 검출, 추적 및 Fast-LIO 기반 프론트엔드 오도메트리를 제공합니다.",
+    "longDescription": "자율주행 차량 및 로봇을 위한 오픈소스 라이다 기반 인지 및 맵핑 아키텍처입니다.",
+    "category": "공간정보",
+    "tags": [
+      "자율주행",
+      "라이다",
+      "SLAM",
+      "ROS",
+      "C++"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/w111liang222/lidar-slam-detection",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T09:04:23.398Z",
+    "requirements": [
+      "NVIDIA Container Toolkit",
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker 이미지 Pull",
+        "command": "sudo docker pull 15liangwang/lsd-cuda118",
+        "note": "CUDA 지원 도커 이미지 다운로드"
+      }
+    ],
+    "usageSteps": [
+      "NVIDIA Container Toolkit을 설치합니다.",
+      "도커 이미지를 풀(pull) 받고 컨테이너를 실행합니다.",
+      "ROS 환경에서 센서 데이터를 입력하여 맵핑 및 객체 검출을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 783,
+    "forks": 161,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
+    "id": "swarm-slam",
+    "name": "다중 로봇 시스템을 위한 분산형 협업 동시 위치 추정 및 맵핑(C-SLAM) 프레임워크입니다.",
+    "github": "https://github.com/MISTLab/Swarm-SLAM",
+    "description": "확장성 있고 탈중앙화된 구조를 지향하며, 라이다·스테레오·RGB-D 센서를 지원하고 로봇 간 통신을 최적화하는 루프 닫기 기법을 제공합니다.",
+    "longDescription": "다중 로봇 시스템을 위한 분산형 협업 동시 위치 추정 및 맵핑(C-SLAM) 프레임워크입니다.",
+    "category": "공간정보",
+    "tags": [
+      "다중로봇",
+      "SLAM",
+      "ROS2",
+      "분산시스템"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://lajoiepy.github.io/cslam_documentation/html/index.html",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T09:04:23.398Z",
+    "requirements": [
+      "ROS 2",
+      "Python 3"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "워크스페이스 클론 및 동기화",
+        "command": "sudo apt install python3-vcstool && git clone https://github.com/MISTLab/Swarm-SLAM.git && cd Swarm-SLAM && mkdir src && vcs import src  cslam.repos",
+        "note": "vcs를 이용한 의존성 소스 가져오기"
+      }
+    ],
+    "usageSteps": [
+      "의존성 도구 및 패키지를 설치합니다.",
+      "저장소를 클론하고 vcs를 통해 관련 저장소를 가져옵니다.",
+      "ROS 2 빌드 시스템을 사용하여 패키지를 빌드하고 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 721,
+    "forks": 82,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
+    "id": "rko-lio",
+    "name": "센서별 모델링 없이 강건하게 동작하는 라이다-관성 오도메트리(LIO) 패키지입니다.",
+    "github": "https://github.com/PRBonn/rko_lio",
+    "description": "ROS1 및 ROS2 환경의 rosbag 데이터를 지원하며, 파이썬을 통해 손쉽게 설치하고 실행할 수 있는 강건한 위치 추정 파이프라인을 제공합니다.",
+    "longDescription": "센서별 모델링 없이 강건하게 동작하는 라이다-관성 오도메트리(LIO) 패키지입니다.",
+    "category": "공간정보",
+    "tags": [
+      "라이다",
+      "IMU",
+      "오도메트리",
+      "ROS",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://prbonn.github.io/rko_lio/",
+    "featured": 9,
+    "added": "2026-11-11",
+    "addedAt": "2026-11-11T09:04:23.398Z",
+    "requirements": [
+      "Python",
+      "pip"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install \"rko_lio[all]\"",
+        "note": "의존성과 함께 패키지 설치"
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어를 통해 rko_lio와 필수 패키지를 설치합니다.",
+      "ROS1 또는 ROS2 bag 데이터 파일 경로를 준비합니다.",
+      "명령줄에서 rko_lio를 실행하여 오도메트리 결과를 시각화합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 688,
+    "forks": 80,
+    "starsUpdatedAt": "2026-11-11"
+  },
+  {
     "id": "sickzil-machine",
     "name": "SickZil-Machine",
     "github": "https://github.com/KUR-creative/SickZil-Machine",
