@@ -1,5 +1,427 @@
 [
   {
+    "id": "anysub",
+    "name": "anysub",
+    "github": "https://github.com/pluja/anysub",
+    "description": "오디오 및 비디오 파일을 Whisper로 고속 변환하고 편집할 수 있는 웹 기반 자막 생성 도구입니다.",
+    "longDescription": "직관적인 웹 UI를 통해 음성 파일을 업로드하고, 단어 수준의 타임스탬프가 포함된 자막을 생성한 뒤 편집 및 내보내기를 수행할 수 있습니다. 모든 처리가 로컬 머신 또는 자체 서버에서 이루어집니다.",
+    "category": "영상·애니메이션",
+    "tags": [
+      "자막",
+      "STT",
+      "Whisper",
+      "Svelte",
+      "Docker"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/pluja/anysub",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "Docker",
+      "Docker Compose"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Docker Compose 설정 파일 다운로드",
+        "command": "curl -fsSLO https://github.com/pluja/anysub/releases/latest/download/compose.yaml",
+        "note": "Docker Compose 구성 파일 다운로드"
+      }
+    ],
+    "usageSteps": [
+      "Docker 환경에서 프로젝트를 실행합니다.",
+      "웹 브라우저로 접속하여 오디오 또는 비디오 파일을 업로드합니다.",
+      "Whisper 모델을 통해 자막을 생성하고 웹 UI에서 수정 후 SRT 등으로 내보냅니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3108,
+    "forks": 183,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
+    "id": "atticus-mac",
+    "name": "Atticus",
+    "github": "https://github.com/SaarthurR/atticus-mac",
+    "description": "Mac에서 API 키 없이 단축키로 빠르게 실행할 수 있는 음성 기반 AI 어시스턴트입니다.",
+    "longDescription": "Ctrl+Option+Space를 누르고 말하는 것만으로 창 배치, 파일 검색, 화면 읽기 등의 작업을 수행하며, 사용자의 패턴을 학습하여 단축키를 자동화합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "macOS",
+      "음성 인식",
+      "AI 어시스턴트",
+      "생산성",
+      "단축키"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://saarthurr.github.io/atticus-mac/",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "macOS 26 이상",
+      "Claude Code 또는 호환 AI 클라이언트"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "빠른 설치",
+        "command": "curl -fsSL https://raw.githubusercontent.com/SaarthurR/atticus-mac/main/install.sh | bash",
+        "note": "터미널에서 스크립트를 실행하여 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 Atticus를 설정합니다.",
+      "단축키(Ctrl+Option+Space)를 누르고 명령을 말합니다.",
+      "AI가 화면을 읽고 창 이동이나 파일 찾기 등의 작업을 수행합니다."
+    ],
+    "examplePrompt": "다운로드 폴더에 있는 최신 PDF 파일을 열어줘",
+    "usageNote": "최초 실행 시 macOS 권한 허용이 필요합니다.",
+    "stars": 732,
+    "forks": 76,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
+    "id": "curses",
+    "name": "Curses",
+    "github": "https://github.com/mmpneo/curses",
+    "description": "OBS, VRChat, Twitch, Discord에서 사용할 수 있는 실시간 음성 인식 자막 생성 도구입니다.",
+    "longDescription": "Microsoft Azure, Deepgram, WebSpeechAPI 등을 활용해 음성을 텍스트로 변환하고, OBS 스트리밍 및 채팅 환경에 맞춤형 자막과 애니메이션 효과를 제공합니다.",
+    "category": "협업·소통",
+    "tags": [
+      "OBS",
+      "VRChat",
+      "Twitch",
+      "Discord",
+      "음성 인식"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://github.com/mmpneo/curses",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "마이크",
+      "지원되는 STT API 키 (선택사항)"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "최신 릴리스에서 앱을 다운로드하고 실행합니다.",
+      "원하는 음성 인식 엔진(Azure, Deepgram 등)을 선택하고 설정합니다.",
+      "제공된 링크나 브라우저 소스를 OBS에 연동하여 자막을 출력합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "일부 STT 제공자는 별도의 API 키와 요금제가 필요할 수 있습니다.",
+    "stars": 729,
+    "forks": 55,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
+    "id": "transcribro",
+    "name": "Transcribro",
+    "github": "https://github.com/soupslurpr/Transcribro",
+    "description": "안드로이드 기기에서 외부 서버 전송 없이 온디바이스로 동작하는 프라이버시 중심 음성 인식 키보드 및 서비스입니다.",
+    "longDescription": "whisper.cpp와 Silero VAD를 활용하여 안드로이드 환경에서 오프라인으로 음성을 텍스트로 변환하며, 음성 입력 키보드 및 시스템 STT 앱으로 활용할 수 있습니다.",
+    "category": "개인 도구",
+    "tags": [
+      "Android",
+      "Whisper",
+      "음성 인식",
+      "Kotlin",
+      "Jetpack Compose"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "ISC",
+    "website": "https://github.com/soupslurpr/Transcribro",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "Android 기기"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Accrescent 앱스토어 또는 APK를 통해 Transcribro를 설치합니다.",
+      "안드로이드 설정에서 입력기 또는 기본 STT 앱으로 지정합니다.",
+      "키보드에서 음성 입력을 활성화하여 말로 텍스트를 입력합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "현재는 영어 음성 인식을 주로 지원하며 추가 언어 지원이 개발 중입니다.",
+    "stars": 762,
+    "forks": 39,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
+    "id": "fireredasr2s",
+    "name": "FireRedASR2S",
+    "github": "https://github.com/FireRedTeam/FireRedASR2S",
+    "description": "음성 인식, VAD, 언어 식별, 구두점 복원을 모두 지원하는 산업용 올인원 ASR 시스템입니다.",
+    "longDescription": "중국어 표준어 및 방언, 영어, 코드스위칭, 노래 음성 인식을 지원하며, SOTA 성능을 갖춘 다국어 음성 처리 파이프라인을 제공합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "ASR",
+      "음성 인식",
+      "VAD",
+      "멀티모달",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/FireRedTeam/FireRedASR2S",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "Python 3.8+",
+      "PyTorch",
+      "CUDA 지원 GPU 권장"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제 및 의존성 설치",
+        "command": "git clone https://github.com/FireRedTeam/FireRedASR2S.git && cd FireRedASR2S && pip install -r requirements.txt",
+        "note": "프로젝트 클론 후 필수 파이썬 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 의존성 패키지를 설치합니다.",
+      "환경 변수 PATH와 PYTHONPATH를 설정합니다.",
+      "모델 가중치를 다운로드하고 ASR 파이프라인 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대형 음성 모델 실행을 위해 충분한 VRAM을 가진 GPU가 필요합니다.",
+    "stars": 739,
+    "forks": 49,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
+    "id": "swiftwhisper",
+    "name": "SwiftWhisper",
+    "github": "https://github.com/exPHAT/SwiftWhisper",
+    "description": "Swift 환경에서 OpenAI Whisper 모델을 사용해 손쉽게 오디오를 텍스트로 변환할 수 있는 라이브러리입니다.",
+    "longDescription": "whisper.cpp를 기반으로 제작되어 iOS 및 macOS 앱에 고성능 음성 인식 기능을 빠르고 간단하게 통합할 수 있도록 지원합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Swift",
+      "Whisper",
+      "음성 인식",
+      "iOS",
+      "macOS"
+    ],
+    "platforms": [
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/exPHAT/SwiftWhisper",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "Swift Package Manager",
+      "Xcode"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Swift 패키지 추가",
+        "command": ".package(url: \"https://github.com/exPHAT/SwiftWhisper.git\", branch: \"master\")",
+        "note": "Package.swift 파일의 dependencies에 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Swift Package Manager를 통해 프로젝트에 SwiftWhisper를 의존성으로 추가합니다.",
+      "코드에서 Whisper 모델 파일을 로드합니다.",
+      "오디오 파일을 전달하여 텍스트 변환 함수를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실행 시 Whisper 모델 가중치 파일이 필요합니다.",
+    "stars": 785,
+    "forks": 106,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
+    "id": "cn2an",
+    "name": "cn2an",
+    "github": "https://github.com/Ailln/cn2an",
+    "description": "중국어 숫자와 아라비아 숫자를 상호 고속으로 변환해 주는 파이썬 라이브러리입니다.",
+    "longDescription": "분수, 날짜, 온도 등 다양한 형태의 중국어 숫자 표현을 아라비아 숫자로, 또는 그 반대로 정밀하게 변환하여 자연어 처리 및 ASR 후처리에 유용하게 쓰입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "자연어 처리",
+      "숫자 변환",
+      "ASR",
+      "NLP"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.dovolopor.com/cn2an",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "Python 3.7+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip 설치",
+        "command": "pip install cn2an -U",
+        "note": "최신 버전의 cn2an 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip 명령어로 패키지를 설치합니다.",
+      "파이썬 코드에서 cn2an 모듈을 임포트합니다.",
+      "변환 함수를 호출하여 중국어 숫자를 아라비아 숫자로 변환합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "strict 모드에서는 엄격하게 일치하는 숫자 표현만 변환됩니다.",
+    "stars": 770,
+    "forks": 84,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
+    "id": "paddlepaddle-deepspeech",
+    "name": "PaddlePaddle-DeepSpeech",
+    "github": "https://github.com/yeyupiaoling/PaddlePaddle-DeepSpeech",
+    "description": "PaddlePaddle 기반으로 구현된 고성능 중국어 및 다국어 음성 인식(ASR) 프레임워크입니다.",
+    "longDescription": "DeepSpeech2, Conformer, Squeezeformer 등 다양한 음성 인식 모델을 지원하며, 윈도우와 리눅스 환경에서의 학습 및 추론은 물론 Nvidia Jetson 임베디드 보드 배포까지 지원합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "PaddlePaddle",
+      "ASR",
+      "음성 인식",
+      "딥러닝",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://yeyupiaoling.blog.csdn.net/article/details/102904306",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "Python 3.7+",
+      "PaddlePaddle"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/yeyupiaoling/PaddlePaddle-DeepSpeech.git",
+        "note": "프로젝트 소스 코드를 로컬에 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "PaddlePaddle 및 필수 라이브러리를 설치합니다.",
+      "문서에 따라 음성 데이터셋을 준비하고 전처리합니다.",
+      "훈련 스크립트를 실행해 모델을 학습하거나 추론을 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대규모 음성 데이터 학습에는 GPU 환경이 권장됩니다.",
+    "stars": 763,
+    "forks": 146,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
+    "id": "masr",
+    "name": "MASR",
+    "github": "https://github.com/yeyupiaoling/MASR",
+    "description": "PyTorch 기반으로 구현된 실시간 스트리밍 및 비스트리밍 음성 인식(ASR) 프레임워크입니다.",
+    "longDescription": "Conformer, Squeezeformer, DeepSpeech2 모델을 지원하며 서버, 엣지 장비 등 다양한 환경에서 쉽고 실용적으로 음성 인식 시스템을 구축하고 배포할 수 있습니다.",
+    "category": "AI 모델",
+    "tags": [
+      "PyTorch",
+      "ASR",
+      "음성 인식",
+      "Conformer",
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/yeyupiaoling/MASR",
+    "featured": 9,
+    "added": "2026-11-12",
+    "addedAt": "2026-11-12T07:04:24.019Z",
+    "requirements": [
+      "Python 3.11+",
+      "PyTorch",
+      "Anaconda"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/yeyupiaoling/MASR.git",
+        "note": "MASR 프로젝트 코드를 클론합니다."
+      }
+    ],
+    "usageSteps": [
+      "Anaconda 환경에서 필요한 패키지를 설치합니다.",
+      "데이터 준비 및 설정 파일을 구성합니다.",
+      "훈련 또는 로컬 예측 스크립트를 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "온라인 및 오프라인 인식 모드를 모두 지원합니다.",
+    "stars": 728,
+    "forks": 116,
+    "starsUpdatedAt": "2026-11-12"
+  },
+  {
     "id": "unforget",
     "name": "Unforget",
     "github": "https://github.com/computing-den/unforget",
