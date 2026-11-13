@@ -1,5 +1,181 @@
 [
   {
+    "id": "static-curl",
+    "name": "static-curl",
+    "github": "https://github.com/stunnel/static-curl",
+    "description": "최신 기능(ECH, HTTP/3, Brotli 등)을 포함하여 정적으로 빌드된 cURL 바이너리 및 빌드 스크립트입니다.",
+    "longDescription": "Linux, macOS, Windows 등 다양한 플랫폼에서 최신 프로토콜과 압축 알고리즘이 포함된 cURL 바이너리를 손쉽게 컴파일하고 사용할 수 있도록 지원하는 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "cURL",
+      "HTTP/3",
+      "Shell",
+      "CLI",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/stunnel/static-curl",
+    "featured": 9,
+    "added": "2026-11-13",
+    "addedAt": "2026-11-13T00:04:19.424Z",
+    "requirements": [
+      "Docker (Linux 환경 컴파일 시)"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "컴파일 및 빌드",
+        "command": "sh curl-static-cross.sh",
+        "note": "Docker를 이용해 호스트 아키텍처에 맞는 cURL을 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소 클론",
+      "빌드 스크립트 실행",
+      "생성된 정적 바이너리 사용"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 516,
+    "forks": 57,
+    "starsUpdatedAt": "2026-11-13"
+  },
+  {
+    "id": "azuretls-client",
+    "name": "AzureTLS Client",
+    "github": "https://github.com/Noooste/azuretls-client",
+    "description": "TLS/JA3, HTTP/2 및 HTTP/3 지문(Fingerprint)을 우회하고 스푸핑할 수 있는 Go 언어 기반 HTTP 클라이언트입니다.",
+    "longDescription": "웹 스크래핑, 자동화 테스트 등 표준 라이브러리 이상의 고급 제어가 필요한 상황에서 복잡성 없이 TLS 핑거프린트를 조작하고 요청을 보낼 수 있는 Go 라이브러리입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "HTTP",
+      "TLS",
+      "웹 스크래핑",
+      "보안"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/Noooste/azuretls-client",
+    "featured": 9,
+    "added": "2026-11-13",
+    "addedAt": "2026-11-13T00:04:19.424Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 모듈 설치",
+        "command": "go get github.com/Noooste/azuretls-client",
+        "note": "프로젝트에 의존성을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "라이브러리 임포트",
+      "새로운 세션 생성",
+      "세션을 통해 HTTP 요청 전송"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 476,
+    "forks": 66,
+    "starsUpdatedAt": "2026-11-13"
+  },
+  {
+    "id": "pyreqwest",
+    "name": "PyReqwest",
+    "github": "https://github.com/MarkusSintonen/pyreqwest",
+    "description": "Rust의 reqwest 라이브러리를 기반으로 제작된 빠르고 강력한 파이썬용 HTTP 클라이언트입니다.",
+    "longDescription": "C 확장 코드 없이 안전하고 빠르게 동작하며, 타입 어노테이션을 완벽히 지원하고 pytest를 통한 모킹 기능 등을 제공하는 고성능 파이썬 HTTP 클라이언트입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "Rust",
+      "HTTP",
+      "API",
+      "개발 도구"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://markussintonen.github.io/pyreqwest/",
+    "featured": 9,
+    "added": "2026-11-13",
+    "addedAt": "2026-11-13T00:04:19.424Z",
+    "requirements": [
+      "Python 3.6+"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "패키지 관리자를 통해 설치",
+      "클라이언트 빌더를 이용해 클라이언트 초기화",
+      "비동기 또는 동기 방식으로 HTTP 요청 실행"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 412,
+    "forks": 18,
+    "starsUpdatedAt": "2026-11-13"
+  },
+  {
+    "id": "gotql",
+    "name": "GotQL",
+    "github": "https://github.com/khaosdoctor/gotql",
+    "description": "문자열 조작의 번거로움 없이 GraphQL 쿼리를 자바스크립트 객체 형태로 작성할 수 있게 해주는 유틸리티입니다.",
+    "longDescription": "Node.js 환경의 유명 HTTP 요청 라이브러리인 Got을 기반으로 작동하며, 트랜스파일러처럼 동작하여 객체로 작성된 쿼리를 GraphQL 요청으로 변환해 줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "GraphQL",
+      "Node.js",
+      "TypeScript",
+      "JavaScript",
+      "개발 도구"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/khaosdoctor/gotql",
+    "featured": 9,
+    "added": "2026-11-13",
+    "addedAt": "2026-11-13T00:04:19.424Z",
+    "requirements": [
+      "Node.js"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "패키지 설치",
+      "자바스크립트 객체 형태로 GraphQL 쿼리 정의",
+      "GotQL을 통해 서버로 쿼리 전송"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 408,
+    "forks": 20,
+    "starsUpdatedAt": "2026-11-13"
+  },
+  {
     "id": "commandpost",
     "name": "CommandPost",
     "github": "https://github.com/CommandPost/CommandPost",
