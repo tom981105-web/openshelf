@@ -1,7 +1,992 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-13T00:07:00.750Z",
+  "updatedAt": "2026-11-13T01:06:59.619Z",
   "items": [
+    {
+      "id": "fastgpt",
+      "name": "FastGPT",
+      "github": "https://github.com/labring/FastGPT",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "fastgpt",
+        "name": "FastGPT",
+        "github": "https://github.com/labring/FastGPT",
+        "description": "LLM 기반 오픈소스 지식베이스 및 AI 에이전트 빌드 플랫폼",
+        "longDescription": "데이터 처리, RAG 검색, 시각적 AI 워크플로우 오케스트레이션을 제공하여 복잡한 Q&A 시스템을 쉽게 개발하고 배포할 수 있습니다.",
+        "category": "지식·검색",
+        "tags": [
+          "AI",
+          "RAG",
+          "LLM"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://fastgpt.io",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 설치 및 실행",
+            "command": "docker run -d ...",
+            "note": "Docker를 이용해 FastGPT를 빠르게 시작할 수 있습니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker를 통해 FastGPT 컨테이너를 실행합니다.",
+          "웹 인터페이스에 접속하여 관리자 계정을 설정합니다.",
+          "데이터 처리 및 RAG 검색용 지식베이스를 생성합니다.",
+          "시각적 워크플로우 빌더를 사용하여 AI 에이전트 앱을 구성합니다."
+        ],
+        "examplePrompt": "수집된 회사 문서 기반으로 고객 응대 Q&A 봇을 구축해줘",
+        "usageNote": "",
+        "stars": 30033,
+        "forks": 7379,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:47.613Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:50.605Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-13T01:06:55.691Z"
+    },
+    {
+      "id": "chat2db",
+      "name": "Chat2DB",
+      "github": "https://github.com/OtterMind/Chat2DB",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "chat2db",
+        "name": "Chat2DB",
+        "github": "https://github.com/OtterMind/Chat2DB",
+        "description": "AI 어시스턴트 기능이 탑재된 무료 크로스플랫폼 데이터베이스 클라이언트 및 SQL 워크스페이스",
+        "longDescription": "40개 이상의 데이터베이스를 지원하며, 로컬 환경에서 안전하게 데이터를 관리하고 AI 모델을 활용해 SQL 쿼리를 생성, 설명, 최적화할 수 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터베이스",
+          "SQL",
+          "AI"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://chat2db.ai",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Java",
+          "openssl"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "암호화 키 초기화",
+            "command": "./script/security/init-community-encryption-key.sh",
+            "note": "저장된 데이터소스 비밀번호와 API 키를 AES-256-GCM으로 암호화하기 위한 키를 생성합니다."
+          }
+        ],
+        "usageSteps": [
+          "Chat2DB 애플리케이션을 다운로드하여 실행합니다.",
+          "연동할 데이터베이스(MySQL, PostgreSQL 등) 연결 정보를 입력합니다.",
+          "AI 모델 API 키를 설정하여 쿼리 생성 및 최적화 기능을 활성화합니다.",
+          "SQL 편집기에서 자연어로 쿼리를 요청하거나 직접 실행합니다."
+        ],
+        "examplePrompt": "사용자 테이블에서 최근 30일 동안 로그인하지 않은 회원 목록을 찾는 SQL 작성해줘",
+        "usageNote": "",
+        "stars": 28365,
+        "forks": 3047,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:47.819Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:50.996Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-13T01:06:56.431Z"
+    },
+    {
+      "id": "screenpipe",
+      "name": "screenpipe",
+      "github": "https://github.com/screenpipe/screenpipe",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "screenpipe",
+        "name": "screenpipe",
+        "github": "https://github.com/screenpipe/screenpipe",
+        "description": "컴퓨터 화면과 오디오를 로컬에 기록하여 워크플로우를 분석하고 AI 컨텍스트를 제공하는 도구",
+        "longDescription": "작업 내역을 지속적으로 기록하여 업무 자동화를 돕고, 클라우드에 의존하지 않는 프라이버시 중심의 AI 메모리를 구축합니다. 화면과 오디오 데이터를 활용해 AI 에이전트에게 필요한 컨텍스트를 제공합니다.",
+        "category": "생산성",
+        "tags": [
+          "AI",
+          "화면 녹화",
+          "로컬 프라이버시"
+        ],
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://screenpipe.com",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "8GB 이상의 RAM"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "macOS 설치",
+            "command": "brew install --cask screenpipe",
+            "note": "Homebrew를 통해 네이티브 dmg 설치 관리"
+          }
+        ],
+        "usageSteps": [
+          "공식 홈페이지 또는 설치 명령어를 통해 앱을 설치합니다.",
+          "백그라운드에서 화면과 오디오 캡처 권한을 허용합니다.",
+          "로컬 저장소에 기록된 작업 내역을 검색하고 필요한 워크플로우를 확인합니다.",
+          "AI 에이전트와 연동하여 과거 작업 컨텍스트를 활용합니다."
+        ],
+        "examplePrompt": "어제 오후 3시쯤 작업했던 코드 수정 내역을 찾아줘",
+        "usageNote": "",
+        "stars": 22354,
+        "forks": 2295,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:48.096Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:51.374Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-13T01:06:57.439Z"
+    },
+    {
+      "id": "windmill",
+      "name": "windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "windmill",
+        "name": "windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "워크플로우, 내부 앱, AI 에이전트를 코드로 빌드하고 실행하는 오픈소스 오케스트레이터 플랫폼",
+        "longDescription": "다양한 프로그래밍 언어로 스크립트를 작성하여 Git과 동기화할 수 있으며, 엔지니어의 배포 통제 하에 비즈니스 팀이 AI 기능을 구축하도록 지원합니다. 다양한 자동화 및 오케스트레이션 작업을 처리할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "자동화",
+          "AI에이전트"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker Compose 실행",
+            "command": "docker compose up",
+            "note": "Windmill 전체 스택을 로컬에 빠르게 구동합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker Compose를 사용하여 Windmill 인스턴스를 실행합니다.",
+          "웹 대시보드에 로그인하여 스크립트나 워크플로우를 작성합니다.",
+          "Python 또는 TypeScript로 필요한 비즈니스 로직을 구현합니다.",
+          "생성된 스크립트를 UI, API 또는 Cron 작업으로 자동화합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18552,
+        "forks": 1153,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:48.280Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:51.642Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-13T01:06:58.485Z"
+    },
+    {
+      "id": "snow-shot",
+      "name": "snow-shot",
+      "github": "https://github.com/mg-chao/snow-shot",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "snow-shot",
+        "name": "snow-shot",
+        "github": "https://github.com/mg-chao/snow-shot",
+        "description": "Windows와 macOS를 지원하는 무료 오픈소스 화면 캡처 및 녹화 도구입니다.",
+        "longDescription": "이미지 주석 추가, 스크롤 캡처, 오프라인 OCR, 화면 고정 기능을 통해 생산성을 향상시킵니다. 다양한 플랫폼에서 화면 캡처 및 녹화 작업을 지원하는 오픈소스 유틸리티입니다.",
+        "category": "생산성",
+        "tags": [
+          "스크린샷",
+          "OCR",
+          "화면녹화"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://snowshot.top",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Homebrew로 설치 (macOS)",
+            "command": "brew install --cask snow-shot",
+            "note": "macOS 환경에서 Homebrew를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Snow Shot 앱을 실행하고 단축키를 이용해 영역을 캡처합니다.",
+          "마크업 툴바를 사용하여 화살표, 텍스트, 모자이크 등의 주석을 추가합니다.",
+          "필요시 오프라인 OCR 기능을 실행해 이미지 내 텍스트를 추출합니다.",
+          "참조할 이미지를 화면 위에 고정(Pin)하여 활용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 6992,
+        "forks": 454,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:48.490Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:51.999Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-13T01:06:59.619Z"
+    },
+    {
+      "id": "lightdash",
+      "name": "lightdash",
+      "github": "https://github.com/lightdash/lightdash",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "lightdash",
+        "name": "lightdash",
+        "github": "https://github.com/lightdash/lightdash",
+        "description": "코드 중심의 오픈소스 에이전틱 BI(Business Intelligence) 및 데이터 분석 플랫폼",
+        "longDescription": "중앙 집중식 컨텍스트 레이어를 통해 신뢰할 수 있는 지표와 대시보드를 정의하고, AI 에이전트와 CLI를 통해 분석 결과를 제공합니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "BI",
+          "데이터 분석",
+          "대시보드",
+          "SQL",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://lightdash.com",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker를 이용한 셀프 호스팅",
+            "command": "docker run -p 8080:8080 lightdash/lightdash",
+            "note": "Docker를 통해 로컬 환경에 Lightdash를 구동합니다."
+          }
+        ],
+        "usageSteps": [
+          "Lightdash 클라우드 가입 또는 Docker를 이용해 자체 서버를 구축합니다.",
+          "데이터베이스 및 dbt 프로젝트와 연결하여 메트릭을 정의합니다.",
+          "웹 인터페이스나 자연어 대화를 통해 대시보드와 리포트를 생성합니다.",
+          "팀원들과 분석 결과 및 인사이트를 공유합니다."
+        ],
+        "examplePrompt": "지난 분기 지역별 매출 상승 추이를 분석해서 대시보드로 만들어줘",
+        "usageNote": "",
+        "stars": 6230,
+        "forks": 805,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:48.664Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:52.272Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "wppconnect",
+      "name": "wppconnect",
+      "github": "https://github.com/wppconnect-team/wppconnect",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "wppconnect",
+        "name": "wppconnect",
+        "github": "https://github.com/wppconnect-team/wppconnect",
+        "description": "Node.js 및 TypeScript 환경을 위한 WhatsApp Web 자동화 라이브러리",
+        "longDescription": "세션 관리, 메시지 송수신, 미디어 처리 기능을 제공하며 Puppeteer를 기반으로 챗봇 및 자동화 도구를 구축할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "WhatsApp",
+          "자동화",
+          "챗봇",
+          "Node.js",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://wppconnect.io/wppconnect/",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 패키지 설치",
+            "command": "npm i @wppconnect-team/wppconnect",
+            "note": "프로젝트에 WPPConnect 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Node.js 프로젝트에 패키지를 설치합니다.",
+          "스크립트에서 WPPConnect 세션을 초기화합니다.",
+          "생성된 QR 코드를 WhatsApp 모바일 앱으로 스캔하여 로그인합니다.",
+          "메시지 수신 이벤트 리스너를 등록하여 자동 응답 봇 로직을 구현합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3526,
+        "forks": 589,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:48.945Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:52.696Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "treesheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "treesheets",
+        "name": "treesheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 아웃라인을 대체하는 계층형 자유 형식 데이터 조직화 도구",
+        "longDescription": "할 일 목록, 일정, 프로젝트 관리, 브레인스토밍 등 복잡하고 계층적인 데이터를 한눈에 구조화하고 관리할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "스프레드시트",
+          "마인드맵",
+          "지식 관리",
+          "메모",
+          "C++"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "GitHub Release 바이너리 다운로드",
+            "command": "brew install --cask treesheets",
+            "note": "macOS 환경에서 Homebrew를 통해 설치할 수 있습니다."
+          }
+        ],
+        "usageSteps": [
+          "공식 릴리스 페이지 또는 패키지 매니저를 통해 프로그램을 설치합니다.",
+          "새 문서를 생성하고 그리드 형태의 계층 구조로 데이터를 입력합니다.",
+          "필요에 따라 칸을 나누거나 하위 그리드를 추가하여 아이디어를 확장합니다.",
+          "작성한 문서를 파일로 저장하거나 다른 포맷으로 내보냅니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3201,
+        "forks": 226,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:49.121Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:53.241Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "iot-dc3",
+      "name": "iot-dc3",
+      "github": "https://github.com/pnoker/iot-dc3",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "iot-dc3",
+        "name": "iot-dc3",
+        "github": "https://github.com/pnoker/iot-dc3",
+        "description": "물리적 세계와 AI를 연결하는 오픈소스 산업용 IoT 런타임 및 MCP 도구 게이트웨이",
+        "longDescription": "36가지 이상의 프로토콜 드라이버, 엣지 투 클라우드 데이터 전송을 지원하며, AI 에이전트가 안전하고 추적 가능한 루프 안에서 실제 물리 기기를 제어할 수 있게 합니다.",
+        "category": "하드웨어·IoT",
+        "tags": [
+          "IoT",
+          "산업용",
+          "모드버스",
+          "스프링",
+          "MCP"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://dc3.site",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL",
+          "RabbitMQ"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "소스 빌드 및 환경 설정",
+            "command": "make up-db && source dc3/env/dev.env.sh && mvn clean package",
+            "note": "데이터베이스를 띄우고 환경 변수를 로드한 뒤 메이븐으로 빌드합니다."
+          }
+        ],
+        "usageSteps": [
+          "PostgreSQL과 RabbitMQ 인프라를 실행합니다.",
+          "환경 변수를 설정하고 프로젝트 패키지를 빌드합니다.",
+          "프로토콜 드라이버를 구성하여 산업용 기기 및 센서를 연동합니다.",
+          "AI 에이전트 또는 MCP 게이트웨이를 통해 물리 기기 데이터를 수집하고 제어합니다."
+        ],
+        "examplePrompt": "공장 내 3번 센서의 현재 온도를 확인하고 임계값을 초과하면 경고를 보내줘",
+        "usageNote": "",
+        "stars": 1270,
+        "forks": 237,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:49.367Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:53.761Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "unbrowse",
+      "name": "unbrowse",
+      "github": "https://github.com/unbrowse-ai/unbrowse",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10"
+    },
+    {
+      "id": "lobehub",
+      "name": "LobeHub",
+      "github": "https://github.com/lobehub/lobehub",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "lobehub",
+        "name": "LobeHub",
+        "github": "https://github.com/lobehub/lobehub",
+        "description": "팀 대화에 슈퍼 에이전트를 추가하여 반복 업무를 자동화하는 협업 플랫폼입니다.",
+        "longDescription": "팀이 이미 사용하는 채팅 환경에 통합할 수 있는 슈퍼 에이전트 플랫폼입니다. 스스로 업무를 수행하며 지속적으로 개선되는 태스크 관리 및 에이전트 협업 기능을 제공합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI에이전트",
+          "개인비서",
+          "태스크관리",
+          "MCP"
+        ],
+        "platforms": [
+          "Web",
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://lobehub.com",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Node.js",
+          "pnpm"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "클론 및 설치",
+            "command": "git clone https://github.com/lobehub/lobehub.git && cd lobehub && pnpm install",
+            "note": "저장소를 복제하고 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론합니다.",
+          "pnpm install을 실행하여 패키지를 설치합니다.",
+          "bun run dev 명령어로 개발 서버를 시작합니다."
+        ],
+        "examplePrompt": "우리 팀 채널에 데이터 분석을 수행할 슈퍼 에이전트를 추가해 주세요.",
+        "usageNote": "",
+        "stars": 85176,
+        "forks": 16259,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:49.572Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-13T01:06:54.195Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "context-mode",
+      "name": "Context Mode",
+      "github": "https://github.com/mksglu/context-mode",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "context-mode",
+        "name": "Context Mode",
+        "github": "https://github.com/mksglu/context-mode",
+        "description": "코딩 에이전트의 컨텍스트 창에서 도구 출력을 분리하여 토큰 사용량을 대폭 줄여주는 로컬 플러그인입니다.",
+        "longDescription": "샌드박스와 SQLite FTS5 검색을 활용하여 코딩 에이전트가 처리하는 텍스트 양을 99% 이상 줄여주는 무료 로컬 플러그인입니다. Claude Code, Codex, Copilot 등 다양한 주요 코딩 에이전트를 지원합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "코딩에이전트",
+          "컨텍스트최적화",
+          "샌드박스",
+          "MCP"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://contextmode.ai",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [
+          "Claude Code",
+          "Codex",
+          "GitHub Copilot CLI",
+          "Gemini CLI"
+        ],
+        "install": [],
+        "usageSteps": [
+          "선호하는 코딩 에이전트에 플러그인을 설치합니다.",
+          "에이전트 실행 시 도구 출력이 컨텍스트 창에 직접 노출되지 않고 최적화되는지 확인합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "원격 텔레메트리가 전혀 없는 로컬 우선 도구입니다.",
+        "stars": 33992,
+        "forks": 2331,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:49.769Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "mastra",
+      "name": "Mastra",
+      "github": "https://github.com/mastra-ai/mastra",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "mastra",
+        "name": "Mastra",
+        "github": "https://github.com/mastra-ai/mastra",
+        "description": "TypeScript 기반의 모던 AI 애플리케이션 및 에이전트 구축 프레임워크입니다.",
+        "longDescription": "TypeScript 환경에서 AI 에이전트, 챗봇, 워크플로우를 간편하게 구축할 수 있도록 돕는 프레임워크입니다. 평가 도구, MCP 지원 및 다양한 LLM 연동 기능을 제공합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "TypeScript",
+          "AI에이전트",
+          "챗봇",
+          "워크플로우"
+        ],
+        "platforms": [
+          "Web",
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://mastra.ai",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "프로젝트 생성",
+            "command": "npm create mastra@latest",
+            "note": "CLI를 통해 새로운 Mastra 프로젝트를 생성합니다."
+          }
+        ],
+        "usageSteps": [
+          "npm create mastra@latest 명령어로 프로젝트를 초기화합니다.",
+          "가이드에 따라 에이전트 및 워크플로우 로직을 작성합니다."
+        ],
+        "examplePrompt": "고객 지원 문의를 자동으로 분류하고 응답하는 에이전트를 만들어줘.",
+        "usageNote": "",
+        "stars": 29491,
+        "forks": 3097,
+        "starsUpdatedAt": "2026-11-13"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-13T01:06:49.994Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
     {
       "id": "companyos",
       "name": "CompanyOS",
@@ -12,24 +997,26 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-13T00:06:48.832Z",
-      "sourceRun": "2026-11-13T09",
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
       "tool": {
         "id": "companyos",
         "name": "CompanyOS",
         "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "기업용 오픈소스 클라우드 네이티브 에이전트 하네스 및 운영 체제",
-        "longDescription": "다양한 AI 에이전트가 병렬로 실행되며 회사의 기억과 문맥을 공유하도록 지원하는 플랫폼입니다. 3,000개 이상의 앱과 연동되며, 기업 맞춤형 에이전트를 빌드하고 관리할 수 있습니다.",
-        "category": "AI 에이전트",
+        "description": "클라우드 기반의 멀티플레이어 AI 에이전트 하네스로 구성된 오픈소스 기업 운영 체제입니다.",
+        "longDescription": "기업 내 다양한 업무를 병렬로 수행하는 자율형 에이전트 시스템입니다. 3,000개 이상의 앱과 연동되며, 자체 인프라 또는 클라우드에 배포하여 기업의 에이전트, 스킬, 규칙을 중앙에서 관리할 수 있습니다.",
+        "category": "업무 자동화",
         "tags": [
           "AI에이전트",
-          "클라우드네이티브",
-          "LLM"
+          "기업운영",
+          "자동화",
+          "클라우드"
         ],
         "platforms": [
           "Web",
+          "macOS",
           "Linux",
-          "macOS"
+          "Windows"
         ],
         "free": true,
         "openSource": false,
@@ -37,70 +1024,288 @@
         "website": "https://kortix.com",
         "featured": 9,
         "added": "2026-11-13",
-        "addedAt": "2026-11-13T00:04:19.424Z",
-        "requirements": [],
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Node.js",
+          "TypeScript"
+        ],
         "supportedAgents": [],
         "install": [],
         "usageSteps": [
-          "Git 저장소에 에이전트와 규칙을 구성합니다.",
-          "웹훅 및 일정에 따라 에이전트가 작업을 시작하도록 설정합니다.",
-          "격리된 클라우드 환경에서 에이전트 군집이 병렬로 작업을 수행합니다.",
-          "팀 검토를 거쳐 변경 사항을 반영합니다."
+          "저장소에서 코드를 클라우드 인프라 또는 로컬에 배포합니다.",
+          "연동할 앱과 에이전트 스킬을 설정합니다.",
+          "웹훅이나 스케줄을 통해 에이전트를 구동합니다."
         ],
-        "examplePrompt": "고객 지원 티켓을 분석하고 관련 문서를 참고하여 자동 응답 초안을 작성해 줘",
+        "examplePrompt": "매주 월요일 아침에 주요 지표 리포트를 생성해서 슬랙으로 보내줘.",
         "usageNote": "",
-        "stars": 20672,
+        "stars": 20673,
         "forks": 3470,
         "starsUpdatedAt": "2026-11-13"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-13T00:06:49.543Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-13T00:06:52.506Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-13T00:06:57.346Z"
+      }
     },
     {
-      "id": "windmill",
-      "name": "Windmill",
-      "github": "https://github.com/windmill-labs/windmill",
+      "id": "docker-android",
+      "name": "Docker Android",
+      "github": "https://github.com/budtmo/docker-android",
       "license": "확인 필요",
       "status": "pending_review",
       "reasons": [
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-13T00:06:48.833Z",
-      "sourceRun": "2026-11-13T09",
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
       "tool": {
-        "id": "windmill",
-        "name": "Windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 구축하기 위한 코드 중심의 고성능 오픈소스 플랫폼",
-        "longDescription": "Python, TypeScript, Go 등 다양한 언어로 스크립트를 작성하여 공유 가능한 UI, API, Cron 작업으로 변환합니다. Airflow, Prefect, Temporal 등의 대안으로 활용할 수 있습니다.",
+        "id": "docker-android",
+        "name": "Docker Android",
+        "github": "https://github.com/budtmo/docker-android",
+        "description": "noVNC, 비디오 녹화, MCP 서버 및 AI 에이전트를 지원하는 도커 기반 안드로이드 에뮬레이터 환경입니다.",
+        "longDescription": "도커 컨테이너 내부에서 안드로이드 에뮬레이터를 실행할 수 있는 솔루션입니다. 웹 브라우저를 통한 실시간 제어(noVNC)와 AI 에이전트 연동을 지원하여 모바일 앱 테스트 및 자동화에 유용합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Docker",
+          "안드로이드",
+          "에뮬레이터",
+          "자동화"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/budtmo/docker-android",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "시스템에 Docker가 설치되어 있는지 확인합니다.",
+          "안드로이드 도커 이미지를 다운로드하고 실행합니다.",
+          "웹 브라우저를 통해 에뮬레이터 화면에 접속합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS 및 Windows 환경에서는 가상화를 지원하는 우분투 기반 가상 머신이 필요할 수 있습니다.",
+        "stars": 16125,
+        "forks": 1787,
+        "starsUpdatedAt": "2026-11-13"
+      }
+    },
+    {
+      "id": "cc-haha",
+      "name": "cc-haha",
+      "github": "https://github.com/NanmiCoder/cc-haha",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "cc-haha",
+        "name": "cc-haha",
+        "github": "https://github.com/NanmiCoder/cc-haha",
+        "description": "로컬 우선의 다중 에이전트 협업, Git Worktree 및 원격 제어를 지원하는 Claude Code 데스크톱 워크스페이스입니다.",
+        "longDescription": "AI 코딩 에이전트와 Claude Code를 위한 데스크톱 작업 환경입니다. 멀티 에이전트 협업, 코드 Diff 확인, 스킬 마켓플레이스, Computer Use 기능을 제공하며 위챗, 텔레그램 등을 통한 원격 접근이 가능합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "ClaudeCode",
+          "AI에이전트",
+          "데스크톱앱",
+          "멀티에이전트"
+        ],
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://cchaha.ai",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Node.js",
+          "TypeScript"
+        ],
+        "supportedAgents": [
+          "Claude Code"
+        ],
+        "install": [],
+        "usageSteps": [
+          "Releases 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+          "앱을 실행하여 로컬 저장소와 연동합니다.",
+          "필요에 따라 모바일 앱과 페어링하여 원격으로 제어합니다."
+        ],
+        "examplePrompt": "현재 프로젝트의 버그를 찾아 수정하고 Git 브랜치에 커밋해줘.",
+        "usageNote": "",
+        "stars": 15418,
+        "forks": 8622,
+        "starsUpdatedAt": "2026-11-13"
+      }
+    },
+    {
+      "id": "memu",
+      "name": "memU",
+      "github": "https://github.com/NevaMind-AI/memU",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "memu",
+        "name": "memU",
+        "github": "https://github.com/NevaMind-AI/memU",
+        "description": "여러 에이전트와 세션 간에 위키 형태로 개인 메모를 공유하고 관리하는 오픈소스 메모리 시스템입니다.",
+        "longDescription": "다양한 AI 에이전트 간에 일관된 기억을 유지할 수 있도록 지원하는 개인 메모리 레이어입니다. 에이전트가 세션을 넘나들며 학습한 내용을 위키 구조로 저장하고 검색할 수 있습니다.",
+        "category": "지식·검색",
+        "tags": [
+          "AI메모리",
+          "위키",
+          "지식베이스",
+          "MCP"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://memu.pro",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Python 3.11+"
+        ],
+        "supportedAgents": [
+          "Claude Code"
+        ],
+        "install": [
+          {
+            "title": "패키지 설치",
+            "command": "pip install memu-cli",
+            "note": "PyPI를 통해 memU CLI를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "pip install memu-cli 명령어로 패키지를 설치합니다.",
+          "설정 파일을 통해 로컬 또는 클라우드 백엔드를 구성합니다.",
+          "에이전트와 연동하여 세션 간 메모리를 동기화합니다."
+        ],
+        "examplePrompt": "지난 작업에서 논의했던 아키텍처 규칙을 불러와줘.",
+        "usageNote": "",
+        "stars": 14619,
+        "forks": 1099,
+        "starsUpdatedAt": "2026-11-13"
+      }
+    },
+    {
+      "id": "omniget",
+      "name": "OmniGet",
+      "github": "https://github.com/tonhowtf/omniget",
+      "license": "GPL-3.0",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10"
+    },
+    {
+      "id": "get-jobs",
+      "name": "get_jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "get-jobs",
+        "name": "get_jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "주요 구직 플랫폼(Boss, 전程无忧, 猎聘, 智联招聘 등)의 이력서 자동 제출을 지원하는 AI 구직 보조 스크립트입니다.",
+        "longDescription": "구직 활동 시 반복되는 이력서 제출 과정을 자동화하는 스프링 부트 기반의 오픈소스 도구입니다. AI 분석 기능을 결합하여 구직자가 원하는 조건에 맞춰 자동으로 일자리를 찾고 지원서를 제출합니다.",
         "category": "업무 자동화",
         "tags": [
-          "업무자동화",
-          "오케스트레이션",
-          "개발도구"
+          "구직자동화",
+          "이력서",
+          "AI에이전트",
+          "Spring Boot"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-11-13",
+        "addedAt": "2026-11-13T01:04:17.777Z",
+        "requirements": [
+          "Java",
+          "Spring Boot"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 환경 설정을 구성합니다.",
+          "지원하고자 하는 플랫폼 계정 정보와 이력서를 등록합니다.",
+          "자동 지원 스크립트를 실행합니다."
+        ],
+        "examplePrompt": "내 이력서를 바탕으로 관련 백엔드 개발자 포지션에 자동으로 지원해줘.",
+        "usageNote": "",
+        "stars": 9696,
+        "forks": 1100,
+        "starsUpdatedAt": "2026-11-13"
+      }
+    },
+    {
+      "id": "webiny-js",
+      "name": "Webiny",
+      "github": "https://github.com/webiny/webiny-js",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-13T01:06:46.932Z",
+      "sourceRun": "2026-11-13T10",
+      "tool": {
+        "id": "webiny-js",
+        "name": "Webiny",
+        "github": "https://github.com/webiny/webiny-js",
+        "description": "AWS 서버리스 아키텍처 기반으로 구축된 엔터프라이즈급 오픈소스 무헤드 CMS 및 TypeScript 프레임워크입니다.",
+        "longDescription": "AWS Lambda, DynamoDB, S3 환경에서 실행되는 자체 호스팅형 CMS 플랫폼입니다. GraphQL API와 멀티테넌시를 지원하며, MCP 서버를 통한 AI 보조 개발 기능을 제공하여 대규모 조직의 콘텐츠 관리에 적합합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "CMS",
+          "AWS",
+          "Serverless",
+          "GraphQL",
+          "MCP"
         ],
         "platforms": [
           "Web",
@@ -111,51 +1316,34 @@
         "free": true,
         "openSource": false,
         "license": "확인 필요",
-        "website": "https://windmill.dev",
+        "website": "https://www.webiny.com",
         "featured": 9,
         "added": "2026-11-13",
-        "addedAt": "2026-11-13T00:04:19.424Z",
+        "addedAt": "2026-11-13T01:04:17.777Z",
         "requirements": [
-          "PostgreSQL"
+          "Node.js 22+",
+          "Yarn",
+          "AWS Account"
         ],
         "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "선호하는 프로그래밍 언어로 스크립트를 작성합니다.",
-          "Windmill 인터페이스에 스크립트를 동기화합니다.",
-          "스크립트를 조합하여 워크플로우나 AI 에이전트 파이프라인을 구성합니다.",
-          "자동 생성된 대시보드나 API를 통해 실행하고 모니터링합니다."
+        "install": [
+          {
+            "title": "프로젝트 생성 및 배포",
+            "command": "npx create-webiny-project my-project && cd my-project && yarn webiny deploy",
+            "note": "새로운 Webiny 프로젝트를 생성하고 AWS에 배포합니다."
+          }
         ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 18552,
-        "forks": 1153,
+        "usageSteps": [
+          "npx create-webiny-project 명령어로 프로젝트를 생성합니다.",
+          "AWS 인증 정보를 설정한 뒤 yarn webiny deploy 명령어로 인프라를 배포합니다.",
+          "생성된 관리자 패널 URL에 접속하여 콘텐츠를 관리합니다."
+        ],
+        "examplePrompt": "새로운 블로그 포스트를 위한 구조를 생성하고 GraphQL API를 통해 조회해줘.",
+        "usageNote": "초기 배포 시 AWS 인프라 프로비저닝으로 인해 5~15분이 소요됩니다.",
+        "stars": 8052,
+        "forks": 683,
         "starsUpdatedAt": "2026-11-13"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-13T00:06:49.765Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-13T00:06:52.839Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-13T00:06:58.263Z"
+      }
     },
     {
       "id": "filecentipede",
@@ -232,237 +1420,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-13T00:06:59.120Z"
-    },
-    {
-      "id": "get-jobs",
-      "name": "Get Jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-13T00:06:48.833Z",
-      "sourceRun": "2026-11-13T09",
-      "tool": {
-        "id": "get-jobs",
-        "name": "Get Jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "주요 구직 플랫폼의 이력서 자동 제출 및 채용 정보 수집을 지원하는 AI 구직 보조 도구",
-        "longDescription": "중국 주요 구직 플랫폼에서 반복적인 구직 활동을 자동화하여 지원 과정을 효율화해주는 Spring Boot 기반 도구입니다. AI 기술을 활용해 구직 프로세스를 보조합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "자동화",
-          "구직",
-          "Spring Boot"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-11-13",
-        "addedAt": "2026-11-13T00:04:19.424Z",
-        "requirements": [
-          "Java",
-          "Spring Boot"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트를 클론하고 설정 파일을 구성합니다.",
-          "대상 구직 플랫폼 계정 정보를 연동합니다.",
-          "이력서 및 구직 필터 조건을 설정합니다.",
-          "자동 지원 스크립트를 실행하여 이력서 제출을 진행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9696,
-        "forks": 1100,
-        "starsUpdatedAt": "2026-11-13"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-13T00:06:50.101Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-13T00:06:53.669Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-13T00:06:59.909Z"
-    },
-    {
-      "id": "snow-shot",
-      "name": "Snow Shot",
-      "github": "https://github.com/mg-chao/snow-shot",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-13T00:06:48.833Z",
-      "sourceRun": "2026-11-13T09",
-      "tool": {
-        "id": "snow-shot",
-        "name": "Snow Shot",
-        "github": "https://github.com/mg-chao/snow-shot",
-        "description": "스크린샷 캡처, 주석, 스크롤 캡처, 오프라인 OCR을 지원하는 무료 오픈소스 화면 캡처 도구",
-        "longDescription": "Windows와 macOS를 지원하며 영역 캡처, 주석 추가, 긴 웹페이지 캡처, 이미지 핀 고정 및 화면 녹화 기능을 제공합니다. 오프라인 OCR 기능을 포함하여 생산성을 높여줍니다.",
-        "category": "생산성",
-        "tags": [
-          "스크린샷",
-          "OCR",
-          "화면녹화"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://snowshot.top",
-        "featured": 9,
-        "added": "2026-11-13",
-        "addedAt": "2026-11-13T00:04:19.424Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "GitHub Releases에서 운영체제에 맞는 패키지를 다운로드합니다.",
-          "단축키를 사용하여 원하는 영역이나 창을 캡처합니다.",
-          "편집 툴바를 이용해 화살표, 텍스트, 모자이크 등 주석을 추가합니다.",
-          "필요에 따라 이미지를 화면에 고정하거나 클립보드에 복사합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 6990,
-        "forks": 454,
-        "starsUpdatedAt": "2026-11-13"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-13T00:06:50.418Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-13T00:06:54.088Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-13T00:07:00.750Z"
-    },
-    {
-      "id": "lightdash",
-      "name": "Lightdash",
-      "github": "https://github.com/lightdash/lightdash",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-13T00:06:48.833Z",
-      "sourceRun": "2026-11-13T09",
-      "tool": {
-        "id": "lightdash",
-        "name": "Lightdash",
-        "github": "https://github.com/lightdash/lightdash",
-        "description": "코드 중심의 메트릭 정의와 AI 에이전트 연동을 지원하는 오픈소스 에이전틱 BI 플랫폼",
-        "longDescription": "dbt 컨텍스트 레이어를 기반으로 신뢰할 수 있는 지표를 정의하고, Git, CI, MCP 및 CLI를 통해 대시보드와 AI 에이전트 분석 환경을 제공하는 비즈니스 인텔리전스 도구입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "BI",
-          "데이터분석",
-          "SQL",
-          "TypeScript",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://lightdash.com",
-        "featured": 9,
-        "added": "2026-11-13",
-        "addedAt": "2026-11-13T00:04:19.424Z",
-        "requirements": [
-          "Docker",
-          "Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Lightdash Cloud에 가입하거나 Docker/Kubernetes로 자체 호스팅 환경을 구축합니다.",
-          "프로젝트 컨텍스트 레이어에 정의된 메트릭과 비즈니스 로직을 연결합니다.",
-          "대시보드 구성 또는 자연어 질문을 통해 데이터를 조회합니다.",
-          "Git 및 CLI를 통해 분석 변경 사항을 검토하고 배포합니다."
-        ],
-        "examplePrompt": "지난 분기 지역별 매출 상위 5개 제품을 보여줘",
-        "usageNote": "",
-        "stars": 6230,
-        "forks": 805,
-        "starsUpdatedAt": "2026-11-13"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-13T00:06:50.639Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-13T00:06:54.366Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "sylar",
@@ -627,80 +1584,6 @@
       }
     },
     {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-13T00:06:48.833Z",
-      "sourceRun": "2026-11-13T09",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "스프레드시트, 마인드맵, 아웃라이너의 장점을 결합한 자유 형식의 계층형 데이터 조직화 도구",
-        "longDescription": "할 일 목록, 프로젝트 관리, 브레인스토밍, 아이디어 정리 등 복잡한 계층형 데이터를 직관적으로 관리할 수 있도록 지원하는 가벼운 데스크톱 생산성 애플리케이션입니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "지식관리",
-          "C++",
-          "데스크톱앱"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-11-13",
-        "addedAt": "2026-11-13T00:04:19.424Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "GitHub Releases에서 운영체제에 맞는 미리 빌드된 바이너리를 다운로드합니다.",
-          "애플리케이션을 실행하고 새로운 트리시트 문서를 생성합니다.",
-          "계층 구조에 맞춰 데이터와 노드를 입력합니다.",
-          "프로젝트 계획이나 아이디어를 트리 형식으로 구조화하여 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3201,
-        "forks": 226,
-        "starsUpdatedAt": "2026-11-13"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-13T00:06:51.319Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-13T00:06:55.567Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "obsidian-ai-orange-book",
       "name": "Obsidian AI Orange Book",
       "github": "https://github.com/alchaincyf/obsidian-ai-orange-book",
@@ -780,74 +1663,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "wppconnect",
-      "name": "WPPConnect",
-      "github": "https://github.com/wppconnect-team/wppconnect",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-13T00:06:48.833Z",
-      "sourceRun": "2026-11-13T09",
-      "tool": {
-        "id": "wppconnect",
-        "name": "WPPConnect",
-        "github": "https://github.com/wppconnect-team/wppconnect",
-        "description": "Node.js 및 TypeScript 기반의 왓츠앱 웹 자동화 및 챗봇 구축 라이브러리입니다.",
-        "longDescription": "Puppeteer를 활용하여 Node.js 애플리케이션에서 왓츠앱 웹(WhatsApp Web) 세션을 관리하고 메시지를 송수신하며 미디어를 제어할 수 있는 오픈소스 생태계 프로젝트입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "Node.js",
-          "TypeScript",
-          "자동화",
-          "챗봇",
-          "WhatsApp"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://wppconnect.io/wppconnect/",
-        "featured": 9,
-        "added": "2026-11-13",
-        "addedAt": "2026-11-13T00:04:19.424Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "패키지 설치 및 프로젝트 설정",
-          "왓츠앱 클라이언트 초기화 및 QR 코드 스캔",
-          "메시지 송수신 이벤트 핸들러 작성"
-        ],
-        "examplePrompt": "",
-        "usageNote": "왓츠앱 웹의 변경에 따라 패키지 업데이트가 필요할 수 있습니다.",
-        "stars": 3526,
-        "forks": 589,
-        "starsUpdatedAt": "2026-11-13"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-13T00:06:51.715Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "webone",
@@ -9223,89 +10038,6 @@
       "lastVerifiedAt": "2026-11-12T11:22:29.973Z"
     },
     {
-      "id": "webiny-js",
-      "name": "Webiny",
-      "github": "https://github.com/webiny/webiny-js",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-12T11:07:11.532Z",
-      "sourceRun": "2026-11-12T20",
-      "tool": {
-        "id": "webiny-js",
-        "name": "Webiny",
-        "github": "https://github.com/webiny/webiny-js",
-        "description": "AWS 서버리스 아키텍처 기반으로 동작하는 엔터프라이즈급 오픈소스 헤드리스 CMS입니다.",
-        "longDescription": "Lambda, DynamoDB, S3 등을 활용하여 자동 확장되며, TypeScript 프레임워크 기반으로 코드를 통해 확장하고 MCP 서버를 통한 AI 보조 개발을 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "AWS",
-          "Serverless",
-          "TypeScript",
-          "CMS",
-          "GraphQL"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.webiny.com",
-        "featured": 9,
-        "added": "2026-11-12",
-        "addedAt": "2026-11-12T11:04:20.869Z",
-        "requirements": [
-          "Node.js 22+",
-          "Yarn",
-          "AWS Account"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Quick Start",
-            "command": "npx create-webiny-project my-project",
-            "note": "새로운 Webiny 프로젝트를 생성합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트 생성 명령어를 실행합니다.",
-          "생성된 디렉토리로 이동하여 배포 명령어를 실행합니다.",
-          "프로비저닝 완료 후 관리자 패널에 접속하여 콘텐츠를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8052,
-        "forks": 684,
-        "starsUpdatedAt": "2026-11-12"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-12T11:22:32.045Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-12T11:22:32.045Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "lastVerifiedAt": "2026-11-12T11:22:32.045Z"
-    },
-    {
       "id": "rowy",
       "name": "Rowy",
       "github": "https://github.com/buildship-ai/rowy",
@@ -13569,81 +14301,6 @@
       }
     },
     {
-      "id": "chat2db",
-      "name": "Chat2DB",
-      "github": "https://github.com/OtterMind/Chat2DB",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-12T05:09:52.133Z",
-      "sourceRun": "2026-11-12T14",
-      "tool": {
-        "id": "chat2db",
-        "name": "Chat2DB",
-        "github": "https://github.com/OtterMind/Chat2DB",
-        "description": "AI 기능이 포함된 오픈소스 멀티플랫폼 데이터베이스 클라이언트 및 SQL 작업 공간",
-        "longDescription": "Chat2DB는 40개 이상의 데이터베이스를 지원하는 로컬 우선 데이터베이스 클라이언트입니다. AI를 활용해 쿼리를 생성, 설명, 최적화할 수 있으며 MCP를 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "데이터베이스GUI",
-          "SQL",
-          "AI",
-          "LLM",
-          "MCP"
-        ],
-        "platforms": [
-          "Web",
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://chat2db.ai",
-        "featured": 9,
-        "added": "2026-11-12",
-        "addedAt": "2026-11-12T05:04:15.928Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "클라이언트 애플리케이션을 다운로드하거나 실행합니다.",
-          "사용할 데이터베이스에 연결합니다.",
-          "SQL 편집기나 AI 채팅을 이용해 쿼리를 작성합니다."
-        ],
-        "examplePrompt": "'지난달 가장 매출이 높은 상위 5개 상품을 조회하는 SQL을 작성해줘'",
-        "usageNote": "",
-        "stars": 28363,
-        "forks": 3047,
-        "starsUpdatedAt": "2026-11-12"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-12T05:09:54.440Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-12T05:09:59.304Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "sqlitebrowser",
       "name": "DB Browser for SQLite",
       "github": "https://github.com/sqlitebrowser/sqlitebrowser",
@@ -14386,84 +15043,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-12T04:06:55.226Z"
-    },
-    {
-      "id": "screenpipe",
-      "name": "screenpipe",
-      "github": "https://github.com/screenpipe/screenpipe",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-12T04:06:44.131Z",
-      "sourceRun": "2026-11-12T13",
-      "tool": {
-        "id": "screenpipe",
-        "name": "screenpipe",
-        "github": "https://github.com/screenpipe/screenpipe",
-        "description": "컴퓨터 작업 화면과 오디오를 로컬에 기록하고 분석하는 AI 메모리 도구",
-        "longDescription": "사용자의 컴퓨터 활동 화면과 오디오를 백그라운드에서 로컬 환경에 안전하게 기록하고 인덱싱하는 도구입니다. 이를 통해 작업 흐름을 파악하고, 자동화할 업무를 찾으며, AI 에이전트에게 풍부한 맥락 정보를 제공합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "AI메모리",
-          "화면기록",
-          "로컬우선"
-        ],
-        "platforms": [
-          "macOS",
-          "Windows",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://screenpipe.com",
-        "featured": 9,
-        "added": "2026-11-12",
-        "addedAt": "2026-11-12T04:04:22.910Z",
-        "requirements": [
-          "Rust",
-          "8GB RAM 이상"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "플랫폼에 맞는 설치 파일을 다운로드하여 실행합니다.",
-          "백그라운드에서 실행되며 화면과 오디오 캡처를 허용합니다.",
-          "기록된 컨텍스트를 바탕으로 AI 도구나 검색 기능을 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "로컬 저장소 용량과 프라이버시 설정을 확인하고 사용하세요.",
-        "stars": 22350,
-        "forks": 2292,
-        "starsUpdatedAt": "2026-11-12"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-12T04:06:45.772Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-12T04:06:49.553Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-12T04:06:56.222Z"
     },
     {
       "id": "instant-ngp",
@@ -21962,87 +22541,6 @@
       "sourceRun": "2026-11-12T02"
     },
     {
-      "id": "cc-haha",
-      "name": "cc-haha",
-      "github": "https://github.com/NanmiCoder/cc-haha",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-11T17:12:05.342Z",
-      "sourceRun": "2026-11-12T02",
-      "tool": {
-        "id": "cc-haha",
-        "name": "cc-haha",
-        "github": "https://github.com/NanmiCoder/cc-haha",
-        "description": "로컬 우선의 다중 AI 에이전트 협업 및 Claude Code 지원 데스크톱 워크벤치입니다.",
-        "longDescription": "cc-haha는 로컬 우선으로 동작하는 크로스플랫폼 AI 에이전트 워크벤치입니다. 다중 에이전트 협업, Git Worktree, 코드 Diff, 스킬 마켓플레이스, Computer Use 기능을 제공하며 위챗, 텔레그램 등의 원격 접속을 지원합니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI에이전트",
-          "Claude",
-          "데스크톱",
-          "Electron",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://cchaha.ai",
-        "featured": 9,
-        "added": "2026-11-11",
-        "addedAt": "2026-11-11T17:04:23.168Z",
-        "requirements": [
-          "Node.js",
-          "TypeScript"
-        ],
-        "supportedAgents": [
-          "Claude Code",
-          "Multi-Agent Teams"
-        ],
-        "install": [],
-        "usageSteps": [
-          "공식 릴리스 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
-          "애플리케이션을 실행하고 사용할 AI 모델의 API 키를 설정합니다.",
-          "필요한 에이전트 팀과 스킬을 선택하여 코딩 및 워크플로우 작업을 시작합니다."
-        ],
-        "examplePrompt": "현재 디렉토리의 프로젝트 구조를 분석하고 리팩토링할 부분을 찾아줘.",
-        "usageNote": "",
-        "stars": 15405,
-        "forks": 8622,
-        "starsUpdatedAt": "2026-11-11"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-11T17:12:08.396Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-11T17:12:13.691Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "reqable-app",
       "name": "Reqable",
       "github": "https://github.com/reqable/reqable-app",
@@ -24946,169 +25444,6 @@
       "sourceRun": "2026-11-11T21"
     },
     {
-      "id": "fastgpt",
-      "name": "FastGPT",
-      "github": "https://github.com/labring/FastGPT",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-11T11:07:10.940Z",
-      "sourceRun": "2026-11-11T20",
-      "tool": {
-        "id": "fastgpt",
-        "name": "FastGPT",
-        "github": "https://github.com/labring/FastGPT",
-        "description": "대규모 언어 모델 기반의 지식 기반 플랫폼으로 RAG 검색 및 시각적 AI 워크플로우를 제공합니다.",
-        "longDescription": "복잡한 설정 없이 데이터 처리와 RAG 검색, 시각적 AI 워크플로우 편성을 통해 손쉽게 질문-답변 시스템을 개발하고 배포할 수 있는 플랫폼입니다. Docker를 통해 빠르게 시작할 수 있으며 다양한 LLM과 연동을 지원합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "LLM",
-          "RAG",
-          "인공지능"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://fastgpt.io",
-        "featured": 9,
-        "added": "2026-11-11",
-        "addedAt": "2026-11-11T11:04:22.414Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 빠른 시작",
-            "command": "bash",
-            "note": "터미널에서 안내에 따라 설정을 완료합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 환경에서 설정 파일을 내려받습니다.",
-          "환경 변수 및 LLM API 키를 설정합니다.",
-          "웹 인터페이스에 접속하여 지식베이스를 구축합니다."
-        ],
-        "examplePrompt": "회사 복지 규정에 대한 문서를 업로드하고 사내 위키 질문-답변 봇을 만들어줘",
-        "usageNote": "",
-        "stars": 30024,
-        "forks": 7376,
-        "starsUpdatedAt": "2026-11-11"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-11T11:07:11.634Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-11T11:07:15.056Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-11T11:07:20.156Z"
-    },
-    {
-      "id": "docker-android",
-      "name": "docker-android",
-      "github": "https://github.com/budtmo/docker-android",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-11T11:07:10.940Z",
-      "sourceRun": "2026-11-11T20",
-      "tool": {
-        "id": "docker-android",
-        "name": "docker-android",
-        "github": "https://github.com/budtmo/docker-android",
-        "description": "noVNC, 비디오 녹화, AI 에이전트를 지원하는 도커 기반 안드로이드 에뮬레이터 솔루션입니다.",
-        "longDescription": "도커 환경에서 안드로이드 에뮬레이터를 구동할 수 있으며, 웹 브라우저를 통한 실시간 모니터링과 AI 에이전트 연동 기능을 제공합니다. 모바일 앱 테스트 및 자동화 작업에 유용하게 활용할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "도커",
-          "안드로이드",
-          "에뮬레이터"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/budtmo/docker-android",
-        "featured": 9,
-        "added": "2026-11-11",
-        "addedAt": "2026-11-11T11:04:22.414Z",
-        "requirements": [
-          "Docker",
-          "가상화 지원"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 이미지 실행",
-            "command": "docker run -d -p 6080:6080 budtmo/docker-android:latest",
-            "note": "안드로이드 에뮬레이터 도커 컨테이너를 구동합니다."
-          }
-        ],
-        "usageSteps": [
-          "도커 호스트 환경에서 컨테이너를 실행합니다.",
-          "웹 브라우저로 6080 포트에 접속하여 noVNC 화면을 확인합니다.",
-          "AI 에이전트 또는 MCP 프로토콜을 연결하여 모바일 테스트 자동화를 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "호스트 운영체제가 Ubuntu가 아닌 경우 가상 머신 환경이 필요할 수 있습니다.",
-        "stars": 16118,
-        "forks": 1784,
-        "starsUpdatedAt": "2026-11-11"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-11T11:07:12.638Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-11T11:07:16.746Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-11T11:07:23.897Z"
-    },
-    {
       "id": "kedro",
       "name": "kedro",
       "github": "https://github.com/kedro-org/kedro",
@@ -25191,154 +25526,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "lobehub",
-      "name": "LobeHub",
-      "github": "https://github.com/lobehub/lobehub",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-11T11:07:10.940Z",
-      "sourceRun": "2026-11-11T20",
-      "tool": {
-        "id": "lobehub",
-        "name": "LobeHub",
-        "github": "https://github.com/lobehub/lobehub",
-        "description": "팀 대화 환경에 슈퍼 에이전트를 통합하여 반복 업무를 자동화하고 지속해서 학습하는 협업 플랫폼.",
-        "longDescription": "LobeHub는 팀이 사용하는 채팅 공간에 자율적으로 작동하는 슈퍼 에이전트를 추가하여 스스로 업무를 처리하고 개선해 나가는 협업 에이전트 플랫폼입니다. Next.js 및 Vite SPA 기반의 풀스택 개발 환경과 다양한 플러그인 생태계를 제공합니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI 에이전트",
-          "개인 비서",
-          "TypeScript",
-          "MCP"
-        ],
-        "platforms": [
-          "Web",
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://lobehub.com",
-        "featured": 9,
-        "added": "2026-11-11",
-        "addedAt": "2026-11-11T11:04:22.414Z",
-        "requirements": [
-          "Git",
-          "pnpm",
-          "Bun"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "로컬 개발 환경 설정",
-            "command": "git clone https://github.com/lobehub/lobehub.git && cd lobehub && pnpm install && bun run dev",
-            "note": "저장소를 복제하고 패키지 설치 후 개발 서버를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 로컬에 클론하고 의존성을 설치합니다.",
-          "개발 서버를 실행하여 풀스택 또는 SPA 프론트엔드 환경을 엽니다.",
-          "팀 채팅 환경에 에이전트를 연동하여 작업을 할당합니다."
-        ],
-        "examplePrompt": "주간 업무 보고서 초안 작성을 자동으로 처리해줘.",
-        "usageNote": "",
-        "stars": 84968,
-        "forks": 16230,
-        "starsUpdatedAt": "2026-11-11"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-11T11:07:14.133Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "mastra",
-      "name": "Mastra",
-      "github": "https://github.com/mastra-ai/mastra",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-11T11:07:10.940Z",
-      "sourceRun": "2026-11-11T20",
-      "tool": {
-        "id": "mastra",
-        "name": "Mastra",
-        "github": "https://github.com/mastra-ai/mastra",
-        "description": "TypeScript 기반의 모던 AI 애플리케이션 및 에이전트 빌드 프레임워크.",
-        "longDescription": "Mastra는 개발자가 TypeScript 환경에서 AI 에이전트, 챗봇, 워크플로우를 손쉽게 구축할 수 있도록 지원하는 모던 프레임워크입니다. RAG, 평가 도구, TTS 등 다양한 기능을 통합하여 엔터프라이즈급 AI 앱 개발을 가속화합니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "TypeScript",
-          "챗봇",
-          "워크플로우",
-          "LLM",
-          "MCP"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://mastra.ai",
-        "featured": 9,
-        "added": "2026-11-11",
-        "addedAt": "2026-11-11T11:04:22.414Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "프로젝트 생성",
-            "command": "npm create mastra@latest",
-            "note": "CLI를 통해 새로운 Mastra 프로젝트를 생성하고 시작합니다."
-          }
-        ],
-        "usageSteps": [
-          "CLI 명령어를 실행하여 프로젝트 템플릿을 생성합니다.",
-          "가이드에 따라 에이전트 및 워크플로우 로직을 작성합니다.",
-          "애플리케이션을 배포하고 AI 상호작용을 모니터링합니다."
-        ],
-        "examplePrompt": "사용자 입력을 분석하여 적절한 API 호출을 수행하는 에이전트를 만들어줘.",
-        "usageNote": "",
-        "stars": 29470,
-        "forks": 3090,
-        "starsUpdatedAt": "2026-11-11"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-11T11:07:14.372Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "openmotion",
@@ -48828,90 +49015,6 @@
       }
     },
     {
-      "id": "iot-dc3",
-      "name": "IoT DC3",
-      "github": "https://github.com/pnoker/iot-dc3",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-09T06:06:22.609Z",
-      "sourceRun": "2026-11-09T15",
-      "tool": {
-        "id": "iot-dc3",
-        "name": "IoT DC3",
-        "github": "https://github.com/pnoker/iot-dc3",
-        "description": "물리적 세계를 AI와 연결하는 오픈소스 산업용 IoT 런타임 및 MCP 도구 Gateway입니다.",
-        "longDescription": "36가지 프로토콜 드라이버, 엣지 투 클라우드 데이터 전달 기능을 제공하며, AI 에이전트가 안전하고 제어 가능한 루프 안에서 산업용 장치를 제어할 수 있게 돕습니다.",
-        "category": "하드웨어·IoT",
-        "tags": [
-          "산업용 IoT",
-          "IIoT",
-          "MCP",
-          "Java",
-          "스마트 팩토리"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://dc3.site",
-        "featured": 9,
-        "added": "2026-11-09",
-        "addedAt": "2026-11-09T06:04:10.213Z",
-        "requirements": [
-          "Java 17+",
-          "PostgreSQL",
-          "RabbitMQ"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "개발 환경 빌드",
-            "command": "mvn -s .mvn/settings.xml clean package",
-            "note": "메이븐을 사용하여 프로젝트 패키지를 빌드합니다."
-          }
-        ],
-        "usageSteps": [
-          "PostgreSQL과 RabbitMQ 인스턴스를 실행합니다.",
-          "환경 변수를 설정하고 IoT DC3 프로젝트를 빌드 및 실행합니다.",
-          "프로토콜 드라이버를 통해 산업용 장비 및 센서를 연동합니다.",
-          "MCP 도구 게이트웨이를 통해 AI 에이전트와 장치를 연결합니다."
-        ],
-        "examplePrompt": "1번 생산라인의 온도 센서 현재 값을 읽어와줘.",
-        "usageNote": "산업 자동화 및 현장 장비 제어 시스템 구축에 활용됩니다.",
-        "stars": 1266,
-        "forks": 237,
-        "starsUpdatedAt": "2026-11-09"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-09T06:06:24.886Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-09T06:06:29.304Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "aitoearn",
       "name": "AiToEarn",
       "github": "https://github.com/yikart/AiToEarn",
@@ -55292,149 +55395,6 @@
       "reasons": [],
       "checkedAt": "2026-11-07T16:06:26.249Z",
       "sourceRun": "2026-11-08T01"
-    },
-    {
-      "id": "context-mode",
-      "name": "Context Mode",
-      "github": "https://github.com/mksglu/context-mode",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-07T16:06:26.249Z",
-      "sourceRun": "2026-11-08T01",
-      "tool": {
-        "id": "context-mode",
-        "name": "Context Mode",
-        "github": "https://github.com/mksglu/context-mode",
-        "description": "코딩 에이전트의 컨텍스트 윈도우에서 상세한 도구 출력을 분리하여 토큰 사용량을 대폭 줄여주는 로컬 플러그인입니다.",
-        "longDescription": "다양한 코딩 에이전트와 연동되어 실행 결과나 파일 읽기 등의 방대한 도구 출력이 직접 에이전트 컨텍스트에 낭비되는 것을 방지합니다. 샌드박스와 SQLite FTS5 검색을 지원하며 프라이버시를 위해 완전 로컬 환경에서 작동합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "코딩 에이전트",
-          "CLI",
-          "MCP",
-          "개발 도구",
-          "오프소스"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://contextmode.ai",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T16:04:10.700Z",
-        "requirements": [],
-        "supportedAgents": [
-          "Claude Code",
-          "Codex",
-          "Pi",
-          "OpenCode",
-          "Gemini CLI",
-          "Copilot CLI"
-        ],
-        "install": [],
-        "usageSteps": [
-          "패키지를 설치하고 사용 중인 코딩 에이전트에 플러그인을 연동합니다.",
-          "에이전트 실행 시 도구 출력이 컨텍스트 대신 로컬 스토리지에 격리되는지 확인합니다.",
-          "필요에 따라 SQLite 기반 검색 기능을 통해 지난 도구 실행 기록을 조회합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "완전 로컬 기반으로 동작하여 텔레메트리 데이터가 수집되지 않습니다.",
-        "stars": 33641,
-        "forks": 2306,
-        "starsUpdatedAt": "2026-11-07"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-07T16:06:28.906Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-07T16:06:33.695Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "memu",
-      "name": "memU",
-      "github": "https://github.com/NevaMind-AI/memU",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-07T16:06:26.249Z",
-      "sourceRun": "2026-11-08T01",
-      "tool": {
-        "id": "memu",
-        "name": "memU",
-        "github": "https://github.com/NevaMind-AI/memU",
-        "description": "세션, 에이전트, 기기를 넘어 개인의 기억을 위키 형태로 영구 저장하고 공유하는 오픈소스 도구입니다.",
-        "longDescription": "서로 다른 AI 에이전트와 세션 간에 컨텍스트와 기억이 유실되지 않도록 중앙 집중식 또는 로컬 위키 백과 형태로 기억을 동기화합니다. 일관된 개인화 경험을 제공합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "AI 기억",
-          "컨텍스트",
-          "위키",
-          "클라우드",
-          "Python"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://memu.pro",
-        "featured": 9,
-        "added": "2026-11-07",
-        "addedAt": "2026-11-07T16:04:10.700Z",
-        "requirements": [
-          "Python 3.11+"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "pip 설치",
-            "command": "pip install memu-cli",
-            "note": "파이썬 패키지 관리자를 통해 CLI 도구를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "패키지를 설치하고 설정을 구성합니다.",
-          "에이전트 라우팅 스킬을 연동하여 기억 저장소를 활성화합니다.",
-          "다양한 세션과 에이전트에서 축적된 기억을 조회하고 동기화합니다."
-        ],
-        "examplePrompt": "지난 세션에서 논의했던 아키텍처 결정을 요약해 줘.",
-        "usageNote": "",
-        "stars": 14605,
-        "forks": 1097,
-        "starsUpdatedAt": "2026-11-07"
-      }
     },
     {
       "id": "solace-agent-mesh",
@@ -110649,26 +110609,6 @@
       "name": "DecTask",
       "github": "https://github.com/gopeak/dectask",
       "license": "AGPL-3.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-17T05:06:02.967Z",
-      "sourceRun": "2026-10-17T14"
-    },
-    {
-      "id": "platform",
-      "name": "Huly",
-      "github": "https://github.com/hcengineering/platform",
-      "license": "EPL-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-17T05:06:02.967Z",
-      "sourceRun": "2026-10-17T14"
-    },
-    {
-      "id": "invobook",
-      "name": "InvoBook",
-      "github": "https://github.com/Hasnayeen/invobook",
-      "license": "MIT",
       "status": "auto_approved",
       "reasons": [],
       "checkedAt": "2026-10-17T05:06:02.967Z",
