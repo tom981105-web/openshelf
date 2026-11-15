@@ -1,5 +1,132 @@
 [
   {
+    "id": "eventghost",
+    "name": "EventGhost",
+    "github": "https://github.com/EventGhost/EventGhost",
+    "description": "윈도우 환경에서 동작하는 확장성이 뛰어난 고급 자동화 제어 도구입니다.",
+    "longDescription": "다양한 입력 장치와 외부 시스템의 이벤트를 감지하여 사용자가 정의한 자동화 작업을 실행할 수 있는 윈도우용 프로그램입니다. 플러그인 아키텍처를 통해 다양한 소프트웨어와 하드웨어를 유연하게 연결합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "윈도우",
+      "파이썬",
+      "자동화",
+      "스크립트"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-2.0",
+    "website": "http://eventghost.net",
+    "featured": 9,
+    "added": "2026-11-15",
+    "addedAt": "2026-11-15T19:04:23.242Z",
+    "requirements": [
+      "Windows 운영체제"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "공식 배포처에서 EventGhost 설치 프로그램을 다운로드하여 실행합니다.",
+      "필요한 플러그인을 활성화하여 제어할 기기나 소프트웨어를 연결합니다.",
+      "매크로와 이벤트 트리거를 설정하여 자동화 시나리오를 완성합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "윈도우 환경 전용으로 설계되었습니다.",
+    "stars": 575,
+    "forks": 96,
+    "starsUpdatedAt": "2026-11-15"
+  },
+  {
+    "id": "ha-google-home",
+    "name": "Home Assistant Google Home Integration",
+    "github": "https://github.com/leikoilja/ha-google-home",
+    "description": "구글 홈 및 네스트 스피커의 알람, 타이머, 블루투스 존재 감지 기능을 홈 어시스턴트에 통합하는 사용자 구성요소입니다.",
+    "longDescription": "구글 홈 및 네스트 기기의 다양한 상태 정보를 홈 어시스턴트 대시보드에서 직접 모니터링하고 제어할 수 있게 해줍니다. 알람 확인, 타이머 관리, 방해금지 모드 설정 등의 기능을 로컬 네트워크를 통해 연동합니다.",
+    "category": "업무 자동화",
+    "tags": [
+      "구글홈",
+      "홈어시스턴트",
+      "HACS",
+      "통합구성요소"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://ha-google-home.pages.dev",
+    "featured": 9,
+    "added": "2026-11-15",
+    "addedAt": "2026-11-15T19:04:23.242Z",
+    "requirements": [
+      "Home Assistant",
+      "HACS 또는 마켓플레이스"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "홈 어시스턴트의 HACS 또는 마켓플레이스를 통해 통합 구성요소를 검색합니다.",
+      "구글 홈 통합을 다운로드하고 홈 어시스턴트를 재시작합니다.",
+      "설정 메뉴에서 구글 계정을 연동하고 기기를 추가합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "구글 홈 앱에 등록된 계정과 동일한 계정이 필요합니다.",
+    "stars": 574,
+    "forks": 112,
+    "starsUpdatedAt": "2026-11-15"
+  },
+  {
+    "id": "lnxlink",
+    "name": "LNXlink",
+    "github": "https://github.com/bkbilly/lnxlink",
+    "description": "MQTT를 통해 리눅스 시스템을 홈 어시스턴트에서 손쉽게 모니터링하고 관리할 수 있는 컴패니언 앱입니다.",
+    "longDescription": "리눅스 기기의 시스템 센서 정보 수집, 명령어 실행, 미디어 제어, 알림 전송 등을 홈 어시스턴트와 실시간으로 연동해 줍니다. MQTT 자동 발견 기능을 지원하여 복잡한 설정 없이 엔티티가 자동으로 생성됩니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "리눅스",
+      "MQTT",
+      "홈어시스턴트",
+      "모니터링",
+      "시스템관리"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://bkbilly.gitbook.io/lnxlink",
+    "featured": 9,
+    "added": "2026-11-15",
+    "addedAt": "2026-11-15T19:04:23.242Z",
+    "requirements": [
+      "Python 3.8+",
+      "MQTT 브로커",
+      "Home Assistant"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Pip을 통한 설치",
+        "command": "pip install lnxlink",
+        "note": "파이썬 패키지 관리자를 통해 LNXlink를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "리눅스 환경에서 pip을 통해 패키지를 설치합니다.",
+      "MQTT 브로커 연결 정보를 설정 파일에 입력합니다.",
+      "서비스를 실행하여 홈 어시스턴트 대시보드에 자동으로 생성되는 센서와 제어 항목을 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "대부분의 기능은 루트 권한 없이 실행할 수 있습니다.",
+    "stars": 498,
+    "forks": 62,
+    "starsUpdatedAt": "2026-11-15"
+  },
+  {
     "id": "microsoft-integration-and-azure-stencils-pack-for-visio",
     "name": "Microsoft Integration and Azure Stencils Pack for Visio",
     "github": "https://github.com/sandroasp/Microsoft-Integration-and-Azure-Stencils-Pack-for-Visio",
