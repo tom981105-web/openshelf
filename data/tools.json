@@ -1,5 +1,193 @@
 [
   {
+    "id": "ram-altman",
+    "name": "Ram-Altman",
+    "github": "https://github.com/IainKay/ram-altman",
+    "description": "사용되지 않는 RAM 용량을 측정해 OpenAI CEO에게 일일 보고하는 풍자 Bash 스크립트",
+    "longDescription": "Linux 시스템의 여유 RAM 및 캐시 용량을 계산하여 사용 실태를 풍자하는 이메일을 매일 발송합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "Bash",
+      "Linux",
+      "시스템 모니터링",
+      "풍자"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Unlicense",
+    "website": "https://ram-altman.lol",
+    "featured": 9,
+    "added": "2026-11-15",
+    "addedAt": "2026-11-15T07:04:24.219Z",
+    "requirements": [
+      "Linux",
+      "bash",
+      "sendmail 또는 msmtp"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Clone repository",
+        "command": "git clone https://github.com/IainKay/ram-altman.git && cd ram-altman",
+        "note": "저장소 복제 후 디렉토리 이동"
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 실행 권한을 부여합니다.",
+      "./ram-altman.sh --status 명령어로 현재 RAM 상태를 확인합니다.",
+      "./ram-altman.sh --dry-run 명령어로 이메일 미리보기를 수행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "실제 전송 기능 사용 시 메일러 설정이 필요합니다.",
+    "stars": 2146,
+    "forks": 67,
+    "starsUpdatedAt": "2026-11-15"
+  },
+  {
+    "id": "sendgrid-python",
+    "name": "SendGrid Python",
+    "github": "https://github.com/sendgrid/sendgrid-python",
+    "description": "파이썬 애플리케이션에서 트랜잭션 이메일을 쉽게 발송할 수 있도록 지원하는 공식 트윌리오 SendGrid API 라이브러리입니다.",
+    "longDescription": "SendGrid Python API를 통해 개발자는 이메일 캠페인을 관리하고, 대량의 메일을 안정적으로 전송하며, 인바운드 이메일을 처리할 수 있습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "API",
+      "이메일",
+      "SendGrid"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://sendgrid.com",
+    "featured": 9,
+    "added": "2026-11-15",
+    "addedAt": "2026-11-15T07:04:24.219Z",
+    "requirements": [
+      "Python 2.7+"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install sendgrid",
+        "note": "SendGrid 파이썬 라이브러리를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "라이브러리를 설치하고 SendGrid API 키를 환경 변수로 설정합니다.",
+      "Mail 객체를 생성하여 수신자, 제목, 본문 내용을 작성합니다.",
+      "SendGrid API 클라이언트를 통해 메일을 발송합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1630,
+    "forks": 724,
+    "starsUpdatedAt": "2026-11-15"
+  },
+  {
+    "id": "swoosh",
+    "name": "Swoosh",
+    "github": "https://github.com/swoosh/swoosh",
+    "description": "엘릭서(Elixir) 환경에서 이메일을 손쉽게 구성, 전달 및 테스트할 수 있는 라이브러리입니다.",
+    "longDescription": "Swoosh는 SendGrid, Mailgun, SMTP 등 다양한 어댑터를 지원하며 엘릭서 기반 앱에서 명시적이고 테스트하기 쉬운 메일링 워크플로우를 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Elixir",
+      "이메일",
+      "API",
+      "SMTP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://hexdocs.pm/swoosh",
+    "featured": 9,
+    "added": "2026-11-15",
+    "addedAt": "2026-11-15T07:04:24.219Z",
+    "requirements": [
+      "Elixir"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "의존성 추가",
+        "command": "mix.exs의 deps에 {:swoosh, \"~ 1.29\"} 추가",
+        "note": "mix 설정 파일에 패키지를 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "mix.exs 파일에 Swoosh 의존성을 추가합니다.",
+      "Mailer 모듈을 정의하고 사용할 어댑터를 설정합니다.",
+      "이메일 구조체를 작성하고 발송 함수를 호출합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1530,
+    "forks": 271,
+    "starsUpdatedAt": "2026-11-15"
+  },
+  {
+    "id": "go-mail",
+    "name": "go-mail",
+    "github": "https://github.com/wneessen/go-mail",
+    "description": "Go 언어에서 RFC 5322 표준에 맞추어 메일을 쉽고 포괄적으로 발송할 수 있는 라이브러리입니다.",
+    "longDescription": "go-mail은 Go 개발자들이 SMTP 서버를 통해 안전하고 유연하게 이메일을 전송할 수 있도록 다양한 빌더 패턴과 설정 옵션을 제공합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "Golang",
+      "이메일",
+      "SMTP"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://go-mail.dev",
+    "featured": 9,
+    "added": "2026-11-15",
+    "addedAt": "2026-11-15T07:04:24.219Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "go get 설치",
+        "command": "go get github.com/wneessen/go-mail",
+        "note": "프로젝트에 go-mail 패키지를 다운로드합니다."
+      }
+    ],
+    "usageSteps": [
+      "go get 명령어로 라이브러리를 가져옵니다.",
+      "메일 메시지 빌더를 사용하여 수신자, 제목, 본문을 설정합니다.",
+      "SMTP 클라이언트를 통해 메일을 전송합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 1514,
+    "forks": 116,
+    "starsUpdatedAt": "2026-11-15"
+  },
+  {
     "id": "plexe",
     "name": "Plexe",
     "github": "https://github.com/plexe-ai/plexe",
