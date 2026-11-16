@@ -1,5 +1,52 @@
 [
   {
+    "id": "pg-net",
+    "name": "pg_net",
+    "github": "https://github.com/supabase/pg_net",
+    "description": "PostgreSQL 데이터베이스 내에서 SQL을 통해 비동기 HTTP/HTTPS 요청을 보낼 수 있는 확장 프로그램입니다.",
+    "longDescription": "libcurl 기반의 PostgreSQL 확장으로, 데이터베이스 트리거 등을 통해 외부 API 호출, 웹훅 전송, 서버리스 함수 트리거 등을 비동기 논블로킹 방식으로 수행할 수 있게 해줍니다.",
+    "category": "데이터베이스",
+    "tags": [
+      "PostgreSQL",
+      "SQL",
+      "확장 프로그램",
+      "HTTP",
+      "비동기"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://supabase.github.io/pg_net",
+    "featured": 9,
+    "added": "2026-11-16",
+    "addedAt": "2026-11-16T19:04:28.094Z",
+    "requirements": [
+      "PostgreSQL 14+",
+      "libcurl = 7.83"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "소스 빌드 및 설치",
+        "command": "make && make install",
+        "note": "PostgreSQL 확장 빌드 명령"
+      }
+    ],
+    "usageSteps": [
+      "데이터베이스에 pg_net 확장을 활성화합니다 (`CREATE EXTENSION pg_net;`).",
+      "SQL 함수(`net.http_get` 등)를 호출하여 비동기 HTTP 요청을 보냅니다.",
+      "요청 ID를 통해 응답 결과를 조회하거나 관리합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 377,
+    "forks": 44,
+    "starsUpdatedAt": "2026-11-16"
+  },
+  {
     "id": "premiere-pro-mcp",
     "name": "premiere-pro-mcp",
     "github": "https://github.com/leancoderkavy/premiere-pro-mcp",
