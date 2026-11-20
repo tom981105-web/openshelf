@@ -1,5 +1,145 @@
 [
   {
+    "id": "news-android",
+    "name": "nextcloud/news-android",
+    "github": "https://github.com/nextcloud/news-android",
+    "description": "Nextcloud 뉴스 및 피드 리더 서버와 연동되는 안드로이드 전용 오픈소스 RSS 클라이언트입니다.",
+    "longDescription": "모바일 환경에서 Nextcloud 계정의 RSS 피드를 원활하게 동기화하고 구독 기사를 읽을 수 있는 안드로이드 앱입니다. 직관적인 인터페이스와 편리한 오프라인 읽기 기능을 제공합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "Android",
+      "Nextcloud",
+      "RSS",
+      "Java"
+    ],
+    "platforms": [],
+    "free": true,
+    "openSource": true,
+    "license": "AGPL-3.0",
+    "website": "https://play.google.com/store/apps/details?id=de.luhmer.owncloudnewsreader",
+    "featured": 9,
+    "added": "2026-11-20",
+    "addedAt": "2026-11-20T16:04:31.285Z",
+    "requirements": [
+      "Android Studio"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 복제",
+        "command": "git clone https://github.com/nextcloud/news-android.git",
+        "note": "소스 코드를 로컬에 클론합니다."
+      }
+    ],
+    "usageSteps": [
+      "Android Studio에서 프로젝트를 불러옵니다.",
+      "필수 SDK 및 의존성을 설치합니다.",
+      "애플리케이션을 빌드하여 안드로이드 기기나 에뮬레이터에서 실행합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "동작을 위해 접근 가능한 Nextcloud 서버가 필요합니다.",
+    "stars": 773,
+    "forks": 265,
+    "starsUpdatedAt": "2026-11-20"
+  },
+  {
+    "id": "hexo-generator-feed",
+    "name": "hexo-generator-feed",
+    "github": "https://github.com/hexojs/hexo-generator-feed",
+    "description": "Hexo 블로그 포스트를 기반으로 Atom 1.0 또는 RSS 2.0 피드를 생성해 주는 플러그인입니다.",
+    "longDescription": "정적 블로그 생성기 Hexo를 사용할 때 게시글들의 요약과 메타데이터를 포함한 표준 피드 파일을 자동으로 만들어 줍니다. 독자가 블로그의 최신 글을 RSS 리더로 간편하게 구독할 수 있게 돕습니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Hexo",
+      "JavaScript",
+      "RSS",
+      "Atom",
+      "블로그"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "http://hexo.io",
+    "featured": 9,
+    "added": "2026-11-20",
+    "addedAt": "2026-11-20T16:04:31.285Z",
+    "requirements": [
+      "Node.js",
+      "Hexo"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm install hexo-generator-feed --save",
+        "note": "Hexo 프로젝트 디렉터리에서 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "프로젝트 루트에서 npm 명령어로 플러그인을 설치합니다.",
+      "Hexo 설정 파일에서 피드 관련 옵션을 필요에 따라 조정합니다.",
+      "블로그를 빌드(_config)하면 지정된 경로에 피드 파일이 생성됩니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 593,
+    "forks": 115,
+    "starsUpdatedAt": "2026-11-20"
+  },
+  {
+    "id": "granary",
+    "name": "granary",
+    "github": "https://github.com/snarfed/granary",
+    "description": "소셜 웹 데이터를 ActivityPub, Atom, RSS 등 다양한 프로토콜과 형식으로 상호 변환해 주는 번역기입니다.",
+    "longDescription": "다양한 소셜 네트워크의 데이터를 가져와 마이크로포맷, 액티비티스트림, RSS, Atom, JSON Feed 등으로 변환해 주는 범용 라이브러리입니다. 탈중앙화 웹 및 페디버스 연동을 구현할 때 유용합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Python",
+      "ActivityPub",
+      "RSS",
+      "API",
+      "변환기"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "CC0-1.0",
+    "website": "https://granary.io",
+    "featured": 9,
+    "added": "2026-11-20",
+    "addedAt": "2026-11-20T16:04:31.285Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "pip 설치",
+        "command": "pip install granary",
+        "note": "파이썬 패키지 관리자를 통해 기본 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "pip를 통해 granary 및 필요한 플랫폼별 추가 패키지를 설치합니다.",
+      "애플리케이션 코드에서 변환 함수나 REST API를 호출합니다.",
+      "소셜 웹 데이터의 포맷을 원하는 프로토콜 규격으로 변환하여 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 517,
+    "forks": 62,
+    "starsUpdatedAt": "2026-11-20"
+  },
+  {
     "id": "kivo",
     "name": "Kivo",
     "github": "https://github.com/TrisH0x2A/Kivo",
