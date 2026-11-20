@@ -1,5 +1,138 @@
 [
   {
+    "id": "quarkus",
+    "name": "Quarkus",
+    "github": "https://github.com/quarkusio/quarkus",
+    "description": "컨테이너 및 쿠버네티스 환경에 최적화된 초음속 서브아토믹 Java 프레임워크입니다.",
+    "longDescription": "Quarkus는 GraalVM과 HotSpot을 위해 설계된 Kubernetes 네이티브 Java 프레임워크입니다. 빠른 부동 시작 시간과 적은 메모리 사용량으로 마이크로서비스 및 서버리스 구축에 적합합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "Cloud Native",
+      "Kubernetes",
+      "마이크로서비스",
+      "서버리스"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://quarkus.io",
+    "featured": 9,
+    "added": "2026-11-20",
+    "addedAt": "2026-11-20T06:04:25.226Z",
+    "requirements": [
+      "Java JDK",
+      "Apache Maven"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Maven을 통해 Quarkus 프로젝트를 생성하거나 설정합니다.",
+      "애플리케이션 코드를 작성하고 의존성을 구성합니다.",
+      "개발 모드로 실행하여 라이브 코딩 기능을 활용합니다.",
+      "컨테이너 이미지로 빌드하여 쿠버네티스에 배포합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Apache-2.0 라이선스로 제공됩니다.",
+    "stars": 15997,
+    "forks": 3377,
+    "starsUpdatedAt": "2026-11-20"
+  },
+  {
+    "id": "volcano",
+    "name": "Volcano",
+    "github": "https://github.com/volcano-sh/volcano",
+    "description": "쿠버네티스 환경을 위한 클라우드 네이티브 배치 시스템 및 고성능 컴퓨팅(HPC) 작업 스케줄러입니다.",
+    "longDescription": "Volcano는 CNCF 산하의 프로젝트로, AI, 머신러닝, 빅데이터, HPC 워크로드를 쿠버네티스상에서 효율적으로 실행하기 위한 배치 스케줄링 시스템입니다. 복잡한 작업 종속성과 대규모 일괄 처리를 지원합니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "Go",
+      "Kubernetes",
+      "배치 시스템",
+      "머신러닝",
+      "CNCF"
+    ],
+    "platforms": [
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://volcano.sh",
+    "featured": 9,
+    "added": "2026-11-20",
+    "addedAt": "2026-11-20T06:04:25.226Z",
+    "requirements": [
+      "Kubernetes 클러스터"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "YAML 매니페스트로 설치",
+        "command": "kubectl apply -f https://raw.githubusercontent.com/volcano-sh/volcano/master/installer/volcano-development.yaml",
+        "note": "기존 쿠버네티스 클러스터에 Volcano 컨트롤러와 리소스를 배포합니다."
+      }
+    ],
+    "usageSteps": [
+      "kubectl 명령어를 통해 Volcano 개발용 YAML 파일을 적용합니다.",
+      "volcano-system 네임스페이스의 파드 상태가 정상인지 확인합니다.",
+      "배치 작업(Job) 정의서에 Volcano PodGroup 및 큐 설정을 추가합니다.",
+      "kubectl apply로 배치 작업을 제출하고 스케줄링 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Kubernetes v1.16 이상 환경에 최적화되어 있습니다.",
+    "stars": 6098,
+    "forks": 1646,
+    "starsUpdatedAt": "2026-11-20"
+  },
+  {
+    "id": "podinfo",
+    "name": "podinfo",
+    "github": "https://github.com/stefanprodan/podinfo",
+    "description": "Kubernetes 환경에서 동작하는 Go 기반의 마이크로서비스 템플릿 및 테스트 애플리케이션입니다.",
+    "longDescription": "podinfo는 쿠버네티스 모범 사례와 GitOps 파이프라인을 테스트하고 시연하기 위해 제작된 가벼운 Go 마이크로서비스입니다. HTTP API, 메트릭, TLS, Helm 및 Kustomize 배포 예제를 포함합니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Go",
+      "Kubernetes",
+      "마이크로서비스",
+      "GitOps",
+      "Helm"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/stefanprodan/podinfo",
+    "featured": 9,
+    "added": "2026-11-20",
+    "addedAt": "2026-11-20T06:04:25.226Z",
+    "requirements": [
+      "Docker 또는 Kubernetes"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 또는 Kubernetes 클러스터 환경을 준비합니다.",
+      "Helm 또는 Kustomize 매니페스트를 사용하여 podinfo를 배포합니다.",
+      "웹 브라우저나 curl을 통해 루트(/) 또는 버전(/version) 엔드포인트를 호출합니다.",
+      "런타임 정보 및 로그를 확인하여 마이크로서비스 동작을 테스트합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Apache-2.0 라이선스로 제공되며 GitOps 학습 및 E2E 테스트에 주로 활용됩니다.",
+    "stars": 6049,
+    "forks": 1908,
+    "starsUpdatedAt": "2026-11-20"
+  },
+  {
     "id": "habitat-lab",
     "name": "Habitat Lab",
     "github": "https://github.com/facebookresearch/habitat-lab",
