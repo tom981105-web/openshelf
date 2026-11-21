@@ -1,61 +1,68 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-21T22:06:38.110Z",
+  "updatedAt": "2026-11-21T23:06:44.995Z",
   "items": [
     {
-      "id": "companyos",
-      "name": "CompanyOS",
-      "github": "https://github.com/kortix-ai/CompanyOS",
+      "id": "redis",
+      "name": "Redis",
+      "github": "https://github.com/redis/redis",
       "license": "확인 필요",
       "status": "pending_review",
       "reasons": [
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-21T22:06:26.468Z",
-      "sourceRun": "2026-11-22T07",
+      "checkedAt": "2026-11-21T23:06:33.211Z",
+      "sourceRun": "2026-11-22T08",
       "tool": {
-        "id": "companyos",
-        "name": "CompanyOS",
-        "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "멀티플레이어 AI 에이전트와 클라우드 기반 샌드박스로 기업 업무를 자동화하는 오픈소스 플랫폼",
-        "longDescription": "조직의 에이전트, 스킬, 규칙을 Git 저장소로 관리하고 병렬로 실행되는 에이전트들이 공통 메모리를 공유합니다. 웹훅 및 팀 메시지를 통해 이벤트를 감지하며 3,000개 이상의 앱과 연동됩니다.",
-        "category": "AI 에이전트",
+        "id": "redis",
+        "name": "Redis",
+        "github": "https://github.com/redis/redis",
+        "description": "실시간 데이터 구동 애플리케이션을 위한 고성능 인메모리 캐시 및 데이터 구조 서버입니다.",
+        "longDescription": "Redis는 캐시, 메시지 브로커, 벡터 검색 및 문서 저장소 기능을 지원하는 오픈소스 인메모리 데이터 구조 저장소입니다. 고속 데이터 처리와 실시간 응용프로그램 개발에 널리 사용됩니다.",
+        "category": "데이터베이스",
         "tags": [
-          "AI 에이전트",
-          "오픈소스",
-          "자동화"
+          "캐시",
+          "데이터베이스",
+          "NoSQL"
         ],
         "platforms": [
-          "Web",
           "Linux",
-          "macOS"
+          "macOS",
+          "Windows"
         ],
         "free": true,
         "openSource": false,
         "license": "확인 필요",
-        "website": "https://kortix.com",
+        "website": "http://redis.io",
         "featured": 9,
         "added": "2026-11-21",
-        "addedAt": "2026-11-21T22:04:21.430Z",
+        "addedAt": "2026-11-21T23:04:20.367Z",
         "requirements": [
-          "TypeScript",
-          "Git"
+          "C 빌드 도구",
+          "make"
         ],
         "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소에서 코드를 클론합니다.",
-          "인프라 환경 설정 및 환경 변수를 구성합니다.",
-          "에이전트 스크립트를 정의하고 실행합니다."
+        "install": [
+          {
+            "title": "소스 빌드",
+            "command": "make",
+            "note": "소스 코드를 다운로드한 후 루트 디렉토리에서 빌드합니다."
+          }
         ],
-        "examplePrompt": "우리 팀의 최근 커밋 내역을 분석하고 주간 리포트 에이전트를 실행해줘",
-        "usageNote": "자체 호스팅 또는 클라우드 환경에서 실행 가능합니다.",
-        "stars": 20784,
-        "forks": 3471,
+        "usageSteps": [
+          "소스 코드를 클론하거나 패키지를 설치합니다.",
+          "make 명령어로 Redis를 빌드합니다.",
+          "redis-server 실행파일을 구동하여 서버를 시작합니다.",
+          "redis-cli를 통해 서버에 접속하여 명령어를 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프로덕션 환경에서는 적절한 메모리 제한 및 보안 설정(비밀번호 등)이 필요합니다.",
+        "stars": 77596,
+        "forks": 24987,
         "starsUpdatedAt": "2026-11-21"
       },
-      "licenseEvidenceCheckedAt": "2026-11-21T22:06:27.188Z",
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:34.055Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -68,7 +75,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-21T22:06:30.139Z",
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:37.331Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -78,11 +85,1331 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-11-21T22:06:34.655Z"
+      "recheckedAt": "2026-11-21T23:06:41.899Z"
+    },
+    {
+      "id": "twenty",
+      "name": "Twenty",
+      "github": "https://github.com/twentyhq/twenty",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "twenty",
+        "name": "Twenty",
+        "github": "https://github.com/twentyhq/twenty",
+        "description": "세일즈포스를 대체하는 오픈소스 CRM 솔루션",
+        "longDescription": "기술 팀이 비즈니스 요구에 맞춰 직접 구축하고 확장할 수 있는 오픈소스 CRM입니다. React와 NestJS 기반으로 개발되었으며 모던한 아키텍처를 제공합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "CRM",
+          "오픈소스",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://twenty.com",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Node.js",
+          "Docker",
+          "Yarn 또는 npm"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "CLI 설치",
+            "command": "npm install -g twenty",
+            "note": "Twenty CLI를 글로벌로 설치합니다."
+          },
+          {
+            "title": "프로젝트 생성",
+            "command": "twenty app init my-app",
+            "note": "새로운 Twenty 앱을 스캐폴딩합니다."
+          }
+        ],
+        "usageSteps": [
+          "Twenty CLI를 설치합니다.",
+          "app init 명령어로 로컬 프로젝트를 생성합니다.",
+          "의존성을 설치하고 개발 서버를 구동합니다.",
+          "브라우저에서 CRM 워크스페이스에 접속합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "클라우드 버전을 이용하면 인프라 관리 없이 빠르게 시작할 수 있습니다.",
+        "stars": 61297,
+        "forks": 10144,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:34.276Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:37.663Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-21T23:06:42.588Z"
+    },
+    {
+      "id": "gdevelop",
+      "name": "GDevelop",
+      "github": "https://github.com/4ian/GDevelop",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "gdevelop",
+        "name": "GDevelop",
+        "github": "https://github.com/4ian/GDevelop",
+        "description": "누구나 쉽게 게임을 만들 수 있는 오픈소스 노코드 게임 엔진입니다.",
+        "longDescription": "프로그래밍 지식 없이도 이벤트 기반 시스템을 통해 모바일, 데스크톱, 웹용 게임을 개발할 수 있는 직관적인 소프트웨어입니다. 시각적 인터페이스를 제공하여 2D와 3D 게임 제작을 지원합니다.",
+        "category": "영상·애니메이션",
+        "tags": [
+          "게임엔진",
+          "노코드",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://gdevelop.io",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "공식 다운로드",
+            "command": "GDevelop 홈페이지에서 설치 파일 다운로드",
+            "note": "운영체제에 맞는 최신 버전을 다운로드하여 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "공식 홈페이지에서 GDevelop을 다운로드하여 실행합니다.",
+          "새 프로젝트를 생성하고 2D 또는 3D 템플릿을 선택합니다.",
+          "이벤트 시스템을 이용해 게임 로직을 구성합니다.",
+          "원하는 플랫폼(웹, 모바일, 데스크톱)으로 내보내기를 진행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "AI 보조 기능을 활용해 게임 레벨이나 에셋을 더 쉽게 구성할 수 있습니다.",
+        "stars": 29161,
+        "forks": 1678,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:34.475Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:38.187Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-21T23:06:43.591Z"
+    },
+    {
+      "id": "budibase",
+      "name": "Budibase",
+      "github": "https://github.com/Budibase/budibase",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "budibase",
+        "name": "Budibase",
+        "github": "https://github.com/Budibase/budibase",
+        "description": "업무 자동화와 사내 애플리케이션 구축을 위한 오픈소스 로코드 플랫폼입니다.",
+        "longDescription": "엔지니어가 수백 시간의 개발 시간을 절약할 수 있도록 돕는 오픈소스 운영 플랫폼입니다. 데이터베이스와 연동하여 커스텀 CRUD 앱, 양식, AI 에이전트를 손쉽게 빌드할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "로코드",
+          "업무자동화",
+          "내부툴"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://budibase.com",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Docker",
+          "Kubernetes 또는 Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "Docker 및 Kubernetes를 통한 자체 호스팅 배포",
+            "note": "인프라 환경에 맞춰 컨테이너로 배포합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 또는 클라우드 환경을 통해 Budibase를 실행합니다.",
+          "데이터소스(SQL, REST API 등)를 연결합니다.",
+          "드래그 앤 드롭 UI와 워크플로우를 활용해 사내 앱을 구축합니다.",
+          "팀원들과 권한을 공유하고 자동화를 적용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "자체 호스팅과 클라우드 호스팅 모두 지원합니다.",
+        "stars": 28431,
+        "forks": 2238,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:34.650Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:38.487Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-21T23:06:44.124Z"
+    },
+    {
+      "id": "cap",
+      "name": "Cap",
+      "github": "https://github.com/CapSoftware/Cap",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "cap",
+        "name": "Cap",
+        "github": "https://github.com/CapSoftware/Cap",
+        "description": "화면 녹화와 공유를 간편하게 처리하는 오픈소스 Loom 대안 소프트웨어입니다.",
+        "longDescription": "빠른 화면 녹화, 로컬 편집, 즉시 공유 링크 생성, 트랜스크립트 및 분석 기능을 제공하는 오픈소스 화면 캡처 및 레코더입니다. 제품 데모, 버그 리포트, 팀 내 비동기 커뮤니케이션에 유용합니다.",
+        "category": "생산성",
+        "tags": [
+          "화면녹화",
+          "스크린레코더",
+          "Tauri"
+        ],
+        "platforms": [
+          "macOS",
+          "Windows",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://cap.so",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Bun",
+          "Rust",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "의존성 및 환경 설정",
+            "command": "bun install && bun run env-setup",
+            "note": "Bun 패키지 매니저를 사용하여 의존성을 설치하고 환경을 설정합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 Bun을 통해 의존성을 설치합니다.",
+          "환경 변수 설정 후 개발 스택을 실행합니다.",
+          "화면을 녹화하고 편집 기능을 이용해 다듬습니다.",
+          "생성된 링크를 공유하여 팀원들과 협업합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "제품 데모, 버그 리포트, 팀 내 비동기 커뮤니케이션에 유용합니다.",
+        "stars": 25387,
+        "forks": 2405,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:34.834Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:38.753Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-21T23:06:44.994Z"
+    },
+    {
+      "id": "dub-link",
+      "name": "Dub",
+      "github": "https://github.com/dubinc/dub.link",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "dub-link",
+        "name": "Dub",
+        "github": "https://github.com/dubinc/dub.link",
+        "description": "링크 단축 및 전환 추적을 위한 모던 오픈소스 링크 어트리뷰션 플랫폼입니다.",
+        "longDescription": "단축 링크 생성과 심층적인 클릭 및 전환 분석을 제공하는 오픈소스 링크 관리 플랫폼입니다. Next.js와 TypeScript로 제작되어 뛰어난 성능을 자랑합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "단축링크",
+          "Next.js",
+          "TypeScript",
+          "마케팅",
+          "분석"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://dub.link",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Node.js",
+          "pnpm",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 설치",
+            "command": "pnpm install",
+            "note": "pnpm을 사용하여 프로젝트 의존성을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론한 후 pnpm으로 패키지를 설치합니다.",
+          "환경 변수를 설정하고 데이터베이스 마이그레이션을 실행합니다.",
+          "개발 서버를 구동하여 링크 관리 대시보드에 접속합니다.",
+          "커스텀 도메인을 연결하고 단축 링크를 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "대규모 트래픽을 처리하는 엔지니어링 팀에서 널리 활용됩니다.",
+        "stars": 25209,
+        "forks": 3409,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:35.059Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:39.202Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "formbricks",
+      "name": "Formbricks",
+      "github": "https://github.com/formbricks/formbricks",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "formbricks",
+        "name": "Formbricks",
+        "github": "https://github.com/formbricks/formbricks",
+        "description": "설문조사 및 사용자 피드백 수집을 위한 오픈소스 Qualtrics 대안 플랫폼입니다.",
+        "longDescription": "웹사이트, 인앱, 이메일 설문을 통해 사용자 여정 전반에서 피드백을 수집할 수 있는 개인정보 보호 중심의 경험 관리 및 설문조사 플랫폼입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "설문조사",
+          "피드백",
+          "Next.js",
+          "TypeScript",
+          "React"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://formbricks.com",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Node.js",
+          "pnpm",
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "의존성 설치",
+            "command": "pnpm install",
+            "note": "pnpm을 통해 필요한 패키지들을 설치합니다."
+          },
+          {
+            "title": "로컬 스택 실행",
+            "command": "pnpm go",
+            "note": "도커 서비스와 개발 서버를 동시에 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 pnpm install을 실행합니다.",
+          "pnpm go 명령어로 로컬 데이터베이스와 개발 환경을 구동합니다.",
+          "브라우저에서 로컬 주소에 접속하여 설문 양식을 생성합니다.",
+          "웹사이트나 앱에 설문을 연동하여 응답을 수집합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "프라이버시를 중요시하는 조직에서 자체 호스팅하여 사용하기 적합합니다.",
+        "stars": 13288,
+        "forks": 2626,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:35.278Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:39.477Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "optimizerduck",
+      "name": "optimizerDuck",
+      "github": "https://github.com/itsfatduck/optimizerDuck",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "optimizerduck",
+        "name": "optimizerDuck",
+        "github": "https://github.com/itsfatduck/optimizerDuck",
+        "description": "윈도우 성능 향상과 프라이버시 보호를 위한 무료 오픈소스 최적화 도구입니다.",
+        "longDescription": "불필요한 기능 제거 및 시스템 최적화를 통해 게임 성능과 프라이버시를 강화하는 가벼운 C# WinUI 기반의 윈도우 트윅 유틸리티입니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Windows",
+          "최적화",
+          "C#",
+          "프라이버시",
+          "유틸리티"
+        ],
+        "platforms": [
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://optimizerduck.vercel.app/",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          ".NET Runtime"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "실행 파일 다운로드",
+            "command": "GitHub Releases에서 .exe 파일 다운로드 후 실행",
+            "note": "별도의 설치 과정 없이 바로 실행할 수 있는 포터블 도구입니다."
+          }
+        ],
+        "usageSteps": [
+          "GitHub 릴리스 페이지에서 최신 실행 파일을 다운로드합니다.",
+          "실행 전 시스템 복원 지점을 생성하는 것을 권장합니다.",
+          "원하는 최적화 및 트윅 항목을 선택하고 적용합니다.",
+          "PC를 재부팅하여 변경 사항을 반영합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "적용 전 시스템 복원 지점을 반드시 생성하는 것이 안전합니다.",
+        "stars": 12858,
+        "forks": 569,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:35.470Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:39.751Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "mautic",
+      "name": "Mautic",
+      "github": "https://github.com/mautic/mautic",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "mautic",
+        "name": "Mautic",
+        "github": "https://github.com/mautic/mautic",
+        "description": "이메일 마케팅 및 캠페인 자동화를 지원하는 세계 최대 오픈소스 마케팅 플랫폼입니다.",
+        "longDescription": "기업과 조직이 맞춤형 마케팅 캠페인을 실행하고, 리드를 추적하며, 고객과의 상호작용을 자동화할 수 있는 강력한 오픈소스 마케팅 자동화 소프트웨어입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "마케팅자동화",
+          "이메일마케팅",
+          "PHP",
+          "오픈소스",
+          "CRM"
+        ],
+        "platforms": [
+          "Web",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.mautic.org",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "PHP 8.0 이상",
+          "MySQL 또는 PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "다운로드 및 설치",
+            "command": "mautic.org/download에서 패키지 다운로드",
+            "note": "웹 서버에 패키지를 업로드하고 공식 설치 안내에 따라 설정합니다."
+          }
+        ],
+        "usageSteps": [
+          "공식 사이트에서 소스 패키지를 다운로드하거나 서버에 배포합니다.",
+          "필수 요구 사양(PHP 및 데이터베이스)을 확인하고 구성합니다.",
+          "웹 설치 마법사를 통해 관리자 계정과 DB를 연결합니다.",
+          "마케팅 캠페인 및 이메일 자동화 워크플로우를 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "명령행 도구(CLI)를 이용한 유지보수와 스키마 동기화 작업이 필요할 수 있습니다.",
+        "stars": 11071,
+        "forks": 3563,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:35.704Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:40.355Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "papermark",
+      "name": "Papermark",
+      "github": "https://github.com/papermark/papermark",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "papermark",
+        "name": "Papermark",
+        "github": "https://github.com/papermark/papermark",
+        "description": "문서 공유 분석과 커스텀 도메인을 제공하는 오픈소스 DocSend 대안 서비스입니다.",
+        "longDescription": "보안 링크를 통해 문서를 안전하게 공유하고, 조회 수 및 열람 통계 분석 기능을 제공하는 Next.js 기반의 오픈소스 문서 공유 플랫폼입니다.",
+        "category": "문서",
+        "tags": [
+          "문서공유",
+          "PDF",
+          "Next.js",
+          "TypeScript",
+          "TailwindCSS"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.papermark.com",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Node.js",
+          "npm",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 클론",
+            "command": "git clone https://github.com/mfts/papermark.git",
+            "note": "프로젝트 소스코드를 로컬로 복제합니다."
+          },
+          {
+            "title": "의존성 설치",
+            "command": "npm install",
+            "note": "npm을 통해 패키지 의존성을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론한 후 npm install로 패키지를 설치합니다.",
+          "환경 변수 파일(.env)을 설정하고 데이터베이스를 초기화합니다.",
+          "개발 서버를 실행하여 로컬 환경에 접속합니다.",
+          "문서를 업로드하고 공유 링크를 생성하여 통계를 모니터링합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "자체 호스팅을 통해 기업 내부 문서 보안 및 브랜딩을 강화할 수 있습니다.",
+        "stars": 9442,
+        "forks": 1448,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:35.875Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-21T23:06:40.687Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "prompts-chat",
+      "name": "Prompts.chat",
+      "github": "https://github.com/f/prompts.chat",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "prompts-chat",
+        "name": "Prompts.chat",
+        "github": "https://github.com/f/prompts.chat",
+        "description": "다양한 AI 챗봇을 위한 오픈소스 프롬프트 라이브러리 및 공유 플랫폼입니다.",
+        "longDescription": "ChatGPT, Claude, Gemini 등 다양한 대형 언어 모델에서 활용할 수 있는 프롬프트와 봇 구성을 모아둔 오픈소스 라이브러리입니다. 사용자가 직접 프롬프트를 검색, 공유하고 커스텀 봇 구성을 탐색할 수 있습니다.",
+        "category": "지식·검색",
+        "tags": [
+          "AI",
+          "프롬프트",
+          "오픈소스",
+          "ChatGPT",
+          "LLM"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://prompts.chat",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "웹사이트 방문하여 원하는 AI 모델용 프롬프트 검색",
+          "필요한 프롬프트 복사",
+          "ChatGPT, Claude 등에 적용하여 사용"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 178182,
+        "forks": 22725,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:36.068Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "openbb",
+      "name": "OpenBB",
+      "github": "https://github.com/openbq-org/OpenBB",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "openbb",
+        "name": "OpenBB",
+        "github": "https://github.com/openbq-org/OpenBB",
+        "description": "금융 및 투자 분석가와 AI 에이전트를 위한 오픈소스 데이터 플랫폼입니다.",
+        "longDescription": "주식, 암호화폐, 경제 지표 등 다양한 금융 데이터를 통합 조회할 수 있는 오픈 데이터 플랫폼입니다. 파이썬 패키지를 통해 프로그래밍 방식으로 데이터를 가져오거나 커스텀 분석 도구 및 AI 에이전트에 연동할 수 있습니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "금융",
+          "데이터",
+          "Python",
+          "API",
+          "투자"
+        ],
+        "platforms": [
+          "Web",
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://openbb.co",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "PyPI 설치",
+            "command": "pip install openbb",
+            "note": "파이썬 패키지 관리자를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "파이썬 환경에서 pip 명령어로 패키지 설치",
+          "OpenBB SDK를 임포트하여 필요한 금융 데이터 호출",
+          "분석 결과 시각화 및 에이전트 연동"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 75624,
+        "forks": 7892,
+        "starsUpdatedAt": "2026-11-21"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-21T23:06:36.249Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "openpose",
+      "name": "OpenPose",
+      "github": "https://github.com/CMU-Perceptual-Computing-Lab/openpose",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "openpose",
+        "name": "OpenPose",
+        "github": "https://github.com/CMU-Perceptual-Computing-Lab/openpose",
+        "description": "실시간 다중 사람 신체, 얼굴, 손, 발 랜드마크 감지 라이브러리입니다.",
+        "longDescription": "컴퓨터 비전 분야에서 널리 쓰이는 실시간 멀티인물 포즈 추정 라이브러리입니다. 비디오 영상에서 사람의 신체 관절, 얼굴 표정, 손가락 및 발의 움직임을 정확하게 포착해 낼 수 있습니다.",
+        "category": "영상·애니메이션",
+        "tags": [
+          "컴퓨터비전",
+          "포즈추정",
+          "C++",
+          "OpenCV",
+          "딥러닝"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://cmu-perceptual-computing-lab.github.io/openpose",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "C++",
+          "OpenCV",
+          "CMake"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소 클론 및 CMake를 이용한 빌드 설정",
+          "필요한 모델 가중치 다운로드",
+          "예제 실행 파일 또는 API를 통해 이미지 및 영상 포즈 분석 수행"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 34607,
+        "forks": 8038,
+        "starsUpdatedAt": "2026-11-21"
+      }
+    },
+    {
+      "id": "rag-techniques",
+      "name": "RAG Techniques",
+      "github": "https://github.com/NirDiamant/RAG_Techniques",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "rag-techniques",
+        "name": "RAG Techniques",
+        "github": "https://github.com/NirDiamant/RAG_Techniques",
+        "description": "검색 증강 생성(RAG) 시스템 구현을 위한 고급 기법과 주피터 노트북 튜토리얼 모음입니다.",
+        "longDescription": "LLM 기반 애플리케이션의 성능을 높이기 위해 다양한 최신 RAG 기법들을 코드로 구현해 둔 교육 및 실습용 저장소입니다. 각 기법마다 상세한 주피터 노트북 튜토리얼이 포함되어 있습니다.",
+        "category": "지식·검색",
+        "tags": [
+          "RAG",
+          "LLM",
+          "Python",
+          "Jupyter",
+          "검색"
+        ],
+        "platforms": [
+          "Web",
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://diamant-ai.com",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Python",
+          "Jupyter"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 복제",
+            "command": "git clone https://github.com/NirDiamant/RAG_Techniques.git",
+            "note": "깃을 통해 프로젝트를 로컬에 다운로드합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 로컬에 클론",
+          "관심 있는 RAG 기법 폴더로 이동",
+          "주피터 노트북을 실행하여 코드 단계별 실습"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 30464,
+        "forks": 3722,
+        "starsUpdatedAt": "2026-11-21"
+      }
+    },
+    {
+      "id": "modular",
+      "name": "Modular Platform",
+      "github": "https://github.com/modular/modular",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "modular",
+        "name": "Modular Platform",
+        "github": "https://github.com/modular/modular",
+        "description": "AI 개발과 배포를 위한 통합 플랫폼으로 MAX 프레임워크와 Mojo 언어를 제공합니다.",
+        "longDescription": "고성능 AI 애플리케이션을 개발하고 배포하기 위한 차세대 플랫폼입니다. 파이썬과 유사한 문법을 가지면서도 C언어 수준의 성능을 내는 Mojo 프로그래밍 언어와 고성능 추론을 위한 MAX 프레임워크를 포함합니다.",
+        "category": "AI 모델",
+        "tags": [
+          "Mojo",
+          "MAX",
+          "AI",
+          "머신러닝",
+          "컴파일러"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.modular.com/",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Bazel"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Modular 플랫폼 공식 문서 확인",
+          "Mojo 및 MAX 관련 도구 설치",
+          "예제 코드 실행 및 AI 모델 배포 테스트"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 30174,
+        "forks": 3252,
+        "starsUpdatedAt": "2026-11-21"
+      }
+    },
+    {
+      "id": "personal-security-checklist",
+      "name": "Personal Security Checklist",
+      "github": "https://github.com/lissy93/personal-security-checklist",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "personal-security-checklist",
+        "name": "Personal Security Checklist",
+        "github": "https://github.com/lissy93/personal-security-checklist",
+        "description": "디지털 보안과 개인정보 보호를 위한 300가지 이상의 점검 항목을 모은 가이드입니다.",
+        "longDescription": "온라인상에서 개인의 디지털 프라이버시를 지키고 보안을 강화하기 위한 실용적인 팁과 체크리스트를 제공합니다. 웹사이트와 문서를 통해 일상생활 및 업무 환경에서의 보안 수준을 점검할 수 있습니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "프라이버시",
+          "체크리스트",
+          "TypeScript",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://digital-defense.io",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Node.js",
+          "Git"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 클론",
+            "command": "git clone git@github.com:Lissy93/personal-security-checklist.git",
+            "note": "프로젝트 소스코드를 가져옵니다."
+          },
+          {
+            "title": "의존성 설치 및 실행",
+            "command": "yarn && yarn dev",
+            "note": "웹 애플리케이션을 로컬에서 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "공식 웹사이트 또는 저장소 문서 방문",
+          "보안 체크리스트 항목 확인",
+          "개인 기기 및 계정에 보안 설정 적용"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 22848,
+        "forks": 1473,
+        "starsUpdatedAt": "2026-11-21"
+      }
+    },
+    {
+      "id": "screenpipe",
+      "name": "Screenpipe",
+      "github": "https://github.com/screenpipe/screenpipe",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "screenpipe",
+        "name": "Screenpipe",
+        "github": "https://github.com/screenpipe/screenpipe",
+        "description": "컴퓨터 작업 내용을 로컬에 지속적으로 기록하고 반복 업무를 자동화하는 AI 도구입니다.",
+        "longDescription": "로컬 환경에서 화면과 오디오 활동을 기록하여 작업 흐름을 파악하고, 이를 바탕으로 AI 에이전트와 연동하여 반복 업무를 자동화할 수 있는 프라이버시 중심의 도구입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "자동화",
+          "AI",
+          "Rust",
+          "로컬",
+          "화면기록"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://screenpipe.com",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "8 GB RAM 이상"
+        ],
+        "supportedAgents": [
+          "Hermes Agent",
+          "OpenClaw"
+        ],
+        "install": [],
+        "usageSteps": [
+          "플랫폼에 맞는 인스톨러 다운로드 및 설치",
+          "백그라운드 기록 권한 허용",
+          "기록된 작업 내역을 확인하고 AI 에이전트에 연동"
+        ],
+        "examplePrompt": "지난 2시간 동안 작업한 내용을 요약해 줘",
+        "usageNote": "",
+        "stars": 22497,
+        "forks": 2314,
+        "starsUpdatedAt": "2026-11-21"
+      }
+    },
+    {
+      "id": "companyos",
+      "name": "CompanyOS",
+      "github": "https://github.com/kortix-ai/CompanyOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "companyos",
+        "name": "CompanyOS",
+        "github": "https://github.com/kortix-ai/CompanyOS",
+        "description": "멀티플레이어 AI 에이전트와 회사 운영 시스템을 코드로 관리하는 오픈소스 플랫폼입니다.",
+        "longDescription": "클라우드 기반의 에이전트 하네스를 통해 다양한 AI 에이전트들이 동시에 협업하며 회사의 반복 업무를 처리할 수 있도록 돕는 오픈소스 운영 시스템입니다. 3천 개 이상의 앱과 연동됩니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI에이전트",
+          "자동화",
+          "TypeScript",
+          "클라우드",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kortix.com",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "TypeScript",
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소 클론 및 설정 확인",
+          "필요한 외부 앱 서비스 및 툴 연동",
+          "에이전트 스케줄 및 워크플로우 배포"
+        ],
+        "examplePrompt": "신규 고객 문의에 자동으로 응답하는 에이전트를 설정해 줘",
+        "usageNote": "",
+        "stars": 20783,
+        "forks": 3471,
+        "starsUpdatedAt": "2026-11-21"
+      }
+    },
+    {
+      "id": "ml-agents",
+      "name": "Unity ML-Agents Toolkit",
+      "github": "https://github.com/Unity-Technologies/ml-agents",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
+      "tool": {
+        "id": "ml-agents",
+        "name": "Unity ML-Agents Toolkit",
+        "github": "https://github.com/Unity-Technologies/ml-agents",
+        "description": "유니티 게임 엔진을 활용해 강화학습 에이전트를 학습시킬 수 있는 오픈소스 툴킷입니다.",
+        "longDescription": "게임과 시뮬레이션 환경을 심층 강화학습 및 모방학습의 학습 환경으로 활용할 수 있게 해주는 유니티 공식 오픈소스 프로젝트입니다. 지능형 에이전트를 시뮬레이션 속에서 효율적으로 훈련할 수 있습니다.",
+        "category": "교육·학습",
+        "tags": [
+          "Unity",
+          "강화학습",
+          "C#",
+          "머신러닝",
+          "시뮬레이션"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://unity.com/products/machine-learning-agents",
+        "featured": 9,
+        "added": "2026-11-21",
+        "addedAt": "2026-11-21T23:04:20.367Z",
+        "requirements": [
+          "Unity",
+          "Python"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "유니티 프로젝트에 ML-Agents 패키지 추가",
+          "파이썬 환경에서 관련 학습 라이브러리 설치",
+          "에이전트 스크립트 작성 및 학습 세션 구동"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 19890,
+        "forks": 4523,
+        "starsUpdatedAt": "2026-11-21"
+      }
     },
     {
       "id": "windmill",
-      "name": "windmill",
+      "name": "Windmill",
       "github": "https://github.com/windmill-labs/windmill",
       "license": "확인 필요",
       "status": "pending_review",
@@ -90,20 +1417,20 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-21T22:06:26.468Z",
-      "sourceRun": "2026-11-22T07",
+      "checkedAt": "2026-11-21T23:06:33.212Z",
+      "sourceRun": "2026-11-22T08",
       "tool": {
         "id": "windmill",
-        "name": "windmill",
+        "name": "Windmill",
         "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 코드로 작성하고 빠르게 자가 호스팅할 수 있는 오케스트레이션 플랫폼입니다.",
-        "longDescription": "엔지니어가 파이썬, 타입스크립트, 고 등의 언어로 스크립트를 작성하여 Git으로 동기화하고 비즈니스 팀은 AI와 UI를 통해 쉽게 활용할 수 있습니다. Retool과 n8n의 강력한 오픈소스 대안입니다.",
+        "description": "스크립트를 워크플로우, 내부 앱, AI 에이전트로 빠르게 변환하는 코드 중심의 오픈소스 플랫폼입니다.",
+        "longDescription": "개발자가 작성한 스크립트를 API, 웹 UI, Cron 작업 및 복잡한 워크플로우로 자동 변환해 주는 고성능 오픈소스 오케스트레이션 플랫폼입니다. n8n이나 Retool 등의 대안으로 활용할 수 있습니다.",
         "category": "업무 자동화",
         "tags": [
-          "업무 자동화",
           "워크플로우",
-          "오케스트레이션",
+          "자동화",
           "Rust",
+          "Python",
           "TypeScript"
         ],
         "platforms": [
@@ -118,48 +1445,24 @@
         "website": "https://windmill.dev",
         "featured": 9,
         "added": "2026-11-21",
-        "addedAt": "2026-11-21T22:04:21.430Z",
+        "addedAt": "2026-11-21T23:04:20.367Z",
         "requirements": [
-          "PostgreSQL",
-          "Docker 또는 Rust"
+          "Docker",
+          "PostgreSQL"
         ],
         "supportedAgents": [],
         "install": [],
         "usageSteps": [
-          "Docker 또는 소스 코드를 통해 인스턴스를 실행합니다.",
-          "웹 대시보드에 접속하여 워크플로우 또는 스크립트를 작성합니다.",
-          "Git 연동을 통해 코드를 동기화하고 배포합니다."
+          "Docker를 이용해 Windmill 인스턴스 실행",
+          "파이썬 또는 타입스크립트로 업무 자동화 스크립트 작성",
+          "스크립트를 조합하여 워크플로우 및 UI 구성"
         ],
-        "examplePrompt": "고객 지원 티켓 데이터를 분석하는 파이프라인 워크플로우를 생성해줘",
-        "usageNote": "고성능 처리를 위해 PostgreSQL 데이터베이스가 필요합니다.",
-        "stars": 18669,
+        "examplePrompt": "매일 오전 데이터베이스 백업을 수행하고 슬랙으로 리포트를 보내는 워크플로우 만들어 줘",
+        "usageNote": "",
+        "stars": 18670,
         "forks": 1170,
         "starsUpdatedAt": "2026-11-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-21T22:06:27.401Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-21T22:06:30.419Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
+      }
     },
     {
       "id": "get-jobs",
@@ -4080,74 +5383,6 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ]
-    },
-    {
-      "id": "papermark",
-      "name": "Papermark",
-      "github": "https://github.com/papermark/papermark",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-21T18:06:45.497Z",
-      "sourceRun": "2026-11-22T03",
-      "tool": {
-        "id": "papermark",
-        "name": "Papermark",
-        "github": "https://github.com/papermark/papermark",
-        "description": "내장된 분석 기능과 커스텀 도메인을 지원하는 오픈소스 문서 공유 플랫폼입니다.",
-        "longDescription": "DocSend의 오픈소스 대안으로 제작되었으며, 링크를 통한 안전한 PDF 공유, 방문자 추적, 문서 열람 분석 및 브랜딩 기능을 제공합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "Next.js",
-          "TypeScript",
-          "PDF",
-          "데이터룸",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.papermark.com",
-        "featured": 9,
-        "added": "2026-11-21",
-        "addedAt": "2026-11-21T18:04:15.924Z",
-        "requirements": [
-          "Node.js",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 복제",
-            "command": "git clone https://github.com/mfts/papermark.git",
-            "note": "코드 클론"
-          },
-          {
-            "title": "의존성 설치",
-            "command": "npm install",
-            "note": "npm 패키지 설치"
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론한 후 의존성을 설치합니다.",
-          "환경 변수 파일을 설정하고 데이터베이스를 초기화합니다.",
-          "개발 서버를 실행하여 로컬에서 웹 인터페이스에 접속합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9441,
-        "forks": 1448,
-        "starsUpdatedAt": "2026-11-21"
-      }
     },
     {
       "id": "dolphin",
@@ -10875,82 +12110,6 @@
       "sourceRun": "2026-11-21T18"
     },
     {
-      "id": "prompts-chat",
-      "name": "prompts.chat",
-      "github": "https://github.com/f/prompts.chat",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-21T08:06:27.726Z",
-      "sourceRun": "2026-11-21T17",
-      "tool": {
-        "id": "prompts-chat",
-        "name": "prompts.chat",
-        "github": "https://github.com/f/prompts.chat",
-        "description": "다양한 AI 모델을 위한 오픈소스 프롬프트 라이브러리",
-        "longDescription": "ChatGPT, Claude, Gemini 등 다양한 대화형 AI 모델에서 활용할 수 있는 커뮤니티 기반의 프롬프트 모음입니다. 조직 내에서 자체적으로 프롬프트를 호스팅하고 관리할 수 있는 기능을 제공합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "인공지능",
-          "프롬프트",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://prompts.chat",
-        "featured": 9,
-        "added": "2026-11-21",
-        "addedAt": "2026-11-21T08:04:19.733Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "웹사이트에서 원하는 프롬프트를 검색하거나 카테고리별로 탐색합니다.",
-          "복사 버튼을 눌러 프롬프트를 클립보드에 복사합니다.",
-          "사용 중인 AI 챗봇에 붙여넣어 실행합니다."
-        ],
-        "examplePrompt": "Act as a Linux terminal and respond with what I type in the terminal format.",
-        "usageNote": "",
-        "stars": 178101,
-        "forks": 22707,
-        "starsUpdatedAt": "2026-11-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-21T08:06:28.515Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-21T08:06:31.591Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-21T08:06:36.148Z"
-    },
-    {
       "id": "llms-from-scratch",
       "name": "LLMs-from-scratch",
       "github": "https://github.com/rasbt/LLMs-from-scratch",
@@ -11027,414 +12186,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-21T08:06:37.129Z"
-    },
-    {
-      "id": "openbb",
-      "name": "OpenBB",
-      "github": "https://github.com/openbq-org/OpenBB",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-21T08:06:27.726Z",
-      "sourceRun": "2026-11-21T17",
-      "tool": {
-        "id": "openbb",
-        "name": "OpenBB",
-        "github": "https://github.com/openbq-org/OpenBB",
-        "description": "금융 분석가, 퀀트 및 AI 에이전트를 위한 오픈소스 금융 데이터 플랫폼입니다.",
-        "longDescription": "다양한 금융 데이터 소스에 접근하고 분석할 수 있는 파이썬 기반의 플랫폼입니다. 분석가와 AI 에이전트가 주식, 거시경제, 암호화폐 등의 데이터를 쉽게 조회하고 활용할 수 있도록 돕습니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "파이썬",
-          "금융",
-          "데이터분석",
-          "투자",
-          "API"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://openbb.co",
-        "featured": 9,
-        "added": "2026-11-21",
-        "addedAt": "2026-11-21T08:04:19.733Z",
-        "requirements": [
-          "Python 3.8+"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "PyPI를 통한 설치",
-            "command": "pip install openbb",
-            "note": "파이썬 패키지 관리자를 사용하여 OpenBB 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "터미널에서 패키지를 설치합니다.",
-          "파이썬 환경에서 openbb 라이브러리를 불러옵니다.",
-          "원하는 금융 데이터 함수를 호출하여 분석을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 75611,
-        "forks": 7891,
-        "starsUpdatedAt": "2026-11-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-21T08:06:28.973Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-21T08:06:32.456Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
-    },
-    {
-      "id": "openpose",
-      "name": "openpose",
-      "github": "https://github.com/CMU-Perceptual-Computing-Lab/openpose",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-21T08:06:27.726Z",
-      "sourceRun": "2026-11-21T17",
-      "tool": {
-        "id": "openpose",
-        "name": "openpose",
-        "github": "https://github.com/CMU-Perceptual-Computing-Lab/openpose",
-        "description": "실시간 다중 사용자 신체, 얼굴, 손, 발 키포인트 검출 컴퓨터 비전 라이브러리",
-        "longDescription": "카메라 영상에서 여러 사람의 전신 관절과 얼굴, 손, 발의 움직임을 실시간으로 추정할 수 있는 오픈소스 컴퓨터 비전 라이브러리입니다. 행동 분석 및 모션 캡처 연구에 널리 활용됩니다.",
-        "category": "영상·애니메이션",
-        "tags": [
-          "컴퓨터비전",
-          "포즈추정",
-          "딥러닝"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://cmu-perceptual-computing-lab.github.io/openpose",
-        "featured": 9,
-        "added": "2026-11-21",
-        "addedAt": "2026-11-21T08:04:19.733Z",
-        "requirements": [
-          "CMake",
-          "OpenCV",
-          "CUDA (선택 사항)"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "CMake를 사용하여 프로젝트 빌드 환경을 설정합니다.",
-          "컴파일 후 실행 파일을 생성합니다.",
-          "웹캠이나 비디오 파일을 입력으로 지정하여 포즈 추정을 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 34606,
-        "forks": 8038,
-        "starsUpdatedAt": "2026-11-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-21T08:06:29.213Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-21T08:06:32.766Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-21T08:06:38.868Z"
-    },
-    {
-      "id": "rag-techniques",
-      "name": "RAG_Techniques",
-      "github": "https://github.com/NirDiamant/RAG_Techniques",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-21T08:06:27.726Z",
-      "sourceRun": "2026-11-21T17",
-      "tool": {
-        "id": "rag-techniques",
-        "name": "RAG_Techniques",
-        "github": "https://github.com/NirDiamant/RAG_Techniques",
-        "description": "검색 증강 생성(RAG) 시스템을 위한 다양한 고급 기술과 주피터 노트북 튜토리얼을 제공합니다.",
-        "longDescription": "최신 RAG 아키텍처와 성능 향상 기법들을 구현한 파이썬 코드를 제공하는 저장소입니다. 고급 검색, 리랭킹, 에이전트 기반 RAG 등 다양한 실습 예제를 포함하고 있습니다.",
-        "category": "지식·검색",
-        "tags": [
-          "RAG",
-          "LLM",
-          "파이썬"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://diamant-ai.com",
-        "featured": 9,
-        "added": "2026-11-21",
-        "addedAt": "2026-11-21T08:04:19.733Z",
-        "requirements": [
-          "Python",
-          "Jupyter Notebook"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "저장소 복제",
-            "command": "git clone https://github.com/NirDiamant/RAG_Techniques.git",
-            "note": "깃 저장소를 로컬 환경으로 클론합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론한 후 관심 있는 기술 폴더로 이동합니다.",
-          "주피터 노트북 파일을 실행합니다.",
-          "단계별 코드를 실행하며 RAG 기법을 학습하고 적용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 30458,
-        "forks": 3721,
-        "starsUpdatedAt": "2026-11-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-21T08:06:29.398Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-21T08:06:33.200Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-21T08:06:39.759Z"
-    },
-    {
-      "id": "modular",
-      "name": "modular",
-      "github": "https://github.com/modular/modular",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-21T08:06:27.726Z",
-      "sourceRun": "2026-11-21T17",
-      "tool": {
-        "id": "modular",
-        "name": "modular",
-        "github": "https://github.com/modular/modular",
-        "description": "고성능 인공지능 개발 및 배포를 위한 MAX 프레임워크와 Mojo 프로그래밍 언어가 포함된 통합 플랫폼입니다.",
-        "longDescription": "AI 개발을 더 빠르고 일관되게 수행할 수 있도록 설계된 차세대 플랫폼입니다. 고성능 수치 연산을 위한 MAX와 C++ 수준의 성능을 제공하는 Mojo 언어를 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "Mojo",
-          "AI",
-          "프로그래밍언어",
-          "성능최적화",
-          "머신러닝"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.modular.com/",
-        "featured": 9,
-        "added": "2026-11-21",
-        "addedAt": "2026-11-21T08:04:19.733Z",
-        "requirements": [
-          "Bazel",
-          "Linux 또는 macOS 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Mojo 파일 실행",
-            "command": "./bazelw run //Mojo:mojo -- Mojo/examples/hello.mojo",
-            "note": "바젤 빌드 시스템을 통해 Mojo 예제 코드를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소 코드를 다운로드하고 개발 환경을 준비합니다.",
-          "Mojo 언어로 작성된 스크립트 파일을 작성합니다.",
-          "전용 실행 명령어를 통해 코드를 컴파일하고 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 30172,
-        "forks": 3250,
-        "starsUpdatedAt": "2026-11-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-21T08:06:29.573Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-21T08:06:33.488Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "screenpipe",
-      "name": "screenpipe",
-      "github": "https://github.com/screenpipe/screenpipe",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-21T08:06:27.726Z",
-      "sourceRun": "2026-11-21T17",
-      "tool": {
-        "id": "screenpipe",
-        "name": "screenpipe",
-        "github": "https://github.com/screenpipe/screenpipe",
-        "description": "컴퓨터 작업 내용을 로컬에 지속적으로 기록하고 반복되는 워크플로우를 찾아 AI 에이전트에 전달하는 도구입니다.",
-        "longDescription": "사용자의 화면과 오디오 활동을 로컬 환경에서 안전하게 녹화하고 텍스트 및 데이터로 변환합니다. 반복되는 업무 패턴을 자동으로 발견하고 선호하는 AI 에이전트와 연동할 수 있습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "AI에이전트",
-          "로컬우선",
-          "자동화",
-          "화면기록",
-          "Rust"
-        ],
-        "platforms": [
-          "macOS",
-          "Windows",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://screenpipe.com",
-        "featured": 9,
-        "added": "2026-11-21",
-        "addedAt": "2026-11-21T08:04:19.733Z",
-        "requirements": [
-          "RAM 8GB 이상"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "운영체제에 맞는 설치 파일을 다운로드하여 실행합니다.",
-          "백그라운드에서 화면 및 오디오 기록이 시작되도록 설정합니다.",
-          "기록된 작업 내역을 확인하고 AI 에이전트를 통해 자동화를 구성합니다."
-        ],
-        "examplePrompt": "오늘 작업한 내용 중 반복되는 이메일 작성 루틴을 찾아줘.",
-        "usageNote": "로컬 저장소를 사용하므로 개인정보 보호에 유리합니다.",
-        "stars": 22491,
-        "forks": 2310,
-        "starsUpdatedAt": "2026-11-21"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-21T08:06:29.789Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-21T08:06:33.920Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "instant-ngp",
@@ -11704,61 +12455,6 @@
         "usageNote": "",
         "stars": 30093,
         "forks": 5164,
-        "starsUpdatedAt": "2026-11-21"
-      }
-    },
-    {
-      "id": "ml-agents",
-      "name": "Unity ML-Agents Toolkit",
-      "github": "https://github.com/Unity-Technologies/ml-agents",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-21T08:06:27.726Z",
-      "sourceRun": "2026-11-21T17",
-      "tool": {
-        "id": "ml-agents",
-        "name": "Unity ML-Agents Toolkit",
-        "github": "https://github.com/Unity-Technologies/ml-agents",
-        "description": "게임과 시뮬레이션을 강화학습 환경으로 활용할 수 있게 해주는 Unity 오픈소스 툴킷",
-        "longDescription": "Unity 엔진 기반의 게임과 시뮬레이션 환경에서 심층 강화학습과 모방학습을 통해 지능형 에이전트를 학습시킬 수 있도록 지원하는 프레임워크입니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "Unity",
-          "강화학습",
-          "AI 에이전트",
-          "C#"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://unity.com/products/machine-learning-agents",
-        "featured": 9,
-        "added": "2026-11-21",
-        "addedAt": "2026-11-21T08:04:19.733Z",
-        "requirements": [
-          "Unity",
-          "Python"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Unity 패키지 매니저를 통해 ML-Agents 패키지를 설치합니다.",
-          "Python 환경에서 ml-agents 패키지를 설치합니다.",
-          "Unity 환경 설정을 구성하고 파이썬 학습 스크립트를 연동하여 에이전트를 훈련합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 19887,
-        "forks": 4523,
         "starsUpdatedAt": "2026-11-21"
       }
     },
@@ -24487,81 +25183,6 @@
       "recheckedAt": "2026-11-20T13:07:12.256Z"
     },
     {
-      "id": "gdevelop",
-      "name": "GDevelop",
-      "github": "https://github.com/4ian/GDevelop",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-20T13:07:03.022Z",
-      "sourceRun": "2026-11-20T22",
-      "tool": {
-        "id": "gdevelop",
-        "name": "GDevelop",
-        "github": "https://github.com/4ian/GDevelop",
-        "description": "모두를 위한 직관적이고 강력한 오픈소스 크로스플랫폼 2D/3D 게임 엔진입니다.",
-        "longDescription": "코딩 없이 이벤트 기반 시스템과 모듈식 동작을 활용해 모바일, 데스크톱, 웹용 게임을 빠르게 제작할 수 있는 풀페이처 게임 개발 소프트웨어입니다. AI 기능을 통해 게임 제작을 보조하거나 함께 빌드할 수 있습니다.",
-        "category": "영상·애니메이션",
-        "tags": [
-          "게임 엔진",
-          "노코드",
-          "2D/3D"
-        ],
-        "platforms": [
-          "Windows",
-          "Linux",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://gdevelop.io",
-        "featured": 9,
-        "added": "2026-11-20",
-        "addedAt": "2026-11-20T13:04:29.177Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "GDevelop 홈페이지에서 애플리케이션을 다운로드하여 설치합니다.",
-          "새 프로젝트를 생성하고 2D 또는 3D 템플릿을 선택합니다.",
-          "이벤트 시스템과 AI 어시스턴트를 활용하여 게임 로직과 레벨을 디자인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 29111,
-        "forks": 1675,
-        "starsUpdatedAt": "2026-11-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-20T13:07:04.013Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-20T13:07:07.623Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-20T13:07:17.458Z"
-    },
-    {
       "id": "hunyuan3d-2",
       "name": "Hunyuan3D-2",
       "github": "https://github.com/Tencent-Hunyuan/Hunyuan3D-2",
@@ -27147,91 +27768,6 @@
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
-    },
-    {
-      "id": "personal-security-checklist",
-      "name": "Personal Security Checklist",
-      "github": "https://github.com/lissy93/personal-security-checklist",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-20T10:07:24.946Z",
-      "sourceRun": "2026-11-20T19",
-      "tool": {
-        "id": "personal-security-checklist",
-        "name": "Personal Security Checklist",
-        "github": "https://github.com/lissy93/personal-security-checklist",
-        "description": "디지털 보안과 프라이버시를 보호하기 위한 300가지 이상의 체크리스트 가이드",
-        "longDescription": "개인의 디지털 보안과 프라이버시를 강화하기 위한 종합 가이드 및 체크리스트를 제공합니다. 웹 애플리케이션을 통해 쉽게 확인하고 로컬 환경에서 실행할 수 있습니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "보안",
-          "프라이버시",
-          "체크리스트",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://digital-defense.io",
-        "featured": 9,
-        "added": "2026-11-20",
-        "addedAt": "2026-11-20T10:04:36.855Z",
-        "requirements": [
-          "Node (20.19+ or 22.12+)",
-          "Git"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "코드 복제",
-            "command": "git clone git@github.com:Lissy93/personal-security-checklist.git",
-            "note": "저장소를 로컬에 복제합니다."
-          },
-          {
-            "title": "의존성 설치",
-            "command": "yarn",
-            "note": "패키지 의존성을 설치합니다."
-          },
-          {
-            "title": "개발 서버 실행",
-            "command": "yarn dev",
-            "note": "로컬에서 웹 애플리케이션을 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 로컬에 클론합니다.",
-          "yarn 명령어로 의존성을 설치합니다.",
-          "yarn dev로 개발 서버를 실행하여 체크리스트를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 22832,
-        "forks": 1473,
-        "starsUpdatedAt": "2026-11-20"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-20T10:07:28.472Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
     },
     {
       "id": "dirsearch",
@@ -35195,80 +35731,6 @@
         "forks": 25,
         "starsUpdatedAt": "2026-11-19"
       }
-    },
-    {
-      "id": "redis",
-      "name": "Redis",
-      "github": "https://github.com/redis/redis",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-19T19:10:01.974Z",
-      "sourceRun": "2026-11-20T04",
-      "tool": {
-        "id": "redis",
-        "name": "Redis",
-        "github": "https://github.com/redis/redis",
-        "description": "실시간 애플리케이션을 위한 고성능 인메모리 데이터 저장소",
-        "longDescription": "Redis는 캐시, 데이터 구조 서버, 문서 및 벡터 쿼리 엔진으로 널리 사용되는 고성능 인메모리 데이터 저장소입니다. 다양한 데이터 구조를 지원하며 실시간 대규모 트래픽 처리에 특화되어 있습니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "캐시",
-          "인메모리",
-          "NoSQL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://redis.io",
-        "featured": 9,
-        "added": "2026-11-19",
-        "addedAt": "2026-11-19T19:04:30.466Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "소스 코드를 다운로드하거나 저장소를 클론합니다.",
-          "의존성을 설치하고 빌드를 진행합니다.",
-          "서버를 실행하여 클라이언트 연결을 테스트합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 77562,
-        "forks": 25069,
-        "starsUpdatedAt": "2026-11-19"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-19T19:10:02.996Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-19T19:10:08.040Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-19T19:10:14.123Z"
     },
     {
       "id": "sqlmap",
@@ -46812,81 +47274,6 @@
       }
     },
     {
-      "id": "optimizerduck",
-      "name": "optimizerDuck",
-      "github": "https://github.com/itsfatduck/optimizerDuck",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T05:06:38.176Z",
-      "sourceRun": "2026-11-18T14",
-      "tool": {
-        "id": "optimizerduck",
-        "name": "optimizerDuck",
-        "github": "https://github.com/itsfatduck/optimizerDuck",
-        "description": "성능 향상과 프라이버시 보호에 초점을 맞춘 무료 오픈소스 윈도우 최적화 도구",
-        "longDescription": "윈도우 시스템의 성능을 극대화하고 불필요한 추적 및 개인정보 수집 요소를 차단하여 가볍고 깔끔한 사용 환경을 만들어주는 직관적인 최적화 유틸리티입니다.",
-        "category": "생산성",
-        "tags": [
-          "윈도우최적화",
-          "성능향상",
-          "프라이버시",
-          "C#",
-          "Windows"
-        ],
-        "platforms": [
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://optimizerduck.vercel.app/",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T05:04:30.428Z",
-        "requirements": [
-          "Windows .NET 환경"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "GitHub 릴리즈 페이지에서 실행 파일을 다운로드합니다.",
-          "설치 없이 실행파일을 직접 실행합니다.",
-          "원하는 최적화 및 프라이버시 설정을 선택하고 적용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "변경 사항 적용 전 시스템 복원 지점을 만들어 두세요.",
-        "stars": 12473,
-        "forks": 548,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T05:06:40.243Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T05:06:44.059Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "anytype-ts",
       "name": "anytype-ts",
       "github": "https://github.com/anyproto/anytype-ts",
@@ -47051,425 +47438,6 @@
       "reasons": [],
       "checkedAt": "2026-11-18T05:06:38.176Z",
       "sourceRun": "2026-11-18T14"
-    },
-    {
-      "id": "twenty",
-      "name": "Twenty",
-      "github": "https://github.com/twentyhq/twenty",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T04:06:34.826Z",
-      "sourceRun": "2026-11-18T13",
-      "tool": {
-        "id": "twenty",
-        "name": "Twenty",
-        "github": "https://github.com/twentyhq/twenty",
-        "description": "세일즈포스를 대체하는 모던 오픈소스 CRM 플랫폼",
-        "longDescription": "기술 중심 팀이 복잡한 비즈니스 요구사항에 맞춰 맞춤형 CRM을 구축하고 버전 관리할 수 있도록 지원합니다. 모던한 스택과 GraphQL 기반 API를 통해 손쉽게 확장할 수 있습니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "CRM",
-          "TypeScript",
-          "React"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://twenty.com",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T04:04:20.113Z",
-        "requirements": [
-          "Node.js",
-          "Yarn 또는 npm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "CLI 설치",
-            "command": "npm install -g twenty",
-            "note": "Twenty CLI를 전역으로 설치합니다."
-          },
-          {
-            "title": "프로젝트 생성",
-            "command": "twenty app init my-app",
-            "note": "새로운 CRM 앱을 스캐폴딩합니다."
-          }
-        ],
-        "usageSteps": [
-          "Twenty CLI를 설치합니다.",
-          "앱을 초기화하고 의존성을 설치합니다.",
-          "객체, 필드, 뷰를 코드로 정의하여 비즈니스에 맞게 커스텀 CRM을 구축합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 61085,
-        "forks": 10119,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T04:06:35.799Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T04:06:39.327Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-18T04:06:44.105Z"
-    },
-    {
-      "id": "budibase",
-      "name": "Budibase",
-      "github": "https://github.com/Budibase/budibase",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T04:06:34.826Z",
-      "sourceRun": "2026-11-18T13",
-      "tool": {
-        "id": "budibase",
-        "name": "Budibase",
-        "github": "https://github.com/Budibase/budibase",
-        "description": "운영 업무 자동화와 내부 앱·AI 에이전트 구축을 위한 오픈소스 로코드 플랫폼입니다.",
-        "longDescription": "기업 내 다양한 요청 처리와 승인 워크플로우 자동화, 데이터 시스템 연결을 하나의 플랫폼에서 수행할 수 있게 돕습니다. AI 에이전트가 반복 업무를 이해하고 자동으로 처리합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "로코드",
-          "업무자동화",
-          "AI에이전트"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://budibase.com",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T04:04:20.113Z",
-        "requirements": [
-          "Docker",
-          "Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker 또는 Kubernetes를 사용하여 Budibase를 인프라에 배포합니다.",
-          "웹 인터페이스에 접속하여 관리자 계정을 설정합니다.",
-          "데이터소스를 연결하고 워크플로우 및 AI 에이전트를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 28423,
-        "forks": 2236,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T04:06:36.239Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T04:06:40.061Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-18T04:06:45.815Z"
-    },
-    {
-      "id": "cap",
-      "name": "Cap",
-      "github": "https://github.com/CapSoftware/Cap",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T04:06:34.826Z",
-      "sourceRun": "2026-11-18T13",
-      "tool": {
-        "id": "cap",
-        "name": "Cap",
-        "github": "https://github.com/CapSoftware/Cap",
-        "description": "Loom을 대체하는 고속 오픈소스 화면 녹화 및 공유 도구",
-        "longDescription": "화면 캡처, 로컬 편집, 즉시 공유 링크 생성, 전사 및 팀 워크스페이스 기능을 제공합니다. 제품 데모, 버그 리포트, 팀 온보딩 등에 유용하게 활용할 수 있습니다.",
-        "category": "협업·소통",
-        "tags": [
-          "화면녹화",
-          "데모",
-          "오픈소스"
-        ],
-        "platforms": [
-          "macOS",
-          "Windows",
-          "Linux",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://cap.so",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T04:04:20.113Z",
-        "requirements": [
-          "Bun",
-          "Rust",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "의존성 설치 및 환경 설정",
-            "command": "bun install\nbun run env-setup\nbun run cap-setup",
-            "note": "필요한 패키지를 설치하고 환경을 설정합니다."
-          }
-        ],
-        "usageSteps": [
-          "레포지토리를 클론하고 환경 설정을 마칩니다.",
-          "로컬 개발 서버를 실행하거나 클라이언트 앱을 빌드합니다.",
-          "화면을 녹화하고 편집한 뒤 공유 링크를 생성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 25197,
-        "forks": 2371,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T04:06:36.461Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T04:06:40.365Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-18T04:06:46.453Z"
-    },
-    {
-      "id": "dub-link",
-      "name": "Dub",
-      "github": "https://github.com/dubinc/dub.link",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T04:06:34.826Z",
-      "sourceRun": "2026-11-18T13",
-      "tool": {
-        "id": "dub-link",
-        "name": "Dub",
-        "github": "https://github.com/dubinc/dub.link",
-        "description": "단축 링크 생성 및 전환 추적을 지원하는 모던 오픈소스 링크 어트리뷰션 플랫폼입니다.",
-        "longDescription": "마케팅 캠페인과 단축 URL의 클릭 통계를 실시간으로 추적할 수 있는 오픈소스 플랫폼입니다. Next.js와 TypeScript 기반으로 구축되어 확장성이 뛰어납니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "단축링크",
-          "마케팅",
-          "Next.js",
-          "TypeScript",
-          "Prisma"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://dub.link",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T04:04:20.113Z",
-        "requirements": [
-          "Node.js",
-          "pnpm"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "의존성 설치",
-            "command": "pnpm install",
-            "note": "프로젝트 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 패키지를 설치합니다.",
-          "환경 변수를 설정하고 데이터베이스 마이그레이션을 실행합니다.",
-          "개발 서버를 구동하여 링크 관리 및 어트리뷰션 분석을 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 25193,
-        "forks": 3410,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T04:06:36.667Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T04:06:40.871Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "formbricks",
-      "name": "Formbricks",
-      "github": "https://github.com/formbricks/formbricks",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T04:06:34.826Z",
-      "sourceRun": "2026-11-18T13",
-      "tool": {
-        "id": "formbricks",
-        "name": "Formbricks",
-        "github": "https://github.com/formbricks/formbricks",
-        "description": "사용자 피드백 수집과 서베이를 생성할 수 있는 오픈소스 퀄트릭스(Qualtrics) 대안 플랫폼입니다.",
-        "longDescription": "앱 내, 웹사이트, 링크, 이메일 등 사용자 여정의 모든 단계에서 피드백을 수집하고 분석할 수 있는 오픈소스 서베이 솔루션입니다. 프라이버시를 중시하며 다양한 도구와 연동됩니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "설문조사",
-          "피드백",
-          "Next.js",
-          "TypeScript",
-          "React"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://formbricks.com",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T04:04:20.113Z",
-        "requirements": [
-          "Node.js",
-          "pnpm",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "의존성 설치",
-            "command": "pnpm install",
-            "note": "필요한 패키지를 설치합니다."
-          },
-          {
-            "title": "로컬 스택 실행",
-            "command": "pnpm go",
-            "note": "환경 변수를 설정하고 도커 서비스를 구동합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론한 뒤 의존성을 설치합니다.",
-          "pnpm go 명령어로 로컬 개발 환경 및 도커 서비스를 시작합니다.",
-          "브라우저에서 접속하여 서베이를 만들고 피드백 수집을 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 13252,
-        "forks": 2617,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T04:06:36.904Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T04:06:41.203Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "onionshare",
@@ -63032,90 +63000,6 @@
         "stars": 5226,
         "forks": 709,
         "starsUpdatedAt": "2026-11-10"
-      }
-    },
-    {
-      "id": "mautic",
-      "name": "Mautic",
-      "github": "https://github.com/mautic/mautic",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-10T14:07:08.726Z",
-      "sourceRun": "2026-11-10T23",
-      "tool": {
-        "id": "mautic",
-        "name": "Mautic",
-        "github": "https://github.com/mautic/mautic",
-        "description": "디지털 마케팅 캠페인과 이메일 자동화를 위한 오픈소스 마케팅 플랫폼",
-        "longDescription": "이메일 마케팅, 캠페인 자동화, 리드 관리 등을 통합하여 실행할 수 있는 세계 최대 규모의 오픈소스 마케팅 자동화 소프트웨어입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "마케팅자동화",
-          "PHP",
-          "이메일마케팅",
-          "DXP",
-          "오픈소스"
-        ],
-        "platforms": [
-          "Web",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.mautic.org",
-        "featured": 9,
-        "added": "2026-11-10",
-        "addedAt": "2026-11-10T14:04:22.437Z",
-        "requirements": [
-          "PHP",
-          "MySQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "공식 다운로드",
-            "command": "mautic.org/download에서 패키지 다운로드",
-            "note": "웹 서버에 패키지를 업로드하고 설치 마법사를 진행합니다."
-          }
-        ],
-        "usageSteps": [
-          "서버 요구사항에 맞는 PHP 및 데이터베이스 환경 준비",
-          "공식 웹사이트에서 Mautic 패키지 다운로드 또는 Git을 통해 로컬 설정",
-          "웹 설치 마법사를 통해 데이터베이스 연결 및 관리자 계정 생성",
-          "마케팅 캠페인 및 이메일 자동화 워크플로우 구성"
-        ],
-        "examplePrompt": "",
-        "usageNote": "CLI 명령어를 통한 유지보수와 스키마 동기화가 필요할 수 있습니다.",
-        "stars": 10961,
-        "forks": 3532,
-        "starsUpdatedAt": "2026-11-10"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-10T14:07:11.956Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-10T14:07:19.367Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
       }
     },
     {
