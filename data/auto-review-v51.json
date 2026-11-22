@@ -1,7 +1,1383 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-22T11:31:17.995Z",
+  "updatedAt": "2026-11-22T12:07:03.643Z",
   "items": [
+    {
+      "id": "companyos",
+      "name": "CompanyOS",
+      "github": "https://github.com/kortix-ai/CompanyOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "companyos",
+        "name": "CompanyOS",
+        "github": "https://github.com/kortix-ai/CompanyOS",
+        "description": "기업용 멀티플레이어 AI 에이전트와 인프라를 구축할 수 있는 오픈소스 오퍼레이팅 시스템입니다.",
+        "longDescription": "다양한 이벤트와 웹훅을 통해 백그라운드에서 병렬로 실행되는 자율형 AI 에이전트 하네스입니다. 기업 내에서 필요한 에이전트와 스킬을 깃(Git) 저장소 기반으로 관리하고 확장할 수 있습니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 에이전트",
+          "LLM",
+          "오픈소스",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kortix.com",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Git",
+          "Node.js"
+        ],
+        "supportedAgents": [
+          "Kortix Agent"
+        ],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하여 로컬 환경을 설정합니다.",
+          "필요한 환경 변수 및 외부 서비스 연동 정보를 입력합니다.",
+          "에이전트 스크립트를 정의하고 실행합니다."
+        ],
+        "examplePrompt": "회사 내 메신저의 고객 문의에 자동으로 응답하고 지식베이스를 업데이트해 주세요.",
+        "usageNote": "",
+        "stars": 20782,
+        "forks": 3471,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:50.938Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:53.631Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckError": "Gemini HTTP 503"
+    },
+    {
+      "id": "windmill",
+      "name": "windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "windmill",
+        "name": "windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "워크플로우, 내부용 앱, AI 에이전트를 코드로 빌드하고 오케스트레이션하는 오픈소스 플랫폼",
+        "longDescription": "다양한 프로그래밍 언어로 작성된 스크립트를 공유 가능한 UI, API, 크론 작업으로 자동 전환하며 고성능 오케스트레이션을 제공합니다. 개발자와 비즈니스 팀이 함께 활용할 수 있습니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "업무 자동화",
+          "워크플로우",
+          "오픈소스"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker로 실행",
+            "command": "docker run -d --name windmill_server -p 8000:8000 ghcr.io/windmill-labs/windmill:main",
+            "note": "도커를 이용해 Windmill 서버를 빠르게 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker를 통해 Windmill 인스턴스를 실행합니다.",
+          "웹 대시보드에 접속하여 새 스크립트나 워크플로우를 생성합니다.",
+          "필요한 프로그래밍 언어로 코드를 작성하고 배포합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18675,
+        "forks": 1171,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:51.089Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:53.919Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-22T12:07:01.201Z"
+    },
+    {
+      "id": "get-jobs",
+      "name": "get_jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "get-jobs",
+        "name": "get_jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "중국 주요 채용 플랫폼을 위한 AI 구직 보조 및 이력서 자동 제출 도구입니다.",
+        "longDescription": "주요 채용 플랫폼에서 AI 분석을 활용해 이력서를 자동으로 제출하고 구직 활동을 지원하는 자동화 스크립트입니다. 반복적인 구직 과정을 줄여 효율성을 높여줍니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "업무자동화",
+          "AI",
+          "구직"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Java 21",
+          "Git"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "저장소 클론",
+            "command": "git clone https://github.com/loks666/get_jobs.git",
+            "note": "프로젝트 소스 코드를 로컬에 클론합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트를 클론하고 JDK 환경을 구성합니다.",
+          "설정 파일에 구직 플랫폼 계정 정보를 입력합니다.",
+          "자동 이력서 제출 스크립트를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "지원 플랫폼의 정책 변경에 따라 스크립트 조정이 필요할 수 있습니다.",
+        "stars": 9840,
+        "forks": 1113,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:51.297Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:54.203Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-22T12:07:02.192Z"
+    },
+    {
+      "id": "tinycast",
+      "name": "tinycast",
+      "github": "https://github.com/abue-ammar/tinycast",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "tinycast",
+        "name": "tinycast",
+        "github": "https://github.com/abue-ammar/tinycast",
+        "description": "SwiftUI 기반의 빠르고 가벼운 macOS 전용 네이티브 앱 런처 및 생산성 도구",
+        "longDescription": "Electron이나 텔레메트리 없이 순수 네이티브 기술로 구현되어 가볍고 빠릅니다. 기존 Raycast 확장 프로그램을 호환하여 유연하게 확장할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "macOS",
+          "앱런처",
+          "생산성"
+        ],
+        "platforms": [
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://tinycast.dev",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "macOS 26 이상 (Apple Silicon 권장)",
+          "Homebrew"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Homebrew 설치",
+            "command": "brew install --cask tinycast",
+            "note": "홈브루를 이용하여 Tinycast를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Homebrew 명령어를 통해 앱을 설치합니다.",
+          "애플리케이션 폴더에서 Tinycast를 실행합니다.",
+          "단축키를 설정하여 앱 런처 및 유틸리티 기능을 사용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 9694,
+        "forks": 617,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:51.440Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:54.470Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-22T12:07:02.875Z"
+    },
+    {
+      "id": "snow-shot",
+      "name": "snow-shot",
+      "github": "https://github.com/mg-chao/snow-shot",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "snow-shot",
+        "name": "snow-shot",
+        "github": "https://github.com/mg-chao/snow-shot",
+        "description": "스크린샷 캡처, 주석, 오프라인 OCR, 이미지 핀 기능을 제공하는 무료 오픈소스 도구",
+        "longDescription": "Windows와 macOS를 지원하며 화면 캡처, 도형 및 텍스트 주석 추가, 오프라인 OCR, 화면 고정 기능을 제공합니다. 스크롤 캡처와 다양한 생산성 기능을 무료로 이용할 수 있습니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "스크린샷",
+          "OCR",
+          "생산성"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://snowshot.top",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "GitHub Releases 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+          "프로그램을 실행하고 단축키로 영역 또는 전체 화면을 캡처합니다.",
+          "필요에 따라 OCR 또는 주석 편집 기능을 활용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 7300,
+        "forks": 483,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:51.639Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:54.784Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-22T12:07:03.643Z"
+    },
+    {
+      "id": "lightdash",
+      "name": "lightdash",
+      "github": "https://github.com/lightdash/lightdash",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "lightdash",
+        "name": "lightdash",
+        "github": "https://github.com/lightdash/lightdash",
+        "description": "코드 기반의 지표 정의와 AI 에이전트를 지원하는 오픈소스 Agentic BI 및 데이터 분석 플랫폼입니다.",
+        "longDescription": "컨텍스트 계층을 통해 검증된 메트릭과 비즈니스 로직을 한 번 정의하고, 이를 대시보드나 AI 에이전트, API 등 다양한 방식으로 활용할 수 있게 해줍니다.",
+        "category": "지식·검색",
+        "tags": [
+          "BI",
+          "데이터 분석",
+          "AI 에이전트",
+          "TypeScript",
+          "SQL"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://lightdash.com",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Docker",
+          "Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Lightdash Cloud를 이용하거나 자체 인프라에 Docker로 배포합니다.",
+          "프로젝트 설정 및 데이터베이스를 연결합니다.",
+          "자연어로 질문하여 대시보드 및 분석 결과를 확인합니다."
+        ],
+        "examplePrompt": "지난 분기 지역별 매출 상위 5개 제품을 보여주세요.",
+        "usageNote": "",
+        "stars": 6243,
+        "forks": 811,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:51.791Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:55.044Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "app-store-compliance",
+      "name": "app-store-compliance",
+      "github": "https://github.com/mjmirza/app-store-compliance",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "app-store-compliance",
+        "name": "app-store-compliance",
+        "github": "https://github.com/mjmirza/app-store-compliance",
+        "description": "앱스토어 및 구글 플레이 심사 거절 사유를 사전 예방하는 오픈소스 플레이북이자 AI 코딩 에이전트용 스킬입니다.",
+        "longDescription": "124가지의 앱 거절 패턴과 해결책, 개인정보 매니페스트 및 최신 규제 마감일을 추적하여 모바일 앱 개발자가 심사 반려를 미리 방지하도록 돕습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "모바일",
+          "앱스토어",
+          "규정 준수",
+          "AI 에이전트",
+          "Shell"
+        ],
+        "platforms": [
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://mjmirza.github.io/app-store-compliance/",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Git",
+          "Bash"
+        ],
+        "supportedAgents": [
+          "Claude Code",
+          "Cursor",
+          "GitHub Copilot",
+          "Gemini CLI"
+        ],
+        "install": [
+          {
+            "title": "저장소 클론",
+            "command": "git clone https://github.com/mjmirza/app-store-compliance ~/repositories/app-store-compliance",
+            "note": "플레이북 저장소를 로컬에 클론합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하여 로컬 환경에 다운로드합니다.",
+          "제공되는 검사 스크립트를 프로젝트 디렉토리에서 실행합니다.",
+          "감지된 위반 사항을 수정하여 앱 스토어 심사를 대비합니다."
+        ],
+        "examplePrompt": "이 iOS 앱 프로젝트에 앱스토어 거절 사유가 될 만한 요소가 있는지 검사해 줘.",
+        "usageNote": "",
+        "stars": 3676,
+        "forks": 222,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:51.987Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:55.271Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "treesheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "treesheets",
+        "name": "treesheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "스프레드시트, 마인드맵, 아웃라이너의 기능을 결합한 자유형 계층형 데이터 정리 및 생산성 도구입니다.",
+        "longDescription": "복잡한 할 일 목록, 일정, 브레인스토밍 및 프로젝트 계획을 구조화하기에 적합하며, 다차원 계층 구조로 정보를 한눈에 관리할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "스프레드시트",
+          "마인드맵",
+          "지식 관리",
+          "C++"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "GitHub Releases에서 운영체제별 바이너리를 다운로드합니다.",
+          "프로그램을 실행하고 새로운 트리 문서를 생성합니다.",
+          "계층별로 데이터를 입력하고 구조화하여 관리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "macOS에서는 최초 실행 시 서명되지 않은 앱 경고가 발생할 수 있습니다.",
+        "stars": 3212,
+        "forks": 228,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:52.179Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:55.790Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "opendroid",
+      "name": "opendroid",
+      "github": "https://github.com/JMAN730/opendroid",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "opendroid",
+        "name": "opendroid",
+        "github": "https://github.com/JMAN730/opendroid",
+        "description": "접근성 기반 화면 자동화와 LLM을 결합하여 안드로이드 기기를 자율적으로 제어하는 오픈소스 AI 에이전트입니다.",
+        "longDescription": "안드로이드 스마트폰 상에서 사용자의 복잡한 자연어 명령을 여러 단계의 작업으로 계획하고 실행하여, 화면을 스스로 조작하고 검증할 수 있는 프로덕션급 에이전트입니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI 에이전트",
+          "안드로이드",
+          "자동화",
+          "Kotlin"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://jman730.github.io/opendroid/",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Java 21",
+          "Android SDK 35"
+        ],
+        "supportedAgents": [
+          "OpenDroid Agent"
+        ],
+        "install": [
+          {
+            "title": "소스 클론 및 빌드",
+            "command": "git clone https://github.com/JMAN730/opendroid.git && cd opendroid && ./gradlew assembleDebug",
+            "note": "프로젝트를 클론하고 디버그 APK를 빌드합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소를 클론하고 Gradle을 이용해 APK를 빌드합니다.",
+          "안드로이드 기기에 앱을 설치합니다.",
+          "앱 실행 후 접근성(Accessibility) 권한을 활성화하여 AI 제어를 허용합니다."
+        ],
+        "examplePrompt": "내일 비가 오는지 확인하고, 비가 오면 아내에게 늦을 거라고 문자 메시지를 보내줘.",
+        "usageNote": "",
+        "stars": 1300,
+        "forks": 201,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:52.392Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:56.031Z",
+      "documentEvidence": {
+        "license": "Apache-2.0",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "rocketsimapp",
+      "name": "RocketSimApp",
+      "github": "https://github.com/AvdLee/RocketSimApp",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "rocketsimapp",
+        "name": "RocketSimApp",
+        "github": "https://github.com/AvdLee/RocketSimApp",
+        "description": "iOS 시뮬레이터의 테스트, 디버깅, 네트워크 모니터링 및 AI 에이전트 자동화를 지원하는 30여 가지 개발자 도구입니다.",
+        "longDescription": "iOS 개발 속도를 높이기 위해 시뮬레이터의 동작을 더 쉽게 검사하고, 화면 캡처, 접근성 검사 및 AI 코딩 에이전트용 CLI 연동 기능을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "iOS",
+          "디버깅",
+          "개발자 도구",
+          "Swift"
+        ],
+        "platforms": [
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.rocketsim.app",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Xcode",
+          "macOS"
+        ],
+        "supportedAgents": [
+          "RocketSim CLI Agent"
+        ],
+        "install": [],
+        "usageSteps": [
+          "공식 웹사이트에서 RocketSim을 다운로드하여 설치합니다.",
+          "Xcode 시뮬레이터를 실행하고 RocketSim 기능을 활성화합니다.",
+          "필요한 디버깅, 네트워크 모니터링 또는 CLI 자동화 명령어를 사용합니다."
+        ],
+        "examplePrompt": "현재 실행 중인 iOS 시뮬레이터 화면의 UI 상태를 분석해 줘.",
+        "usageNote": "",
+        "stars": 813,
+        "forks": 38,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:52.542Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-22T12:06:56.270Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "shepherd",
+      "name": "Shepherd",
+      "github": "https://github.com/shipshapecode/shepherd",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "shepherd",
+        "name": "Shepherd",
+        "github": "https://github.com/shipshapecode/shepherd",
+        "description": "웹 및 모바일 애플리케이션에서 사용자 온보딩을 위한 가이드 투어 및 툴팁을 생성하는 자바스크립트 라이브러리입니다.",
+        "longDescription": "웹 애플리케이션 사용자를 단계별로 안내하는 가이드 투어와 툴팁을 쉽게 구현할 수 있도록 돕습니다. 모달 오버레이 기능과 다양한 위치 지정 옵션을 지원하여 직관적인 사용자 온보딩 경험을 제공합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "JavaScript",
+          "TypeScript",
+          "온보딩",
+          "UI"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://shepherdjs.dev",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm 설치",
+            "command": "npm install shepherd.js",
+            "note": "프로젝트에 패키지를 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "패키지를 프로젝트에 설치합니다.",
+          "Shepherd 모듈과 스타일을 임포트합니다.",
+          "Tour 객체를 생성하고 단계를 정의합니다.",
+          "tour.start()를 호출하여 투어를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 13838,
+        "forks": 657,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:52.799Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "ariakit",
+      "name": "Ariakit",
+      "github": "https://github.com/ariakit/ariakit",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "ariakit",
+        "name": "Ariakit",
+        "github": "https://github.com/ariakit/ariakit",
+        "description": "웹 애플리케이션을 위한 접근성과 확장성이 뛰어난 UI 컴포넌트 및 스타일 툴킷입니다.",
+        "longDescription": "WAI-ARIA 표준을 준수하는 접근성 높은 웹 컴포넌트를 구축할 수 있도록 돕는 리액트 기반 툴킷입니다. 디자인에 구애받지 않는 유연한 구조를 제공하며, 커스텀 디자인 시스템을 구축하는 데 적합합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "React",
+          "TypeScript",
+          "UI",
+          "접근성"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://ariakit.com",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Node.js",
+          "React"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 설치",
+            "command": "npm install @ariakit/react",
+            "note": "React용 Ariakit 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 패키지를 설치합니다.",
+          "필요한 UI 컴포넌트를 임포트합니다.",
+          "컴포넌트를 조합하여 접근성 있는 인터페이스를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8643,
+        "forks": 426,
+        "starsUpdatedAt": "2026-11-22"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-22T12:06:52.973Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "No GitHub license metadata"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "gluestack-ui",
+      "name": "gluestack-ui",
+      "github": "https://github.com/gluestack/gluestack-ui",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "gluestack-ui",
+        "name": "gluestack-ui",
+        "github": "https://github.com/gluestack/gluestack-ui",
+        "description": "Tailwind CSS 기반의 고성능 리액트 및 리액트 네이티브 유니버설 컴포넌트 라이브러리입니다.",
+        "longDescription": "Tailwind CSS(NativeWind)를 활용해 웹과 모바일 환경 모두에서 작동하는 범용 UI 컴포넌트를 제공합니다. 뛰어난 성능과 손쉬운 커스터마이제이션을 지원하여 크로스플랫폼 앱 개발을 가속화합니다.",
+        "category": "개발 도구",
+        "tags": [
+          "React Native",
+          "Expo",
+          "Tailwind CSS",
+          "UI 컴포넌트"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://gluestack.io/",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Node.js",
+          "React Native",
+          "Expo"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "초기화",
+            "command": "npx gluestack-ui init",
+            "note": "프로젝트에 gluestack-ui를 설정합니다."
+          }
+        ],
+        "usageSteps": [
+          "기존 Expo 또는 React Native 프로젝트를 준비합니다.",
+          "초기화 명령어를 실행하여 설정합니다.",
+          "필요한 컴포넌트를 복사하여 프로젝트에 추가합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 5359,
+        "forks": 238,
+        "starsUpdatedAt": "2026-11-22"
+      }
+    },
+    {
+      "id": "wppconnect",
+      "name": "WPPConnect",
+      "github": "https://github.com/wppconnect-team/wppconnect",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "wppconnect",
+        "name": "WPPConnect",
+        "github": "https://github.com/wppconnect-team/wppconnect",
+        "description": "Puppeteer를 기반으로 노드 환경에서 왓섭 웹을 제어하고 봇을 구축할 수 있는 자동화 라이브러리입니다.",
+        "longDescription": "Node.js와 TypeScript 환경에서 왓섭 웹 세션을 관리하고, 메시지를 송수신하며, 미디어를 처리할 수 있는 오픈소스 자동화 도구입니다. 챗봇 및 비즈니스 메시징 자동화 워크플로우 구축에 유용합니다.",
+        "category": "브라우저 자동화",
+        "tags": [
+          "Node.js",
+          "TypeScript",
+          "Puppeteer",
+          "챗봇"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://wppconnect.io/wppconnect/",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Node.js",
+          "Puppeteer"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 설치",
+            "command": "npm install @wppconnect-team/wppconnect",
+            "note": "WPPConnect 라이브러리를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Node.js 환경에서 패키지를 설치합니다.",
+          "세션을 생성하고 초기화 코드를 작성합니다.",
+          "이벤트 핸들러를 통해 메시지 송수신 및 자동화 로직을 구현합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "왓섭 웹의 업데이트에 따라 패키지 버전 관리와 릴리스 노트 확인이 필요합니다.",
+        "stars": 3534,
+        "forks": 589,
+        "starsUpdatedAt": "2026-11-22"
+      }
+    },
+    {
+      "id": "folkbench",
+      "name": "Folkbench",
+      "github": "https://github.com/Folkbench/folkbench",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "folkbench",
+        "name": "Folkbench",
+        "github": "https://github.com/Folkbench/folkbench",
+        "description": "AI API 중전소 순위 비교, 성능 벤치마크 및 다양한 CLI 도구 연동을 지원하는 플랫폼입니다.",
+        "longDescription": "다양한 대형 언어 모델 API 중전소의 성능을 비교하고 순위를 제공하며, Claude Code, Codex, Gemini CLI 등과 연동할 수 있는 스위치 도구를 제공합니다. 개발자가 최적의 API 라우팅과 비용 효율성을 관리하도록 돕습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "AI",
+          "API Gateway",
+          "LLM",
+          "Benchmark"
+        ],
+        "platforms": [
+          "Web",
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://folkbench.com",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Node.js 또는 Rust 툴체인"
+        ],
+        "supportedAgents": [
+          "Claude Code",
+          "OpenAI Codex",
+          "Gemini CLI"
+        ],
+        "install": [
+          {
+            "title": "릴리스 다운로드",
+            "command": "git clone https://github.com/Folkbench/folkbench.git",
+            "note": "저장소를 복제하여 시작합니다."
+          }
+        ],
+        "usageSteps": [
+          "웹사이트 또는 저장소를 통해 최신 릴리스를 확인합니다.",
+          "필요한 API 중전소 설정을 구성합니다.",
+          "CLI 도구와 연동하여 AI 코딩 에이전트를 실행합니다."
+        ],
+        "examplePrompt": "현재 가장 빠른 Claude API 중전소를 선택해줘",
+        "usageNote": "",
+        "stars": 3349,
+        "forks": 20,
+        "starsUpdatedAt": "2026-11-22"
+      }
+    },
+    {
+      "id": "itext-java",
+      "name": "iText for Java",
+      "github": "https://github.com/itext/itext-java",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "itext-java",
+        "name": "iText for Java",
+        "github": "https://github.com/itext/itext-java",
+        "description": "자바 개발자가 프로그래밍 방식으로 PDF 문서를 생성, 편집, 검토 및 서명할 수 있는 고성능 SDK입니다.",
+        "longDescription": "강력한 문서 엔진을 탑재하여 고수준 및 저수준 PDF 프로그래밍을 모두 지원합니다. PDF/A, 디지털 서명, 암호화, 접근성(PDF/UA) 기능 등 기업용 문서 처리 워크플로우에 광범위하게 활용됩니다.",
+        "category": "문서",
+        "tags": [
+          "Java",
+          "PDF",
+          "SDK",
+          "디지털 서명"
+        ],
+        "platforms": [],
+        "free": false,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://itextpdf.com/products/itext-suite",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Java JDK",
+          "Maven 또는 Gradle"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Maven 의존성 추가",
+            "command": "mvn install",
+            "note": "프로젝트에 iText 코어 라이브러리를 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "Maven 또는 Gradle 설정에 iText 의존성을 추가합니다.",
+          "PdfWriter와 PdfDocument 객체를 초기화합니다.",
+          "문서 레이아웃을 구성하고 PDF 파일을 생성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "상용 라이선스 외에 AGPL 오픈소스 라이선스가 적용됩니다.",
+        "stars": 2259,
+        "forks": 477,
+        "starsUpdatedAt": "2026-11-22"
+      }
+    },
+    {
+      "id": "openhtmltopdf",
+      "name": "Open HTML to PDF",
+      "github": "https://github.com/danfickle/openhtmltopdf",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "openhtmltopdf",
+        "name": "Open HTML to PDF",
+        "github": "https://github.com/danfickle/openhtmltopdf",
+        "description": "JVM 환경에서 HTML 및 CSS를 활용하여 고품질 PDF 문서를 렌더링하는 순수 자바 라이브러리입니다.",
+        "longDescription": "Flying Saucer와 Apache PDFBox를 기반으로 하여 XHTML, XML, CSS 2.1 표준을 지원하는 PDF 변환 라이브러리입니다. 웹 표준 기술을 이용해 서식 있는 문서나 보고서를 PDF로 손쉽게 출력할 수 있습니다.",
+        "category": "문서",
+        "tags": [
+          "Java",
+          "HTML",
+          "PDF",
+          "CSS"
+        ],
+        "platforms": [],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://danfickle.github.io/pdf-templates/index.html",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Java JDK"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "의존성 설정",
+            "command": "mvn compile",
+            "note": "프로젝트 빌드 파일에 라이브러리를 추가합니다."
+          }
+        ],
+        "usageSteps": [
+          "HTML 템플릿과 CSS 스타일을 준비합니다.",
+          "라이브러리를 이용해 HTML 문서를 파싱합니다.",
+          "PDF 파일 또는 이미지로 렌더링하여 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "최신 HTML5의 모든 기능을 완벽히 지원하지는 않으므로 전용 템플릿 작성 지침을 참고해야 합니다.",
+        "stars": 2205,
+        "forks": 430,
+        "starsUpdatedAt": "2026-11-22"
+      }
+    },
+    {
+      "id": "itext-dotnet",
+      "name": "iText for .NET",
+      "github": "https://github.com/itext/itext-dotnet",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "itext-dotnet",
+        "name": "iText for .NET",
+        "github": "https://github.com/itext/itext-dotnet",
+        "description": "구 iTextSharp의 후속작으로, .NET 환경에서 PDF 문서를 생성·편집·검증할 수 있는 강력한 라이브러리입니다.",
+        "longDescription": "C# 및 .NET 개발자가 프로그래밍 방식으로 PDF를 다룰 수 있도록 지원하는 고성능 SDK입니다. PDF 생성부터 암호화, 디지털 서명, 접근성 표준 준수까지 다양한 문서 처리 기능을 제공합니다.",
+        "category": "문서",
+        "tags": [
+          "C#",
+          ".NET",
+          "PDF",
+          "SDK"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": false,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://itextpdf.com/products/itext-suite",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          ".NET SDK"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "NuGet 패키지 추가",
+            "command": "dotnet add package itext",
+            "note": ".NET 프로젝트에 iText 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "NuGet을 통해 프로젝트에 itext 패키지를 추가합니다.",
+          "PdfWriter 및 PdfDocument 인스턴스를 생성합니다.",
+          "문서 요소를 추가하고 파일을 저장합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "AGPL 라이선스 조항을 준수해야 합니다.",
+        "stars": 1941,
+        "forks": 346,
+        "starsUpdatedAt": "2026-11-22"
+      }
+    },
+    {
+      "id": "renderlint",
+      "name": "renderlint",
+      "github": "https://github.com/ngocanhnckh/renderlint",
+      "license": "MIT",
+      "status": "auto_approved",
+      "reasons": [],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21"
+    },
+    {
+      "id": "react-three-a11y",
+      "name": "react-three-a11y",
+      "github": "https://github.com/pmndrs/react-three-a11y",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-22T12:06:50.199Z",
+      "sourceRun": "2026-11-22T21",
+      "tool": {
+        "id": "react-three-a11y",
+        "name": "react-three-a11y",
+        "github": "https://github.com/pmndrs/react-three-a11y",
+        "description": "React Three Fiber 환경에서 WebGL 기반 3D 콘텐츠의 접근성과 키보드 내비게이션을 지원하는 도구입니다.",
+        "longDescription": "3D 공간 내 객체들에 초점 지정, 스크린 리더 안내, 키보드 탐지 기능 등을 쉽게 추가할 수 있도록 돕습니다. 시각 장애인이나 키보드 사용자도 WebGL 애플리케이션을 원활하게 이용할 수 있게 합니다.",
+        "category": "디자인·시각화",
+        "tags": [
+          "React",
+          "Three.js",
+          "WebGL",
+          "접근성"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.pmnd.rs/a11y/introduction",
+        "featured": 9,
+        "added": "2026-11-22",
+        "addedAt": "2026-11-22T12:04:20.842Z",
+        "requirements": [
+          "Node.js",
+          "React",
+          "React Three Fiber"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "패키지 설치",
+            "command": "npm install @react-three/a11y",
+            "note": "프로젝트에 패키지를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 패키지를 설치합니다.",
+          "Canvas 컴포넌트 근처에 A11yAnnouncer를 배치합니다.",
+          "3D 컴포넌트에 접근성 속성과 컴포넌트를 적용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 632,
+        "forks": 23,
+        "starsUpdatedAt": "2026-11-22"
+      }
+    },
     {
       "id": "outline",
       "name": "Outline",
@@ -395,160 +1771,6 @@
       "lastVerifiedAt": "2026-11-22T11:31:12.771Z"
     },
     {
-      "id": "companyos",
-      "name": "CompanyOS",
-      "github": "https://github.com/kortix-ai/CompanyOS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-22T11:06:36.827Z",
-      "sourceRun": "2026-11-22T20",
-      "tool": {
-        "id": "companyos",
-        "name": "CompanyOS",
-        "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "멀티플레이어 AI 에이전트와 코드를 기반으로 기업 업무를 자동화하는 오픈소스 운영체제 플랫폼입니다.",
-        "longDescription": "다양한 AI 에이전트들이 협업하여 반복적인 업무를 병렬로 처리하고, 자체 인프라에서 안전하게 실행될 수 있도록 지원하는 클라우드 네이티브 에이전트 하네스입니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI 에이전트",
-          "자동화",
-          "TypeScript",
-          "오픈소스",
-          "LLM"
-        ],
-        "platforms": [
-          "Web",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kortix.com",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T11:04:18.594Z",
-        "requirements": [
-          "Node.js",
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소 코드를 클론하고 의존성을 설치합니다.",
-          "환경 변수에 필요한 API 키와 LLM 설정을 구성합니다.",
-          "에이전트를 실행하고 웹 인터페이스나 웹훅을 통해 작업을 지시합니다."
-        ],
-        "examplePrompt": "우리 회사의 최신 프로젝트 상태를 분석하고 요약해줘",
-        "usageNote": "지속적인 에이전트 실행을 위해 충분한 컴퓨팅 리소스가 필요합니다.",
-        "stars": 20782,
-        "forks": 3471,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T11:31:13.209Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T11:31:13.209Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "lastVerifiedAt": "2026-11-22T11:31:13.209Z"
-    },
-    {
-      "id": "windmill",
-      "name": "Windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-22T11:06:36.827Z",
-      "sourceRun": "2026-11-22T20",
-      "tool": {
-        "id": "windmill",
-        "name": "Windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "코드 중심의 빠르고 확장 가능한 오픈소스 워크플로우 오케스트레이션 및 AI 에이전트 개발 플랫폼입니다.",
-        "longDescription": "파이썬, 타입스크립트 등의 언어로 작성한 스크립트를 API, 사용자 인터페이스, 크론 잡, AI 에이전트 워크플로우로 간편하게 전환해 주는 고성능 플랫폼입니다. n8n이나 Retool의 오픈소스 대안으로 활용됩니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "워크플로우",
-          "자동화",
-          "오케스트레이션",
-          "Rust",
-          "Python"
-        ],
-        "platforms": [
-          "Web",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T11:04:18.594Z",
-        "requirements": [
-          "Docker",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Docker를 사용하여 Windmill 서버와 의존 서비스를 실행합니다.",
-          "웹 UI 또는 로컬 개발 환경에서 스크립트를 작성합니다.",
-          "스크립트를 조합하여 자동화 워크플로우 및 공유 UI를 생성합니다."
-        ],
-        "examplePrompt": "GitHub 이슈가 생성될 때마다 슬랙으로 알림을 보내는 워크플로우를 만들어줘",
-        "usageNote": "",
-        "stars": 18675,
-        "forks": 1171,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T11:31:13.712Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T11:31:13.712Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "lastVerifiedAt": "2026-11-22T11:31:13.712Z"
-    },
-    {
       "id": "sealos",
       "name": "Sealos",
       "github": "https://github.com/labring/sealos",
@@ -700,88 +1922,6 @@
         "notes": []
       },
       "lastVerifiedAt": "2026-11-22T11:31:14.759Z"
-    },
-    {
-      "id": "tinycast",
-      "name": "Tinycast",
-      "github": "https://github.com/abue-ammar/tinycast",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-22T11:06:36.827Z",
-      "sourceRun": "2026-11-22T20",
-      "tool": {
-        "id": "tinycast",
-        "name": "Tinycast",
-        "github": "https://github.com/abue-ammar/tinycast",
-        "description": "macOS 환경에서 빠른 앱 실행과 일상적인 생산성 향상을 지원하는 가볍고 빠른 네이티브 런처입니다.",
-        "longDescription": "Swift와 AppKit으로 작성되어 전자(Electron) 기반 앱의 무거움 없이 빠르게 동작하는 macOS 전용 앱 런처입니다. 기존 Raycast 확장 기능을 그대로 활용할 수 있어 가볍고 효율적입니다.",
-        "category": "개인 도구",
-        "tags": [
-          "macOS",
-          "런처",
-          "Swift",
-          "생산성",
-          "클립보드"
-        ],
-        "platforms": [
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://tinycast.dev",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T11:04:18.594Z",
-        "requirements": [
-          "macOS 26 이상",
-          "Apple Silicon"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Homebrew 설치",
-            "command": "brew install --cask tinycast",
-            "note": "Homebrew를 통해 최신 Tinycast를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "Homebrew 명령어를 사용하여 앱을 설치하거나 DMG 파일을 다운로드합니다.",
-          "응용 프로그램 폴더에서 Tinycast를 실행합니다.",
-          "단축키를 눌러 앱 실행 및 파일 검색 기능을 사용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "Apple Silicon 기반의 macOS 환경이 필요합니다.",
-        "stars": 9693,
-        "forks": 617,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T11:31:15.271Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T11:31:15.271Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "lastVerifiedAt": "2026-11-22T11:31:15.271Z"
     },
     {
       "id": "consul",
@@ -1328,468 +2468,6 @@
       "reasons": [],
       "checkedAt": "2026-11-22T11:06:36.827Z",
       "sourceRun": "2026-11-22T20"
-    },
-    {
-      "id": "get-jobs",
-      "name": "get_jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-22T10:06:32.884Z",
-      "sourceRun": "2026-11-22T19",
-      "tool": {
-        "id": "get-jobs",
-        "name": "get_jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "주요 구직 플랫폼의 이력서 자동 제출 및 구직 활동을 지원하는 AI 에이전트 스크립트",
-        "longDescription": "다양한 구직 플랫폼에서 이력서 전송과 구직 프로세스를 자동으로 처리해 줍니다. 타겟 구직 플랫폼의 정책에 유의하여 사용하세요.",
-        "category": "업무 자동화",
-        "tags": [
-          "AI 에이전트",
-          "구직",
-          "자동화"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T10:04:10.622Z",
-        "requirements": [
-          "Java"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트를 다운로드하고 설정을 구성합니다.",
-          "구직 플랫폼 계정 정보를 입력합니다.",
-          "자동 이력서 제출 스크립트를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "타겟 구직 플랫폼의 정책에 유의하여 사용하세요.",
-        "stars": 9840,
-        "forks": 1113,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T10:06:34.016Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T10:06:37.884Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-22T10:06:48.103Z"
-    },
-    {
-      "id": "snow-shot",
-      "name": "Snow Shot",
-      "github": "https://github.com/mg-chao/snow-shot",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-22T10:06:32.884Z",
-      "sourceRun": "2026-11-22T19",
-      "tool": {
-        "id": "snow-shot",
-        "name": "Snow Shot",
-        "github": "https://github.com/mg-chao/snow-shot",
-        "description": "윈도우와 맥을 지원하는 무료 오픈소스 캡처, 주석, 오프라인 OCR 및 화면 녹화 도구입니다.",
-        "longDescription": "영역 캡처, 창 캡처뿐만 아니라 스크롤 캡처, 이미지 주석, 화면 고정(핀), 오프라인 OCR 기능을 제공하는 다기능 스크린샷 소프트웨어입니다.",
-        "category": "생산성",
-        "tags": [
-          "스크린샷",
-          "화면 녹화",
-          "OCR"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://snowshot.top",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T10:04:10.622Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "GitHub 릴리스에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
-          "설치 프로그램을 실행하거나 포터블 버전을 엽니다.",
-          "단축키를 사용하여 화면 캡처 및 OCR 기능을 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 7296,
-        "forks": 483,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T10:06:34.465Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T10:06:38.658Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-22T10:06:49.694Z"
-    },
-    {
-      "id": "lightdash",
-      "name": "Lightdash",
-      "github": "https://github.com/lightdash/lightdash",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-22T10:06:32.884Z",
-      "sourceRun": "2026-11-22T19",
-      "tool": {
-        "id": "lightdash",
-        "name": "Lightdash",
-        "github": "https://github.com/lightdash/lightdash",
-        "description": "현대적인 데이터 팀을 위한 오픈소스 에이전틱 BI 및 분석 플랫폼입니다.",
-        "longDescription": "Git, CI, MCP, CLI를 통해 분석을 관리하며, 사용자가 자연어로 질문하면 정의된 메트릭과 비즈니스 로직을 바탕으로 대시보드와 AI 에이전트가 응답을 생성합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "비즈니스 인텔리전스",
-          "데이터 분석",
-          "Text-to-SQL",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://lightdash.com",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T10:04:10.622Z",
-        "requirements": [
-          "Docker 또는 Kubernetes"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Lightdash Cloud에 가입하거나 Docker를 이용해 자체 호스팅 인스턴스를 실행합니다.",
-          "프로젝트 컨텍스트 층(Context layer)과 메트릭을 정의합니다.",
-          "대시보드 또는 AI 에이전트를 통해 데이터를 조회합니다."
-        ],
-        "examplePrompt": "지난달 국가별 총 매출액을 SQL로 변환하여 보여줘",
-        "usageNote": "",
-        "stars": 6243,
-        "forks": 811,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T10:06:34.690Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T10:06:38.946Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "wppconnect",
-      "name": "WPPConnect",
-      "github": "https://github.com/wppconnect-team/wppconnect",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-22T10:06:32.884Z",
-      "sourceRun": "2026-11-22T19",
-      "tool": {
-        "id": "wppconnect",
-        "name": "WPPConnect",
-        "github": "https://github.com/wppconnect-team/wppconnect",
-        "description": "Puppeteer를 기반으로 Node.js 및 TypeScript 환경에서 WhatsApp Web을 제어하는 자동화 라이브러리입니다.",
-        "longDescription": "세션 관리, 메시지 송수신, 미디어 처리 기능을 제공하며 챗봇과 자동화 메시지 시스템을 구축할 수 있는 오픈소스 생태계 프로젝트입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "WhatsApp",
-          "챗봇",
-          "자동화",
-          "TypeScript",
-          "Node.js"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://wppconnect.io/wppconnect/",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T10:04:10.622Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "npm 패키지 설치",
-            "command": "npm install @wppconnect-team/wppconnect",
-            "note": "프로젝트 디렉토리에서 패키지를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로젝트에 패키지를 설치합니다.",
-          "클라이언트를 초기화하고 WhatsApp Web QR 코드를 스캔합니다.",
-          "이벤트 리스너를 작성하여 메시지 송수신 및 자동화 로직을 구현합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "WhatsApp Web 업데이트에 따라 패키지 버전 관리가 필요합니다.",
-        "stars": 3534,
-        "forks": 589,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T10:06:34.928Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T10:06:39.345Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "folkbench",
-      "name": "Folkbench",
-      "github": "https://github.com/Folkbench/folkbench",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-22T10:06:32.884Z",
-      "sourceRun": "2026-11-22T19",
-      "tool": {
-        "id": "folkbench",
-        "name": "Folkbench",
-        "github": "https://github.com/Folkbench/folkbench",
-        "description": "AI API 중전소(Relay) 순위 및 성능 평가, Claude Code와 Gemini CLI 등을 지원하는 중계 스위치 플랫폼입니다.",
-        "longDescription": "다양한 LLM API 중계소의 안정성과 속도를 벤치마크하고 비교할 수 있으며, 개발 도구 및 코딩 에이전트와 연동하여 사용할 수 있습니다.",
-        "category": "AI 평가",
-        "tags": [
-          "API 게이트웨이",
-          "모델 평가",
-          "벤치마크",
-          "TypeScript",
-          "Rust"
-        ],
-        "platforms": [
-          "Web",
-          "macOS",
-          "Windows",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://folkbench.com",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T10:04:10.622Z",
-        "requirements": [],
-        "supportedAgents": [
-          "Claude Code",
-          "Gemini CLI"
-        ],
-        "install": [],
-        "usageSteps": [
-          "웹사이트 또는 릴리스 페이지에서 Folkbench를 확인합니다.",
-          "원하는 AI API 중계소의 순위와 상태를 모니터링합니다.",
-          "클라이언트 도구에 API 스위치 설정을 연동합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3348,
-        "forks": 20,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T10:06:35.098Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T10:06:39.786Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-22T10:06:32.884Z",
-      "sourceRun": "2026-11-22T19",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "스프레드시트, 마인드맵, 아웃라이너를 대체하는 자유 형식의 계층형 데이터 조직화 도구입니다.",
-        "longDescription": "할 일 목록, 일정, 프로젝트 관리, 아이디어 브레인스토밍 등 복잡한 계층 구조를 가진 데이터를 직관적이고 컴팩트하게 정리할 수 있는 크로스플랫폼 데스크톱 앱입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "지식 관리",
-          "마인드맵",
-          "스프레드시트",
-          "C++"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-11-22",
-        "addedAt": "2026-11-22T10:04:10.622Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "릴리스 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
-          "macOS의 경우 애플리케이션 폴더로 드래그하여 실행합니다.",
-          "계층형 표 형식을 활용하여 아이디어와 노트를 작성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3212,
-        "forks": 228,
-        "starsUpdatedAt": "2026-11-22"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-22T10:06:35.338Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-22T10:06:40.366Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "obsidian-ai-orange-book",
@@ -34736,66 +35414,6 @@
       ]
     },
     {
-      "id": "gluestack-ui",
-      "name": "gluestack-ui",
-      "github": "https://github.com/gluestack/gluestack-ui",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-20T07:07:11.448Z",
-      "sourceRun": "2026-11-20T16",
-      "tool": {
-        "id": "gluestack-ui",
-        "name": "gluestack-ui",
-        "github": "https://github.com/gluestack/gluestack-ui",
-        "description": "Tailwind CSS(NativeWind)를 기반으로 제작된 React 및 React Native용 유니버설 컴포넌트 라이브러리입니다.",
-        "longDescription": "복사-붙여넣기 방식으로 손쉽게 가져다 쓸 수 있는 컴포넌트와 패턴을 제공하며, 최적화된 CLI와 Expo 환경을 우선 지원합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "React",
-          "React Native",
-          "Expo",
-          "Tailwind CSS",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://gluestack.io/",
-        "featured": 9,
-        "added": "2026-11-20",
-        "addedAt": "2026-11-20T07:04:28.368Z",
-        "requirements": [
-          "Node.js",
-          "React Native 또는 Expo 프로젝트"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "초기화",
-            "command": "npx gluestack-ui init",
-            "note": "Expo 또는 React Native 프로젝트에 gluestack-ui를 초기화합니다."
-          }
-        ],
-        "usageSteps": [
-          "기존 React Native 또는 Expo 프로젝트 디렉토리로 이동합니다.",
-          "초기화 명령어를 실행하여 설정을 완료합니다.",
-          "원하는 컴포넌트를 추가하고 Tailwind CSS 스타일을 적용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 5360,
-        "forks": 238,
-        "starsUpdatedAt": "2026-11-20"
-      }
-    },
-    {
       "id": "system-design-and-architecture",
       "name": "system-design-and-architecture",
       "github": "https://github.com/puncsky/system-design-and-architecture",
@@ -46756,395 +47374,6 @@
       "sourceRun": "2026-11-19T03"
     },
     {
-      "id": "rocketsimapp",
-      "name": "RocketSim",
-      "github": "https://github.com/AvdLee/RocketSimApp",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T17:13:21.956Z",
-      "sourceRun": "2026-11-19T02",
-      "tool": {
-        "id": "rocketsimapp",
-        "name": "RocketSim",
-        "github": "https://github.com/AvdLee/RocketSimApp",
-        "description": "iOS 시뮬레이터의 테스트, 디버깅, 네트워크 모니터링을 강화하는 30여 가지 개발자 도구입니다.",
-        "longDescription": "애플 시뮬레이터 워크플로우를 간소화하고, AI 코딩 에이전트 자동화를 위한 CLI 및 스킬을 제공하여 iOS 개발 생산성을 높입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "iOS",
-          "Xcode",
-          "시뮬레이터",
-          "디버깅",
-          "Swift"
-        ],
-        "platforms": [
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.rocketsim.app",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T17:04:40.909Z",
-        "requirements": [
-          "macOS",
-          "Xcode"
-        ],
-        "supportedAgents": [
-          "Claude Code",
-          "AI Coding Agents"
-        ],
-        "install": [],
-        "usageSteps": [
-          "공식 웹사이트에서 RocketSim을 다운로드하고 설치합니다.",
-          "Xcode 시뮬레이터를 실행합니다.",
-          "RocketSim 도구를 통해 앱 액션 및 디버깅을 수행합니다."
-        ],
-        "examplePrompt": "현재 실행 중인 iOS 시뮬레이터의 화면을 캡처하고 네트워크 로그를 분석해 줘.",
-        "usageNote": "macOS 환경과 Xcode 설치가 필수적입니다.",
-        "stars": 814,
-        "forks": 38,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T17:13:24.525Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T17:13:29.452Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "opendroid",
-      "name": "OpenDroid",
-      "github": "https://github.com/JMAN730/opendroid",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T17:13:21.956Z",
-      "sourceRun": "2026-11-19T02",
-      "tool": {
-        "id": "opendroid",
-        "name": "OpenDroid",
-        "github": "https://github.com/JMAN730/opendroid",
-        "description": "접근성 기반 화면 자동화와 로컬/원격 LLM을 결합한 오픈소스 안드로이드 자율 AI 에이전트입니다.",
-        "longDescription": "사용자의 스마트폰에서 작업을 스스로 계획하고, 실행하며, 결과를 검증하는 프로덕션 수준의 모바일 AI 비서 애플리케이션입니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "안드로이드",
-          "AI에이전트",
-          "자동화",
-          "Kotlin",
-          "LLM"
-        ],
-        "platforms": [],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://jman730.github.io/opendroid/",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T17:04:40.909Z",
-        "requirements": [
-          "Android SDK 35",
-          "Java 21"
-        ],
-        "supportedAgents": [
-          "OpenDroid Agent"
-        ],
-        "install": [
-          {
-            "title": "클론 및 빌드",
-            "command": "git clone https://github.com/JMAN730/opendroid.git && cd opendroid && ./gradlew assembleDebug",
-            "note": "프로젝트를 클론하고 디버그 APK를 빌드합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론하고 안드로이드 스튜디오에서 엽니다.",
-          "프로젝트를 기기나 에뮬레이터에 빌드하여 설치합니다.",
-          "앱 실행 후 접근성 서비스를 활성화합니다."
-        ],
-        "examplePrompt": "내일 비가 오는지 확인하고, 비가 온다면 아내에게 늦을 것이라고 문자를 보내줘.",
-        "usageNote": "안드로이드 접근성 권한 허용이 필요합니다.",
-        "stars": 1296,
-        "forks": 200,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T17:13:24.864Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T17:13:29.903Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "app-store-compliance",
-      "name": "App Store Compliance Playbook",
-      "github": "https://github.com/mjmirza/app-store-compliance",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T17:13:21.956Z",
-      "sourceRun": "2026-11-19T02",
-      "tool": {
-        "id": "app-store-compliance",
-        "name": "App Store Compliance Playbook",
-        "github": "https://github.com/mjmirza/app-store-compliance",
-        "description": "앱스토어 및 구글플레이 리젝 패턴, 규정 준수 체크리스트를 담은 가이드 및 AI 에이전트 스킬입니다.",
-        "longDescription": "117가지의 거절 패턴과 해결책, 개인정보 매니페스트 확인, EU AI 법안 등 규제 기한 추적 기능을 제공하여 모바일 앱 심사 거절을 예방합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "앱스토어",
-          "구글플레이",
-          "모바일",
-          "컴플라이언스",
-          "Shell"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://mjmirza.github.io/app-store-compliance/",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T17:04:40.909Z",
-        "requirements": [
-          "Git",
-          "Bash"
-        ],
-        "supportedAgents": [
-          "Claude Code",
-          "GitHub Copilot",
-          "Cursor"
-        ],
-        "install": [
-          {
-            "title": "저장소 클론",
-            "command": "git clone https://github.com/mjmirza/app-store-compliance ~/repositories/app-store-compliance",
-            "note": "플레이북 저장소를 로컬에 클론합니다."
-          }
-        ],
-        "usageSteps": [
-          "저장소를 클론합니다.",
-          "제공되는 스크립트를 통해 프로젝트를 스캔합니다.",
-          "발견된 규정 위반 요소를 수정합니다."
-        ],
-        "examplePrompt": "우리 앱의 데이터 수집 항목이 구글플레이 데이터 안전 섹션 정책을 준수하는지 검사해 줘.",
-        "usageNote": "정기적인 정책 업데이트에 맞춰 수시로 가이드를 확인해야 합니다.",
-        "stars": 1254,
-        "forks": 97,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T17:13:25.073Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-18T17:13:30.305Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "shepherd",
-      "name": "Shepherd",
-      "github": "https://github.com/shipshapecode/shepherd",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T17:13:21.956Z",
-      "sourceRun": "2026-11-19T02",
-      "tool": {
-        "id": "shepherd",
-        "name": "Shepherd",
-        "github": "https://github.com/shipshapecode/shepherd",
-        "description": "웹 애플리케이션 사용자를 위한 단계별 안내 및 가이드 튜토리얼 라이브러리",
-        "longDescription": "웹 애플리케이션의 사용자 온보딩과 제품 투어를 구현하기 위한 JavaScript 가이드 툴킷입니다. 모달 오버레이와 툴팁을 활용해 버튼이나 특정 DOM 요소에 대한 사용법을 단계별로 안내할 수 있습니다.",
-        "category": "개발 도구",
-        "tags": [
-          "JavaScript",
-          "온보딩",
-          "UI",
-          "툴팁",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://shepherdjs.dev",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T17:04:40.909Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "npm 설치",
-            "command": "npm install shepherd.js",
-            "note": "프로젝트에 패키지를 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "shepherd.js 라이브러리를 임포트합니다.",
-          "Shepherd.Tour 인스턴스를 생성하고 모달 오버레이 옵션을 설정합니다.",
-          "addStep 메서드를 이용해 안내할 단계를 추가합니다.",
-          "tour.start()를 호출하여 투어를 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 13833,
-        "forks": 657,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T17:13:25.273Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "ariakit",
-      "name": "Ariakit",
-      "github": "https://github.com/ariakit/ariakit",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T17:13:21.956Z",
-      "sourceRun": "2026-11-19T02",
-      "tool": {
-        "id": "ariakit",
-        "name": "Ariakit",
-        "github": "https://github.com/ariakit/ariakit",
-        "description": "웹 애플리케이션을 위한 접근성 기반 UI 컴포넌트 및 스타일 툴킷",
-        "longDescription": "웹 접근성(WAI-ARIA)을 준수하는 강력한 UI 컴포넌트와 스타일을 제공하는 React 개발용 툴킷입니다. 복잡한 웹 인터페이스를 쉽고 안전하게 구축할 수 있도록 도와줍니다.",
-        "category": "개발 도구",
-        "tags": [
-          "React",
-          "웹 접근성",
-          "UI 컴포넌트",
-          "TypeScript",
-          "Tailwind CSS"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://ariakit.com",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T17:04:40.909Z",
-        "requirements": [
-          "React",
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 문서 및 가이드를 참고하여 프로젝트에 패키지를 설치합니다.",
-          "필요한 UI 컴포넌트를 코드로 임포트합니다.",
-          "접근성이 보장된 UI 컴포넌트를 조합하여 화면을 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 8642,
-        "forks": 425,
-        "starsUpdatedAt": "2026-11-18"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-18T17:13:25.478Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "No GitHub license metadata"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
       "id": "nvda",
       "name": "NVDA",
       "github": "https://github.com/nvaccess/nvda",
@@ -47193,180 +47422,6 @@
         "usageNote": "",
         "stars": 2694,
         "forks": 872,
-        "starsUpdatedAt": "2026-11-18"
-      }
-    },
-    {
-      "id": "itext-java",
-      "name": "iText for Java",
-      "github": "https://github.com/itext/itext-java",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T17:13:21.956Z",
-      "sourceRun": "2026-11-19T02",
-      "tool": {
-        "id": "itext-java",
-        "name": "iText for Java",
-        "github": "https://github.com/itext/itext-java",
-        "description": "자바 환경에서 PDF 문서를 생성, 편집, 조작할 수 있는 고성능 PDF 라이브러리",
-        "longDescription": "PDF 문서를 프로그래밍 방식으로 생성, 변환, 검사 및 유지보수할 수 있는 자바 기반의 강력한 SDK입니다. 디지털 서명, 암호화, 접근성(PDF/UA) 표준을 지원합니다.",
-        "category": "문서",
-        "tags": [
-          "Java",
-          "PDF",
-          "문서 처리",
-          "SDK",
-          "디지털 서명"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://itextpdf.com/products/itext-suite",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T17:04:40.909Z",
-        "requirements": [
-          "Java",
-          "Maven 또는 Gradle"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Maven 또는 Gradle 설정 파일에 iText Core 의존성을 추가합니다.",
-          "PdfWriter 및 PdfDocument 객체를 초기화합니다.",
-          "Document 객체를 이용해 텍스트와 요소를 추가하고 PDF 파일을 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "상업적 이용 시 라이선스 정책을 확인해야 합니다.",
-        "stars": 2260,
-        "forks": 477,
-        "starsUpdatedAt": "2026-11-18"
-      }
-    },
-    {
-      "id": "openhtmltopdf",
-      "name": "Open HTML to PDF",
-      "github": "https://github.com/danfickle/openhtmltopdf",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T17:13:21.956Z",
-      "sourceRun": "2026-11-19T02",
-      "tool": {
-        "id": "openhtmltopdf",
-        "name": "Open HTML to PDF",
-        "github": "https://github.com/danfickle/openhtmltopdf",
-        "description": "CSS 레이아웃을 사용하여 HTML 및 XHTML을 PDF로 변환해 주는 순수 자바 라이브러리",
-        "longDescription": "잘 구조화된 XML, XHTML 및 HTML5 일부 규격을 CSS와 함께 렌더링하여 고품질의 PDF 또는 이미지로 출력해 주는 자바 라이브러리입니다. 접근성 표준(WCAG, PDF/UA)을 지원합니다.",
-        "category": "문서",
-        "tags": [
-          "Java",
-          "HTML",
-          "PDF",
-          "PDF 생성",
-          "CSS"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://danfickle.github.io/pdf-templates/index.html",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T17:04:40.909Z",
-        "requirements": [
-          "Java",
-          "Maven"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "통합 가이드를 참고하여 Maven 아티팩트를 프로젝트에 추가합니다.",
-          "PDF로 변환할 HTML 및 CSS 템플릿을 준비합니다.",
-          "라이브러리 API를 호출하여 HTML을 PDF 문서로 렌더링하고 파일로 출력합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "복잡한 최신 HTML5 구조보다는 전용 템플릿 마크업을 사용하는 것이 좋습니다.",
-        "stars": 2206,
-        "forks": 430,
-        "starsUpdatedAt": "2026-11-18"
-      }
-    },
-    {
-      "id": "itext-dotnet",
-      "name": "iText for .NET",
-      "github": "https://github.com/itext/itext-dotnet",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-18T17:13:21.956Z",
-      "sourceRun": "2026-11-19T02",
-      "tool": {
-        "id": "itext-dotnet",
-        "name": "iText for .NET",
-        "github": "https://github.com/itext/itext-dotnet",
-        "description": ".NET 환경에서 PDF 문서를 생성하고 관리하는 iText의 닷넷 버전 라이브러리",
-        "longDescription": "구 iTextSharp의 후속작으로, .NET 개발자들이 프로그래밍 방식으로 고성능 PDF 문서를 생성, 편집, 보안 처리할 수 있도록 지원하는 강력한 SDK입니다.",
-        "category": "문서",
-        "tags": [
-          "C#",
-          ".NET",
-          "PDF",
-          "문서 처리",
-          "iTextSharp"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://itextpdf.com/products/itext-suite",
-        "featured": 9,
-        "added": "2026-11-18",
-        "addedAt": "2026-11-18T17:04:40.909Z",
-        "requirements": [
-          ".NET",
-          "NuGet"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NuGet 패키지 추가",
-            "command": "dotnet add package itext.bouncy-castle-adapter --version",
-            "note": "프로젝트에 iText 닷넷 패키지를 추가합니다."
-          }
-        ],
-        "usageSteps": [
-          "NuGet을 통해 프로젝트에 itext 패키지를 설치합니다.",
-          "코드에서 PdfWriter와 PdfDocument 네임스페이스를 선언합니다.",
-          "문서 객체를 생성하고 원하는 레이아웃과 텍스트를 작성하여 PDF로 저장합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "상업적 이용 시 라이선스 규정을 확인하십시오.",
-        "stars": 1940,
-        "forks": 346,
         "starsUpdatedAt": "2026-11-18"
       }
     },
@@ -55790,66 +55845,6 @@
         "usageNote": "실행 시 안드로이드 접근성 권한 설정이 필요합니다.",
         "stars": 993,
         "forks": 163,
-        "starsUpdatedAt": "2026-11-14"
-      }
-    },
-    {
-      "id": "react-three-a11y",
-      "name": "React Three A11y",
-      "github": "https://github.com/pmndrs/react-three-a11y",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-14T22:06:44.470Z",
-      "sourceRun": "2026-11-15T07",
-      "tool": {
-        "id": "react-three-a11y",
-        "name": "React Three A11y",
-        "github": "https://github.com/pmndrs/react-three-a11y",
-        "description": "React Three Fiber(WebGL) 환경에 웹 접근성과 스크린 리더 지원 기능을 더해주는 도구입니다.",
-        "longDescription": "3D 웹 그래픽 환경에서 키보드 탐색, 포커스 표시, 스크린 리더 안내 등 접근성 요소를 쉽게 구현할 수 있도록 리액트 컴포넌트를 제공합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "TypeScript",
-          "React",
-          "Three.js",
-          "접근성"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.pmnd.rs/a11y/introduction",
-        "featured": 9,
-        "added": "2026-11-14",
-        "addedAt": "2026-11-14T22:04:16.983Z",
-        "requirements": [
-          "npm",
-          "React",
-          "React Three Fiber"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "npm 설치",
-            "command": "npm install @react-three/a11y",
-            "note": "패키지 설치"
-          }
-        ],
-        "usageSteps": [
-          "패키지를 설치합니다.",
-          "Canvas 컴포넌트 근처에 A11yAnnouncer를 배치합니다.",
-          "3D 객체 주위에 접근성 컴포넌트를 감싸서 설정합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 632,
-        "forks": 23,
         "starsUpdatedAt": "2026-11-14"
       }
     },
@@ -112559,16 +112554,6 @@
       "name": "fsearch",
       "github": "https://github.com/cboxdoerfer/fsearch",
       "license": "GPL-2.0",
-      "status": "auto_approved",
-      "reasons": [],
-      "checkedAt": "2026-10-18T07:05:56.738Z",
-      "sourceRun": "2026-10-18T16"
-    },
-    {
-      "id": "usearch",
-      "name": "USearch",
-      "github": "https://github.com/unum-cloud/USearch",
-      "license": "Apache-2.0",
       "status": "auto_approved",
       "reasons": [],
       "checkedAt": "2026-10-18T07:05:56.738Z",
