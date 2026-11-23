@@ -1,5 +1,149 @@
 [
   {
+    "id": "awaitility",
+    "name": "Awaitility",
+    "github": "https://github.com/awaitility/awaitility",
+    "description": "자바에서 비동기 작업을 동기화하고 가독성 있게 검증할 수 있는 소형 DSL 도구입니다.",
+    "longDescription": "Awaitility는 복잡한 스레드 대기, 타임아웃, 동시성 이슈를 다루는 비동기 자바 시스템 테스트 코드를 사람이 읽기 쉽고 간결한 도메인 전용 언어(DSL) 형태로 작성할 수 있게 해줍니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Java",
+      "비동기",
+      "테스팅",
+      "DSL",
+      "동시성"
+    ],
+    "platforms": [
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/awaitility/awaitility",
+    "featured": 9,
+    "added": "2026-11-23",
+    "addedAt": "2026-11-23T07:04:22.780Z",
+    "requirements": [
+      "Java 8 이상"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "프로젝트에 Awaitility 라이브러리를 의존성으로 추가합니다.",
+      "await().atMost(5, SECONDS).until(...) 구문을 사용하여 비동기 조건이 충족될 때까지 대기합니다.",
+      "결과를 단언하여 테스트를 완료합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 4033,
+    "forks": 269,
+    "starsUpdatedAt": "2026-11-23"
+  },
+  {
+    "id": "jest-image-snapshot",
+    "name": "jest-image-snapshot",
+    "github": "https://github.com/americanexpress/jest-image-snapshot",
+    "description": "Jest 프레임워크와 연동하여 시각적 회귀 테스트를 수행할 수 있는 이미지 비교 매처입니다.",
+    "longDescription": "jest-image-snapshot은 픽셀 기반 이미지 비교를 통해 UI 컴포넌트나 웹페이지의 시각적 변경 사항을 감지하고, 기존 스냅샷과 비교하여 회귀 오류를 찾아내는 Jest 확장 매처입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Jest",
+      "JavaScript",
+      "시각적 회귀 테스트",
+      "이미지 비교",
+      "테스팅"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS",
+      "Linux"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://github.com/americanexpress/jest-image-snapshot",
+    "featured": 9,
+    "added": "2026-11-23",
+    "addedAt": "2026-11-23T07:04:22.780Z",
+    "requirements": [
+      "Node.js",
+      "Jest = 20"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "npm 설치",
+        "command": "npm i --save-dev jest-image-snapshot",
+        "note": "개발 의존성으로 패키지를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "Jest 테스트 파일에 toMatchImageSnapshot 매처를 임포트합니다.",
+      "렌더링된 이미지 버퍼를 expect() 함수에 전달합니다.",
+      "toMatchImageSnapshot()을 호출하여 스냅샷과 비교합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3919,
+    "forks": 212,
+    "starsUpdatedAt": "2026-11-23"
+  },
+  {
+    "id": "sql-generator",
+    "name": "SQL Generator",
+    "github": "https://github.com/liyupi/sql-generator",
+    "description": "JSON 템플릿과 함수 호출 방식으로 복잡한 중첩 SQL을 구조화하여 생성할 수 있는 순수 프론트엔드 온라인 도구입니다.",
+    "longDescription": "SQL Generator는 대규모 데이터 분석, Hive, Spark, MySQL 등에서 반복되는 복잡한 중첩 SQL 쿼리를 JSON 템플릿 기반으로 모듈화하고 일괄 생성하여 코드 유지보수성을 높여주는 개발 도구입니다.",
+    "category": "개발 도구",
+    "tags": [
+      "Vue 3",
+      "TypeScript",
+      "SQL",
+      "코드 생성기",
+      "데이터베이스"
+    ],
+    "platforms": [
+      "Web"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "http://sql.yupi.icu",
+    "featured": 9,
+    "added": "2026-11-23",
+    "addedAt": "2026-11-23T07:04:22.780Z",
+    "requirements": [
+      "Node.js",
+      "npm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "저장소 클론",
+        "command": "git clone https://github.com/liyupi/sql-generator.git",
+        "note": "프로젝트 소스 코드를 로컬에 다운로드합니다."
+      },
+      {
+        "title": "의존성 설치 및 실행",
+        "command": "npm install && npm run dev",
+        "note": "의존성을 설치하고 개발 서버를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "웹 브라우저에서 SQL Generator 인터페이스에 접속합니다.",
+      "JSON 템플릿 형식으로 쿼리 구조와 파라미터를 작성합니다.",
+      "실시간으로 생성된 복잡한 SQL 문장을 확인하고 클립보드에 복사합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3410,
+    "forks": 684,
+    "starsUpdatedAt": "2026-11-23"
+  },
+  {
     "id": "zeabur",
     "name": "Zeabur",
     "github": "https://github.com/zeabur-oss/zeabur",
