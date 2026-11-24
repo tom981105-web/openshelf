@@ -1,5 +1,141 @@
 [
   {
+    "id": "kaloscope",
+    "name": "kaloscope",
+    "github": "https://github.com/kaloscope/kaloscope",
+    "description": "시각적 워크플로우를 기반으로 로컬 미디어 라이브러리를 관리하는 도구입니다.",
+    "longDescription": "애니메이션, 만화, 영화, 소설 등 다양한 로컬 및 네트워크(NAS) 미디어 파일을 시각적인 워크플로우 노드를 통해 체계적으로 정리하고 관리할 수 있습니다. Docker 환경을 지원하며 토렌트 및 RSS 연동 기능을 포함합니다.",
+    "category": "개인 도구",
+    "tags": [
+      "미디어관리",
+      "NAS",
+      "Python",
+      "Docker",
+      "워크플로우"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://kaloscope.org",
+    "featured": 9,
+    "added": "2026-11-24",
+    "addedAt": "2026-11-24T11:04:24.796Z",
+    "requirements": [
+      "Docker"
+    ],
+    "supportedAgents": [],
+    "install": [],
+    "usageSteps": [
+      "Docker 이미지를 다운로드하여 컨테이너 실행",
+      "웹 인터페이스에 접속하여 미디어 소스 폴더 지정",
+      "시각적 워크플로우를 구성하여 미디어 파일 분류 및 관리 자동화"
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 576,
+    "forks": 32,
+    "starsUpdatedAt": "2026-11-24"
+  },
+  {
+    "id": "investment-news",
+    "name": "Investment News",
+    "github": "https://github.com/simonlin1212/investment-news",
+    "description": "글로벌 산업 동향을 100개 이상의 소스에서 수집하고 AI로 요약해주는 A주 투자자용 로컬 뉴스 대시보드입니다.",
+    "longDescription": "반도체, AI, 로보틱스 등 12개 핵심 글로벌 산업 레이더를 추적하여 A주 투자에 유용한 신호를 포착합니다. 별도의 API 키 없이 로컬 대형 언어 모델(Claude Code 등)을 활용해 매일 핵심 요약과 번역을 제공합니다.",
+    "category": "지식·검색",
+    "tags": [
+      "투자",
+      "뉴스 대시보드",
+      "LLM",
+      "RSS",
+      "Python"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/simonlin1212/investment-news",
+    "featured": 9,
+    "added": "2026-11-24",
+    "addedAt": "2026-11-24T11:04:24.796Z",
+    "requirements": [
+      "Python",
+      "Claude Code"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [],
+    "usageSteps": [
+      "저장소 코드를 클론하고 Python 환경을 준비합니다.",
+      "`scripts/fetch.py`를 실행하여 글로벌 소스에서 최신 뉴스를 수집합니다.",
+      "`scripts/digest.py`를 실행하여 로컬 AI로 일일 요약 및 번역을 생성한 뒤 웹 대시보드로 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "macOS 환경에서 SSL 인증서 관련 오류 발생 시 Python 인증서 설치 스크립트를 먼저 실행해야 합니다.",
+    "stars": 505,
+    "forks": 108,
+    "starsUpdatedAt": "2026-11-24"
+  },
+  {
+    "id": "goread",
+    "name": "goread",
+    "github": "https://github.com/TypicalAM/goread",
+    "description": "터미널 환경에서 아름다운 TUI로 RSS 및 Atom 피드를 구독하고 읽을 수 있는 Go 언어 기반 프로그램입니다.",
+    "longDescription": "Charmbracelet의 Bubble Tea 라이브러리를 기반으로 제작된 터미널 전용 RSS 피드 리더입니다. 피드 분류, 오프라인 모드, 사용자 정의 색상 테마, OPML 파일 가져오기 기능을 지원하여 명령줄 환경에서 효율적인 뉴스 소비가 가능합니다.",
+    "category": "생산성",
+    "tags": [
+      "Go",
+      "CLI",
+      "TUI",
+      "RSS",
+      "터미널"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "GPL-3.0",
+    "website": "https://github.com/TypicalAM/goread",
+    "featured": 9,
+    "added": "2026-11-24",
+    "addedAt": "2026-11-24T11:04:24.796Z",
+    "requirements": [
+      "Go"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Go 설치",
+        "command": "go install github.com/TypicalAM/goread@latest",
+        "note": "Go 패키지 매니저를 통해 최신 버전을 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "터미널에서 `goread` 명령어를 실행하여 TUI 인터페이스를 엽니다.",
+      "OPML 파일을 가져오거나 개별 RSS 피드 URL을 추가합니다.",
+      "키보드 단축키를 이용해 피드를 카테고리별로 탐색하고 기사를 읽습니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 490,
+    "forks": 22,
+    "starsUpdatedAt": "2026-11-24"
+  },
+  {
     "id": "lfmediaeditingcontroller",
     "name": "LFMediaEditingController",
     "github": "https://github.com/lincf0912/LFMediaEditingController",
