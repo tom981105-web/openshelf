@@ -1,5 +1,151 @@
 [
   {
+    "id": "hermes-hudui",
+    "name": "Hermes HUD",
+    "github": "https://github.com/joeynyc/hermes-hudui",
+    "description": "영구 메모리를 가진 AI 에이전트 'Hermes'의 상태를 모니터링할 수 있는 웹 기반 대시보드입니다.",
+    "longDescription": "Hermes 에이전트의 디스크 내 상태 파일과 CLI 데이터를 직접 읽어와 에이전트의 동작, 모델 분석, 도구 사용 내역 등을 웹 브라우저 화면에서 실시간으로 시각화해 줍니다.",
+    "category": "AI 평가",
+    "tags": [
+      "AI 에이전트",
+      "대시보드",
+      "Python",
+      "TypeScript"
+    ],
+    "platforms": [
+      "Web",
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/joeynyc/hermes-hudui",
+    "featured": 9,
+    "added": "2026-11-24",
+    "addedAt": "2026-11-24T20:04:27.627Z",
+    "requirements": [
+      "Python 3.11+",
+      "Node.js 22.12+"
+    ],
+    "supportedAgents": [
+      "Hermes"
+    ],
+    "install": [
+      {
+        "title": "저장소 복제 및 설치",
+        "command": "git clone https://github.com/joeynyc/hermes-hudui.git && cd hermes-hudui && ./install.sh",
+        "note": "프로젝트를 클론한 후 설치 스크립트를 실행합니다."
+      }
+    ],
+    "usageSteps": [
+      "설치 스크립트를 실행하여 의존성을 설치합니다.",
+      "로컬에 실행 중인 Hermes 에이전트 환경을 확인합니다.",
+      "대시보드를 실행하고 브라우저에서 상태를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "로컬에 실행 중인 Hermes 에이전트 데이터 경로가 필요합니다.",
+    "stars": 1863,
+    "forks": 231,
+    "starsUpdatedAt": "2026-11-24"
+  },
+  {
+    "id": "tracekit",
+    "name": "Tracekit",
+    "github": "https://github.com/Cygnux-Labs/Tracekit",
+    "description": "AI 에이전트의 도구 호출을 사전 검사하고 암호학적 서명을 통해 위변조 방지 감사 로그를 기록하는 보안 도구입니다.",
+    "longDescription": "에이전트가 실행하는 각 도구 호출을 모니터링하여 위험한 작업을 차단하거나 승인을 거치게 만듭니다. 인증서 투명성 구조와 유사하게 누구나 오프라인에서 검증할 수 있는 서명된 기록을 남깁니다.",
+    "category": "보안·개인정보",
+    "tags": [
+      "AI 보안",
+      "감사 로그",
+      "Python",
+      "가드레일"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://cygnuxlabs.com/tracekit",
+    "featured": 9,
+    "added": "2026-11-24",
+    "addedAt": "2026-11-24T20:04:27.627Z",
+    "requirements": [
+      "Python"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "감사 도구 실행",
+        "command": "uvx --from tracekit-ai tracekit audit --since 7d",
+        "note": "최근 7일간의 에이전트 세션 내역을 감사하고 분석합니다."
+      }
+    ],
+    "usageSteps": [
+      "패키지 관리 도구를 통해 Tracekit을 실행합니다.",
+      "에이전트 세션 기록을 지정하여 감사 명령어를 수행합니다.",
+      "차단된 호출 내역 및 보안 리포트를 확인합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 878,
+    "forks": 137,
+    "starsUpdatedAt": "2026-11-24"
+  },
+  {
+    "id": "pcm",
+    "name": "pcm",
+    "github": "https://github.com/intel/pcm",
+    "description": "인텔 프로세서의 성능 카운터와 에너지 소비량을 모니터링하는 도구입니다.",
+    "longDescription": "CPU 코어 주파수, 캐시 적중률, 대역폭 및 전력 소모 등 하드웨어 레벨의 성능 지표를 실시간으로 측정하고 분석할 수 있는 유틸리티입니다.",
+    "category": "시스템·인프라",
+    "tags": [
+      "CPU",
+      "성능 분석",
+      "모니터링",
+      "C++"
+    ],
+    "platforms": [
+      "Linux",
+      "Windows",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "BSD-3-Clause",
+    "website": "https://github.com/intel/pcm",
+    "featured": 9,
+    "added": "2026-11-24",
+    "addedAt": "2026-11-24T20:04:27.627Z",
+    "requirements": [
+      "CMake",
+      "C++ 컴파일러"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "CMake 빌드",
+        "command": "cmake -B build && cmake --build build",
+        "note": "CMake를 통해 프로젝트를 빌드합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 클론하고 서브모듈을 최신화합니다.",
+      "CMake를 이용하여 빌드 디렉토리를 생성하고 컴파일합니다.",
+      "생성된 실행 파일을 통해 CPU 성능 지표를 모니터링합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "",
+    "stars": 3360,
+    "forks": 533,
+    "starsUpdatedAt": "2026-11-24"
+  },
+  {
     "id": "missingno",
     "name": "missingno",
     "github": "https://github.com/ResidentMario/missingno",
