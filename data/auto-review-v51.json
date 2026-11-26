@@ -1,7 +1,88 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-26T21:07:07.855Z",
+  "updatedAt": "2026-11-26T22:07:02.902Z",
   "items": [
+    {
+      "id": "companyos",
+      "name": "CompanyOS",
+      "github": "https://github.com/kortix-ai/CompanyOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "companyos",
+        "name": "CompanyOS",
+        "github": "https://github.com/kortix-ai/CompanyOS",
+        "description": "AI 네이티브 기업을 위한 오픈소스 운영체제",
+        "longDescription": "모든 데이터 소스를 연결하고 에이전트를 오케스트레이션하며 스킬과 메모리를 하나의 깃 저장소에서 관리할 수 있는 AI 네이티브 기업용 오픈소스 운영체제입니다. 각 에이전트는 독립된 클라우드 컴퓨터 환경에서 실행되며 병렬로 작업을 수행합니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI에이전트",
+          "오픈소스",
+          "셀프호스팅"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kortix.com",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Git",
+          "Node.js"
+        ],
+        "supportedAgents": [
+          "pi"
+        ],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 프로젝트를 설정합니다.",
+          "필요한 데이터 소스와 MCP 서버를 연결합니다.",
+          "에이전트와 워크플로우를 정의하여 배포합니다."
+        ],
+        "examplePrompt": "우리 팀의 주간 회의록을 바탕으로 주요 업무 진행 상황을 요약해줘.",
+        "usageNote": "",
+        "stars": 20806,
+        "forks": 3477,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:43.466Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:46.449Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-26T22:06:51.683Z"
+    },
     {
       "id": "windmill",
       "name": "Windmill",
@@ -12,19 +93,19 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-26T21:06:43.175Z",
-      "sourceRun": "2026-11-27T06",
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
       "tool": {
         "id": "windmill",
         "name": "Windmill",
         "github": "https://github.com/windmill-labs/windmill",
-        "description": "워크플로우, 내부 앱, AI 에이전트를 구축할 수 있는 오픈소스 코드 기반 플랫폼",
-        "longDescription": "Airflow, Prefect, Temporal의 대안으로 설계된 고성능 자체 호스팅 오케스트레이터입니다. 비즈니스 팀은 AI를 활용해 도구를 만들고, 엔지니어가 배포를 통제할 수 있습니다.",
+        "description": "스크립트, 워크플로우, AI 에이전트를 빌드하고 실행할 수 있는 고성능 오픈소스 코드 기반 플랫폼",
+        "longDescription": "파이썬, 타입스크립트, 고(Go) 등 다양한 언어로 작성된 스크립트를 공유 가능한 UI, API, 크론 잡 및 워크플로우로 자동 전환해 주는 플랫폼입니다. n8n, Retool 등의 오픈소스 대안으로 활용할 수 있습니다.",
         "category": "업무 자동화",
         "tags": [
           "업무 자동화",
           "워크플로우",
-          "AI 에이전트"
+          "TypeScript"
         ],
         "platforms": [
           "Web",
@@ -38,26 +119,31 @@
         "website": "https://windmill.dev",
         "featured": 9,
         "added": "2026-11-26",
-        "addedAt": "2026-11-26T21:04:23.326Z",
+        "addedAt": "2026-11-26T22:04:26.391Z",
         "requirements": [
           "Docker",
           "PostgreSQL"
         ],
         "supportedAgents": [],
-        "install": [],
+        "install": [
+          {
+            "title": "Docker 실행",
+            "command": "docker run -p 8000:8000 ghcr.io/windmill-labs/windmill:main",
+            "note": "도커를 이용해 윈드밀을 로컬 환경에 빠르게 실행합니다."
+          }
+        ],
         "usageSteps": [
-          "Docker를 사용하여 Windmill 서버를 실행합니다.",
-          "웹 대시보드에 접속하여 워크플로우 또는 스크립트를 작성합니다.",
-          "TypeScript나 Python으로 자동화 로직을 구현합니다.",
-          "에이전트와 연결하여 반복 업무를 자동화합니다."
+          "도커나 쿠버네티스를 이용해 윈드밀 인스턴스를 실행합니다.",
+          "웹 UI에 접속하여 새 스크립트 또는 워크플로우를 생성합니다.",
+          "파이썬이나 타입스크립트로 코드를 작성하고 트리거를 설정합니다."
         ],
         "examplePrompt": "",
-        "usageNote": "자체 호스팅 시 PostgreSQL 데이터베이스가 필요합니다.",
-        "stars": 18735,
+        "usageNote": "",
+        "stars": 18736,
         "forks": 1174,
         "starsUpdatedAt": "2026-11-26"
       },
-      "licenseEvidenceCheckedAt": "2026-11-26T21:06:43.875Z",
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:43.691Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -70,7 +156,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-26T21:06:46.679Z",
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:46.762Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -80,7 +166,245 @@
         "notes": []
       },
       "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T21:06:52.056Z"
+      "recheckedAt": "2026-11-26T22:06:55.466Z"
+    },
+    {
+      "id": "get-jobs",
+      "name": "Get Jobs",
+      "github": "https://github.com/loks666/get_jobs",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "get-jobs",
+        "name": "Get Jobs",
+        "github": "https://github.com/loks666/get_jobs",
+        "description": "주요 채용 플랫폼에서 이력서 자동 투여를 지원하는 AI 구직 보조 도구입니다.",
+        "longDescription": "다양한 채용 플랫폼에서 구직 활동을 자동화하고 AI 분석을 통해 맞춤형 이력서 제출을 돕는 스크립트 도구입니다. 자바 기반으로 작성되었으며 Spring Boot 및 Next.js를 활용합니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "업무자동화",
+          "AI에이전트",
+          "구직도구"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://loks666.github.io/get_jobs/",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Java",
+          "Maven"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소를 클론하고 설정 파일을 수정합니다.",
+          "구직 플랫폼 계정 정보를 입력합니다.",
+          "애플리케이션을 실행하여 자동 지원 프로세스를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "계정 보안 및 플랫폼 이용 약관을 준수하여 사용해야 합니다.",
+        "stars": 9915,
+        "forks": 1120,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:43.869Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:47.060Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-26T22:06:57.676Z"
+    },
+    {
+      "id": "tinycast",
+      "name": "Tinycast",
+      "github": "https://github.com/abue-ammar/tinycast",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "tinycast",
+        "name": "Tinycast",
+        "github": "https://github.com/abue-ammar/tinycast",
+        "description": "macOS용 가볍고 빠른 네이티브 앱 런처",
+        "longDescription": "SwiftUI와 AppKit을 사용하여 구현된 가볍고 빠른 macOS용 앱 런처입니다. Electron 의존성이 없으며 Raycast 확장 기능을 실행할 수 있습니다.",
+        "category": "생산성",
+        "tags": [
+          "생산성",
+          "macOS",
+          "앱 런처"
+        ],
+        "platforms": [
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://tinycast.dev",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "macOS"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Homebrew 설치",
+            "command": "brew install --cask tinycast",
+            "note": "Homebrew를 통해 macOS에 Tinycast를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "Homebrew 또는 DMG 파일을 통해 애플리케이션을 설치합니다.",
+          "단축키를 눌러 런처를 호출합니다.",
+          "원하는 앱 검색, 명령어 실행 또는 확장 기능을 사용합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 9845,
+        "forks": 628,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:44.042Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:47.353Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-26T22:07:01.152Z"
+    },
+    {
+      "id": "crossdesk",
+      "name": "Crossdesk",
+      "github": "https://github.com/kunkundi/crossdesk",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "crossdesk",
+        "name": "Crossdesk",
+        "github": "https://github.com/kunkundi/crossdesk",
+        "description": "웹 클라이언트 접근을 지원하는 가볍고 크로스 플랫폼을 지원하는 원격 데스크톱 소프트웨어입니다.",
+        "longDescription": "컴퓨터, 브라우저, 모바일 기기 및 터미널을 지원하는 가벼운 크로스 플랫폼 원격 제어 도구입니다. 다중 데스크톱을 모니터링하고 제어할 수 있는 DeskHub 기능을 포함합니다.",
+        "category": "개인 도구",
+        "tags": [
+          "원격 데스크톱",
+          "WebRTC",
+          "C++",
+          "크로스 플랫폼",
+          "CLI"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.crossdesk.cn",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "C++ 컴파일러"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "릴리스 페이지에서 운영체제에 맞는 설치 파일을 다운로드합니다.",
+          "원격 제어할 기기와 제어할 기기 양쪽에 프로그램을 실행합니다.",
+          "연결 코드를 입력하여 원격 세션을 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 8452,
+        "forks": 912,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:44.224Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:47.662Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckError": "Gemini HTTP 503"
     },
     {
       "id": "snow-shot",
@@ -92,19 +416,21 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "checkedAt": "2026-11-26T21:06:43.175Z",
-      "sourceRun": "2026-11-27T06",
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
       "tool": {
         "id": "snow-shot",
         "name": "Snow Shot",
         "github": "https://github.com/mg-chao/snow-shot",
-        "description": "윈도우 및 macOS를 지원하는 무료 오픈소스 화면 캡처 및 녹화 도구",
-        "longDescription": "스크린샷 주석 추가, 스크롤 캡처, 오프라인 OCR, 이미지 핀 기능을 제공하는 가벼운 데스크톱 유틸리티입니다. 윈도우와 macOS 환경에서 모두 사용할 수 있습니다.",
+        "description": "스크린샷 촬영, 주석 편집, 스크롤 캡처, 오프라인 OCR 및 이미지 고정을 지원하는 무료 오픈소스 툴입니다.",
+        "longDescription": "Windows와 macOS를 모두 지원하며, 직관적인 주석 추가, 긴 화면 캡처, 인터넷 연결이 필요 없는 오프라인 OCR 기능을 제공하는 고성능 화면 캡처 및 녹화 도구입니다.",
         "category": "생산성",
         "tags": [
           "스크린샷",
           "OCR",
-          "화면녹화"
+          "생산성",
+          "C++",
+          "화면 녹화"
         ],
         "platforms": [
           "Windows",
@@ -116,14 +442,16 @@
         "website": "https://snowshot.top",
         "featured": 9,
         "added": "2026-11-26",
-        "addedAt": "2026-11-26T21:04:23.326Z",
-        "requirements": [],
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Windows 10+ 또는 macOS 15+"
+        ],
         "supportedAgents": [],
         "install": [],
         "usageSteps": [
-          "GitHub 릴리스 페이지에서 설치 파일을 다운로드합니다.",
-          "단축키를 사용하여 원하는 영역을 캡처합니다.",
-          "필요에 따라 OCR 추출이나 스크롤 캡처 기능을 사용합니다."
+          "GitHub 릴리스에서 플랫폼별 패키지를 다운로드하여 설치합니다.",
+          "단축키를 사용하여 화면 영역이나 창을 캡처합니다.",
+          "필요에 따라 OCR 추출이나 이미지 핀 기능을 활용합니다."
         ],
         "examplePrompt": "",
         "usageNote": "",
@@ -131,7 +459,7 @@
         "forks": 516,
         "starsUpdatedAt": "2026-11-26"
       },
-      "licenseEvidenceCheckedAt": "2026-11-26T21:06:44.043Z",
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:44.437Z",
       "licenseEvidence": {
         "license": null,
         "source": null,
@@ -144,7 +472,7 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ],
-      "documentEvidenceCheckedAt": "2026-11-26T21:06:47.091Z",
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:48.539Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -152,9 +480,920 @@
         "freeClaim": "unknown",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
+      }
+    },
+    {
+      "id": "lightdash",
+      "name": "Lightdash",
+      "github": "https://github.com/lightdash/lightdash",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "lightdash",
+        "name": "Lightdash",
+        "github": "https://github.com/lightdash/lightdash",
+        "description": "코드 기반으로 분석과 AI 에이전트를 구축할 수 있는 오픈소스 에이전틱 BI 플랫폼입니다.",
+        "longDescription": "데이터 팀이 Git, CI, MCP 및 CLI를 활용하여 지표 정의, 대시보드 생성, AI 에이전트 연동을 수행할 수 있도록 지원하는 비즈니스 인텔리전스(BI) 플랫폼입니다. 자연어 질문을 통해 데이터를 조회할 수 있습니다.",
+        "category": "지식·검색",
+        "tags": [
+          "BI",
+          "데이터 분석",
+          "TypeScript",
+          "SQL",
+          "셀프호스팅"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://lightdash.com",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Docker",
+          "Kubernetes"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "클라우드 서비스 이용",
+            "command": "https://www.lightdash.com/start",
+            "note": "라이트대시 클라우드를 통해 몇 분 만에 호스팅된 워크스페이스를 시작합니다."
+          }
+        ],
+        "usageSteps": [
+          "클라우드 가입 또는 Docker를 통해 인스턴스를 실행합니다.",
+          "데이터 웨어하우스 및 dbt 프로젝트를 연결합니다.",
+          "정의된 지표를 바탕으로 대시보드를 만들거나 자연어로 질문합니다."
+        ],
+        "examplePrompt": "지난 분기 지역별 매출 상위 5개 제품을 보여줘.",
+        "usageNote": "",
+        "stars": 6255,
+        "forks": 812,
+        "starsUpdatedAt": "2026-11-26"
       },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T21:06:56.568Z"
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:44.666Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:48.877Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "folkbench",
+      "name": "Folkbench",
+      "github": "https://github.com/Folkbench/folkbench",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "folkbench",
+        "name": "Folkbench",
+        "github": "https://github.com/Folkbench/folkbench",
+        "description": "AI API 중터(Relay) 서비스의 성능 비교, 랭킹 및 실시간 감시를 제공하는 개발자 도구입니다.",
+        "longDescription": "Claude, GPT, Gemini 등 주요 LLM API 중계 서비스들의 안정성과 성능을 비교·평가하고 실시간으로 모니터링할 수 있는 플랫폼입니다. Claude Code 및 Gemini CLI 등과의 연동을 지원합니다.",
+        "category": "AI 평가",
+        "tags": [
+          "AI 평가",
+          "API",
+          "TypeScript",
+          "Rust",
+          "개발 도구"
+        ],
+        "platforms": [
+          "Web",
+          "macOS",
+          "Linux",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://folkbench.com",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [
+          "claude-code",
+          "gemini-cli"
+        ],
+        "install": [],
+        "usageSteps": [
+          "웹 플랫폼에 접속하여 중계 서비스 랭킹을 확인합니다.",
+          "필요한 API 중계 설정을 개발 환경에 연동합니다.",
+          "지능형 모니터링 도구를 통해 서비스 품질을 진단합니다."
+        ],
+        "examplePrompt": "현재 가장 응답 속도가 빠른 Claude API 중계 업체를 추천해줘.",
+        "usageNote": "",
+        "stars": 3737,
+        "forks": 22,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:44.885Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:49.293Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "treesheets",
+      "name": "TreeSheets",
+      "github": "https://github.com/aardappel/treesheets",
+      "license": "Zlib",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "treesheets",
+        "name": "TreeSheets",
+        "github": "https://github.com/aardappel/treesheets",
+        "description": "아웃라인, 마인드맵, 스프레드시트를 대체하는 계층형 데이터 조직화 생산성 도구입니다.",
+        "longDescription": "할 일 목록, 일정, 프로젝트 관리, 아이디어 브레인스토밍 등 복잡한 데이터를 다차원 계층 구조로 깔끔하게 정리할 수 있는 자유 형식의 스프레드시트 소프트웨어입니다.",
+        "category": "생산성",
+        "tags": [
+          "생산성",
+          "마인드맵",
+          "스프레드시트",
+          "C++",
+          "지식 관리"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": true,
+        "license": "Zlib",
+        "website": "https://strlen.com/treesheets/",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "C++20 호환 환경"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 릴리스 페이지에서 운영체제에 맞는 바이너리를 다운로드합니다.",
+          "프로그램을 실행하고 새로운 트리시트 문서를 생성합니다.",
+          "계층형 구조로 항목을 추가하여 정보를 정리합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3214,
+        "forks": 228,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:45.114Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:49.767Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "wireguard-manager",
+      "name": "WireGuard-Manager",
+      "github": "https://github.com/complexorganizations/wireguard-manager",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "wireguard-manager",
+        "name": "WireGuard-Manager",
+        "github": "https://github.com/complexorganizations/wireguard-manager",
+        "description": "안전하고 빠른 WireGuard VPN의 배포와 관리를 간소화하는 관리 도구입니다.",
+        "longDescription": "복잡한 VPN 설정 과정을 단순화하여 초보자와 전문가 모두가 안전하고 효율적으로 가상 사설망(VPN) 환경을 구축할 수 있도록 돕는 셀프호스팅 관리 도구입니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "VPN",
+          "WireGuard",
+          "보안",
+          "Shell",
+          "셀프호스팅"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/complexorganizations/wireguard-manager",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Linux 서버",
+          "Bash"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Linux 서버에 접속합니다.",
+          "설치 스크립트를 다운로드하고 실행합니다.",
+          "안내에 따라 VPN 클라이언트 프로필을 생성하고 연결합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1862,
+        "forks": 221,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:45.341Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-26T22:06:50.451Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "zerotierone",
+      "name": "ZeroTier One",
+      "github": "https://github.com/zerotier/ZeroTierOne",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "zerotierone",
+        "name": "ZeroTier One",
+        "github": "https://github.com/zerotier/ZeroTierOne",
+        "description": "모든 네트워크 장비와 가상 머신을 가상 이더넷 스위치로 연결하는 글로벌 가상 네트워크 도구입니다.",
+        "longDescription": "인터넷 전역의 기기들을 마치 동일한 로컬 네트워크에 있는 것처럼 안전하게 연결해주는 스마트 이더넷 스위치 소프트웨어입니다. 가상 머신, 컨테이너, 데스크톱 기기 간의 P2P 통신과 소프트웨어 정의 광역 네트워크(SD-WAN) 구성을 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "네트워킹",
+          "P2P",
+          "가상 네트워크",
+          "SD-WAN",
+          "VPN"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://zerotier.com",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 웹사이트 또는 패키지 관리자를 통해 제로티어 설치",
+          "네트워크 식별자(Network ID)를 이용하여 대상 네트워크에 참여",
+          "관리자 콘솔에서 장치 승인 후 가상 IP 통신 확인"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 17292,
+        "forks": 2000,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:45.536Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "coturn",
+      "name": "coturn",
+      "github": "https://github.com/coturn/coturn",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "coturn",
+        "name": "coturn",
+        "github": "https://github.com/coturn/coturn",
+        "description": "VoIP 및 실시간 통신을 위한 오픈소스 TURN 및 STUN 서버 구현체입니다.",
+        "longDescription": "방화벽과 NAT 환경 뒤에 있는 클라이언트 간의 실시간 미디어 트래픽 전달을 돕는 TURN 및 STUN 서버입니다. WebRTC 등의 애플리케이션에서 안정적인 피어 간 연결과 미디어 트래픽 통신을 중계합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "서버",
+          "TURN",
+          "STUN",
+          "VoIP",
+          "네트워킹"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/coturn/coturn",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Docker 또는 Linux 환경"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "APT 패키지 설치",
+            "command": "apt install coturn turnserver --log-file stdout",
+            "note": "우분투 및 데비안 계열 시스템에서 직접 설치"
+          },
+          {
+            "title": "Docker 실행",
+            "command": "docker run -d -p 3478:3478 -p 3478:3478/udp -p 5349:5349 -p 5349:5349/udp -p 49152-65535:49152-65535/udp coturn/coturn",
+            "note": "도커 컨테이너를 이용한 간편 실행"
+          }
+        ],
+        "usageSteps": [
+          "서버에 coturn 패키지 설치 또는 도커 컨테이너 구동",
+          "턴 서버 설정 파일에서 사용자 인증 정보 및 포트 구성",
+          "WebRTC 클라이언트 설정에 STUN/TURN 서버 주소 연동"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 14599,
+        "forks": 2283,
+        "starsUpdatedAt": "2026-11-26"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-26T22:06:45.720Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "wppconnect",
+      "name": "WPPConnect",
+      "github": "https://github.com/wppconnect-team/wppconnect",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "wppconnect",
+        "name": "WPPConnect",
+        "github": "https://github.com/wppconnect-team/wppconnect",
+        "description": "Puppeteer 기반으로 Node.js와 TypeScript 환경에서 왓츠앱 웹을 제어하는 자동화 라이브러리입니다.",
+        "longDescription": "왓츠앱 웹(WhatsApp Web) 세션을 관리하고 메시지 송수신, 미디어 처리를 수행할 수 있는 오픈소스 자동화 도구입니다. 챗봇 구축 및 기업용 메시징 자동화 워크플로우에 유용하게 활용됩니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "TypeScript",
+          "Node.js",
+          "자동화",
+          "챗봇",
+          "Puppeteer"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://wppconnect.io/wppconnect/",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트에 패키지 설치 및 Node.js 환경 구성",
+          "스크립트 실행을 통해 왓츠앱 웹 세션 초기화",
+          "QR 코드 스캔 후 메시지 송수신 및 챗봇 로직 연동"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3550,
+        "forks": 595,
+        "starsUpdatedAt": "2026-11-26"
+      }
+    },
+    {
+      "id": "zenoh",
+      "name": "Zenoh",
+      "github": "https://github.com/eclipse-zenoh/zenoh",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "zenoh",
+        "name": "Zenoh",
+        "github": "https://github.com/eclipse-zenoh/zenoh",
+        "description": "분산 시스템과 엣지 컴퓨팅을 위해 데이터 통신, 저장, 연산을 통합하는 고성능 통신 프로토콜입니다.",
+        "longDescription": "전통적인 발행/구독(Pub/Sub) 모델과 지리적으로 분산된 스토리지 및 쿼리 기능을 결합한 분산 미들웨어입니다. 로보틱스, IoT, 엣지 환경에서 극도로 낮은 지연 시간과 높은 확장성을 제공합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Rust",
+          "분산 시스템",
+          "IoT",
+          "엣지 컴퓨팅",
+          "로보틱스"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://zenoh.io",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Rust"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 설치 가이드를 참고하여 플랫폼별 바이너리 또는 크레이트 설치",
+          "zenoh 라우터 및 노드 설정 파일 작성",
+          "분산 노드 간 발행/구독 및 데이터 쿼리 통신 테스트"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 3375,
+        "forks": 425,
+        "starsUpdatedAt": "2026-11-26"
+      }
+    },
+    {
+      "id": "shadow",
+      "name": "Shadow Simulator",
+      "github": "https://github.com/shadow/shadow",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "shadow",
+        "name": "Shadow Simulator",
+        "github": "https://github.com/shadow/shadow",
+        "description": "실제 애플리케이션 코드를 직접 실행하여 대규모 분산 네트워크를 시뮬레이션하는 개별 이벤트 네트워크 시뮬레이터입니다.",
+        "longDescription": "수천 개의 네트워크 연결 프로세스가 포함된 분산 시스템을 개인 노트북이나 서버에서 현실적이고 확장 가능하게 실험할 수 있는 시뮬레이터입니다. Tor 및 기타 네트워크 프로토콜 연구에 활용됩니다.",
+        "category": "과학·연구",
+        "tags": [
+          "시뮬레이션",
+          "네트워킹",
+          "분산 시스템",
+          "Rust",
+          "리서치"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://shadow.github.io",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Linux",
+          "C/C++ 및 Rust 빌드 도구"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Shadow 빌드 및 설치",
+            "command": "./setup build --clean --test\n./setup test\n./setup install",
+            "note": "소스코드에서 종속성 설치 후 로컬 환경에 빌드 및 설치"
+          }
+        ],
+        "usageSteps": [
+          "필수 의존성 패키지 설치 및 저장소 클론",
+          "설정 스크립트를 통해 Shadow 빌드 및 테스트 수행",
+          "시뮬레이션 설정 파일을 작성하여 분산 네트워크 실험 실행"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1749,
+        "forks": 291,
+        "starsUpdatedAt": "2026-11-26"
+      }
+    },
+    {
+      "id": "goby",
+      "name": "Goby",
+      "github": "https://github.com/gobysec/Goby",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "goby",
+        "name": "Goby",
+        "github": "https://github.com/gobysec/Goby",
+        "description": "취약점 스캔과 공격 표면 매핑을 효율적으로 수행하는 차세대 네트워크 보안 평가 도구입니다.",
+        "longDescription": "기업 대상의 공격 표면 정보를 빠르고 정확하게 수집하고, 실시간으로 보안 취약점을 스캔할 수 있는 네트워크 보안 분석 도구입니다. 일렉트론 기반의 인터페이스를 제공하며 다중 플랫폼에서 실행할 수 있습니다.",
+        "category": "보안·개인정보",
+        "tags": [
+          "보안",
+          "취약점 스캔",
+          "침투 테스트",
+          "네트워크",
+          "Electron"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://gobies.org/",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "네트워크 카드 접근 권한",
+          "Npcap (Windows 환경)"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 웹사이트에서 운영체제별 설치 패키지 다운로드",
+          "네트워크 스캔을 위한 관리자 권한 및 인터페이스 설정 확인",
+          "대상 자산 IP 대역 입력 후 취약점 및 공격 표면 진단 실행"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1528,
+        "forks": 154,
+        "starsUpdatedAt": "2026-11-26"
+      }
+    },
+    {
+      "id": "obsidian-ai-orange-book",
+      "name": "Obsidian + Claude Code Orange Book",
+      "github": "https://github.com/alchaincyf/obsidian-ai-orange-book",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "obsidian-ai-orange-book",
+        "name": "Obsidian + Claude Code Orange Book",
+        "github": "https://github.com/alchaincyf/obsidian-ai-orange-book",
+        "description": "Obsidian과 Claude Code를 결합하여 AI 기반의 두 번째 브레인 지식 관리 시스템을 구축하는 가이드 북입니다.",
+        "longDescription": "정보의 무덤이 되기 쉬운 노트 앱을 탈피하여, AI 에이전트와 Markdown 구조를 활용해 개인 지식 베이스를 체계적으로 구축하고 관리하는 방법론과 실전 워크플로우를 제공합니다.",
+        "category": "지식·검색",
+        "tags": [
+          "Obsidian",
+          "지식 관리",
+          "가이드",
+          "Markdown",
+          "PKM"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://github.com/alchaincyf/obsidian-ai-orange-book",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [],
+        "supportedAgents": [
+          "Claude Code"
+        ],
+        "install": [],
+        "usageSteps": [
+          "저장소의 가이드 문서 및 챕터 내용 확인",
+          "Obsidian 설치 및 개인 Vault 디렉토리 구성",
+          "Claude Code 연동 및 제공되는 프롬프트 워크플로우 적용"
+        ],
+        "examplePrompt": "현재 Vault의 노드들을 분석하여 연결이 누락된 항목을 찾아주세요.",
+        "usageNote": "",
+        "stars": 1519,
+        "forks": 137,
+        "starsUpdatedAt": "2026-11-26"
+      }
+    },
+    {
+      "id": "tquic",
+      "name": "TQUIC",
+      "github": "https://github.com/Tencent/tquic",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "tquic",
+        "name": "TQUIC",
+        "github": "https://github.com/Tencent/tquic",
+        "description": "텐센트에서 개발한 고성능, 경량화 크로스플랫폼 QUIC 및 HTTP/3 라이브러리입니다.",
+        "longDescription": "RFC 표준을 준수하며 모바일과 서버 환경에서 높은 성능을 발휘하도록 설계된 QUIC 및 HTTP/3 프로토콜 라이브러리입니다. Rust로 작성되어 안전하고 효율적인 네트워크 통신을 지원합니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "Rust",
+          "QUIC",
+          "HTTP/3",
+          "네트워킹",
+          "프로토콜"
+        ],
+        "platforms": [
+          "Linux",
+          "Windows",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://tquic.net/",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Rust"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트 의존성에 tquic 크레이트 추가",
+          "공식 문서의 빌드 및 실행 가이드 참고",
+          "클라이언트 및 서버 애플리케이션에 QUIC 연결 로직 구현"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1447,
+        "forks": 157,
+        "starsUpdatedAt": "2026-11-26"
+      }
+    },
+    {
+      "id": "ucx",
+      "name": "UCX (Unified Communication X)",
+      "github": "https://github.com/openucx/ucx",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "ucx",
+        "name": "UCX (Unified Communication X)",
+        "github": "https://github.com/openucx/ucx",
+        "description": "고성능, 저지연 네트워크 환경을 위한 최적화된 프로덕션 급 통신 프레임워크입니다.",
+        "longDescription": "InfiniBand, RoCE, TCP, GPU, 공유 메모리 등 다양한 하드웨어 자원을 활용하여 추상화된 고속 통신 프리미티브를 제공하는 프레임워크입니다. 고성능 컴퓨팅(HPC) 및 분산 학습 환경에서 널리 사용됩니다.",
+        "category": "시스템·인프라",
+        "tags": [
+          "HPC",
+          "RDMA",
+          "네트워킹",
+          "C",
+          "분산 컴퓨팅"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://www.openucx.org",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "Linux 환경",
+          "C 컴파일러"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Debian 패키지 빌드",
+            "command": "dpkg-buildpackage -us -uc",
+            "note": "소스 패키지로부터 데비안 패키지 생성"
+          },
+          {
+            "title": "Doxygen 문서 빌드",
+            "command": "make docs",
+            "note": "API 문서 생성"
+          }
+        ],
+        "usageSteps": [
+          "소스 코드를 클론하고 시스템 환경에 맞게 빌드 수행",
+          "성능 테스트 도구를 사용하여 서버 측 성능 측정기 구동",
+          "클라이언트 측에서 성능 테스트 연결 수행"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 1752,
+        "forks": 643,
+        "starsUpdatedAt": "2026-11-26"
+      }
+    },
+    {
+      "id": "corundum",
+      "name": "Corundum",
+      "github": "https://github.com/corundum/corundum",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-26T22:06:42.676Z",
+      "sourceRun": "2026-11-27T07",
+      "tool": {
+        "id": "corundum",
+        "name": "Corundum",
+        "github": "https://github.com/corundum/corundum",
+        "description": "네트워크 내 연산을 지원하는 오픈소스 고성능 FPGA 기반 NIC 및 플랫폼입니다.",
+        "longDescription": "10G/25G/100G 이더넷과 PCIe Gen 3, 고성능 DMA 엔진을 통합하여 맞춤형 데이터 경로와 인네트워크 연산 기능을 제공하는 오픈소스 FPGA NIC 플랫폼입니다.",
+        "category": "하드웨어·IoT",
+        "tags": [
+          "FPGA",
+          "NIC",
+          "하드웨어",
+          "Verilog",
+          "네트워킹"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://corundum.io/",
+        "featured": 9,
+        "added": "2026-11-26",
+        "addedAt": "2026-11-26T22:04:26.391Z",
+        "requirements": [
+          "FPGA 개발 보드",
+          "Verilog 시뮬레이션 환경"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소 클론 후 FPGA 툴체인 및 시뮬레이션 도구 준비",
+          "회귀 테스트(Regression Tests) 실행을 통한 빌드 검증",
+          "타겟 FPGA 보드에 비트스트림 합성 및 플래싱 수행"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 2520,
+        "forks": 585,
+        "starsUpdatedAt": "2026-11-26"
+      }
     },
     {
       "id": "flyingmouse-format",
@@ -230,160 +1469,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-26T21:07:00.891Z"
-    },
-    {
-      "id": "lightdash",
-      "name": "Lightdash",
-      "github": "https://github.com/lightdash/lightdash",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T21:06:43.175Z",
-      "sourceRun": "2026-11-27T06",
-      "tool": {
-        "id": "lightdash",
-        "name": "Lightdash",
-        "github": "https://github.com/lightdash/lightdash",
-        "description": "코드 기반의 속도와 AI 에이전트 기능을 결합한 오픈소스 비즈니스 인텔리전스(BI) 플랫폼",
-        "longDescription": "dbt 모델을 활용하여 데이터 분석을 자동화하고, Slack 봇 및 자연어 텍스트-투-SQL 질의를 통해 데이터에 쉽게 접근할 수 있도록 돕습니다.",
-        "category": "데이터 분석",
-        "tags": [
-          "BI",
-          "데이터 분석",
-          "dbt",
-          "SQL",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://lightdash.com",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T21:04:23.326Z",
-        "requirements": [
-          "Node.js",
-          "dbt"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Lightdash 프로젝트를 설정하고 dbt 저장소와 연결합니다.",
-          "데이터 모델을 정의하고 대시보드를 생성합니다.",
-          "자연어 질문이나 챗봇을 통해 데이터를 조회합니다."
-        ],
-        "examplePrompt": "지난달 국가별 매출 상위 5개 항목을 보여줘",
-        "usageNote": "",
-        "stars": 6254,
-        "forks": 812,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T21:06:44.414Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T21:06:47.662Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
-    },
-    {
-      "id": "treesheets",
-      "name": "TreeSheets",
-      "github": "https://github.com/aardappel/treesheets",
-      "license": "Zlib",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "checkedAt": "2026-11-26T21:06:43.175Z",
-      "sourceRun": "2026-11-27T06",
-      "tool": {
-        "id": "treesheets",
-        "name": "TreeSheets",
-        "github": "https://github.com/aardappel/treesheets",
-        "description": "아웃라인, 마인드맵, 스프레드시트를 결합한 계층형 자유 형식 데이터 정리 도구입니다.",
-        "longDescription": "복잡한 아이디어와 프로젝트를 계층 구조로 구조화하여 한눈에 관리할 수 있는 크로스플랫폼 데스크톱 애플리케이션입니다. 다양한 형태의 데이터를 유연하게 정리하고 시각화하는 기능을 제공합니다.",
-        "category": "생산성",
-        "tags": [
-          "스프레드시트",
-          "마인드맵",
-          "지식관리"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": true,
-        "license": "Zlib",
-        "website": "https://strlen.com/treesheets/",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T21:04:23.326Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 저장소에서 TreeSheets를 다운로드하여 실행합니다.",
-          "새로운 그리드를 생성하여 데이터를 입력합니다.",
-          "셀 안에 하위 그리드를 중첩하여 계층적 정보를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3214,
-        "forks": 228,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T21:06:44.648Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T21:06:48.150Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T21:07:07.855Z"
     },
     {
       "id": "translate-subtitle-file",
@@ -630,86 +1715,6 @@
       "reasons": [],
       "checkedAt": "2026-11-26T21:06:43.175Z",
       "sourceRun": "2026-11-27T06"
-    },
-    {
-      "id": "tinycast",
-      "name": "Tinycast",
-      "github": "https://github.com/abue-ammar/tinycast",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T21:06:43.175Z",
-      "sourceRun": "2026-11-27T06",
-      "tool": {
-        "id": "tinycast",
-        "name": "Tinycast",
-        "github": "https://github.com/abue-ammar/tinycast",
-        "description": "생산성 향상을 위해 설계된 가볍고 빠른 네이티브 macOS 런처입니다.",
-        "longDescription": "Swift와 AppKit으로 작성되었으며 Electron이나 원격 텔레메트리 없이 Raycast 확장 프로그램을 실행할 수 있는 고성능 macOS 전용 런처입니다.",
-        "category": "생산성",
-        "tags": [
-          "macOS",
-          "런처",
-          "Swift",
-          "생산성",
-          "클립보드"
-        ],
-        "platforms": [
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://tinycast.dev",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T21:04:23.326Z",
-        "requirements": [
-          "macOS 26 이상 (Apple Silicon 권장)"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Homebrew 설치",
-            "command": "brew install --cask tinycast",
-            "note": "Homebrew를 통해 macOS에 간편하게 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "Homebrew 명령어를 통해 tinycast를 설치합니다.",
-          "단축키를 눌러 런처를 호출하고 필요한 기능을 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 9840,
-        "forks": 628,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T21:06:45.404Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T21:06:50.649Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "reqable-app",
@@ -1035,244 +2040,6 @@
       "sourceRun": "2026-11-27T06"
     },
     {
-      "id": "companyos",
-      "name": "CompanyOS",
-      "github": "https://github.com/kortix-ai/CompanyOS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T20:06:40.111Z",
-      "sourceRun": "2026-11-27T05",
-      "tool": {
-        "id": "companyos",
-        "name": "CompanyOS",
-        "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "AI 네이티브 기업을 위한 오픈소스 운영체제 및 에이전트 오케스트레이션 플랫폼",
-        "longDescription": "모든 데이터 소스를 연결하고 여러 AI 에이전트를 조율하며 에이전트의 기술과 메모리를 하나의 Git 저장소에서 관리할 수 있도록 지원하는 오픈소스 운영체제입니다. 데이터 소스 통합과 Git 기반의 에이전트 관리를 제공합니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI 에이전트",
-          "운영체제",
-          "TypeScript"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kortix.com",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T20:04:19.728Z",
-        "requirements": [
-          "TypeScript",
-          "Git",
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하여 로컬 환경에 설정합니다.",
-          "연동할 데이터 소스와 애플리케이션 키를 구성합니다.",
-          "에이전트 스크립트와 작업 스케줄을 정의합니다.",
-          "시스템을 실행하여 에이전트가 병렬로 작업을 수행하도록 합니다."
-        ],
-        "examplePrompt": "수요 예측 데이터를 분석하고 주간 보고서 초안을 작성해 줘",
-        "usageNote": "셀프 호스팅 시 클라우드 리소스 및 API 키 설정이 필요합니다.",
-        "stars": 20806,
-        "forks": 3477,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T20:06:40.855Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T20:06:44.137Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T20:06:48.563Z"
-    },
-    {
-      "id": "get-jobs",
-      "name": "Get Jobs",
-      "github": "https://github.com/loks666/get_jobs",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T20:06:40.111Z",
-      "sourceRun": "2026-11-27T05",
-      "tool": {
-        "id": "get-jobs",
-        "name": "Get Jobs",
-        "github": "https://github.com/loks666/get_jobs",
-        "description": "구직 플랫폼 자동 이력서 제출 및 AI 분석 도구",
-        "longDescription": "국내외 주요 채용 플랫폼을 대상으로 이력서 자동 투사 및 구직 프로세스를 자동화하여 구직자의 시간과 노력을 덜어줍니다. 주요 구직 플랫폼에서 이력서 자동 제출 및 AI 분석을 지원하는 취업 보조 도구입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "취업보조",
-          "자동화",
-          "AI에이전트"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://loks666.github.io/get_jobs/",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T20:04:19.728Z",
-        "requirements": [
-          "Java 17+",
-          "Maven"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하고 Java 환경을 준비합니다.",
-          "설정 파일에 구직 선호 직무 및 플랫폼 계정 정보를 입력합니다.",
-          "이력서 데이터를 등록하고 매칭 조건을 설정합니다.",
-          "자동 투사 스크립트를 실행하여 구직 과정을 모니터링합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "구직 플랫폼의 이용 약관 및 자동화 제한 정책을 준수하여 사용해야 합니다.",
-        "stars": 9915,
-        "forks": 1120,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T20:06:41.421Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T20:06:44.833Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T20:06:50.025Z"
-    },
-    {
-      "id": "crossdesk",
-      "name": "Crossdesk",
-      "github": "https://github.com/kunkundi/crossdesk",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T20:06:40.111Z",
-      "sourceRun": "2026-11-27T05",
-      "tool": {
-        "id": "crossdesk",
-        "name": "Crossdesk",
-        "github": "https://github.com/kunkundi/crossdesk",
-        "description": "웹 클라이언트 접속을 지원하는 가볍고 플랫폼 간 호환성이 뛰어난 원격 데스크톱 소프트웨어입니다.",
-        "longDescription": "WebRTC 기술을 활용하여 컴퓨터, 브라우저, 모바일, 터미널 간 원격 제어 및 스트리밍을 지원하며, 여러 데스크톱을 동시에 모니터링할 수 있는 DeskHub 기능을 제공합니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "원격 데스크톱",
-          "WebRTC",
-          "크로스플랫폼"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.crossdesk.cn",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T20:04:19.728Z",
-        "requirements": [
-          "C++ 컴파일러",
-          "CMake 또는 xmake"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "지원하는 운영체제에 맞는 클라이언트 앱을 다운로드하거나 웹 클라이언트에 접속합니다.",
-          "원격 접속 대상 기기의 ID와 인증 정보를 입력합니다.",
-          "실시간 화면 스트리밍을 통해 원격 제어 및 관리를 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "네트워크 환경에 따라 방화벽 및 포트 포워딩 설정이 필요할 수 있습니다.",
-        "stars": 8442,
-        "forks": 912,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T20:06:41.890Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T20:06:45.436Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T20:06:51.328Z"
-    },
-    {
       "id": "auto-empirical-research-skills",
       "name": "Auto-Empirical-Research-Skills",
       "github": "https://github.com/brycewang-stanford/Auto-Empirical-Research-Skills",
@@ -1431,89 +2198,6 @@
         "오픈소스 또는 무료 조건 미확인"
       ],
       "documentEvidenceCheckedAt": "2026-11-26T20:06:47.069Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "folkbench",
-      "name": "Folkbench",
-      "github": "https://github.com/Folkbench/folkbench",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T20:06:40.111Z",
-      "sourceRun": "2026-11-27T05",
-      "tool": {
-        "id": "folkbench",
-        "name": "Folkbench",
-        "github": "https://github.com/Folkbench/folkbench",
-        "description": "AI API 중전소(릴레이) 추천, 랭킹, 성능 평가 및 성능 저하 모니터링 도구입니다.",
-        "longDescription": "Claude, GPT, Gemini 등 주요 대형 언어 모델의 API 중전소 성능을 비교 평가하고, Claude Code 및 관련 CLI 도구에서 원활하게 전환하여 사용할 수 있는 클라이언트와 웹 평가 서비스를 제공합니다.",
-        "category": "AI 평가",
-        "tags": [
-          "AI 벤치마크",
-          "API 게이트웨이",
-          "LLM",
-          "TypeScript",
-          "개발 도구"
-        ],
-        "platforms": [
-          "Web",
-          "macOS",
-          "Windows",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://folkbench.com",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T20:04:19.728Z",
-        "requirements": [
-          "Node.js",
-          "Rust (선택 사항)"
-        ],
-        "supportedAgents": [
-          "Claude",
-          "Codex",
-          "Gemini"
-        ],
-        "install": [],
-        "usageSteps": [
-          "Folkbench 공식 웹사이트 또는 릴리스 페이지에 방문합니다.",
-          "제공되는 AI API 중전소 랭킹 및 성능 평가 지표를 확인합니다.",
-          "필요한 API 게이트웨이 설정을 연동하여 사용 중인 AI 도구에 적용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "서드파티 API 중전소 이용 시 API 키 보안에 주의해야 합니다.",
-        "stars": 3738,
-        "forks": 22,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T20:06:42.989Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T20:06:47.521Z",
       "documentEvidence": {
         "license": null,
         "verifiedLicense": null,
@@ -1878,68 +2562,6 @@
         "usageNote": "",
         "stars": 1888,
         "forks": 696,
-        "starsUpdatedAt": "2026-11-26"
-      }
-    },
-    {
-      "id": "wppconnect",
-      "name": "WPPConnect",
-      "github": "https://github.com/wppconnect-team/wppconnect",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T20:06:40.111Z",
-      "sourceRun": "2026-11-27T05",
-      "tool": {
-        "id": "wppconnect",
-        "name": "WPPConnect",
-        "github": "https://github.com/wppconnect-team/wppconnect",
-        "description": "Puppeteer를 기반으로 Node.js 및 TypeScript에서 봇과 메시지를 관리하는 WhatsApp 웹 자동화 라이브러리입니다.",
-        "longDescription": "WhatsApp Web을 프로그래밍 방식으로 제어할 수 있는 오픈소스 라이브러리입니다. 세션 관리, 메시지 송수신, 미디어 처리 및 챗봇 구축을 지원합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "WhatsApp",
-          "자동화",
-          "챗봇",
-          "TypeScript",
-          "Node.js"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://wppconnect.io/wppconnect/",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T20:04:19.728Z",
-        "requirements": [
-          "Node.js",
-          "Puppeteer"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "패키지 설치",
-            "command": "npm i @wppconnect-team/wppconnect",
-            "note": "npm을 통한 라이브러리 설치"
-          }
-        ],
-        "usageSteps": [
-          "프로젝트에 패키지를 설치합니다.",
-          "클라이언트를 초기화하고 WhatsApp Web QR 코드를 스캔합니다.",
-          "메시지 송수신 및 이벤트 리스너를 작성하여 봇을 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "WhatsApp 플랫폼 업데이트에 따라 패키지 유지보수 및 릴리스 노트를 확인해야 합니다.",
-        "stars": 3550,
-        "forks": 595,
         "starsUpdatedAt": "2026-11-26"
       }
     },
@@ -2628,63 +3250,6 @@
         "usageNote": "",
         "stars": 1394,
         "forks": 82,
-        "starsUpdatedAt": "2026-11-26"
-      }
-    },
-    {
-      "id": "obsidian-ai-orange-book",
-      "name": "Obsidian + Claude Code",
-      "github": "https://github.com/alchaincyf/obsidian-ai-orange-book",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T19:06:44.185Z",
-      "sourceRun": "2026-11-27T04",
-      "tool": {
-        "id": "obsidian-ai-orange-book",
-        "name": "Obsidian + Claude Code",
-        "github": "https://github.com/alchaincyf/obsidian-ai-orange-book",
-        "description": "AI 기술을 활용해 개인 지식 관리 시스템(PKM)을 구축하고 '제2의 두뇌'를 만드는 가이드 및 워크플로우 모음입니다.",
-        "longDescription": "Obsidian과 Claude Code를 결합하여 마크다운 기반의 노트를 AI 에이전트가 효율적으로 이해하고 관리할 수 있도록 설계된 실전 가이드북입니다. 지식 베이스 구축과 실용적인 프롬프트 워크플로우를 제공합니다.",
-        "category": "교육·학습",
-        "tags": [
-          "지식 관리",
-          "AI",
-          "Obsidian",
-          "Markdown",
-          "가이드"
-        ],
-        "platforms": [
-          "Web",
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/alchaincyf/obsidian-ai-orange-book",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T19:04:25.321Z",
-        "requirements": [
-          "Obsidian",
-          "Claude Code"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Obsidian을 설치하고 기본 저장소(Vault)를 설정합니다.",
-          "가이드 문서에 따라 Claude Code 연동 환경을 구성합니다.",
-          "제공되는 프롬프트와 워크플로우를 활용해 지식 베이스를 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1519,
-        "forks": 137,
         "starsUpdatedAt": "2026-11-26"
       }
     },
@@ -11347,66 +11912,6 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ]
-    },
-    {
-      "id": "shadow",
-      "name": "shadow",
-      "github": "https://github.com/shadow/shadow",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T05:06:34.506Z",
-      "sourceRun": "2026-11-26T14",
-      "tool": {
-        "id": "shadow",
-        "name": "shadow",
-        "github": "https://github.com/shadow/shadow",
-        "description": "실제 애플리케이션 코드를 직접 실행하여 대규모 분산 네트워크를 시뮬레이션하는 이벤트 기반 네트워크 시뮬레이터입니다.",
-        "longDescription": "노트북이나 서버 환경에서 수천 개의 네트워크 연결 프로세스를 포함하는 사설 네트워크 실험을 현실적이고 확장성 있게 시뮬레이션할 수 있는 Rust 기반 도구입니다.",
-        "category": "시스템·인프라",
-        "tags": [
-          "네트워크",
-          "시뮬레이션",
-          "Rust",
-          "Linux",
-          "분산시스템"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://shadow.github.io",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T05:04:14.923Z",
-        "requirements": [
-          "Linux 환경",
-          "필수 빌드 의존성 패키지"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "소스 빌드 및 설치",
-            "command": "./setup build --clean --test && ./setup install",
-            "note": "Shadow를 로컬 디렉토리에 빌드하고 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "시스템 의존성을 설치합니다.",
-          "저장소의 셋업 스크립트를 실행하여 빌드 및 테스트를 진행합니다.",
-          "시뮬레이션 설정을 구성하고 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "Linux 환경에서 실행하는 것을 권장합니다.",
-        "stars": 1749,
-        "forks": 291,
-        "starsUpdatedAt": "2026-11-26"
-      }
     },
     {
       "id": "aerojax",
@@ -38901,220 +39406,6 @@
       }
     },
     {
-      "id": "wireguard-manager",
-      "name": "WireGuard-Manager",
-      "github": "https://github.com/complexorganizations/wireguard-manager",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T03:06:22.645Z",
-      "sourceRun": "2026-11-23T12",
-      "tool": {
-        "id": "wireguard-manager",
-        "name": "WireGuard-Manager",
-        "github": "https://github.com/complexorganizations/wireguard-manager",
-        "description": "고성능 WireGuard VPN 배포 및 관리를 간소화하는 관리 도구입니다.",
-        "longDescription": "사용자 친화성과 보안을 강조하여 복잡한 VPN 설정 과정을 단순화한 툴입니다. 개인 및 업무용 네트워크 환경에서 안전하고 효율적인 VPN 서버를 손쉽게 구축하고 관리할 수 있습니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "VPN",
-          "WireGuard",
-          "보안",
-          "네트워크",
-          "Shell"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/complexorganizations/wireguard-manager",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T03:04:10.897Z",
-        "requirements": [
-          "Linux",
-          "Bash"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "Linux 서버에 관리 스크립트를 다운로드합니다.",
-          "설치 스크립트를 실행하여 WireGuard 인터페이스와 설정을 초기화합니다.",
-          "새로운 클라이언트 프로필을 추가하고 연결 정보를 생성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1862,
-        "forks": 221,
-        "starsUpdatedAt": "2026-11-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-23T03:06:25.148Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-23T03:06:30.067Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "zerotierone",
-      "name": "ZeroTierOne",
-      "github": "https://github.com/zerotier/ZeroTierOne",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T03:06:22.645Z",
-      "sourceRun": "2026-11-23T12",
-      "tool": {
-        "id": "zerotierone",
-        "name": "ZeroTierOne",
-        "github": "https://github.com/zerotier/ZeroTierOne",
-        "description": "모든 네트워크 장비, 가상 머신, 컨테이너가 원활하게 통신할 수 있도록 지원하는 글로벌 가상 네트워크 스위치입니다.",
-        "longDescription": "인터넷 전역을 아우르는 스마트 프로그래머블 이더넷 스위치 역할을 수행합니다. 복잡한 설정 없이 여러 가상 머신이나 장치들을 하나의 사설망처럼 묶어 안전하게 통신하도록 돕습니다.",
-        "category": "네트워크",
-        "tags": [
-          "네트워크",
-          "P2P",
-          "VPN",
-          "SD-WAN",
-          "SDN"
-        ],
-        "platforms": [
-          "Linux",
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://zerotier.com",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T03:04:10.897Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 사이트 또는 저장소에서 ZeroTier를 다운로드하고 설치합니다.",
-          "서비스를 실행하고 네트워크 컨트롤러에 접속합니다.",
-          "네트워크 ID를 사용하여 클라이언트 장치를 연결합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 17283,
-        "forks": 1998,
-        "starsUpdatedAt": "2026-11-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-23T03:06:25.613Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "coturn",
-      "name": "coturn",
-      "github": "https://github.com/coturn/coturn",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T03:06:22.645Z",
-      "sourceRun": "2026-11-23T12",
-      "tool": {
-        "id": "coturn",
-        "name": "coturn",
-        "github": "https://github.com/coturn/coturn",
-        "description": "VoIP 미디어 트래픽 및 NAT 통과를 지원하는 오픈소스 TURN 및 STUN 서버 구현체입니다.",
-        "longDescription": "실시간 통신(RTC) 환경에서 방화벽이나 NAT 환경을 우회할 수 있도록 돕는 TURN 및 STUN 서버입니다. 도커 컨테이너나 리눅스 패키지를 통해 간편하게 배포할 수 있습니다.",
-        "category": "네트워크",
-        "tags": [
-          "TURN",
-          "STUN",
-          "VoIP",
-          "네트워크",
-          "서버"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://github.com/coturn/coturn",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T03:04:10.897Z",
-        "requirements": [
-          "Docker 또는 Linux 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run -d -p 3478:3478 -p 3478:3478/udp -p 5349:5349 -p 5349:5349/udp -p 49152-65535:49152-65535/udp coturn/coturn",
-            "note": "도커를 이용해 즉시 coturn 서버 실행"
-          }
-        ],
-        "usageSteps": [
-          "Docker 명령어를 통해 coturn 컨테이너를 구동하거나 apt를 통해 설치합니다.",
-          "turnserver.conf 파일을 수정하여 인증 및 포트 설정을 구성합니다.",
-          "WebRTC 애플리케이션의 STUN/TURN 서버 주소로 연동합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 14585,
-        "forks": 2281,
-        "starsUpdatedAt": "2026-11-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-23T03:06:25.803Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
       "id": "trio",
       "name": "trio",
       "github": "https://github.com/python-trio/trio",
@@ -39223,121 +39514,6 @@
       }
     },
     {
-      "id": "zenoh",
-      "name": "zenoh",
-      "github": "https://github.com/eclipse-zenoh/zenoh",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T03:06:22.645Z",
-      "sourceRun": "2026-11-23T12",
-      "tool": {
-        "id": "zenoh",
-        "name": "zenoh",
-        "github": "https://github.com/eclipse-zenoh/zenoh",
-        "description": "전통적인 발행/구독 모델과 지리 분산형 스토리지, 연산을 통합하는 고성능 분산 데이터 통신 프로토콜입니다.",
-        "longDescription": "엣지 컴퓨팅, IoT, 로보틱스 환경에서 데이터의 이동, 저장, 연산을 초저지연으로 통합합니다. 제한된 자원의 임베디드 환경부터 대규모 분산 시스템까지 유연하게 동작합니다.",
-        "category": "네트워크",
-        "tags": [
-          "IoT",
-          "분산 시스템",
-          "엣지 컴퓨팅",
-          "메시징",
-          "Rust"
-        ],
-        "platforms": [
-          "Linux",
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://zenoh.io",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T03:04:10.897Z",
-        "requirements": [
-          "Rust 툴체인"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 설치 가이드에 따라 바이너리를 다운로드하거나 빌드합니다.",
-          "Zenoh 라우터 설정을 구성합니다.",
-          "애플리케이션에서 Zenoh API를 통해 데이터를 발행하고 구독합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 3361,
-        "forks": 423,
-        "starsUpdatedAt": "2026-11-23"
-      }
-    },
-    {
-      "id": "ucx",
-      "name": "ucx",
-      "github": "https://github.com/openucx/ucx",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T03:06:22.645Z",
-      "sourceRun": "2026-11-23T12",
-      "tool": {
-        "id": "ucx",
-        "name": "ucx",
-        "github": "https://github.com/openucx/ucx",
-        "description": "고대역폭 및 초저지연 네트워크를 위한 최적화된 고성능 통신 프레임워크입니다.",
-        "longDescription": "RDMA(InfiniBand, RoCE), TCP, GPU, 공유 메모리 등 하드웨어 리소스와 오프로드 기능을 활용하는 추상화된 통신 프리미티브를 제공합니다. HPC 및 분산 시스템 환경에 적합합니다.",
-        "category": "네트워크",
-        "tags": [
-          "HPC",
-          "RDMA",
-          "InfiniBand",
-          "네트워크",
-          "C"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://www.openucx.org",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T03:04:10.897Z",
-        "requirements": [
-          "C 컴파일러",
-          "Linux 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "성능 테스트 서버 실행",
-            "command": "./src/tools/perf/ucx_perftest -c 0",
-            "note": "UCX 성능 측정 서버 구동"
-          }
-        ],
-        "usageSteps": [
-          "소스 코드를 클론하고 빌드 환경을 설정합니다.",
-          "패키지를 빌드하고 필요한 드라이버 및 라이브러리를 연결합니다.",
-          "성능 측정 도구나 MPI 등의 프레임워크와 연동하여 테스트를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1751,
-        "forks": 643,
-        "starsUpdatedAt": "2026-11-23"
-      }
-    },
-    {
       "id": "crossbar",
       "name": "crossbar",
       "github": "https://github.com/crossbario/crossbar",
@@ -39389,116 +39565,6 @@
         "usageNote": "",
         "stars": 2060,
         "forks": 277,
-        "starsUpdatedAt": "2026-11-23"
-      }
-    },
-    {
-      "id": "goby",
-      "name": "Goby",
-      "github": "https://github.com/gobysec/Goby",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T03:06:22.645Z",
-      "sourceRun": "2026-11-23T12",
-      "tool": {
-        "id": "goby",
-        "name": "Goby",
-        "github": "https://github.com/gobysec/Goby",
-        "description": "타겟 기업의 취약점과 공격 표면을 효율적으로 스캔하고 분석하는 차세대 네트워크 보안 진단 도구입니다.",
-        "longDescription": "네트워크 스캐닝을 기반으로 취약점을 신속하게 탐지하고 기업의 공격 표면 정보를 정리합니다. 사용하기 쉬운 인터페이스와 크로스 플랫폼 지원을 제공합니다.",
-        "category": "보안·개인정보",
-        "tags": [
-          "보안",
-          "취약점 스캔",
-          "펜테스팅",
-          "네트워크",
-          "해킹 탐지"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://gobies.org/",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T03:04:10.897Z",
-        "requirements": [
-          "네트워크 인터페이스 권한"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 경로를 통해 플랫폼별 설치 파일을 다운로드합니다.",
-          "필요한 경우 의존성 드라이버(예: Npcap)를 설치합니다.",
-          "프로그램을 실행하고 스캔할 타겟 대상을 입력하여 진단을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1526,
-        "forks": 154,
-        "starsUpdatedAt": "2026-11-23"
-      }
-    },
-    {
-      "id": "tquic",
-      "name": "tquic",
-      "github": "https://github.com/Tencent/tquic",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T03:06:22.645Z",
-      "sourceRun": "2026-11-23T12",
-      "tool": {
-        "id": "tquic",
-        "name": "tquic",
-        "github": "https://github.com/Tencent/tquic",
-        "description": "네트워크 통신 효율성을 높여주는 고성능, 경량화된 크로스플랫폼 QUIC 라이브러리입니다.",
-        "longDescription": "QUIC 및 HTTP/3 RFC 표준을 완벽히 준수하는 고성능 Rust 기반 라이브러리입니다. 다양한 플랫폼에서 안정적인 저지연 네트워크 통신을 구현할 수 있도록 돕습니다.",
-        "category": "네트워크",
-        "tags": [
-          "QUIC",
-          "HTTP/3",
-          "네트워크",
-          "Rust",
-          "프로토콜"
-        ],
-        "platforms": [
-          "Linux",
-          "Windows",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://tquic.net/",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T03:04:10.897Z",
-        "requirements": [
-          "Rust 툴체인"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "프로젝트에 tquic 의존성을 추가합니다.",
-          "QUIC 클라이언트 및 서버 연결 로직을 작성합니다.",
-          "데이터 송수신 테스트를 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 1447,
-        "forks": 157,
         "starsUpdatedAt": "2026-11-23"
       }
     },
@@ -54931,60 +54997,6 @@
       "reasons": [],
       "checkedAt": "2026-11-19T09:06:59.913Z",
       "sourceRun": "2026-11-19T18"
-    },
-    {
-      "id": "corundum",
-      "name": "Corundum",
-      "github": "https://github.com/corundum/corundum",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-19T08:07:05.101Z",
-      "sourceRun": "2026-11-19T17",
-      "tool": {
-        "id": "corundum",
-        "name": "Corundum",
-        "github": "https://github.com/corundum/corundum",
-        "description": "네트워크 내 연산을 지원하는 오픈소스 FPGA 기반 고성능 NIC 플랫폼입니다.",
-        "longDescription": "10G, 25G, 100G 이더넷을 지원하며 고성능 데이터 경로와 정밀한 PCIe DMA 엔진을 결합한 오픈소스 FPGA 네트워크 인터페이스 카드(NIC) 프로젝트입니다. 스마트 NIC 연구 및 네트워크 내 직접 연산 구현에 활용됩니다.",
-        "category": "하드웨어·IoT",
-        "tags": [
-          "FPGA",
-          "NIC",
-          "이더넷",
-          "하드웨어",
-          "네트워크"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://corundum.io/",
-        "featured": 9,
-        "added": "2026-11-19",
-        "addedAt": "2026-11-19T08:04:26.888Z",
-        "requirements": [
-          "Verilog",
-          "Linux"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "지원되는 FPGA 보드와 개발 도구 체인을 준비합니다.",
-          "저장소의 Verilog 소스 코드를 활용하여 비트스트림을 빌드합니다.",
-          "대상 하드웨어에 이미지를 플래싱하고 호스트 드라이버를 로드합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 2518,
-        "forks": 584,
-        "starsUpdatedAt": "2026-11-19"
-      }
     },
     {
       "id": "nerdtree",
