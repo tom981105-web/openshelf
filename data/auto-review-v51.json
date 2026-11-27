@@ -1,7 +1,1409 @@
 {
   "version": 1,
-  "updatedAt": "2026-11-27T08:07:08.614Z",
+  "updatedAt": "2026-11-27T09:07:08.904Z",
   "items": [
+    {
+      "id": "redis",
+      "name": "Redis",
+      "github": "https://github.com/redis/redis",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "redis",
+        "name": "Redis",
+        "github": "https://github.com/redis/redis",
+        "description": "실시간 애플리케이션을 위한 고성능 인메모리 캐시 및 데이터 구조 서버입니다.",
+        "longDescription": "Redis는 개발자가 키-값 저장소, 문서 및 벡터 검색 엔진으로 활용할 수 있는 뛰어난 성능의 인메모리 데이터 구조 서버입니다. 실시간 애플리케이션에서 캐싱 및 메시지 브로커로 널리 사용됩니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "캐시",
+          "인메모리",
+          "NoSQL"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://redis.io",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "C 빌드 도구"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "소스 코드를 클론하거나 패키지를 다운로드합니다.",
+          "make 명령어를 실행하여 Redis를 빌드합니다.",
+          "redis-server를 실행하여 서버를 시작합니다.",
+          "redis-cli를 통해 서버에 접속하여 명령어를 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 77801,
+        "forks": 24986,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:54.879Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:06:59.462Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-27T09:07:05.894Z"
+    },
+    {
+      "id": "meilisearch",
+      "name": "Meilisearch",
+      "github": "https://github.com/meilisearch/meilisearch",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "meilisearch",
+        "name": "Meilisearch",
+        "github": "https://github.com/meilisearch/meilisearch",
+        "description": "사이트와 애플리케이션에 AI 기반 하이브리드 검색을 제공하는 초고속 검색 엔진 API입니다.",
+        "longDescription": "Meilisearch는 빠르고 관련성 높은 전문 검색, 의미 검색, 하이브리드 검색을 지원하는 오픈소스 검색 엔진입니다. Docker 등을 통해 쉽게 자체 호스팅하거나 클라우드 환경에서 실행할 수 있습니다.",
+        "category": "지식·검색",
+        "tags": [
+          "검색엔진",
+          "API",
+          "하이브리드검색"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.meilisearch.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker로 실행",
+            "command": "docker run -it --rm -p 7700:7700 -v $(pwd)/meili_data:/meili_data getmeili/meilisearch:v1.11",
+            "note": "Docker를 이용해 Meilisearch 인스턴스를 즉시 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 명령어를 통해 Meilisearch 컨테이너를 실행합니다.",
+          "브라우저나 API 클라이언트를 통해 http://localhost:7700에 접속합니다.",
+          "인덱스를 생성하고 문서를 추가하여 검색을 테스트합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 60022,
+        "forks": 2803,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:55.156Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:06:59.852Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "claimed_free",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-27T09:07:06.563Z"
+    },
+    {
+      "id": "metabase",
+      "name": "Metabase",
+      "github": "https://github.com/metabase/metabase",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "metabase",
+        "name": "Metabase",
+        "github": "https://github.com/metabase/metabase",
+        "description": "누구나 쉽게 데이터를 조회하고 시각화할 수 있는 오픈소스 비즈니스 인텔리전스(BI) 도구입니다.",
+        "longDescription": "Metabase는 팀원 누구나 데이터에 대해 질문하고 인사이트를 얻을 수 있도록 돕는 직관적인 BI 및 임베디드 분석 도구입니다. 몇 분 만에 설정하여 다양한 SQL 데이터베이스와 연동할 수 있습니다.",
+        "category": "데이터 분석",
+        "tags": [
+          "BI",
+          "대시보드",
+          "데이터시각화"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://metabase.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Java 또는 Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker로 실행",
+            "command": "docker run -d -p 3000:3000 --name metabase metabase/metabase",
+            "note": "도커를 사용하여 Metabase 컨테이너를 백그라운드에서 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 컨테이너를 실행한 후 브라우저에서 포트 3000으로 접속합니다.",
+          "관리자 계정을 설정하고 사용할 데이터베이스(MySQL, PostgreSQL 등)를 연결합니다.",
+          "질의 빌더나 SQL을 이용해 대시보드와 차트를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 50608,
+        "forks": 7059,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:55.442Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:07:00.660Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-27T09:07:07.397Z"
+    },
+    {
+      "id": "directus",
+      "name": "Directus",
+      "github": "https://github.com/directus/directus",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "directus",
+        "name": "Directus",
+        "github": "https://github.com/directus/directus",
+        "description": "SQL 데이터베이스를 헤드리스 CMS 및 백엔드로 변환해 주는 유연한 플랫폼입니다.",
+        "longDescription": "Directus는 기존 SQL 데이터베이스 위에 REST 및 GraphQL API, 비주얼 관리 스튜디오 등을 즉시 제공하는 오픈소스 백엔드 플랫폼입니다. 데이터베이스와 원활하게 연동하여 맞춤형 앱과 관리자 패널을 구축할 수 있습니다.",
+        "category": "개발 도구",
+        "tags": [
+          "CMS",
+          "API",
+          "백엔드"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://directus.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Node.js",
+          "SQL 데이터베이스"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "프로젝트 디렉토리에서 패키지 매니저를 통해 Directus를 설치합니다.",
+          "환경 변수 설정 파일에 대상 SQL 데이터베이스 연결 정보를 입력합니다.",
+          "서버를 실행하고 관리자 스튜디오 UI에 접속하여 데이터 모델을 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 38697,
+        "forks": 4992,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:55.726Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:07:01.515Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-27T09:07:08.200Z"
+    },
+    {
+      "id": "chat2db",
+      "name": "Chat2DB",
+      "github": "https://github.com/OtterMind/Chat2DB",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "chat2db",
+        "name": "Chat2DB",
+        "github": "https://github.com/OtterMind/Chat2DB",
+        "description": "개발자와 데이터 분석가를 위한 AI 기반 크로스플랫폼 데이터베이스 클라이언트",
+        "longDescription": "Chat2DB는 40개 이상의 데이터베이스를 지원하는 로컬 우선 데이터베이스 클라이언트입니다. 자체 AI 모델을 연결하여 SQL 쿼리를 생성, 설명, 최적화할 수 있으며 MCP를 지원합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터베이스",
+          "SQL",
+          "AI"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://chat2db.ai",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Java 17+",
+          "OpenSSL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "암호화 키 초기화",
+            "command": "./script/security/init-community-encryption-key.sh",
+            "note": "저장된 데이터소스 비밀번호 암호화를 위한 키를 생성합니다."
+          }
+        ],
+        "usageSteps": [
+          "저장소에서 스크립트를 실행하여 보안 암호화 키를 생성합니다.",
+          "지원되는 40여 종의 데이터베이스 중 연결할 DB를 선택합니다.",
+          "AI 어시스턴트를 활용해 자연어로 SQL을 작성하거나 쿼리를 최적화합니다."
+        ],
+        "examplePrompt": "고객 테이블에서 최근 3개월간 가입한 사용자 수를 조회하는 SQL을 작성해줘",
+        "usageNote": "",
+        "stars": 28377,
+        "forks": 3043,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:56.004Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:07:01.925Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      },
+      "recheckAttempts": 1,
+      "recheckedAt": "2026-11-27T09:07:08.904Z"
+    },
+    {
+      "id": "spacetimedb",
+      "name": "SpacetimeDB",
+      "github": "https://github.com/clockworklabs/SpacetimeDB",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "spacetimedb",
+        "name": "SpacetimeDB",
+        "github": "https://github.com/clockworklabs/SpacetimeDB",
+        "description": "애플리케이션 로직을 직접 업로드하여 실시간 동기화를 지원하는 관계형 데이터베이스 서버입니다.",
+        "longDescription": "SpacetimeDB는 데이터베이스 자체가 서버 역할을 하는 혁신적인 관계형 데이터베이스입니다. Rust, C#, TypeScript 등으로 모듈을 작성하여 실시간 멀티플레이어 게임이나 협업 앱을 구축할 수 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터베이스",
+          "실시간",
+          "Rust",
+          "웹개발",
+          "게임개발"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://spacetimedb.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "curl",
+          "PowerShell (Windows)"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "SpacetimeDB 설치",
+            "command": "curl -sSf https://install.spacetimedb.com | sh",
+            "note": "macOS 및 Linux 환경에서 SpacetimeDB CLI를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트를 실행하여 SpacetimeDB CLI를 설치합니다.",
+          "spacetime login 명령어로 GitHub 계정을 연동합니다.",
+          "spacetime dev --template chat-room 명령어로 개발 템플릿을 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 25574,
+        "forks": 1125,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:56.310Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:07:02.688Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "sqlitebrowser",
+      "name": "DB Browser for SQLite",
+      "github": "https://github.com/sqlitebrowser/sqlitebrowser",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "sqlitebrowser",
+        "name": "DB Browser for SQLite",
+        "github": "https://github.com/sqlitebrowser/sqlitebrowser",
+        "description": "SQLite 데이터베이스를 시각적으로 생성, 설계, 편집할 수 있는 고품질 오픈소스 GUI 도구입니다.",
+        "longDescription": "DB Browser for SQLite는 사용자가 SQLite 데이터베이스 파일을 스프레드시트와사 유사한 인터페이스로 편리하게 관리할 수 있도록 돕는 크로스플랫폼 도구입니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "SQLite",
+          "데이터베이스",
+          "GUI",
+          "C++",
+          "크로스플랫폼"
+        ],
+        "platforms": [
+          "Windows",
+          "macOS",
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://sqlitebrowser.org",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Chocolatey로 설치 (Windows)",
+            "command": "choco install sqlitebrowser",
+            "note": "윈도우 환경에서 패키지 관리자를 통해 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "패키지 관리자 또는 공식 홈페이지를 통해 프로그램을 설치합니다.",
+          "프로그램을 실행하고 기존 SQLite 데이터베이스 파일을 불러오거나 새 파일을 생성합니다.",
+          "브라우저 탭에서 데이터를 편집하거나 'Execute SQL' 탭에서 쿼리를 실행합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 24839,
+        "forks": 2385,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:56.584Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:07:03.097Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "pandas-ai",
+      "name": "PandasAI",
+      "github": "https://github.com/sinaptik-ai/pandas-ai",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "pandas-ai",
+        "name": "PandasAI",
+        "github": "https://github.com/sinaptik-ai/pandas-ai",
+        "description": "LLM과 RAG를 활용하여 데이터베이스나 데이터레이크와 대화하며 데이터를 분석할 수 있는 파이썬 라이브러리입니다.",
+        "longDescription": "PandasAI는 자연어 질의를 통해 Pandas 데이터프레임, SQL, CSV 등 다양한 데이터 소스를 분석하고 시각화할 수 있도록 지원하는 대화형 AI 데이터 분석 도구입니다.",
+        "category": "지식·검색",
+        "tags": [
+          "AI",
+          "데이터분석",
+          "Pandas",
+          "LLM",
+          "Python"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://pandas-ai.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Python 3.8 - 3.11"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Pip으로 패키지 설치",
+            "command": "pip install pandasai pandasai-litellm",
+            "note": "PandasAI와 LLM 연동 라이브러리를 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "pip을 통해 pandasai 패키지를 설치합니다.",
+          "OpenAI 등의 LLM 클라이언트를 초기화하고 PandasAI 인스턴스에 연결합니다.",
+          "데이터프레임 객체에 자연어 질문을 던져 분석 결과를 얻습니다."
+        ],
+        "examplePrompt": "df.chat('가장 매출이 높은 상위 5개 지역을 알려줘')",
+        "usageNote": "",
+        "stars": 23970,
+        "forks": 2350,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:56.860Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:07:03.783Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "teable",
+      "name": "Teable",
+      "github": "https://github.com/teableio/teable",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "teable",
+        "name": "Teable",
+        "github": "https://github.com/teableio/teable",
+        "description": "강력한 PostgreSQL을 기반으로 동작하는 오픈소스 AI 스프레드시트 및 노코드 앱 빌더입니다.",
+        "longDescription": "Teable은 겉보기에는 일반 스프레드시트처럼 쉽지만 내부적으로는 PostgreSQL을 사용하는 데이터 관리 및 AI 워크플로우 자동화 플랫폼입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "스프레드시트",
+          "노코드",
+          "AI",
+          "PostgreSQL",
+          "TypeScript"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://teable.ai",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Node.js",
+          "pnpm",
+          "Postgres"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "프로젝트 의존성 설치",
+            "command": "corepack enable && pnpm install",
+            "note": "패키지 매니저를 활성화하고 프로젝트 의존성을 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "핵심 패키지 관리자를 활성화하고 pnpm install을 실행합니다.",
+          "데이터베이스 모드 설정 명령어를 통해 PostgreSQL 환경을 초기화합니다.",
+          "웹 인터페이스를 실행하여 스프레드시트 형태의 데이터 관리를 시작합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 22026,
+        "forks": 1369,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:57.091Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:07:04.196Z",
+      "documentEvidence": {
+        "license": "MIT",
+        "verifiedLicense": null,
+        "licenseSource": "LICENSE header only, unverified",
+        "freeClaim": "mixed_or_paid",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "windmill",
+      "name": "Windmill",
+      "github": "https://github.com/windmill-labs/windmill",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "windmill",
+        "name": "Windmill",
+        "github": "https://github.com/windmill-labs/windmill",
+        "description": "스크립트를 워크플로우, API, UI, AI 에이전트로 빠르게 변환해 주는 코드 중심의 오픈소스 자동화 플랫폼입니다.",
+        "longDescription": "Windmill은 Python, TypeScript, SQL 등 다양한 언어로 작성된 스크립트를 Git과 연동하여 안전하게 관리하고, 고성능 오케스트레이터를 통해 워크플로우와 AI 에이전트를 실행할 수 있는 자체 호스팅 플랫폼입니다.",
+        "category": "업무 자동화",
+        "tags": [
+          "워크플로우",
+          "오케스트레이션",
+          "자동화",
+          "AI에이전트",
+          "Rust"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://windmill.dev",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Docker",
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker 또는 지원되는 배포 방식을 통해 Windmill 인스턴스를 실행합니다.",
+          "웹 대시보드에 접속하여 Python이나 TypeScript 등으로 스크립트를 작성합니다.",
+          "작성한 스크립트를 조합하여 자동화 워크플로우나 에이전트 루프를 구성합니다."
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 18746,
+        "forks": 1174,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:57.389Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "documentEvidenceCheckedAt": "2026-11-27T09:07:04.592Z",
+      "documentEvidence": {
+        "license": null,
+        "verifiedLicense": null,
+        "licenseSource": "unknown",
+        "freeClaim": "unknown",
+        "freeSource": "README claim only — not verified entitlement",
+        "notes": []
+      }
+    },
+    {
+      "id": "cockroach",
+      "name": "CockroachDB",
+      "github": "https://github.com/cockroachdb/cockroach",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "cockroach",
+        "name": "CockroachDB",
+        "github": "https://github.com/cockroachdb/cockroach",
+        "description": "고가용성과 확장성을 제공하는 클라우드 네이티브 분산 SQL 데이터베이스",
+        "longDescription": "CockroachDB는 강력한 일관성을 갖춘 분산 트랜잭션 키-값 저장소 위에 구축된 클라우드 네이티브 SQL 데이터베이스입니다. 대규모 데이터 집약적 애플리케이션을 손쉽게 확장하고 관리할 수 있도록 설계되었습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "데이터베이스",
+          "분산시스템",
+          "SQL",
+          "클라우드네이티브",
+          "Go"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.cockroachlabs.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 문서나 클라우드 서비스를 통해 인스턴스 구성",
+          "표준 PostgreSQL 호환 드라이버를 사용하여 데이터베이스 연결",
+          "분산 SQL 쿼리 실행 및 데이터 관리"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 32642,
+        "forks": 4171,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:57.684Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "dragonfly",
+      "name": "Dragonfly",
+      "github": "https://github.com/dragonflydb/dragonfly",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "dragonfly",
+        "name": "Dragonfly",
+        "github": "https://github.com/dragonflydb/dragonfly",
+        "description": "Redis 및 Memcached를 대체하는 고성능 현대식 인메모리 데이터베이스",
+        "longDescription": "Dragonfly는 멀티스레드 아키텍처와 혁신적인 메모리 관리를 활용하여 기존 Redis 및 Memcached보다 훨씬 뛰어난 성능과 처리량을 제공하는 현대식 인메모리 데이터 저장소입니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "캐시",
+          "인메모리",
+          "데이터베이스",
+          "Redis",
+          "C++"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.dragonflydb.io/",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "Docker 이미지 또는 소스 코드를 통해 Dragonfly 실행",
+          "기존 Redis 클라이언트 및 SDK를 사용하여 연결",
+          "캐시 및 키-값 데이터 작업 수행"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 31949,
+        "forks": 1296,
+        "starsUpdatedAt": "2026-11-27"
+      },
+      "licenseEvidenceCheckedAt": "2026-11-27T09:06:57.964Z",
+      "licenseEvidence": {
+        "license": null,
+        "source": null,
+        "freeEvidence": "unverified",
+        "notes": [
+          "License not verified via SPDX"
+        ]
+      },
+      "recheckReasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ]
+    },
+    {
+      "id": "timescaledb",
+      "name": "TimescaleDB",
+      "github": "https://github.com/timescale/timescaledb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "timescaledb",
+        "name": "TimescaleDB",
+        "github": "https://github.com/timescale/timescaledb",
+        "description": "PostgreSQL 기반의 고성능 실시간 시계열 데이터베이스",
+        "longDescription": "TimescaleDB는 PostgreSQL의 확장 기능으로 제공되는 시계열 및 이벤트 데이터 전용 데이터베이스입니다. 대규모 시계열 데이터를 실시간으로 분석하고 처리하는 데 최적화되어 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "시계열",
+          "데이터베이스",
+          "PostgreSQL",
+          "SQL",
+          "분석"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.tigerdata.com/",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "PostgreSQL"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "로컬 빠른 시작 (Linux/Mac)",
+            "command": "curl -sL https://tsdb.co/start-local | sh",
+            "note": "로컬 테스트용 TimescaleDB 및 PostgreSQL 인스턴스를 다운로드하고 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "설치 스크립트 또는 Docker를 통해 TimescaleDB 인스턴스 실행",
+          "PostgreSQL 클라이언트를 통해 포트 6543에 접속",
+          "하이퍼테이블(Hypertable) 생성 및 시계열 데이터 삽입·조회"
+        ],
+        "examplePrompt": "",
+        "usageNote": "제공된 스크립트는 로컬 개발 및 테스트 용도로만 권장됩니다.",
+        "stars": 23901,
+        "forks": 1189,
+        "starsUpdatedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "companyos",
+      "name": "CompanyOS",
+      "github": "https://github.com/kortix-ai/CompanyOS",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "companyos",
+        "name": "CompanyOS",
+        "github": "https://github.com/kortix-ai/CompanyOS",
+        "description": "AI 네이티브 기업을 위한 오픈소스 에이전트 오케스트레이션 운영체제",
+        "longDescription": "CompanyOS는 다양한 데이터 소스를 연결하고, 여러 AI 에이전트를 조율하며, 에이전트의 기술과 메모리를 하나의 Git 저장소에서 관리할 수 있게 해주는 오픈소스 AI 운영체제입니다.",
+        "category": "AI 에이전트",
+        "tags": [
+          "AI에이전트",
+          "오케스트레이션",
+          "자동화",
+          "TypeScript",
+          "LLM"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://kortix.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Node.js",
+          "Git"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "저장소 복제 및 프로젝트 설정",
+          "API 키 및 필요한 데이터 소스 연결 설정",
+          "에이전트 스케줄 및 워크플로우 실행"
+        ],
+        "examplePrompt": "주어진 데이터를 분석하고 사내 도구를 활용해 보고서를 작성해줘.",
+        "usageNote": "",
+        "stars": 20809,
+        "forks": 3477,
+        "starsUpdatedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "gun",
+      "name": "GUN",
+      "github": "https://github.com/amark/gun",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "gun",
+        "name": "GUN",
+        "github": "https://github.com/amark/gun",
+        "description": "분산 그래프 데이터 동기화를 위한 오픈소스 P2P 실시간 데이터베이스 프로토콜",
+        "longDescription": "GUN은 브라우저와 서버 간, 혹은 P2P 환경에서 실시간으로 데이터를 동기화할 수 있는 경량 오픈소스 그래프 데이터베이스 에코시스템입니다. 암호화와 오프라인 우선(Offline-first) 아키텍처를 지원합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "P2P",
+          "데이터베이스",
+          "실시간",
+          "JavaScript",
+          "분산시스템"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS",
+          "Windows"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://gun.eco/docs",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "npm을 이용한 설치",
+            "command": "npm install @peculiar/webcrypto --save",
+            "note": "필수 암호화 모듈을 함께 설치합니다."
+          }
+        ],
+        "usageSteps": [
+          "프로젝트에 GUN 패키지 설치 및 요구 설정",
+          "클라이언트 또는 서버에서 GUN 인스턴스 초기화",
+          "그래프 데이터 실시간 동기화 및 저장 수행"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 19169,
+        "forks": 1246,
+        "starsUpdatedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "scylladb",
+      "name": "ScyllaDB",
+      "github": "https://github.com/scylladb/scylladb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "scylladb",
+        "name": "ScyllaDB",
+        "github": "https://github.com/scylladb/scylladb",
+        "description": "Apache Cassandra 및 DynamoDB와 호환되는 고성능 NoSQL 분산 데이터베이스",
+        "longDescription": "ScyllaDB는 C++ 기반의 Seastar 프레임워크로 구현된 초고속 실시간 빅데이터 NoSQL 데이터베이스입니다. 공유무격리(Shared-nothing) 아키텍처를 통해 하드웨어 활용률을 극대화합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "NoSQL",
+          "데이터베이스",
+          "Cassandra",
+          "C++",
+          "빅데이터"
+        ],
+        "platforms": [
+          "Linux"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://scylladb.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "시스템 요구사항 확인 및 소스 빌드 또는 패키지 설치",
+          "ScyllaDB 서비스 시작 및 클러스터 구성",
+          "CQL을 통한 데이터 읽기 및 쓰기 수행"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 15846,
+        "forks": 1538,
+        "starsUpdatedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "arangodb",
+      "name": "ArangoDB",
+      "github": "https://github.com/arangodb/arangodb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "arangodb",
+        "name": "ArangoDB",
+        "github": "https://github.com/arangodb/arangodb",
+        "description": "문서, 그래프, 키-값을 모두 지원하는 네이티브 멀티 모델 데이터베이스",
+        "longDescription": "ArangoDB는 문서, 그래프, 키-값 데이터 모델을 하나의 통합된 쿼리 언어로 다룰 수 있는 확장 가능한 멀티 모델 데이터베이스입니다. 강력한 검색 엔진과 유연한 데이터 구조를 제공합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "멀티모델",
+          "그래프",
+          "NoSQL",
+          "문서데이터베이스",
+          "C++"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS",
+          "Windows",
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://www.arangodb.com",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Docker"
+        ],
+        "supportedAgents": [],
+        "install": [
+          {
+            "title": "Docker를 이용한 실행",
+            "command": "docker run -d -e ARANGO_ROOT_PASSWORD=test123 -p 8529:8529 arangodb",
+            "note": "도커 컨테이너로 ArangoDB 서버를 백그라운드에서 실행합니다."
+          }
+        ],
+        "usageSteps": [
+          "Docker 명령어로 컨테이너 실행",
+          "웹 브라우저를 통해 http://127.0.0.1:8529 에 접속",
+          "웹 UI 또는 쿼리 언어를 사용하여 데이터 모델 관리"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 14302,
+        "forks": 913,
+        "starsUpdatedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "sql-js",
+      "name": "sql.js",
+      "github": "https://github.com/sql-js/sql.js",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "sql-js",
+        "name": "sql.js",
+        "github": "https://github.com/sql-js/sql.js",
+        "description": "웹 브라우저에서 순수 자바스크립트로 실행되는 SQLite 데이터베이스",
+        "longDescription": "sql.js는 Emscripten을 통해 SQLite를 자바스크립트 및 WebAssembly로 컴파일한 라이브러리입니다. 별도의 서버 없이 브라우저 메모리 가상 파일 시스템 내에서 관계형 데이터베이스를 생성하고 쿼리할 수 있습니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "SQLite",
+          "JavaScript",
+          "WASM",
+          "데이터베이스",
+          "웹"
+        ],
+        "platforms": [
+          "Web"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "http://sql.js.org",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "npm을 통해 패키지 설치 또는 CDN을 통해 스크립트 로드",
+          "initSqlJs 함수를 사용하여 WASM 파일 경로 지정 및 인스턴스 초기화",
+          "SQL 쿼리를 작성하여 브라우저 내 데이터베이스 조작"
+        ],
+        "examplePrompt": "",
+        "usageNote": "메모리 내 가상 파일 시스템을 사용하므로 기본적으로 변경 사항이 디스크에 영구 저장되지 않습니다.",
+        "stars": 13691,
+        "forks": 1114,
+        "starsUpdatedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "convex-backend",
+      "name": "Convex Backend",
+      "github": "https://github.com/convex/convex-backend",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "convex-backend",
+        "name": "Convex Backend",
+        "github": "https://github.com/convex/convex-backend",
+        "description": "웹 애플리케이션 개발을 위한 오픈소스 반응형 백엔드 데이터베이스",
+        "longDescription": "Convex는 웹 개발자가 순수 TypeScript로 비즈니스 로직과 데이터베이스 상호작용을 구현할 수 있도록 지원하는 반응형 백엔드 플랫폼입니다. 실시간 데이터 동기화와 강력한 일관성을 제공합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "백엔드",
+          "데이터베이스",
+          "TypeScript",
+          "Rust",
+          "실시간"
+        ],
+        "platforms": [
+          "Web",
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://docs.convex.dev",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [
+          "Node.js"
+        ],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "공식 문서 및 가이드를 따라 프로젝트 환경 구성",
+          "TypeScript로 서버 함수 및 데이터 스키마 작성",
+          "클라이언트 라이브러리를 통해 실시간 데이터 연동"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 12815,
+        "forks": 866,
+        "starsUpdatedAt": "2026-11-27"
+      }
+    },
+    {
+      "id": "dicedb",
+      "name": "DiceDB",
+      "github": "https://github.com/dicedb/dicedb",
+      "license": "확인 필요",
+      "status": "pending_review",
+      "reasons": [
+        "명확히 검증되지 않은 라이선스",
+        "오픈소스 또는 무료 조건 미확인"
+      ],
+      "checkedAt": "2026-11-27T09:06:53.792Z",
+      "sourceRun": "2026-11-27T18",
+      "tool": {
+        "id": "dicedb",
+        "name": "DiceDB",
+        "github": "https://github.com/dicedb/dicedb",
+        "description": "쿼리 구독 및 계층형 스토리지를 지원하는 저지연 키-값 데이터베이스 엔진",
+        "longDescription": "DiceDB는 Valkey(Redis 포크) 기반으로 확장된 고성능 저지연 키-값 저장소 엔진입니다. 기존 Redis 및 Valkey 에코시스템과 완전 호환되면서 실시간 쿼리 구독 등의 추가 기능을 제공합니다.",
+        "category": "데이터베이스",
+        "tags": [
+          "캐시",
+          "키-값",
+          "데이터베이스",
+          "Redis",
+          "C"
+        ],
+        "platforms": [
+          "Linux",
+          "macOS"
+        ],
+        "free": true,
+        "openSource": false,
+        "license": "확인 필요",
+        "website": "https://dicedb.io/",
+        "featured": 9,
+        "added": "2026-11-27",
+        "addedAt": "2026-11-27T09:04:30.165Z",
+        "requirements": [],
+        "supportedAgents": [],
+        "install": [],
+        "usageSteps": [
+          "소스 코드 클론 및 빌드 진행",
+          "서버 실행 및 기존 Redis 클라이언트 연결",
+          "키-값 저장 및 쿼리 구독 기능 사용"
+        ],
+        "examplePrompt": "",
+        "usageNote": "",
+        "stars": 10774,
+        "forks": 1398,
+        "starsUpdatedAt": "2026-11-27"
+      }
+    },
     {
       "id": "prompts-chat",
       "name": "prompts.chat",
@@ -403,85 +1805,6 @@
       "recheckedAt": "2026-11-27T08:07:08.614Z"
     },
     {
-      "id": "companyos",
-      "name": "CompanyOS",
-      "github": "https://github.com/kortix-ai/CompanyOS",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-27T08:06:55.378Z",
-      "sourceRun": "2026-11-27T17",
-      "tool": {
-        "id": "companyos",
-        "name": "CompanyOS",
-        "github": "https://github.com/kortix-ai/CompanyOS",
-        "description": "AI 네이티브 기업을 위한 데이터 연동, 에이전트 오케스트레이션 오픈소스 운영체제입니다.",
-        "longDescription": "다양한 데이터 소스를 연결하고, 여러 AI 에이전트를 협업시키며, 에이전트의 기술과 메모리를 하나의 깃 저장소에서 관리할 수 있도록 지원하는 오픈소스 플랫폼입니다.",
-        "category": "AI 에이전트",
-        "tags": [
-          "AI 에이전트",
-          "오케스트레이션",
-          "TypeScript",
-          "셀프호스팅",
-          "자동화"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://kortix.com",
-        "featured": 9,
-        "added": "2026-11-27",
-        "addedAt": "2026-11-27T08:04:29.684Z",
-        "requirements": [
-          "Node.js",
-          "Git"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "저장소를 클론하고 프로젝트 의존성을 설치합니다.",
-          "연동할 데이터 소스와 API 키 환경 변수를 설정합니다.",
-          "에이전트 스웜을 실행하여 협업 워크플로우를 시작합니다."
-        ],
-        "examplePrompt": "우리 팀의 깃허브 이슈를 모니터링하고 자동으로 분류하는 에이전트를 실행해줘.",
-        "usageNote": "",
-        "stars": 20809,
-        "forks": 3477,
-        "starsUpdatedAt": "2026-11-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-27T08:06:57.525Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-27T08:07:02.229Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
       "id": "instant-ngp",
       "name": "instant-ngp",
       "github": "https://github.com/NVlabs/instant-ngp",
@@ -554,169 +1877,6 @@
         "verifiedLicense": null,
         "licenseSource": "unknown",
         "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "windmill",
-      "name": "windmill",
-      "github": "https://github.com/windmill-labs/windmill",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-27T08:06:55.378Z",
-      "sourceRun": "2026-11-27T17",
-      "tool": {
-        "id": "windmill",
-        "name": "windmill",
-        "github": "https://github.com/windmill-labs/windmill",
-        "description": "파이썬, 타입스크립트 등의 코드를 활용하여 워크플로우, 앱, AI 에이전트를 구축하는 오픈소스 오케스트레이터입니다.",
-        "longDescription": "엔지니어가 작성한 코드를 깃과 동기화하고, 이를 바탕으로 자동화된 워크플로우, 내부 도구 UI, 그리고 AI 에이전트를 고성능으로 실행 및 관리할 수 있는 셀프호스팅 플랫폼입니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "워크플로우",
-          "업무 자동화",
-          "Rust",
-          "TypeScript",
-          "Python"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://windmill.dev",
-        "featured": 9,
-        "added": "2026-11-27",
-        "addedAt": "2026-11-27T08:04:29.684Z",
-        "requirements": [
-          "Docker",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "도커를 사용하여 로컬 또는 서버 환경에 윈드밀 인스턴스를 실행합니다.",
-          "웹 대시보드에 접속하여 파이썬이나 타입스크립트로 스크립트를 작성합니다.",
-          "작성한 스크립트를 조합하여 자동화 흐름이나 웹 앱을 구성합니다."
-        ],
-        "examplePrompt": "매일 아침 웹사이트 상태를 점검하고 슬랙으로 리포트를 보내는 워크플로우를 만들어줘.",
-        "usageNote": "",
-        "stars": 18744,
-        "forks": 1174,
-        "starsUpdatedAt": "2026-11-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-27T08:06:58.105Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-27T08:07:03.300Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "gun",
-      "name": "gun",
-      "github": "https://github.com/amark/gun",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-27T08:06:55.378Z",
-      "sourceRun": "2026-11-27T17",
-      "tool": {
-        "id": "gun",
-        "name": "gun",
-        "github": "https://github.com/amark/gun",
-        "description": "분산형 그래프 데이터를 동기화하기 위한 오픈소스 실시간 P2P 보안 프로토콜 및 데이터베이스입니다.",
-        "longDescription": "중앙 서버 없이 오프라인에서도 작동하며 피어 투 피어 방식으로 데이터를 안전하게 동기화할 수 있는 오픈소스 분산 그래프 데이터베이스 및 동기화 라이브러리입니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "P2P",
-          "JavaScript",
-          "분산 시스템",
-          "실시간"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://gun.eco/docs",
-        "featured": 9,
-        "added": "2026-11-27",
-        "addedAt": "2026-11-27T08:04:29.684Z",
-        "requirements": [
-          "Node.js"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NPM 설치",
-            "command": "npm install @peculiar/webcrypto --save",
-            "note": "웹크립토 의존성 패키지 설치"
-          }
-        ],
-        "usageSteps": [
-          "프로젝트 환경에 Node.js를 설치하고 패키지를 초기화합니다.",
-          "NPM을 통해 필요한 의존성과 모듈을 설치합니다.",
-          "자바스크립트 코드에서 Gun을 불러와 실시간 분산 데이터 동기화를 구현합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 19169,
-        "forks": 1246,
-        "starsUpdatedAt": "2026-11-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-27T08:06:58.370Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-27T08:07:03.816Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "mixed_or_paid",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
@@ -3524,138 +4684,6 @@
       ]
     },
     {
-      "id": "meilisearch",
-      "name": "Meilisearch",
-      "github": "https://github.com/meilisearch/meilisearch",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-27T05:06:45.779Z",
-      "sourceRun": "2026-11-27T14",
-      "tool": {
-        "id": "meilisearch",
-        "name": "Meilisearch",
-        "github": "https://github.com/meilisearch/meilisearch",
-        "description": "AI 기반 하이브리드 검색을 지원하는 초고속 검색 엔진 API",
-        "longDescription": "웹사이트와 애플리케이션에 쉽게 통합하여 번개처럼 빠른 전문 검색, 시맨틱 검색, 하이브리드 검색을 제공하는 오픈소스 검색 엔진입니다.",
-        "category": "지식·검색",
-        "tags": [
-          "검색",
-          "Rust",
-          "API",
-          "벡터 검색",
-          "AI"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows",
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.meilisearch.com",
-        "featured": 9,
-        "added": "2026-11-27",
-        "addedAt": "2026-11-27T05:04:28.298Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker로 실행",
-            "command": "docker run -it --rm -p 7700:7700 -v $(pwd)/meili_data:/meili_data getmeili/meilisearch:v1.11",
-            "note": "로컬 환경에서 Docker를 통해 Meilisearch 인스턴스를 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 명령어로 Meilisearch를 실행합니다.",
-          "API 키를 사용하여 검색 인덱스에 문서를 추가합니다.",
-          "검색 쿼리를 보내 결과를 확인합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 60022,
-        "forks": 2803,
-        "starsUpdatedAt": "2026-11-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-27T05:06:49.720Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
-      "id": "directus",
-      "name": "Directus",
-      "github": "https://github.com/directus/directus",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-27T05:06:45.779Z",
-      "sourceRun": "2026-11-27T14",
-      "tool": {
-        "id": "directus",
-        "name": "Directus",
-        "github": "https://github.com/directus/directus",
-        "description": "SQL 데이터베이스를 헤드리스 CMS 및 관리 패널로 변환해주는 유연한 백엔드",
-        "longDescription": "모든 SQL 데이터베이스를 감싸 즉시 REST 및 GraphQL API, 비주얼 관리 스튜디오, AI 에이전트를 위한 MCP 서버를 제공하는 오픈소스 백엔드 플랫폼입니다.",
-        "category": "개발 도구",
-        "tags": [
-          "CMS",
-          "TypeScript",
-          "SQL",
-          "GraphQL",
-          "REST"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://directus.com",
-        "featured": 9,
-        "added": "2026-11-27",
-        "addedAt": "2026-11-27T05:04:28.298Z",
-        "requirements": [
-          "Node.js",
-          "SQL 데이터베이스"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "기존 SQL 데이터베이스에 Directus를 연결합니다.",
-          "비주얼 Studio를 통해 데이터 모델을 관리합니다.",
-          "자동 생성된 API를 통해 데이터를 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 38693,
-        "forks": 4992,
-        "starsUpdatedAt": "2026-11-27"
-      }
-    },
-    {
       "id": "amplication",
       "name": "Amplication",
       "github": "https://github.com/amplication/amplication",
@@ -4539,97 +5567,6 @@
         "verifiedLicense": null,
         "licenseSource": "unknown",
         "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "teable",
-      "name": "Teable",
-      "github": "https://github.com/teableio/teable",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-27T03:06:40.747Z",
-      "sourceRun": "2026-11-27T12",
-      "tool": {
-        "id": "teable",
-        "name": "Teable",
-        "github": "https://github.com/teableio/teable",
-        "description": "PostgreSQL 기반의 고성능 오픈소스 AI 스프레드시트 및 앱 빌더입니다.",
-        "longDescription": "스프레드시트 인터페이스 아래에 실제 PostgreSQL 데이터베이스를 두고, AI 워크플로우와 실시간 데이터 연동을 지원합니다. 클라우드와 자체 호스팅을 모두 지원하며 업무용 커스텀 애플리케이션 구축에 유용합니다.",
-        "category": "업무 자동화",
-        "tags": [
-          "스프레드시트",
-          "PostgreSQL",
-          "AI",
-          "로코드",
-          "업무 자동화"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://teable.ai",
-        "featured": 9,
-        "added": "2026-11-27",
-        "addedAt": "2026-11-27T03:04:30.994Z",
-        "requirements": [
-          "Node.js",
-          "pnpm",
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "의존성 설치",
-            "command": "corepack enable && pnpm install",
-            "note": "패키지 매니저를 활성화하고 프로젝트 의존성을 설치합니다."
-          },
-          {
-            "title": "데이터베이스 초기화",
-            "command": "make switch-db-mode",
-            "note": "PostgreSQL 데이터베이스 모드를 초기화합니다."
-          }
-        ],
-        "usageSteps": [
-          "레포지토리를 클론하고 pnpm install을 실행합니다.",
-          "PostgreSQL 환경을 설정하고 데이터베이스 모드를 초기화합니다.",
-          "개발 서버를 구동하여 스프레드시트 및 AI 워크플로우를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "정상적인 구동을 위해 사전에 PostgreSQL 서버가 준비되어 있어야 합니다.",
-        "stars": 22026,
-        "forks": 1369,
-        "starsUpdatedAt": "2026-11-27"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-27T03:06:43.346Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-27T03:06:47.755Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "mixed_or_paid",
         "freeSource": "README claim only — not verified entitlement",
         "notes": []
       }
@@ -9322,90 +10259,6 @@
       }
     },
     {
-      "id": "metabase",
-      "name": "Metabase",
-      "github": "https://github.com/metabase/metabase",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T18:06:41.660Z",
-      "sourceRun": "2026-11-27T03",
-      "tool": {
-        "id": "metabase",
-        "name": "Metabase",
-        "github": "https://github.com/metabase/metabase",
-        "description": "누구나 쉽게 데이터 질문을 던지고 시각화할 수 있는 오픈소스 비즈니스 인텔리전스 도구",
-        "longDescription": "조직 내 비전문가도 SQL 없이 손쉽게 데이터를 탐색하고 대시보드를 구축할 수 있는 오픈소스 BI 도구입니다. 5분 만에 빠른 설치가 가능하며 다양한 데이터베이스와 연동을 지원합니다.",
-        "category": "지식·검색",
-        "tags": [
-          "BI",
-          "대시보드",
-          "데이터"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://metabase.com",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T18:04:17.067Z",
-        "requirements": [
-          "Docker"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker 실행",
-            "command": "docker run -d -p 3000:3000 --name metabase metabase/metabase",
-            "note": "도커를 이용해 메타베이스를 로컬에서 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "Docker 명령어로 컨테이너를 실행합니다.",
-          "웹브라우저에서 http://localhost:3000 에 접속합니다.",
-          "관리자 계정을 생성하고 사용할 데이터베이스를 연결합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "프로덕션 환경에서는 공식 가이드를 참고하여 별도의 외부 DB 연결 설정을 권장합니다.",
-        "stars": 50591,
-        "forks": 7053,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T18:06:42.387Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T18:06:46.156Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "mixed_or_paid",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T18:06:50.871Z"
-    },
-    {
       "id": "posthog",
       "name": "PostHog",
       "github": "https://github.com/PostHog/posthog",
@@ -9491,88 +10344,6 @@
       },
       "recheckAttempts": 1,
       "recheckError": "Gemini HTTP 503"
-    },
-    {
-      "id": "timescaledb",
-      "name": "TimescaleDB",
-      "github": "https://github.com/timescale/timescaledb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T18:06:41.660Z",
-      "sourceRun": "2026-11-27T03",
-      "tool": {
-        "id": "timescaledb",
-        "name": "TimescaleDB",
-        "github": "https://github.com/timescale/timescaledb",
-        "description": "PostgreSQL 확장 기능으로 제공되는 고성능 실시간 시계열 데이터베이스입니다.",
-        "longDescription": "관계형 데이터베이스의 안정성을 유지하면서 대규모 시계열 및 이벤트 데이터를 초고속으로 처리할 수 있는 오픈소스 DB입니다. 표준 SQL을 그대로 사용하여 기존 PostgreSQL 생태계와 완벽히 호환됩니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "시계열",
-          "데이터베이스",
-          "PostgreSQL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.tigerdata.com/",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T18:04:17.067Z",
-        "requirements": [
-          "PostgreSQL"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "로컬 빠른 설치",
-            "command": "curl -sL https://tsdb.co/start-local | sh",
-            "note": "로컬 개발 및 테스트용 TimescaleDB를 다운로드하고 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "설치 스크립트를 실행하여 로컬 인스턴스를 시작합니다.",
-          "포트 6543을 통해 PostgreSQL 클라이언트로 접속합니다.",
-          "하이퍼테이블(Hypertable)을 생성하고 시계열 데이터를 적재합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "제공된 빠른 설치 스크립트는 프로덕션 환경이 아닌 로컬 개발 및 테스트용입니다.",
-        "stars": 23902,
-        "forks": 1190,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T18:06:42.862Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T18:06:46.875Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T18:06:52.667Z"
     },
     {
       "id": "cube",
@@ -11104,89 +11875,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-26T15:08:06.925Z"
-    },
-    {
-      "id": "chat2db",
-      "name": "Chat2DB",
-      "github": "https://github.com/OtterMind/Chat2DB",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T15:07:57.334Z",
-      "sourceRun": "2026-11-27T00",
-      "tool": {
-        "id": "chat2db",
-        "name": "Chat2DB",
-        "github": "https://github.com/OtterMind/Chat2DB",
-        "description": "40개 이상의 데이터베이스를 지원하는 AI 보조 로컬 우선 데이터베이스 클라이언트",
-        "longDescription": "개발자와 DBA를 위한 오픈소스 데이터베이스 관리 도구로, 직관적인 GUI와 SQL 워크스페이스를 제공합니다. 자연어를 통한 SQL 생성 및 최적화 기능을 지원합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "SQL",
-          "AI"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://chat2db.ai",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T15:04:23.977Z",
-        "requirements": [
-          "Java"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "암호화 키 초기화",
-            "command": "./script/security/init-community-encryption-key.sh",
-            "note": "저장된 데이터소스 비밀번호 암호화를 위해 최초 1회 실행합니다."
-          }
-        ],
-        "usageSteps": [
-          "애플리케이션을 설치하고 실행합니다.",
-          "연결할 데이터베이스 유형(MySQL, PostgreSQL 등)과 접속 정보를 입력합니다.",
-          "AI 어시스턴트를 활용해 자연어로 쿼리를 생성하거나 SQL을 실행합니다."
-        ],
-        "examplePrompt": "사용자 테이블에서 최근 7일 동안 가입한 활성 유저 수를 조회하는 SQL을 작성해줘.",
-        "usageNote": "",
-        "stars": 28373,
-        "forks": 3044,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T15:07:58.378Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T15:08:02.042Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T15:08:15.691Z"
     },
     {
       "id": "lobehub",
@@ -17617,94 +18305,6 @@
       "sourceRun": "2026-11-26T13"
     },
     {
-      "id": "spacetimedb",
-      "name": "SpacetimeDB",
-      "github": "https://github.com/clockworklabs/SpacetimeDB",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-26T03:06:39.429Z",
-      "sourceRun": "2026-11-26T12",
-      "tool": {
-        "id": "spacetimedb",
-        "name": "SpacetimeDB",
-        "github": "https://github.com/clockworklabs/SpacetimeDB",
-        "description": "애플리케이션 로직을 직접 업로드해 실시간 동기화와 멀티플레이어를 지원하는 관계형 데이터베이스입니다.",
-        "longDescription": "SpacetimeDB는 데이터베이스와 서버를 결합하여 개발자가 작성한 로직을 직접 업로드할 수 있는 관계형 데이터베이스입니다. 별도의 중간 서버 없이 클라이언트 간의 실시간 통신을 지원하여 멀티플레이어 게임 및 실시간 애플리케이션 구축에 활용됩니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "실시간",
-          "멀티플레이어"
-        ],
-        "platforms": [
-          "macOS",
-          "Linux",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://spacetimedb.com",
-        "featured": 9,
-        "added": "2026-11-26",
-        "addedAt": "2026-11-26T03:04:16.521Z",
-        "requirements": [
-          "Rust 또는 C# 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "macOS / Linux 설치",
-            "command": "curl -sSf https://install.spacetimedb.com | sh",
-            "note": "공식 설치 스크립트를 다운로드하여 설치합니다."
-          },
-          {
-            "title": "Windows 설치",
-            "command": "iwr https://windows.spacetimedb.com -useb | iex",
-            "note": "PowerShell을 통해 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "SpacetimeDB를 시스템에 설치합니다.",
-          "spacetime login 명령어로 GitHub 계정을 연동합니다.",
-          "spacetime dev --template chat-room 명령어로 개발 템플릿을 시작합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 25572,
-        "forks": 1125,
-        "starsUpdatedAt": "2026-11-26"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-26T03:06:40.250Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-26T03:06:44.376Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckedAt": "2026-11-26T03:06:51.956Z"
-    },
-    {
       "id": "rocket",
       "name": "Rocket",
       "github": "https://github.com/rwf2/Rocket",
@@ -22360,82 +22960,6 @@
       }
     },
     {
-      "id": "redis",
-      "name": "Redis",
-      "github": "https://github.com/redis/redis",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-25T18:12:00.445Z",
-      "sourceRun": "2026-11-26T03",
-      "tool": {
-        "id": "redis",
-        "name": "Redis",
-        "github": "https://github.com/redis/redis",
-        "description": "실시간 데이터 구동 애플리케이션을 위한 고성능 인메모리 캐시 및 데이터 구조 서버입니다.",
-        "longDescription": "Redis는 개발자들이 실시간 애플리케이션을 구축할 수 있도록 돕는 빠르고 기능이 풍부한 인메모리 데이터 구조 저장소이자 캐시, 메시지 브로커, 벡터 검색 엔진입니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "Redis",
-          "캐시",
-          "NoSQL",
-          "데이터베이스",
-          "인메모리"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://redis.io",
-        "featured": 9,
-        "added": "2026-11-25",
-        "addedAt": "2026-11-25T18:04:19.483Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "소스 코드를 복제하거나 공식 패키지를 다운로드합니다.",
-          "의존성을 설치하고 소스를 빌드합니다.",
-          "Redis 서버를 실행하여 캐시 및 데이터 저장소로 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 77739,
-        "forks": 24979,
-        "starsUpdatedAt": "2026-11-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-25T18:12:01.391Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-25T18:12:06.284Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
-    },
-    {
       "id": "twenty",
       "name": "Twenty",
       "github": "https://github.com/twentyhq/twenty",
@@ -24425,81 +24949,6 @@
         "notes": []
       },
       "lastVerifiedAt": "2026-11-25T13:02:18.878Z"
-    },
-    {
-      "id": "convex-backend",
-      "name": "Convex Backend",
-      "github": "https://github.com/convex/convex-backend",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-25T12:07:59.624Z",
-      "sourceRun": "2026-11-25T21",
-      "tool": {
-        "id": "convex-backend",
-        "name": "Convex Backend",
-        "github": "https://github.com/convex/convex-backend",
-        "description": "웹 애플리케이션 개발을 위한 오픈소스 반응형 데이터베이스입니다.",
-        "longDescription": "웹 애플리케이션 개발자가 데이터 페치와 비즈니스 로직을 순수 TypeScript로 작성할 수 있도록 지원하는 오픈소스 반응형 데이터베이스입니다. 강력한 일관성을 제공하며 동적이고 실시간 업데이트되는 애플리케이션을 쉽게 구축하고 확장할 수 있습니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "TypeScript",
-          "Rust",
-          "백엔드"
-        ],
-        "platforms": [
-          "Web",
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://docs.convex.dev",
-        "featured": 9,
-        "added": "2026-11-25",
-        "addedAt": "2026-11-25T12:04:25.618Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 문서 및 가이드를 확인합니다.",
-          "클라우드 플랫폼을 통해 프로젝트를 생성합니다.",
-          "TypeScript를 사용하여 서버 함수와 데이터베이스 로직을 작성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "오픈소스 백엔드와 함께 공식 클라우드 플랫폼의 프리 티어를 활용해 시작할 수 있습니다.",
-        "stars": 12814,
-        "forks": 863,
-        "starsUpdatedAt": "2026-11-25"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-25T13:02:23.299Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-25T13:02:23.299Z",
-      "lastVerifiedAt": "2026-11-25T13:02:23.299Z",
-      "documentEvidence": {
-        "license": "Apache-2.0",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "claimed_free",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
     },
     {
       "id": "october",
@@ -30236,91 +30685,6 @@
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-24T13:08:36.556Z",
       "lastVerifiedAt": "2026-11-24T13:50:26.922Z"
-    },
-    {
-      "id": "pandas-ai",
-      "name": "PandasAI",
-      "github": "https://github.com/sinaptik-ai/pandas-ai",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-24T13:08:15.367Z",
-      "sourceRun": "2026-11-24T22",
-      "tool": {
-        "id": "pandas-ai",
-        "name": "PandasAI",
-        "github": "https://github.com/sinaptik-ai/pandas-ai",
-        "description": "LLM과 RAG를 활용하여 CSV, 데이터베이스 등의 데이터를 대화 형태로 분석할 수 있게 해주는 라이브러리입니다.",
-        "longDescription": "파이썬 판다스 데이터프레임이나 SQL 데이터베이스에 대해 자연어로 질문을 던지면 코드를 생성하고 분석 결과를 시각화해 줍니다.",
-        "category": "지식·검색",
-        "tags": [
-          "LLM",
-          "Pandas",
-          "데이터분석",
-          "Python",
-          "Text-to-SQL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://pandas-ai.com",
-        "featured": 9,
-        "added": "2026-11-24",
-        "addedAt": "2026-11-24T13:04:28.510Z",
-        "requirements": [
-          "Python 3.8+"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Pip을 이용한 설치",
-            "command": "pip install pandasai pandasai-litellm",
-            "note": "판다스AI와 연동 라이브러리를 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "파이썬 환경에서 pandasai와 LLM 클라이언트를 임포트합니다.",
-          "분석할 데이터프레임과 연동할 언어 모델 객체를 초기화합니다.",
-          "데이터에 대한 자연어 질문을 입력하여 분석 결과를 얻습니다."
-        ],
-        "examplePrompt": "이 데이터셋에서 매출이 가장 높은 상위 5개 지역을 보여줘",
-        "usageNote": "",
-        "stars": 23965,
-        "forks": 2349,
-        "starsUpdatedAt": "2026-11-24"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-24T13:50:27.722Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-24T13:50:27.722Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503",
-      "lastVerifiedAt": "2026-11-24T13:50:27.722Z"
     },
     {
       "id": "lieflat-charts",
@@ -37505,241 +37869,6 @@
       "sourceRun": "2026-11-24T05"
     },
     {
-      "id": "dragonfly",
-      "name": "Dragonfly",
-      "github": "https://github.com/dragonflydb/dragonfly",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T14:07:44.220Z",
-      "sourceRun": "2026-11-23T23",
-      "tool": {
-        "id": "dragonfly",
-        "name": "Dragonfly",
-        "github": "https://github.com/dragonflydb/dragonfly",
-        "description": "Redis와 Memcached를 대체하도록 설계된 현대적인 고성능 인메모리 데이터베이스입니다.",
-        "longDescription": "Dragonfly는 멀티스레딩과 혁신적인 아키텍처를 바탕으로 기존 Redis 및 Memcached 대비 훨씬 높은 처리량과 낮은 지연 시간을 제공하는 현대적인 인메모리 데이터 저장소입니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "Redis",
-          "인메모리",
-          "캐시",
-          "NoSQL",
-          "C++"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.dragonflydb.io/",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T14:04:17.929Z",
-        "requirements": [
-          "Docker 또는 Linux 환경"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 도커 이미지를 이용하여 Dragonfly 컨테이너를 실행합니다.",
-          "기존 Redis 클라이언트 및 SDK를 사용하여 Dragonfly 포트에 연결합니다.",
-          "캐시 및 데이터 구조 작업을 수행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 31916,
-        "forks": 1299,
-        "starsUpdatedAt": "2026-11-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-23T14:07:46.292Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-23T14:07:51.730Z",
-      "documentEvidence": {
-        "license": null,
-        "verifiedLicense": null,
-        "licenseSource": "unknown",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      },
-      "recheckAttempts": 1,
-      "recheckError": "Gemini HTTP 503"
-    },
-    {
-      "id": "sqlitebrowser",
-      "name": "DB Browser for SQLite",
-      "github": "https://github.com/sqlitebrowser/sqlitebrowser",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T14:07:44.220Z",
-      "sourceRun": "2026-11-23T23",
-      "tool": {
-        "id": "sqlitebrowser",
-        "name": "DB Browser for SQLite",
-        "github": "https://github.com/sqlitebrowser/sqlitebrowser",
-        "description": "SQLite 데이터베이스를 시각적으로 생성, 설계, 편집할 수 있는 오픈소스 GUI 도구입니다.",
-        "longDescription": "DB Browser for SQLite(DB4S)는 사용자가 SQLite 데이터베이스 파일을 스프레드시트와 유사한 인터페이스로 쉽게 생성, 검색, 편집할 수 있도록 돕는 고품질의 시각적 도구입니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "SQLite",
-          "데이터베이스",
-          "GUI",
-          "C++",
-          "크로스플랫폼"
-        ],
-        "platforms": [
-          "Windows",
-          "macOS",
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://sqlitebrowser.org",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T14:04:17.929Z",
-        "requirements": [
-          "패키지 관리자 (Chocolatey, Winget 등 선택 사항)"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Windows (winget)",
-            "command": "winget install -e --id DBBrowserForSQLite.DBBrowserForSQLite",
-            "note": "윈도우 패키지 관리자를 통해 설치합니다."
-          },
-          {
-            "title": "Windows (Chocolatey)",
-            "command": "choco install sqlitebrowser",
-            "note": "초콜레이를 이용해 설치합니다."
-          }
-        ],
-        "usageSteps": [
-          "프로그램을 설치하고 실행합니다.",
-          "새로운 SQLite 데이터베이스 파일을 생성하거나 기존 파일을 엽니다.",
-          "테이블을 디자인하고 데이터를 입력하거나 SQL 쿼리를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 24827,
-        "forks": 2385,
-        "starsUpdatedAt": "2026-11-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-23T14:07:47.132Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "documentEvidenceCheckedAt": "2026-11-23T14:07:53.274Z",
-      "documentEvidence": {
-        "license": "MIT",
-        "verifiedLicense": null,
-        "licenseSource": "LICENSE header only, unverified",
-        "freeClaim": "unknown",
-        "freeSource": "README claim only — not verified entitlement",
-        "notes": []
-      }
-    },
-    {
-      "id": "cockroach",
-      "name": "CockroachDB",
-      "github": "https://github.com/cockroachdb/cockroach",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T14:07:44.220Z",
-      "sourceRun": "2026-11-23T23",
-      "tool": {
-        "id": "cockroach",
-        "name": "CockroachDB",
-        "github": "https://github.com/cockroachdb/cockroach",
-        "description": "고가용성과 수평 확장성을 지원하는 클라우드 네이티브 분산 SQL 데이터베이스입니다.",
-        "longDescription": "현대적인 데이터 집약적 애플리케이션을 위해 설계된 분산 SQL 데이터베이스입니다. 강력한 일관성을 갖춘 키-값 저장소를 기반으로 구축되어 확장성과 고가용성을 제공합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "SQL",
-          "분산 시스템",
-          "Go",
-          "Cloud Native"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.cockroachlabs.com",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T14:04:17.929Z",
-        "requirements": [
-          "Go",
-          "CMake",
-          "C++ compiler"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 문서에서 최신 바이너리를 다운로드하거나 Docker를 통해 실행합니다.",
-          "데이터베이스 클러스터를 초기화하고 시작합니다.",
-          "SQL 클라이언트를 통해 데이터베이스에 연결하여 쿼리를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 32640,
-        "forks": 4174,
-        "starsUpdatedAt": "2026-11-23"
-      },
-      "licenseEvidenceCheckedAt": "2026-11-23T14:07:47.857Z",
-      "licenseEvidence": {
-        "license": null,
-        "source": null,
-        "freeEvidence": "unverified",
-        "notes": [
-          "License not verified via SPDX"
-        ]
-      },
-      "recheckReasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ]
-    },
-    {
       "id": "mongo",
       "name": "MongoDB",
       "github": "https://github.com/mongodb/mongo",
@@ -37813,180 +37942,6 @@
         "명확히 검증되지 않은 라이선스",
         "오픈소스 또는 무료 조건 미확인"
       ]
-    },
-    {
-      "id": "scylladb",
-      "name": "ScyllaDB",
-      "github": "https://github.com/scylladb/scylladb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T14:07:44.220Z",
-      "sourceRun": "2026-11-23T23",
-      "tool": {
-        "id": "scylladb",
-        "name": "ScyllaDB",
-        "github": "https://github.com/scylladb/scylladb",
-        "description": "Apache Cassandra 및 Amazon DynamoDB와 호환되는 고성능 분산 NoSQL 데이터베이스입니다.",
-        "longDescription": "Seastar 프레임워크를 기반으로 C++로 작성되어 극도로 낮은 지연 시간과 높은 처리량을 제공하는 분산 데이터 저장소입니다. 하드웨어 리소스 활용을 극대화하여 기존 NoSQL의 성능 한계를 극복합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "NoSQL",
-          "Cassandra",
-          "C++",
-          "분산 시스템"
-        ],
-        "platforms": [
-          "Linux"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://scylladb.com",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T14:04:17.929Z",
-        "requirements": [
-          "C++ 컴파일러",
-          "Seastar 프레임워크"
-        ],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "빌드 필수 조건 및 종속성을 시스템에 설치합니다.",
-          "소스 코드를 빌드하거나 제공되는 패키지를 설치합니다.",
-          "Scylla 서비스를 시작하고 클러스터를 구성합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 15849,
-        "forks": 1542,
-        "starsUpdatedAt": "2026-11-23"
-      }
-    },
-    {
-      "id": "arangodb",
-      "name": "ArangoDB",
-      "github": "https://github.com/arangodb/arangodb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T14:07:44.220Z",
-      "sourceRun": "2026-11-23T23",
-      "tool": {
-        "id": "arangodb",
-        "name": "ArangoDB",
-        "github": "https://github.com/arangodb/arangodb",
-        "description": "문서, 그래프, 키-값 모델을 모두 지원하는 네이티브 멀티 모델 NoSQL 데이터베이스입니다.",
-        "longDescription": "하나의 질의 언어로 다양한 데이터 모델을 유연하게 처리할 수 있는 확장 가능한 데이터베이스 시스템입니다. 내장된 검색 엔진과 강력한 그래프 처리 기능을 제공합니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "데이터베이스",
-          "NoSQL",
-          "그래프 데이터베이스",
-          "문서 저장소",
-          "C++"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://www.arangodb.com",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T14:04:17.929Z",
-        "requirements": [
-          "Docker (선택 사항)"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "Docker로 실행",
-            "command": "docker run -d -e ARANGO_ROOT_PASSWORD=test123 -p 8529:8529 arangodb",
-            "note": "Docker 컨테이너로 ArangoDB 서버 즉시 실행"
-          }
-        ],
-        "usageSteps": [
-          "Docker를 사용하여 ArangoDB 컨테이너를 실행합니다.",
-          "웹 브라우저를 열어 http://127.0.0.1:8529에 접속합니다.",
-          "관리자 계정으로 로그인하여 데이터베이스와 컬렉션을 관리합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "",
-        "stars": 14303,
-        "forks": 913,
-        "starsUpdatedAt": "2026-11-23"
-      }
-    },
-    {
-      "id": "sql-js",
-      "name": "sql.js",
-      "github": "https://github.com/sql-js/sql.js",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-23T14:07:44.220Z",
-      "sourceRun": "2026-11-23T23",
-      "tool": {
-        "id": "sql-js",
-        "name": "sql.js",
-        "github": "https://github.com/sql-js/sql.js",
-        "description": "Emscripten을 통해 웹 브라우저에서 직접 실행할 수 있도록 컴파일된 JavaScript SQLite 라이브러리입니다.",
-        "longDescription": "서버 없이 브라우저 메모리 내 가상 파일 시스템에서 관계형 데이터베이스를 생성하고 SQL 쿼리를 실행할 수 있는 도구입니다. 웹 애플리케이션 내에서 가볍고 빠르게 로컬 데이터를 다룰 때 유용합니다.",
-        "category": "개발 도구",
-        "tags": [
-          "JavaScript",
-          "SQLite",
-          "SQL",
-          "WASM",
-          "데이터베이스"
-        ],
-        "platforms": [
-          "Web"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "http://sql.js.org",
-        "featured": 9,
-        "added": "2026-11-23",
-        "addedAt": "2026-11-23T14:04:17.929Z",
-        "requirements": [
-          "JavaScript 런타임 환경"
-        ],
-        "supportedAgents": [],
-        "install": [
-          {
-            "title": "NPM 패키지 설치",
-            "command": "npm install sql.js",
-            "note": "Node.js 환경에서 sql.js 패키지 설치"
-          }
-        ],
-        "usageSteps": [
-          "NPM을 통해 패키지를 설치하거나 CDN을 통해 라이브러리를 불러옵니다.",
-          "WASM 파일 및 자산 경로를 설정에 맞게 지정합니다.",
-          "initSqlJs 함수를 호출하여 데이터베이스 인스턴스를 생성하고 쿼리를 실행합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "메모리 기반 가상 파일 시스템을 사용하므로 변경 사항이 기본적으로 디스크에 지속되지 않습니다.",
-        "stars": 13690,
-        "forks": 1113,
-        "starsUpdatedAt": "2026-11-23"
-      }
     },
     {
       "id": "citus",
@@ -54774,59 +54729,6 @@
       },
       "recheckAttempts": 1,
       "recheckedAt": "2026-11-19T19:10:16.877Z"
-    },
-    {
-      "id": "dicedb",
-      "name": "DiceDB",
-      "github": "https://github.com/dicedb/dicedb",
-      "license": "확인 필요",
-      "status": "pending_review",
-      "reasons": [
-        "명확히 검증되지 않은 라이선스",
-        "오픈소스 또는 무료 조건 미확인"
-      ],
-      "checkedAt": "2026-11-19T19:10:01.974Z",
-      "sourceRun": "2026-11-20T04",
-      "tool": {
-        "id": "dicedb",
-        "name": "DiceDB",
-        "github": "https://github.com/dicedb/dicedb",
-        "description": "쿼리 구독과 계층형 스토리지를 지원하는 고성능 오픈소스 키-값(Key-Value) 데이터 저장소입니다.",
-        "longDescription": "Redis 및 Valkey와 완벽히 호환되면서도, 쿼리 구독 기능과 향상된 성능을 제공하도록 설계된 저지연 키-값 엔진입니다.",
-        "category": "데이터베이스",
-        "tags": [
-          "캐시",
-          "데이터베이스",
-          "Key-Value",
-          "Redis",
-          "NoSQL"
-        ],
-        "platforms": [
-          "Linux",
-          "macOS",
-          "Windows"
-        ],
-        "free": true,
-        "openSource": false,
-        "license": "확인 필요",
-        "website": "https://dicedb.io/",
-        "featured": 9,
-        "added": "2026-11-19",
-        "addedAt": "2026-11-19T19:04:30.466Z",
-        "requirements": [],
-        "supportedAgents": [],
-        "install": [],
-        "usageSteps": [
-          "공식 홈페이지 또는 저장소 안내에 따라 DiceDB 바이너리를 다운로드하거나 빌드합니다.",
-          "서버를 실행하여 기존 Redis 호환 클라이언트와 연결합니다.",
-          "키-값 명령어 및 쿼리 구독 기능을 활용합니다."
-        ],
-        "examplePrompt": "",
-        "usageNote": "Valkey 및 Redis 도구 생태계와 호환됩니다.",
-        "stars": 10775,
-        "forks": 1396,
-        "starsUpdatedAt": "2026-11-19"
-      }
     },
     {
       "id": "databend",
