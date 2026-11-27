@@ -1,5 +1,155 @@
 [
   {
+    "id": "llmkube",
+    "name": "LLMKube",
+    "github": "https://github.com/defilantech/LLMKube",
+    "description": "이기종 GPU 환경에서 셀프 호스팅 LLM 추론을 지원하는 쿠버네티스 오퍼레이터",
+    "longDescription": "NVIDIA CUDA, AMD Vulkan, Apple Silicon Metal 등 다양한 하드웨어를 하나의 스펙으로 통합 관리합니다. llama.cpp, vLLM 등의 런타임을 지원하며 멀티 GPU 샤딩과 OpenAI 호환 엔드포인트를 제공합니다.",
+    "category": "AI 모델",
+    "tags": [
+      "Kubernetes",
+      "LLM",
+      "GPU",
+      "Go",
+      "AI 인프라"
+    ],
+    "platforms": [
+      "Linux",
+      "macOS"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "Apache-2.0",
+    "website": "https://llmkube.com",
+    "featured": 9,
+    "added": "2026-11-27",
+    "addedAt": "2026-11-27T00:04:27.361Z",
+    "requirements": [
+      "Kubernetes 클러스터",
+      "Helm"
+    ],
+    "supportedAgents": [],
+    "install": [
+      {
+        "title": "Helm을 이용한 설치",
+        "command": "helm repo add llmkube https://defilantech.github.io/LLMKube && helm install llmkube llmkube/llmkube --namespace llmkube-system --create-namespace",
+        "note": "Helm 저장소를 추가하고 쿠버네티스에 오퍼레이터를 설치합니다."
+      }
+    ],
+    "usageSteps": [
+      "클러스터에 Helm을 통해 LLMKube 오퍼레이터를 설치합니다.",
+      "대상 하드웨어(NVIDIA, Apple Silicon 등)에 맞는 에이전트와 런타임을 구성합니다.",
+      "OpenAI 호환 API를 통해 LLM 추론 요청을 전송합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "다양한 GPU 드라이버 및 런타임 사전 설치가 필요합니다.",
+    "stars": 271,
+    "forks": 47,
+    "starsUpdatedAt": "2026-11-27"
+  },
+  {
+    "id": "mneme",
+    "name": "Mneme (dsh-mneme)",
+    "github": "https://github.com/slow-stack/mneme",
+    "description": "DeepSeek Harness 및 MCP 기반 AI 에이전트를 위한 장기 기억 관리 플러그인",
+    "longDescription": "대화가 종료된 후에도 사용자의 선호도, 과거 결정 사항 등을 SQLite와 로컬 마크다운 파일에 기록하고 유지합니다. 유휴 시간에 기억을 자동으로 정리하고 최적화하여 다음 대화에 반영합니다.",
+    "category": "AI 에이전트",
+    "tags": [
+      "AI 에이전트",
+      "장기 기억",
+      "MCP",
+      "Node.js",
+      "JavaScript"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://www.npmjs.com/package/@modusensus/dsh-mneme",
+    "featured": 9,
+    "added": "2026-11-27",
+    "addedAt": "2026-11-27T00:04:27.361Z",
+    "requirements": [
+      "Node 24+",
+      "DeepSeek Harness"
+    ],
+    "supportedAgents": [
+      "DeepSeek Harness"
+    ],
+    "install": [
+      {
+        "title": "플러그인 추가",
+        "command": "dsh plugin --profile web add @modusensus/dsh-mneme",
+        "note": "DeepSeek Harness에 기억 관리 플러그인을 추가합니다."
+      }
+    ],
+    "usageSteps": [
+      "Node 24 이상 환경에서 DeepSeek Harness를 준비합니다.",
+      "플러그인 설치 명령어를 실행하여 mneme를 연동합니다.",
+      "AI와 대화하며 에이전트가 자동으로 세션 간 기억을 유지하도록 활용합니다."
+    ],
+    "examplePrompt": "",
+    "usageNote": "Node.js 24 버전 이상(node:sqlite 지원 필수)에서만 정상 작동합니다.",
+    "stars": 261,
+    "forks": 28,
+    "starsUpdatedAt": "2026-11-27"
+  },
+  {
+    "id": "ai-second-brain",
+    "name": "AI Second Brain (Claude Code Skill)",
+    "github": "https://github.com/charlie947/ai-second-brain",
+    "description": "ChatGPT 및 Claude 대화 기록을 바탕으로 검색 가능한 AI 지식베이스를 구축하는 스킬",
+    "longDescription": "Andrej Karpathy의 개인 위키 아이디어를 바탕으로 한 Claude Code 전용 스킬입니다. 사용자의 원시 연구 자료와 AI 히스토리를 정리하여 살아있는 지식 관리 시스템을 구축해 줍니다.",
+    "category": "지식·검색",
+    "tags": [
+      "Claude Code",
+      "AI",
+      "지식 관리",
+      "Obsidian",
+      "스킬"
+    ],
+    "platforms": [
+      "macOS",
+      "Linux",
+      "Windows"
+    ],
+    "free": true,
+    "openSource": true,
+    "license": "MIT",
+    "website": "https://github.com/charlie947/ai-second-brain",
+    "featured": 9,
+    "added": "2026-11-27",
+    "addedAt": "2026-11-27T00:04:27.361Z",
+    "requirements": [
+      "Claude Code",
+      "Git"
+    ],
+    "supportedAgents": [
+      "Claude Code"
+    ],
+    "install": [
+      {
+        "title": "스킬 복제",
+        "command": "git clone https://github.com/charlie947/ai-second-brain.git ~/.claude/skills/ai-second-brain",
+        "note": "Claude Code 스킬 디렉토리에 저장소를 복제합니다."
+      }
+    ],
+    "usageSteps": [
+      "저장소를 Claude Code의 skills 디렉토리에 복제합니다.",
+      "Claude Code를 실행하고 지식베이스 구축을 요청합니다.",
+      "대화 기록 및 연구 자료를 가이드에 따라 가져옵니다."
+    ],
+    "examplePrompt": "내 Claude와 ChatGPT 대화 기록을 분석해서 카파시 스타일의 두뇌 지식베이스를 만들어 줘.",
+    "usageNote": "",
+    "stars": 258,
+    "forks": 49,
+    "starsUpdatedAt": "2026-11-27"
+  },
+  {
     "id": "postbird",
     "name": "Postbird",
     "github": "https://github.com/Paxa/postbird",
